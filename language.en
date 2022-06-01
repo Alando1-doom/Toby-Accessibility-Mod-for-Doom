@@ -1,0 +1,58 @@
+[en default]
+
+ZS_EM_MENU_OPTIONS = "Extended Markers Options";
+
+ZS_EM_OP_TITLE_OPTIONS = "Extended Markers Options";
+ZS_EM_OP_TITLE_EXTENDED_MARKERS = "Extended Markers";
+ZS_EM_OP_TITLE_PLACE_MARKERS = "Place Markers";
+ZS_EM_OP_TITLE_REMOVE_MARKERS = "Remove Markers";
+
+ZS_EM_KEYS_TITLE = "Extended Markers Keys";
+
+ZS_EM_PLACE_1 = "Place Marker  1";
+ZS_EM_PLACE_2 = "Place Marker  2";
+ZS_EM_PLACE_3 = "Place Marker  3";
+ZS_EM_PLACE_4 = "Place Marker  4";
+ZS_EM_PLACE_5 = "Place Marker  5";
+ZS_EM_PLACE_6 = "Place Marker  6";
+ZS_EM_PLACE_7 = "Place Marker  7";
+ZS_EM_PLACE_8 = "Place Marker  8";
+ZS_EM_PLACE_9 = "Place Marker  9";
+ZS_EM_PLACE_10 = "Place Marker 10";
+
+ZS_EM_REMOVE_NEAREST = "Remove Nearest Marker";
+ZS_EM_REMOVE_1 = "Remove Nearest Marker  1";
+ZS_EM_REMOVE_2 = "Remove Nearest Marker  2";
+ZS_EM_REMOVE_3 = "Remove Nearest Marker  3";
+ZS_EM_REMOVE_4 = "Remove Nearest Marker  4";
+ZS_EM_REMOVE_5 = "Remove Nearest Marker  5";
+ZS_EM_REMOVE_6 = "Remove Nearest Marker  6";
+ZS_EM_REMOVE_7 = "Remove Nearest Marker  7";
+ZS_EM_REMOVE_8 = "Remove Nearest Marker  8";
+ZS_EM_REMOVE_9 = "Remove Nearest Marker  9";
+ZS_EM_REMOVE_10 = "Remove Nearest Marker 10";
+
+ZS_EM_REMOVE_1_ALL = "Remove All Markers  1";
+ZS_EM_REMOVE_2_ALL = "Remove All Markers  2";
+ZS_EM_REMOVE_3_ALL = "Remove All Markers  3";
+ZS_EM_REMOVE_4_ALL = "Remove All Markers  4";
+ZS_EM_REMOVE_5_ALL = "Remove All Markers  5";
+ZS_EM_REMOVE_6_ALL = "Remove All Markers  6";
+ZS_EM_REMOVE_7_ALL = "Remove All Markers  7";
+ZS_EM_REMOVE_8_ALL = "Remove All Markers  8";
+ZS_EM_REMOVE_9_ALL = "Remove All Markers  9";
+ZS_EM_REMOVE_10_ALL = "Remove All Markers 10";
+
+ZS_EM_REMOVE_LAST = "Remove Last Placed Marker";
+ZS_EM_REMOVE_ALL = "Remove All Markers";
+
+ZS_EM_KEY_LABEL_OPEN_MENU = "Open Marker Menu";
+ZS_EM_KEY_LABEL_OPEN_PLACE_MENU = "Open Place Markers Menu";
+ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU = "Open Remove Markers Menu";
+ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER = "Place next marker";
+ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER = "Remove last marker";
+
+ZS_EM_LABEL_CONTROLS = "Controls:";
+ZS_EM_LABEL_INFINITE_RANGE = "Set to zero for infinite range";
+ZS_EM_LABEL_REMOVE_ALL_NOT_AFFECTED = "('Remove all' actions are not affected by this setting)";
+ZS_EM_SLIDER_REMOVE_MAX_DIST = "Remove marker max distance";

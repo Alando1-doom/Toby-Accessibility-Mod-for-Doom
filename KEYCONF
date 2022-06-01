@@ -1,0 +1,99 @@
+weaponsection compilation
+ clearplayerclasses
+addplayerclass Player_TO
+
+addkeysection "Compass Options" CompassMod
+addmenukey "Check Direction" "pukename CompassScript"
+defaultbind Q "pukename CompassScript"
+addmenukey "Face North" "pukename FaceNorth"
+defaultbind E "pukename FaceNorth"
+
+addkeysection "Status Checker Options" CheckMod
+addmenukey "Check Health Stats" "pukename HealthScript"
+defaultbind H "pukename HealthScript"
+addmenukey "Check Ammo Stats" "pukename AmmoScript"
+defaultbind B "pukename AmmoScript"
+
+//Map Markers Section
+
+AddKeySection "$ZS_EM_KEYS_TITLE" ExtendedMarkers
+
+AddMenuKey "$ZS_EM_KEY_LABEL_OPEN_MENU" "openmenu zs_em_markermenu"
+AddMenuKey "$ZS_EM_KEY_LABEL_OPEN_PLACE_MENU" "openmenu zs_em_markermenu_place"
+AddMenuKey "$ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU" "openmenu zs_em_markermenu_remove"
+
+AddMenuKey "$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER" zs_em_place_next_marker_keybind
+AddMenuKey "$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER" zs_em_remove_last_marker_keybind
+
+AddMenuKey "$ZS_EM_PLACE_1" zs_em_place_1_keybind
+AddMenuKey "$ZS_EM_PLACE_2" zs_em_place_2_keybind
+AddMenuKey "$ZS_EM_PLACE_3" zs_em_place_3_keybind
+AddMenuKey "$ZS_EM_PLACE_4" zs_em_place_4_keybind
+AddMenuKey "$ZS_EM_PLACE_5" zs_em_place_5_keybind
+AddMenuKey "$ZS_EM_PLACE_6" zs_em_place_6_keybind
+AddMenuKey "$ZS_EM_PLACE_7" zs_em_place_7_keybind
+AddMenuKey "$ZS_EM_PLACE_8" zs_em_place_8_keybind
+AddMenuKey "$ZS_EM_PLACE_9" zs_em_place_9_keybind
+AddMenuKey "$ZS_EM_PLACE_10" zs_em_place_10_keybind
+
+alias zs_em_place_next_marker_keybind "netevent ZS_PlaceNextMarker";
+alias zs_em_remove_last_marker_keybind "netevent ZS_RemoveLastMarker";
+alias zs_em_remove_last_marker_menu "closemenu; netevent ZS_RemoveLastMarker";
+alias zs_em_remove_nearest_menu "closemenu; netevent ZS_RemoveMarker:ZS_Marker_Base"
+
+alias zs_em_place_1_keybind "netevent ZS_PlaceMarker:Toby_Marker_1"
+alias zs_em_place_1_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_1"
+alias zs_em_remove_1_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_1"
+alias zs_em_remove_1_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_1"
+
+alias zs_em_place_2_keybind "netevent ZS_PlaceMarker:Toby_Marker_2"
+alias zs_em_place_2_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_2"
+alias zs_em_remove_2_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_2"
+alias zs_em_remove_2_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_2"
+
+alias zs_em_place_3_keybind "netevent ZS_PlaceMarker:Toby_Marker_3"
+alias zs_em_place_3_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_3"
+alias zs_em_remove_3_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_3"
+alias zs_em_remove_3_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_3"
+
+alias zs_em_place_4_keybind "netevent ZS_PlaceMarker:Toby_Marker_4"
+alias zs_em_place_4_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_4"
+alias zs_em_remove_4_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_4"
+alias zs_em_remove_4_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_4"
+
+alias zs_em_place_5_keybind "netevent ZS_PlaceMarker:Toby_Marker_5"
+alias zs_em_place_5_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_5"
+alias zs_em_remove_5_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_5"
+alias zs_em_remove_5_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_5"
+
+alias zs_em_place_6_keybind "netevent ZS_PlaceMarker:Toby_Marker_6"
+alias zs_em_place_6_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_6"
+alias zs_em_remove_6_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_6"
+alias zs_em_remove_6_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_6"
+
+alias zs_em_place_7_keybind "netevent ZS_PlaceMarker:Toby_Marker_7"
+alias zs_em_place_7_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_7"
+alias zs_em_remove_7_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_7"
+alias zs_em_remove_7_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_7"
+
+alias zs_em_place_8_keybind "netevent ZS_PlaceMarker:Toby_Marker_8"
+alias zs_em_place_8_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_8"
+alias zs_em_remove_8_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_8"
+alias zs_em_remove_8_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_8"
+
+alias zs_em_place_9_keybind "netevent ZS_PlaceMarker:Toby_Marker_9"
+alias zs_em_place_9_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_9"
+alias zs_em_remove_9_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_9"
+alias zs_em_remove_9_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_9"
+
+alias zs_em_place_10_keybind "netevent ZS_PlaceMarker:Toby_Marker_10"
+alias zs_em_place_10_menu "closemenu; netevent ZS_PlaceMarker:Toby_Marker_10"
+alias zs_em_remove_10_menu "closemenu; netevent ZS_RemoveMarker:Toby_Marker_10"
+alias zs_em_remove_10_all_menu "closemenu; netevent ZS_RemoveAllMarkersOfType:Toby_Marker_10"
+
+alias zs_em_remove_all_menu "closemenu; netevent ZS_RemoveAllMarkers"
+alias zs_em_remove_all_keybind "netevent ZS_RemoveAllMarkers"
+
+DefaultBind M zs_em_place_next_marker_keybind
+DefaultBind K zs_em_remove_last_marker_keybind
+//DefaultBind L zs_em_remove_all_keybind

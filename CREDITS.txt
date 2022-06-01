@@ -1,0 +1,3 @@
+- fvox sounds are taken from Half-Life
+- Alphabet is downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp
+- tts taken from https://www.naturalreaders.com/online/
