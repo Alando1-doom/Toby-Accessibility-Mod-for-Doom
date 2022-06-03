@@ -2903,3 +2903,155 @@ OptionValue "SpriteShadowModes"
 	1, "$OPTVAL_DEFAULT"
 	2, "$OPTVAL_SPRSHADALWAYS"
 }
+
+//Map Marker Menu
+
+AddOptionMenu "OptionsMenu"
+{
+	Submenu "$ZS_EM_MENU_OPTIONS", "zs_em_markermenu_base"
+}
+
+//Those lines add this submenu to GZDoom Options when narrated menus are loaded
+//AddOptionMenu "NarratedOptionMenu"
+//{
+//	Submenu "$ZS_EM_MENU_OPTIONS", "zs_em_markermenu_base"
+//}
+
+//Those lines add this submenu to Simple Options menu when narrated menus are loaded
+//AddOptionMenu "SimpleNarratedOptions"
+//{
+//	Submenu "$ZS_EM_MENU_OPTIONS", "zs_em_markermenu_base"
+//}
+
+OptionMenu "zs_em_markermenu_base"
+{
+  //Class "NarratedOptionMenu"
+  Title "$ZS_EM_OP_TITLE_OPTIONS"
+  
+  Slider "$ZS_EM_SLIDER_REMOVE_MAX_DIST", "zs_em_MaxDistance", 0, 10000, 50, 0
+  StaticText "$ZS_EM_LABEL_INFINITE_RANGE"
+  StaticText "$ZS_EM_LABEL_REMOVE_ALL_NOT_AFFECTED"
+  StaticText ""
+  StaticText "$ZS_EM_LABEL_CONTROLS"
+  Control "$ZS_EM_KEY_LABEL_OPEN_MENU", "openmenu zs_em_markermenu"
+  Control "$ZS_EM_KEY_LABEL_OPEN_PLACE_MENU", "openmenu zs_em_markermenu_place"
+  Control "$ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU", "openmenu zs_em_markermenu_remove"
+  StaticText ""
+  Control "$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "zs_em_place_next_marker_keybind"
+  Control "$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "zs_em_remove_last_marker_keybind"
+  
+  StaticText ""
+  Control "$ZS_EM_PLACE_1", "zs_em_place_1_keybind"
+  Control "$ZS_EM_PLACE_2", "zs_em_place_2_keybind"
+  Control "$ZS_EM_PLACE_3", "zs_em_place_3_keybind"
+  Control "$ZS_EM_PLACE_4", "zs_em_place_4_keybind"
+  Control "$ZS_EM_PLACE_5", "zs_em_place_5_keybind"
+  Control "$ZS_EM_PLACE_6", "zs_em_place_6_keybind"
+  Control "$ZS_EM_PLACE_7", "zs_em_place_7_keybind"
+  Control "$ZS_EM_PLACE_8", "zs_em_place_8_keybind"
+  Control "$ZS_EM_PLACE_9", "zs_em_place_9_keybind"
+  Control "$ZS_EM_PLACE_10", "zs_em_place_10_keybind"
+}
+
+OptionMenu "zs_em_markermenu"
+{
+  //Class "NarratedOptionMenu"
+  Title "$ZS_EM_OP_TITLE_EXTENDED_MARKERS"
+  
+  StaticText ""
+  Command "$ZS_EM_PLACE_1"  , zs_em_place_1_menu
+  Command "$ZS_EM_PLACE_2"  , zs_em_place_2_menu
+  Command "$ZS_EM_PLACE_3"  , zs_em_place_3_menu
+  Command "$ZS_EM_PLACE_4"  , zs_em_place_4_menu
+  Command "$ZS_EM_PLACE_5"  , zs_em_place_5_menu
+  Command "$ZS_EM_PLACE_6"  , zs_em_place_6_menu
+  Command "$ZS_EM_PLACE_7"  , zs_em_place_7_menu
+  Command "$ZS_EM_PLACE_8"  , zs_em_place_8_menu
+  Command "$ZS_EM_PLACE_9"  , zs_em_place_9_menu
+  Command "$ZS_EM_PLACE_10"  , zs_em_place_10_menu
+  
+  StaticText ""
+  Command "$ZS_EM_REMOVE_LAST", zs_em_remove_last_marker_menu
+  Command "$ZS_EM_REMOVE_NEAREST"  , zs_em_remove_nearest_menu
+  StaticText ""
+
+  Command "$ZS_EM_REMOVE_1"  , zs_em_remove_1_menu
+  Command "$ZS_EM_REMOVE_2"  , zs_em_remove_2_menu
+  Command "$ZS_EM_REMOVE_3"  , zs_em_remove_3_menu
+  Command "$ZS_EM_REMOVE_4"  , zs_em_remove_4_menu
+  Command "$ZS_EM_REMOVE_5"  , zs_em_remove_5_menu
+  Command "$ZS_EM_REMOVE_6"  , zs_em_remove_6_menu
+  Command "$ZS_EM_REMOVE_7"  , zs_em_remove_7_menu
+  Command "$ZS_EM_REMOVE_8"  , zs_em_remove_8_menu
+  Command "$ZS_EM_REMOVE_9"  , zs_em_remove_9_menu
+  Command "$ZS_EM_REMOVE_10"  , zs_em_remove_10_menu
+  
+  StaticText ""
+  SafeCommand "$ZS_EM_REMOVE_1_ALL"  , zs_em_remove_1_all_menu
+  SafeCommand "$ZS_EM_REMOVE_2_ALL"  , zs_em_remove_2_all_menu
+  SafeCommand "$ZS_EM_REMOVE_3_ALL"  , zs_em_remove_3_all_menu
+  SafeCommand "$ZS_EM_REMOVE_4_ALL"  , zs_em_remove_4_all_menu
+  SafeCommand "$ZS_EM_REMOVE_5_ALL"  , zs_em_remove_5_all_menu
+  SafeCommand "$ZS_EM_REMOVE_6_ALL"  , zs_em_remove_6_all_menu
+  SafeCommand "$ZS_EM_REMOVE_7_ALL"  , zs_em_remove_7_all_menu
+  SafeCommand "$ZS_EM_REMOVE_8_ALL"  , zs_em_remove_8_all_menu
+  SafeCommand "$ZS_EM_REMOVE_9_ALL"  , zs_em_remove_9_all_menu
+  SafeCommand "$ZS_EM_REMOVE_10_ALL"  , zs_em_remove_10_all_menu
+  
+  StaticText ""
+  SafeCommand "$ZS_EM_REMOVE_ALL"  , zs_em_remove_all_menu
+}
+
+OptionMenu "zs_em_markermenu_place"
+{
+  //Class "NarratedOptionMenu"
+  Title "$ZS_EM_OP_TITLE_PLACE_MARKERS"
+  
+  StaticText ""
+  Command "$ZS_EM_PLACE_1"  , zs_em_place_1_menu
+  Command "$ZS_EM_PLACE_2"  , zs_em_place_2_menu
+  Command "$ZS_EM_PLACE_3"  , zs_em_place_3_menu
+  Command "$ZS_EM_PLACE_4"  , zs_em_place_4_menu
+  Command "$ZS_EM_PLACE_5"  , zs_em_place_5_menu
+  Command "$ZS_EM_PLACE_6"  , zs_em_place_6_menu
+  Command "$ZS_EM_PLACE_7"  , zs_em_place_7_menu
+  Command "$ZS_EM_PLACE_8"  , zs_em_place_8_menu
+  Command "$ZS_EM_PLACE_9"  , zs_em_place_9_menu
+  Command "$ZS_EM_PLACE_10"  , zs_em_place_10_menu
+}
+
+OptionMenu "zs_em_markermenu_remove"
+{
+  //Class "NarratedOptionMenu"
+  Title "$ZS_EM_OP_TITLE_REMOVE_MARKERS"
+  
+  StaticText ""
+  Command "$ZS_EM_REMOVE_LAST", zs_em_remove_last_marker_menu
+  Command "$ZS_EM_REMOVE_NEAREST"  , zs_em_remove_nearest_menu
+  StaticText ""
+  Command "$ZS_EM_REMOVE_1"  , zs_em_remove_1_menu
+  Command "$ZS_EM_REMOVE_2"  , zs_em_remove_2_menu
+  Command "$ZS_EM_REMOVE_3"  , zs_em_remove_3_menu
+  Command "$ZS_EM_REMOVE_4"  , zs_em_remove_4_menu
+  Command "$ZS_EM_REMOVE_5"  , zs_em_remove_5_menu
+  Command "$ZS_EM_REMOVE_6"  , zs_em_remove_6_menu
+  Command "$ZS_EM_REMOVE_7"  , zs_em_remove_7_menu
+  Command "$ZS_EM_REMOVE_8"  , zs_em_remove_8_menu
+  Command "$ZS_EM_REMOVE_9"  , zs_em_remove_9_menu
+  Command "$ZS_EM_REMOVE_10"  , zs_em_remove_10_menu
+  
+  StaticText ""
+  SafeCommand "$ZS_EM_REMOVE_1_ALL"  , zs_em_remove_1_all_menu
+  SafeCommand "$ZS_EM_REMOVE_2_ALL"  , zs_em_remove_2_all_menu
+  SafeCommand "$ZS_EM_REMOVE_3_ALL"  , zs_em_remove_3_all_menu
+  SafeCommand "$ZS_EM_REMOVE_4_ALL"  , zs_em_remove_4_all_menu
+  SafeCommand "$ZS_EM_REMOVE_5_ALL"  , zs_em_remove_5_all_menu
+  SafeCommand "$ZS_EM_REMOVE_6_ALL"  , zs_em_remove_6_all_menu
+  SafeCommand "$ZS_EM_REMOVE_7_ALL"  , zs_em_remove_7_all_menu
+  SafeCommand "$ZS_EM_REMOVE_8_ALL"  , zs_em_remove_8_all_menu
+  SafeCommand "$ZS_EM_REMOVE_9_ALL"  , zs_em_remove_9_all_menu
+  SafeCommand "$ZS_EM_REMOVE_10_ALL"  , zs_em_remove_10_all_menu
+  
+  StaticText ""
+  SafeCommand "$ZS_EM_REMOVE_ALL"  , zs_em_remove_all_menu
+}

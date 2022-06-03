@@ -1,0 +1,5 @@
+GameInfo
+{
+    AddEventHandlers = "SoundQueue"
+	AddEventHandlers = "ZS_MarkerHandler"
+}
