@@ -32,16 +32,16 @@ class StringToVoice ui
             if (letter == "y") SoundQueue.AddSound("alphabet/Y", -1);
             if (letter == "z") SoundQueue.AddSound("alphabet/Z", -1);
             if (letter == " ") SoundQueue.AddSound("alphabet/Space", -1);
-			if (letter == "0") SoundQueue.AddSound("fvox/000", -1);
-			if (letter == "1") SoundQueue.AddSound("fvox/001", -1);
-			if (letter == "2") SoundQueue.AddSound("fvox/002", -1);
-			if (letter == "3") SoundQueue.AddSound("fvox/003", -1);
-			if (letter == "4") SoundQueue.AddSound("fvox/004", -1);
-			if (letter == "5") SoundQueue.AddSound("fvox/005", -1);
-			if (letter == "6") SoundQueue.AddSound("fvox/006", -1);
-			if (letter == "7") SoundQueue.AddSound("fvox/007", -1);
-			if (letter == "8") SoundQueue.AddSound("fvox/008", -1);
-			if (letter == "9") SoundQueue.AddSound("fvox/009", -1);
+			if (letter == "0") SoundQueue.AddSound("numbers/000", -1);
+			if (letter == "1") SoundQueue.AddSound("numbers/001", -1);
+			if (letter == "2") SoundQueue.AddSound("numbers/002", -1);
+			if (letter == "3") SoundQueue.AddSound("numbers/003", -1);
+			if (letter == "4") SoundQueue.AddSound("numbers/004", -1);
+			if (letter == "5") SoundQueue.AddSound("numbers/005", -1);
+			if (letter == "6") SoundQueue.AddSound("numbers/006", -1);
+			if (letter == "7") SoundQueue.AddSound("numbers/007", -1);
+			if (letter == "8") SoundQueue.AddSound("numbers/008", -1);
+			if (letter == "9") SoundQueue.AddSound("numbers/009", -1);
         }
     }
 
@@ -77,16 +77,16 @@ class StringToVoice ui
             if (letter == "y") SoundQueue.UnshiftSound("alphabet/Y", -1);
             if (letter == "z") SoundQueue.UnshiftSound("alphabet/Z", -1);
             if (letter == " ") SoundQueue.UnshiftSound("alphabet/Space", -1);
-			if (letter == "0") SoundQueue.UnshiftSound("fvox/000", -1);
-			if (letter == "1") SoundQueue.UnshiftSound("fvox/001", -1);
-			if (letter == "2") SoundQueue.UnshiftSound("fvox/002", -1);
-			if (letter == "3") SoundQueue.UnshiftSound("fvox/003", -1);
-			if (letter == "4") SoundQueue.UnshiftSound("fvox/004", -1);
-			if (letter == "5") SoundQueue.UnshiftSound("fvox/005", -1);
-			if (letter == "6") SoundQueue.UnshiftSound("fvox/006", -1);
-			if (letter == "7") SoundQueue.UnshiftSound("fvox/007", -1);
-			if (letter == "8") SoundQueue.UnshiftSound("fvox/008", -1);
-			if (letter == "9") SoundQueue.UnshiftSound("fvox/009", -1);
+			if (letter == "0") SoundQueue.UnshiftSound("numbers/000", -1);
+			if (letter == "1") SoundQueue.UnshiftSound("numbers/001", -1);
+			if (letter == "2") SoundQueue.UnshiftSound("numbers/002", -1);
+			if (letter == "3") SoundQueue.UnshiftSound("numbers/003", -1);
+			if (letter == "4") SoundQueue.UnshiftSound("numbers/004", -1);
+			if (letter == "5") SoundQueue.UnshiftSound("numbers/005", -1);
+			if (letter == "6") SoundQueue.UnshiftSound("numbers/006", -1);
+			if (letter == "7") SoundQueue.UnshiftSound("numbers/007", -1);
+			if (letter == "8") SoundQueue.UnshiftSound("numbers/008", -1);
+			if (letter == "9") SoundQueue.UnshiftSound("numbers/009", -1);
         }
     }
 }
