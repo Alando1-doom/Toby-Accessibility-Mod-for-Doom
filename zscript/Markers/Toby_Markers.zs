@@ -11,7 +11,7 @@ class ZS_Marker_Base : Mapmarker
 }
 
 class Toby_Marker_1 : ZS_Marker_Base
-{	
+{
 	States
 	{
 		Spawn:

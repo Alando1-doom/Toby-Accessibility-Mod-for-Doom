@@ -10,7 +10,7 @@ class ZS_MarkerHandler : EventHandler
 		baseMarkerName = "ZS_Marker_Base";
 		sequentalMarkerSpawnIndex = 0;
 		lastMarkerId = GetLastMarkerId();
-	
+
 		whiteList.push("Toby_Marker_1");
 		whiteList.push("Toby_Marker_2");
 		whiteList.push("Toby_Marker_3");
@@ -30,7 +30,7 @@ class ZS_MarkerHandler : EventHandler
 		Actor playerActor = players[e.Player].mo;
 		if (!playerActor) { return; }
 		int maxRemovalDistance = CVar.GetCVar("zs_em_MaxDistance", player).GetInt();
-		Array<String> eventAndArgument;		
+		Array<String> eventAndArgument;
 		//Sorry, this is dirty, but there were no other way to pass a string as an argument -Proydoha
 		e.Name.split(eventAndArgument, ":", TOK_KEEPEMPTY);
 
@@ -53,7 +53,7 @@ class ZS_MarkerHandler : EventHandler
 			DisplayAllMarkersOfTypeRemoved(eventAndArgument[1]);
 		}
 		if (eventAndArgument[0] == "ZS_RemoveAllMarkers")
-		{		
+		{
 			ThinkerIterator MarkerFinder = ThinkerIterator.Create(baseMarkerName);
 			Actor mo;
 			while (mo = Actor(MarkerFinder.Next()))
@@ -71,7 +71,7 @@ class ZS_MarkerHandler : EventHandler
 		}
 		if (eventAndArgument[0] == "ZS_RemoveLastMarker")
 		{
-			ZS_Marker_Base lastMarker = GetLastMarker();			
+			ZS_Marker_Base lastMarker = GetLastMarker();
 			if (lastMarker)
 			{
 				string markerClassName = lastMarker.GetClassName();
@@ -79,10 +79,10 @@ class ZS_MarkerHandler : EventHandler
 				sequentalMarkerSpawnIndex--;
 				PlayUndoSound(markerClassName);
 				DisplayMarkerRemovedMessage(markerClassName);
-			}			
+			}
 		}
 	}
-	
+
 	//Prevents ability to spawn anything except markers with sv_cheats 0 by typing
 	//netevent ZS_PlaceMarker:<any actor class> in console -Proydoha
 	bool IsMarkerInWhitelist(String markerClassName)
@@ -93,10 +93,10 @@ class ZS_MarkerHandler : EventHandler
 			{
 				return true;
 			}
-		}		
+		}
 		return false;
 	}
-	
+
 	void PlaceMarker(string markerClassName, Actor player)
 	{
 		ZS_Marker_Base mo = ZS_Marker_Base(Actor.Spawn(markerClassName, player.pos));
@@ -105,12 +105,12 @@ class ZS_MarkerHandler : EventHandler
 		PlayPlaceSound(markerClassName);
 		DisplayMarkerPlacedMessage(markerClassName);
 	}
-	
+
 	void RemoveNearestMarkerOfType(string markerClassName, Actor playerActor, int maxRemovalDistance)
 	{
 		double minDistance = int.Max;
 		double distance;
-		
+
 		ThinkerIterator MarkerFinder = ThinkerIterator.Create(markerClassName);
 		Actor minDistanceActor;
 		Actor mo;
@@ -131,7 +131,7 @@ class ZS_MarkerHandler : EventHandler
 			DisplayMarkerRemovedMessage(mClassName);
 		}
 	}
-	
+
 	void PlayUndoSound(string markerClassName)
 	{
 		if (markerClassName == "Toby_Marker_1")
@@ -175,7 +175,7 @@ class ZS_MarkerHandler : EventHandler
 			S_StartSound("marker/undo10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
 		}
 	}
-	
+
 	void PlayPlaceSound(string markerClassName)
 	{
 		if (markerClassName == "Toby_Marker_1")
@@ -219,7 +219,7 @@ class ZS_MarkerHandler : EventHandler
 			S_StartSound("marker/marker10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
 		}
 	}
-	
+
 	void DisplayMarkerPlacedMessage(string markerClassName)
 	{
 		if (markerClassName == "Toby_Marker_1")
@@ -263,7 +263,7 @@ class ZS_MarkerHandler : EventHandler
 			Console.MidPrint(SmallFont, "Marker 10 Placed");
 		}
 	}
-	
+
 	void DisplayMarkerRemovedMessage(string markerClassName)
 	{
 		if (markerClassName == "Toby_Marker_1")
@@ -307,7 +307,7 @@ class ZS_MarkerHandler : EventHandler
 			Console.MidPrint(SmallFont, "Marker 10 Removed");
 		}
 	}
-	
+
 	void DisplayAllMarkersOfTypeRemoved(string markerClassName)
 	{
 		if (markerClassName == "Toby_Marker_1")
@@ -351,7 +351,7 @@ class ZS_MarkerHandler : EventHandler
 			Console.MidPrint(SmallFont, "All 10 markers removed");
 		}
 	}
-	
+
 	ZS_Marker_Base GetLastMarker()
 	{
 		ZS_Marker_Base lastMarker = null;
@@ -359,28 +359,28 @@ class ZS_MarkerHandler : EventHandler
 		ThinkerIterator MarkerFinder = ThinkerIterator.Create(baseMarkerName);
 		ZS_Marker_Base mo;
 		while (mo = ZS_Marker_Base(MarkerFinder.Next()))
-		{			
+		{
 			if (mo.markerId > lastMarkerId)
 			{
 				lastMarkerId = mo.markerId;
 				lastMarker = mo;
 			}
 		}
-		
+
 		return lastMarker;
 	}
-	
+
 	int GetLastMarkerId()
 	{
 		int lastMarkerId = 0;
 		ZS_Marker_Base lastMarker = GetLastMarker();
 		if (lastMarker)
-		{			
+		{
 			lastMarkerId = lastMarker.markerId;
 		}
 		return lastMarkerId;
 	}
-	
+
 	int Modulo(int a, int b)
 	{
 		return int(((a % b) + b) % b);
