@@ -66,11 +66,11 @@ numbers/70th     "sounds/70th.ogg"
 numbers/80th     "sounds/80th.ogg"
 numbers/90th     "sounds/90th.ogg"
 
-save/map		"sounds/map.ogg"
+save/map        "sounds/map.ogg"
 save/episode    "sounds/episode.ogg"
-save/slot		"sounds/slot.ogg"
-save/of			"sounds/of.ogg"
-save/autosave	"sounds/autosave.ogg"
+save/slot       "sounds/slot.ogg"
+save/of         "sounds/of.ogg"
+save/autosave   "sounds/autosave.ogg"
 save/new        "sounds/newsavegame.ogg"
 save/entersave  "sounds/entersave.ogg"
 save/cancelled  "sounds/savecancelled.ogg"
@@ -94,8 +94,6 @@ month/october   "sounds/october.ogg"
 month/november  "sounds/november.ogg"
 month/december  "sounds/december.ogg"
 
-//Alphabet downloaded from this URL: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp
-//This is first URL from Google that I've got with alphabet in one archive
 alphabet/A       "sounds/Alphabet/A.ogg"
 alphabet/B       "sounds/Alphabet/B.ogg"
 alphabet/C       "sounds/Alphabet/C.ogg"
@@ -127,53 +125,53 @@ alphabet/Space   "sounds/Alphabet/_.wav"
 
 //Map Marker Sounds
 
-$rolloff marker/beacon1	linear	96 640
-marker/beacon1		dsmark1
-$rolloff marker/beacon2	linear	96 640
-marker/beacon2		dsmark2
-$rolloff marker/beacon3	linear	96 640
-marker/beacon3		dsmark3
-$rolloff marker/beacon4	linear	96 640
-marker/beacon4		dsmark4
-$rolloff marker/beacon5	linear	96 640
-marker/beacon5		dsmark5
-$rolloff marker/beacon6	linear	96 640
-marker/beacon6		dsmark6
-$rolloff marker/beacon7	linear	96 640
-marker/beacon7		dsmark7
-$rolloff marker/beacon8	linear	96 640
-marker/beacon8		dsmark8
-$rolloff marker/beacon9	linear	96 640
-marker/beacon9		dsmark9
-$rolloff marker/beacon10	linear	96 640
-marker/beacon10		dsmark10
+$rolloff marker/beacon1     linear	96 640
+marker/beacon1              dsmark1
+$rolloff marker/beacon2     linear	96 640
+marker/beacon2              dsmark2
+$rolloff marker/beacon3     linear	96 640
+marker/beacon3              dsmark3
+$rolloff marker/beacon4     linear	96 640
+marker/beacon4              dsmark4
+$rolloff marker/beacon5     linear	96 640
+marker/beacon5              dsmark5
+$rolloff marker/beacon6     linear	96 640
+marker/beacon6              dsmark6
+$rolloff marker/beacon7     linear	96 640
+marker/beacon7              dsmark7
+$rolloff marker/beacon8     linear	96 640
+marker/beacon8              dsmark8
+$rolloff marker/beacon9     linear	96 640
+marker/beacon9              dsmark9
+$rolloff marker/beacon10    linear	96 640
+marker/beacon10             dsmark10
 
 //Announcer
 
-marker/marker1		dsm1plc
-marker/undo1		dsm1rem
-marker/marker2		dsm2plc
-marker/undo2		dsm2rem
-marker/marker3		dsm3plc
-marker/undo3		dsm3rem
-marker/marker4		dsm4plc
-marker/undo4		dsm4rem
-marker/marker5		dsm5plc
-marker/undo5 		dsm5rem
-marker/marker6		dsm6plc
-marker/undo6		dsm6rem
-marker/marker7		dsm7plc
-marker/undo7		dsm7rem
-marker/marker8		dsm8plc
-marker/undo8		dsm8rem
-marker/marker9		dsm9plc
-marker/undo9		dsm9rem
-marker/marker10		dsm10plc
-marker/undo10		dsm10rem
-marker/maxed		dsmmax
-marker/cleared		dsmclear
+marker/marker1      dsm1plc
+marker/undo1        dsm1rem
+marker/marker2      dsm2plc
+marker/undo2        dsm2rem
+marker/marker3      dsm3plc
+marker/undo3        dsm3rem
+marker/marker4      dsm4plc
+marker/undo4        dsm4rem
+marker/marker5      dsm5plc
+marker/undo5        dsm5rem
+marker/marker6      dsm6plc
+marker/undo6        dsm6rem
+marker/marker7      dsm7plc
+marker/undo7        dsm7rem
+marker/marker8      dsm8plc
+marker/undo8        dsm8rem
+marker/marker9      dsm9plc
+marker/undo9        dsm9rem
+marker/marker10     dsm10plc
+marker/undo10       dsm10rem
+marker/maxed        dsmmax
+marker/cleared      dsmclear
 
 //Interface
 
-marker/maxout		dsmaxout
-marker/undofail		dsnoundo
+marker/maxout       dsmaxout
+marker/undofail     dsnoundo

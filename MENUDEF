@@ -65,8 +65,8 @@ LISTMENU "MainMenu"
 OptionMenu "SimpleOptionsMenu"
 {
 	Title "Simple Options Menu"
-	Submenu "Sound Options", "NarratedSoundOptions"
-	Submenu "GZDoom Options", "NarratedOptionMenu"
+	Submenu "Sound Options", "SoundOptions"
+	Submenu "GZDoom Options", "OptionsMenu"
 }
 
 AddOptionMenu "OptionsMenu"
