@@ -34,7 +34,7 @@ class MenuEventProcessor ui
         bool isAutosave = false;
         bool isNewSlot = false;
         bool isSaveMenu = false;
-		
+
 		if (parentList)
 		{
 				parentMenuName = parentList.mDesc.mMenuName;
@@ -43,12 +43,12 @@ class MenuEventProcessor ui
 		{
 				parentMenuName = parentOption.mDesc.mMenuName;
 		}
-		
+
 		if (mkey == Menu.MKEY_BACK && parentMenuName == "Mainmenu")
 		{
 				SoundQueue.AddSound("menu/backup", -1);
 		}
-        
+
         if (loadsave)
         {
             saveGamesTotal = loadsave.manager.SavegameCount();
@@ -59,9 +59,13 @@ class MenuEventProcessor ui
             }
             if (saveGamesTotal > 0)
             {
-                SaveGameNode savegame = loadsave.manager.GetSavegame(loadsave.Selected);
+                SaveGameNode savegame;
+                if (loadsave.Selected != -1)
+                {
+                    savegame = loadsave.manager.GetSavegame(loadsave.Selected);
+                }
 				if (loadsave.Selected == -1)
-				{				
+				{
 					itemId = "";
 				}
 				else
@@ -91,29 +95,29 @@ class MenuEventProcessor ui
             ListMenuDescriptor mListDesc = list.mDesc;
             menuName = mListDesc.mMenuName;
             if (mListDesc.mSelectedItem != -1)
-            {                
+            {
                 menuItem = mListDesc.mItems[mListDesc.mSelectedItem];
                 menuItemSelectable = ListMenuItemSelectable(menuItem);
                 textItem = ListMenuItemTextItem(menuItem);
                 patchItem = ListMenuItemPatchItem(menuItem);
-            }            
+            }
         }
         else if (option)
         {
             OptionMenuDescriptor mOptionDesc = option.mDesc;
             menuName = mOptionDesc.mMenuName;
             if (mOptionDesc.mSelectedItem != -1)
-            {                 
+            {
                 optionItem = mOptionDesc.mItems[mOptionDesc.mSelectedItem];
                 optionControl = OptionMenuItemControlBase(optionItem);
                 optionItemBase = OptionMenuItemOptionBase(optionItem);
 				optionItemOption = OptionMenuItemOption(optionItem);
-                sliderItem = OptionMenuSliderBase(optionItem);            
+                sliderItem = OptionMenuSliderBase(optionItem);
                 fieldItem = OptionMenuFieldBase(optionItem);
             }
         }
 
-        if (textItem) 
+        if (textItem)
 		{
 			itemId = textItem.mText;
 		}
@@ -126,7 +130,7 @@ class MenuEventProcessor ui
 			itemId = ""..menuItemSelectable.mParam;
 		}
         else if (optionItem)
-        {            
+        {
             itemId = ""..optionItem.mLabel;
         }
 
