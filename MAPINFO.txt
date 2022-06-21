@@ -2,4 +2,5 @@ GameInfo
 {
     AddEventHandlers = "SoundQueue"
 	AddEventHandlers = "ZS_MarkerHandler"
+    AddEventHandlers = "Toby_MenuInjectorStaticHandler"
 }
