@@ -1,4 +1,4 @@
-class Toby_MenuInjectorStaticHandler : StaticEventHandler
+class Toby_MenuStaticHandler : StaticEventHandler
 {
     ui string currentMenuName;
     ui string lastMenuName;
