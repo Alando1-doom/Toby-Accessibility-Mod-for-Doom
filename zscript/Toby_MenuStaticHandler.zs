@@ -3,30 +3,13 @@ class Toby_MenuStaticHandler : StaticEventHandler
     ui string currentMenuName;
     ui string lastMenuName;
 
+    ui Toby_MenuState currentMenuState;
+    ui Toby_MenuState previousMenuState;
+    ui bool isNotFirstRun;
+
     override void OnRegister()
     {
         console.printf("Static event handler registered!");
-    }
-
-    override bool UiProcess(UiEvent e)
-    {
-        if (lastMenuName == "")
-        {
-            lastMenuName = "null";
-        }
-        currentMenuName = "null";
-        Menu currentMenu = Menu.GetCurrentMenu();
-        if (currentMenu)
-        {
-            currentMenuName = currentMenu.GetClassName();
-            MenuEventProcessor.Process(currentMenu, KeyCharToMKey(e.KeyChar));
-        }
-        if (!currentMenu && IsUiProcessor)
-        {
-            EventHandler.SendNetworkEvent("Toby_DisableUiProcessor");
-        }
-        lastMenuName = currentMenuName;
-        return false;
     }
 
     override void NetworkProcess (ConsoleEvent e)
@@ -46,16 +29,20 @@ class Toby_MenuStaticHandler : StaticEventHandler
 
     override void UITick()
     {
+        if (!isNotFirstRun)
+        {
+            currentMenuState = new("Toby_MenuState");
+            previousMenuState = new("Toby_MenuState");
+            currentMenuState.SetNullState();
+            previousMenuState.SetNullState();
+            Console.printf("Menu state objects created!");
+            isNotFirstRun = true;
+        }
+
         Menu currentMenu = Menu.GetCurrentMenu();
-        currentMenuName = "null";
-        if (currentMenu)
-        {
-            currentMenuName = currentMenu.GetClassName();
-        }
-        if (currentMenu && !IsUiProcessor)
-        {
-            EventHandler.SendNetworkEvent("Toby_EnableUiProcessor");
-        }
+        currentMenuState.UpdateMenuState(currentMenu);
+        currentMenuState.CompareTo(previousMenuState);
+        currentMenuState.CopyValuesTo(previousMenuState);
     }
 
     ui int KeyCharToMKey(int keyChar)
