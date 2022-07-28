@@ -3,13 +3,11 @@ class NumberToVoice ui
     ui static void ConvertFloatAndAddToQueue(float number)
     {
         string numberAsString = ""..number;
-        //Console.Printf("numberAsString: "..numberAsString);
         int dotPlace = numberAsString.IndexOf(".", 0);
         string firstPart = numberAsString.Mid(0, dotPlace);
-        //Console.Printf("firstPart: "..firstPart);
         string secondPart = numberAsString.Mid(dotPlace + 1, numberAsString.Length() - 1);
         secondPart.StripRight("0");
-        bool skipZeroAfterDot = true;        
+        bool skipZeroAfterDot = true;
         if (secondPart.Length() == 0)
         {
             secondPart = "0";
@@ -21,12 +19,12 @@ class NumberToVoice ui
         }
         else if (secondPart != "0")
         {
-            for (int i = secondPart.Length() - 1; i >= 0; i--) 
+            for (int i = secondPart.Length() - 1; i >= 0; i--)
             {
                 UnshiftSingleDigitToQueue(secondPart.Mid(i, 1));
             }
             SoundQueue.UnshiftSound("numbers/dot", -1);
-        }        
+        }
         ConvertAndAddToQueue(firstPart.ToInt());
     }
 
@@ -39,17 +37,15 @@ class NumberToVoice ui
         {
             numberAsString = numberAsString.Mid(1, numberAsString.Length() - 1);
             hasMinus = true;
-        }        
+        }
         string numberSegment;
         bool lastDigits = false;
         do
         {
-            //Console.Printf("numberAsString: "..numberAsString);   
-            //Console.Printf("power: "..power);   
             if (numberAsString.Length() != 0)
             {
                 UnshiftPowers(power);
-            }            
+            }
             if (numberAsString.Length() >= 3)
             {
                 numberSegment = ""..numberAsString.Mid(numberAsString.Length() - 3, 3);
@@ -70,53 +66,34 @@ class NumberToVoice ui
                 }
                 if (numberSegment == "000" && power == 0)
                 {
-                    SoundQueue.UnshiftSound("numbers/000", -1); //ZERO
+                    SoundQueue.UnshiftSound("numbers/000", -1);
                     return;
                 }
             }
-            //Console.Printf("numberSegment 2: "..numberSegment);
             UnshiftTripleDigits(numberSegment, lastDigits);
         } while (lastDigits == false);
         if (hasMinus)
         {
-            SoundQueue.UnshiftSound("numbers/minus", -1); //Minus
+            SoundQueue.UnshiftSound("numbers/minus", -1);
         }
     }
 
     ui static void UnshiftPowers(int digit)
     {
-        if (digit == 1) SoundQueue.UnshiftSound("numbers/thousand", -1); //thousand
-        if (digit == 2) SoundQueue.UnshiftSound("numbers/million", -1); //million
-        if (digit == 3) SoundQueue.UnshiftSound("numbers/billion", -1); //billion
-        if (digit == 4) SoundQueue.UnshiftSound("numbers/trillion", -1); //trillion
+        if (digit == 1) SoundQueue.UnshiftSound("numbers/thousand", -1);
+        if (digit == 2) SoundQueue.UnshiftSound("numbers/million", -1);
+        if (digit == 3) SoundQueue.UnshiftSound("numbers/billion", -1);
+        if (digit == 4) SoundQueue.UnshiftSound("numbers/trillion", -1);
     }
 
     ui static void UnshiftSingleDigitToQueue(string digit)
     {
-        if (digit == "0") SoundQueue.UnshiftSound("numbers/000", -1);
-        if (digit == "1") SoundQueue.UnshiftSound("numbers/001", -1);
-        if (digit == "2") SoundQueue.UnshiftSound("numbers/002", -1);
-        if (digit == "3") SoundQueue.UnshiftSound("numbers/003", -1);
-        if (digit == "4") SoundQueue.UnshiftSound("numbers/004", -1);
-        if (digit == "5") SoundQueue.UnshiftSound("numbers/005", -1);
-        if (digit == "6") SoundQueue.UnshiftSound("numbers/006", -1);
-        if (digit == "7") SoundQueue.UnshiftSound("numbers/007", -1);
-        if (digit == "8") SoundQueue.UnshiftSound("numbers/008", -1);
-        if (digit == "9") SoundQueue.UnshiftSound("numbers/009", -1);
+        SoundQueue.UnshiftSound(GetSingleDigitSoundName(digit), -1);
     }
 
     ui static void AddSingleDigitToQueue(string digit)
     {
-        if (digit == "0") SoundQueue.AddSound("numbers/000", -1);
-        if (digit == "1") SoundQueue.AddSound("numbers/001", -1);
-        if (digit == "2") SoundQueue.AddSound("numbers/002", -1);
-        if (digit == "3") SoundQueue.AddSound("numbers/003", -1);
-        if (digit == "4") SoundQueue.AddSound("numbers/004", -1);
-        if (digit == "5") SoundQueue.AddSound("numbers/005", -1);
-        if (digit == "6") SoundQueue.AddSound("numbers/006", -1);
-        if (digit == "7") SoundQueue.AddSound("numbers/007", -1);
-        if (digit == "8") SoundQueue.AddSound("numbers/008", -1);
-        if (digit == "9") SoundQueue.AddSound("numbers/009", -1);
+        SoundQueue.AddSound(GetSingleDigitSoundName(digit), -1);
     }
 
     ui static void UnshiftDoubleDigits(string doubleDigits)
@@ -157,7 +134,7 @@ class NumberToVoice ui
     }
 
     ui static void UnshiftTripleDigits(string tripleDigits, bool lastDigits)
-    {        
+    {
         string doubleDigits = ""..tripleDigits.Mid(1, 1)..tripleDigits.Mid(2, 1);
         if (doubleDigits != "00")
         {
@@ -171,6 +148,22 @@ class NumberToVoice ui
         {
             SoundQueue.UnshiftSound("numbers/100", -1);
             UnshiftSingleDigitToQueue(tripleDigits.Mid(0, 1));
-        }        
+        }
+    }
+
+    ui static string GetSingleDigitSoundName(string digit)
+    {
+        string singleDigitSoundName = "alphabet/Space";
+        if (digit == "0") singleDigitSoundName = "numbers/000";
+        if (digit == "1") singleDigitSoundName = "numbers/001";
+        if (digit == "2") singleDigitSoundName = "numbers/002";
+        if (digit == "3") singleDigitSoundName = "numbers/003";
+        if (digit == "4") singleDigitSoundName = "numbers/004";
+        if (digit == "5") singleDigitSoundName = "numbers/005";
+        if (digit == "6") singleDigitSoundName = "numbers/006";
+        if (digit == "7") singleDigitSoundName = "numbers/007";
+        if (digit == "8") singleDigitSoundName = "numbers/008";
+        if (digit == "9") singleDigitSoundName = "numbers/009";
+        return singleDigitSoundName;
     }
 }

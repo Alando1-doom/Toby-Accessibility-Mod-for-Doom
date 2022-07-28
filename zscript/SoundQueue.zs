@@ -32,7 +32,7 @@ class SoundQueue : StaticEventHandler
 
     ui static void Clear()
     {
-        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));        
+        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));
         for (int i = 0; i < handler.queue.Size(); i++)
         {
             handler.queue[i].Destroy();

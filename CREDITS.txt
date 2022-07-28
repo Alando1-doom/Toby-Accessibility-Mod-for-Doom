@@ -1,3 +1,4 @@
-- fvox sounds are taken from Half-Life
-- Alphabet is downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp
-- tts taken from https://www.naturalreaders.com/online/
+- fvox sounds for prototyping were taken from Half-Life -Proydoha
+- Alphabet for prototyping was downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp -Proydoha
+- TTS for prototyping was taken from https://www.naturalreaders.com/online/ -Proydoha
+- Original Sound Marker Mod design by ZikShadow -Proydoha

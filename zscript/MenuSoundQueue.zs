@@ -12,7 +12,7 @@ class MenuSoundQueue
         OptionMenuItem optionItem = e.optionItem;
         OptionMenuItemOptionBase optionItemBase = e.optionItemBase;
         OptionMenuItemControlBase optionControl = e.optionControl;
-		OptionMenuItemOption optionItemOption = e.optionItemOption;        
+		OptionMenuItemOption optionItemOption = e.optionItemOption;
 
         string itemId = e.itemId;
         string itemIdLocalized = e.itemIdLocalized;
@@ -28,7 +28,7 @@ class MenuSoundQueue
         string saveGameTime = e.saveGameTime;
         bool isAutosave = e.isAutosave;
         bool isNewSlot = e.isNewSlot;
-        bool isSaveMenu = e.isSaveMenu;        
+        bool isSaveMenu = e.isSaveMenu;
 
         //This should be moved to MenuEventProcessor ( ? )
         Array<String> splittedTime;
@@ -88,9 +88,9 @@ class MenuSoundQueue
                 mapNumber = mapNumberTitle[0].Mid(3,1).ToInt(10);
             }
         }
-        
+
         //System.StopAllSounds(); //This line will abruptly stop all sounds. I think it sounds better than overlapping sounds
-        SoundQueue.Clear();        
+        SoundQueue.Clear();
 
         //This is main block where you can define sounds and conditions
         if (itemIdLocalized == "M_NGAME" && mkey != Menu.MKEY_BACK && mkey != Menu.MKEY_ENTER)
@@ -116,7 +116,7 @@ class MenuSoundQueue
 		else if (itemIdLocalized == "M_RDTHIS" && mkey != Menu.MKEY_BACK && mkey != Menu.MKEY_ENTER)
         {
             SoundQueue.AddSound("menusnd/readme", -1);
-        }		
+        }
 		//Doom Episodes
 		else if (itemIdLocalized == "M_EPI1" && mkey != Menu.MKEY_BACK)
         {
@@ -142,7 +142,7 @@ class MenuSoundQueue
         else if (itemIdLocalized == "EASY" && menuName == "Skillmenu" && mkey != Menu.MKEY_BACK) //You can do as many conditions as you want. For example: check if you're in correct menu
         {
             SoundQueue.AddSound("menusnd/easy", -1);
-        }        
+        }
         else if (itemIdLocalized == "NORMAL" && menuName == "Skillmenu" && mkey != Menu.MKEY_BACK)
         {
             SoundQueue.AddSound("menusnd/normal", -1);
@@ -170,7 +170,7 @@ class MenuSoundQueue
 		else if (itemIdLocalized == "M_NMARE" && menuName == "Skillmenu" && mkey != Menu.MKEY_BACK)
         {
             SoundQueue.AddSound("menusnd/skill5", -1);
-        }	
+        }
 		//Menu Select Sounds
 		else if (mkey == Menu.MKEY_ENTER && itemIdLocalized == "M_NGAME")
         {
@@ -228,7 +228,7 @@ class MenuSoundQueue
 			//SoundQueue.AddSound("menu/choose", -1);
             SoundQueue.AddSound("menusnd/episode5", -1);
         }
-		//Menu Back or Dismiss Sounds		
+		//Menu Back or Dismiss Sounds
 		else if (mkey == Menu.MKEY_BACK && menuName == "Mainmenu")
 		{
 			SoundQueue.AddSound("menu/dismiss", -1);
@@ -305,7 +305,7 @@ class MenuSoundQueue
         }
         else if (saveGameSlot >= 0 && (mkey == Menu.MKEY_Up || mkey == Menu.MKEY_Down))
         {
-            //Because of my backwards thinking sounds have to be added in reverse order            
+            //Because of my backwards thinking sounds have to be added in reverse order
             if (isAutosave)
             {
                 SoundQueue.UnshiftSound("save/autosave", -1);
@@ -314,7 +314,7 @@ class MenuSoundQueue
 			{
 				StringToVoice.ConvertAndAddToQueueReverse(itemId);
 			}
-            NumberToVoice.ConvertAndAddToQueue(saveGamesTotal); 
+            NumberToVoice.ConvertAndAddToQueue(saveGamesTotal);
             SoundQueue.UnshiftSound("save/of", -1);
             NumberToVoice.ConvertAndAddToQueue(saveGameSlot);
             SoundQueue.UnshiftSound("save/slot", -1);
@@ -322,7 +322,7 @@ class MenuSoundQueue
         else if (saveGameSlot >= 0 && !isNewSlot && mkey == Menu.MKEY_Left)
         {
             if (saveGameDate != "")
-            {                
+            {
                 SoundQueue.UnshiftSound("save/seconds", -1);
                 NumberToVoice.ConvertAndAddToQueue(seconds);
                 SoundQueue.UnshiftSound("save/minutes", -1);
@@ -343,7 +343,7 @@ class MenuSoundQueue
                     NumberToVoice.ConvertAndAddToQueue(episodeNumber);
                     SoundQueue.UnshiftSound("save/episode", -1);
                 }
-            }            
+            }
         }
         else if (saveGameSlot >= 0 && !isNewSlot && mkey == Menu.MKEY_Right)
         {
@@ -363,7 +363,7 @@ class MenuSoundQueue
             }
         }
         //End of save/load menu
-		
+
         //Starting from here it's all fallback for all unaccounted cases
         else if (optionControl)
         {
@@ -388,7 +388,7 @@ class MenuSoundQueue
 			else if (optionItemBase)
 			{
 				int selection = optionItemBase.GetSelection();
-				int selectionMaxValue = OptionValues.GetCount(optionItemBase.mValues)-1;				
+				int selectionMaxValue = OptionValues.GetCount(optionItemBase.mValues)-1;
 				if (mkey == Menu.MKEY_Left)
 				{
 					selection--;
@@ -405,9 +405,9 @@ class MenuSoundQueue
 						selection = 0;
 					}
 				}
-				localizedOptionValue = StringTable.Localize(OptionValues.GetText(optionItemBase.mValues, selection));				
+				localizedOptionValue = StringTable.Localize(OptionValues.GetText(optionItemBase.mValues, selection));
 			}
-			
+
 			//console.Printf("Selected value: "..localizedOptionValue);
 			if (mkey == Menu.MKEY_Up || mkey == Menu.MKEY_Down)
 			{
@@ -435,7 +435,7 @@ class MenuSoundQueue
             NumberToVoice.ConvertFloatAndAddToQueue(sliderItem.GetSliderValue());
             if (mkey == Menu.MKEY_Up || mkey == Menu.MKEY_Down)
             {
-                //StringToVoice.ConvertAndAddToQueueReverse(itemIdLocalized); 
+                //StringToVoice.ConvertAndAddToQueueReverse(itemIdLocalized);
             }
         }
         else if (fieldItem)
@@ -451,7 +451,7 @@ class MenuSoundQueue
             if (mkey == Menu.MKEY_Up || mkey == Menu.MKEY_Down)
             {
                 //StringToVoice.ConvertAndAddToQueue(itemIdLocalized);
-            }   
+            }
         }
         SoundQueue.PlayQueue(0);
 
