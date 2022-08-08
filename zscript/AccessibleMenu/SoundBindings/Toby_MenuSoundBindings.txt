@@ -1,0 +1,1 @@
+any Mainmenu = menu/activate
