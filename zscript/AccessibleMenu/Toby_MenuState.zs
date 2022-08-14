@@ -29,7 +29,7 @@ class Toby_MenuState
         otherState.mItemOptionValueLocalized = mItemOptionValueLocalized;
     }
 
-    ui void CompareTo(Toby_MenuState otherState)
+    ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
     {
         if (menuClass == "null"
             && menuName == "null"
@@ -37,13 +37,15 @@ class Toby_MenuState
             && otherState.menuName != "null")
         {
                 console.printf("Menu dismissed");
-                return;
+                return MenuDismissed;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
         {
             console.printf("Menu changed");
-            return;
+            console.printf("Class: "..otherState.menuClass.." -> "..menuClass);
+            console.printf("Name: "..otherState.menuName.." -> "..menuName);
+            return MenuChanged;
         }
 
         if (otherState.mItemListSelectableString != mItemListSelectableString
@@ -54,14 +56,22 @@ class Toby_MenuState
             || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized)
         {
             console.printf("Option changed");
-            return;
+            console.printf("mItemListTextString: "..otherState.mItemListTextString.." -> "..mItemListTextString);
+            console.printf("mItemListTextStringLocalized: "..otherState.mItemListTextStringLocalized.." -> "..mItemListTextStringLocalized);
+            console.printf("mItemListPatchString: "..otherState.mItemListPatchString.." -> "..mItemListPatchString);
+            console.printf("mItemOptionName: "..otherState.mItemOptionName.." -> "..mItemOptionName);
+            console.printf("mItemOptionNameLocalized: "..otherState.mItemOptionNameLocalized.." -> "..mItemOptionNameLocalized);
+            return OptionChanged;
         }
         if (otherState.mItemOptionValue != mItemOptionValue
             || otherState.mItemOptionValueLocalized != mItemOptionValueLocalized)
         {
             console.printf("Value changed");
-            return;
+            console.printf("mItemOptionValue: "..otherState.mItemOptionValue.." -> "..mItemOptionValue);
+            console.printf("mItemOptionValueLocalized: "..otherState.mItemOptionValueLocalized.." -> "..mItemOptionValueLocalized);
+            return OptionValueChanged;
         }
+        return NoChanges;
     }
 
     ui void SetNullState()
@@ -176,4 +186,13 @@ class Toby_MenuState
             mItemOptionValueLocalized = StringTable.Localize(mItemOptionValue);
         }
     }
+
+    enum MenuStateChanges
+    {
+        NoChanges = 0,
+        MenuDismissed = 1,
+        MenuChanged = 2,
+        OptionChanged = 3,
+        OptionValueChanged = 4,
+    };
 }

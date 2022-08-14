@@ -5,7 +5,10 @@ class Toby_MenuStaticHandler : StaticEventHandler
 
     ui Toby_MenuState currentMenuState;
     ui Toby_MenuState previousMenuState;
+    ui Toby_MenuEventProcessor menuEventProcessor;
     ui bool isNotFirstRun;
+
+    ui Toby_MenuSoundBindingsContainer menuSoundBindingsContainer;
 
     override void OnRegister()
     {
@@ -31,17 +34,24 @@ class Toby_MenuStaticHandler : StaticEventHandler
     {
         if (!isNotFirstRun)
         {
+            isNotFirstRun = true;
             currentMenuState = new("Toby_MenuState");
             previousMenuState = new("Toby_MenuState");
             currentMenuState.SetNullState();
             previousMenuState.SetNullState();
-            Console.printf("Menu state objects created!");
-            isNotFirstRun = true;
+            menuSoundBindingsContainer = new("Toby_MenuSoundBindingsContainer");
+            menuSoundBindingsContainer.Init();
+            menuEventProcessor = new("Toby_MenuEventProcessor");
+            menuEventProcessor.Init(menuSoundBindingsContainer);
         }
 
         Menu currentMenu = Menu.GetCurrentMenu();
         currentMenuState.UpdateMenuState(currentMenu);
-        currentMenuState.CompareTo(previousMenuState);
+        int detectedChange = currentMenuState.DetectChanges(previousMenuState);
+        if (detectedChange > 0)
+        {
+            menuEventProcessor.Process(currentMenuState, previousMenuState, detectedChange);
+        }
         currentMenuState.CopyValuesTo(previousMenuState);
     }
 
