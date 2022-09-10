@@ -36,15 +36,15 @@ class Toby_MenuState
             && otherState.menuClass != "null"
             && otherState.menuName != "null")
         {
-                console.printf("Menu dismissed");
+                console.printf("EventType : MenuDismissed");
                 return MenuDismissed;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
         {
-            console.printf("Menu changed");
-            console.printf("Class: "..otherState.menuClass.." -> "..menuClass);
-            console.printf("Name: "..otherState.menuName.." -> "..menuName);
+            console.printf("EventType : MenuChanged");
+            console.printf("PreviousMenuClass : "..otherState.menuClass.." -> CurrentMenuClass : "..menuClass);
+            console.printf("PreviousMenuName : "..otherState.menuName.." -> CurrentMenuName : "..menuName);
             return MenuChanged;
         }
 
@@ -55,20 +55,21 @@ class Toby_MenuState
             || otherState.mItemOptionName != mItemOptionName
             || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized)
         {
-            console.printf("Option changed");
-            console.printf("mItemListTextString: "..otherState.mItemListTextString.." -> "..mItemListTextString);
-            console.printf("mItemListTextStringLocalized: "..otherState.mItemListTextStringLocalized.." -> "..mItemListTextStringLocalized);
-            console.printf("mItemListPatchString: "..otherState.mItemListPatchString.." -> "..mItemListPatchString);
-            console.printf("mItemOptionName: "..otherState.mItemOptionName.." -> "..mItemOptionName);
-            console.printf("mItemOptionNameLocalized: "..otherState.mItemOptionNameLocalized.." -> "..mItemOptionNameLocalized);
+            console.printf("EventType : OptionChanged");
+            console.printf("PreviousMenuItemListSelectableString : "..otherState.mItemListSelectableString.." -> CurrentMenuItemListSelectableString : "..mItemListSelectableString);
+            console.printf("PreviousMenuItemListTextString : "..otherState.mItemListTextString.." -> CurrentMenuItemListTextString : "..mItemListTextString);
+            console.printf("PreviousMenuItemListTextStringLocalized : "..otherState.mItemListTextStringLocalized.." -> CurrentMenuItemListTextStringLocalized : "..mItemListTextStringLocalized);
+            console.printf("PreviousMenuItemListPatchString : "..otherState.mItemListPatchString.." -> CurrentMenuItemListPatchString : "..mItemListPatchString);
+            console.printf("PreviousMenuItemOptionName : "..otherState.mItemOptionName.." -> CurrentMenuItemOptionName : "..mItemOptionName);
+            console.printf("PreviousMenuItemOptionNameLocalized : "..otherState.mItemOptionNameLocalized.." -> CurrentMenuItemOptionNameLocalized : "..mItemOptionNameLocalized);
             return OptionChanged;
         }
         if (otherState.mItemOptionValue != mItemOptionValue
             || otherState.mItemOptionValueLocalized != mItemOptionValueLocalized)
         {
-            console.printf("Value changed");
-            console.printf("mItemOptionValue: "..otherState.mItemOptionValue.." -> "..mItemOptionValue);
-            console.printf("mItemOptionValueLocalized: "..otherState.mItemOptionValueLocalized.." -> "..mItemOptionValueLocalized);
+            console.printf("EventType : OptionValueChanged");
+            console.printf("PreviousMenuItemOptionValue : "..otherState.mItemOptionValue.." -> CurrentMenuItemOptionValue : "..mItemOptionValue);
+            console.printf("PreviousMenuItemOptionValueLocalized : "..otherState.mItemOptionValueLocalized.." -> CurrentMenuItemOptionValueLocalized : "..mItemOptionValueLocalized);
             return OptionValueChanged;
         }
         return NoChanges;

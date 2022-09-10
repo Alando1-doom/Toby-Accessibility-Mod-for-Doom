@@ -1,9 +1,20 @@
-{"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menu/activate"}
+{"EventType":"MenuDismissed", "SoundToPlay":"menusnd/dismiss"}
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menusnd/mainmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_NGAME", "SoundToPlay":"menusnd/new"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_OPTION", "SoundToPlay":"menusnd/option"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_LOADG", "SoundToPlay":"menusnd/load"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_SAVEG", "SoundToPlay":"menusnd/save"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quit"}
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"Episodemenu", "SoundToPlay":"menusnd/epimenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI1", "SoundToPlay":"menusnd/episode1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI2", "SoundToPlay":"menusnd/episode2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI3", "SoundToPlay":"menusnd/episode3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI4", "SoundToPlay":"menusnd/episode4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI5", "SoundToPlay":"menusnd/episode5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_HELL", "SoundToPlay":"menusnd/episode6"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_NOREST", "SoundToPlay":"menusnd/episode7"}
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_JKILL", "SoundToPlay":"menusnd/skill1"}
@@ -16,4 +27,21 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
 
-{"EventType":"MenuChanged", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuClass":"ListMenu", "PreviousMenuName":"Mainmenu", "SoundToPlay":"menusnd/quitselect"}
+{"EventType":"MenuChanged",   "CurrentMenuName":"SimpleOptionsMenu", "SoundToPlay":"menusnd/option"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Sound Options", "SoundToPlay":"menusnd/soundopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"GZDoom Options", "SoundToPlay":"menusnd/gzdopt"}
+
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"SoundOptions", "SoundToPlay":"menusnd/soundopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$MODMNU_MASTERVOLUME", "SoundToPlay":"menusnd/mastervol"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_SFXVOLUME", "SoundToPlay":"menusnd/soundvol"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MUSICVOLUME", "SoundToPlay":"menusnd/musicvol"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MENUVOLUME", "SoundToPlay":"menusnd/menuvol"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MIDIDEVICE", "SoundToPlay":"menusnd/midi"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_UNDERWATERREVERB", "SoundToPlay":"menusnd/reverb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_RANDOMIZEPITCHES", "SoundToPlay":"menusnd/pitch"}
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$OPTMNU_SOUND", "SoundToPlay":"menusnd/soundopt"}
+
+{"EventType":"MenuChanged", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuName":"Mainmenu", "SoundToPlay":"menusnd/quitselect"}
