@@ -1,19 +1,19 @@
-{"EventType":"MenuChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "SoundToPlay":"menu/activate"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_NGAME", "SoundToPlay":"menusnd/new"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_OPTION", "SoundToPlay":"menusnd/option"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_LOADG", "SoundToPlay":"menusnd/load"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_SAVEG", "SoundToPlay":"menusnd/save"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quit"}
+{"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menu/activate"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_NGAME", "SoundToPlay":"menusnd/new"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_OPTION", "SoundToPlay":"menusnd/option"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_LOADG", "SoundToPlay":"menusnd/load"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_SAVEG", "SoundToPlay":"menusnd/save"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quit"}
 
-{"EventType":"MenuChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_JKILL", "SoundToPlay":"menusnd/skill1"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_ROUGH", "SoundToPlay":"menusnd/skill2"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_HURT", "SoundToPlay":"menusnd/skill3"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_ULTRA", "SoundToPlay":"menusnd/skill4"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_NMARE", "SoundToPlay":"menusnd/skill5"}
+{"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_JKILL", "SoundToPlay":"menusnd/skill1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_ROUGH", "SoundToPlay":"menusnd/skill2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_HURT", "SoundToPlay":"menusnd/skill3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_ULTRA", "SoundToPlay":"menusnd/skill4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_NMARE", "SoundToPlay":"menusnd/skill5"}
 
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"EASY", "SoundToPlay":"menusnd/easy"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
-{"EventType":"OptionChanged", "CurrentMenuClass":"ListMenu", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"EASY", "SoundToPlay":"menusnd/easy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
 
 {"EventType":"MenuChanged", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuClass":"ListMenu", "PreviousMenuName":"Mainmenu", "SoundToPlay":"menusnd/quitselect"}

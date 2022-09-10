@@ -20,8 +20,39 @@ class Toby_MenuSoundBindingsContainer
                 //9 chars long, can't be smaller
                 if (splitTokens[i].Length() < 9) { continue; }
 
-                menuSoundBindings.push(Dictionary.FromString(splitTokens[i]));
-
+                //Replace sounds if exactly the same condition definition already exists:
+                Dictionary soundBinding = Dictionary.FromString(splitTokens[i]);
+                bool sameConditionFound = false;
+                for (int j = 0; j < menuSoundBindings.Size(); j++)
+                {
+                    DictionaryIterator di = DictionaryIterator.Create(menuSoundBindings[j]);
+                    bool sameCondition = true;
+                    while (di.Next())
+                    {
+                        if (di.Key() == "SoundToPlay") { continue; }
+                        if (soundBinding.At(di.Key()) == "")
+                        {
+                            sameCondition = false;
+                            break;
+                        }
+                        if (soundBinding.At(di.Key()) != di.Value())
+                        {
+                            sameCondition = false;
+                            break;
+                        }
+                    }
+                    if (sameCondition)
+                    {
+                        menuSoundBindings[j] = soundBinding;
+                        sameConditionFound = true;
+                        //Console.Printf("Same condition found");
+                        break;
+                    }
+                }
+                if (!sameConditionFound)
+                {
+                    menuSoundBindings.push(soundBinding);
+                }
             }
             console.printf("Menu sound bindings added: "..menuSoundBindings.Size());
         }
