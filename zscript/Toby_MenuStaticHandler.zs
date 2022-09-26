@@ -10,24 +10,35 @@ class Toby_MenuStaticHandler : StaticEventHandler
 
     ui Toby_MenuSoundBindingsContainer menuSoundBindingsContainer;
 
+    ui int lastKeyPressed;
+
     override void OnRegister()
     {
+        IsUiProcessor = false;
         console.printf("Static event handler registered!");
     }
 
-    override void NetworkProcess (ConsoleEvent e)
+    override void NetworkProcess(ConsoleEvent e)
     {
         if (e.Player != consoleplayer) { return; }
         if (e.Name == "Toby_EnableUiProcessor")
         {
+            console.printf("UiProcessor Enabled");
             IsUiProcessor = true;
             return;
         }
         if (e.Name == "Toby_DisableUiProcessor")
         {
+            console.printf("UiProcessor Disabled");
             IsUiProcessor = false;
             return;
         }
+    }
+
+    override bool UiProcess(UiEvent e)
+    {
+        lastKeyPressed = e.keyChar;
+        return false;
     }
 
     override void UITick()
@@ -35,6 +46,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
+            lastKeyPressed = -1;
             currentMenuState = new("Toby_MenuState");
             previousMenuState = new("Toby_MenuState");
             currentMenuState.SetNullState();
@@ -46,12 +58,23 @@ class Toby_MenuStaticHandler : StaticEventHandler
         }
 
         Menu currentMenu = Menu.GetCurrentMenu();
-        currentMenuState.UpdateMenuState(currentMenu);
+        currentMenuState.UpdateMenuState(currentMenu, lastKeyPressed);
         int detectedChange = currentMenuState.DetectChanges(previousMenuState);
+        if (detectedChange == Toby_MenuState.MenuDismissed)
+        {
+            EventHandler.SendNetworkEvent("Toby_DisableUiProcessor");
+        }
+        if (detectedChange == Toby_MenuState.MenuChanged
+            && previousMenuState.menuClass == "null"
+            && currentMenuState.menuClass != "null")
+        {
+            EventHandler.SendNetworkEvent("Toby_EnableUiProcessor");
+        }
         if (detectedChange > 0)
         {
             menuEventProcessor.Process(currentMenuState, previousMenuState, detectedChange);
         }
+        lastKeyPressed = -1;
         currentMenuState.CopyValuesTo(previousMenuState);
     }
 

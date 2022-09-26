@@ -6,6 +6,49 @@ class Toby_MenuEventProcessor
     ui void Process(Toby_MenuState currentState, Toby_MenuState previousState, int detectedChange)
     {
         if (detectedChange == Toby_MenuState.NoChanges) { return; }
+
+        if (detectedChange > 0 && detectedChange < 5)
+        {
+            FindAndPlayDictionaryEntryForEvent(currentState, previousState, detectedChange);
+            return;
+        }
+        else if (detectedChange == Toby_MenuState.KeyPressed)
+        {
+            console.printf("Is slider: "..currentState.isSlider);
+            console.printf("Is field: "..currentState.isField);
+            console.printf("Is option: "..currentState.isOption);
+            console.printf("Is control: "..currentState.isControl);
+            console.printf("Is save-load: "..currentState.isSaveLoad);
+            if (currentState.lastKeyPressed == UiEvent.Key_Left || currentState.lastKeyPressed == UiEvent.Key_Right)
+            {
+                if (currentState.isSlider)
+                {
+                    SoundQueue.Clear();
+                    //System.StopAllSounds();
+                    NumberToVoice.AddStringNumberToQueue(currentState.mItemOptionValue);
+                    SoundQueue.PlayQueue(0);
+                    return;
+                }
+                if (currentState.isField)
+                {
+                    SoundQueue.Clear();
+                    //System.StopAllSounds();
+                    StringToVoice.ConvertAndAddToQueueReverse(currentState.mItemOptionValue);
+                    SoundQueue.PlayQueue(0);
+                    return;
+                }
+                if (!currentState.isSlider && !currentState.isField
+                    && !currentState.isOption && !currentState.isControl)
+                {
+                    FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
+                    return;
+                }
+            }
+        }
+    }
+
+    ui void FindAndPlayDictionaryEntryForEvent(Toby_MenuState currentState, Toby_MenuState previousState, int detectedChange)
+    {
         ConvertStatesToDictionary(currentState, previousState);
         string eventType = GetEventTypeAsString(detectedChange);
 
@@ -39,13 +82,13 @@ class Toby_MenuEventProcessor
 
     ui void Init(Toby_MenuSoundBindingsContainer bindings)
     {
-        menuStateAsDictionary = Dictionary.Create();
         //Bad case of tight copuling?
         menuSoundBindingsContainer = bindings;
     }
 
     ui void ConvertStatesToDictionary(Toby_MenuState currentState, Toby_MenuState previousState)
     {
+        menuStateAsDictionary = Dictionary.Create();
         menuStateAsDictionary.Insert("CurrentMenuClass", currentState.menuClass);
         menuStateAsDictionary.Insert("PreviousMenuClass", previousState.menuClass);
         menuStateAsDictionary.Insert("CurrentMenuName", currentState.menuName);
@@ -68,6 +111,9 @@ class Toby_MenuEventProcessor
         menuStateAsDictionary.Insert("PreviousMenuItemOptionValue", previousState.mItemOptionValue);
         menuStateAsDictionary.Insert("CurrentMenuItemOptionValueLocalized", currentState.mItemOptionValueLocalized);
         menuStateAsDictionary.Insert("PreviousMenuItemOptionValueLocalized", previousState.mItemOptionValueLocalized);
+
+        menuStateAsDictionary.Insert("CurrentLastKeyPressed", ""..currentState.lastKeyPressed);
+        menuStateAsDictionary.Insert("PreviousLastKeyPressed", ""..previousState.lastKeyPressed);
     }
 
     ui string GetEventTypeAsString(int detectedChange)
@@ -85,6 +131,8 @@ class Toby_MenuEventProcessor
                 eventType = "OptionChanged"; break;
             case Toby_MenuState.OptionValueChanged:
                 eventType = "OptionValueChanged"; break;
+            case Toby_MenuState.KeyPressed:
+                eventType = "KeyPressed"; break;
         }
         if (eventType == "Unknown")
         {

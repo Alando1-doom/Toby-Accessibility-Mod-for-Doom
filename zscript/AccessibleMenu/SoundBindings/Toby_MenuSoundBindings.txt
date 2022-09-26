@@ -44,4 +44,10 @@
 {"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$OPTMNU_SOUND", "SoundToPlay":"menusnd/soundopt"}
 
-{"EventType":"MenuChanged", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuName":"Mainmenu", "SoundToPlay":"menusnd/quitselect"}
+{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
+
+{"EventType":"MenuChanged", "CurrentMenuClass":"LoadMenu", "SoundToPlay":"menusnd/load"}
+{"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "SoundToPlay":"menusnd/save"}
+
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_OFF", "SoundToPlay":"menusnd/off"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ON", "SoundToPlay":"menusnd/on"}

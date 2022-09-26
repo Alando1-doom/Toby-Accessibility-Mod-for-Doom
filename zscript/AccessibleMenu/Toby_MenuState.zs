@@ -13,6 +13,13 @@ class Toby_MenuState
     ui string mItemOptionValue;
     ui string mItemOptionValueLocalized;
 
+    ui int lastKeyPressed;
+    ui bool isSlider;
+    ui bool isField;
+    ui bool isOption;
+    ui bool isControl;
+    ui bool isSaveLoad;
+
     ui void CopyValuesTo(Toby_MenuState otherState)
     {
         otherState.menuClass = menuClass;
@@ -27,6 +34,13 @@ class Toby_MenuState
         otherState.mItemOptionNameLocalized = mItemOptionNameLocalized;
         otherState.mItemOptionValue = mItemOptionValue;
         otherState.mItemOptionValueLocalized = mItemOptionValueLocalized;
+
+        otherState.lastKeyPressed = lastKeyPressed;
+        otherState.isSlider = isSlider;
+        otherState.isField = isField;
+        otherState.isOption = isOption;
+        otherState.isControl = isControl;
+        otherState.isSaveLoad = isSaveLoad;
     }
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
@@ -72,6 +86,13 @@ class Toby_MenuState
             console.printf("PreviousMenuItemOptionValueLocalized : "..otherState.mItemOptionValueLocalized.." -> CurrentMenuItemOptionValueLocalized : "..mItemOptionValueLocalized);
             return OptionValueChanged;
         }
+
+        if (otherState.lastKeyPressed != lastKeyPressed)
+        {
+            console.printf("EventType : KeyPressed");
+            console.printf("PreviousLastKeyPressed : "..otherState.lastKeyPressed.." -> CurrentLastKeyPressed : "..lastKeyPressed);
+            return KeyPressed;
+        }
         return NoChanges;
     }
 
@@ -87,9 +108,16 @@ class Toby_MenuState
         mItemOptionNameLocalized = "null";
         mItemOptionValue = "null";
         mItemOptionValueLocalized = "null";
+
+        lastKeyPressed = -1;
+        isSlider = false;
+        isField = false;
+        isOption = false;
+        isControl = false;
+        isSaveLoad = false;
     }
 
-    ui void UpdateMenuState(Menu m)
+    ui void UpdateMenuState(Menu m, int keyPressed)
     {
         SetNullState();
 
@@ -111,6 +139,8 @@ class Toby_MenuState
         OptionMenuSliderBase mItemOptionSlider = null;
         OptionMenuFieldBase mItemOptionField = null;
 
+        lastKeyPressed = keyPressed;
+
         menuClass = m.GetClassName();
 
         mList = ListMenu(m);
@@ -120,7 +150,8 @@ class Toby_MenuState
         ListMenuItem menuItem = null;
         if (mLoadSave)
         {
-            //TODO: Fix LoadSave menu
+            
+            isSaveLoad = true;
         }
         else if (mList)
         {
@@ -146,6 +177,10 @@ class Toby_MenuState
                 mItemOptionOption = OptionMenuItemOption(mItemOption);
                 mItemOptionSlider = OptionMenuSliderBase(mItemOption);
                 mItemOptionField = OptionMenuFieldBase(mItemOption);
+                if (mItemOptionSlider) { isSlider = true; }
+                if (mItemOptionField) { isField = true; }
+                if (mItemOptionOption) { isOption = true; }
+                if (mItemOptionControl) { isControl = true; }
             }
         }
 
@@ -195,5 +230,6 @@ class Toby_MenuState
         MenuChanged = 2,
         OptionChanged = 3,
         OptionValueChanged = 4,
+        KeyPressed = 5,
     };
 }
