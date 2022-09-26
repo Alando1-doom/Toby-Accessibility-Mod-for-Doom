@@ -1,3 +1,5 @@
+//Will be removed after rework
+
 class MenuEventProcessor ui
 {
     ui static void Process(Menu m, int mkey)

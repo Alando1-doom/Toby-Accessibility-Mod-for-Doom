@@ -1,8 +1,7 @@
 class NumberToVoice ui
 {
-    ui static void ConvertFloatAndAddToQueue(float number)
+    ui static void AddStringNumberToQueue(string numberAsString)
     {
-        string numberAsString = ""..number;
         int dotPlace = numberAsString.IndexOf(".", 0);
         string firstPart = numberAsString.Mid(0, dotPlace);
         string secondPart = numberAsString.Mid(dotPlace + 1, numberAsString.Length() - 1);
@@ -26,6 +25,12 @@ class NumberToVoice ui
             SoundQueue.UnshiftSound("numbers/dot", -1);
         }
         ConvertAndAddToQueue(firstPart.ToInt());
+    }
+
+    ui static void ConvertFloatAndAddToQueue(float number)
+    {
+        string numberAsString = ""..number;
+        AddStringNumberToQueue(numberAsString);
     }
 
     ui static void ConvertAndAddToQueue(int number)
