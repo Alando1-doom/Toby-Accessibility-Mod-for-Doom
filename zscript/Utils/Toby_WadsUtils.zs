@@ -1,4 +1,4 @@
-class WadsUtils
+class Toby_WadsUtils
 {
     static int FindLump(string name, int startLump)
     {
