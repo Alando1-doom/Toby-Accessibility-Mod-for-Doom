@@ -15,7 +15,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
     override void OnRegister()
     {
         IsUiProcessor = false;
-        console.printf("Static event handler registered!");
+        Toby_Logger.Message("Toby_MenuStaticHandler registered!");
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -23,13 +23,13 @@ class Toby_MenuStaticHandler : StaticEventHandler
         if (e.Player != consoleplayer) { return; }
         if (e.Name == "Toby_EnableUiProcessor")
         {
-            console.printf("UiProcessor Enabled");
+            Toby_Logger.Message("UiProcessor Enabled");
             IsUiProcessor = true;
             return;
         }
         if (e.Name == "Toby_DisableUiProcessor")
         {
-            console.printf("UiProcessor Disabled");
+            Toby_Logger.Message("UiProcessor Disabled");
             IsUiProcessor = false;
             return;
         }

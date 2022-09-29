@@ -14,11 +14,11 @@ class Toby_MenuEventProcessor
         }
         else if (detectedChange == Toby_MenuState.KeyPressed)
         {
-            console.printf("Is slider: "..currentState.isSlider);
-            console.printf("Is field: "..currentState.isField);
-            console.printf("Is option: "..currentState.isOption);
-            console.printf("Is control: "..currentState.isControl);
-            console.printf("Is save-load: "..currentState.isSaveLoad);
+            Toby_Logger.Message("Is slider: "..currentState.isSlider);
+            Toby_Logger.Message("Is field: "..currentState.isField);
+            Toby_Logger.Message("Is option: "..currentState.isOption);
+            Toby_Logger.Message("Is control: "..currentState.isControl);
+            Toby_Logger.Message("Is save-load: "..currentState.isSaveLoad);
             if (currentState.lastKeyPressed == UiEvent.Key_Left || currentState.lastKeyPressed == UiEvent.Key_Right)
             {
                 if (currentState.isSlider)
@@ -136,7 +136,7 @@ class Toby_MenuEventProcessor
         }
         if (eventType == "Unknown")
         {
-            console.printf("Unknown event type. Seems like an error happened.");
+            Toby_Logger.Message("Unknown event type. Seems like an error happened.");
         }
         return eventType;
     }

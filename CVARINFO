@@ -1,1 +1,2 @@
-user int   zs_em_MaxDistance = 500;
+user int    zs_em_MaxDistance = 500;
+user bool   Toby_Developer = false;

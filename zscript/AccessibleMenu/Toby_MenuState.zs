@@ -50,15 +50,15 @@ class Toby_MenuState
             && otherState.menuClass != "null"
             && otherState.menuName != "null")
         {
-                console.printf("EventType : MenuDismissed");
+                Toby_Logger.Message("EventType : MenuDismissed");
                 return MenuDismissed;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
         {
-            console.printf("EventType : MenuChanged");
-            console.printf("PreviousMenuClass : "..otherState.menuClass.." -> CurrentMenuClass : "..menuClass);
-            console.printf("PreviousMenuName : "..otherState.menuName.." -> CurrentMenuName : "..menuName);
+            Toby_Logger.Message("EventType : MenuChanged");
+            Toby_Logger.Message("PreviousMenuClass : "..otherState.menuClass.." -> CurrentMenuClass : "..menuClass);
+            Toby_Logger.Message("PreviousMenuName : "..otherState.menuName.." -> CurrentMenuName : "..menuName);
             return MenuChanged;
         }
 
@@ -69,28 +69,28 @@ class Toby_MenuState
             || otherState.mItemOptionName != mItemOptionName
             || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized)
         {
-            console.printf("EventType : OptionChanged");
-            console.printf("PreviousMenuItemListSelectableString : "..otherState.mItemListSelectableString.." -> CurrentMenuItemListSelectableString : "..mItemListSelectableString);
-            console.printf("PreviousMenuItemListTextString : "..otherState.mItemListTextString.." -> CurrentMenuItemListTextString : "..mItemListTextString);
-            console.printf("PreviousMenuItemListTextStringLocalized : "..otherState.mItemListTextStringLocalized.." -> CurrentMenuItemListTextStringLocalized : "..mItemListTextStringLocalized);
-            console.printf("PreviousMenuItemListPatchString : "..otherState.mItemListPatchString.." -> CurrentMenuItemListPatchString : "..mItemListPatchString);
-            console.printf("PreviousMenuItemOptionName : "..otherState.mItemOptionName.." -> CurrentMenuItemOptionName : "..mItemOptionName);
-            console.printf("PreviousMenuItemOptionNameLocalized : "..otherState.mItemOptionNameLocalized.." -> CurrentMenuItemOptionNameLocalized : "..mItemOptionNameLocalized);
+            Toby_Logger.Message("EventType : OptionChanged");
+            Toby_Logger.Message("PreviousMenuItemListSelectableString : "..otherState.mItemListSelectableString.." -> CurrentMenuItemListSelectableString : "..mItemListSelectableString);
+            Toby_Logger.Message("PreviousMenuItemListTextString : "..otherState.mItemListTextString.." -> CurrentMenuItemListTextString : "..mItemListTextString);
+            Toby_Logger.Message("PreviousMenuItemListTextStringLocalized : "..otherState.mItemListTextStringLocalized.." -> CurrentMenuItemListTextStringLocalized : "..mItemListTextStringLocalized);
+            Toby_Logger.Message("PreviousMenuItemListPatchString : "..otherState.mItemListPatchString.." -> CurrentMenuItemListPatchString : "..mItemListPatchString);
+            Toby_Logger.Message("PreviousMenuItemOptionName : "..otherState.mItemOptionName.." -> CurrentMenuItemOptionName : "..mItemOptionName);
+            Toby_Logger.Message("PreviousMenuItemOptionNameLocalized : "..otherState.mItemOptionNameLocalized.." -> CurrentMenuItemOptionNameLocalized : "..mItemOptionNameLocalized);
             return OptionChanged;
         }
         if (otherState.mItemOptionValue != mItemOptionValue
             || otherState.mItemOptionValueLocalized != mItemOptionValueLocalized)
         {
-            console.printf("EventType : OptionValueChanged");
-            console.printf("PreviousMenuItemOptionValue : "..otherState.mItemOptionValue.." -> CurrentMenuItemOptionValue : "..mItemOptionValue);
-            console.printf("PreviousMenuItemOptionValueLocalized : "..otherState.mItemOptionValueLocalized.." -> CurrentMenuItemOptionValueLocalized : "..mItemOptionValueLocalized);
+            Toby_Logger.Message("EventType : OptionValueChanged");
+            Toby_Logger.Message("PreviousMenuItemOptionValue : "..otherState.mItemOptionValue.." -> CurrentMenuItemOptionValue : "..mItemOptionValue);
+            Toby_Logger.Message("PreviousMenuItemOptionValueLocalized : "..otherState.mItemOptionValueLocalized.." -> CurrentMenuItemOptionValueLocalized : "..mItemOptionValueLocalized);
             return OptionValueChanged;
         }
 
         if (otherState.lastKeyPressed != lastKeyPressed)
         {
-            console.printf("EventType : KeyPressed");
-            console.printf("PreviousLastKeyPressed : "..otherState.lastKeyPressed.." -> CurrentLastKeyPressed : "..lastKeyPressed);
+            Toby_Logger.Message("EventType : KeyPressed");
+            Toby_Logger.Message("PreviousLastKeyPressed : "..otherState.lastKeyPressed.." -> CurrentLastKeyPressed : "..lastKeyPressed);
             return KeyPressed;
         }
         return NoChanges;
@@ -150,7 +150,7 @@ class Toby_MenuState
         ListMenuItem menuItem = null;
         if (mLoadSave)
         {
-            
+
             isSaveLoad = true;
         }
         else if (mList)
