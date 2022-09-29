@@ -12,37 +12,114 @@ class Toby_MenuEventProcessor
             FindAndPlayDictionaryEntryForEvent(currentState, previousState, detectedChange);
             return;
         }
+        //Basic save load handling
+        else if (detectedChange == Toby_MenuState.SaveSlotChanged)
+        {
+            SoundQueue.Clear();
+            if (currentState.isNewSlot)
+            {
+                SoundQueue.UnshiftSound("save/new", -1);
+            }
+            else if (currentState.isAutosave)
+            {
+                SoundQueue.UnshiftSound("save/autosave", -1);
+            }
+            else if (currentState.isQuicksave)
+            {
+                SoundQueue.UnshiftSound("save/quicksave", -1);
+            }
+			else
+			{
+				StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
+			}
+            //Option to disable 'of <total save slots>' to shorten time to get more valuable information
+            if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
+            {
+                NumberToVoice.ConvertAndAddToQueue(currentState.saveGamesTotal);
+                SoundQueue.UnshiftSound("save/of", -1);
+            }
+            NumberToVoice.ConvertAndAddToQueue(currentState.saveGameSlot);
+            //Option to disable word 'Slot' to shorten time to get more valuable information
+            if (!CVar.FindCvar("Toby_SkipSlotWord").GetBool())
+            {
+                SoundQueue.UnshiftSound("save/slot", -1);
+            }
+            SoundQueue.PlayQueue(0);
+        }
+        //Left and Right handling
         else if (detectedChange == Toby_MenuState.KeyPressed)
         {
-            Toby_Logger.Message("Is slider: "..currentState.isSlider);
-            Toby_Logger.Message("Is field: "..currentState.isField);
-            Toby_Logger.Message("Is option: "..currentState.isOption);
-            Toby_Logger.Message("Is control: "..currentState.isControl);
-            Toby_Logger.Message("Is save-load: "..currentState.isSaveLoad);
+            Toby_Logger.Message("Is slider: "..currentState.isSlider, "Toby_Developer_ControlType");
+            Toby_Logger.Message("Is field: "..currentState.isField, "Toby_Developer_ControlType");
+            Toby_Logger.Message("Is option: "..currentState.isOption, "Toby_Developer_ControlType");
+            Toby_Logger.Message("Is control: "..currentState.isControl, "Toby_Developer_ControlType");
+            Toby_Logger.Message("Is saveLoad: "..currentState.isSaveLoad, "Toby_Developer_ControlType");
             if (currentState.lastKeyPressed == UiEvent.Key_Left || currentState.lastKeyPressed == UiEvent.Key_Right)
             {
+                SoundQueue.Clear();
                 if (currentState.isSlider)
                 {
-                    SoundQueue.Clear();
-                    //System.StopAllSounds();
                     NumberToVoice.AddStringNumberToQueue(currentState.mItemOptionValue);
-                    SoundQueue.PlayQueue(0);
-                    return;
                 }
                 if (currentState.isField)
                 {
-                    SoundQueue.Clear();
-                    //System.StopAllSounds();
                     StringToVoice.ConvertAndAddToQueueReverse(currentState.mItemOptionValue);
-                    SoundQueue.PlayQueue(0);
-                    return;
                 }
                 if (!currentState.isSlider && !currentState.isField
                     && !currentState.isOption && !currentState.isControl)
                 {
                     FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
-                    return;
                 }
+                if (currentState.isSaveLoad && currentState.saveGamesTotal > 0)
+                {
+                    if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Left)
+                    {
+                        if (currentState.saveGameDate != "null")
+                        {
+                            Toby_SaveGameTime time = Toby_SaveGameUtils.getTime(currentState.saveGameTime);
+                            Toby_SaveGameMap mapInfo = Toby_SaveGameUtils.getMapInfo(currentState.saveGameMap);
+                            SoundQueue.UnshiftSound("save/seconds", -1);
+                            NumberToVoice.ConvertAndAddToQueue(time.seconds);
+                            SoundQueue.UnshiftSound("save/minutes", -1);
+                            NumberToVoice.ConvertAndAddToQueue(time.minutes);
+                            SoundQueue.UnshiftSound("save/hours", -1);
+                            NumberToVoice.ConvertAndAddToQueue(time.hours);
+                            SoundQueue.UnshiftSound("alphabet/Space", -1); //Oops, pause is too short, remove if not needed
+                            SoundQueue.UnshiftSound("save/timespent", -1);
+                            if (mapInfo.isMap)
+                            {
+                                NumberToVoice.ConvertAndAddToQueue(mapInfo.mapNumber);
+                                SoundQueue.UnshiftSound("save/map", -1);
+                            }
+                            else if (mapInfo.isEpisodic)
+                            {
+                                NumberToVoice.ConvertAndAddToQueue(mapInfo.mapNumber);
+                                SoundQueue.UnshiftSound("save/map", -1);
+                                NumberToVoice.ConvertAndAddToQueue(mapInfo.episodeNumber);
+                                SoundQueue.UnshiftSound("save/episode", -1);
+                            }
+                        }
+                    }
+                    else if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Right)
+                    {
+                        if (currentState.saveGameDate != "null")
+                        {
+                            Toby_SaveGameDate dateTime = Toby_SaveGameUtils.getDate(currentState.saveGameDate);
+                            SoundQueue.UnshiftSound("save/seconds", -1);
+                            NumberToVoice.ConvertAndAddToQueue(dateTime.seconds);
+                            SoundQueue.UnshiftSound("save/minutes", -1);
+                            NumberToVoice.ConvertAndAddToQueue(dateTime.minutes);
+                            SoundQueue.UnshiftSound("save/hours", -1);
+                            NumberToVoice.ConvertAndAddToQueue(dateTime.hours);
+                            SoundQueue.UnshiftSound("alphabet/Space", -1);
+                            SoundQueue.UnshiftSound("alphabet/Space", -1);
+                            NumberToVoice.ConvertAndAddToQueue(dateTime.year);
+                            OrdinalToVoice.ConvertAndAddToQueue(dateTime.day);
+                            MonthToVoice.ConvertAndUnshiftToQueue(dateTime.month);
+                        }
+                    }
+                }
+                SoundQueue.PlayQueue(0);
             }
         }
     }
@@ -112,8 +189,9 @@ class Toby_MenuEventProcessor
         menuStateAsDictionary.Insert("CurrentMenuItemOptionValueLocalized", currentState.mItemOptionValueLocalized);
         menuStateAsDictionary.Insert("PreviousMenuItemOptionValueLocalized", previousState.mItemOptionValueLocalized);
 
-        menuStateAsDictionary.Insert("CurrentLastKeyPressed", ""..currentState.lastKeyPressed);
-        menuStateAsDictionary.Insert("PreviousLastKeyPressed", ""..previousState.lastKeyPressed);
+        //Not need to be exposed
+        //menuStateAsDictionary.Insert("CurrentLastKeyPressed", ""..currentState.lastKeyPressed);
+        //menuStateAsDictionary.Insert("PreviousLastKeyPressed", ""..previousState.lastKeyPressed);
     }
 
     ui string GetEventTypeAsString(int detectedChange)
@@ -136,7 +214,7 @@ class Toby_MenuEventProcessor
         }
         if (eventType == "Unknown")
         {
-            Toby_Logger.Message("Unknown event type. Seems like an error happened.");
+            Toby_Logger.Message("Unknown event type. Seems like an error happened.", "Toby_Developer");
         }
         return eventType;
     }

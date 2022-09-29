@@ -8,7 +8,7 @@ class Toby_MenuSoundBindingsContainer
         int lump = -1;
 		while ((lump = Toby_WadsUtils.FindLump('Toby_MenuSoundBindings', lump + 1)) != -1)
 		{
-            Toby_Logger.Message("Lump ["..lump.."] has full name '"..Wads.GetLumpFullName(lump).."'");
+            Toby_Logger.Message("Lump ["..lump.."] has full name '"..Wads.GetLumpFullName(lump).."'", "Toby_Developer");
             string lumpContent = Wads.ReadLump(lump);
             splitTokens.Clear();
             lumpContent.Split(splitTokens, "\n", TOK_SKIPEMPTY);
@@ -53,7 +53,7 @@ class Toby_MenuSoundBindingsContainer
                     menuSoundBindings.push(soundBinding);
                 }
             }
-            Toby_Logger.Message("Menu sound bindings added: "..menuSoundBindings.Size());
+            Toby_Logger.Message("Menu sound bindings added: "..menuSoundBindings.Size(), "Toby_Developer");
         }
     }
 }

@@ -5,7 +5,7 @@ class Toby_TitleScreenHandler : EventHandler
     override void WorldLoaded(WorldEvent e)
     {
         levelChecksum = level.GetChecksum();
-        Toby_Logger.Message("Map checksum: "..levelChecksum);
+        Toby_Logger.Message("Map checksum: "..levelChecksum, "Toby_Developer");
     }
 
     override void RenderOverlay(RenderEvent e)
