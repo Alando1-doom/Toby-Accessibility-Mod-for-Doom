@@ -60,7 +60,10 @@ class Toby_MenuStaticHandler : StaticEventHandler
         Menu currentMenu = Menu.GetCurrentMenu();
         currentMenuState.UpdateMenuState(currentMenu, lastKeyPressed);
         int detectedChange = currentMenuState.DetectChanges(previousMenuState);
-        if (detectedChange == Toby_MenuState.MenuDismissed)
+        if (detectedChange == Toby_MenuState.MenuDismissed
+            || detectedChange == Toby_MenuState.GameSaved
+            || detectedChange == Toby_MenuState.GameLoaded
+            || detectedChange == Toby_MenuState.GameStarted)
         {
             EventHandler.SendNetworkEvent("Toby_DisableUiProcessor");
         }

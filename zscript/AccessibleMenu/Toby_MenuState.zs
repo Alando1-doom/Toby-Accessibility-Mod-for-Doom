@@ -67,6 +67,31 @@ class Toby_MenuState
     {
         if (menuClass == "null"
             && menuName == "null"
+            && otherState.menuClass == "ListMenu"
+            && otherState.menuName == "Skillmenu")
+        {
+            Toby_Logger.Message("EventType : GameStarted", "Toby_Developer");
+            return GameStarted;
+        }
+        //This is kind of a wild assumption
+        if (menuClass == "null"
+            && menuName == "null"
+            && otherState.menuClass == "TextEnterMenu"
+            && otherState.menuName == "null")
+        {
+            Toby_Logger.Message("EventType : GameSaved", "Toby_Developer");
+            return GameSaved;
+        }
+        if (menuClass == "null"
+            && menuName == "null"
+            && otherState.menuClass == "LoadMenu"
+            && otherState.menuName == "null")
+        {
+            Toby_Logger.Message("EventType : GameLoaded", "Toby_Developer");
+            return GameLoaded;
+        }
+        if (menuClass == "null"
+            && menuName == "null"
             && (otherState.menuClass != "null" || otherState.menuName != "null"))
         {
                 Toby_Logger.Message("EventType : MenuDismissed", "Toby_Developer");
@@ -320,5 +345,8 @@ class Toby_MenuState
         OptionValueChanged = 4,
         KeyPressed = 5,
         SaveSlotChanged = 6,
+        GameStarted = 7,
+        GameLoaded = 8,
+        GameSaved = 9
     };
 }

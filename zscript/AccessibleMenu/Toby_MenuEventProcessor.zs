@@ -7,7 +7,9 @@ class Toby_MenuEventProcessor
     {
         if (detectedChange == Toby_MenuState.NoChanges) { return; }
 
-        if (detectedChange > 0 && detectedChange < 5)
+        if (detectedChange > 0
+            && detectedChange != Toby_MenuState.SaveSlotChanged
+            && detectedChange != Toby_MenuState.KeyPressed)
         {
             FindAndPlayDictionaryEntryForEvent(currentState, previousState, detectedChange);
             return;
@@ -211,6 +213,14 @@ class Toby_MenuEventProcessor
                 eventType = "OptionValueChanged"; break;
             case Toby_MenuState.KeyPressed:
                 eventType = "KeyPressed"; break;
+            case Toby_MenuState.SaveSlotChanged:
+                eventType = "SaveSlotChanged"; break;
+            case Toby_MenuState.GameStarted:
+                eventType = "GameStarted"; break;
+            case Toby_MenuState.GameLoaded:
+                eventType = "GameLoaded"; break;
+            case Toby_MenuState.GameSaved:
+                eventType = "GameSaved"; break;
         }
         if (eventType == "Unknown")
         {
