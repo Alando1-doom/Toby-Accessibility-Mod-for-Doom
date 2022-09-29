@@ -1,1 +1,0 @@
-user int   zs_em_MaxDistance = 500;

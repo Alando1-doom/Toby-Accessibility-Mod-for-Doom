@@ -1,0 +1,71 @@
+//Generic
+menusnd/on              "sounds/Menus/Generic/dson.ogg"
+menusnd/off             "sounds/Menus/Generic/dsoff.ogg"
+menusnd/dismiss         "sounds/Menus/Generic/dsdismis.ogg"
+menusnd/backup          "sounds/Menus/Generic/dsmback.ogg"
+menusnd/choose          "sounds/Menus/Generic/dsselect.ogg"
+
+//Main Menu
+menusnd/mainmenu        "sounds/Menus/MainMenu/dsmenu.ogg"
+menusnd/new             "sounds/Menus/MainMenu/dsnewg.ogg"
+menusnd/newselect       "sounds/Menus/MainMenu/dsnewg_s.ogg"
+menusnd/option          "sounds/Menus/MainMenu/dsopt.ogg"
+menusnd/optselect       "sounds/Menus/MainMenu/dsopt_s.ogg"
+menusnd/load            "sounds/Menus/MainMenu/dsldgm.ogg"
+menusnd/loadselect      "sounds/Menus/MainMenu/dsldgm_s.ogg"
+menusnd/save            "sounds/Menus/MainMenu/dssvgm.ogg"
+menusnd/saveselect      "sounds/Menus/MainMenu/dssvgm_s.ogg"
+menusnd/quit            "sounds/Menus/MainMenu/dsquit.ogg"
+menusnd/quitselect      "sounds/Menus/MainMenu/dsquit_s.ogg"
+menusnd/readme          "sounds/Menus/MainMenu/dsread.ogg"
+menusnd/readselect      "sounds/Menus/MainMenu/dsread_s.ogg"
+
+//Episode Menu
+menusnd/epimenu         "sounds/Menus/EpisodeMenu/dscepis.ogg"
+menusnd/episode1        "sounds/Menus/EpisodeMenu/dsep1.ogg"
+menusnd/episode2        "sounds/Menus/EpisodeMenu/dsep2.ogg"
+menusnd/episode3        "sounds/Menus/EpisodeMenu/dsep3.ogg"
+menusnd/episode4        "sounds/Menus/EpisodeMenu/dsep4.ogg"
+menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
+menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
+menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
+
+//Skill Menu
+menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
+menusnd/easy            "sounds/Menus/SkillMenu/dseasy.ogg"
+menusnd/normal          "sounds/Menus/SkillMenu/dsnormal.ogg"
+menusnd/hard            "sounds/Menus/SkillMenu/dshard.ogg"
+menusnd/skill1          "sounds/Menus/SkillMenu/dsskill1.ogg"
+menusnd/skill2          "sounds/Menus/SkillMenu/dsskill2.ogg"
+menusnd/skill3          "sounds/Menus/SkillMenu/dsskill3.ogg"
+menusnd/skill4          "sounds/Menus/SkillMenu/dsskill4.ogg"
+menusnd/skill5          "sounds/Menus/SkillMenu/dsskill5.ogg"
+
+//Sound Options
+menusnd/soundopt        "sounds/Menus/SoundOptions/dssndop.ogg"
+menusnd/menuvol         "sounds/Menus/SoundOptions/dsmenuv.ogg"
+menusnd/midi            "sounds/Menus/SoundOptions/dsmidi.ogg"
+menusnd/musicvol        "sounds/Menus/SoundOptions/dsmusv.ogg"
+menusnd/mastervol       "sounds/Menus/SoundOptions/dsmastrv.ogg"
+menusnd/pitch           "sounds/Menus/SoundOptions/dspitch.ogg"
+menusnd/soundvol        "sounds/Menus/SoundOptions/dssndv.ogg"
+menusnd/reverb          "sounds/Menus/SoundOptions/dswtrrvb.ogg"
+
+//GZDoom Options
+menusnd/gzdopt          "sounds/Menus/GZDoomOptions/dsgzdop.ogg"
+
+//SaveLoad
+save/map        "sounds/Menus/SaveLoad/map.ogg"
+save/episode    "sounds/Menus/SaveLoad/episode.ogg"
+save/slot       "sounds/Menus/SaveLoad/slot.ogg"
+save/of         "sounds/Menus/SaveLoad/of.ogg"
+save/autosave   "sounds/Menus/SaveLoad/autosave.ogg"
+save/new        "sounds/Menus/SaveLoad/newsavegame.ogg"
+save/entersave  "sounds/Menus/SaveLoad/entersave.ogg"
+save/cancelled  "sounds/Menus/SaveLoad/savecancelled.ogg"
+save/saved      "sounds/Menus/SaveLoad/gamesaved.ogg"
+save/timespent  "sounds/Menus/SaveLoad/timespent.ogg"
+
+save/hours      "sounds/Menus/SaveLoad/hours.ogg"
+save/minutes    "sounds/Menus/SaveLoad/minutes.ogg"
+save/seconds    "sounds/Menus/SaveLoad/seconds.ogg"

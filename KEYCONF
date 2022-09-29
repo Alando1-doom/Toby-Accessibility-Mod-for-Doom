@@ -1,5 +1,5 @@
 weaponsection compilation
- clearplayerclasses
+clearplayerclasses
 addplayerclass Player_TO
 
 addkeysection "Compass Options" CompassMod

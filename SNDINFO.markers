@@ -1,0 +1,52 @@
+//Announcer
+
+marker/marker1      "sounds/Markers/dsm1plc"
+marker/undo1        "sounds/Markers/dsm1rem"
+marker/marker2      "sounds/Markers/dsm2plc"
+marker/undo2        "sounds/Markers/dsm2rem"
+marker/marker3      "sounds/Markers/dsm3plc"
+marker/undo3        "sounds/Markers/dsm3rem"
+marker/marker4      "sounds/Markers/dsm4plc"
+marker/undo4        "sounds/Markers/dsm4rem"
+marker/marker5      "sounds/Markers/dsm5plc"
+marker/undo5        "sounds/Markers/dsm5rem"
+marker/marker6      "sounds/Markers/dsm6plc"
+marker/undo6        "sounds/Markers/dsm6rem"
+marker/marker7      "sounds/Markers/dsm7plc"
+marker/undo7        "sounds/Markers/dsm7rem"
+marker/marker8      "sounds/Markers/dsm8plc"
+marker/undo8        "sounds/Markers/dsm8rem"
+marker/marker9      "sounds/Markers/dsm9plc"
+marker/undo9        "sounds/Markers/dsm9rem"
+marker/marker10     "sounds/Markers/dsm10plc"
+marker/undo10       "sounds/Markers/dsm10rem"
+marker/maxed        "sounds/Markers/dsmmax"
+marker/cleared      "sounds/Markers/dsmclear"
+
+//Interface
+
+marker/Markers/maxout       dsmaxout
+marker/Markers/undofail     dsnoundo
+
+//Map Marker Sounds
+
+$rolloff marker/beacon1     linear	96 640
+marker/beacon1              dsmark1
+$rolloff marker/beacon2     linear	96 640
+marker/beacon2              dsmark2
+$rolloff marker/beacon3     linear	96 640
+marker/beacon3              dsmark3
+$rolloff marker/beacon4     linear	96 640
+marker/beacon4              dsmark4
+$rolloff marker/beacon5     linear	96 640
+marker/beacon5              dsmark5
+$rolloff marker/beacon6     linear	96 640
+marker/beacon6              dsmark6
+$rolloff marker/beacon7     linear	96 640
+marker/beacon7              dsmark7
+$rolloff marker/beacon8     linear	96 640
+marker/beacon8              dsmark8
+$rolloff marker/beacon9     linear	96 640
+marker/beacon9              dsmark9
+$rolloff marker/beacon10    linear	96 640
+marker/beacon10             dsmark10
