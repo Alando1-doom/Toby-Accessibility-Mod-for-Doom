@@ -13,6 +13,10 @@ class Toby_TitleScreenHandler : EventHandler
         string titlemapChecksum = "8596787f9daad2bf1a1b129f6d724619";
         if (levelChecksum != titlemapChecksum) { return; }
         TextureId titlePic = TexMan.CheckForTexture("TITLEPIC");
+        if (!titlepic.IsValid())
+        {
+            titlePic = TexMan.CheckForTexture("TITLE");
+        }
         int titlePicWidth;
         int titlePicHeight;
         [titlePicWidth, titlePicHeight] = TexMan.GetSize(titlePic);
