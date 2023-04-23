@@ -20,6 +20,9 @@ class Toby_MenuSoundBindingsContainer
                 //9 chars long, can't be smaller
                 if (splitTokens[i].Length() < 9) { continue; }
 
+                //Dumb check for commented line
+                if (splitTokens[i].IndexOf("//") == 0) { continue; }
+
                 //Replace sounds if exactly the same condition definition already exists:
                 Dictionary soundBinding = Dictionary.FromString(splitTokens[i]);
                 bool sameConditionFound = false;

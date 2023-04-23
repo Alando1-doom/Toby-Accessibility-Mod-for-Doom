@@ -48,16 +48,16 @@ class StringToVoice ui
         if (character == "x") characterSoundName = "alphabet/X";
         if (character == "y") characterSoundName = "alphabet/Y";
         if (character == "z") characterSoundName = "alphabet/Z";
-        if (character == "0") characterSoundName = "numbers/000";
-        if (character == "1") characterSoundName = "numbers/001";
-        if (character == "2") characterSoundName = "numbers/002";
-        if (character == "3") characterSoundName = "numbers/003";
-        if (character == "4") characterSoundName = "numbers/004";
-        if (character == "5") characterSoundName = "numbers/005";
-        if (character == "6") characterSoundName = "numbers/006";
-        if (character == "7") characterSoundName = "numbers/007";
-        if (character == "8") characterSoundName = "numbers/008";
-        if (character == "9") characterSoundName = "numbers/009";
+        if (character == "0") characterSoundName = "fvox/000";
+        if (character == "1") characterSoundName = "fvox/001";
+        if (character == "2") characterSoundName = "fvox/002";
+        if (character == "3") characterSoundName = "fvox/003";
+        if (character == "4") characterSoundName = "fvox/004";
+        if (character == "5") characterSoundName = "fvox/005";
+        if (character == "6") characterSoundName = "fvox/006";
+        if (character == "7") characterSoundName = "fvox/007";
+        if (character == "8") characterSoundName = "fvox/008";
+        if (character == "9") characterSoundName = "fvox/009";
         return characterSoundName;
     }
 }

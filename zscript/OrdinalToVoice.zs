@@ -15,7 +15,7 @@ class OrdinalToVoice ui
         if (secondPart == "0" && skipZeroAfterDot == false)
         {
             UnshiftSingleDigitToQueue(secondPart.Mid(0, 1));
-            SoundQueue.UnshiftSound("numbers/dot", -1);
+            SoundQueue.UnshiftSound("fvox/dot", -1);
         }
         else if (secondPart != "0")
         {
@@ -23,7 +23,7 @@ class OrdinalToVoice ui
             {
                 UnshiftSingleDigitToQueue(secondPart.Mid(i, 1));
             }
-            SoundQueue.UnshiftSound("numbers/dot", -1);
+            SoundQueue.UnshiftSound("fvox/dot", -1);
         }
         ConvertAndAddToQueue(firstPart.ToInt());
     }
@@ -66,7 +66,7 @@ class OrdinalToVoice ui
                 }
                 if (numberSegment == "000" && power == 0)
                 {
-                    SoundQueue.UnshiftSound("numbers/000", -1);
+                    SoundQueue.UnshiftSound("fvox/000", -1);
                     return;
                 }
             }
@@ -74,16 +74,16 @@ class OrdinalToVoice ui
         } while (lastDigits == false);
         if (hasMinus)
         {
-            SoundQueue.UnshiftSound("numbers/minus", -1);
+            SoundQueue.UnshiftSound("fvox/minus", -1);
         }
     }
 
     ui static void UnshiftPowers(int digit)
     {
-        if (digit == 1) SoundQueue.UnshiftSound("numbers/thousand", -1);
-        if (digit == 2) SoundQueue.UnshiftSound("numbers/million", -1);
-        if (digit == 3) SoundQueue.UnshiftSound("numbers/billion", -1);
-        if (digit == 4) SoundQueue.UnshiftSound("numbers/trillion", -1);
+        if (digit == 1) SoundQueue.UnshiftSound("fvox/thousand", -1);
+        if (digit == 2) SoundQueue.UnshiftSound("fvox/million", -1);
+        if (digit == 3) SoundQueue.UnshiftSound("fvox/billion", -1);
+        if (digit == 4) SoundQueue.UnshiftSound("fvox/trillion", -1);
     }
 
     ui static void UnshiftSingleDigitToQueue(string digit)
@@ -121,14 +121,14 @@ class OrdinalToVoice ui
             UnshiftSingleDigitToQueue(doubleDigits.Mid(1, 1));
             if (doubleDigits.Mid(0, 1) != "0")
             {
-                if (doubleDigits.Mid(0, 1) == "2") SoundQueue.UnshiftSound("numbers/020", -1);
-                if (doubleDigits.Mid(0, 1) == "3") SoundQueue.UnshiftSound("numbers/030", -1);
-                if (doubleDigits.Mid(0, 1) == "4") SoundQueue.UnshiftSound("numbers/040", -1);
-                if (doubleDigits.Mid(0, 1) == "5") SoundQueue.UnshiftSound("numbers/050", -1);
-                if (doubleDigits.Mid(0, 1) == "6") SoundQueue.UnshiftSound("numbers/060", -1);
-                if (doubleDigits.Mid(0, 1) == "7") SoundQueue.UnshiftSound("numbers/070", -1);
-                if (doubleDigits.Mid(0, 1) == "8") SoundQueue.UnshiftSound("numbers/080", -1);
-                if (doubleDigits.Mid(0, 1) == "9") SoundQueue.UnshiftSound("numbers/090", -1);
+                if (doubleDigits.Mid(0, 1) == "2") SoundQueue.UnshiftSound("fvox/020", -1);
+                if (doubleDigits.Mid(0, 1) == "3") SoundQueue.UnshiftSound("fvox/030", -1);
+                if (doubleDigits.Mid(0, 1) == "4") SoundQueue.UnshiftSound("fvox/040", -1);
+                if (doubleDigits.Mid(0, 1) == "5") SoundQueue.UnshiftSound("fvox/050", -1);
+                if (doubleDigits.Mid(0, 1) == "6") SoundQueue.UnshiftSound("fvox/060", -1);
+                if (doubleDigits.Mid(0, 1) == "7") SoundQueue.UnshiftSound("fvox/070", -1);
+                if (doubleDigits.Mid(0, 1) == "8") SoundQueue.UnshiftSound("fvox/080", -1);
+                if (doubleDigits.Mid(0, 1) == "9") SoundQueue.UnshiftSound("fvox/090", -1);
             }
         }
     }
@@ -141,12 +141,12 @@ class OrdinalToVoice ui
             UnshiftDoubleDigits(doubleDigits);
             if (!lastDigits)
             {
-                SoundQueue.UnshiftSound("numbers/and", -1);
+                SoundQueue.UnshiftSound("fvox/and", -1);
             }
         }
         if (tripleDigits.Mid(0, 1) != "0")
         {
-            SoundQueue.UnshiftSound("numbers/100", -1);
+            SoundQueue.UnshiftSound("fvox/100", -1);
             UnshiftSingleDigitToQueue(tripleDigits.Mid(0, 1));
         }
     }

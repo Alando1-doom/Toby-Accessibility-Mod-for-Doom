@@ -1,0 +1,189 @@
+#include decorate/DEC_WEAP
+#include decorate/DEC_HLTH
+#include decorate/DEC_ARMR
+#include decorate/DEC_AMMO
+#include decorate/DEC_PRX1
+#include decorate/DEC_POW
+#include decorate/DEC_KEYS
+#include decorate/DEC_MONS
+#include decorate/DEC_DECO
+#include decorate/DEC_BEAC
+#include decorate/DEC_GOD
+
+//***********************************************************
+
+ACTOR Player_TO : DoomPlayer replaces DoomPlayer
+{
+	Speed 1
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+    -NOSKIN
+	+NORADIUSDMG
+	PainChance 255
+	Player.ColorRange 112, 127
+    Player.ClearColorSet 0
+    Player.ClearColorSet 1
+    Player.ClearColorSet 2
+    Player.ClearColorSet 3
+    Player.ClearColorSet 4
+    Player.ClearColorSet 5
+    Player.ClearColorSet 6
+    Player.ClearColorSet 7
+    Player.ClearColorSet 8
+	Player.ColorSet 0, Green, 112, 127, 1
+    Player.ColorSet 1, Red, 32, 47, 1
+    Player.ColorSet 2, Gray, 96, 111, 1
+    Player.ColorSet 3, Tan, 64, 79, 1
+	Player.DisplayName "Space Marine"
+	Player.CrouchSprite "PLYC"
+	Player.StartItem "Pistol_TO"
+    Player.StartItem "Fist_TO"
+	Player.StartItem "Clip", 50
+    Player.WeaponSlot 1, Fist_TO, Chainsaw_TO
+	Player.WeaponSlot 2, Pistol_TO
+	Player.WeaponSlot 3, Shotgun_TO, SuperShotgun_TO
+	Player.WeaponSlot 4, Chaingun_TO
+	Player.WeaponSlot 5, RocketLauncher_TO
+	Player.WeaponSlot 6, PlasmaRifle_TO
+	Player.WeaponSlot 7, BFG9000_TO
+	States
+	{
+	Spawn:
+		PLAY A 2 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		//PLAY A 0 Thing_ChangeTID(0, 1)
+		Loop
+	See:
+		PLAY A 0 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY A 0 A_ThrowGrenade("WallHit", -12, 2.5, 1)
+		PLAY A 0 A_ThrowGrenade("WallHit", -12, -2.5, 1)
+		PLAY A 0 A_CustomMissile("WallHit",24,0,100,2,0)
+		PLAY A 0 A_CustomMissile("WallHit",24,0,260,2,0)
+		PLAY A 0 A_ThrowGrenade("WalkThing", -20, 1, 1)
+		PLAY A 5 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY A 0 A_PlaySoundEx("misc/walk", "SoundSlot6", 0, 0)
+		PLAY B 0 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY B 0 A_ThrowGrenade("WallHit", -12, 2.5, 1)
+		PLAY B 0 A_ThrowGrenade("WallHit", -12, -2.5, 1)
+		PLAY B 0 A_CustomMissile("WallHit",24,0,100,2,0)
+		PLAY B 0 A_CustomMissile("WallHit",24,0,260,2,0)
+		PLAY B 5 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+        //PLAY B 5 A_ThrowGrenade("WallHit", 1, 2, 1)
+		//PLAY B 0 A_ThrowGrenade("WallHit", 1, -2, 1)
+		PLAY C 0 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY C 0 A_ThrowGrenade("WallHit", -12, 2.5, 1)
+		PLAY C 0 A_ThrowGrenade("WallHit", -12, -2.5, 1)
+		PLAY C 0 A_CustomMissile("WallHit",24,0,100,2,0)
+		PLAY C 0 A_CustomMissile("WallHit",24,0,260,2,0)
+		PLAY C 0 A_ThrowGrenade("WalkThing", -20, 1, 1)
+		PLAY C 5 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY C 0 A_PlaySoundEx("misc/walk", "SoundSlot6", 0, 0)
+		PLAY D 0 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		PLAY D 0 A_ThrowGrenade("WallHit", -12, 2.5, 1)
+		PLAY D 0 A_ThrowGrenade("WallHit", -12, -2.5, 1)
+		PLAY D 0 A_CustomMissile("WallHit",24,0,100,2,0)
+		PLAY D 0 A_CustomMissile("WallHit",24,0,260,2,0)
+		PLAY D 5 //A_SpawnItemEx("FloorChecker", 64, 0, -64, 0, 0, 0, 0, 0, 0)
+		Goto Spawn
+    Missile:
+		PLAY E 12 
+		Goto Spawn
+	Melee:
+		PLAY F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PLAY G 4 //A_JumpIfHealthLower(40, "HealthAlert")
+		PLAY G 4 A_Pain
+		Goto Spawn
+	HealthAlert:
+		PLAY A 1 A_JumpIfHealthLower(20, "HealthDanger")
+		PLAY A 1 A_PlaySoundEx("player/healthalert", "SoundSlot5", 0, 1)
+		Goto Spawn
+	HealthDanger:
+		PLAY A 1 A_PlaySoundEx("player/danger", "SoundSlot7", 1, 1)
+		Goto Spawn
+	}
+}
+
+//******************************************************************************************
+
+actor WalkThing
+{
+	Radius 8
+	Height 8
+	Speed 1
+    Health 1
+    Damage 0
+    Mass 9000000000
+    Projectile
+    +NoBlockmap
+    -NOGRAVITY
+    +ActivatePCross
+	+NOTIMEFREEZE
+	+THRUGHOST
+    SeeSound "null"
+    //DeathSound "misc/walk"
+	States
+	{
+	Spawn:
+		TNT1 A 8
+		Stop
+
+	Death:
+        TNT1 A 1
+		Stop
+	}
+}
+
+actor WallHit
+{
+	Radius 9
+	Height 8
+	Speed 2
+    Health 1
+    Damage 0
+    Mass 9000000000
+    Projectile
+    +NoBlockmap
+	+NOTIMEFREEZE
+    -NOGRAVITY
+	+THRUGHOST
+    //+ActivatePCross
+    SeeSound "null"
+    DeathSound "misc/wallhit"
+	States
+	{
+	Spawn:
+		TNT1 A 5
+		Stop
+
+	Death:
+        TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR FloorChecker
+{
+	Radius 20
+	Height 14
+	+NOGRAVITY
+	+NOTIMEFREEZE
+	+NOTELEPORT
+	+NOBLOCKMONST
+	+FIXMAPTHINGPOS
+	States
+	{
+	Spawn:
+		TNT1 AA 1 A_CheckFloor("YesFloor")
+		Goto Death
+	YesFloor:
+		TNT1 A 1
+		Stop
+	Death:
+		TNT1 A 1 A_PlaySoundEx("prox/warmer", "Auto", 0, 0)
+		TNT1 A 2
+		Stop
+	}
+}

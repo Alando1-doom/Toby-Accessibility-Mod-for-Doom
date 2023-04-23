@@ -1,18 +1,43 @@
+//Toby Player Class
+
 weaponsection compilation
-clearplayerclasses
+ clearplayerclasses
 addplayerclass Player_TO
+
+//Toby Compass
 
 addkeysection "Compass Options" CompassMod
 addmenukey "Check Direction" "pukename CompassScript"
 defaultbind Q "pukename CompassScript"
 addmenukey "Face North" "pukename FaceNorth"
-defaultbind E "pukename FaceNorth"
+defaultbind F "pukename FaceNorth"
+addmenukey "Turn Left" "pukename TurnCompass 1"
+defaultbind E "pukename TurnCompass 1"
+addmenukey "Turn Right" "pukename TurnCompass 0"
+defaultbind R "pukename TurnCompass 0"
+
+
+//Key Checker
+
+addkeysection "Toby Options" TobyAcc
+addmenukey "Check Keys" "pukename CheckKeys"
+defaultbind K "pukename CheckKeys"
+
+
+//Stat Checker
 
 addkeysection "Status Checker Options" CheckMod
 addmenukey "Check Health Stats" "pukename HealthScript"
 defaultbind H "pukename HealthScript"
 addmenukey "Check Ammo Stats" "pukename AmmoScript"
 defaultbind B "pukename AmmoScript"
+
+
+//God Mode Hotkey
+
+alias godmode "iddqd; give GodModeGiver"
+defaultbind KP5 "godmode"
+
 
 //Map Markers Section
 
@@ -95,5 +120,5 @@ alias zs_em_remove_all_menu "closemenu; netevent ZS_RemoveAllMarkers"
 alias zs_em_remove_all_keybind "netevent ZS_RemoveAllMarkers"
 
 DefaultBind M zs_em_place_next_marker_keybind
-DefaultBind K zs_em_remove_last_marker_keybind
+DefaultBind L zs_em_remove_last_marker_keybind
 //DefaultBind L zs_em_remove_all_keybind

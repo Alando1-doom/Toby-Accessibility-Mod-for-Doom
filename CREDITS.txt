@@ -1,4 +1,33 @@
-- fvox sounds for prototyping were taken from Half-Life -Proydoha
-- Alphabet for prototyping was downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp -Proydoha
-- TTS for prototyping was taken from https://www.naturalreaders.com/online/ -Proydoha
-- Original Sound Marker Mod design by ZikShadow -Proydoha
+Coding and Scripts:
+
+Impact Detection System, Weapon Targeting System, Pickup Beacons, Sound Defs for Monsters & Decorations, Map Markers, Key Checker -- Alando1
+
+Compass, Key Checker, Stat Checker, Line Beacon Spawner -- Jarewill
+
+Drop-off Detector, Accessible Menu, Map Markers -- Proydoha
+
+Map Markers -- ZikShadow
+
+Hit Marker -- Tekish
+
+Powerup Wearoff -- silentzora & Xterra
+
+Terrain FX -- Daniel & Raven Software
+
+- fvox sounds are taken from Half-Life
+- Alphabet is downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp
+- tts taken from https://www.naturalreaders.com/online/
+
+
+HitMarkers utilizes sounds from the following games:
+
+- Call of Duty 4: Modern Warfare by Infinity Ward
+- Call of Duty: Black Ops 4 by Treyarch
+- Call of Duty: Black Ops Cold War by Treyarch
+- Call of Duty: Modern Warfare by Infinity Ward
+- Doom (2016) by id Software
+- Overwatch by Blizzard Entertainment
+- Quake Champions by id Software
+- Quake Live by id Software
+- Team Fortress 2 by Valve
+- Titanfall 2 by Respawn Entertainment

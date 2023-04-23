@@ -66,7 +66,14 @@ OptionMenu "SimpleOptionsMenu"
 {
 	Title "Simple Options Menu"
 	Submenu "Sound Options", "SoundOptions"
+	Submenu "Customize Controls", "CustomizeControls"
+	Submenu "Mouse Options", "MouseOptions"
+	Submenu "Gameplay Options", "GameplayOptions"
+	Submenu "Compatibility Options", "CompatibilityOptions"
+	Submenu "Player Setup", "NewPlayerMenu"
+	Submenu "Network Options", "NetworkOptions"
 	Submenu "GZDoom Options", "OptionsMenu"
+	Submenu "Go to Console", "menuconsole"
 }
 
 AddOptionMenu "OptionsMenu"

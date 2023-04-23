@@ -1,11 +1,23 @@
+//MENU DISMISSED*
+
 {"EventType":"MenuDismissed", "SoundToPlay":"menusnd/dismiss"}
+
+
+
+//MAIN MENU*
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menusnd/mainmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_NGAME", "SoundToPlay":"menusnd/new"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_OPTION", "SoundToPlay":"menusnd/option"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_LOADG", "SoundToPlay":"menusnd/load"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_SAVEG", "SoundToPlay":"menusnd/save"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_RDTHIS", "SoundToPlay":"menusnd/readme"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quit"}
+{"EventType":"MenuChanged", "PreviousMenuName":"Mainmenu", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quitselect"}
+
+
+
+//EPISODE MENU*
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Episodemenu", "SoundToPlay":"menusnd/epimenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI1", "SoundToPlay":"menusnd/episode1"}
@@ -15,6 +27,12 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI5", "SoundToPlay":"menusnd/episode5"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_HELL", "SoundToPlay":"menusnd/episode6"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_NOREST", "SoundToPlay":"menusnd/episode7"}
+//Toby Mega Deluxe Map Pack
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 1", "SoundToPlay":"menusnd/tobye1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 2", "SoundToPlay":"menusnd/tobye2"}
+
+
+//DIFFICULTY MENU*
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_JKILL", "SoundToPlay":"menusnd/skill1"}
@@ -22,16 +40,427 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_HURT", "SoundToPlay":"menusnd/skill3"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_ULTRA", "SoundToPlay":"menusnd/skill4"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_NMARE", "SoundToPlay":"menusnd/skill5"}
-
+//Toby Map Packs Difficulties
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"EASY", "SoundToPlay":"menusnd/easy"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
 
+
+
+//TOBY SIMPLE OPTIONS MENU*
+
 {"EventType":"MenuChanged",   "CurrentMenuName":"SimpleOptionsMenu", "SoundToPlay":"menusnd/option"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Sound Options", "SoundToPlay":"menusnd/soundopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"GZDoom Options", "SoundToPlay":"menusnd/gzdopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Customize Controls", "SoundToPlay":"menu/option/controls"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Mouse Options", "SoundToPlay":"menu/option/mouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Player Setup", "SoundToPlay":"menu/option/player"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Gameplay Options", "SoundToPlay":"menu/option/gameplay"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Compatibility Options", "SoundToPlay":"menu/option/compat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Network Options", "SoundToPlay":"menu/option/network"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Go to Console", "SoundToPlay":"menu/option/console"}
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$OPTMNU_SOUND", "SoundToPlay":"menusnd/soundopt"}
+
+{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
 
 
+
+//GZDOOM OPTIONS MAIN
+
+//{"EventType":"MenuChanged",   "CurrentMenuName":"OptionsMenu", "SoundToPlay":"menusnd/option"}
+
+//CONTROLS MENU*
+{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/option/controls"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$OPTMNU_CONTROLS", "SoundToPlay":"menu/option/controls"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Customize Controls", "SoundToPlay":"menu/option/controls"}
+//keyboard layout
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_LAYOUT", "SoundToPlay":"menu/option/keyboard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$OPTMNU_DEFAULTS", "SoundToPlay":"menu/option/keyreset"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MODERN", "SoundToPlay":"menu/keyboard/wasd"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_CLASSICZ", "SoundToPlay":"menu/keyboard/classic"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MODERNLEFT", "SoundToPlay":"menu/keyboard/keypad"}
+//controls-action
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/action"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_ACTION", "SoundToPlay":"menu/controls/title/action"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_ATTACK", "SoundToPlay":"menu/controls/fire"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_ALTATTACK", "SoundToPlay":"menu/controls/altfire"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_RELOAD", "SoundToPlay":"menu/controls/reload"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_ZOOM", "SoundToPlay":"menu/controls/zoom"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USE", "SoundToPlay":"menu/controls/use"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_FORWARD", "SoundToPlay":"menu/controls/forward"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_BACK", "SoundToPlay":"menu/controls/backward"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MOVELEFT", "SoundToPlay":"menu/controls/strafeleft"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MOVERIGHT", "SoundToPlay":"menu/controls/straferight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TURNLEFT", "SoundToPlay":"menu/controls/turnleft"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TURNRIGHT", "SoundToPlay":"menu/controls/turnright"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TURN180", "SoundToPlay":"menu/controls/quickturn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_JUMP", "SoundToPlay":"menu/controls/jump"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_CROUCH", "SoundToPlay":"menu/controls/crouch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TOGGLECROUCH", "SoundToPlay":"menu/controls/crouchtoggle"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MOVEUP", "SoundToPlay":"menu/controls/flyup"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MOVEDOWN", "SoundToPlay":"menu/controls/flydown"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_LAND", "SoundToPlay":"menu/controls/stopflying"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MOUSELOOK", "SoundToPlay":"menu/controls/mouselook"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_KEYBOARDLOOK", "SoundToPlay":"menu/controls/keyboardlook"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_LOOKUP", "SoundToPlay":"menu/controls/lookup"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_LOOKDOWN", "SoundToPlay":"menu/controls/lookdown"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_CENTERVIEW", "SoundToPlay":"menu/controls/centerview"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_RUN", "SoundToPlay":"menu/controls/run"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TOGGLERUN", "SoundToPlay":"menu/controls/togglerun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ActionControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_STRAFE", "SoundToPlay":"menu/controls/strafe"}
+//controls-weapons
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/weapon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_WEAPONS", "SoundToPlay":"menu/controls/title/weapon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_NEXTWEAPON", "SoundToPlay":"menu/controls/nextweap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_PREVIOUSWEAPON", "SoundToPlay":"menu/controls/prevweap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT1", "SoundToPlay":"menu/controls/weap1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT2", "SoundToPlay":"menu/controls/weap2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT3", "SoundToPlay":"menu/controls/weap3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT4", "SoundToPlay":"menu/controls/weap4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT5", "SoundToPlay":"menu/controls/weap5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT6", "SoundToPlay":"menu/controls/weap6"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT7", "SoundToPlay":"menu/controls/weap7"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT8", "SoundToPlay":"menu/controls/weap8"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT9", "SoundToPlay":"menu/controls/weap9"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SLOT0", "SoundToPlay":"menu/controls/weap10"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USER1", "SoundToPlay":"menu/controls/state1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USER2", "SoundToPlay":"menu/controls/state2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USER3", "SoundToPlay":"menu/controls/state3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponsControlMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USER4", "SoundToPlay":"menu/controls/state4"}
+//controls-inventory
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/inventory"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_INVENTORY", "SoundToPlay":"menu/controls/title/inventory"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USEITEM", "SoundToPlay":"menu/controls/activateitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_USEALLITEMS", "SoundToPlay":"menu/controls/allitems"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_NEXTITEM", "SoundToPlay":"menu/controls/nextitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_PREVIOUSITEM", "SoundToPlay":"menu/controls/previousitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_DROPITEM", "SoundToPlay":"menu/controls/dropitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_QUERYITEM", "SoundToPlay":"menu/controls/queryitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InventoryControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_DROPWEAPON", "SoundToPlay":"menu/controls/dropweap"}
+//controls-automap
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/map"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_CONTROLS", "SoundToPlay":"menu/controls/title/map"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_PANLEFT", "SoundToPlay":"menu/controls/panleft"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_PANRIGHT", "SoundToPlay":"menu/controls/panright"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_PANUP", "SoundToPlay":"menu/controls/panup"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_PANDOWN", "SoundToPlay":"menu/controls/pandown"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_ZOOMIN", "SoundToPlay":"menu/controls/zoomin"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_ZOOMOUT", "SoundToPlay":"menu/controls/zoomout"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_TOGGLEZOOM", "SoundToPlay":"menu/controls/togglezoom"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_TOGGLEFOLLOW", "SoundToPlay":"menu/controls/follow"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_ROTATE", "SoundToPlay":"menu/controls/rotate"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_TOGGLEGRID", "SoundToPlay":"menu/controls/grid"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_TOGGLETEXTURE", "SoundToPlay":"menu/controls/texture"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_SETMARK", "SoundToPlay":"menu/controls/setmark"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapControlsMenu", "CurrentMenuItemOptionName":"$MAPCNTRLMNU_CLEARMARK", "SoundToPlay":"menu/controls/clearmark"}
+//controls-other
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/other"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_OTHER", "SoundToPlay":"menu/controls/title/other"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_AUTOMAP", "SoundToPlay":"menu/controls/automap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_CHASECAM", "SoundToPlay":"menu/controls/chasecam"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_COOPSPY", "SoundToPlay":"menu/controls/coopspy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SCREENSHOT", "SoundToPlay":"menu/controls/screenshot"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_CONSOLE", "SoundToPlay":"menu/controls/openconsole"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_PAUSE", "SoundToPlay":"menu/controls/pause"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_DISPLAY_INC", "SoundToPlay":"menu/controls/displayup"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_DISPLAY_DEC", "SoundToPlay":"menu/controls/displaydown"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TOGGLE_MESSAGES", "SoundToPlay":"menu/controls/togglemessage"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_ADJUST_GAMMA", "SoundToPlay":"menu/controls/gamma"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_OPEN_HELP", "SoundToPlay":"menu/controls/help"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_OPEN_SAVE", "SoundToPlay":"menu/controls/savemenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_OPEN_LOAD", "SoundToPlay":"menu/controls/loadmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_OPEN_OPTIONS", "SoundToPlay":"menu/controls/optionmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_OPEN_DISPLAY", "SoundToPlay":"menu/controls/displaymenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_EXIT_TO_MAIN", "SoundToPlay":"menu/controls/exittomain"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MENU_QUIT", "SoundToPlay":"menu/controls/quitmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_QUICKSAVE", "SoundToPlay":"menu/controls/quicksave"}
+{"EventType":"OptionChanged", "CurrentMenuName":"OtherControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_QUICKLOAD", "SoundToPlay":"menu/controls/quickload"}
+//controls-strife
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/strife"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$CNTRLMNU_POPUPS", "SoundToPlay":"menu/controls/title/strife"}
+{"EventType":"OptionChanged", "CurrentMenuName":"StrifeControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_MISSION", "SoundToPlay":"menu/controls/objectives"}
+{"EventType":"OptionChanged", "CurrentMenuName":"StrifeControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_KEYS", "SoundToPlay":"menu/controls/keylist"}
+{"EventType":"OptionChanged", "CurrentMenuName":"StrifeControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_STATS", "SoundToPlay":"menu/controls/stats"}
+//controls-multiplayer
+//{"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/controls/title/multiplayer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$MNU_MULTIPLAYER", "SoundToPlay":"menu/controls/title/multiplayer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ChatControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SCOREBOARD", "SoundToPlay":"menu/controls/scoreboard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ChatControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TOGGLESCOREBOARD", "SoundToPlay":"menu/controls/scoretoggle"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ChatControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_SAY", "SoundToPlay":"menu/controls/say"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ChatControlsMenu", "CurrentMenuItemOptionName":"$CNTRLMNU_TEAMSAY", "SoundToPlay":"menu/controls/teamsay"}
+//controls-toby options
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Direction", "SoundToPlay":"menu/controls/checkdir"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Face North", "SoundToPlay":"menu/controls/facenorth"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Turn Left", "SoundToPlay":"menu/controls/compleft"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Turn Right", "SoundToPlay":"menu/controls/compright"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Keys", "SoundToPlay":"menu/controls/keychecker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Health Stats", "SoundToPlay":"menu/controls/healthstat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Ammo Stats", "SoundToPlay":"menu/controls/ammostat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_MENU", "SoundToPlay":"menu/controls/openmarkmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_PLACE_MENU", "SoundToPlay":"menu/controls/placemarkmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU", "SoundToPlay":"menu/controls/remmarkmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "SoundToPlay":"menu/controls/placemarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_1", "SoundToPlay":"menu/controls/marker1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_2", "SoundToPlay":"menu/controls/marker2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_3", "SoundToPlay":"menu/controls/marker3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_4", "SoundToPlay":"menu/controls/marker4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_5", "SoundToPlay":"menu/controls/marker5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_6", "SoundToPlay":"menu/controls/marker6"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_7", "SoundToPlay":"menu/controls/marker7"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_8", "SoundToPlay":"menu/controls/marker8"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_9", "SoundToPlay":"menu/controls/marker9"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_10", "SoundToPlay":"menu/controls/marker10"}
+
+
+//MOUSE MENU*
+{"EventType":"MenuChanged",   "CurrentMenuName":"MouseOptions", "SoundToPlay":"menu/option/mouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$OPTMNU_MOUSE", "SoundToPlay":"menu/option/mouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"Mouse Options", "SoundToPlay":"menu/option/mouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_ENABLEMOUSE", "SoundToPlay":"menu/mouse/enablemouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_MOUSEINMENU", "SoundToPlay":"menu/mouse/enableinmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_SHOWBACKBUTTON", "SoundToPlay":"menu/mouse/backbutton"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_SWAPBUTTONS", "SoundToPlay":"menu/mouse/swapbuttons"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_CURSOR", "SoundToPlay":"menu/mouse/cursor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_SENSITIVITY_X", "SoundToPlay":"menu/mouse/horizontal"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_SENSITIVITY_Y", "SoundToPlay":"menu/mouse/vertical"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_SMOOTHMOUSE", "SoundToPlay":"menu/mouse/smooth"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_TURNSPEED", "SoundToPlay":"menu/mouse/turnspeed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_MOUSELOOKSPEED", "SoundToPlay":"menu/mouse/mlookspeed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_FORWBACKSPEED", "SoundToPlay":"menu/mouse/forwardback"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_STRAFESPEED", "SoundToPlay":"menu/mouse/strafespeed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_ALWAYSMOUSELOOK", "SoundToPlay":"menu/mouse/alwaysmlook"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_INVERTMOUSEX", "SoundToPlay":"menu/mouse/invertx"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_INVERTMOUSE", "SoundToPlay":"menu/mouse/inverty"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_LOOKSPRING", "SoundToPlay":"menu/mouse/lookspring"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$MOUSEMNU_LOOKSTRAFE", "SoundToPlay":"menu/mouse/lookstrafe"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DEFAULT", "SoundToPlay":"menu/cursor/default"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTSTR_SIMPLEARROW", "SoundToPlay":"menu/cursor/arrow"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DOOM", "SoundToPlay":"menu/cursor/doom"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTSTR_HERETIC", "SoundToPlay":"menu/cursor/heretic"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_HEXEN", "SoundToPlay":"menu/cursor/hexen"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_STRIFE", "SoundToPlay":"menu/cursor/strife"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTSTR_CHEX", "SoundToPlay":"menu/cursor/chex"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTSTR_SYSTEMCURSOR", "SoundToPlay":"menu/cursor/system"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TXT_NO", "SoundToPlay":"menusnd/no"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TXT_YES", "SoundToPlay":"menusnd/yes"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_TOUCHSCREENLIKE", "SoundToPlay":"menu/mouse/touchscreen"}
+
+
+
+
+//PLAYER SETUP MENU*
+{"EventType":"MenuChanged",   "CurrentMenuName":"NewPlayerMenu", "SoundToPlay":"menu/option/player"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$OPTMNU_PLAYER", "SoundToPlay":"menu/option/player"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Player Setup", "SoundToPlay":"menu/option/player"}
+//main
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_NAME", "SoundToPlay":"menu/player/name"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_TEAM", "SoundToPlay":"menu/player/team"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERCOLOR", "SoundToPlay":"menu/player/color"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERCLASS", "SoundToPlay":"menu/player/class"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERSKIN", "SoundToPlay":"menu/player/skin"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERGENDER", "SoundToPlay":"menu/player/gender"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_AUTOAIM", "SoundToPlay":"menu/player/autoaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_SWITCHONPICKUP", "SoundToPlay":"menu/player/weapswitch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_ALWAYSRUN", "SoundToPlay":"menu/player/alwaysrun"}
+//player sex
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MALE", "SoundToPlay":"menu/gender/male"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_FEMALE", "SoundToPlay":"menu/gender/female"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NEUTRAL", "SoundToPlay":"menu/gender/neutral"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_OTHER", "SoundToPlay":"menu/gender/object"}
+//team colors
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NONE", "SoundToPlay":"menu/team/none"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Red", "SoundToPlay":"menu/team/red"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Blue", "SoundToPlay":"menu/team/blue"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Gold", "SoundToPlay":"menu/team/gold"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Green", "SoundToPlay":"menu/team/green"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Orange", "SoundToPlay":"menu/team/orange"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Purple", "SoundToPlay":"menu/team/purple"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Black", "SoundToPlay":"menu/team/black"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"White", "SoundToPlay":"menu/team/white"}
+//player armor color
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_RED", "SoundToPlay":"menu/team/red"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_GREEN", "SoundToPlay":"menu/team/green"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_BLUE", "SoundToPlay":"menu/team/blue"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_CUSTOM", "SoundToPlay":"menu/playercolor/custom"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Green", "SoundToPlay":"menu/playercolor/green"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Red", "SoundToPlay":"menu/playercolor/red"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Gray", "SoundToPlay":"menu/playercolor/gray"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Tan", "SoundToPlay":"menu/playercolor/brown"}
+//skin - class
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Base", "SoundToPlay":"menu/skin/base"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Space Marine", "SoundToPlay":"menu/class/marine"}
+
+
+
+//GAMEPLAY OPTIONS MENU*
+{"EventType":"MenuChanged",   "CurrentMenuName":"GameplayOptions", "SoundToPlay":"menu/option/gameplay"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$OPTMNU_GAMEPLAY", "SoundToPlay":"menu/option/gameplay"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"Gameplay Options", "SoundToPlay":"menu/option/gameplay"}
+//sub-menu_Deathmatch
+{"EventType":"MenuChanged",   "CurrentMenuName":"DeathmatchOptions", "SoundToPlay":"menu/gameplay/title/dm"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_DEATHMATCH", "SoundToPlay":"menu/gameplay/title/dm"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_WEAPONSSTAY", "SoundToPlay":"menu/gameplay/weapstay"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWPOWERUPS", "SoundToPlay":"menu/gameplay/allowpower"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWHEALTH", "SoundToPlay":"menu/gameplay/allowhealth"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWARMOR", "SoundToPlay":"menu/gameplay/allowarmor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SPAWNFARTHEST", "SoundToPlay":"menu/gameplay/spawnfar"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SAMEMAP", "SoundToPlay":"menu/gameplay/samemap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_FORCERESPAWN", "SoundToPlay":"menu/gameplay/forcerespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWEXIT", "SoundToPlay":"menu/gameplay/allowexit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_BARRELSRESPAWN", "SoundToPlay":"menu/gameplay/barrelrespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_RESPAWNPROTECTION", "SoundToPlay":"menu/gameplay/spawnprotect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOSEFRAG", "SoundToPlay":"menu/gameplay/losefrag"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPFRAGS", "SoundToPlay":"menu/gameplay/keepfrag"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOTEAMSWITCH", "SoundToPlay":"menu/gameplay/noteamswitch"}
+//sub-menu COOP
+{"EventType":"MenuChanged",   "CurrentMenuName":"CoopOptions", "SoundToPlay":"menu/gameplay/title/coop"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_COOPERATIVE", "SoundToPlay":"menu/gameplay/title/coop"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_MULTIPLAYERTHINGS", "SoundToPlay":"menu/gameplay/coopthings"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_MULTIPLAYERWEAPONS", "SoundToPlay":"menu/gameplay/coopweap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOSEINVENTORY", "SoundToPlay":"menu/gameplay/loseinv"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPKEYS", "SoundToPlay":"menu/gameplay/keepkeys"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPWEAPONS", "SoundToPlay":"menu/gameplay/keepweap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPARMOR", "SoundToPlay":"menu/gameplay/keeparmor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPPOWERUPS", "SoundToPlay":"menu/gameplay/keeppower"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPAMMO", "SoundToPlay":"menu/gameplay/keepammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOSEHALFAMMO", "SoundToPlay":"menu/gameplay/losehalfammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SPAWNWHEREDIED", "SoundToPlay":"menu/gameplay/deathspot"}
+//main
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_TEAMPLAY", "SoundToPlay":"menu/gameplay/teamplay"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_TEAMDAMAGE", "SoundToPlay":"menu/gameplay/teamdmg"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SMARTAUTOAIM", "SoundToPlay":"menu/gameplay/smartaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_FALLINGDAMAGE", "SoundToPlay":"menu/gameplay/falldmg"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_DROPWEAPON", "SoundToPlay":"menu/gameplay/dropweap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_DOUBLEAMMO", "SoundToPlay":"menu/gameplay/doubleammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_INFINITEAMMO", "SoundToPlay":"menu/gameplay/infiniteammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_INFINITEINVENTORY", "SoundToPlay":"menu/gameplay/infiniteinv"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOMONSTERS", "SoundToPlay":"menu/gameplay/nomonsters"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOMONSTERSTOEXIT", "SoundToPlay":"menu/gameplay/monsterexit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_MONSTERSRESPAWN", "SoundToPlay":"menu/gameplay/monrespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NORESPAWN", "SoundToPlay":"menu/gameplay/nomonrespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ITEMSRESPAWN", "SoundToPlay":"menu/gameplay/itemrespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SUPERRESPAWN", "SoundToPlay":"menu/gameplay/powerrespawn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_FASTMONSTERS", "SoundToPlay":"menu/gameplay/fastmonsters"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_INSTANTREACTION", "SoundToPlay":"menu/gameplay/nmaremons"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_DEGENERATION", "SoundToPlay":"menu/gameplay/degeneration"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOAUTOAIM", "SoundToPlay":"menu/gameplay/autoaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWSUICIDE", "SoundToPlay":"menu/gameplay/suicide"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWJUMP", "SoundToPlay":"menu/gameplay/jump"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWCROUCH", "SoundToPlay":"menu/gameplay/crouch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWFREELOOK", "SoundToPlay":"menu/gameplay/freelook"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWFOV", "SoundToPlay":"menu/gameplay/fov"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_BFGFREEAIM", "SoundToPlay":"menu/gameplay/bfgaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWAUTOMAP", "SoundToPlay":"menu/gameplay/automap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_AUTOMAPALLIES", "SoundToPlay":"menu/gameplay/mapfriends"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALLOWSPYING", "SoundToPlay":"menu/gameplay/spying"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_CHASECAM", "SoundToPlay":"menu/gameplay/chasecam"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_DONTCHECKAMMO", "SoundToPlay":"menu/gameplay/checkammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KILLBOSSSPAWNS", "SoundToPlay":"menu/gameplay/iconofsin"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOCOUNTENDMONSTER", "SoundToPlay":"menu/gameplay/endsector"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALWAYSSPAWNMULTI", "SoundToPlay":"menu/gameplay/multiplayobj"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NEVERFRIENDS", "SoundToPlay":"menu/smartaim/nofriends"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ONLYMONSTERS", "SoundToPlay":"menu/smartaim/onlymons"}
+
+
+
+//COMPATIBILITY OPTIONS MENU*
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatibilityOptions", "SoundToPlay":"menu/option/compat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$OPTMNU_COMPATIBILITY", "SoundToPlay":"menu/option/compat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"Compatibility Options", "SoundToPlay":"menu/option/compat"}
+//compat-mode
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_MODE", "SoundToPlay":"menu/compat/mode"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DOOM", "SoundToPlay":"menu/compmode/doom"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DOOMSTRICT", "SoundToPlay":"menu/compmode/doomstrict"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_BOOM", "SoundToPlay":"menu/compmode/boom"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_BOOMSTRICT", "SoundToPlay":"menu/compmode/boomstrict"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MBF", "SoundToPlay":"menu/compmode/mbf"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MBFSTRICT", "SoundToPlay":"menu/compmode/mbfstrict"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ZDOOM2063", "SoundToPlay":"menu/compmode/zdoom2063"}
+//compat-actor
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatActorMenu", "SoundToPlay":"menu/compat/title/actor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_ACTORBEHAVIOR", "SoundToPlay":"menu/compat/title/actor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_CORPSEGIBS", "SoundToPlay":"menu/compat/crushedmon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_VILEGHOSTS", "SoundToPlay":"menu/compat/crushedmon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOBLOCKFRIENDS", "SoundToPlay":"menu/compat/friendlymon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_LIMITPAIN", "SoundToPlay":"menu/compat/painlostsouls"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MBFMONSTERMOVE", "SoundToPlay":"menu/compat/monstermove"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_CROSSDROPOFF", "SoundToPlay":"menu/compat/mondropoff"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_DROPOFF", "SoundToPlay":"menu/compat/monstuck"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_INVISIBILITY", "SoundToPlay":"menu/compat/seeinvisible"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MINOTAUR", "SoundToPlay":"menu/compat/minoflames"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOTOSSDROPS", "SoundToPlay":"menu/compat/itemdrops"}
+//compat-DEH
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatDehackedMenu", "SoundToPlay":"menu/compat/title/deh"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_DEHACKEDBEHAVIOR", "SoundToPlay":"menu/compat/title/deh"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatDehackedMenu", "CurrentMenuItemOptionName":"$CMPTMNU_DEHHEALTH", "SoundToPlay":"menu/compat/dehhealth"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatDehackedMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MUSHROOM", "SoundToPlay":"menu/compat/mushroom"}
+//compat-map
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatMapMenu", "SoundToPlay":"menu/compat/title/mapaction"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_MAPACTIONBEHAVIOR", "SoundToPlay":"menu/compat/title/mapaction"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_USEBLOCKING", "SoundToPlay":"menu/compat/blockuse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_ANYBOSSDEATH", "SoundToPlay":"menu/compat/bossdeath"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NODOORLIGHT", "SoundToPlay":"menu/compat/doorlight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_LIGHT", "SoundToPlay":"menu/compat/neighborlight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SHORTTEX", "SoundToPlay":"menu/compat/shorttexture"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_STAIRS", "SoundToPlay":"menu/compat/buggystairs"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_FLOORMOVE", "SoundToPlay":"menu/compat/floormotion"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_POINTONLINE", "SoundToPlay":"menu/compat/pointonline"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MULTIEXIT", "SoundToPlay":"menu/compat/multiexits"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_TELEPORT", "SoundToPlay":"menu/compat/teleporttrig"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_PUSHWINDOW", "SoundToPlay":"menu/compat/nonblock"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_CHECKSWITCHRANGE", "SoundToPlay":"menu/compat/buggyswitch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_RAILINGHACK", "SoundToPlay":"menu/compat/buggystrife"}
+//comapt-physics
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatPhysicsMenu", "SoundToPlay":"menu/compat/title/physics"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_PHYSICSBEHAVIOR", "SoundToPlay":"menu/compat/title/physics"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOPASSOVER", "SoundToPlay":"menu/compat/tallactors"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_BOOMSCROLL", "SoundToPlay":"menu/compat/boomscroll"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_BADANGLES", "SoundToPlay":"menu/compat/nsew"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_WALLRUN", "SoundToPlay":"menu/compat/wallrun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_RAVENSCROLL", "SoundToPlay":"menu/compat/ravenscroll"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_TRACE", "SoundToPlay":"menu/compat/selfrefsector"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_HITSCAN", "SoundToPlay":"menu/compat/hitscan"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MISSILECLIP", "SoundToPlay":"menu/compat/missileclip"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_EXPLODE1", "SoundToPlay":"menu/compat/verticalthrust"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_EXPLODE2", "SoundToPlay":"menu/compat/doomexp"}
+//compat-render
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatRenderMenu", "SoundToPlay":"menu/compat/title/render"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_RENDERINGBEHAVIOR", "SoundToPlay":"menu/compat/title/render"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatRenderMenu", "CurrentMenuItemOptionName":"$CMPTMNU_POLYOBJ", "SoundToPlay":"menu/compat/polyobject"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatRenderMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MASKEDMIDTEX", "SoundToPlay":"menu/compat/yoffsets"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatRenderMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SPRITESORT", "SoundToPlay":"menu/compat/invertsprites"}
+//compat-sound
+{"EventType":"MenuChanged",   "CurrentMenuName":"CompatSoundMenu", "SoundToPlay":"menu/compat/title/sound"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_SOUNDBEHAVIOR", "SoundToPlay":"menu/compat/title/sound"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SOUNDSLOTS", "SoundToPlay":"menu/compat/silentbfg"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SILENTPICKUP", "SoundToPlay":"menu/compat/nopickupsnd"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SILENTINSTANTFLOORS", "SoundToPlay":"menu/compat/movingfloors"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SECTORSOUNDS", "SoundToPlay":"menu/compat/sectorcenter"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SOUNDCUTOFF", "SoundToPlay":"menu/compat/actorvanish"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatSoundMenu", "CurrentMenuItemOptionName":"$CMPTMNU_SOUNDTARGET", "SoundToPlay":"menu/compat/targethandle"}
+
+
+
+//NETWORK OPTIONS*
+{"EventType":"MenuChanged",   "CurrentMenuName":"NetworkOptions", "SoundToPlay":"menu/option/network"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$OPTMNU_NETWORK", "SoundToPlay":"menu/option/network"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"Network Options", "SoundToPlay":"menu/option/network"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_MOVEPREDICTION", "SoundToPlay":"menu/network/predictmove"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_LINESPECIALPREDICTION", "SoundToPlay":"menu/network/predictline"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_PREDICTIONLERPSCALE", "SoundToPlay":"menu/network/lerpscale"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_LERPTHRESHOLD", "SoundToPlay":"menu/network/lerpthreshold"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_EXTRATICS", "SoundToPlay":"menu/network/extratics"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NONE", "SoundToPlay":"menu/extratics/none"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"1", "SoundToPlay":"menu/extratics/one"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ALLUNACKNOWLEDGED", "SoundToPlay":"menu/extratics/all"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_TICBALANCE", "SoundToPlay":"menu/network/latency"}
+
+
+
+//SOUND OPTIONS MENU*
 {"EventType":"MenuChanged",   "CurrentMenuName":"SoundOptions", "SoundToPlay":"menusnd/soundopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$MODMNU_MASTERVOLUME", "SoundToPlay":"menusnd/mastervol"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_SFXVOLUME", "SoundToPlay":"menusnd/soundvol"}
@@ -40,11 +469,33 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MIDIDEVICE", "SoundToPlay":"menusnd/midi"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_UNDERWATERREVERB", "SoundToPlay":"menusnd/reverb"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_RANDOMIZEPITCHES", "SoundToPlay":"menusnd/pitch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_CHANNELS", "SoundToPlay":"menu/sound/channels"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_ADVANCED", "SoundToPlay":"menu/sound/title/advanced"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$OPTMNU_REVERB", "SoundToPlay":"menu/sound/reverb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$ADVSNDMNU_SAMPLERATE", "SoundToPlay":"menu/sound/samplerate"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$ADVSNDMNU_HRTF", "SoundToPlay":"menu/sound/hrft"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_BACKGROUND", "SoundToPlay":"menu/sound/bgsound"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_OPENAL", "SoundToPlay":"menu/sound/openal"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MIDIPLAYER", "SoundToPlay":"menu/sound/midiplayer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MODREPLAYER", "SoundToPlay":"menu/sound/moduleplayer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_RESTART", "SoundToPlay":"menu/sound/restartsound"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AdvSoundOptions", "CurrentMenuItemOptionName":"Sound Channels", "SoundToPlay":"menu/sound/channels"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_8000HZ", "SoundToPlay":"menu/srate/8000"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_11025HZ", "SoundToPlay":"menu/srate/11025"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_22050HZ", "SoundToPlay":"menu/srate/22050"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_32000HZ", "SoundToPlay":"menu/srate/32000"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_44100HZ", "SoundToPlay":"menu/srate/44100"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_48000HZ", "SoundToPlay":"menu/srate/48000"}
 
-{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
-{"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$OPTMNU_SOUND", "SoundToPlay":"menusnd/soundopt"}
 
-{"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
+
+//GO TO CONSOLE*
+{"EventType":"MenuChanged",   "CurrentMenuName":"menuconsole", "SoundToPlay":"menu/option/console"}
+{"EventType":"OptionChanged", "CurrentMenuName":"menuconsole", "CurrentMenuItemOptionName":"$OPTMNU_CONSOLE", "SoundToPlay":"menu/option/console"}
+{"EventType":"OptionChanged", "CurrentMenuName":"menuconsole", "CurrentMenuItemOptionName":"Go to Console", "SoundToPlay":"menu/option/console"}
+
+
+//SAVE-LOAD GAME MENU*
 
 {"EventType":"MenuChanged", "CurrentMenuClass":"LoadMenu", "SoundToPlay":"menusnd/load"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "SoundToPlay":"menusnd/save"}
@@ -53,5 +504,69 @@
 {"EventType":"GameSaved", "SoundToPlay":"save/saved"}
 
 
+//OPTION VALUES*
+
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_OFF", "SoundToPlay":"menusnd/off"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ON", "SoundToPlay":"menusnd/on"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_AUTO", "SoundToPlay":"menu/hrft/auto"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DEFAULT", "SoundToPlay":"menu/srate/default"}
+
+
+
+
+//MENUS TO HOLD OFF (for now)
+
+//Joystick Menu - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"JoystickOptions", "SoundToPlay":"menu/option/controller"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$OPTMNU_JOYSTICK", "SoundToPlay":"menu/option/controller"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"Controller Options", "SoundToPlay":"menu/option/controller"}
+
+//Auto-Map Menu - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"AutomapOptions", "SoundToPlay":"menu/option/automap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AutomapOptions", "CurrentMenuItemOptionName":"$OPTMNU_AUTOMAP", "SoundToPlay":"menu/option/automap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AutomapOptions", "CurrentMenuItemOptionName":"Automap Options", "SoundToPlay":"menu/option/automap"}
+
+//HUD Menu - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"HUDOptions", "SoundToPlay":"menu/option/hud"}
+{"EventType":"OptionChanged", "CurrentMenuName":"HUDOptions", "CurrentMenuItemOptionName":"$OPTMNU_HUD", "SoundToPlay":"menu/option/hud"}
+{"EventType":"OptionChanged", "CurrentMenuName":"HUDOptions", "CurrentMenuItemOptionName":"HUD Options", "SoundToPlay":"menu/option/hud"}
+
+//Misc Options - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"MiscOptions", "SoundToPlay":"menu/option/misc"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MiscOptions", "CurrentMenuItemOptionName":"$OPTMNU_MISCELLANEOUS", "SoundToPlay":"menu/option/misc"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MiscOptions", "CurrentMenuItemOptionName":"Miscellaneous Options", "SoundToPlay":"menu/option/misc"}
+
+//Display Options - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"VideoOptions", "SoundToPlay":"menu/option/display"}
+{"EventType":"OptionChanged", "CurrentMenuName":"VideoOptions", "CurrentMenuItemOptionName":"$OPTMNU_DISPLAY", "SoundToPlay":"menu/option/display"}
+{"EventType":"OptionChanged", "CurrentMenuName":"VideoOptions", "CurrentMenuItemOptionName":"Display Options", "SoundToPlay":"menu/option/display"}
+
+//Video Options - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"VideoModeMenu", "SoundToPlay":"menu/option/video"}
+{"EventType":"OptionChanged", "CurrentMenuName":"VideoModeMenu", "CurrentMenuItemOptionName":"$OPTMNU_VIDEO", "SoundToPlay":"menu/option/video"}
+{"EventType":"OptionChanged", "CurrentMenuName":"VideoModeMenu", "CurrentMenuItemOptionName":"Set Video Mode", "SoundToPlay":"menu/option/video"}
+
+//Option Search - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"os_Menu", "SoundToPlay":"menu/option/search"}
+{"EventType":"OptionChanged", "CurrentMenuName":"os_Menu", "CurrentMenuItemOptionName":"$OS_TITLE", "SoundToPlay":"menu/option/search"}
+{"EventType":"OptionChanged", "CurrentMenuName":"os_Menu", "CurrentMenuItemOptionName":"Option Search", "SoundToPlay":"menu/option/search"}
+
+//Simple Options Menu - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"m_simpleoptions", "SoundToPlay":"menu/option/simple"}
+{"EventType":"OptionChanged", "CurrentMenuName":"m_simpleoptions", "CurrentMenuItemOptionName":"$OPTMNU_SIMPLEON", "SoundToPlay":"menu/option/simple"}
+{"EventType":"OptionChanged", "CurrentMenuName":"m_simpleoptions", "CurrentMenuItemOptionName":"Simple Options Menu", "SoundToPlay":"menu/option/simple"}
+
+//Reset to Defaults - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"reset2defaults", "SoundToPlay":"menu/option/resetdef"}
+{"EventType":"OptionChanged", "CurrentMenuName":"reset2defaults", "CurrentMenuItemOptionName":"$OPTMNU_DEFAULTS", "SoundToPlay":"menu/option/resetdef"}
+{"EventType":"OptionChanged", "CurrentMenuName":"reset2defaults", "CurrentMenuItemOptionName":"Reset to Defaults", "SoundToPlay":"menu/option/resetdef"}
+
+//Reset to last saved - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"reset2saved", "SoundToPlay":"menu/option/resetsave"}
+{"EventType":"OptionChanged", "CurrentMenuName":"reset2saved", "CurrentMenuItemOptionName":"$OPTMNU_RESETTOSAVED", "SoundToPlay":"menu/option/resetsave"}
+{"EventType":"OptionChanged", "CurrentMenuName":"reset2saved", "CurrentMenuItemOptionName":"Reset to Last Saved", "SoundToPlay":"menu/option/resetsave"}
+
+//Save Settings - VOID
+{"EventType":"MenuChanged",   "CurrentMenuName":"writeini", "SoundToPlay":"menu/option/saveset"}
+{"EventType":"OptionChanged", "CurrentMenuName":"writeini", "CurrentMenuItemOptionName":"$OPTMNU_WRITEINI", "SoundToPlay":"menu/option/saveset"}
+{"EventType":"OptionChanged", "CurrentMenuName":"writeini", "CurrentMenuItemOptionName":"Save Current Settings", "SoundToPlay":"menu/option/saveset"}

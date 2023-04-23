@@ -1,0 +1,120 @@
+#library "CHECKS"
+#include "zcommon.acs"
+
+//Script Credit to Jarewill
+
+Script "HealthScript" (void)
+{
+	int hp = GetActorProperty(0,APROP_Health);
+	If(hp>=101){PlaySound(0,"stat/health/great"); Print(s:"Health Excellent");} //101%+ health or higher
+	Else If(hp>=80){PlaySound(0,"stat/health/good"); Print(s:"Health Fine");} //80%+ health
+	Else If(hp>=60){PlaySound(0,"stat/health/avg"); Print(s:"Health Average");} //60%+ health
+	Else If(hp>=40){PlaySound(0,"stat/health/poor"); Print(s:"Health Poor");} //40%+ health
+	Else If(hp>=20){PlaySound(0,"stat/health/low"); Print(s:"Health Low");} //20%+ health
+	Else If(hp>=1){PlaySound(0,"stat/health/critical"); Print(s:"Health Critical!");} //1%+ health, so the player won't be able to hear anything after death
+}
+
+Script "AmmoScript" (void) //Aka far too many checks
+{
+	str wep = GetWeapon();
+	If(wep=="Pistol_TO" || wep=="Chaingun_TO")
+	{
+		If(CheckInventory("Backpack_TO")) //If the player has a backpack (check against 400 ammo)
+		{
+			If(CheckInventory("Clip")>=400){PlaySound(0,"stat/clip/full"); Print(s:"Bullet Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Clip")>=300){PlaySound(0,"stat/clip/good"); Print(s:"Bullet Ammo Subtantial");} //75%+ ammo
+			Else If(CheckInventory("Clip")>=264){PlaySound(0,"stat/clip/twothird"); Print(s:"Bullet Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Clip")>=200){PlaySound(0,"stat/clip/half"); Print(s:"Bullet Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Clip")>=132){PlaySound(0,"stat/clip/onethird"); Print(s:"Bullet Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Clip")>=100){PlaySound(0,"stat/clip/low"); Print(s:"Bullet Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Clip")>=1){PlaySound(0,"stat/clip/low"); Print(s:"Bullet Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/clip/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+		Else
+		{
+			If(CheckInventory("Clip")>=200){PlaySound(0,"stat/clip/full"); Print(s:"Bullet Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Clip")>=150){PlaySound(0,"stat/clip/good"); Print(s:"Bullet Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("Clip")>=132){PlaySound(0,"stat/clip/twothird"); Print(s:"Bullet Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Clip")>=100){PlaySound(0,"stat/clip/half"); Print(s:"Bullet Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Clip")>=66){PlaySound(0,"stat/clip/onethird"); Print(s:"Bullet Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Clip")>=50){PlaySound(0,"stat/clip/low"); Print(s:"Bullet Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Clip")>=1){PlaySound(0,"stat/clip/low"); Print(s:"Bullet Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/clip/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+	}
+	Else If(wep=="Shotgun_TO" || wep=="SuperShotgun_TO")
+	{
+		If(CheckInventory("Backpack_TO")) //If the player has a backpack (check against 100 ammo)
+		{
+			If(CheckInventory("Shell")>=100){PlaySound(0,"stat/shell/full"); Print(s:"Shell Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Shell")>=75){PlaySound(0,"stat/shell/good"); Print(s:"Shell Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("Shell")>=66){PlaySound(0,"stat/shell/twothird"); Print(s:"Shell Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Shell")>=50){PlaySound(0,"stat/shell/half"); Print(s:"Shell Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Shell")>=33){PlaySound(0,"stat/shell/onethird"); Print(s:"Shell Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Shell")>=25){PlaySound(0,"stat/shell/low"); Print(s:"Shell Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Shell")>=1){PlaySound(0,"stat/shell/low"); Print(s:"Shell Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/shell/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+		Else
+		{
+			If(CheckInventory("Shell")>=50){PlaySound(0,"stat/shell/full"); Print(s:"Shell Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Shell")>=38){PlaySound(0,"stat/shell/good"); Print(s:"Shell Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("Shell")>=33){PlaySound(0,"stat/shell/twothird"); Print(s:"Shell Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Shell")>=25){PlaySound(0,"stat/shell/half"); Print(s:"Shell Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Shell")>=16){PlaySound(0,"stat/shell/onethird"); Print(s:"Shell Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Shell")>=13){PlaySound(0,"stat/shell/low"); Print(s:"Shell Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Shell")>=1){PlaySound(0,"stat/shell/low"); Print(s:"Shell Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/shell/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+	}
+	Else If(wep=="RocketLauncher_TO")
+	{
+		If(CheckInventory("Backpack_TO")) //If the player has a backpack (check against 100 ammo)
+		{
+			If(CheckInventory("RocketAmmo")>=100){PlaySound(0,"stat/rocket/full"); Print(s:"Rocket Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=75){PlaySound(0,"stat/rocket/good"); Print(s:"Rocket Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=66){PlaySound(0,"stat/rocket/twothird"); Print(s:"Rocket Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=50){PlaySound(0,"stat/rocket/half"); Print(s:"Rocket Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=33){PlaySound(0,"stat/rocket/onethird"); Print(s:"Rocket Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=25){PlaySound(0,"stat/rocket/low"); Print(s:"Rocket Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=1){PlaySound(0,"stat/rocket/low"); Print(s:"Rocket Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/rocket/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+		Else
+		{
+			If(CheckInventory("RocketAmmo")>=50){PlaySound(0,"stat/rocket/full"); Print(s:"Rocket Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=38){PlaySound(0,"stat/rocket/good"); Print(s:"Rocket Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=33){PlaySound(0,"stat/rocket/twothird"); Print(s:"Rocket Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=25){PlaySound(0,"stat/rocket/half"); Print(s:"Rocket Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=16){PlaySound(0,"stat/rocket/onethird"); Print(s:"Rocket Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=13){PlaySound(0,"stat/rocket/low"); Print(s:"Rocket Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("RocketAmmo")>=1){PlaySound(0,"stat/rocket/low"); Print(s:"Rocket Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/rocket/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+	}
+	Else If(wep=="PlasmaRifle_TO" || wep=="BFG9000_TO")
+	{
+		If(CheckInventory("Backpack_TO")) //If the player has a backpack (check against 600 ammo)
+		{
+			If(CheckInventory("Cell")>=600){PlaySound(0,"stat/cell/full"); Print(s:"Cell Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Cell")>=450){PlaySound(0,"stat/cell/good"); Print(s:"Cell Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("Cell")>=396){PlaySound(0,"stat/cell/twothird"); Print(s:"Cell Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Cell")>=300){PlaySound(0,"stat/cell/half"); Print(s:"Cell Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Cell")>=198){PlaySound(0,"stat/cell/onethird"); Print(s:"Cell Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Cell")>=150){PlaySound(0,"stat/cell/low"); Print(s:"Cell Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Cell")>=1){PlaySound(0,"stat/cell/low"); Print(s:"Cell Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/cell/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+		Else
+		{
+			If(CheckInventory("Cell")>=300){PlaySound(0,"stat/cell/full"); Print(s:"Cell Ammo Full");} //100%+ ammo
+			Else If(CheckInventory("Cell")>=225){PlaySound(0,"stat/cell/good"); Print(s:"Cell Ammo Substantial");} //75%+ ammo
+			Else If(CheckInventory("Cell")>=198){PlaySound(0,"stat/cell/twothird"); Print(s:"Cell Ammo Sufficient");} //66%+ ammo
+			Else If(CheckInventory("Cell")>=150){PlaySound(0,"stat/cell/half"); Print(s:"Cell Ammo Half Full");} //50%+ ammo
+			Else If(CheckInventory("Cell")>=99){PlaySound(0,"stat/cell/onethird"); Print(s:"Cell Ammo Less Than Half");} //33%+ ammo
+			Else If(CheckInventory("Cell")>=75){PlaySound(0,"stat/cell/low"); Print(s:"Cell Ammo Low");} //25%+ ammo
+			Else If(CheckInventory("Cell")>=1){PlaySound(0,"stat/cell/low"); Print(s:"Cell Ammo Low");} //1%+ ammo
+			Else{PlaySound(0,"stat/cell/empty");} //The weapon shouldn't be selectable, but just in case: 0% ammo
+		}
+	}
+}
