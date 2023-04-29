@@ -1,0 +1,122 @@
+#library "COMPASS"
+#include "zcommon.acs"
+
+Script "CompassScript" (void){
+	int angle = GetActorAngle(0);
+	if(angle<0.0625||angle>=0.9375){
+		PlaySound(0,"compass/east");
+		Print(s:"Facing east");
+	}else if(angle>=0.0625&&angle<0.1875){
+		PlaySound(0,"compass/northeast");
+		Print(s:"Facing north-east");
+	}else if(angle>=0.1875&&angle<0.3125){
+		PlaySound(0,"compass/north");
+		Print(s:"Facing north");
+	}else if(angle>=0.3125&&angle<0.4375){
+		PlaySound(0,"compass/northwest");
+		Print(s:"Facing north-west");
+	}else if(angle>=0.4375&&angle<0.5625){
+		PlaySound(0,"compass/west");
+		Print(s:"Facing west");
+	}else if(angle>=0.5625&&angle<0.6875){
+		PlaySound(0,"compass/southwest");
+		Print(s:"Facing south-west");
+	}else if(angle>=0.6875&&angle<0.8125){
+		PlaySound(0,"compass/south");
+		Print(s:"Facing south");
+	}else if(angle>=0.8125&&angle<0.9375){
+		PlaySound(0,"compass/southeast");
+		Print(s:"Facing south-east");
+	}
+}
+
+Script "FaceNorth" (void){
+	ChangeActorAngle(0,0.25,true);
+	PlaySound(0,"compass/north");
+	Print(s:"Facing north");
+}
+
+Script "TurnCompass" (int dir){ //dir==1 is left, else is right
+	int angle = GetActorAngle(0);
+	if(angle<0.0625||angle>=0.9375){ //East
+		if(dir==1){
+			ChangeActorAngle(0,0.125,true);
+			PlaySound(0,"compass/northeast");
+			Print(s:"Facing north-east");
+		}else{
+			ChangeActorAngle(0,0.875,true);
+			PlaySound(0,"compass/southeast");
+			Print(s:"Facing south-east");
+		}
+	}else if(angle>=0.0625&&angle<0.1875){ //North-east
+		if(dir==1){
+			ChangeActorAngle(0,0.25,true);
+			PlaySound(0,"compass/north");
+			Print(s:"Facing north");
+		}else{
+			ChangeActorAngle(0,1.0,true);
+			PlaySound(0,"compass/east");
+			Print(s:"Facing east");
+		}
+	}else if(angle>=0.1875&&angle<0.3125){ //North
+		if(dir==1){
+			ChangeActorAngle(0,0.375,true);
+			PlaySound(0,"compass/northwest");
+			Print(s:"Facing north-west");
+		}else{
+			ChangeActorAngle(0,0.125,true);
+			PlaySound(0,"compass/northeast");
+			Print(s:"Facing north-east");
+		}
+	}else if(angle>=0.3125&&angle<0.4375){ //North-west
+		if(dir==1){
+			ChangeActorAngle(0,0.5,true);
+			PlaySound(0,"compass/west");
+			Print(s:"Facing west");
+		}else{
+			ChangeActorAngle(0,0.25,true);
+			PlaySound(0,"compass/north");
+			Print(s:"Facing north");
+		}
+	}else if(angle>=0.4375&&angle<0.5625){ //West
+		if(dir==1){
+			ChangeActorAngle(0,0.625,true);
+			PlaySound(0,"compass/southwest");
+			Print(s:"Facing south-west");
+		}else{
+			ChangeActorAngle(0,0.375,true);
+			PlaySound(0,"compass/northwest");
+			Print(s:"Facing north-west");
+		}
+	}else if(angle>=0.5625&&angle<0.6875){ //South-west
+		if(dir==1){
+			ChangeActorAngle(0,0.75,true);
+			PlaySound(0,"compass/south");
+			Print(s:"Facing south");
+		}else{
+			ChangeActorAngle(0,0.5,true);
+			PlaySound(0,"compass/west");
+			Print(s:"Facing west");
+		}
+	}else if(angle>=0.6875&&angle<0.8125){ //South
+		if(dir==1){
+			ChangeActorAngle(0,0.875,true);
+			PlaySound(0,"compass/southeast");
+			Print(s:"Facing south-east");
+		}else{
+			ChangeActorAngle(0,0.625,true);
+			PlaySound(0,"compass/southwest");
+			Print(s:"Facing south-west");
+		}
+	}else if(angle>=0.8125&&angle<0.9375){ //South-east
+		if(dir==1){
+			ChangeActorAngle(0,1.0,true);
+			PlaySound(0,"compass/east");
+			Print(s:"Facing east");
+		}else{
+			ChangeActorAngle(0,0.75,true);
+			PlaySound(0,"compass/south");
+			Print(s:"Facing south");
+		}
+	}
+}

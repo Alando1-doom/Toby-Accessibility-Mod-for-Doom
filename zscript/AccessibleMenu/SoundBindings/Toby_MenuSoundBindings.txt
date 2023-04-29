@@ -198,21 +198,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Keys", "SoundToPlay":"menu/controls/keychecker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Health Stats", "SoundToPlay":"menu/controls/healthstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Ammo Stats", "SoundToPlay":"menu/controls/ammostat"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_MENU", "SoundToPlay":"menu/controls/openmarkmenu"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_PLACE_MENU", "SoundToPlay":"menu/controls/placemarkmenu"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU", "SoundToPlay":"menu/controls/remmarkmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "SoundToPlay":"menu/controls/placemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_1", "SoundToPlay":"menu/controls/marker1"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_2", "SoundToPlay":"menu/controls/marker2"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_3", "SoundToPlay":"menu/controls/marker3"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_4", "SoundToPlay":"menu/controls/marker4"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_5", "SoundToPlay":"menu/controls/marker5"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_6", "SoundToPlay":"menu/controls/marker6"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_7", "SoundToPlay":"menu/controls/marker7"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_8", "SoundToPlay":"menu/controls/marker8"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_9", "SoundToPlay":"menu/controls/marker9"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_PLACE_10", "SoundToPlay":"menu/controls/marker10"}
 
 
 //MOUSE MENU*
@@ -290,8 +277,8 @@
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Gray", "SoundToPlay":"menu/playercolor/gray"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Tan", "SoundToPlay":"menu/playercolor/brown"}
 //skin - class
-{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Base", "SoundToPlay":"menu/skin/base"}
-{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Space Marine", "SoundToPlay":"menu/class/marine"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Base", "SoundToPlay":"menu/skin/base"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Space Marine", "SoundToPlay":"menu/class/marine"}
 
 
 
@@ -516,7 +503,7 @@
 
 //MENUS TO HOLD OFF (for now)
 
-//Joystick Menu - VOID
+//Joystick Menu - VOID - Will consider in later installments
 {"EventType":"MenuChanged",   "CurrentMenuName":"JoystickOptions", "SoundToPlay":"menu/option/controller"}
 {"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$OPTMNU_JOYSTICK", "SoundToPlay":"menu/option/controller"}
 {"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"Controller Options", "SoundToPlay":"menu/option/controller"}
@@ -531,7 +518,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"HUDOptions", "CurrentMenuItemOptionName":"$OPTMNU_HUD", "SoundToPlay":"menu/option/hud"}
 {"EventType":"OptionChanged", "CurrentMenuName":"HUDOptions", "CurrentMenuItemOptionName":"HUD Options", "SoundToPlay":"menu/option/hud"}
 
-//Misc Options - VOID
+//Misc Options - VOID - Will consider in later installments
 {"EventType":"MenuChanged",   "CurrentMenuName":"MiscOptions", "SoundToPlay":"menu/option/misc"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MiscOptions", "CurrentMenuItemOptionName":"$OPTMNU_MISCELLANEOUS", "SoundToPlay":"menu/option/misc"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MiscOptions", "CurrentMenuItemOptionName":"Miscellaneous Options", "SoundToPlay":"menu/option/misc"}
