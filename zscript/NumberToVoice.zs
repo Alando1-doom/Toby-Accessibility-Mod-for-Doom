@@ -14,7 +14,7 @@ class NumberToVoice ui
         if (secondPart == "0" && skipZeroAfterDot == false)
         {
             UnshiftSingleDigitToQueue(secondPart.Mid(0, 1));
-            SoundQueue.UnshiftSound("fvox/dot", -1);
+            SoundQueue.UnshiftSound("numbers/dot", -1);
         }
         else if (secondPart != "0")
         {
@@ -22,7 +22,7 @@ class NumberToVoice ui
             {
                 UnshiftSingleDigitToQueue(secondPart.Mid(i, 1));
             }
-            SoundQueue.UnshiftSound("fvox/dot", -1);
+            SoundQueue.UnshiftSound("numbers/dot", -1);
         }
         ConvertAndAddToQueue(firstPart.ToInt());
     }
@@ -71,7 +71,7 @@ class NumberToVoice ui
                 }
                 if (numberSegment == "000" && power == 0)
                 {
-                    SoundQueue.UnshiftSound("fvox/000", -1);
+                    SoundQueue.UnshiftSound("numbers/000", -1);
                     return;
                 }
             }
@@ -79,16 +79,16 @@ class NumberToVoice ui
         } while (lastDigits == false);
         if (hasMinus)
         {
-            SoundQueue.UnshiftSound("fvox/minus", -1);
+            SoundQueue.UnshiftSound("numbers/minus", -1);
         }
     }
 
     ui static void UnshiftPowers(int digit)
     {
-        if (digit == 1) SoundQueue.UnshiftSound("fvox/thousand", -1);
-        if (digit == 2) SoundQueue.UnshiftSound("fvox/million", -1);
-        if (digit == 3) SoundQueue.UnshiftSound("fvox/billion", -1);
-        if (digit == 4) SoundQueue.UnshiftSound("fvox/trillion", -1);
+        if (digit == 1) SoundQueue.UnshiftSound("numbers/thousand", -1);
+        if (digit == 2) SoundQueue.UnshiftSound("numbers/million", -1);
+        if (digit == 3) SoundQueue.UnshiftSound("numbers/billion", -1);
+        if (digit == 4) SoundQueue.UnshiftSound("numbers/trillion", -1);
     }
 
     ui static void UnshiftSingleDigitToQueue(string digit)
@@ -103,37 +103,37 @@ class NumberToVoice ui
 
     ui static void UnshiftDoubleDigits(string doubleDigits)
     {
-        if (doubleDigits == "10") SoundQueue.UnshiftSound("fvox/010", -1);
-        if (doubleDigits == "11") SoundQueue.UnshiftSound("fvox/011", -1);
-        if (doubleDigits == "12") SoundQueue.UnshiftSound("fvox/012", -1);
-        if (doubleDigits == "13") SoundQueue.UnshiftSound("fvox/013", -1);
-        if (doubleDigits == "14") SoundQueue.UnshiftSound("fvox/014", -1);
-        if (doubleDigits == "15") SoundQueue.UnshiftSound("fvox/015", -1);
-        if (doubleDigits == "16") SoundQueue.UnshiftSound("fvox/016", -1);
-        if (doubleDigits == "17") SoundQueue.UnshiftSound("fvox/017", -1);
-        if (doubleDigits == "18") SoundQueue.UnshiftSound("fvox/018", -1);
-        if (doubleDigits == "19") SoundQueue.UnshiftSound("fvox/019", -1);
-        if (doubleDigits == "20") SoundQueue.UnshiftSound("fvox/020", -1);
-        if (doubleDigits == "30") SoundQueue.UnshiftSound("fvox/030", -1);
-        if (doubleDigits == "40") SoundQueue.UnshiftSound("fvox/040", -1);
-        if (doubleDigits == "50") SoundQueue.UnshiftSound("fvox/050", -1);
-        if (doubleDigits == "60") SoundQueue.UnshiftSound("fvox/060", -1);
-        if (doubleDigits == "70") SoundQueue.UnshiftSound("fvox/070", -1);
-        if (doubleDigits == "80") SoundQueue.UnshiftSound("fvox/080", -1);
-        if (doubleDigits == "90") SoundQueue.UnshiftSound("fvox/090", -1);
+        if (doubleDigits == "10") SoundQueue.UnshiftSound("numbers/010", -1);
+        if (doubleDigits == "11") SoundQueue.UnshiftSound("numbers/011", -1);
+        if (doubleDigits == "12") SoundQueue.UnshiftSound("numbers/012", -1);
+        if (doubleDigits == "13") SoundQueue.UnshiftSound("numbers/013", -1);
+        if (doubleDigits == "14") SoundQueue.UnshiftSound("numbers/014", -1);
+        if (doubleDigits == "15") SoundQueue.UnshiftSound("numbers/015", -1);
+        if (doubleDigits == "16") SoundQueue.UnshiftSound("numbers/016", -1);
+        if (doubleDigits == "17") SoundQueue.UnshiftSound("numbers/017", -1);
+        if (doubleDigits == "18") SoundQueue.UnshiftSound("numbers/018", -1);
+        if (doubleDigits == "19") SoundQueue.UnshiftSound("numbers/019", -1);
+        if (doubleDigits == "20") SoundQueue.UnshiftSound("numbers/020", -1);
+        if (doubleDigits == "30") SoundQueue.UnshiftSound("numbers/030", -1);
+        if (doubleDigits == "40") SoundQueue.UnshiftSound("numbers/040", -1);
+        if (doubleDigits == "50") SoundQueue.UnshiftSound("numbers/050", -1);
+        if (doubleDigits == "60") SoundQueue.UnshiftSound("numbers/060", -1);
+        if (doubleDigits == "70") SoundQueue.UnshiftSound("numbers/070", -1);
+        if (doubleDigits == "80") SoundQueue.UnshiftSound("numbers/080", -1);
+        if (doubleDigits == "90") SoundQueue.UnshiftSound("numbers/090", -1);
         if (doubleDigits.Mid(1, 1) != "0" && doubleDigits.Mid(0, 1) != "1")
         {
             UnshiftSingleDigitToQueue(doubleDigits.Mid(1, 1));
             if (doubleDigits.Mid(0, 1) != "0")
             {
-                if (doubleDigits.Mid(0, 1) == "2") SoundQueue.UnshiftSound("fvox/020", -1);
-                if (doubleDigits.Mid(0, 1) == "3") SoundQueue.UnshiftSound("fvox/030", -1);
-                if (doubleDigits.Mid(0, 1) == "4") SoundQueue.UnshiftSound("fvox/040", -1);
-                if (doubleDigits.Mid(0, 1) == "5") SoundQueue.UnshiftSound("fvox/050", -1);
-                if (doubleDigits.Mid(0, 1) == "6") SoundQueue.UnshiftSound("fvox/060", -1);
-                if (doubleDigits.Mid(0, 1) == "7") SoundQueue.UnshiftSound("fvox/070", -1);
-                if (doubleDigits.Mid(0, 1) == "8") SoundQueue.UnshiftSound("fvox/080", -1);
-                if (doubleDigits.Mid(0, 1) == "9") SoundQueue.UnshiftSound("fvox/090", -1);
+                if (doubleDigits.Mid(0, 1) == "2") SoundQueue.UnshiftSound("numbers/020", -1);
+                if (doubleDigits.Mid(0, 1) == "3") SoundQueue.UnshiftSound("numbers/030", -1);
+                if (doubleDigits.Mid(0, 1) == "4") SoundQueue.UnshiftSound("numbers/040", -1);
+                if (doubleDigits.Mid(0, 1) == "5") SoundQueue.UnshiftSound("numbers/050", -1);
+                if (doubleDigits.Mid(0, 1) == "6") SoundQueue.UnshiftSound("numbers/060", -1);
+                if (doubleDigits.Mid(0, 1) == "7") SoundQueue.UnshiftSound("numbers/070", -1);
+                if (doubleDigits.Mid(0, 1) == "8") SoundQueue.UnshiftSound("numbers/080", -1);
+                if (doubleDigits.Mid(0, 1) == "9") SoundQueue.UnshiftSound("numbers/090", -1);
             }
         }
     }
@@ -146,12 +146,12 @@ class NumberToVoice ui
             UnshiftDoubleDigits(doubleDigits);
             if (!lastDigits)
             {
-                SoundQueue.UnshiftSound("fvox/and", -1);
+                SoundQueue.UnshiftSound("numbers/and", -1);
             }
         }
         if (tripleDigits.Mid(0, 1) != "0")
         {
-            SoundQueue.UnshiftSound("fvox/100", -1);
+            SoundQueue.UnshiftSound("numbers/100", -1);
             UnshiftSingleDigitToQueue(tripleDigits.Mid(0, 1));
         }
     }
@@ -159,16 +159,16 @@ class NumberToVoice ui
     ui static string GetSingleDigitSoundName(string digit)
     {
         string singleDigitSoundName = "alphabet/Space";
-        if (digit == "0") singleDigitSoundName = "fvox/000";
-        if (digit == "1") singleDigitSoundName = "fvox/001";
-        if (digit == "2") singleDigitSoundName = "fvox/002";
-        if (digit == "3") singleDigitSoundName = "fvox/003";
-        if (digit == "4") singleDigitSoundName = "fvox/004";
-        if (digit == "5") singleDigitSoundName = "fvox/005";
-        if (digit == "6") singleDigitSoundName = "fvox/006";
-        if (digit == "7") singleDigitSoundName = "fvox/007";
-        if (digit == "8") singleDigitSoundName = "fvox/008";
-        if (digit == "9") singleDigitSoundName = "fvox/009";
+        if (digit == "0") singleDigitSoundName = "numbers/000";
+        if (digit == "1") singleDigitSoundName = "numbers/001";
+        if (digit == "2") singleDigitSoundName = "numbers/002";
+        if (digit == "3") singleDigitSoundName = "numbers/003";
+        if (digit == "4") singleDigitSoundName = "numbers/004";
+        if (digit == "5") singleDigitSoundName = "numbers/005";
+        if (digit == "6") singleDigitSoundName = "numbers/006";
+        if (digit == "7") singleDigitSoundName = "numbers/007";
+        if (digit == "8") singleDigitSoundName = "numbers/008";
+        if (digit == "9") singleDigitSoundName = "numbers/009";
         return singleDigitSoundName;
     }
 }
