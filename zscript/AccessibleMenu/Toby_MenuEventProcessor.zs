@@ -70,7 +70,10 @@ class Toby_MenuEventProcessor
                 if (!currentState.isSlider && !currentState.isField
                     && !currentState.isOption && !currentState.isControl)
                 {
-                    FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
+                    //Proydoha:
+                    //I can't remember why I've added this line but it is causing a bug
+                    //Commenting it for now
+                    //FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
                 }
                 if (currentState.isSaveLoad && currentState.saveGamesTotal > 0)
                 {
