@@ -155,8 +155,11 @@ save/autosave                   "sounds/Menus/SaveLoad/autosave.ogg"
 $volume save/autosave           0.5
 save/new                        "sounds/Menus/SaveLoad/newsavegame.ogg"
 save/entersave                  "sounds/Menus/SaveLoad/entersave.ogg"
+$volume save/entersave          0.5
 save/cancelled                  "sounds/Menus/SaveLoad/savecancelled.ogg"
+$volume save/cancelled          0.5
 save/saved                      "sounds/Menus/SaveLoad/gamesaved.ogg"
+$volume save/saved              0.5
 save/timespent                  "sounds/Menus/SaveLoad/timespent.ogg"
 $volume save/timespent          0.5
 
