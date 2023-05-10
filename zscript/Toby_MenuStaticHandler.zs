@@ -63,15 +63,29 @@ class Toby_MenuStaticHandler : StaticEventHandler
         if (detectedChange == Toby_MenuState.MenuDismissed
             || detectedChange == Toby_MenuState.GameSaved
             || detectedChange == Toby_MenuState.GameLoaded
-            || detectedChange == Toby_MenuState.GameStarted)
+            || detectedChange == Toby_MenuState.GameStarted
+            || (
+                //This accounts for entering a key in keybinds menu
+                detectedChange == Toby_MenuState.MenuChanged
+                && previousMenuState.menuName == "ActionControlsMenu"
+                && currentMenuState.menuClass == "EnterKey")
+            )
         {
             EventHandler.SendNetworkEvent("Toby_DisableUiProcessor");
+            Toby_Logger.Message("SentNetworkEvent - Toby_DisableUiProcessor", "Toby_Developer");
         }
         if (detectedChange == Toby_MenuState.MenuChanged
-            && previousMenuState.menuClass == "null"
-            && currentMenuState.menuClass != "null")
+            && ((
+                previousMenuState.menuClass == "null"
+                && currentMenuState.menuClass != "null")
+            || (
+                //This accounts for entering a key in keybinds menu
+                currentMenuState.menuName == "ActionControlsMenu"
+                && previousMenuState.menuClass == "EnterKey")
+            ))
         {
             EventHandler.SendNetworkEvent("Toby_EnableUiProcessor");
+            Toby_Logger.Message("SentNetworkEvent - Toby_EnableUiProcessor", "Toby_Developer");
         }
         if (detectedChange > 0)
         {
