@@ -484,10 +484,10 @@
 
 //SAVE-LOAD GAME MENU*
 
+{"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "PreviousMenuClass": "TextEnterMenu", "SoundToPlay":"save/cancelled"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"LoadMenu", "SoundToPlay":"menusnd/load"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "SoundToPlay":"menusnd/save"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"TextEnterMenu", "PreviousMenuClass": "Savemenu", "SoundToPlay":"save/entersave"}
-{"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "PreviousMenuClass": "TextEnterMenu", "SoundToPlay":"save/cancelled"}
 {"EventType":"GameSaved", "SoundToPlay":"save/saved"}
 
 
