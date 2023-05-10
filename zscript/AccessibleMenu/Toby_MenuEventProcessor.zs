@@ -153,7 +153,10 @@ class Toby_MenuEventProcessor
             }
             if (isCorrectCondition)
             {
-                //System.StopAllSounds();
+                if (CVar.FindCvar("Toby_StopAllSoundsBeforePlayingNewOne").GetBool())
+                {
+                    System.StopAllSounds();
+                }
                 SoundQueue.Clear();
                 SoundQueue.AddSound(menuSoundBindingsContainer.menuSoundBindings[i].At("SoundToPlay"), -1);
                 SoundQueue.PlayQueue(0);

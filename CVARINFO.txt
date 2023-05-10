@@ -8,6 +8,7 @@ user bool   Toby_Developer_SaveSlotChangedEvents = false;
 user bool   Toby_Developer_KeyPressedEvents = false;
 user bool   Toby_SkipSlotWord = false;
 user bool   Toby_SkipTotalSlots = false;
+user bool   Toby_StopAllSoundsBeforePlayingNewOne = false;
 
 
 //Hit Marker CVAR
