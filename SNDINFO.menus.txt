@@ -1,0 +1,1087 @@
+//Generic
+menusnd/on              "sounds/Menus/Generic/dson.ogg"
+menusnd/off             "sounds/Menus/Generic/dsoff.ogg"
+menusnd/dismiss         "sounds/Menus/Generic/dsdismis.ogg"
+menusnd/backup          "sounds/Menus/Generic/dsmback.ogg"
+menusnd/choose          "sounds/Menus/Generic/dsselect.ogg"
+menusnd/yes             "sounds/Menus/Generic/oyes.ogg"
+$volume menusnd/yes     0.5
+menusnd/no              "sounds/Menus/Generic/ono.ogg"
+$volume menusnd/no      0.5
+
+//Main Menu
+menusnd/mainmenu        "sounds/Menus/MainMenu/dsmenu.ogg"
+menusnd/new             "sounds/Menus/MainMenu/dsnewg.ogg"
+menusnd/newselect       "sounds/Menus/MainMenu/dsnewg_s.ogg"
+menusnd/option          "sounds/Menus/MainMenu/dsopt.ogg"
+menusnd/optselect       "sounds/Menus/MainMenu/dsopt_s.ogg"
+menusnd/load            "sounds/Menus/MainMenu/dsldgm.ogg"
+menusnd/loadselect      "sounds/Menus/MainMenu/dsldgm_s.ogg"
+menusnd/save            "sounds/Menus/MainMenu/dssvgm.ogg"
+menusnd/saveselect      "sounds/Menus/MainMenu/dssvgm_s.ogg"
+menusnd/quit            "sounds/Menus/MainMenu/dsquit.ogg"
+menusnd/quitselect      "sounds/Menus/MainMenu/dsquit_s.ogg"
+menusnd/readme          "sounds/Menus/MainMenu/dsread.ogg"
+menusnd/readselect      "sounds/Menus/MainMenu/dsread_s.ogg"
+//That's what causing double sound on main menu and on save/load menu hotkey:
+//menu/activate         "sounds/Menus/MainMenu/dsmenu.ogg"
+// ???
+//menu/cursor           "dsmcurs"
+// ???
+//menu/change           "dsmscrl"
+//We don't need this one as well since menus announced as soon as we enter them:
+//menu/clear            "sounds/Menus/Generic/dsmback.ogg"
+
+//Episode Menu
+menusnd/tobye1          "sounds/Menus/EpisodeMenu/dstobye1.ogg"
+$volume menusnd/tobye1  0.75
+menusnd/tobye2          "sounds/Menus/EpisodeMenu/dstobye2.ogg"
+$volume menusnd/tobye2  0.75
+menusnd/epimenu         "sounds/Menus/EpisodeMenu/dscepis.ogg"
+menusnd/episode1        "sounds/Menus/EpisodeMenu/dsep1.ogg"
+menusnd/episode2        "sounds/Menus/EpisodeMenu/dsep2.ogg"
+menusnd/episode3        "sounds/Menus/EpisodeMenu/dsep3.ogg"
+menusnd/episode4        "sounds/Menus/EpisodeMenu/dsep4.ogg"
+menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
+menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
+menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
+
+
+//Skill Menu
+menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
+menusnd/easy            "sounds/Menus/SkillMenu/dseasy.ogg"
+menusnd/normal          "sounds/Menus/SkillMenu/dsnormal.ogg"
+menusnd/hard            "sounds/Menus/SkillMenu/dshard.ogg"
+menusnd/skill1          "sounds/Menus/SkillMenu/dsskill1.ogg"
+menusnd/skill2          "sounds/Menus/SkillMenu/dsskill2.ogg"
+menusnd/skill3          "sounds/Menus/SkillMenu/dsskill3.ogg"
+menusnd/skill4          "sounds/Menus/SkillMenu/dsskill4.ogg"
+menusnd/skill5          "sounds/Menus/SkillMenu/dsskill5.ogg"
+
+//Sound Options
+menusnd/soundopt                    "sounds/Menus/SoundOptions/dssndop.ogg"
+menusnd/menuvol                     "sounds/Menus/SoundOptions/dsmenuv.ogg"
+menusnd/midi                        "sounds/Menus/SoundOptions/dsmidi.ogg"
+menusnd/musicvol                    "sounds/Menus/SoundOptions/dsmusv.ogg"
+menusnd/mastervol                   "sounds/Menus/SoundOptions/dsmastrv.ogg"
+menusnd/pitch                       "sounds/Menus/SoundOptions/dspitch.ogg"
+menusnd/soundvol                    "sounds/Menus/SoundOptions/dssndv.ogg"
+menusnd/reverb                      "sounds/Menus/SoundOptions/dswtrrvb.ogg"
+menu/sound/title/advanced           "sounds/Menus/SoundOptions/mmadvopt.ogg"
+$volume menu/sound/title/advanced   0.5
+menu/sound/samplerate               "sounds/Menus/SoundOptions/msamprte.ogg"
+$volume menu/sound/samplerate       0.5
+menu/srate/default                  "sounds/Menus/SoundOptions/odefault.ogg"
+$volume menu/srate/default          0.5
+menu/srate/8000                     "sounds/Menus/SoundOptions/o8000.ogg"
+$volume menu/srate/8000             0.5
+menu/srate/11025                    "sounds/Menus/SoundOptions/o11025.ogg"
+$volume menu/srate/11025            0.5
+menu/srate/22050                    "sounds/Menus/SoundOptions/o22050.ogg"
+$volume menu/srate/22050            0.5
+menu/srate/32000                    "sounds/Menus/SoundOptions/o32000.ogg"
+$volume menu/srate/32000            0.5
+menu/srate/44100                    "sounds/Menus/SoundOptions/o44100.ogg"
+$volume menu/srate/44100            0.5
+menu/srate/48000                    "sounds/Menus/SoundOptions/o48000.ogg"
+$volume menu/srate/48000            0.5
+menu/sound/hrft                     "sounds/Menus/SoundOptions/mhrft.ogg"
+$volume menu/sound/hrft             0.5
+menu/hrft/auto                      "sounds/Menus/SoundOptions/oauto.ogg"
+$volume menu/hrft/auto              0.5
+menu/sound/bgsound                  "sounds/Menus/SoundOptions/msndback.ogg"
+$volume menu/sound/bgsound          0.5
+menu/sound/openal                   "sounds/Menus/SoundOptions/mopenal.ogg"
+$volume menu/sound/openal           0.5
+menu/sound/midiplayer               "sounds/Menus/SoundOptions/mmidiopt.ogg"
+$volume menu/sound/midiplayer       0.5
+menu/sound/moduleplayer             "sounds/Menus/SoundOptions/mmodule.ogg"
+$volume menu/sound/moduleplayer     0.5
+menu/sound/restartsound             "sounds/Menus/SoundOptions/mrestart.ogg"
+$volume menu/sound/restartsound     0.5
+menu/sound/reverb                   "sounds/Menus/SoundOptions/mreverb.ogg"
+$volume menu/sound/reverb           0.5
+menu/sound/channels                 "sounds/Menus/SoundOptions/msndchan.ogg"
+$volume menu/sound/channels         0.5
+
+//GZDoom Options
+menusnd/gzdopt                  "sounds/Menus/GZDoomOptions/dsgzdop.ogg"
+menu/option/controls            "sounds/Menus/GZDoomOptions/mcontrl.ogg"
+$volume menu/option/controls    0.5
+menu/option/mouse               "sounds/Menus/GZDoomOptions/mmouse.ogg"
+$volume menu/option/mouse       0.5
+menu/option/controller          "sounds/Menus/GZDoomOptions/mctrlrop.ogg"
+$volume menu/option/controller  0.5
+menu/option/player              "sounds/Menus/GZDoomOptions/mplayset.ogg"
+$volume menu/option/player      0.5
+menu/option/gameplay            "sounds/Menus/GZDoomOptions/mgameopt.ogg"
+$volume menu/option/gameplay    0.5
+menu/option/compat              "sounds/Menus/GZDoomOptions/mcompat.ogg"
+$volume menu/option/compat      0.5
+menu/option/automap             "sounds/Menus/GZDoomOptions/mautomap.ogg"
+$volume menu/option/automap     0.5
+menu/option/hud                 "sounds/Menus/GZDoomOptions/mhudopt.ogg"
+$volume menu/option/hud         0.5
+menu/option/misc                "sounds/Menus/GZDoomOptions/mmiscopt.ogg"
+$volume menu/option/misc        0.5
+menu/option/network             "sounds/Menus/GZDoomOptions/mnetwrk.ogg"
+$volume menu/option/network     0.5
+menu/option/display             "sounds/Menus/GZDoomOptions/mdisplay.ogg"
+$volume menu/option/display     0.5
+menu/option/video               "sounds/Menus/GZDoomOptions/mvidmode.ogg"
+$volume menu/option/video       0.5
+menu/option/search              "sounds/Menus/GZDoomOptions/moptsrch.ogg"
+$volume menu/option/search      0.5
+menu/option/simple              "sounds/Menus/GZDoomOptions/msimpopt.ogg"
+$volume menu/option/simple      0.5
+menu/option/resetdef            "sounds/Menus/GZDoomOptions/mrestdef.ogg"
+$volume menu/option/resetdef    0.5
+menu/option/resetsave           "sounds/Menus/GZDoomOptions/mrestsav.ogg"
+$volume menu/option/resetsave   0.5
+menu/option/saveset             "sounds/Menus/GZDoomOptions/msaveset.ogg"
+$volume menu/option/saveset     0.5
+menu/option/console             "sounds/Menus/GZDoomOptions/mconsole.ogg"
+$volume menu/option/console     0.5
+
+//SaveLoad
+save/map                        "sounds/Menus/SaveLoad/map.ogg"
+$volume save/map                0.5
+save/episode                    "sounds/Menus/SaveLoad/episode.ogg"
+$volume save/episode            0.5
+save/slot                       "sounds/Menus/SaveLoad/slot.ogg"
+$volume save/slot               0.5
+save/of                         "sounds/Menus/SaveLoad/of.ogg"
+$volume save/of                 0.5
+save/autosave                   "sounds/Menus/SaveLoad/autosave.ogg"
+$volume save/autosave           0.5
+save/new                        "sounds/Menus/SaveLoad/newsavegame.ogg"
+save/entersave                  "sounds/Menus/SaveLoad/entersave.ogg"
+$volume save/entersave          0.5
+save/cancelled                  "sounds/Menus/SaveLoad/savecancelled.ogg"
+$volume save/cancelled          0.5
+save/saved                      "sounds/Menus/SaveLoad/gamesaved.ogg"
+$volume save/saved              0.5
+save/timespent                  "sounds/Menus/SaveLoad/timespent.ogg"
+$volume save/timespent          0.5
+
+save/hours                      "sounds/Menus/SaveLoad/hours.ogg"
+$volume save/hours              0.5
+save/minutes                    "sounds/Menus/SaveLoad/minutes.ogg"
+$volume save/minutes            0.5
+save/seconds                    "sounds/Menus/SaveLoad/seconds.ogg"
+$volume save/seconds            0.5
+
+//Compatibility Options Menu
+
+//Main
+
+menu/compat/mode                    "sounds/Menus/CompatibilityOptions/CompatibilityMode/mcmpmode.ogg"
+$volume menu/compat/mode            0.5
+menu/compmode/doom                  "sounds/Menus/CompatibilityOptions/CompatibilityMode/odoom.ogg"
+$volume menu/compmode/doom          0.5
+menu/compmode/doomstrict            "sounds/Menus/CompatibilityOptions/CompatibilityMode/odmstrct.ogg"
+$volume menu/compmode/doomstrict    0.5
+menu/compmode/boom                  "sounds/Menus/CompatibilityOptions/CompatibilityMode/oboom.ogg"
+$volume menu/compmode/boom          0.5
+menu/compmode/boomstrict            "sounds/Menus/CompatibilityOptions/CompatibilityMode/obmstrct.ogg"
+$volume menu/compmode/boomstrict    0.5
+menu/compmode/mbf                   "sounds/Menus/CompatibilityOptions/CompatibilityMode/ombf.ogg"
+$volume menu/compmode/mbf           0.5
+menu/compmode/mbfstrict             "sounds/Menus/CompatibilityOptions/CompatibilityMode/ombfstrc.ogg"
+$volume menu/compmode/mbfstrict     0.5
+menu/compmode/zdoom2063             "sounds/Menus/CompatibilityOptions/CompatibilityMode/ozd2063.ogg"
+$volume menu/compmode/zdoom2063     0.5
+
+
+//Actor Behavior Menu
+
+menu/compat/title/actor             "sounds/Menus/CompatibilityOptions/ActorBehavior/mmactbeh.ogg"
+$volume menu/compat/title/actor     0.5
+menu/compat/crushedmon              "sounds/Menus/CompatibilityOptions/ActorBehavior/mcrshmon.ogg"
+$volume menu/compat/crushedmon      0.5
+menu/compat/friendlymon             "sounds/Menus/CompatibilityOptions/ActorBehavior/mfrndmon.ogg"
+$volume menu/compat/friendlymon     0.5
+menu/compat/painlostsouls           "sounds/Menus/CompatibilityOptions/ActorBehavior/mpainelm.ogg"
+$volume menu/compat/painlostsouls   0.5
+menu/compat/monstermove             "sounds/Menus/CompatibilityOptions/ActorBehavior/mmonmove.ogg"
+$volume menu/compat/monstermove     0.5
+menu/compat/mondropoff              "sounds/Menus/CompatibilityOptions/ActorBehavior/mcrsdrop.ogg"
+$volume menu/compat/mondropoff      0.5
+menu/compat/monstuck                "sounds/Menus/CompatibilityOptions/ActorBehavior/mmonstck.ogg"
+$volume menu/compat/monstuck        0.5
+menu/compat/seeinvisible            "sounds/Menus/CompatibilityOptions/ActorBehavior/minvplay.ogg"
+$volume menu/compat/seeinvisible    0.5
+menu/compat/minoflames              "sounds/Menus/CompatibilityOptions/ActorBehavior/mminoflm.ogg"
+$volume menu/compat/minoflames      0.5
+menu/compat/itemdrops               "sounds/Menus/CompatibilityOptions/ActorBehavior/mitmdrop.ogg"
+$volume menu/compat/itemdrops       0.5
+
+
+//DEH Behavior Menu
+
+menu/compat/title/deh               "sounds/Menus/CompatibilityOptions/DehackedBehavior/mmdehbeh.ogg"
+$volume menu/compat/title/deh       0.5
+menu/compat/dehhealth               "sounds/Menus/CompatibilityOptions/DehackedBehavior/mdehhlth.ogg"
+$volume menu/compat/dehhealth       0.5
+menu/compat/mushroom                "sounds/Menus/CompatibilityOptions/DehackedBehavior/mmushrm.ogg"
+$volume menu/compat/mushroom        0.5
+
+
+//Map-Action Behavior Menu
+
+menu/compat/title/mapaction         "sounds/Menus/CompatibilityOptions/MapActionBehavior/mmmapbeh.ogg"
+$volume menu/compat/title/mapaction 0.5
+menu/compat/blockuse                "sounds/Menus/CompatibilityOptions/MapActionBehavior/mblckuse.ogg"
+$volume menu/compat/blockuse        0.5
+menu/compat/bossdeath               "sounds/Menus/CompatibilityOptions/MapActionBehavior/mbossdth.ogg"
+$volume menu/compat/bossdeath       0.5
+menu/compat/doorlight               "sounds/Menus/CompatibilityOptions/MapActionBehavior/mdoorlit.ogg"
+$volume menu/compat/doorlight       0.5
+menu/compat/neighborlight           "sounds/Menus/CompatibilityOptions/MapActionBehavior/mlitnebr.ogg"
+$volume menu/compat/neighborlight   0.5
+menu/compat/shorttexture            "sounds/Menus/CompatibilityOptions/MapActionBehavior/mshorttx.ogg"
+$volume menu/compat/shorttexture    0.5
+menu/compat/buggystairs             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mbugstr.ogg"
+$volume menu/compat/buggystairs     0.5
+menu/compat/floormotion             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mflormtn.ogg"
+$volume menu/compat/floormotion     0.5
+menu/compat/pointonline             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mpntline.ogg"
+$volume menu/compat/pointonline     0.5
+menu/compat/multiexits              "sounds/Menus/CompatibilityOptions/MapActionBehavior/mlvlexit.ogg"
+$volume menu/compat/multiexits      0.5
+menu/compat/teleporttrig            "sounds/Menus/CompatibilityOptions/MapActionBehavior/mtrgtele.ogg"
+$volume menu/compat/teleporttrig    0.5
+menu/compat/nonblock                "sounds/Menus/CompatibilityOptions/MapActionBehavior/mnblpush.ogg"
+$volume menu/compat/nonblock        0.5
+menu/compat/buggyswitch             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mbugswtc.ogg"
+$volume menu/compat/buggyswitch     0.5
+menu/compat/buggystrife             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mbugstrf.ogg"
+$volume menu/compat/buggystrife     0.5
+
+
+//Physics Behavior Menu
+
+menu/compat/title/physics           "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mmphybeh.ogg"
+$volume menu/compat/title/physics   0.5
+menu/compat/tallactors              "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mtallact.ogg"
+$volume menu/compat/tallactors      0.5
+menu/compat/boomscroll              "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mbmscrol.ogg"
+$volume menu/compat/boomscroll      0.5
+menu/compat/nsew                    "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mnsew.ogg"
+$volume menu/compat/nsew            0.5
+menu/compat/wallrun                 "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mwallrun.ogg"
+$volume menu/compat/wallrun         0.5
+menu/compat/ravenscroll             "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mravscrl.ogg"
+$volume menu/compat/ravenscroll     0.5
+menu/compat/selfrefsector           "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mselfref.ogg"
+$volume menu/compat/selfrefsector   0.5
+menu/compat/hitscan                 "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mhitscan.ogg"
+$volume menu/compat/hitscan         0.5
+menu/compat/missileclip             "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mmisclip.ogg"
+$volume menu/compat/missileclip     0.5
+menu/compat/verticalthrust          "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mvthrust.ogg"
+$volume menu/compat/verticalthrust  0.5
+menu/compat/doomexp                 "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mdoomexp.ogg"
+$volume menu/compat/doomexp         0.5
+
+
+//Rendering Behavior Menu
+
+menu/compat/title/render            "sounds/Menus/CompatibilityOptions/RenderingBehavior/mmrenbeh.ogg"
+$volume menu/compat/title/render    0.5
+menu/compat/polyobject              "sounds/Menus/CompatibilityOptions/RenderingBehavior/mpolyobj.ogg"
+$volume menu/compat/polyobject      0.5
+menu/compat/yoffsets                "sounds/Menus/CompatibilityOptions/RenderingBehavior/mignory.ogg"
+$volume menu/compat/yoffsets        0.5
+menu/compat/invertsprites           "sounds/Menus/CompatibilityOptions/RenderingBehavior/msprsort.ogg"
+$volume menu/compat/invertsprites   0.5
+
+
+//Sound Behavior Menu
+
+menu/compat/title/sound             "sounds/Menus/CompatibilityOptions/SoundBehavior/mmsndbeh.ogg"
+$volume menu/compat/title/sound     0.5
+menu/compat/silentbfg               "sounds/Menus/CompatibilityOptions/SoundBehavior/mslntbfg.ogg"
+$volume menu/compat/silentbfg       0.5
+menu/compat/nopickupsnd             "sounds/Menus/CompatibilityOptions/SoundBehavior/mdefpkup.ogg"
+$volume menu/compat/nopickupsnd     0.5
+menu/compat/movingfloors            "sounds/Menus/CompatibilityOptions/SoundBehavior/mslntflr.ogg"
+$volume menu/compat/movingfloors    0.5
+menu/compat/sectorcenter            "sounds/Menus/CompatibilityOptions/SoundBehavior/mseccntr.ogg"
+$volume menu/compat/sectorcenter    0.5
+menu/compat/actorvanish             "sounds/Menus/CompatibilityOptions/SoundBehavior/mactvnsh.ogg"
+$volume menu/compat/actorvanish     0.5
+menu/compat/targethandle            "sounds/Menus/CompatibilityOptions/SoundBehavior/msndtarg.ogg"
+$volume menu/compat/targethandle    0.5
+
+
+//Controller Options Menu
+
+menu/controller/enable              "sounds/Menus/ControllerOptions/mctrlsup.ogg"
+$volume menu/controller/enable      0.5
+menu/controller/blockmenu           "sounds/Menus/ControllerOptions/mblckcon.ogg"
+$volume menu/controller/blockmenu   0.5
+menu/controller/directinput         "sounds/Menus/ControllerOptions/mdirinpt.ogg"
+$volume menu/controller/directinput 0.5
+menu/controller/xinput              "sounds/Menus/ControllerOptions/mxinput.ogg"
+$volume menu/controller/xinput      0.5
+menu/controller/ps2                 "sounds/Menus/ControllerOptions/mps2adpt.ogg"
+$volume menu/controller/ps2         0.5
+
+
+//Controls Menu
+
+menu/keyset                         "sounds/Menus/CustomizeControls/mcontset.ogg"
+$volume menu/keyset                 0.5
+
+
+//Action Submenu
+
+menu/controls/title/action          "sounds/Menus/CustomizeControls/Action/mmaction.ogg"
+$volume menu/controls/title/action  0.5
+menu/controls/fire                  "sounds/Menus/CustomizeControls/Action/mfire.ogg"
+$volume menu/controls/fire          0.5
+menu/controls/altfire               "sounds/Menus/CustomizeControls/Action/maltfire.ogg"
+$volume menu/controls/altfire       0.5
+menu/controls/reload                "sounds/Menus/CustomizeControls/Action/mwreload.ogg"
+$volume menu/controls/reload        0.5
+menu/controls/zoom                  "sounds/Menus/CustomizeControls/Action/mwzoom.ogg"
+$volume menu/controls/zoom          0.5
+menu/controls/use                   "sounds/Menus/CustomizeControls/Action/museopn.ogg"
+$volume menu/controls/use           0.5
+menu/controls/forward               "sounds/Menus/CustomizeControls/Action/mforward.ogg"
+$volume menu/controls/forward       0.5
+menu/controls/backward              "sounds/Menus/CustomizeControls/Action/mbackwrd.ogg"
+$volume menu/controls/backward      0.5
+menu/controls/strafeleft            "sounds/Menus/CustomizeControls/Action/mstrafel.ogg"
+$volume menu/controls/strafeleft    0.5
+menu/controls/straferight           "sounds/Menus/CustomizeControls/Action/mstrafer.ogg"
+$volume menu/controls/straferight   0.5
+menu/controls/turnleft              "sounds/Menus/CustomizeControls/Action/mturnl.ogg"
+$volume menu/controls/turnleft      0.5
+menu/controls/turnright             "sounds/Menus/CustomizeControls/Action/mturnr.ogg"
+$volume menu/controls/turnright     0.5
+menu/controls/quickturn             "sounds/Menus/CustomizeControls/Action/mturn180.ogg"
+$volume menu/controls/quickturn     0.5
+menu/controls/jump                  "sounds/Menus/CustomizeControls/Action/mjump.ogg"
+$volume menu/controls/jump          0.5
+menu/controls/crouch                "sounds/Menus/CustomizeControls/Action/mcrouch.ogg"
+$volume menu/controls/crouch        0.5
+menu/controls/crouchtoggle          "sounds/Menus/CustomizeControls/Action/mcrchtog.ogg"
+$volume menu/controls/crouchtoggle  0.5
+menu/controls/flyup                 "sounds/Menus/CustomizeControls/Action/mflyup.ogg"
+$volume menu/controls/flyup         0.5
+menu/controls/flydown               "sounds/Menus/CustomizeControls/Action/mflydown.ogg"
+$volume menu/controls/flydown       0.5
+menu/controls/stopflying            "sounds/Menus/CustomizeControls/Action/mflystop.ogg"
+$volume menu/controls/stopflying    0.5
+menu/controls/mouselook             "sounds/Menus/CustomizeControls/Action/mmselook.ogg"
+$volume menu/controls/mouselook     0.5
+menu/controls/keyboardlook          "sounds/Menus/CustomizeControls/Action/mkeylook.ogg"
+$volume menu/controls/keyboardlook  0.5
+menu/controls/lookup                "sounds/Menus/CustomizeControls/Action/mlookup.ogg"
+$volume menu/controls/lookup        0.5
+menu/controls/lookdown              "sounds/Menus/CustomizeControls/Action/mlookdwn.ogg"
+$volume menu/controls/lookdown      0.5
+menu/controls/centerview            "sounds/Menus/CustomizeControls/Action/mcenter.ogg"
+$volume menu/controls/centerview    0.5
+menu/controls/run                   "sounds/Menus/CustomizeControls/Action/mrun.ogg"
+$volume menu/controls/run           0.5
+menu/controls/togglerun             "sounds/Menus/CustomizeControls/Action/mruntogl.ogg"
+$volume menu/controls/togglerun     0.5
+menu/controls/strafe                "sounds/Menus/CustomizeControls/Action/mstrafe.ogg"
+$volume menu/controls/strafe        0.5
+
+
+//Toby Accessibility Controls
+//Can't find those sounds (?)
+menu/controls/checkdir              "sounds/Menus/TobyOptions/mcompass.ogg"
+$volume menu/controls/checkdir      0.5
+menu/controls/facenorth             "sounds/Menus/TobyOptions/mfnorth.ogg"
+$volume menu/controls/facenorth     0.5
+menu/controls/compleft              "sounds/Menus/TobyOptions/mtrnlft.ogg"
+$volume menu/controls/compleft      0.5
+menu/controls/compright             "sounds/Menus/TobyOptions/mtrnrit.ogg"
+$volume menu/controls/compright     0.5
+
+menu/controls/keychecker            "sounds/Menus/TobyOptions/mkeychk.ogg"
+$volume menu/controls/keychecker    0.5
+
+menu/controls/healthstat            "sounds/Menus/TobyOptions/mhlstat.ogg"
+$volume menu/controls/healthstat    0.5
+menu/controls/ammostat              "sounds/Menus/TobyOptions/mamstat.ogg"
+$volume menu/controls/ammostat      0.5
+
+menu/controls/openmarkmenu          "sounds/Menus/TobyOptions/mmrkmen.ogg"
+$volume menu/controls/openmarkmenu  0.5
+menu/controls/placemarkmenu         "sounds/Menus/TobyOptions/mopnmrk.ogg"
+$volume menu/controls/placemarkmenu 0.5
+menu/controls/remmarkmenu           "sounds/Menus/TobyOptions/mopnmrk2.ogg"
+$volume menu/controls/remmarkmenu   0.5
+menu/controls/placemarker           "sounds/Menus/TobyOptions/mplcmrk.ogg"
+$volume menu/controls/placemarker   0.5
+menu/controls/removemarker          "sounds/Menus/TobyOptions/mremmrk.ogg"
+$volume menu/controls/removemarker  0.5
+menu/controls/marker1               "sounds/Menus/TobyOptions/mplcm1.ogg"
+$volume menu/controls/marker1       0.5
+menu/controls/marker2               "sounds/Menus/TobyOptions/mplcm2.ogg"
+$volume menu/controls/marker2       0.5
+menu/controls/marker3               "sounds/Menus/TobyOptions/mplcm3.ogg"
+$volume menu/controls/marker3       0.5
+menu/controls/marker4               "sounds/Menus/TobyOptions/mplcm4.ogg"
+$volume menu/controls/marker4       0.5
+menu/controls/marker5               "sounds/Menus/TobyOptions/mplcm5.ogg"
+$volume menu/controls/marker5       0.5
+menu/controls/marker6               "sounds/Menus/TobyOptions/mplcm6.ogg"
+$volume menu/controls/marker6       0.5
+menu/controls/marker7               "sounds/Menus/TobyOptions/mplcm7.ogg"
+$volume menu/controls/marker7       0.5
+menu/controls/marker8               "sounds/Menus/TobyOptions/mplcm8.ogg"
+$volume menu/controls/marker8       0.5
+menu/controls/marker9               "sounds/Menus/TobyOptions/mplcm9.ogg"
+$volume menu/controls/marker9       0.5
+menu/controls/marker10              "sounds/Menus/TobyOptions/mplcm10.ogg"
+$volume menu/controls/marker10      0.5
+
+
+//Inventory Submenu
+
+menu/controls/title/inventory           "sounds/Menus/CustomizeControls/Inventory/mminvtry.ogg"
+$volume menu/controls/title/inventory   0.5
+menu/controls/activateitem              "sounds/Menus/CustomizeControls/Inventory/mactitem.ogg"
+$volume menu/controls/activateitem      0.5
+menu/controls/allitems                  "sounds/Menus/CustomizeControls/Inventory/mallitem.ogg"
+$volume menu/controls/allitems          0.5
+menu/controls/nextitem                  "sounds/Menus/CustomizeControls/Inventory/mnxtitem.ogg"
+$volume menu/controls/nextitem          0.5
+menu/controls/previousitem              "sounds/Menus/CustomizeControls/Inventory/mpreitem.ogg"
+$volume menu/controls/previousitem      0.5
+menu/controls/dropitem                  "sounds/Menus/CustomizeControls/Inventory/mdrpitem.ogg"
+$volume menu/controls/dropitem          0.5
+menu/controls/queryitem                 "sounds/Menus/CustomizeControls/Inventory/mqryitem.ogg"
+$volume menu/controls/queryitem         0.5
+menu/controls/dropweap                  "sounds/Menus/CustomizeControls/Inventory/mdrpweap.ogg"
+$volume menu/controls/dropweap          0.5
+
+
+//Keyboard Layout
+//Can't find those sounds (?)
+menu/option/keyboard                    mkeyblo
+$volume menu/option/keyboard            0.5
+menu/option/keyreset                    mrestdef
+$volume menu/option/keyreset            0.5
+menu/keyboard/wasd                      okbwasd
+$volume menu/keyboard/wasd              0.5
+menu/keyboard/classic                   oclsczd
+$volume menu/keyboard/classic           0.5
+menu/keyboard/keypad                    omodkp
+$volume menu/keyboard/keypad            0.5
+
+
+//Map Controls Submenu
+//Can't find those sounds (?)
+menu/controls/title/map                 "sounds/Menus/CustomizeControls/MapControls/mmmapc.ogg"
+$volume menu/controls/title/map         0.5
+menu/controls/panleft                   "sounds/Menus/CustomizeControls/MapControls/mpanlft.ogg"
+$volume menu/controls/panleft           0.5
+menu/controls/panright                  "sounds/Menus/CustomizeControls/MapControls/mpanrt.ogg"
+$volume menu/controls/panright          0.5
+menu/controls/panup                     "sounds/Menus/CustomizeControls/MapControls/mpanup.ogg"
+$volume menu/controls/panup             0.5
+menu/controls/pandown                   "sounds/Menus/CustomizeControls/MapControls/mpandwn.ogg"
+$volume menu/controls/pandown           0.5
+menu/controls/zoomin                    "sounds/Menus/CustomizeControls/MapControls/mzoomin.ogg"
+$volume menu/controls/zoomin            0.5
+menu/controls/zoomout                   "sounds/Menus/CustomizeControls/MapControls/mzoomout.ogg"
+$volume menu/controls/zoomout           0.5
+menu/controls/togglezoom                "sounds/Menus/CustomizeControls/MapControls/mzoomtog.ogg"
+$volume menu/controls/togglezoom        0.5
+menu/controls/follow                    "sounds/Menus/CustomizeControls/MapControls/mfllwtog.ogg"
+$volume menu/controls/follow            0.5
+menu/controls/rotate                    "sounds/Menus/CustomizeControls/MapControls/mrottogl.ogg"
+$volume menu/controls/rotate            0.5
+menu/controls/grid                      "sounds/Menus/CustomizeControls/MapControls/mgridtog.ogg"
+$volume menu/controls/grid              0.5
+menu/controls/texture                   "sounds/Menus/CustomizeControls/MapControls/mtextogl.ogg"
+$volume menu/controls/texture           0.5
+menu/controls/setmark                   "sounds/Menus/CustomizeControls/MapControls/msetmark.ogg"
+$volume menu/controls/setmark           0.5
+menu/controls/clearmark                 "sounds/Menus/CustomizeControls/MapControls/mclrmark.ogg"
+$volume menu/controls/clearmark         0.5
+
+
+//Multiplayer Submenu
+
+menu/controls/title/multiplayer         "sounds/Menus/CustomizeControls/Multiplayer/mmmultip.ogg"
+$volume menu/controls/title/multiplayer 0.5
+menu/controls/scoreboard                "sounds/Menus/CustomizeControls/Multiplayer/mshowsb.ogg"
+$volume menu/controls/scoreboard        0.5
+menu/controls/scoretoggle               "sounds/Menus/CustomizeControls/Multiplayer/mtoglsb.ogg"
+$volume menu/controls/scoretoggle       0.5
+menu/controls/say                       "sounds/Menus/CustomizeControls/Multiplayer/msay.ogg"
+$volume menu/controls/say               0.5
+menu/controls/teamsay                   "sounds/Menus/CustomizeControls/Multiplayer/mteamsay.ogg"
+$volume menu/controls/teamsay           0.5
+
+
+//Other Controls Submenu
+
+menu/controls/title/other               "sounds/Menus/CustomizeControls/Other/mmother.ogg"
+$volume menu/controls/title/other       0.5
+menu/controls/automap                   "sounds/Menus/CustomizeControls/Other/mtautomp.ogg"
+$volume menu/controls/automap           0.5
+menu/controls/chasecam                  "sounds/Menus/CustomizeControls/Other/mchasecm.ogg"
+$volume menu/controls/chasecam          0.5
+menu/controls/coopspy                   "sounds/Menus/CustomizeControls/Other/mcoopspy.ogg"
+$volume menu/controls/coopspy           0.5
+menu/controls/screenshot                "sounds/Menus/CustomizeControls/Other/mscrnsht.ogg"
+$volume menu/controls/screenshot        0.5
+menu/controls/openconsole               "sounds/Menus/CustomizeControls/Other/mopncons.ogg"
+$volume menu/controls/openconsole       0.5
+menu/controls/pause                     "sounds/Menus/CustomizeControls/Other/mpause.ogg"
+$volume menu/controls/pause             0.5
+menu/controls/displayup                 "sounds/Menus/CustomizeControls/Other/mincdisp.ogg"
+$volume menu/controls/displayup         0.5
+menu/controls/displaydown               "sounds/Menus/CustomizeControls/Other/mdecdisp.ogg"
+$volume menu/controls/displaydown       0.5
+menu/controls/togglemessage             "sounds/Menus/CustomizeControls/Other/mmesgtog.ogg"
+$volume menu/controls/togglemessage     0.5
+menu/controls/gamma                     "sounds/Menus/CustomizeControls/Other/mgamma.ogg"
+$volume menu/controls/gamma             0.5
+menu/controls/help                      "sounds/Menus/CustomizeControls/Other/mhelp.ogg"
+$volume menu/controls/help              0.5
+menu/controls/savemenu                  "sounds/Menus/CustomizeControls/Other/mopnsave.ogg"
+$volume menu/controls/savemenu          0.5
+menu/controls/loadmenu                  "sounds/Menus/CustomizeControls/Other/mopnload.ogg"
+$volume menu/controls/loadmenu          0.5
+menu/controls/optionmenu                "sounds/Menus/CustomizeControls/Other/mopnopts.ogg"
+$volume menu/controls/optionmenu        0.5
+menu/controls/displaymenu               "sounds/Menus/CustomizeControls/Other/mopndisp.ogg"
+$volume menu/controls/displaymenu       0.5
+menu/controls/exittomain                "sounds/Menus/CustomizeControls/Other/mextmain.ogg"
+$volume menu/controls/exittomain        0.5
+menu/controls/quitmenu                  "sounds/Menus/CustomizeControls/Other/mquitkey.ogg"
+$volume menu/controls/quitmenu          0.5
+menu/controls/quicksave                 "sounds/Menus/CustomizeControls/Other/mqcksave.ogg"
+$volume menu/controls/quicksave         0.5
+menu/controls/quickload                 "sounds/Menus/CustomizeControls/Other/mqckload.ogg"
+$volume menu/controls/quickload         0.5
+
+
+//Strife Submenu
+
+menu/controls/title/strife              "sounds/Menus/CustomizeControls/Strife/mmstrife.ogg"
+$volume menu/controls/title/strife      0.5
+menu/controls/objectives                "sounds/Menus/CustomizeControls/Strife/mobjtves.ogg"
+$volume menu/controls/objectives        0.5
+menu/controls/keylist                   "sounds/Menus/CustomizeControls/Strife/mkeylist.ogg"
+$volume menu/controls/keylist           0.5
+menu/controls/stats                     "sounds/Menus/CustomizeControls/Strife/mstats.ogg"
+$volume menu/controls/stats             0.5
+
+
+//Weapons Submenu
+
+menu/controls/title/weapon          "sounds/Menus/CustomizeControls/Weapons/mmweap.ogg"
+$volume menu/controls/title/weapon  0.5
+menu/controls/nextweap              "sounds/Menus/CustomizeControls/Weapons/mnxtweap.ogg"
+$volume menu/controls/nextweap      0.5
+menu/controls/prevweap              "sounds/Menus/CustomizeControls/Weapons/mpreweap.ogg"
+$volume menu/controls/prevweap      0.5
+menu/controls/weap1                 "sounds/Menus/CustomizeControls/Weapons/mweap1.ogg"
+$volume menu/controls/weap1         0.5
+menu/controls/weap2                 "sounds/Menus/CustomizeControls/Weapons/mweap2.ogg"
+$volume menu/controls/weap2         0.5
+menu/controls/weap3                 "sounds/Menus/CustomizeControls/Weapons/mweap3.ogg"
+$volume menu/controls/weap3         0.5
+menu/controls/weap4                 "sounds/Menus/CustomizeControls/Weapons/mweap4.ogg"
+$volume menu/controls/weap4         0.5
+menu/controls/weap5                 "sounds/Menus/CustomizeControls/Weapons/mweap5.ogg"
+$volume menu/controls/weap5         0.5
+menu/controls/weap6                 "sounds/Menus/CustomizeControls/Weapons/mweap6.ogg"
+$volume menu/controls/weap6         0.5
+menu/controls/weap7                 "sounds/Menus/CustomizeControls/Weapons/mweap7.ogg"
+$volume menu/controls/weap7         0.5
+menu/controls/weap8                 "sounds/Menus/CustomizeControls/Weapons/mweap8.ogg"
+$volume menu/controls/weap8         0.5
+menu/controls/weap9                 "sounds/Menus/CustomizeControls/Weapons/mweap9.ogg"
+$volume menu/controls/weap9         0.5
+menu/controls/weap10                "sounds/Menus/CustomizeControls/Weapons/mweap10.ogg"
+$volume menu/controls/weap10        0.5
+menu/controls/state1                "sounds/Menus/CustomizeControls/Weapons/mwstate1.ogg"
+$volume menu/controls/state1        0.5
+menu/controls/state2                "sounds/Menus/CustomizeControls/Weapons/mwstate2.ogg"
+$volume menu/controls/state2        0.5
+menu/controls/state3                "sounds/Menus/CustomizeControls/Weapons/mwstate3.ogg"
+$volume menu/controls/state3        0.5
+menu/controls/state4                "sounds/Menus/CustomizeControls/Weapons/mwstate4.ogg"
+$volume menu/controls/state4        0.5
+
+
+//Gameplay Options Menu
+
+//Main
+
+menu/gameplay/teamplay              "sounds/Menus/GameplayOptions/mteamply.ogg"
+$volume menu/gameplay/teamplay      0.5
+menu/gameplay/teamdmg               "sounds/Menus/GameplayOptions/mteamdmg.ogg"
+$volume menu/gameplay/teamdmg       0.5
+menu/gameplay/smartaim              "sounds/Menus/GameplayOptions/msmrtaim.ogg"
+$volume menu/gameplay/smartaim      0.5
+menu/smartaim/onlymons              "sounds/Menus/GameplayOptions/oonlymon.ogg"
+$volume menu/smartaim/onlymons      0.5
+menu/smartaim/nofriends             "sounds/Menus/GameplayOptions/onvrfrnd.ogg"
+$volume menu/smartaim/nofriends     0.5
+menu/gameplay/falldmg               "sounds/Menus/GameplayOptions/mfalldmg.ogg"
+$volume menu/gameplay/falldmg       0.5
+menu/gameplay/dropweap              "sounds/Menus/GameplayOptions/mdrpweap.ogg"
+$volume menu/gameplay/dropweap      0.5
+menu/gameplay/doubleammo            "sounds/Menus/GameplayOptions/mammo2x.ogg"
+$volume menu/gameplay/doubleammo    0.5
+menu/gameplay/infiniteammo          "sounds/Menus/GameplayOptions/minfammo.ogg"
+$volume menu/gameplay/infiniteammo  0.5
+menu/gameplay/infiniteinv           "sounds/Menus/GameplayOptions/minfinv.ogg"
+$volume menu/gameplay/infiniteinv   0.5
+menu/gameplay/nomonsters            "sounds/Menus/GameplayOptions/mnomons.ogg"
+$volume menu/gameplay/nomonsters    0.5
+menu/gameplay/monsterexit           "sounds/Menus/GameplayOptions/mmonsext.ogg"
+$volume menu/gameplay/monsterexit   0.5
+menu/gameplay/monrespawn            "sounds/Menus/GameplayOptions/mmonrspw.ogg"
+$volume menu/gameplay/monrespawn    0.5
+menu/gameplay/nomonrespawn          "sounds/Menus/GameplayOptions/mmnorspw.ogg"
+$volume menu/gameplay/nomonrespawn  0.5
+menu/gameplay/itemrespawn           "sounds/Menus/GameplayOptions/mitemres.ogg"
+$volume menu/gameplay/itemrespawn   0.5
+menu/gameplay/powerrespawn          "sounds/Menus/GameplayOptions/mpowresp.ogg"
+$volume menu/gameplay/powerrespawn  0.5
+menu/gameplay/fastmonsters          "sounds/Menus/GameplayOptions/mfastmon.ogg"
+$volume menu/gameplay/fastmonsters  0.5
+menu/gameplay/nmaremons             "sounds/Menus/GameplayOptions/mmonnmar.ogg"
+$volume menu/gameplay/nmaremons     0.5
+menu/gameplay/degeneration          "sounds/Menus/GameplayOptions/mdegen.ogg"
+$volume menu/gameplay/degeneration  0.5
+menu/gameplay/autoaim               "sounds/Menus/GameplayOptions/malwaim.ogg"
+$volume menu/gameplay/autoaim       0.5
+menu/gameplay/suicide               "sounds/Menus/GameplayOptions/malwsuic.ogg"
+$volume menu/gameplay/suicide       0.5
+menu/gameplay/jump                  "sounds/Menus/GameplayOptions/malwjump.ogg"
+$volume menu/gameplay/jump          0.5
+menu/gameplay/crouch                "sounds/Menus/GameplayOptions/malwcrch.ogg"
+$volume menu/gameplay/crouch        0.5
+menu/gameplay/freelook              "sounds/Menus/GameplayOptions/malwflok.ogg"
+$volume menu/gameplay/freelook      0.5
+menu/gameplay/fov                   "sounds/Menus/GameplayOptions/malwfov.ogg"
+$volume menu/gameplay/fov           0.5
+menu/gameplay/bfgaim                "sounds/Menus/GameplayOptions/mbfgaim.ogg"
+$volume menu/gameplay/bfgaim        0.5
+menu/gameplay/automap               "sounds/Menus/GameplayOptions/malwmap.ogg"
+$volume menu/gameplay/automap       0.5
+menu/gameplay/mapfriends            "sounds/Menus/GameplayOptions/mmapfrnd.ogg"
+$volume menu/gameplay/mapfriends    0.5
+menu/gameplay/spying                "sounds/Menus/GameplayOptions/malwspy.ogg"
+$volume menu/gameplay/spying        0.5
+menu/gameplay/chasecam              "sounds/Menus/GameplayOptions/mccamcht.ogg"
+$volume menu/gameplay/chasecam      0.5
+menu/gameplay/checkammo             "sounds/Menus/GameplayOptions/mchkammo.ogg"
+$volume menu/gameplay/checkammo     0.5
+menu/gameplay/iconofsin             "sounds/Menus/GameplayOptions/miosdeth.ogg"
+$volume menu/gameplay/iconofsin     0.5
+menu/gameplay/endsector             "sounds/Menus/GameplayOptions/mkilprct.ogg"
+$volume menu/gameplay/endsector     0.5
+menu/gameplay/multiplayobj          "sounds/Menus/GameplayOptions/malwmpob.ogg"
+$volume menu/gameplay/multiplayobj  0.5
+
+
+//Deathmatch Settings Menu
+
+menu/gameplay/title/dm              "sounds/Menus/GameplayOptions/DeathmatchSettings/mmdmset.ogg"
+$volume menu/gameplay/title/dm      0.5
+menu/gameplay/weapstay              "sounds/Menus/GameplayOptions/DeathmatchSettings/mwepstay.ogg"
+$volume menu/gameplay/weapstay      0.5
+menu/gameplay/allowpower            "sounds/Menus/GameplayOptions/DeathmatchSettings/mpwrups.ogg"
+$volume menu/gameplay/allowpower    0.5
+menu/gameplay/allowhealth           "sounds/Menus/GameplayOptions/DeathmatchSettings/malwhlth.ogg"
+$volume menu/gameplay/allowhealth   0.5
+menu/gameplay/allowarmor            "sounds/Menus/GameplayOptions/DeathmatchSettings/malwarmr.ogg"
+$volume menu/gameplay/allowarmor    0.5
+menu/gameplay/spawnfar              "sounds/Menus/GameplayOptions/DeathmatchSettings/mspwnfar.ogg"
+$volume menu/gameplay/spawnfar      0.5
+menu/gameplay/samemap               "sounds/Menus/GameplayOptions/DeathmatchSettings/msamemap.ogg"
+$volume menu/gameplay/samemap       0.5
+menu/gameplay/forcerespawn          "sounds/Menus/GameplayOptions/DeathmatchSettings/mforcrsp.ogg"
+$volume menu/gameplay/forcerespawn  0.5
+menu/gameplay/allowexit             "sounds/Menus/GameplayOptions/DeathmatchSettings/malwexit.ogg"
+$volume menu/gameplay/allowexit     0.5
+menu/gameplay/barrelrespawn         "sounds/Menus/GameplayOptions/DeathmatchSettings/mbarrel.ogg"
+$volume menu/gameplay/barrelrespawn 0.5
+menu/gameplay/spawnprotect          "sounds/Menus/GameplayOptions/DeathmatchSettings/mrspwpro.ogg"
+$volume menu/gameplay/spawnprotect  0.5
+menu/gameplay/losefrag              "sounds/Menus/GameplayOptions/DeathmatchSettings/mlosefrg.ogg"
+$volume menu/gameplay/losefrag      0.5
+menu/gameplay/keepfrag              "sounds/Menus/GameplayOptions/DeathmatchSettings/mkeepfrg.ogg"
+$volume menu/gameplay/keepfrag      0.5
+menu/gameplay/noteamswitch          "sounds/Menus/GameplayOptions/DeathmatchSettings/mteamswt.ogg"
+$volume menu/gameplay/noteamswitch  0.5
+
+
+//Coop Settings Menu
+
+menu/gameplay/title/coop            "sounds/Menus/GameplayOptions/CoopSettings/mmcoop.ogg"
+$volume menu/gameplay/title/coop    0.5
+menu/gameplay/coopthings            "sounds/Menus/GameplayOptions/CoopSettings/mmpthing.ogg"
+$volume menu/gameplay/coopthings    0.5
+menu/gameplay/coopweap              "sounds/Menus/GameplayOptions/CoopSettings/mmpweap.ogg"
+$volume menu/gameplay/coopweap      0.5
+menu/gameplay/loseinv               "sounds/Menus/GameplayOptions/CoopSettings/mloseinv.ogg"
+$volume menu/gameplay/loseinv       0.5
+menu/gameplay/keepkeys              "sounds/Menus/GameplayOptions/CoopSettings/mkeepkey.ogg"
+$volume menu/gameplay/keepkeys      0.5
+menu/gameplay/keepweap              "sounds/Menus/GameplayOptions/CoopSettings/mkeepwep.ogg"
+$volume menu/gameplay/keepweap      0.5
+menu/gameplay/keeparmor             "sounds/Menus/GameplayOptions/CoopSettings/mkeeparm.ogg"
+$volume menu/gameplay/keeparmor     0.5
+menu/gameplay/keeppower             "sounds/Menus/GameplayOptions/CoopSettings/mkeeppwr.ogg"
+$volume menu/gameplay/keeppower     0.5
+menu/gameplay/keepammo              "sounds/Menus/GameplayOptions/CoopSettings/mkeepamo.ogg"
+$volume menu/gameplay/keepammo      0.5
+menu/gameplay/losehalfammo          "sounds/Menus/GameplayOptions/CoopSettings/mhalfamo.ogg"
+$volume menu/gameplay/losehalfammo  0.5
+menu/gameplay/deathspot             "sounds/Menus/GameplayOptions/CoopSettings/mspwndie.ogg"
+$volume menu/gameplay/deathspot     0.5
+
+
+//Keyboard Keys Narrated
+
+keyboard/escape                 "sounds/Menus/CustomizeControls/Keyboard/kescape.ogg"
+keyboard/f1                     "sounds/Menus/CustomizeControls/Keyboard/kf1.ogg"
+keyboard/f2                     "sounds/Menus/CustomizeControls/Keyboard/kf2.ogg"
+keyboard/f3                     "sounds/Menus/CustomizeControls/Keyboard/kf3.ogg"
+keyboard/f4                     "sounds/Menus/CustomizeControls/Keyboard/kf4.ogg"
+keyboard/f5                     "sounds/Menus/CustomizeControls/Keyboard/kf5.ogg"
+keyboard/f6                     "sounds/Menus/CustomizeControls/Keyboard/kf6.ogg"
+keyboard/f7                     "sounds/Menus/CustomizeControls/Keyboard/kf7.ogg"
+keyboard/f8                     "sounds/Menus/CustomizeControls/Keyboard/kf8.ogg"
+keyboard/f9                     "sounds/Menus/CustomizeControls/Keyboard/kf9.ogg"
+keyboard/f10                    "sounds/Menus/CustomizeControls/Keyboard/kf10.ogg"
+keyboard/f11                    "sounds/Menus/CustomizeControls/Keyboard/kf11.ogg"
+keyboard/f12                    "sounds/Menus/CustomizeControls/Keyboard/kf12.ogg"
+keyboard/printscreen            "sounds/Menus/CustomizeControls/Keyboard/kprntscr.ogg"
+keyboard/scrolllock             "sounds/Menus/CustomizeControls/Keyboard/kscrllok.ogg"
+keyboard/pause                  "sounds/Menus/CustomizeControls/Keyboard/kpause.ogg"
+keyboard/tilde                  "sounds/Menus/CustomizeControls/Keyboard/ktilde.ogg"
+keyboard/exclamation            "sounds/Menus/CustomizeControls/Keyboard/kexclaim.ogg"
+keyboard/at                     "sounds/Menus/CustomizeControls/Keyboard/katsymb.ogg"
+keyboard/pound                  "sounds/Menus/CustomizeControls/Keyboard/kpound.ogg"
+keyboard/dollar                 "sounds/Menus/CustomizeControls/Keyboard/kdollar.ogg"
+keyboard/percent                "sounds/Menus/CustomizeControls/Keyboard/kpercent.ogg"
+keyboard/and                    "sounds/Menus/CustomizeControls/Keyboard/kandsymb.ogg"
+keyboard/star                   "sounds/Menus/CustomizeControls/Keyboard/kstar.ogg"
+keyboard/openparenthesis        "sounds/Menus/CustomizeControls/Keyboard/kopenp.ogg"
+keyboard/closeparenthesis       "sounds/Menus/CustomizeControls/Keyboard/kclosep.ogg"
+keyboard/underscore             "sounds/Menus/CustomizeControls/Keyboard/kundrscr.ogg"
+keyboard/plus                   "sounds/Menus/CustomizeControls/Keyboard/kplus.ogg"
+keyboard/minus                  "sounds/Menus/CustomizeControls/Keyboard/kminus.ogg"
+keyboard/equals                 "sounds/Menus/CustomizeControls/Keyboard/kequals.ogg"
+keyboard/backspace              "sounds/Menus/CustomizeControls/Keyboard/kbackspc.ogg"
+keyboard/tab                    "sounds/Menus/CustomizeControls/Keyboard/ktab.ogg"
+keyboard/capslock               "sounds/Menus/CustomizeControls/Keyboard/kcaplock.ogg"
+keyboard/shift                  "sounds/Menus/CustomizeControls/Keyboard/kshift.ogg"
+keyboard/control                "sounds/Menus/CustomizeControls/Keyboard/kcontrol.ogg"
+keyboard/alt                    "sounds/Menus/CustomizeControls/Keyboard/kalt.ogg"
+keyboard/spacebar               "sounds/Menus/CustomizeControls/Keyboard/kspcebar.ogg"
+keyboard/enter                  "sounds/Menus/CustomizeControls/Keyboard/kenter.ogg"
+keyboard/openbracket            "sounds/Menus/CustomizeControls/Keyboard/kopenbr.ogg"
+keyboard/closebracket           "sounds/Menus/CustomizeControls/Keyboard/kclosebr.ogg"
+keyboard/backslash              "sounds/Menus/CustomizeControls/Keyboard/kbckslsh.ogg"
+keyboard/colon                  "sounds/Menus/CustomizeControls/Keyboard/kcolon.ogg"
+keyboard/semicolon              "sounds/Menus/CustomizeControls/Keyboard/ksemicol.ogg"
+keyboard/quote                  "sounds/Menus/CustomizeControls/Keyboard/kquote.ogg"
+keyboard/comma                  "sounds/Menus/CustomizeControls/Keyboard/kcomma.ogg"
+keyboard/period                 "sounds/Menus/CustomizeControls/Keyboard/kperiod.ogg"
+keyboard/lessthan               "sounds/Menus/CustomizeControls/Keyboard/klessthn.ogg"
+keyboard/greaterthan            "sounds/Menus/CustomizeControls/Keyboard/kgrtrthn.ogg"
+keyboard/questionmark           "sounds/Menus/CustomizeControls/Keyboard/kquestn.ogg"
+keyboard/slash                  "sounds/Menus/CustomizeControls/Keyboard/kslash.ogg"
+keyboard/uparrow                "sounds/Menus/CustomizeControls/Keyboard/kup.ogg"
+keyboard/downarrow              "sounds/Menus/CustomizeControls/Keyboard/kdown.ogg"
+keyboard/leftarrow              "sounds/Menus/CustomizeControls/Keyboard/kleft.ogg"
+keyboard/rightarrow             "sounds/Menus/CustomizeControls/Keyboard/kright.ogg"
+keyboard/insert                 "sounds/Menus/CustomizeControls/Keyboard/kinsert.ogg"
+keyboard/home                   "sounds/Menus/CustomizeControls/Keyboard/khome.ogg"
+keyboard/delete                 "sounds/Menus/CustomizeControls/Keyboard/kdelete.ogg"
+keyboard/end                    "sounds/Menus/CustomizeControls/Keyboard/kend.ogg"
+keyboard/pageup                 "sounds/Menus/CustomizeControls/Keyboard/kpageup.ogg"
+keyboard/pagedown               "sounds/Menus/CustomizeControls/Keyboard/kpagedwn.ogg"
+keyboard/numlock                "sounds/Menus/CustomizeControls/Keyboard/knumlock.ogg"
+keyboard/kpslash                "sounds/Menus/CustomizeControls/Keyboard/kpslash.ogg"
+keyboard/kpstar                 "sounds/Menus/CustomizeControls/Keyboard/kpstar.ogg"
+keyboard/kpminus                "sounds/Menus/CustomizeControls/Keyboard/kpminus.ogg"
+keyboard/kpplus                 "sounds/Menus/CustomizeControls/Keyboard/kpplus.ogg"
+keyboard/kpenter                "sounds/Menus/CustomizeControls/Keyboard/kpenter.ogg"
+keyboard/kpdecimal              "sounds/Menus/CustomizeControls/Keyboard/kpdeciml.ogg"
+keyboard/kp0                    "sounds/Menus/CustomizeControls/Keyboard/kp0.ogg"
+keyboard/kp1                    "sounds/Menus/CustomizeControls/Keyboard/kp1.ogg"
+keyboard/kp2                    "sounds/Menus/CustomizeControls/Keyboard/kp2.ogg"
+keyboard/kp3                    "sounds/Menus/CustomizeControls/Keyboard/kp3.ogg"
+keyboard/kp4                    "sounds/Menus/CustomizeControls/Keyboard/kp4.ogg"
+keyboard/kp5                    "sounds/Menus/CustomizeControls/Keyboard/kp5.ogg"
+keyboard/kp6                    "sounds/Menus/CustomizeControls/Keyboard/kp6.ogg"
+keyboard/kp7                    "sounds/Menus/CustomizeControls/Keyboard/kp7.ogg"
+keyboard/kp8                    "sounds/Menus/CustomizeControls/Keyboard/kp8.ogg"
+keyboard/kp9                    "sounds/Menus/CustomizeControls/Keyboard/kp9.ogg"
+
+
+//Misc Options Menu
+
+menu/misc/altctrlshift              "sounds/Menus/MiscellaneousOptions/maltctrl.ogg"
+$volume menu/misc/altctrlshift      0.5
+menu/misc/togglefull                "sounds/Menus/MiscellaneousOptions/maltentr.ogg"
+$volume menu/misc/togglefull        0.5
+menu/misc/iwadselect                "sounds/Menus/MiscellaneousOptions/miwad.ogg"
+$volume menu/misc/iwadselect        0.5
+menu/misc/kbcheats                  "sounds/Menus/MiscellaneousOptions/mnokbcht.ogg"
+$volume menu/misc/kbcheats          0.5
+menu/misc/allcheats                 "sounds/Menus/MiscellaneousOptions/malcheat.ogg"
+$volume menu/misc/allcheats         0.5
+menu/misc/autosaves                 "sounds/Menus/MiscellaneousOptions/menblsav.ogg"
+$volume menu/misc/autosaves         0.5
+menu/autosave/always                "sounds/Menus/MiscellaneousOptions/oalways.ogg"
+$volume menu/autosave/always        0.5
+menu/autosave/scripts               "sounds/Menus/MiscellaneousOptions/oscripts.ogg"
+$volume menu/autosave/scripts       0.5
+menu/autosave/never                 "sounds/Menus/MiscellaneousOptions/onever.ogg"
+$volume menu/autosave/never         0.5
+menu/misc/saveconfirm               "sounds/Menus/MiscellaneousOptions/msvldcon.ogg"
+$volume menu/misc/saveconfirm       0.5
+menu/misc/autosavenum               "sounds/Menus/MiscellaneousOptions/mnumsave.ogg"
+$volume menu/misc/autosavenum       0.5
+menu/misc/qsaverotation             "sounds/Menus/MiscellaneousOptions/msaverot.ogg"
+$volume menu/misc/qsaverotation     0.5
+menu/misc/qsavenum                  "sounds/Menus/MiscellaneousOptions/mnumsvrt.ogg"
+$volume menu/misc/qsavenum          0.5
+menu/misc/loaddeh                   "sounds/Menus/MiscellaneousOptions/mloaddeh.ogg"
+$volume menu/misc/loaddeh           0.5
+menu/deh/all                        "sounds/Menus/MiscellaneousOptions/oall.ogg"
+$volume menu/deh/all                0.5
+menu/deh/last                       "sounds/Menus/MiscellaneousOptions/olast.ogg"
+$volume menu/deh/last               0.5
+menu/misc/screenshots               "sounds/Menus/MiscellaneousOptions/menbshot.ogg"
+$volume menu/misc/screenshots       0.5
+menu/misc/keyconf                   "sounds/Menus/MiscellaneousOptions/mkeyconf.ogg"
+$volume menu/misc/keyconf           0.5
+menu/misc/skipinter                 "sounds/Menus/MiscellaneousOptions/malwskip.ogg"
+$volume menu/misc/skipinter         0.5
+menu/misc/cachenode                 "sounds/Menus/MiscellaneousOptions/mcnodes.ogg"
+$volume menu/misc/cachenode         0.5
+menu/misc/cachetime                 "sounds/Menus/MiscellaneousOptions/mnodetme.ogg"
+$volume menu/misc/cachetime         0.5
+menu/misc/clearcache                "sounds/Menus/MiscellaneousOptions/mnodeclr.ogg"
+$volume menu/misc/clearcache        0.5
+menu/misc/language                  "sounds/Menus/MiscellaneousOptions/mlang.ogg"
+$volume menu/misc/language          0.5
+menu/language/auto                  "sounds/Menus/MiscellaneousOptions/oauto.ogg"
+$volume menu/language/auto          0.5
+menu/language/engusa                "sounds/Menus/MiscellaneousOptions/oengusa.ogg"
+$volume menu/language/engusa        0.5
+menu/language/enguk                 "sounds/Menus/MiscellaneousOptions/oenguk.ogg"
+$volume menu/language/enguk         0.5
+menu/language/czech                 "sounds/Menus/MiscellaneousOptions/oczech.ogg"
+$volume menu/language/czech         0.5
+menu/language/german                "sounds/Menus/MiscellaneousOptions/ogerman.ogg"
+$volume menu/language/german        0.5
+menu/language/spanish               "sounds/Menus/MiscellaneousOptions/ospanish.ogg"
+$volume menu/language/spanish       0.5
+menu/language/esperato              "sounds/Menus/MiscellaneousOptions/oesprnto.ogg"
+$volume menu/language/esperato      0.5
+menu/language/finnish               "sounds/Menus/MiscellaneousOptions/ofinnish.ogg"
+$volume menu/language/finnish       0.5
+menu/language/french                "sounds/Menus/MiscellaneousOptions/ofrench.ogg"
+$volume menu/language/french        0.5
+menu/language/italian               "sounds/Menus/MiscellaneousOptions/oitalian.ogg"
+$volume menu/language/italian       0.5
+menu/language/japanese              "sounds/Menus/MiscellaneousOptions/ojapanse.ogg"
+$volume menu/language/japanese      0.5
+menu/language/korean                "sounds/Menus/MiscellaneousOptions/okorean.ogg"
+$volume menu/language/korean        0.5
+menu/language/dutch                 "sounds/Menus/MiscellaneousOptions/odutch.ogg"
+$volume menu/language/dutch         0.5
+menu/language/polish                "sounds/Menus/MiscellaneousOptions/opolish.ogg"
+$volume menu/language/polish        0.5
+menu/language/portuguese            "sounds/Menus/MiscellaneousOptions/oportgse.ogg"
+$volume menu/language/portuguese    0.5
+menu/language/romanian              "sounds/Menus/MiscellaneousOptions/oromnian.ogg"
+$volume menu/language/romanian      0.5
+menu/language/russian               "sounds/Menus/MiscellaneousOptions/orussian.ogg"
+$volume menu/language/russian       0.5
+menu/language/serbian               "sounds/Menus/MiscellaneousOptions/oserbian.ogg"
+$volume menu/language/serbian       0.5
+menu/misc/quickexit                 "sounds/Menus/MiscellaneousOptions/mqckexit.ogg"
+$volume menu/misc/quickexit         0.5
+menu/misc/endoom                    "sounds/Menus/MiscellaneousOptions/mendoom.ogg"
+$volume menu/misc/endoom            0.5
+menu/misc/cleanscale                "sounds/Menus/MiscellaneousOptions/mclnscal.ogg"
+$volume menu/misc/cleanscale        0.5
+menu/misc/zdoomscale                "sounds/Menus/MiscellaneousOptions/mzdscale.ogg"
+$volume menu/misc/zdoomscale        0.5
+menu/misc/usepercent                "sounds/Menus/MiscellaneousOptions/museprct.ogg"
+$volume menu/misc/usepercent        0.5
+menu/misc/showtally                 "sounds/Menus/MiscellaneousOptions/mshwtaly.ogg"
+$volume menu/misc/showtally         0.5
+menu/tally/mod                      "sounds/Menus/MiscellaneousOptions/omoddef.ogg"
+$volume menu/tally/mod              0.5
+menu/tally/exceptwithhub            "sounds/Menus/MiscellaneousOptions/oexwhubs.ogg"
+$volume menu/tally/exceptwithhub    0.5
+menu/tally/evenwithhub              "sounds/Menus/MiscellaneousOptions/oevwhubs.ogg"
+$volume menu/tally/evenwithhub      0.5
+
+
+//Mouse Options Menu
+
+menu/mouse/enablemouse              "sounds/Menus/MouseOptions/mmouseon.ogg"
+$volume menu/mouse/enablemouse      0.5
+menu/mouse/enableinmenu             "sounds/Menus/MouseOptions/mmsmenu.ogg"
+$volume menu/mouse/enableinmenu     0.5
+menu/mouse/touchscreen              "sounds/Menus/MouseOptions/otouch.ogg"
+$volume menu/mouse/touchscreen      0.5
+menu/mouse/backbutton               "sounds/Menus/MouseOptions/mbackbtn.ogg"
+$volume menu/mouse/backbutton       0.5
+menu/mouse/swapbuttons              "sounds/Menus/MouseOptions/mswapbtn.ogg"
+$volume menu/mouse/swapbuttons      0.5
+menu/mouse/cursor                   "sounds/Menus/MouseOptions/mcursor.ogg"
+$volume menu/mouse/cursor           0.5
+menu/cursor/default                 "sounds/Menus/MouseOptions/odefault.ogg"
+$volume menu/cursor/default         0.5
+menu/cursor/arrow                   "sounds/Menus/MouseOptions/osimparw.ogg"
+$volume menu/cursor/arrow           0.5
+menu/cursor/doom                    "sounds/Menus/MouseOptions/odoom.ogg"
+$volume menu/cursor/doom            0.5
+menu/cursor/heretic                 "sounds/Menus/MouseOptions/ohrtc.ogg"
+$volume menu/cursor/heretic         0.5
+menu/cursor/hexen                   "sounds/Menus/MouseOptions/ohexen.ogg"
+$volume menu/cursor/hexen           0.5
+menu/cursor/strife                  "sounds/Menus/MouseOptions/ostrife.ogg"
+$volume menu/cursor/strife          0.5
+menu/cursor/chex                    "sounds/Menus/MouseOptions/ochex.ogg"
+$volume menu/cursor/chex            0.5
+menu/cursor/system                  "sounds/Menus/MouseOptions/osystem.ogg"
+$volume menu/cursor/system          0.5
+menu/mouse/horizontal               "sounds/Menus/MouseOptions/mhorzsen.ogg"
+$volume menu/mouse/horizontal       0.5
+menu/mouse/vertical                 "sounds/Menus/MouseOptions/mvertsen.ogg"
+$volume menu/mouse/vertical         0.5
+menu/mouse/smooth                   "sounds/Menus/MouseOptions/msmooth.ogg"
+$volume menu/mouse/smooth           0.5
+menu/mouse/turnspeed                "sounds/Menus/MouseOptions/mturnspd.ogg"
+$volume menu/mouse/turnspeed        0.5
+menu/mouse/mlookspeed               "sounds/Menus/MouseOptions/mmlooksp.ogg"
+$volume menu/mouse/mlookspeed       0.5
+menu/mouse/forwardback              "sounds/Menus/MouseOptions/mfrwback.ogg"
+$volume menu/mouse/forwardback      0.5
+menu/mouse/strafespeed              "sounds/Menus/MouseOptions/mstrfspd.ogg"
+$volume menu/mouse/strafespeed      0.5
+menu/mouse/alwaysmlook              "sounds/Menus/MouseOptions/malwysml.ogg"
+$volume menu/mouse/alwaysmlook      0.5
+menu/mouse/invertx                  "sounds/Menus/MouseOptions/minvrtx.ogg"
+$volume menu/mouse/invertx          0.5
+menu/mouse/inverty                  "sounds/Menus/MouseOptions/minvrty.ogg"
+$volume menu/mouse/inverty          0.5
+menu/mouse/lookspring               "sounds/Menus/MouseOptions/mlksprng.ogg"
+$volume menu/mouse/lookspring       0.5
+menu/mouse/lookstrafe               "sounds/Menus/MouseOptions/mlkstrfe.ogg"
+$volume menu/mouse/lookstrafe       0.5
+
+
+//Network Options Menu
+
+menu/network/predictmove            "sounds/Menus/NetworkOptions/mmoveprd.ogg"
+$volume menu/network/predictmove    0.5
+menu/network/predictline            "sounds/Menus/NetworkOptions/mprdline.ogg"
+$volume menu/network/predictline    0.5
+menu/network/lerpscale              "sounds/Menus/NetworkOptions/mlerpscl.ogg"
+$volume menu/network/lerpscale      0.5
+menu/network/lerpthreshold          "sounds/Menus/NetworkOptions/mlerpthr.ogg"
+$volume menu/network/lerpthreshold  0.5
+menu/network/extratics              "sounds/Menus/NetworkOptions/mxtratic.ogg"
+$volume menu/network/extratics      0.5
+menu/extratics/none                 "sounds/Menus/NetworkOptions/onone.ogg"
+$volume menu/extratics/none         0.5
+menu/extratics/one                  "sounds/Menus/NetworkOptions/o1.ogg"
+$volume menu/extratics/one          0.5
+menu/extratics/all                  "sounds/Menus/NetworkOptions/oallackn.ogg"
+$volume menu/extratics/all          0.5
+menu/network/latency                "sounds/Menus/NetworkOptions/mlatebal.ogg"
+$volume menu/network/latency        0.5
+
+
+//Player Setup Menu
+
+menu/player/name                    "sounds/Menus/PlayerSetup/mname.ogg"
+$volume menu/player/name            0.5
+menu/player/team                    "sounds/Menus/PlayerSetup/mteam.ogg"
+$volume menu/player/team            0.5
+menu/player/color                   "sounds/Menus/PlayerSetup/mcolor.ogg"
+$volume menu/player/color           0.5
+menu/player/class                   "sounds/Menus/PlayerSetup/mpclass.ogg"
+$volume menu/player/class           0.5
+menu/player/skin                    "sounds/Menus/PlayerSetup/mpskin.ogg"
+$volume menu/player/skin            0.5
+menu/player/gender                  "sounds/Menus/PlayerSetup/mgender.ogg"
+$volume menu/player/gender          0.5
+menu/player/autoaim                 "sounds/Menus/PlayerSetup/mautoaim.ogg"
+$volume menu/player/autoaim         0.5
+menu/player/weapswitch              "sounds/Menus/PlayerSetup/mwswitch.ogg"
+$volume menu/player/weapswitch      0.5
+menu/player/alwaysrun               "sounds/Menus/PlayerSetup/malwyrun.ogg"
+$volume menu/player/alwaysrun       0.5
+
+menu/team/none                      "sounds/Menus/PlayerSetup/onone.ogg"
+$volume menu/team/none              0.5
+menu/team/red                       "sounds/Menus/PlayerSetup/ored.ogg"
+$volume menu/team/red               0.5
+menu/team/blue                      "sounds/Menus/PlayerSetup/oblue.ogg"
+$volume menu/team/blue              0.5
+menu/team/gold                      "sounds/Menus/PlayerSetup/ogold.ogg"
+$volume menu/team/gold              0.5
+menu/team/green                     "sounds/Menus/PlayerSetup/ogreen.ogg"
+$volume menu/team/green             0.5
+menu/team/orange                    "sounds/Menus/PlayerSetup/oorange.ogg"
+$volume menu/team/orange            0.5
+menu/team/purple                    "sounds/Menus/PlayerSetup/opurple.ogg"
+$volume menu/team/purple            0.5
+menu/team/black                     "sounds/Menus/PlayerSetup/oblack.ogg"
+$volume menu/team/black             0.5
+menu/team/white                     "sounds/Menus/PlayerSetup/owhite.ogg"
+$volume menu/team/white             0.5
+
+menu/playercolor/green              "sounds/Menus/PlayerSetup/ogreen.ogg"
+$volume menu/playercolor/green      0.5
+menu/playercolor/gray               "sounds/Menus/PlayerSetup/ogray.ogg"
+$volume menu/playercolor/gray       0.5
+menu/playercolor/brown              "sounds/Menus/PlayerSetup/obrown.ogg"
+$volume menu/playercolor/brown      0.5
+menu/playercolor/red                "sounds/Menus/PlayerSetup/ored.ogg"
+$volume menu/playercolor/red        0.5
+menu/playercolor/lightgray          "sounds/Menus/PlayerSetup/oltgray.ogg"
+$volume menu/playercolor/lightgray  0.5
+menu/playercolor/lightbrown         "sounds/Menus/PlayerSetup/oltbrwn.ogg"
+$volume menu/playercolor/lightbrown 0.5
+menu/playercolor/lightred           "sounds/Menus/PlayerSetup/oltred.ogg"
+$volume menu/playercolor/lightred   0.5
+menu/playercolor/lightblue          "sounds/Menus/PlayerSetup/oltblue.ogg"
+$volume menu/playercolor/lightblue  0.5
+menu/playercolor/custom             "sounds/Menus/PlayerSetup/ocustom.ogg"
+$volume menu/playercolor/custom     0.5
+
+menu/gender/male                    "sounds/Menus/PlayerSetup/omale.ogg"
+$volume menu/gender/male            0.5
+menu/gender/female                  "sounds/Menus/PlayerSetup/ofemale.ogg"
+$volume menu/gender/female          0.5
+menu/gender/neutral                 "sounds/Menus/PlayerSetup/oneutral.ogg"
+$volume menu/gender/neutral         0.5
+menu/gender/object                  "sounds/Menus/PlayerSetup/oobject.ogg"
+$volume menu/gender/object          0.5
+
+menu/skin/base                      "sounds/Menus/PlayerSetup/obase.ogg"
+$volume menu/skin/base              0.5
+menu/class/marine                   "sounds/Menus/PlayerSetup/omarine.ogg"
+$volume menu/class/marine           0.5

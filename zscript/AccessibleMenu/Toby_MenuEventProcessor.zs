@@ -70,7 +70,10 @@ class Toby_MenuEventProcessor
                 if (!currentState.isSlider && !currentState.isField
                     && !currentState.isOption && !currentState.isControl)
                 {
-                    FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
+                    //Proydoha:
+                    //I can't remember why I've added this line but it is causing a bug
+                    //Commenting it for now
+                    //FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
                 }
                 if (currentState.isSaveLoad && currentState.saveGamesTotal > 0)
                 {
@@ -150,7 +153,10 @@ class Toby_MenuEventProcessor
             }
             if (isCorrectCondition)
             {
-                //System.StopAllSounds();
+                if (CVar.FindCvar("Toby_StopAllSoundsBeforePlayingNewOne").GetBool())
+                {
+                    System.StopAllSounds();
+                }
                 SoundQueue.Clear();
                 SoundQueue.AddSound(menuSoundBindingsContainer.menuSoundBindings[i].At("SoundToPlay"), -1);
                 SoundQueue.PlayQueue(0);
