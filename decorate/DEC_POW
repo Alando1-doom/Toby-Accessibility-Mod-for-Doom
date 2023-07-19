@@ -14,7 +14,7 @@ ACTOR InvulnerabilitySphere_TO : PowerupGiver
 	+INVENTORY.BIGPOWERUP
 	Inventory.MaxAmount 0
 	Powerup.Type Invulnerable
-	Powerup.Color InverseMap
+	Powerup.Color GoldMap
 	Inventory.PickupMessage "$GOTINVUL"
 	States
 	{

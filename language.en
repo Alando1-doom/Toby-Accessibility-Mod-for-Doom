@@ -56,3 +56,9 @@ ZS_EM_LABEL_CONTROLS = "Controls:";
 ZS_EM_LABEL_INFINITE_RANGE = "Set to zero for infinite range";
 ZS_EM_LABEL_REMOVE_ALL_NOT_AFFECTED = "('Remove all' actions are not affected by this setting)";
 ZS_EM_SLIDER_REMOVE_MAX_DIST = "Remove marker max distance";
+
+
+//Toby Episodes
+
+TD_EPISODE1 = "Toby Doom 1";
+TD_EPISODE2 = "Toby Doom 2";
