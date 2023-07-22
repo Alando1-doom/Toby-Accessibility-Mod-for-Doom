@@ -1,8 +1,9 @@
 GameInfo
 {
     AddEventHandlers = "SoundQueue"
-	AddEventHandlers = "ZS_MarkerHandler"
+    AddEventHandlers = "ZS_MarkerHandler"
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
-	addeventhandlers = "hitmarkershandler"
+    AddEventHandlers = "hitmarkershandler"
+    AddEventHandlers = "Toby_DropoffDetectorHandler"
 }
