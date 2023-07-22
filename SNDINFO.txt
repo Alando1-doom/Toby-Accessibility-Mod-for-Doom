@@ -211,3 +211,5 @@ teamfortress2kill	HMTF2K
 
 // Titanfall 2
 titanfall2kill		HMT2K
+
+dropoff/beacon		"sounds/DropoffDetector/DROPOFF.ogg"
