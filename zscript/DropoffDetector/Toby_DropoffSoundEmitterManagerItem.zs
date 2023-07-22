@@ -1,38 +1,4 @@
-class LineTracerGiver : EventHandler
-{
-    override void PlayerSpawned (PlayerEvent e)
-    {
-        let player = players [e.PlayerNumber].mo;
-        player.GiveInventory ("LineTracerItem", 1);
-    }
-}
-
-class ltSoundEmitter : Actor
-{
-    Default
-    {
-        +DONTSPLASH
-    }
-    states
-    {
-        spawn:
-            TNT1 A 30;
-            loop;
-        wall:
-            TNT1 A 30 A_StartSound("misc/i_pkup", CHAN_AUTO, CHANF_DEFAULT, 1.0, 10);
-            loop;
-        dropoffSpot:
-            TNT1 A 5 A_StartSound("dropoff/beacon", CHAN_AUTO, CHANF_DEFAULT, 1.0, 1);
-            loop;
-        lineSwitch:
-            TNT1 A 20;
-            TNT1 A 7 A_StartSound("misc/p_pkup", CHAN_AUTO, CHANF_DEFAULT, 1.0, 4);
-            TNT1 A 7 A_StartSound("misc/p_pkup", CHAN_AUTO, CHANF_DEFAULT, 1.0, 4);
-            loop;
-    }
-}
-
-class LineTracerItem : Inventory
+class Toby_DropoffSoundEmitterManagerItem : Inventory
 {
     default
     {
@@ -43,7 +9,7 @@ class LineTracerItem : Inventory
     Actor frontEmitter;
     override void BeginPlay()
     {
-        frontEmitter = Actor.Spawn("ltSoundEmitter",(0,0,0));
+        frontEmitter = Actor.Spawn("Toby_DropoffSoundEmitter",(0,0,0));
     }
 
     override void Tick()
@@ -51,7 +17,7 @@ class LineTracerItem : Inventory
         super.Tick();
         if(!frontEmitter)
         {
-            frontEmitter = Actor.Spawn("ltSoundEmitter", (0,0,0));
+            frontEmitter = Actor.Spawn("Toby_DropoffSoundEmitter", (0,0,0));
         }
         else
         {

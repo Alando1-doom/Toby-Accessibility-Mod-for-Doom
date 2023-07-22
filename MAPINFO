@@ -5,5 +5,5 @@ GameInfo
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
     AddEventHandlers = "hitmarkershandler"
-    AddEventHandlers = "LineTracerGiver"
+    AddEventHandlers = "Toby_DropoffDetectorHandler"
 }
