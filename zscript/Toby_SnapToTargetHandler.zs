@@ -1,20 +1,47 @@
 class Toby_SnapToTargetHandler : EventHandler
 {
+    Array<bool> playerSnappingToTarget;
+    int maxPlayers;
+    float maxDistance;
+
+    override void WorldLoaded(WorldEvent e)
+    {
+        maxPlayers = 8;
+        maxDistance = 100000;
+        int i = 0;
+        for (i = 0; i < maxPlayers; i++)
+        {
+            playerSnappingToTarget.push(false);
+        }
+    }
+
+    override void WorldTick()
+    {
+        int i = 0;
+        for (i = 0; i < maxPlayers; i++)
+        {
+            if (!playerSnappingToTarget[i]) { continue; }
+            Actor playerActor = players[consoleplayer].mo;
+            if (!playerActor) { continue; }
+            SnapToNearestShootableActor(playerActor);
+        }
+    }
+
     override void NetworkProcess(ConsoleEvent e)
     {
-        Actor playerActor = players[consoleplayer].mo;
-        if (!playerActor) { return; }
-
-        if (e.Name == "Toby_SnapToTarget")
+        if (e.Name == "Toby_SnapToTarget_KeyDown")
         {
-            SnapToNearestShootableActor(playerActor);
+            playerSnappingToTarget[consoleplayer] = true;
+        }
+        if (e.Name == "Toby_SnapToTarget_KeyUp")
+        {
+            playerSnappingToTarget[consoleplayer] = false;
         }
     }
 
     private void SnapToNearestShootableActor(Actor playerActor)
     {
         Array<Actor> foundActors;
-        float maxDistance = 100000;
         FindVisiableShootableActors(playerActor, foundActors);
         Actor closestActor = FindClosestShootableActor(playerActor, foundActors, maxDistance);
         if (!closestActor) { return; }
