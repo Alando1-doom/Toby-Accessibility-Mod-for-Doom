@@ -67,7 +67,6 @@ class Toby_MenuStaticHandler : StaticEventHandler
             || (
                 //This accounts for entering a key in keybinds menu
                 detectedChange == Toby_MenuState.MenuChanged
-                && previousMenuState.menuName == "ActionControlsMenu"
                 && currentMenuState.menuClass == "EnterKey")
             )
         {
