@@ -62,3 +62,6 @@ ZS_EM_SLIDER_REMOVE_MAX_DIST = "Remove marker max distance";
 
 TD_EPISODE1 = "Toby Doom 1";
 TD_EPISODE2 = "Toby Doom 2";
+
+TOBY_MOD_OPTIONS = "Toby Accessibility Mod Options";
+TOBY_SNAP_TO_TARGET = "Snap to target keybind";
