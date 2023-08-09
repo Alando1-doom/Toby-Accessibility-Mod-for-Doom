@@ -5,6 +5,6 @@ GameInfo
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
     AddEventHandlers = "hitmarkershandler"
-	AddEventHandlers = "Toby_SnapToTargetHandler"
+    AddEventHandlers = "Toby_SnapToTargetHandler"
     AddEventHandlers = "Toby_DropoffDetectorHandler"
 }

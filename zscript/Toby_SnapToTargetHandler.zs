@@ -21,7 +21,7 @@ class Toby_SnapToTargetHandler : EventHandler
         for (i = 0; i < maxPlayers; i++)
         {
             if (!playerSnappingToTarget[i]) { continue; }
-            Actor playerActor = players[consoleplayer].mo;
+            Actor playerActor = players[i].mo;
             if (!playerActor) { continue; }
             SnapToNearestShootableActor(playerActor);
         }
@@ -31,11 +31,11 @@ class Toby_SnapToTargetHandler : EventHandler
     {
         if (e.Name == "Toby_SnapToTarget_KeyDown")
         {
-            playerSnappingToTarget[consoleplayer] = true;
+            playerSnappingToTarget[e.Player] = true;
         }
         if (e.Name == "Toby_SnapToTarget_KeyUp")
         {
-            playerSnappingToTarget[consoleplayer] = false;
+            playerSnappingToTarget[e.Player] = false;
         }
     }
 
