@@ -209,3 +209,13 @@ OptionMenu "zs_em_markermenu_remove"
   StaticText ""
   SafeCommand "$ZS_EM_REMOVE_ALL"  , zs_em_remove_all_menu
 }
+
+AddOptionMenu "OptionsMenu"
+{
+	Submenu "$TOBY_MOD_OPTIONS", "toby_mod_options"
+}
+
+OptionMenu "toby_mod_options"
+{
+    Control "$TOBY_SNAP_TO_TARGET", "+toby_snap_to_target_keybind"
+}
