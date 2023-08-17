@@ -1,5 +1,6 @@
 user int   zs_em_MaxDistance = 500;
 user bool   Toby_Developer = false;
+user bool   Toby_Developer_MenuEvents = false;
 user bool   Toby_Developer_ControlType = false;
 user bool   Toby_Developer_MenuChangedEvents = false;
 user bool   Toby_Developer_OptionChangedEvents = false;
