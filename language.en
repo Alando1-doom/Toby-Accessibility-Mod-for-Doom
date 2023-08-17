@@ -65,3 +65,5 @@ TD_EPISODE2 = "Toby Doom 2";
 
 TOBY_MOD_OPTIONS = "Toby Accessibility Mod Options";
 TOBY_SNAP_TO_TARGET = "Snap to target keybind";
+
+TOBY_DEVELOPER_MENU_TITLE = "Toby Developer Menu";

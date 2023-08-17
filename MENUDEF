@@ -24,7 +24,7 @@ LISTMENU "MainMenu"
         StaticPatch 232, 10, "M_SKL00"
         Position 110, 56
     }
-    
+
     IfGame(Hexen)
     {
         StaticPatch 88, 0, "M_HTIC"
@@ -221,4 +221,24 @@ AddOptionMenu "OptionsMenu"
 OptionMenu "toby_mod_options"
 {
     Control "$TOBY_SNAP_TO_TARGET", "+toby_snap_to_target_keybind"
+}
+
+OptionMenu "toby_developer"
+{
+    Title "$TOBY_DEVELOPER_MENU_TITLE"
+    StaticText ""
+    StaticText "Developer CVARs", "Gold"
+    Option "Toby_Developer", "Toby_Developer", "OnOff"
+    Option "Toby_Developer_MenuEvents", "Toby_Developer_MenuEvents", "OnOff"
+    Option "Toby_Developer_ControlType", "Toby_Developer_ControlType", "OnOff"
+    Option "Toby_Developer_MenuChangedEvents", "Toby_Developer_MenuChangedEvents", "OnOff"
+    Option "Toby_Developer_OptionChangedEvents", "Toby_Developer_OptionChangedEvents", "OnOff"
+    Option "Toby_Developer_OptionValueChangedEvents", "Toby_Developer_OptionValueChangedEvents", "OnOff"
+    Option "Toby_Developer_SaveSlotChangedEvents", "Toby_Developer_SaveSlotChangedEvents", "OnOff"
+    Option "Toby_Developer_KeyPressedEvents", "Toby_Developer_KeyPressedEvents", "OnOff"
+    StaticText ""
+    StaticText "Questionable menu sound options CVARs", "Gold"
+    Option "Toby_SkipSlotWord", "Toby_SkipSlotWord", "OnOff"
+    Option "Toby_SkipTotalSlots", "Toby_SkipTotalSlots", "OnOff"
+    Option "Toby_StopAllSoundsBeforePlayingNewOne", "Toby_StopAllSoundsBeforePlayingNewOne", "OnOff"
 }
