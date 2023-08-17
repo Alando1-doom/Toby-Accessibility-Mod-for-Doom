@@ -1,6 +1,6 @@
 class Toby_MenuEventProcessor
 {
-    Toby_MenuSoundBindingsContainer menuSoundBindingsContainer;
+    Toby_SoundBindingsContainer menuSoundBindingsContainer;
     Dictionary menuStateAsDictionary;
 
     ui void Process(Toby_MenuState currentState, Toby_MenuState previousState, int detectedChange)
@@ -135,11 +135,11 @@ class Toby_MenuEventProcessor
         string eventType = GetEventTypeAsString(detectedChange);
 
         //Bad case of tight copuling?
-        for (int i = 0; i < menuSoundBindingsContainer.menuSoundBindings.Size(); i++)
+        for (int i = 0; i < menuSoundBindingsContainer.soundBindings.Size(); i++)
         {
-            if (menuSoundBindingsContainer.menuSoundBindings[i].At("EventType") != eventType) { continue; }
+            if (menuSoundBindingsContainer.soundBindings[i].At("EventType") != eventType) { continue; }
             bool isCorrectCondition = true;
-            DictionaryIterator di = DictionaryIterator.Create(menuSoundBindingsContainer.menuSoundBindings[i]);
+            DictionaryIterator di = DictionaryIterator.Create(menuSoundBindingsContainer.soundBindings[i]);
             while (di.Next())
             {
                 if (di.Key() == "EventType") { continue; }
@@ -158,14 +158,14 @@ class Toby_MenuEventProcessor
                     System.StopAllSounds();
                 }
                 SoundQueue.Clear();
-                SoundQueue.AddSound(menuSoundBindingsContainer.menuSoundBindings[i].At("SoundToPlay"), -1);
+                SoundQueue.AddSound(menuSoundBindingsContainer.soundBindings[i].At("SoundToPlay"), -1);
                 SoundQueue.PlayQueue(0);
                 break;
             }
         }
     }
 
-    ui void Init(Toby_MenuSoundBindingsContainer bindings)
+    ui void Init(Toby_SoundBindingsContainer bindings)
     {
         //Bad case of tight copuling?
         menuSoundBindingsContainer = bindings;
