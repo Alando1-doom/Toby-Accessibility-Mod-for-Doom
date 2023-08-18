@@ -244,4 +244,5 @@ OptionMenu "toby_developer"
     Option "Toby_SkipSlotWord", "Toby_SkipSlotWord", "OnOff"
     Option "Toby_SkipTotalSlots", "Toby_SkipTotalSlots", "OnOff"
     Option "Toby_StopAllSoundsBeforePlayingNewOne", "Toby_StopAllSoundsBeforePlayingNewOne", "OnOff"
+    Option "Toby_PlayMapNameAnnouncement", "Toby_PlayMapNameAnnouncement", "OnOff"
 }

@@ -14,6 +14,7 @@ user bool   Toby_Developer_MapInformation = false;
 user bool   Toby_SkipSlotWord = false;
 user bool   Toby_SkipTotalSlots = false;
 user bool   Toby_StopAllSoundsBeforePlayingNewOne = false;
+user bool   Toby_PlayMapNameAnnouncement = true;
 
 
 //Hit Marker CVAR
