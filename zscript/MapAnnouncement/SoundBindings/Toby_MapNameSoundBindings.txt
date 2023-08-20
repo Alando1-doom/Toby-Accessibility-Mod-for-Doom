@@ -1,0 +1,65 @@
+//Doom 2 version 1.9 - MD5: 25e1459ca71d321525f84628f45ca8cd
+//Map01 - Entryway
+{"Checksum":"3c9902e376cca1e9c3be8763bdc21df5", "SoundToPlay":"maps/doom2/map01"}
+//Map02 - Underhalls
+{"Checksum":"ab24ae6e2cb13cbdd04600a4d37f9189", "SoundToPlay":"maps/doom2/map02"}
+//Map03 - The Gantlet
+{"Checksum":"5e8679670469f92e15cf4219b5b98fef", "SoundToPlay":"maps/doom2/map03"}
+//Map04 - The Focus
+{"Checksum":"cec791136a83eec4b91d39718bdf9d82", "SoundToPlay":"maps/doom2/map04"}
+//Map05 - The Waste Tunnels
+{"Checksum":"9e061ad7fbcd7fad968c976cb4aa3b9d", "SoundToPlay":"maps/doom2/map05"}
+//Map06 - The Crusher
+{"Checksum":"434575dcb650b4efc912efc0782c7acc", "SoundToPlay":"maps/doom2/map06"}
+//Map07 - Dead Simple
+{"Checksum":"291f24417fb3dd411339ae82ef9b3597", "SoundToPlay":"maps/doom2/map07"}
+//Map08 - Tricks and Traps
+{"Checksum":"66c46385eb1a23d60839d1532522076b", "SoundToPlay":"maps/doom2/map08"}
+//Map09 - The Pit
+{"Checksum":"82256f04136adb2413bfc604b5f6adf3", "SoundToPlay":"maps/doom2/map09"}
+//Map10 - Refueling Base
+{"Checksum":"6c620f43705bec0abbabbf46ac3e62d2", "SoundToPlay":"maps/doom2/map10"}
+//Map11 - 'O' of Destruction!
+{"Checksum":"73d9e03cee7bf1a97efd2ead86688ef8", "SoundToPlay":"maps/doom2/map11"}
+//Map12 -  The Factory
+{"Checksum":"1af4dec2627360a55b3eb397bc15c39d", "SoundToPlay":"maps/doom2/map12"}
+//Map13 - Downtown
+{"Checksum":"fba6547b9fd44e95671a923a066e516f", "SoundToPlay":"maps/doom2/map13"}
+//Map14 - The Inmost Dens
+{"Checksum":"5bda34da60c0530794cc1ea2da017976", "SoundToPlay":"maps/doom2/map14"}
+//Map15 - Industrial Zone
+{"Checksum":"1a540ba717bf9ec85f8522594c352f2a", "SoundToPlay":"maps/doom2/map15"}
+//Map16 - Suburbs
+{"Checksum":"6b60f37b91309dff1cdf02e5e476210d", "SoundToPlay":"maps/doom2/map16"}
+//Map17 - Tenements
+{"Checksum":"e1cfd5c6e60c3b6c30f8b95fc287e9fe", "SoundToPlay":"maps/doom2/map17"}
+//Map18 - The Courtyard
+{"Checksum":"0d491365c1b88b7d1b603890100dd03e", "SoundToPlay":"maps/doom2/map18"}
+//Map19 - The Citadel
+{"Checksum":"b5506b1e8f2fc272ad0c77b9e0df5491", "SoundToPlay":"maps/doom2/map19"}
+//Map20 - Gotcha!
+{"Checksum":"8898f5ec9cbdcd98019a1bc1bf892a8a", "SoundToPlay":"maps/doom2/map20"}
+//Map21 - Nirvana
+{"Checksum":"ebdac00e9d25d884b2c8f4b1f0390539", "SoundToPlay":"maps/doom2/map21"}
+//Map22 - The Catacombs
+{"Checksum":"4aa9b3ce449fb614497756e96509f096", "SoundToPlay":"maps/doom2/map22"}
+//Map23 - Barrels O' Fun
+{"Checksum":"63f25c97d5b1cc174efea7f6af499960", "SoundToPlay":"maps/doom2/map23"}
+//Map24 - The Chasm
+{"Checksum":"3eff15c64a03b36e8e47926c6df9ef70", "SoundToPlay":"maps/doom2/map24"}
+//Map25 - Bloodfalls
+{"Checksum":"94893a0dc429a22adc4b3a73da537e16", "SoundToPlay":"maps/doom2/map25"}
+//Map26 - The Abandoned Mines
+{"Checksum":"1037366026aab4b0cf11bab27db90e4e", "SoundToPlay":"maps/doom2/map26"}
+//Map27 - Monster Condo
+{"Checksum":"110f84de041052b59307faf0293e6bc0", "SoundToPlay":"maps/doom2/map27"}
+//Map28 - The Spirit World
+{"Checksum":"84bb2c8ed2343c91136b87f1832e7ca5", "SoundToPlay":"maps/doom2/map28"}
+//Map29 - The Living End
+{"Checksum":"20251eda21b2f2ecf6ff5b8bbc00b26c", "SoundToPlay":"maps/doom2/map29"}
+//Map30 - Icon of Sin
+{"Checksum":"5eecd88f4491f516d590ce4bbf45f532", "SoundToPlay":"maps/doom2/map30"}
+//Map31 - Wolfenstein
+{"Checksum":"3ff94e27423f91c1585b3396f0c03459", "SoundToPlay":"maps/doom2/map31"}
+//Map32 - Grosse
+{"Checksum":"aa4ca3fc891d13821accabd836e29eb5", "SoundToPlay":"maps/doom2/map32"}

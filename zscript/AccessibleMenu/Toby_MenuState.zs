@@ -70,7 +70,7 @@ class Toby_MenuState
             && otherState.menuClass == "ListMenu"
             && otherState.menuName == "Skillmenu")
         {
-            Toby_Logger.Message("EventType : GameStarted", "Toby_Developer");
+            Toby_Logger.Message("EventType : GameStarted", "Toby_Developer_MenuEvents");
             return GameStarted;
         }
         //This is kind of a wild assumption
@@ -79,7 +79,7 @@ class Toby_MenuState
             && otherState.menuClass == "TextEnterMenu"
             && otherState.menuName == "null")
         {
-            Toby_Logger.Message("EventType : GameSaved", "Toby_Developer");
+            Toby_Logger.Message("EventType : GameSaved", "Toby_Developer_MenuEvents");
             return GameSaved;
         }
         if (menuClass == "null"
@@ -87,20 +87,20 @@ class Toby_MenuState
             && otherState.menuClass == "LoadMenu"
             && otherState.menuName == "null")
         {
-            Toby_Logger.Message("EventType : GameLoaded", "Toby_Developer");
+            Toby_Logger.Message("EventType : GameLoaded", "Toby_Developer_MenuEvents");
             return GameLoaded;
         }
         if (menuClass == "null"
             && menuName == "null"
             && (otherState.menuClass != "null" || otherState.menuName != "null"))
         {
-                Toby_Logger.Message("EventType : MenuDismissed", "Toby_Developer");
+                Toby_Logger.Message("EventType : MenuDismissed", "Toby_Developer_MenuEvents");
                 return MenuDismissed;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
         {
-            Toby_Logger.Message("EventType : MenuChanged", "Toby_Developer");
+            Toby_Logger.Message("EventType : MenuChanged", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousMenuClass : "..otherState.menuClass.." -> CurrentMenuClass : "..menuClass, "Toby_Developer_MenuChangedEvents");
             Toby_Logger.Message("PreviousMenuName : "..otherState.menuName.." -> CurrentMenuName : "..menuName, "Toby_Developer_MenuChangedEvents");
             return MenuChanged;
@@ -113,7 +113,7 @@ class Toby_MenuState
             || otherState.mItemOptionName != mItemOptionName
             || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized)
         {
-            Toby_Logger.Message("EventType : OptionChanged", "Toby_Developer");
+            Toby_Logger.Message("EventType : OptionChanged", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousMenuItemListSelectableString : "..otherState.mItemListSelectableString.." -> CurrentMenuItemListSelectableString : "..mItemListSelectableString, "Toby_Developer_OptionChangedEvents");
             Toby_Logger.Message("PreviousMenuItemListTextString : "..otherState.mItemListTextString.." -> CurrentMenuItemListTextString : "..mItemListTextString, "Toby_Developer_OptionChangedEvents");
             Toby_Logger.Message("PreviousMenuItemListTextStringLocalized : "..otherState.mItemListTextStringLocalized.." -> CurrentMenuItemListTextStringLocalized : "..mItemListTextStringLocalized, "Toby_Developer_OptionChangedEvents");
@@ -125,7 +125,7 @@ class Toby_MenuState
         if (otherState.mItemOptionValue != mItemOptionValue
             || otherState.mItemOptionValueLocalized != mItemOptionValueLocalized)
         {
-            Toby_Logger.Message("EventType : OptionValueChanged", "Toby_Developer");
+            Toby_Logger.Message("EventType : OptionValueChanged", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousMenuItemOptionValue : "..otherState.mItemOptionValue.." -> CurrentMenuItemOptionValue : "..mItemOptionValue, "Toby_Developer_OptionValueChangedEvents");
             Toby_Logger.Message("PreviousMenuItemOptionValueLocalized : "..otherState.mItemOptionValueLocalized.." -> CurrentMenuItemOptionValueLocalized : "..mItemOptionValueLocalized, "Toby_Developer_OptionValueChangedEvents");
             return OptionValueChanged;
@@ -133,7 +133,7 @@ class Toby_MenuState
 
         if (otherState.saveGameSlot != saveGameSlot)
         {
-            Toby_Logger.Message("EventType : SaveSlotChanged", "Toby_Developer");
+            Toby_Logger.Message("EventType : SaveSlotChanged", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousIsSaveLoad : "..otherState.isSaveLoad.." -> CurrentIsSaveLoad : "..isSaveLoad, "Toby_Developer_SaveSlotChangedEvents");
             Toby_Logger.Message("PreviousIsNewSlot : "..otherState.isNewSlot.." -> CurrentIsNewSlot : "..isNewSlot, "Toby_Developer_SaveSlotChangedEvents");
             Toby_Logger.Message("PreviousIsQuicksave : "..otherState.isQuicksave.." -> CurrentIsQuicksave : "..isQuicksave, "Toby_Developer_SaveSlotChangedEvents");
@@ -148,7 +148,7 @@ class Toby_MenuState
 
         if (otherState.lastKeyPressed != lastKeyPressed)
         {
-            Toby_Logger.Message("EventType : KeyPressed", "Toby_Developer");
+            Toby_Logger.Message("EventType : KeyPressed", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousLastKeyPressed : "..otherState.lastKeyPressed.." -> CurrentLastKeyPressed : "..lastKeyPressed, "Toby_Developer_KeyPressedEvents");
             return KeyPressed;
         }

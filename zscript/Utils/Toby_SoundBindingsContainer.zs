@@ -1,13 +1,14 @@
-class Toby_MenuSoundBindingsContainer
+class Toby_SoundBindingsContainer
 {
-    Array<Dictionary> menuSoundBindings;
+    Array<Dictionary> soundBindings;
 
-    ui void Init()
+    static ui Toby_SoundBindingsContainer Create(string lumpName)
     {
+        Toby_SoundBindingsContainer container = new("Toby_SoundBindingsContainer");
         Array<String> splitTokens;
         int lump = -1;
-		while ((lump = Toby_WadsUtils.FindLump('Toby_MenuSoundBindings', lump + 1)) != -1)
-		{
+        while ((lump = Toby_WadsUtils.FindLump(lumpName, lump + 1)) != -1)
+        {
             Toby_Logger.Message("Lump ["..lump.."] has full name '"..Wads.GetLumpFullName(lump).."'", "Toby_Developer");
             string lumpContent = Wads.ReadLump(lump);
             splitTokens.Clear();
@@ -26,9 +27,9 @@ class Toby_MenuSoundBindingsContainer
                 //Replace sounds if exactly the same condition definition already exists:
                 Dictionary soundBinding = Dictionary.FromString(splitTokens[i]);
                 bool sameConditionFound = false;
-                for (int j = 0; j < menuSoundBindings.Size(); j++)
+                for (int j = 0; j < container.soundBindings.Size(); j++)
                 {
-                    DictionaryIterator di = DictionaryIterator.Create(menuSoundBindings[j]);
+                    DictionaryIterator di = DictionaryIterator.Create(container.soundBindings[j]);
                     bool sameCondition = true;
                     while (di.Next())
                     {
@@ -46,17 +47,18 @@ class Toby_MenuSoundBindingsContainer
                     }
                     if (sameCondition)
                     {
-                        menuSoundBindings[j] = soundBinding;
+                        container.soundBindings[j] = soundBinding;
                         sameConditionFound = true;
                         break;
                     }
                 }
                 if (!sameConditionFound)
                 {
-                    menuSoundBindings.push(soundBinding);
+                    container.soundBindings.push(soundBinding);
                 }
             }
-            Toby_Logger.Message("Menu sound bindings added: "..menuSoundBindings.Size(), "Toby_Developer");
+            Toby_Logger.Message("Sound bindings added: "..container.soundBindings.Size(), "Toby_Developer");
         }
+        return container;
     }
 }
