@@ -4,6 +4,7 @@ GameInfo
     AddEventHandlers = "ZS_MarkerHandler"
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_MapAnnouncementStaticHandler"
+    AddEventHandlers = "Toby_PlayerStatusCheckHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
     AddEventHandlers = "hitmarkershandler"
     AddEventHandlers = "Toby_SnapToTargetHandler"
