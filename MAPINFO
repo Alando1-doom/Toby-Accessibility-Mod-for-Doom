@@ -1,6 +1,6 @@
 GameInfo
 {
-    AddEventHandlers = "SoundQueue"
+    AddEventHandlers = "Toby_SoundQueueStaticHandler"
     AddEventHandlers = "ZS_MarkerHandler"
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_MapAnnouncementStaticHandler"

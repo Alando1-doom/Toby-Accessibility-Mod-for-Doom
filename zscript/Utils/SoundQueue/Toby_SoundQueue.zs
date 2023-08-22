@@ -1,6 +1,6 @@
-class SoundQueue : StaticEventHandler
+class Toby_SoundQueueStaticHandler : StaticEventHandler
 {
-    ui Array<QueuedSound> queue;
+    ui Array<Toby_QueuedSound> queue;
     ui int waitTime;
     ui bool playing;
 
@@ -32,7 +32,7 @@ class SoundQueue : StaticEventHandler
 
     ui static void Clear()
     {
-        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         for (int i = 0; i < handler.queue.Size(); i++)
         {
             handler.queue[i].Destroy();
@@ -42,19 +42,19 @@ class SoundQueue : StaticEventHandler
 
     ui static void AddSound(string sound, int pause)
     {
-        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));
-        handler.queue.push(QueuedSound.Create(sound, pause));
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
+        handler.queue.push(Toby_QueuedSound.Create(sound, pause));
     }
 
     ui static void UnshiftSound(string sound, int pause)
     {
-        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));
-        handler.queue.Insert(0, QueuedSound.Create(sound, pause));
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
+        handler.queue.Insert(0, Toby_QueuedSound.Create(sound, pause));
     }
 
     ui static void PlayQueue(int initialPause)
     {
-        SoundQueue handler = SoundQueue(StaticEventHandler.Find("SoundQueue"));
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         handler.waitTime = initialPause * 1000 / GameTicRate;
         handler.playing = true;
     }

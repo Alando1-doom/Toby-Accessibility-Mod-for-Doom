@@ -1,4 +1,4 @@
-class OrdinalToVoice ui
+class Toby_OrdinalToVoice ui
 {
     ui static void ConvertFloatAndAddToQueue(float number)
     {
@@ -15,7 +15,7 @@ class OrdinalToVoice ui
         if (secondPart == "0" && skipZeroAfterDot == false)
         {
             UnshiftSingleDigitToQueue(secondPart.Mid(0, 1));
-            SoundQueue.UnshiftSound("numbers/dot", -1);
+            Toby_SoundQueueStaticHandler.UnshiftSound("numbers/dot", -1);
         }
         else if (secondPart != "0")
         {
@@ -23,7 +23,7 @@ class OrdinalToVoice ui
             {
                 UnshiftSingleDigitToQueue(secondPart.Mid(i, 1));
             }
-            SoundQueue.UnshiftSound("numbers/dot", -1);
+            Toby_SoundQueueStaticHandler.UnshiftSound("numbers/dot", -1);
         }
         ConvertAndAddToQueue(firstPart.ToInt());
     }
@@ -66,7 +66,7 @@ class OrdinalToVoice ui
                 }
                 if (numberSegment == "000" && power == 0)
                 {
-                    SoundQueue.UnshiftSound("numbers/000", -1);
+                    Toby_SoundQueueStaticHandler.UnshiftSound("numbers/000", -1);
                     return;
                 }
             }
@@ -74,61 +74,61 @@ class OrdinalToVoice ui
         } while (lastDigits == false);
         if (hasMinus)
         {
-            SoundQueue.UnshiftSound("numbers/minus", -1);
+            Toby_SoundQueueStaticHandler.UnshiftSound("numbers/minus", -1);
         }
     }
 
     ui static void UnshiftPowers(int digit)
     {
-        if (digit == 1) SoundQueue.UnshiftSound("numbers/thousand", -1);
-        if (digit == 2) SoundQueue.UnshiftSound("numbers/million", -1);
-        if (digit == 3) SoundQueue.UnshiftSound("numbers/billion", -1);
-        if (digit == 4) SoundQueue.UnshiftSound("numbers/trillion", -1);
+        if (digit == 1) Toby_SoundQueueStaticHandler.UnshiftSound("numbers/thousand", -1);
+        if (digit == 2) Toby_SoundQueueStaticHandler.UnshiftSound("numbers/million", -1);
+        if (digit == 3) Toby_SoundQueueStaticHandler.UnshiftSound("numbers/billion", -1);
+        if (digit == 4) Toby_SoundQueueStaticHandler.UnshiftSound("numbers/trillion", -1);
     }
 
     ui static void UnshiftSingleDigitToQueue(string digit)
     {
-        SoundQueue.UnshiftSound(GetSingleOrdinalDigitSoundName(digit), -1);
+        Toby_SoundQueueStaticHandler.UnshiftSound(GetSingleOrdinalDigitSoundName(digit), -1);
     }
 
     ui static void AddSingleDigitToQueue(string digit)
     {
-        SoundQueue.AddSound(GetSingleOrdinalDigitSoundName(digit), -1);
+        Toby_SoundQueueStaticHandler.AddSound(GetSingleOrdinalDigitSoundName(digit), -1);
     }
 
     ui static void UnshiftDoubleDigits(string doubleDigits)
     {
-        if (doubleDigits == "10") SoundQueue.UnshiftSound("numbers/10th", -1);
-        if (doubleDigits == "11") SoundQueue.UnshiftSound("numbers/11th", -1);
-        if (doubleDigits == "12") SoundQueue.UnshiftSound("numbers/12th", -1);
-        if (doubleDigits == "13") SoundQueue.UnshiftSound("numbers/13th", -1);
-        if (doubleDigits == "14") SoundQueue.UnshiftSound("numbers/14th", -1);
-        if (doubleDigits == "15") SoundQueue.UnshiftSound("numbers/15th", -1);
-        if (doubleDigits == "16") SoundQueue.UnshiftSound("numbers/16th", -1);
-        if (doubleDigits == "17") SoundQueue.UnshiftSound("numbers/17th", -1);
-        if (doubleDigits == "18") SoundQueue.UnshiftSound("numbers/18th", -1);
-        if (doubleDigits == "19") SoundQueue.UnshiftSound("numbers/19th", -1);
-        if (doubleDigits == "20") SoundQueue.UnshiftSound("numbers/20th", -1);
-        if (doubleDigits == "30") SoundQueue.UnshiftSound("numbers/30th", -1);
-        if (doubleDigits == "40") SoundQueue.UnshiftSound("numbers/40th", -1);
-        if (doubleDigits == "50") SoundQueue.UnshiftSound("numbers/50th", -1);
-        if (doubleDigits == "60") SoundQueue.UnshiftSound("numbers/60th", -1);
-        if (doubleDigits == "70") SoundQueue.UnshiftSound("numbers/70th", -1);
-        if (doubleDigits == "80") SoundQueue.UnshiftSound("numbers/80th", -1);
-        if (doubleDigits == "90") SoundQueue.UnshiftSound("numbers/90th", -1);
+        if (doubleDigits == "10") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/10th", -1);
+        if (doubleDigits == "11") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/11th", -1);
+        if (doubleDigits == "12") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/12th", -1);
+        if (doubleDigits == "13") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/13th", -1);
+        if (doubleDigits == "14") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/14th", -1);
+        if (doubleDigits == "15") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/15th", -1);
+        if (doubleDigits == "16") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/16th", -1);
+        if (doubleDigits == "17") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/17th", -1);
+        if (doubleDigits == "18") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/18th", -1);
+        if (doubleDigits == "19") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/19th", -1);
+        if (doubleDigits == "20") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/20th", -1);
+        if (doubleDigits == "30") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/30th", -1);
+        if (doubleDigits == "40") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/40th", -1);
+        if (doubleDigits == "50") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/50th", -1);
+        if (doubleDigits == "60") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/60th", -1);
+        if (doubleDigits == "70") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/70th", -1);
+        if (doubleDigits == "80") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/80th", -1);
+        if (doubleDigits == "90") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/90th", -1);
         if (doubleDigits.Mid(1, 1) != "0" && doubleDigits.Mid(0, 1) != "1")
         {
             UnshiftSingleDigitToQueue(doubleDigits.Mid(1, 1));
             if (doubleDigits.Mid(0, 1) != "0")
             {
-                if (doubleDigits.Mid(0, 1) == "2") SoundQueue.UnshiftSound("numbers/020", -1);
-                if (doubleDigits.Mid(0, 1) == "3") SoundQueue.UnshiftSound("numbers/030", -1);
-                if (doubleDigits.Mid(0, 1) == "4") SoundQueue.UnshiftSound("numbers/040", -1);
-                if (doubleDigits.Mid(0, 1) == "5") SoundQueue.UnshiftSound("numbers/050", -1);
-                if (doubleDigits.Mid(0, 1) == "6") SoundQueue.UnshiftSound("numbers/060", -1);
-                if (doubleDigits.Mid(0, 1) == "7") SoundQueue.UnshiftSound("numbers/070", -1);
-                if (doubleDigits.Mid(0, 1) == "8") SoundQueue.UnshiftSound("numbers/080", -1);
-                if (doubleDigits.Mid(0, 1) == "9") SoundQueue.UnshiftSound("numbers/090", -1);
+                if (doubleDigits.Mid(0, 1) == "2") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/020", -1);
+                if (doubleDigits.Mid(0, 1) == "3") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/030", -1);
+                if (doubleDigits.Mid(0, 1) == "4") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/040", -1);
+                if (doubleDigits.Mid(0, 1) == "5") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/050", -1);
+                if (doubleDigits.Mid(0, 1) == "6") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/060", -1);
+                if (doubleDigits.Mid(0, 1) == "7") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/070", -1);
+                if (doubleDigits.Mid(0, 1) == "8") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/080", -1);
+                if (doubleDigits.Mid(0, 1) == "9") Toby_SoundQueueStaticHandler.UnshiftSound("numbers/090", -1);
             }
         }
     }
@@ -141,12 +141,12 @@ class OrdinalToVoice ui
             UnshiftDoubleDigits(doubleDigits);
             if (!lastDigits)
             {
-                SoundQueue.UnshiftSound("numbers/and", -1);
+                Toby_SoundQueueStaticHandler.UnshiftSound("numbers/and", -1);
             }
         }
         if (tripleDigits.Mid(0, 1) != "0")
         {
-            SoundQueue.UnshiftSound("numbers/100", -1);
+            Toby_SoundQueueStaticHandler.UnshiftSound("numbers/100", -1);
             UnshiftSingleDigitToQueue(tripleDigits.Mid(0, 1));
         }
     }
