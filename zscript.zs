@@ -1,12 +1,14 @@
 version "4.6"
 
-#include "zscript/SoundQueue.zs"
-#include "zscript/QueuedSound.zs"
-#include "zscript/NumberToVoice.zs"
-#include "zscript/StringToVoice.zs"
-#include "zscript/OrdinalToVoice.zs"
+//Sound queue utils
+#include "zscript/Utils/SoundQueue/Toby_SoundQueue.zs"
+#include "zscript/Utils/SoundQueue/Toby_QueuedSound.zs"
+#include "zscript/Utils/SoundQueue/Toby_NumberToVoice.zs"
+#include "zscript/Utils/SoundQueue/Toby_StringToVoice.zs"
+#include "zscript/Utils/SoundQueue/Toby_OrdinalToVoice.zs"
+#include "zscript/Utils/SoundQueue/Toby_MonthToVoice.zs"
+
 #include "zscript/ProcessedMenuEvent.zs"
-#include "zscript/MonthToVoice.zs"
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"
 #include "zscript/Toby_MenuStaticHandler.zs"
