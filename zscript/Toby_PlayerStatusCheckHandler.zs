@@ -63,7 +63,7 @@ class Toby_PlayerStatusCheckHandler: EventHandler
             for (int i = 0; i < conditions.Size(); i++)
             {
                 Class<Ammo> currentWeaponPrimaryAmmoClass = player.ReadyWeapon.AmmoType1;
-                Inventory ammo = playerActor.FindInventory(currentWeaponAmmo);
+                Inventory ammo = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
                 if (conditions[i].Evaluate(ammo.amount, ammo.maxAmount))
                 {
                     string soundToPlay = String.format(conditions[i].soundToPlay, weaponSoundName);
