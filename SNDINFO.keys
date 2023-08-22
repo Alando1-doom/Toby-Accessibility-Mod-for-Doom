@@ -1,0 +1,14 @@
+ann/redcard         "sounds/Keys/RedKeycard.ogg"
+ann/redskull        "sounds/Keys/RedSkull.ogg"
+ann/bluecard        "sounds/Keys/BlueKeycard.ogg"
+ann/blueskull       "sounds/Keys/BlueSkull.ogg"
+ann/yellowcard      "sounds/Keys/YellowKeycard.ogg"
+ann/yellowskull     "sounds/Keys/YellowSkull.ogg"
+ann/nokey           "sounds/Keys/NoKeyBeep.wav"
+
+misc/keycard        "sounds/Keys/GetKeycard.ogg"
+misc/skullkey       "sounds/Keys/GetSkull.wav"
+misc/keytry         "sounds/Keys/KeyIsRequired.ogg"
+
+$rolloff misc/key   linear  96 384
+misc/key            "sounds/Keys/KeyBeep.wav"
