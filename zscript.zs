@@ -1,7 +1,7 @@
 version "4.6"
 
 //Sound queue utils
-#include "zscript/Utils/SoundQueue/Toby_SoundQueue.zs"
+#include "zscript/Utils/SoundQueue/Toby_SoundQueueStaticHandler.zs"
 #include "zscript/Utils/SoundQueue/Toby_QueuedSound.zs"
 #include "zscript/Utils/SoundQueue/Toby_NumberToVoice.zs"
 #include "zscript/Utils/SoundQueue/Toby_StringToVoice.zs"
