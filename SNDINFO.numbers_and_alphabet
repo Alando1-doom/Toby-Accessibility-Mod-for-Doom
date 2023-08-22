@@ -79,8 +79,6 @@ month/october   "sounds/Months/10_october.ogg"
 month/november  "sounds/Months/11_november.ogg"
 month/december  "sounds/Months/12_december.ogg"
 
-//Alphabet downloaded from this URL: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp
-//This is first URL from Google that I've got with alphabet in one archive
 alphabet/A       "sounds/Alphabet/A.ogg"
 alphabet/B       "sounds/Alphabet/B.ogg"
 alphabet/C       "sounds/Alphabet/C.ogg"
