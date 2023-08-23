@@ -8,12 +8,16 @@ version "4.6"
 #include "zscript/Utils/SoundQueue/Toby_OrdinalToVoice.zs"
 #include "zscript/Utils/SoundQueue/Toby_MonthToVoice.zs"
 
+//Player status checker
+#include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
+#include "zscript/StatusChecker/Toby_HealthChecker.zs"
+#include "zscript/StatusChecker/Toby_AmmoChecker.zs"
+#include "zscript/Toby_PlayerStatusCheckHandler.zs"
+
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"
 #include "zscript/Toby_MenuStaticHandler.zs"
 #include "zscript/Toby_MapAnnouncementStaticHandler.zs"
-#include "zscript/Toby_PlayerStatusCheckHandler.zs"
-#include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
 #include "zscript/Toby_TitleScreenHandler.zs"
 #include "zscript/AccessibleMenu/Toby_MenuState.zs"
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
