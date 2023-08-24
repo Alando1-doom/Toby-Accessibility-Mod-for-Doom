@@ -13,7 +13,7 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_HealthChecker.zs"
 #include "zscript/StatusChecker/Toby_AmmoChecker.zs"
 #include "zscript/StatusChecker/Toby_KeyChecker.zs"
-#include "zscript/Toby_PlayerStatusCheckHandler.zs"
+#include "zscript/Toby_PlayerStatusCheckStaticHandler.zs"
 
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"
