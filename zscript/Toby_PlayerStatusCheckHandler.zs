@@ -1,7 +1,19 @@
 //Original ACS implementation by Jarewill
 
-class Toby_PlayerStatusCheckHandler: EventHandler
+class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
 {
+    ui bool isNotFirstRun;
+    ui Toby_SoundBindingsContainer keysSoundBindingsContainer;
+
+    override void UITick()
+    {
+        if (!isNotFirstRun)
+        {
+            isNotFirstRun = true;
+            keysSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_KeyNameSoundBindings");
+        }
+    }
+
     override void InterfaceProcess(ConsoleEvent e)
     {
         PlayerInfo player = players[consoleplayer];
@@ -14,6 +26,10 @@ class Toby_PlayerStatusCheckHandler: EventHandler
         if (e.Name == "Toby_CheckAmmoInterface")
         {
             Toby_AmmoChecker.CheckAmmoLegacy(player);
+        }
+        if (e.Name == "Toby_CheckKeysInterface")
+        {
+            Toby_KeyChecker.CheckKeys(player, keysSoundBindingsContainer);
         }
     }
 
@@ -30,6 +46,10 @@ class Toby_PlayerStatusCheckHandler: EventHandler
         if (e.Name == "Toby_CheckAmmo")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckAmmoInterface");
+        }
+        if (e.Name == "Toby_CheckKeys")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckKeysInterface");
         }
     }
 }
