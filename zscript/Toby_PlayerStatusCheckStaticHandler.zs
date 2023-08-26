@@ -25,7 +25,14 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (!player.mo) { return; }
         if (e.Name == "Toby_CheckHealthInterface")
         {
-            Toby_HealthChecker.CheckHealthLegacy(player);
+            if (CVar.FindCvar("Toby_UseLegacyHealthChecker").GetBool())
+            {
+                Toby_HealthChecker.CheckHealthLegacy(player);
+            }
+            else
+            {
+                Toby_HealthChecker.CheckHealth(player);
+            }
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {

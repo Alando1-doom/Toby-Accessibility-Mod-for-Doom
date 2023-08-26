@@ -16,6 +16,7 @@ user bool   Toby_SkipTotalSlots = false;
 user bool   Toby_StopAllSoundsBeforePlayingNewOne = false;
 user bool   Toby_PlayMapNameAnnouncement = true;
 user bool   Toby_UseLegacyAmmoChecker = false;
+user bool   Toby_UseLegacyHealthChecker = false;
 
 
 //Hit Marker CVAR
