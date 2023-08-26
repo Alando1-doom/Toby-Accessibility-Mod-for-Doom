@@ -20,17 +20,17 @@ defaultbind R "pukename TurnCompass 0"
 //Key Checker
 
 addkeysection "Toby Options" TobyAcc
-addmenukey "Check Keys" "pukename CheckKeys"
-defaultbind K "pukename CheckKeys"
+addmenukey "Check Keys" "netevent Toby_CheckKeys"
+defaultbind K "netevent Toby_CheckKeys"
 
 
 //Stat Checker
 
 addkeysection "Status Checker Options" CheckMod
-addmenukey "Check Health Stats" "pukename HealthScript"
-defaultbind H "pukename HealthScript"
-addmenukey "Check Ammo Stats" "pukename AmmoScript"
-defaultbind B "pukename AmmoScript"
+addmenukey "Check Health Stats" "netevent Toby_CheckHealth"
+defaultbind H "netevent Toby_CheckHealth"
+addmenukey "Check Ammo Stats" "netevent Toby_CheckAmmo"
+defaultbind B "netevent Toby_CheckAmmo"
 
 
 //God Mode Hotkey
