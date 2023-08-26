@@ -7,6 +7,7 @@ class Toby_KeyChecker
         Actor playerActor = player.mo;
 
         Toby_SoundQueueStaticHandler.Clear();
+        bool hasAnyKey = false;
         for (int i = 0; i < keysSoundBindings.soundBindings.Size(); i++)
         {
             string keyClassName = keysSoundBindings.soundBindings[i].At("ActorClass");
@@ -14,7 +15,12 @@ class Toby_KeyChecker
             {
                 string soundName = keysSoundBindings.soundBindings[i].At("SoundToPlay");
                 Toby_SoundQueueStaticHandler.AddSound(soundName, -1);
+                hasAnyKey = true;
             }
+        }
+        if (!hasAnyKey)
+        {
+            Toby_SoundQueueStaticHandler.AddSound("ann/nokey", -1);
         }
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
