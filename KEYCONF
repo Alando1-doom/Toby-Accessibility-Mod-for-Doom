@@ -28,6 +28,7 @@ defaultbind K "netevent Toby_CheckKeys"
 
 addkeysection "Status Checker Options" CheckMod
 addmenukey "Check Health Stats" "netevent Toby_CheckHealth"
+addmenukey "Check Armor Stats" "netevent Toby_CheckArmor"
 defaultbind H "netevent Toby_CheckHealth"
 addmenukey "Check Ammo Stats" "netevent Toby_CheckAmmo"
 defaultbind B "netevent Toby_CheckAmmo"
