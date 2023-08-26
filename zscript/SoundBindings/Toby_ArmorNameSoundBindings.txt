@@ -1,0 +1,7 @@
+{"ActorClass":"None", "SoundToPlay":"ann/nokey"}
+
+//Toby
+{"ActorClass":"ArmorBonus_TO", "SoundToPlay":"ann/armorbonus"}
+{"ActorClass":"GreenArmor_TO", "SoundToPlay":"ann/armor"}
+{"ActorClass":"BlueArmor_TO", "SoundToPlay":"ann/armor2"}
+{"ActorClass":"BlueArmorForMegasphere_TO", "SoundToPlay":"ann/armor2"}

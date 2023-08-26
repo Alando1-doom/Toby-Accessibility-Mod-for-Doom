@@ -6,6 +6,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
     ui Toby_SoundBindingsContainer keysSoundBindingsContainer;
     ui Toby_SoundBindingsContainer weaponsSoundBindingsContainer;
     ui Toby_SoundBindingsContainer ammoSoundBindingsContainer;
+    ui Toby_SoundBindingsContainer armorSoundBindingsContainer;
 
     override void UITick()
     {
@@ -15,6 +16,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             keysSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_KeyNameSoundBindings");
             weaponsSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_WeaponNameSoundBindings");
             ammoSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_AmmoNameSoundBindings");
+            armorSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_ArmorNameSoundBindings");
         }
     }
 
@@ -33,6 +35,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             {
                 Toby_HealthChecker.CheckHealth(player);
             }
+        }
+        if (e.Name == "Toby_CheckArmorInterface")
+        {
+            Toby_ArmorChecker.CheckArmor(player, armorSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {
@@ -60,6 +66,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (e.Name == "Toby_CheckHealth")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckHealthInterface");
+        }
+        if (e.Name == "Toby_CheckArmor")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckArmorInterface");
         }
         if (e.Name == "Toby_CheckAmmo")
         {
