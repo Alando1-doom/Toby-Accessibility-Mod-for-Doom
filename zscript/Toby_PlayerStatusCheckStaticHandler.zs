@@ -4,6 +4,8 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
 {
     ui bool isNotFirstRun;
     ui Toby_SoundBindingsContainer keysSoundBindingsContainer;
+    ui Toby_SoundBindingsContainer weaponsSoundBindingsContainer;
+    ui Toby_SoundBindingsContainer ammoSoundBindingsContainer;
 
     override void UITick()
     {
@@ -11,6 +13,8 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             isNotFirstRun = true;
             keysSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_KeyNameSoundBindings");
+            weaponsSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_WeaponNameSoundBindings");
+            ammoSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_AmmoNameSoundBindings");
         }
     }
 
@@ -25,7 +29,14 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {
-            Toby_AmmoChecker.CheckAmmoLegacy(player);
+            if (CVar.FindCvar("Toby_UseLegacyAmmoChecker").GetBool())
+            {
+                Toby_AmmoChecker.CheckAmmoLegacy(player);
+            }
+            else
+            {
+                Toby_AmmoChecker.CheckAmmo(player, weaponsSoundBindingsContainer, ammoSoundBindingsContainer);
+            }
         }
         if (e.Name == "Toby_CheckKeysInterface")
         {

@@ -1,0 +1,21 @@
+//Toby
+{"ActorClass":"Fist_TO", "SoundToPlay":"ann/fist"}
+{"ActorClass":"Chainsaw_TO", "SoundToPlay":"ann/chainsaw"}
+{"ActorClass":"Pistol_TO", "SoundToPlay":"ann/pistol"}
+{"ActorClass":"Shotgun_TO", "SoundToPlay":"ann/shotgun"}
+{"ActorClass":"SuperShotgun_TO", "SoundToPlay":"ann/ssg"}
+{"ActorClass":"Chaingun_TO", "SoundToPlay":"ann/chaingun"}
+{"ActorClass":"RocketLauncher_TO", "SoundToPlay":"ann/rlauncher"}
+{"ActorClass":"PlasmaRifle_TO", "SoundToPlay":"ann/plasmagun"}
+{"ActorClass":"BFG9000_TO", "SoundToPlay":"ann/bfg"}
+
+//Doom 2
+{"ActorClass":"Fist", "SoundToPlay":"ann/fist"}
+{"ActorClass":"Chainsaw", "SoundToPlay":"ann/chainsaw"}
+{"ActorClass":"Pistol", "SoundToPlay":"ann/pistol"}
+{"ActorClass":"Shotgun", "SoundToPlay":"ann/shotgun"}
+{"ActorClass":"SuperShotgun", "SoundToPlay":"ann/ssg"}
+{"ActorClass":"Chaingun", "SoundToPlay":"ann/chaingun"}
+{"ActorClass":"RocketLauncher", "SoundToPlay":"ann/rlauncher"}
+{"ActorClass":"PlasmaRifle", "SoundToPlay":"ann/plasmagun"}
+{"ActorClass":"BFG9000", "SoundToPlay":"ann/bfg"}

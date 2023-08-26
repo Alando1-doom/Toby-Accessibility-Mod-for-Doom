@@ -1,0 +1,5 @@
+//Toby / Doom 2
+{"ActorClass":"Clip", "SoundToPlay":"ann/clip", "SoundToPlayPlural":"ann/ammo"}
+{"ActorClass":"Shell", "SoundToPlay":"ann/shells", "SoundToPlayPlural":"ann/shellbox"}
+{"ActorClass":"RocketAmmo", "SoundToPlay":"ann/rocket", "SoundToPlayPlural":"ann/rocketbox"}
+{"ActorClass":"Cell", "SoundToPlay":"ann/cell", "SoundToPlayPlural":"ann/cellpack"}

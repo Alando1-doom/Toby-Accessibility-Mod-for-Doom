@@ -1,5 +1,68 @@
 class Toby_AmmoChecker
 {
+    ui static void CheckAmmo(
+        PlayerInfo player,
+        Toby_SoundBindingsContainer weaponsSoundBindings,
+        Toby_SoundBindingsContainer ammoSoundBindings)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+
+        Toby_SoundQueueStaticHandler.Clear();
+
+        Class<Ammo> currentWeaponPrimaryAmmoClass = player.ReadyWeapon.AmmoType1;
+        Class<Ammo> currentWeaponSecondaryAmmoClass = player.ReadyWeapon.AmmoType2;
+        Inventory ammoPrimary = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
+        Inventory ammoSecondary = playerActor.FindInventory(currentWeaponSecondaryAmmoClass);
+        if (ammoSecondary) {
+            string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoSecondary.GetClassName(), ammoSecondary.amount);
+            Toby_SoundQueueStaticHandler.UnshiftSound(soundToPlay, -1);
+            Toby_NumberToVoice.ConvertAndAddToQueue(ammoSecondary.amount);
+        }
+
+        if (ammoPrimary) {
+            string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoPrimary.GetClassName(), ammoPrimary.amount);
+            Toby_SoundQueueStaticHandler.UnshiftSound(soundToPlay, -1);
+            Toby_NumberToVoice.ConvertAndAddToQueue(ammoPrimary.amount);
+        }
+
+        for (int i = 0; i < weaponsSoundBindings.soundBindings.Size(); i++)
+        {
+            string className = weaponsSoundBindings.soundBindings[i].At("ActorClass");
+            if (player.ReadyWeapon.GetClassName() == className)
+            {
+                string soundName = weaponsSoundBindings.soundBindings[i].At("SoundToPlay");
+                Toby_SoundQueueStaticHandler.UnshiftSound(soundName, -1);
+                break;
+            }
+        }
+
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui static string GetAmmoSoundName(Toby_SoundBindingsContainer ammoSoundBindings, string classNameToFind, int amount)
+    {
+        string soundToPlay = "";
+        for (int i = 0; i < ammoSoundBindings.soundBindings.Size(); i++)
+        {
+            string className = ammoSoundBindings.soundBindings[i].At("ActorClass");
+            if (classNameToFind == className)
+            {
+                if (amount == 1)
+                {
+                    soundToPlay = ammoSoundBindings.soundBindings[i].At("SoundToPlay");
+                }
+                else
+                {
+                    soundToPlay = ammoSoundBindings.soundBindings[i].At("SoundToPlayPlural");
+                }
+
+            }
+        }
+        return soundToPlay;
+    }
+
     ui static void CheckAmmoLegacy(PlayerInfo player)
     {
         if (!player) { return; }
