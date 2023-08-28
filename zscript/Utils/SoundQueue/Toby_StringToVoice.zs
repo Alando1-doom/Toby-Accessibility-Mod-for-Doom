@@ -1,11 +1,11 @@
-class StringToVoice ui
+class Toby_StringToVoice ui
 {
     ui static void ConvertAndAddToQueue(string text)
     {
         for (int i = 0; i < text.Length(); i++)
         {
             string character = text.Mid(i, 1).MakeLower();
-            SoundQueue.AddSound(GetCharSoundName(character), -1);
+            Toby_SoundQueueStaticHandler.AddSound(GetCharSoundName(character), -1);
         }
     }
 
@@ -14,7 +14,7 @@ class StringToVoice ui
         for (int i = text.Length()-1; i >= 0; i--)
         {
             string character = text.Mid(i, 1).MakeLower();
-            SoundQueue.UnshiftSound(GetCharSoundName(character), -1);
+            Toby_SoundQueueStaticHandler.UnshiftSound(GetCharSoundName(character), -1);
         }
     }
 

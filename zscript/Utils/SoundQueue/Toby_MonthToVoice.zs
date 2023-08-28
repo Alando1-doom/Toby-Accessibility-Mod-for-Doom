@@ -1,13 +1,13 @@
-class MonthToVoice ui
+class Toby_MonthToVoice ui
 {
     ui static void ConvertAndAddToQueue(int month)
     {
-        SoundQueue.AddSound(GetMonthSoundName(month), -1);
+        Toby_SoundQueueStaticHandler.AddSound(GetMonthSoundName(month), -1);
     }
 
     ui static void ConvertAndUnshiftToQueue(int month)
     {
-        SoundQueue.UnshiftSound(GetMonthSoundName(month), -1);
+        Toby_SoundQueueStaticHandler.UnshiftSound(GetMonthSoundName(month), -1);
     }
 
     ui static string GetMonthSoundName(int month)

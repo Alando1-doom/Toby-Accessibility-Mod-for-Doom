@@ -1,0 +1,7 @@
+//Doom Vanilla
+{"ActorClass":"RedCard", "TextToPrint":"Red keycard", "SoundToPlay":"keys/redkeycard"}
+{"ActorClass":"RedSkull", "TextToPrint":"Red skull key", "SoundToPlay":"keys/redskull"}
+{"ActorClass":"BlueCard", "TextToPrint":"Blue keycard", "SoundToPlay":"keys/bluekeycard"}
+{"ActorClass":"BlueSkull", "TextToPrint":"Blue skull key", "SoundToPlay":"keys/blueskull"}
+{"ActorClass":"YellowCard", "TextToPrint":"Yellow keycard", "SoundToPlay":"keys/yellowkeycard"}
+{"ActorClass":"YellowSkull", "TextToPrint":"Yellow skull key", "SoundToPlay":"keys/yellowskull"}

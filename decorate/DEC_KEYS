@@ -7,7 +7,7 @@ Actor RedCard_TO : CustomInventory 13
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   RKEY A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        RKEY A 10
 	   RKEY B 10 Bright
@@ -15,7 +15,7 @@ Actor RedCard_TO : CustomInventory 13
 	   RKEY B 10 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/redcard")
+	   TNT1 A 0 A_PlaySound("keys/redkeycard")
        TNT1 A 1 A_GiveInventory("RedCard", 1)
 	   Stop
     }
@@ -28,7 +28,7 @@ Actor RedSkullKey_TO : CustomInventory 38
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   RSKU A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        RSKU A 10
 	   RSKU B 10 Bright
@@ -36,7 +36,7 @@ Actor RedSkullKey_TO : CustomInventory 38
 	   RSKU B 10 Bright
        Loop
  Pickup:
-		TNT1 A 0 A_PlaySound("ann/redskull")
+		TNT1 A 0 A_PlaySound("keys/redskull")
         TNT1 A 1 A_GiveInventory("RedSkull", 1)
 	Stop
     }
@@ -49,7 +49,7 @@ Actor BlueCard_TO : CustomInventory 5
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   BKEY A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        BKEY A 10
 	   BKEY B 10 Bright
@@ -57,7 +57,7 @@ Actor BlueCard_TO : CustomInventory 5
 	   BKEY B 10 Bright
        Loop
  Pickup:
-		TNT1 A 0 A_PlaySound("ann/bluecard")
+		TNT1 A 0 A_PlaySound("keys/bluekeycard")
         TNT1 A 1 A_GiveInventory("BlueCard", 1)
 	   Stop
     }
@@ -71,7 +71,7 @@ Actor BlueSkullKey_TO : CustomInventory 40
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   BSKU A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        BSKU A 10
 	   BSKU B 10 Bright
@@ -79,7 +79,7 @@ Actor BlueSkullKey_TO : CustomInventory 40
 	   BSKU B 10 Bright
        Loop
  Pickup:
-		TNT1 A 0 A_PlaySound("ann/blueskull")
+		TNT1 A 0 A_PlaySound("keys/blueskull")
         TNT1 A 1 A_GiveInventory("BlueSkull", 1)
 	Stop
     }
@@ -93,7 +93,7 @@ Actor YellowCard_TO : CustomInventory 6
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   YKEY A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        YKEY A 10
 	   YKEY B 10 Bright
@@ -101,7 +101,7 @@ Actor YellowCard_TO : CustomInventory 6
 	   YKEY B 10 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/yellowcard")
+	   TNT1 A 0 A_PlaySound("keys/yellowkeycard")
        TNT1 A 1 A_GiveInventory("YellowCard", 1)
 	   Stop
     }
@@ -114,7 +114,7 @@ Actor YellowSkullKey_TO : CustomInventory 39
  -COUNTITEM
  States
  {
-  Spawn: 
+  Spawn:
 	   YSKU A 0 A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
        YSKU A 10
 	   YSKU B 10 Bright
@@ -122,7 +122,7 @@ Actor YellowSkullKey_TO : CustomInventory 39
 	   YSKU B 10 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/yellowskull")
+	   TNT1 A 0 A_PlaySound("keys/yellowskull")
        TNT1 A 1 A_GiveInventory("YellowSkull", 1)
 	   Stop
     }
@@ -137,7 +137,7 @@ ACTOR KeyPickupChecker
 	    Mass 2000000000000
     	PainChance 0
         DONTHURTSHOOTER
-    	MONSTER 
+    	MONSTER
         +JUSTHIT
         +DONTGIB
     	+FLOORCLIP
@@ -157,11 +157,11 @@ ACTOR KeyPickupChecker
     	MeleeDamage 0
     	States
     	{
-	Spawn: 
+	Spawn:
         TNT1 A 1 A_Look
 		TNT1 A 0 A_CheckSight("Death")
-        Goto See 
-    See: 
+        Goto See
+    See:
         TNT1 A 1 A_Chase
 		TNT1 A 0 A_CheckSight("Death")
 		TNT1 A 1 A_CheckSight("Death")
@@ -176,15 +176,15 @@ ACTOR KeyPickupChecker
 		TNT1 A 0 A_CheckSight("Death")
 		TNT1 A 1 A_CheckSight("Death")
         Goto ISeeYou
-    Pain: 
+    Pain:
         TNT1 A 1
-        TNT1 A 1 A_Pain 
+        TNT1 A 1 A_Pain
         Goto See
     ISeeYou:
          TNT1 A 1 A_PlaySoundEx("misc/key", "SoundSlot6", 0, 0)
 		 TNT1 A 4
          Goto Death
-    Death: 
+    Death:
         TNT1 A 1
         Stop
         }
