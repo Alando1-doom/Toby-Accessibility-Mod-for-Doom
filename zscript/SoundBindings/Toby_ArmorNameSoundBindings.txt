@@ -1,7 +1,13 @@
 {"ActorClass":"None", "SoundToPlay":"ann/nokey"}
 
+//Doom
+{"ActorClass":"ArmorBonus", "SoundToPlay":"stats/doom/armor/shard"}
+{"ActorClass":"GreenArmor", "SoundToPlay":"stats/doom/armor/greenarmor"}
+{"ActorClass":"BlueArmor", "SoundToPlay":"stats/doom/armor/megaarmor"}
+{"ActorClass":"BlueArmorForMegasphere", "SoundToPlay":"stats/doom/armor/megaarmor"}
+
 //Toby
-{"ActorClass":"ArmorBonus_TO", "SoundToPlay":"ann/armorbonus"}
-{"ActorClass":"GreenArmor_TO", "SoundToPlay":"ann/armor"}
-{"ActorClass":"BlueArmor_TO", "SoundToPlay":"ann/armor2"}
-{"ActorClass":"BlueArmorForMegasphere_TO", "SoundToPlay":"ann/armor2"}
+{"ActorClass":"ArmorBonus_TO", "SoundToPlay":"stats/doom/armor/shard"}
+{"ActorClass":"GreenArmor_TO", "SoundToPlay":"stats/doom/armor/greenarmor"}
+{"ActorClass":"BlueArmor_TO", "SoundToPlay":"stats/doom/armor/megaarmor"}
+{"ActorClass":"BlueArmorForMegasphere_TO", "SoundToPlay":"stats/doom/armor/megaarmor"}
