@@ -162,6 +162,16 @@
 //Map32 - Grosse
 {"Checksum":"aa4ca3fc891d13821accabd836e29eb5", "SoundToPlay":"map/doom2/grosse"}
 
+//Doom 2: BFG Edition - MD5: c3bea40570c23e511a7ed3ebcd9865f7
+//Map02 - Underhalls
+{"Checksum":"1ec0af1e3985650f0c9000319c599d0c", "SoundToPlay":"map/doom2/underhalls"}
+//Map31 - IDKFA
+{"Checksum":"f2235342f1591b59154022e1daf3eb2f", "SoundToPlay":"map/doom2/wolfenstein"}
+//Map32 - Keen
+{"Checksum":"9aa7780b46ec4471f630572798943d71", "SoundToPlay":"map/doom2/grosse"}
+//Map33 - Betray
+//{"Checksum":"915409a89746d6bfd92c7956be6a0a2d", "SoundToPlay":""}
+
 //TNT Version 1.9 - MD5: 4e158d9953c79ccf97bd0663244cc6b6
 //MAP01 - System Control
 {"Checksum":"8391b0eb996c55b5ed4343d18b8ad2c8", "SoundToPlay":"map/tnt/systemcontrol"}
