@@ -29,8 +29,8 @@ class Toby_HealthChecker
         if (!player.mo) { return; }
         Actor playerActor = player.mo;
         Toby_NumberToVoice.ConvertAndAddToQueue(playerActor.health);
-        Toby_SoundQueueStaticHandler.UnshiftSound("playerstatus/health", -1);
-        Toby_SoundQueueStaticHandler.AddSound("playerstatus/percent", -1);
+        Toby_SoundQueueStaticHandler.UnshiftSound("stats/general/health", -1);
+        Toby_SoundQueueStaticHandler.AddSound("stats/general/percent", -1);
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 }
