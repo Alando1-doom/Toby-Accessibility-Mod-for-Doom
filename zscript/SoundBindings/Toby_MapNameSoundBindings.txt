@@ -413,21 +413,21 @@
 
 //OperationMDK-Beta1_95 - MD5: 6e50792b4e89e91a087a0b059e0be8a3
 // MAP01 - UMS Atlantia
-{"Checksum":"bd6c58c67bce9c6c7f2999d46c0a7250", "SoundToPlay":"map/mdk/umsatlantia"}
+{"Checksum":"bd6c58c67bce9c6c7f2999d46c0a7250", "SoundToPlay":"map/mdk/umsatlantia", "LevelStartPlaybackDelay":"350" }
 // MAP02 - Docking Bay
-{"Checksum":"768611b1146fe6908e1326940b8d904f", "SoundToPlay":"map/mdk/dockingbay"}
+{"Checksum":"768611b1146fe6908e1326940b8d904f", "SoundToPlay":"map/mdk/dockingbay", "LevelStartPlaybackDelay":"250"}
 // MAP03 - Lab 03
 {"Checksum":"d6ce9e845fd0df12ce4d04d759abf155", "SoundToPlay":"map/mdk/lab03"}
 // MAP04 - Personnel
 {"Checksum":"ed6dce39579f1cb8cf7b0e3c39ebfd9c", "SoundToPlay":"map/mdk/personnel"}
 // MAP05 - Mining Complex
-{"Checksum":"237ec2090d5f0ea5c3add2f73238b999", "SoundToPlay":"map/mdk/miningcomplex"}
+{"Checksum":"237ec2090d5f0ea5c3add2f73238b999", "SoundToPlay":"map/mdk/miningcomplex", "LevelStartPlaybackDelay":"260"}
 // MAP06 - The Mines
-{"Checksum":"20b1313009ec894be784e855b6433747", "SoundToPlay":"map/mdk/themines"}
+{"Checksum":"20b1313009ec894be784e855b6433747", "SoundToPlay":"map/mdk/themines", "LevelStartPlaybackDelay":"130"}
 // MAP07 - The Rift
 {"Checksum":"b538698f2ec49b6d71150ef7ab3811f5", "SoundToPlay":"map/mdk/therift"}
 // MAP08 - Gateway Research
-{"Checksum":"90a999704265999a79cde27627193a8d", "SoundToPlay":"map/mdk/gatewayresearch"}
+{"Checksum":"90a999704265999a79cde27627193a8d", "SoundToPlay":"map/mdk/gatewayresearch", "LevelStartPlaybackDelay":"600"}
 // MAP09 - Specimen Storage
 {"Checksum":"15e2b595cd9c405b9efa2a65cb640fe2", "SoundToPlay":"map/mdk/specimenstorage"}
 // MAP10 - Computer Station
@@ -435,10 +435,10 @@
 // MAP11 - The Gates of Hell
 {"Checksum":"425d31b9b7c6fb6e17d9ed9cfaffc96e", "SoundToPlay":"map/mdk/thegatesofhell"}
 // MAP12 - Fortress of the Doomed
-{"Checksum":"f963709817d85111e46f5c659ab16f41", "SoundToPlay":"map/mdk/fortressofthedoomed"}
+{"Checksum":"f963709817d85111e46f5c659ab16f41", "SoundToPlay":"map/mdk/fortressofthedoomed", "LevelStartPlaybackDelay":"270"}
 // MAP13 - Citadel of the Damned
 {"Checksum":"9566a224c977374ddb009b98aef128f0", "SoundToPlay":"map/mdk/citadelofthedamned"}
 // MAP14 - The Warlord's Domain
-{"Checksum":"b21906c9304b08dda2db0977bce561f5", "SoundToPlay":"map/mdk/thewarlordsdomain"}
+{"Checksum":"b21906c9304b08dda2db0977bce561f5", "SoundToPlay":"map/mdk/thewarlordsdomain", "LevelStartPlaybackDelay":"270"}
 // MAP15 - The Gatekeeper
-{"Checksum":"5ffe1357d1a721d18d7145ef04dc5bc9", "SoundToPlay":"map/mdk/thegatekeeper"}
+{"Checksum":"5ffe1357d1a721d18d7145ef04dc5bc9", "SoundToPlay":"map/mdk/thegatekeeper", "LevelStartPlaybackDelay":"270"}
