@@ -8,13 +8,11 @@ class Toby_MapAnnouncementManager
     private ui int targetTickCount;
     private ui int tickCount;
 
-    ui static Toby_MapAnnouncementManager Create()
+    ui static Toby_MapAnnouncementManager Create(Toby_SoundBindingsContainer soundBindingsContainer)
     {
         Toby_MapAnnouncementManager manager = new("Toby_MapAnnouncementManager");
         manager.defaultLevelStartDelay = 35;
         manager.emptyEntry = Toby_MapAnnouncementEntry.Create("", "", manager.defaultLevelStartDelay);
-
-        Toby_SoundBindingsContainer soundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MapNameSoundBindings");
         manager.CreateDatabase(soundBindingsContainer);
 
         return manager;
