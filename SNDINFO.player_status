@@ -1,5 +1,8 @@
-stats/general/health         dsmdhlth
+stats/general/health         "sounds/PlayerStats/Health/Health.ogg"
 stats/general/percent        "sounds/Menus/CustomizeControls/Keyboard/kpercent.ogg"
+
+stats/doom/weapons/fist      "sounds/PlayerStats/DoomWeapons/Fist.ogg"
+stats/doom/weapons/pistol    "sounds/PlayerStats/DoomWeapons/Pistol.ogg"
 
 stats/doom/ammo/bullet       "sounds/PlayerStats/DoomAmmo/Bullet.ogg"
 stats/doom/ammo/bullets      "sounds/PlayerStats/DoomAmmo/Bullets.ogg"
