@@ -1,13 +1,13 @@
-#include decorate/DEC_WEAP
-#include decorate/DEC_HLTH
-#include decorate/DEC_ARMR
-#include decorate/DEC_AMMO
-#include decorate/DEC_PRX1
-#include decorate/DEC_POW
-#include decorate/DEC_KEYS
-#include decorate/DEC_MONS
-#include decorate/DEC_DECO
-#include decorate/DEC_BEAC
+#include decorate/DEC_WEAP.dec
+#include decorate/DEC_HLTH.dec
+#include decorate/DEC_ARMR.dec
+#include decorate/DEC_AMMO.dec
+#include decorate/DEC_PRX1.dec
+#include decorate/DEC_POW.dec
+#include decorate/DEC_KEYS.dec
+#include decorate/DEC_MONS.dec
+#include decorate/DEC_DECO.dec
+#include decorate/DEC_BEAC.dec
 //Player
 #include decorate/DEC_PLAYER.dec
 #include decorate/Detectors/FloorChecker.dec
