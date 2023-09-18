@@ -1,0 +1,27 @@
+actor WallHit
+{
+    Radius 9
+    Height 8
+    Speed 2
+    Health 1
+    Damage 0
+    Mass 9000000000
+    Projectile
+    +NoBlockmap
+    +NOTIMEFREEZE
+    -NOGRAVITY
+    +THRUGHOST
+    //+ActivatePCross
+    SeeSound "null"
+    DeathSound "misc/wallhit"
+    States
+    {
+    Spawn:
+        TNT1 A 5
+        Stop
+
+    Death:
+        TNT1 A 1
+        Stop
+    }
+}

@@ -1,0 +1,23 @@
+ACTOR FloorChecker
+{
+    Radius 20
+    Height 14
+    +NOGRAVITY
+    +NOTIMEFREEZE
+    +NOTELEPORT
+    +NOBLOCKMONST
+    +FIXMAPTHINGPOS
+    States
+    {
+    Spawn:
+        TNT1 AA 1 A_CheckFloor("YesFloor")
+        Goto Death
+    YesFloor:
+        TNT1 A 1
+        Stop
+    Death:
+        TNT1 A 1 A_PlaySoundEx("prox/warmer", "Auto", 0, 0)
+        TNT1 A 2
+        Stop
+    }
+}
