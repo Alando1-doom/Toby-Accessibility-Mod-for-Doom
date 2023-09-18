@@ -23,6 +23,7 @@ version "4.6"
 //Dropdoff detector
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitter.zs"
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitterManagerItem.zs"
+#include "zscript/DropoffDetector/Toby_WallDetector.zs"
 #include "zscript/Toby_DropoffDetectorHandler.zs"
 
 //Map announcements

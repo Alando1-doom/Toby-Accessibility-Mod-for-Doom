@@ -1,5 +1,7 @@
 class Toby_DropoffSoundEmitterManagerItem : Inventory
 {
+    private Toby_WallDetector wallDetector;
+
     default
     {
         Inventory.MaxAmount 1;
@@ -15,6 +17,11 @@ class Toby_DropoffSoundEmitterManagerItem : Inventory
     override void Tick()
     {
         super.Tick();
+
+        if (!wallDetector) {
+            wallDetector = Toby_WallDetector.Create(owner);
+        }
+
         if(!frontEmitter)
         {
             frontEmitter = Actor.Spawn("Toby_DropoffSoundEmitter", (0,0,0));

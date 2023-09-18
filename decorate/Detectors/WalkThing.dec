@@ -1,0 +1,27 @@
+actor WalkThing
+{
+    Radius 8
+    Height 8
+    Speed 1
+    Health 1
+    Damage 0
+    Mass 9000000000
+    Projectile
+    +NoBlockmap
+    -NOGRAVITY
+    +ActivatePCross
+    +NOTIMEFREEZE
+    +THRUGHOST
+    SeeSound "null"
+    //DeathSound "misc/walk"
+    States
+    {
+    Spawn:
+        TNT1 A 8
+        Stop
+
+    Death:
+        TNT1 A 1
+        Stop
+    }
+}
