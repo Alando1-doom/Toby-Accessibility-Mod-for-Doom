@@ -27,9 +27,13 @@ class Toby_WallDetector: Thinker
         if (!owner) { return; }
         PlayerInfo player = owner.player;
         if (!player) { return; }
-        if (!((player.buttons & BT_MOVERIGHT) || (player.buttons & BT_MOVELEFT) || (player.buttons & BT_FORWARD) || (player.buttons & BT_BACK))) { return; }
-        if (cooldown != 0) { return; }
+        console.printf(""..player.bob);
+        //Not an option, this will ignore controller inputs
+        //if (!((player.buttons & BT_MOVERIGHT) || (player.buttons & BT_MOVELEFT) || (player.buttons & BT_FORWARD) || (player.buttons & BT_BACK))) { return; }
+        //Not an option, this will ignore ceases when player hits the wall at 90 degrees
         //if (owner.Vel.length() == 0) { return; }
+        if (player.bob == 0) { return; }
+        if (cooldown != 0) { return; }
         owner.A_ThrowGrenade("WallHit", -12, 2.5, 1);
         owner.A_ThrowGrenade("WallHit", -12, -2.5, 1);
         owner.A_SpawnProjectile("WallHit",24,0,100,2,0);
