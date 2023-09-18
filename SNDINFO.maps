@@ -103,7 +103,9 @@ map/doom2/iconofsin             "sounds/Maps/doom2_main/IconOfSin.ogg"
 map/doom2/wolfenstein           "sounds/Maps/doom2_main/Wolfenstein.ogg"
 map/doom2/grosse                "sounds/Maps/doom2_main/Grosse.ogg"
 
-
+map/doom2bfg/idkfa              "sounds/Maps/doom2_bfg/IDKFA.ogg"
+map/doom2bfg/keen               "sounds/Maps/doom2_bfg/Keen.ogg"
+map/doom2bfg/betray             "sounds/Maps/doom2_bfg/Betray.ogg"
 
 //TNT: Evilution
 

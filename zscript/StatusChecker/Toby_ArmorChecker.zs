@@ -27,7 +27,7 @@ class Toby_ArmorChecker
         Toby_SoundQueueStaticHandler.UnshiftSound(soundToPlay, -1);
         if (armor.Amount > 0)
         {
-            Toby_SoundQueueStaticHandler.AddSound("playerstatus/percent", -1);
+            Toby_SoundQueueStaticHandler.AddSound("stats/general/percent", -1);
         }
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
