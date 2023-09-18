@@ -29,7 +29,7 @@ class Toby_WallDetector: Thinker
         if (!player) { return; }
         //Not an option, this will ignore controller inputs
         //if (!((player.buttons & BT_MOVERIGHT) || (player.buttons & BT_MOVELEFT) || (player.buttons & BT_FORWARD) || (player.buttons & BT_BACK))) { return; }
-        //Not an option, this will ignore ceases when player hits the wall at 90 degrees
+        //Not an option, this will ignore cases when player hits the wall at 90 degrees
         //if (owner.Vel.length() == 0) { return; }
         if (player.bob == 0) { return; }
         if (cooldown != 0) { return; }
