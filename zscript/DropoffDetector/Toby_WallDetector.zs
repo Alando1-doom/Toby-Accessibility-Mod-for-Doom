@@ -27,9 +27,8 @@ class Toby_WallDetector: Thinker
         if (!owner) { return; }
         PlayerInfo player = owner.player;
         if (!player) { return; }
-        if (!((player.buttons & BT_MOVERIGHT) || (player.buttons & BT_MOVELEFT) || (player.buttons & BT_FORWARD) || (player.buttons & BT_BACK))) { return; }
+        if (player.cmd.forwardmove == 0 && player.cmd.sidemove == 0) { return; }
         if (cooldown != 0) { return; }
-        //if (owner.Vel.length() == 0) { return; }
         owner.A_ThrowGrenade("WallHit", -12, 2.5, 1);
         owner.A_ThrowGrenade("WallHit", -12, -2.5, 1);
         owner.A_SpawnProjectile("WallHit",24,0,100,2,0);
