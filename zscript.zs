@@ -14,7 +14,7 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_AmmoChecker.zs"
 #include "zscript/StatusChecker/Toby_KeyChecker.zs"
 #include "zscript/StatusChecker/Toby_ArmorChecker.zs"
-#include "zscript/Toby_PlayerStatusCheckStaticHandler.zs"
+#include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 
 //Markers
 #include "zscript/Markers/ZS_MarkerHandler.zs"
@@ -24,22 +24,28 @@ version "4.6"
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitter.zs"
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitterManagerItem.zs"
 #include "zscript/DropoffDetector/Toby_WallDetector.zs"
-#include "zscript/Toby_DropoffDetectorHandler.zs"
+#include "zscript/DropoffDetector/Toby_DropoffDetectorHandler.zs"
+
+//Target detector
+#include "zscript/TargetDetector/Toby_TargetDetector.zs"
+#include "zscript/TargetDetector/Toby_TargetDetectorEntry.zs"
+#include "zscript/TargetDetector/Toby_TargetDetectorStaticHandler.zs"
+#include "zscript/TargetDetector/Toby_TargetDetectorHandler.zs"
 
 //Map announcements
 #include "zscript/MapAnnouncements/Toby_MapAnnouncementManager.zs"
 #include "zscript/MapAnnouncements/Toby_MapAnnouncementEntry.zs"
-#include "zscript/Toby_MapAnnouncementStaticHandler.zs"
+#include "zscript/MapAnnouncements/Toby_MapAnnouncementStaticHandler.zs"
 
 //Hitmarkers
 #include "zscript/hitmarkers.zsc"
 
 //Snap to target
-#include "zscript/Toby_SnapToTargetHandler.zs"
+#include "zscript/SnapToTarget/Toby_SnapToTargetHandler.zs"
 
 //Accessible menus
-#include "zscript/Toby_MenuStaticHandler.zs"
-#include "zscript/Toby_TitleScreenHandler.zs"
+#include "zscript/AccessibleMenu/Toby_MenuStaticHandler.zs"
+#include "zscript/AccessibleMenu/Toby_TitleScreenHandler.zs"
 #include "zscript/AccessibleMenu/Toby_MenuState.zs"
 #include "zscript/AccessibleMenu/Toby_MenuEventProcessor.zs"
 

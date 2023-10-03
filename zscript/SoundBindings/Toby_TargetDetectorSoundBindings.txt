@@ -1,0 +1,2 @@
+{ "ClassName":"ExplosiveBarrel_SFX", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
+{ "ClassName":"ExplosiveBarrel", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
