@@ -54,3 +54,9 @@ version "4.6"
 #include "zscript/Utils/Toby_WadsUtils.zs"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
+
+//libeye
+#include "zscript/libeye/Toby_projector gl.zs"
+#include "zscript/libeye/Toby_projector planar.zs"
+#include "zscript/libeye/Toby_projector.zs"
+#include "zscript/libeye/Toby_viewport.zs"
