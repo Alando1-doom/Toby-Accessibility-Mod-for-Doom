@@ -57,8 +57,8 @@ class Toby_ActorsInViewportHandler: EventHandler
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
             if (!storage.actorsThatCanSeePlayer[i]) { continue; }
-            projector.projection.projectionectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
-            let normalPos = projector.projection.projectionectToNormal();
+            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
+            let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
             let screenPos = projector.viewport.SceneToWindow(normalPos);
