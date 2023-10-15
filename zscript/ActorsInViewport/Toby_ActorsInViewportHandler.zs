@@ -4,8 +4,6 @@ class Toby_ActorsInViewportHandler: EventHandler
 
     protected Array<Actor> actorsThatCanSeePlayer;
 
-    protected Actor target;
-
     override void OnRegister()
     {
         projector = Toby_ViewportProjector.Create();
@@ -13,13 +11,10 @@ class Toby_ActorsInViewportHandler: EventHandler
 
     override void WorldTick()
     {
-        let playerActor = PlayerPawn(players[consoleplayer].mo);
-
-        if (!playerActor)
-        {
-            target = NULL;
-            return;
-        }
+        PlayerInfo player = players[consoleplayer];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
 
         projector.PrepareProjection();
 
