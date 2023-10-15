@@ -64,3 +64,5 @@ version "4.6"
 //Actors in viewport
 #include "zscript/ActorsInViewport/Toby_ActorsInViewportHandler.zs"
 #include "zscript/ActorsInViewport/Toby_ViewportProjector.zs"
+#include "zscript/ActorsInViewport/Toby_ViewportOnScreenDebug.zs"
+#include "zscript/ActorsInViewport/Toby_ActorsInViewportStorage.zs"

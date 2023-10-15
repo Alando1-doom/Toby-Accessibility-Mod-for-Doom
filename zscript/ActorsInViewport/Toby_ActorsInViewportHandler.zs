@@ -13,9 +13,9 @@ class Toby_ActorsInViewportHandler: EventHandler
 
     override void WorldTick()
     {
-        let po = PlayerPawn(players[consoleplayer].mo);
+        let playerActor = PlayerPawn(players[consoleplayer].mo);
 
-        if (!po)
+        if (!playerActor)
         {
             target = NULL;
             return;
@@ -28,7 +28,7 @@ class Toby_ActorsInViewportHandler: EventHandler
         Actor actorThatCanSeePlayer;
         while (actorThatCanSeePlayer = Actor(ti.Next()))
         {
-            if (!actorThatCanSeePlayer.IsVisible(po, true))
+            if (!actorThatCanSeePlayer.IsVisible(playerActor, true))
             {
                 continue;
             }
@@ -138,109 +138,89 @@ class Toby_ActorsInViewportHandler: EventHandler
 
         posX = twoThirds;
         posY = 0;
-        DrawText("On your right, up close:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your right, up close:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < rigitClose.storage.Size(); k++)
         {
             posY += 15;
             string text = rigitClose.storage[k].name.." - "..rigitClose.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = twoThirds;
         posY = heightOneThird;
-        DrawText("On your right, medium distance:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your right, medium distance:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < rigitMid.storage.Size(); k++)
         {
             posY += 15;
             string text = rigitMid.storage[k].name.." - "..rigitMid.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = twoThirds;
         posY = heightTwoThirds;
-        DrawText("On your right, far away:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your right, far away:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < rigitFar.storage.Size(); k++)
         {
             posY += 15;
             string text = rigitFar.storage[k].name.." - "..rigitFar.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
 
         posX = oneThird;
         posY = 0;
-        DrawText("In front of you, up close:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("In front of you, up close:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < frontClose.storage.Size(); k++)
         {
             posY += 15;
             string text = frontClose.storage[k].name.." - "..frontClose.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = oneThird;
         posY = heightOneThird;
-        DrawText("In front of you, medium distance:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("In front of you, medium distance:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < frontMid.storage.Size(); k++)
         {
             posY += 15;
             string text = frontMid.storage[k].name.." - "..frontMid.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = oneThird;
         posY = heightTwoThirds;
-        DrawText("In front of you, far away:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("In front of you, far away:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < frontFar.storage.Size(); k++)
         {
             posY += 15;
             string text = frontFar.storage[k].name.." - "..frontFar.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
 
         posX = 15;
         posY = 0;
-        DrawText("On your left, up close:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your left, up close:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < leftClose.storage.Size(); k++)
         {
             posY += 15;
             string text = leftClose.storage[k].name.." - "..leftClose.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = 15;
         posY = heightOneThird;
-        DrawText("On your left, medium distance:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your left, medium distance:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < leftMid.storage.Size(); k++)
         {
             posY += 15;
             string text = leftMid.storage[k].name.." - "..leftMid.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         posX = 15;
         posY = heightTwoThirds;
-        DrawText("On your left, far away:", posX, posY, Font.CR_GREEN);
+        Toby_ViewportOnScreenDebug.DrawText("On your left, far away:", posX, posY, Font.CR_GREEN);
         for (let k = 0; k < leftFar.storage.Size(); k++)
         {
             posY += 15;
             string text = leftFar.storage[k].name.." - "..leftFar.storage[k].amount;
-            DrawText(text, posX, posY, Font.CR_GRAY);
+            Toby_ViewportOnScreenDebug.DrawText(text, posX, posY, Font.CR_GRAY);
         }
         Screen.DrawLine(oneThird, 0, oneThird, Screen.GetHeight(), 0xff00ff00);
         Screen.DrawLine(twoThirds, 0, twoThirds, Screen.GetHeight(), 0xff00ff00);
-    }
-
-    ui void DrawText(string text, double posX, double posY, int fontColor)
-    {
-        double scale = 0.5;
-        double alpha = 1.0;
-        Screen.DrawText(smallFont,
-                    fontColor,
-                    posX * scale, //x
-                    posY * scale, //y
-                    text, //text
-                    DTA_KeepRatio,        //doesn't adjust screen size for DTA_Virtual* if the aspect ratio is not 4:3 (?)
-                    true, //???
-                    DTA_VirtualWidth,    //pretend the canvas is this wide
-                    int(scale * Screen.GetWidth()),
-                    DTA_VirtualHeight,    //pretend the canvas is this tall
-                    int(scale * Screen.GetHeight()),
-                    DTA_Alpha,            //alpha value for translucency
-                    alpha
-                );
     }
 
     ui void AddClassName(string className, out Array<PosInfo> arr)
