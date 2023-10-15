@@ -1,12 +1,12 @@
 class Toby_ActorsInViewportHandler: EventHandler
 {
     Toby_ViewportProjector projector;
-
-    protected Array<Actor> actorsThatCanSeePlayer;
+    Toby_ActorsInViewportStorage storage;
 
     override void OnRegister()
     {
         projector = Toby_ViewportProjector.Create();
+        storage = Toby_ActorsInViewportStorage.Create();
     }
 
     override void WorldTick()
@@ -18,22 +18,11 @@ class Toby_ActorsInViewportHandler: EventHandler
 
         projector.PrepareProjection();
 
-        actorsThatCanSeePlayer.Clear();
-        ThinkerIterator ti = ThinkerIterator.Create();
-        Actor actorThatCanSeePlayer;
-        while (actorThatCanSeePlayer = Actor(ti.Next()))
-        {
-            if (!actorThatCanSeePlayer.IsVisible(playerActor, true))
-            {
-                continue;
-            }
-            actorsThatCanSeePlayer.push(actorThatCanSeePlayer);
-        }
+        storage.GetActorsThatCanSeePlayer(playerActor);
     }
 
     override void RenderOverlay(RenderEvent event)
     {
-        let resolution = (Screen.GetWidth(), Screen.GetHeight());
         projector.viewport.FromHud();
         if (!projector.canProject)
         {
@@ -65,17 +54,17 @@ class Toby_ActorsInViewportHandler: EventHandler
         projector.proj.OrientForRenderOverlay(event);
         projector.proj.BeginProjection();
 
-        for (let i = 0; i < actorsThatCanSeePlayer.Size(); i++)
+        for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
-            if (!actorsThatCanSeePlayer[i]) { continue; }
-            projector.proj.ProjectActorPos(actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
+            if (!storage.actorsThatCanSeePlayer[i]) { continue; }
+            projector.proj.ProjectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
             let normalPos = projector.proj.ProjectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.proj.IsInScreen()) { continue; }
             let screenPos = projector.viewport.SceneToWindow(normalPos);
 
-            let className = actorsThatCanSeePlayer[i].GetClassName();
-            double distance = (actorsThatCanSeePlayer[i].pos - po.pos).Length();
+            let className = storage.actorsThatCanSeePlayer[i].GetClassName();
+            double distance = (storage.actorsThatCanSeePlayer[i].pos - po.pos).Length();
             double closeDistance = 200;
             double mediumDistance = 1000;
             if (screenPos.x > twoThirds)
