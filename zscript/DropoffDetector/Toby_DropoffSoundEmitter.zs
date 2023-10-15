@@ -3,6 +3,7 @@ class Toby_DropoffSoundEmitter : Actor
     Default
     {
         +DONTSPLASH
+        +NOGRAVITY
     }
     states
     {
