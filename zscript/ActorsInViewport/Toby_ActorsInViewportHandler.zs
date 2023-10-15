@@ -222,27 +222,6 @@ class Toby_ActorsInViewportHandler: EventHandler
         Screen.DrawLine(oneThird, 0, oneThird, Screen.GetHeight(), 0xff00ff00);
         Screen.DrawLine(twoThirds, 0, twoThirds, Screen.GetHeight(), 0xff00ff00);
     }
-
-    ui void AddClassName(string className, out Array<PosInfo> arr)
-    {
-        bool classNameFound = false;
-
-        for (let j = 0; j < arr.Size(); j++)
-        {
-            if (arr[j].name == className)
-            {
-                classNameFound = true;
-                arr[j].amount++;
-            }
-        }
-        if (!classNameFound)
-        {
-            let info = new("PosInfo");
-            info.name = className;
-            info.amount = 1;
-            arr.push(info);
-        }
-    }
 }
 
 class PosInfo
