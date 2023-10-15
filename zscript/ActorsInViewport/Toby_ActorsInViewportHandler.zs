@@ -49,18 +49,18 @@ class Toby_ActorsInViewportHandler: EventHandler
         PosInfoStorage rigitMid = new("PosInfoStorage");
         PosInfoStorage rigitFar = new("PosInfoStorage");
 
-        projector.proj.CacheResolution();
-        projector.proj.CacheFov(players[consoleplayer].fov);
-        projector.proj.OrientForRenderOverlay(event);
-        projector.proj.BeginProjection();
+        projector.projection.CacheResolution();
+        projector.projection.CacheFov(players[consoleplayer].fov);
+        projector.projection.OrientForRenderOverlay(event);
+        projector.projection.BeginProjection();
 
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
             if (!storage.actorsThatCanSeePlayer[i]) { continue; }
-            projector.proj.ProjectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
-            let normalPos = projector.proj.ProjectToNormal();
+            projector.projection.projectionectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
+            let normalPos = projector.projection.projectionectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
-            if (!projector.proj.IsInScreen()) { continue; }
+            if (!projector.projection.IsInScreen()) { continue; }
             let screenPos = projector.viewport.SceneToWindow(normalPos);
 
             let className = storage.actorsThatCanSeePlayer[i].GetClassName();

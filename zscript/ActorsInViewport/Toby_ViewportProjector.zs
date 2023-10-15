@@ -1,17 +1,17 @@
 class Toby_ViewportProjector
 {
-    Toby_Le_ProjScreen proj;
+    Toby_Le_ProjScreen projection;
     bool canProject;
     Toby_Le_Viewport viewport;
-    private Toby_Le_GlScreen glProj;
-    private Toby_Le_SwScreen swProj;
+    private Toby_Le_GlScreen glProjection;
+    private Toby_Le_SwScreen swProjection;
     private transient Cvar cvarRenderer;
 
     static Toby_ViewportProjector Create()
     {
         Toby_ViewportProjector projector = new("Toby_ViewportProjector");
-        projector.glProj = new("Toby_Le_GlScreen");
-        projector.swProj = new("Toby_Le_SwScreen");
+        projector.glProjection = new("Toby_Le_GlScreen");
+        projector.swProjection = new("Toby_Le_SwScreen");
         projector.cvarRenderer = Cvar.GetCvar("vid_rendermode", players[consoleplayer]);
         projector.PrepareProjection();
 
@@ -26,18 +26,18 @@ class Toby_ViewportProjector
         switch(cvarRenderer.GetInt())
         {
             default:
-                proj = glProj;
+                projection = glProjection;
                 break;
             case 0:
             case 1:
-                proj = swProj;
+                projection = swProjection;
                 break;
         }
         else
         {
-            proj = glProj;
+            projection = glProjection;
         }
 
-        canProject = proj != NULL;
+        canProject = projection != NULL;
     }
 }
