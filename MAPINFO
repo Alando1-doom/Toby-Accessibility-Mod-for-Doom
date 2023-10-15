@@ -11,4 +11,5 @@ GameInfo
     AddEventHandlers = "Toby_DropoffDetectorHandler"
     AddEventHandlers = "Toby_TargetDetectorStaticHandler"
     AddEventHandlers = "Toby_TargetDetectorHandler"
+    AddEventHandlers = "Toby_ActorsInViewportHandler"
 }
