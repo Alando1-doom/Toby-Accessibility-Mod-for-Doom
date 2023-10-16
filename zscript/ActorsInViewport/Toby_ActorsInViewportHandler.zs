@@ -21,7 +21,7 @@ class Toby_ActorsInViewportHandler: EventHandler
         storage.GetActorsThatCanSeePlayer(playerActor);
     }
 
-    override void RenderOverlay(RenderEvent event)
+    override void RenderOverlay(RenderEvent e)
     {
         projector.viewport.FromHud();
         if (!projector.canProject)
@@ -29,7 +29,10 @@ class Toby_ActorsInViewportHandler: EventHandler
             return;
         }
 
-        Actor po = event.camera;
+        PlayerInfo player = players[consoleplayer];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
 
         let oneThird = Screen.GetWidth() / 3;
         let twoThirds = Screen.GetWidth() * 2 / 3;
@@ -50,21 +53,21 @@ class Toby_ActorsInViewportHandler: EventHandler
         PosInfoStorage rigitFar = new("PosInfoStorage");
 
         projector.projection.CacheResolution();
-        projector.projection.CacheFov(players[consoleplayer].fov);
-        projector.projection.OrientForRenderOverlay(event);
+        projector.projection.CacheFov(player.fov);
+        projector.projection.OrientForRenderOverlay(e);
         projector.projection.BeginProjection();
 
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
             if (!storage.actorsThatCanSeePlayer[i]) { continue; }
-            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), event.fractic);
+            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), e.fractic);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
             let screenPos = projector.viewport.SceneToWindow(normalPos);
 
             let className = storage.actorsThatCanSeePlayer[i].GetClassName();
-            double distance = (storage.actorsThatCanSeePlayer[i].pos - po.pos).Length();
+            double distance = (storage.actorsThatCanSeePlayer[i].pos - playerActor.pos).Length();
             double closeDistance = 200;
             double mediumDistance = 1000;
             if (screenPos.x > twoThirds)
