@@ -1,4 +1,4 @@
-class Toby_ActorsFilter abstract
+class Toby_ActorFilter abstract
 {
     string name;
     Array<Actor> category;

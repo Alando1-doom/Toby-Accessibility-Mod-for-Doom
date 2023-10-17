@@ -105,6 +105,10 @@ class Toby_ActorsInViewportHandler: EventHandler
         double posX = 0;
         double posY = 0;
 
+        double oneThird = Screen.GetWidth() / 3;
+        double twoThirds = Screen.GetWidth() * 2 / 3;
+        double heightOneThird = Screen.GetHeight() / 3;
+        double heightTwoThirds = Screen.GetHeight() * 2 / 3;
         posX = twoThirds;
         posY = 0;
         Toby_ViewportOnScreenDebug.DrawText("On your right, up close:", posX, posY, Font.CR_GREEN);

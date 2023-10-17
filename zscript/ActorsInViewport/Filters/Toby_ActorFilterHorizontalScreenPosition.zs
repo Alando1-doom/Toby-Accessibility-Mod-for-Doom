@@ -1,13 +1,13 @@
-class Toby_HorizontalScreenPositionFilter: Toby_ActorsFilter
+class Toby_ActorFilterHorizontalScreenPosition: Toby_ActorFilter
 {
     private Toby_ViewportProjector projector;
     private double fractic;
     private double min;
     private double max;
 
-    static Toby_HorizontalScreenPositionFilter Create(string name, Toby_ViewportProjector projector, double fractic, double min, double max)
+    static Toby_ActorFilterHorizontalScreenPosition Create(string name, Toby_ViewportProjector projector, double fractic, double min, double max)
     {
-        Toby_HorizontalScreenPositionFilter filter = new("Toby_HorizontalScreenPositionFilter");
+        Toby_ActorFilterHorizontalScreenPosition filter = new("Toby_ActorFilterHorizontalScreenPosition");
         filter.name = name;
         filter.projector = projector;
         filter.fractic = fractic;

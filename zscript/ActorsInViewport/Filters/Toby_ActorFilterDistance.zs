@@ -1,12 +1,12 @@
-class Toby_DistanceFilter: Toby_ActorsFilter
+class Toby_ActorFilterDistance: Toby_ActorFilter
 {
     private Actor playerActor;
     private double min;
     private double max;
 
-    static Toby_DistanceFilter Create(string name, Actor playerActor, double min, double max)
+    static Toby_ActorFilterDistance Create(string name, Actor playerActor, double min, double max)
     {
-        Toby_DistanceFilter filter = new("Toby_DistanceFilter");
+        Toby_ActorFilterDistance filter = new("Toby_ActorFilterDistance");
         filter.name = name;
         filter.playerActor = playerActor;
         filter.min = min;

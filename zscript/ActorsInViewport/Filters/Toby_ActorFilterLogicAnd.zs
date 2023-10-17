@@ -1,11 +1,11 @@
-class Toby_FilterAnd: Toby_ActorsFilter
+class Toby_ActorFilterLogicAnd: Toby_ActorFilter
 {
-    Toby_ActorsFilter filterA;
-    Toby_ActorsFilter filterB;
+    Toby_ActorFilter filterA;
+    Toby_ActorFilter filterB;
 
-    static Toby_FilterAnd Create(string name, Toby_ActorsFilter filterA, Toby_ActorsFilter filterB)
+    static Toby_ActorFilterLogicAnd Create(string name, Toby_ActorFilter filterA, Toby_ActorFilter filterB)
     {
-        Toby_FilterAnd filter = new("Toby_FilterAnd");
+        Toby_ActorFilterLogicAnd filter = new("Toby_ActorFilterLogicAnd");
         filter.name = name;
         filter.filterA = filterA;
         filter.filterB = filterB;

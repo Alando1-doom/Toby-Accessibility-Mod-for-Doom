@@ -2,7 +2,7 @@ class Toby_ActorsInViewportStorage
 {
     Array<Actor> actorsThatCanSeePlayer;
 
-    Array<Toby_ActorsFilter> filters;
+    Array<Toby_ActorFilter> filters;
 
     static Toby_ActorsInViewportStorage Create()
     {
@@ -20,31 +20,31 @@ class Toby_ActorsInViewportStorage
 
         int distanceClose = 200;
         int distanceMedium = 1000;
-        Toby_DistanceFilter distanceCloseFilter = Toby_DistanceFilter.Create("Distance_Close", playerActor, 0, distanceClose);
-        Toby_DistanceFilter distanceMeduimFilter = Toby_DistanceFilter.Create("Distance_Medium", playerActor, distanceClose, distanceMedium);
-        Toby_DistanceFilter distanceFarFilter = Toby_DistanceFilter.Create("Distance_Close", playerActor, distanceMedium, int.Max);
-        Toby_HorizontalScreenPositionFilter screenLeftFilter = Toby_HorizontalScreenPositionFilter.Create("Screen_Left", projector, fractic, 0, 0.33);
-        Toby_HorizontalScreenPositionFilter screenFrontFilter = Toby_HorizontalScreenPositionFilter.Create("Screen_Front", projector, fractic, 0.33, 0.66);
-        Toby_HorizontalScreenPositionFilter screenRightFilter = Toby_HorizontalScreenPositionFilter.Create("Screen_Right", projector, fractic, 0.66, 1);
+        Toby_ActorFilterDistance distanceCloseFilter = Toby_ActorFilterDistance.Create("Distance_Close", playerActor, 0, distanceClose);
+        Toby_ActorFilterDistance distanceMeduimFilter = Toby_ActorFilterDistance.Create("Distance_Medium", playerActor, distanceClose, distanceMedium);
+        Toby_ActorFilterDistance distanceFarFilter = Toby_ActorFilterDistance.Create("Distance_Close", playerActor, distanceMedium, int.Max);
+        Toby_ActorFilterHorizontalScreenPosition screenLeftFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Left", projector, fractic, 0, 0.33);
+        Toby_ActorFilterHorizontalScreenPosition screenFrontFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Front", projector, fractic, 0.33, 0.66);
+        Toby_ActorFilterHorizontalScreenPosition screenRightFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Right", projector, fractic, 0.66, 1);
 
-        filters.push(Toby_AllFilter.Create("All"));
+        filters.push(Toby_ActorFilterAll.Create("All"));
         filters.push(distanceCloseFilter);
         filters.push(distanceMeduimFilter);
         filters.push(distanceFarFilter);
         filters.push(screenLeftFilter);
         filters.push(screenFrontFilter);
         filters.push(screenRightFilter);
-        filters.push(Toby_FilterAnd.Create("Screen_Left_Distance_Close", screenLeftFilter, distanceCloseFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Left_Distance_Medium", screenLeftFilter, distanceMeduimFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Left_Distance_Far", screenLeftFilter, distanceFarFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Close", screenLeftFilter, distanceCloseFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Medium", screenLeftFilter, distanceMeduimFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Far", screenLeftFilter, distanceFarFilter));
 
-        filters.push(Toby_FilterAnd.Create("Screen_Front_Distance_Close", screenFrontFilter, distanceCloseFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Front_Distance_Medium", screenFrontFilter, distanceMeduimFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Front_Distance_Far", screenFrontFilter, distanceFarFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Distance_Close", screenFrontFilter, distanceCloseFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Distance_Medium", screenFrontFilter, distanceMeduimFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Distance_Far", screenFrontFilter, distanceFarFilter));
 
-        filters.push(Toby_FilterAnd.Create("Screen_Right_Distance_Close", screenRightFilter, distanceCloseFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Right_Distance_Medium", screenRightFilter, distanceMeduimFilter));
-        filters.push(Toby_FilterAnd.Create("Screen_Right_Distance_Far", screenRightFilter, distanceFarFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Close", screenRightFilter, distanceCloseFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Medium", screenRightFilter, distanceMeduimFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Far", screenRightFilter, distanceFarFilter));
     }
 
     void FilterActor(Actor actorToFilter)
@@ -55,9 +55,9 @@ class Toby_ActorsInViewportStorage
         }
     }
 
-    Toby_ActorsFilter GetFilterByName(string name)
+    Toby_ActorFilter GetFilterByName(string name)
     {
-        Toby_ActorsFilter filter = null;
+        Toby_ActorFilter filter = null;
         for (int i = 0; i < filters.Size(); i++)
         {
             if (filters[i].name == name)
