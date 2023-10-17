@@ -34,90 +34,72 @@ class Toby_ActorsInViewportHandler: EventHandler
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
 
-        let oneThird = Screen.GetWidth() / 3;
-        let twoThirds = Screen.GetWidth() * 2 / 3;
-
-        let heightOneThird = Screen.GetHeight() / 3;
-        let heightTwoThirds = Screen.GetHeight() * 2 / 3;
-
-        PosInfoStorage frontClose = new("PosInfoStorage");
-        PosInfoStorage frontMid = new("PosInfoStorage");
-        PosInfoStorage frontFar = new("PosInfoStorage");
-
-        PosInfoStorage leftClose = new("PosInfoStorage");
-        PosInfoStorage leftMid = new("PosInfoStorage");
-        PosInfoStorage leftFar = new("PosInfoStorage");
-
-        PosInfoStorage rigitClose = new("PosInfoStorage");
-        PosInfoStorage rigitMid = new("PosInfoStorage");
-        PosInfoStorage rigitFar = new("PosInfoStorage");
-
         projector.projection.CacheResolution();
         projector.projection.CacheFov(player.fov);
         projector.projection.OrientForRenderOverlay(e);
         projector.projection.BeginProjection();
 
+        storage.ResetFilters(playerActor, projector, e.fractic);
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
             if (!storage.actorsThatCanSeePlayer[i]) { continue; }
+            if (storage.actorsThatCanSeePlayer[i] == playerActor) { continue; }
             projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), e.fractic);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
-            let screenPos = projector.viewport.SceneToWindow(normalPos);
+            storage.FilterActor(storage.actorsThatCanSeePlayer[i]);
+        }
 
-            let className = storage.actorsThatCanSeePlayer[i].GetClassName();
-            double distance = (storage.actorsThatCanSeePlayer[i].pos - playerActor.pos).Length();
-            double closeDistance = 200;
-            double mediumDistance = 1000;
-            if (screenPos.x > twoThirds)
-            {
-                if (distance < closeDistance)
-                {
-                    rigitClose.AddName(className);
-                }
-                else if (distance < mediumDistance)
-                {
-                    rigitMid.AddName(className);
-                }
-                else
-                {
-                    rigitFar.AddName(className);
-                }
-            }
-            else if (screenPos.x > oneThird)
-            {
-                if (distance < closeDistance)
-                {
-                    frontClose.AddName(className);
-                }
-                else if (distance < mediumDistance)
-                {
-                    frontMid.AddName(className);
-                }
-                else
-                {
-                    frontFar.AddName(className);
-                }
-            }
-            else
-            {
-                if (distance < closeDistance)
-                {
-                    leftClose.AddName(className);
-                }
-                else if (distance < mediumDistance)
-                {
-                    leftMid.AddName(className);
-                }
-                else
-                {
-                    leftFar.AddName(className);
-                }
-            }
+        PosInfoStorage leftClose = new("PosInfoStorage");
+        PosInfoStorage leftMid = new("PosInfoStorage");
+        PosInfoStorage leftFar = new("PosInfoStorage");
 
-            TextureId tex = TexMan.CheckForTexture("STCDROM",TexMan.TYPE_ANY);
-            Screen.DrawTexture(tex, false, screenPos.x, screenPos.y);
+        PosInfoStorage frontClose = new("PosInfoStorage");
+        PosInfoStorage frontMid = new("PosInfoStorage");
+        PosInfoStorage frontFar = new("PosInfoStorage");
+
+        PosInfoStorage rigitClose = new("PosInfoStorage");
+        PosInfoStorage rigitMid = new("PosInfoStorage");
+        PosInfoStorage rigitFar = new("PosInfoStorage");
+
+        for (let i = 0; i < storage.GetFilterByName("Screen_Left_Distance_Close").category.Size(); i++)
+        {
+            leftClose.AddName(storage.GetFilterByName("Screen_Left_Distance_Close").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Left_Distance_Medium").category.Size(); i++)
+        {
+            leftMid.AddName(storage.GetFilterByName("Screen_Left_Distance_Medium").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Left_Distance_Far").category.Size(); i++)
+        {
+            leftFar.AddName(storage.GetFilterByName("Screen_Left_Distance_Far").category[i].GetClassName());
+        }
+
+        for (let i = 0; i < storage.GetFilterByName("Screen_Front_Distance_Close").category.Size(); i++)
+        {
+            frontClose.AddName(storage.GetFilterByName("Screen_Front_Distance_Close").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Front_Distance_Medium").category.Size(); i++)
+        {
+            frontMid.AddName(storage.GetFilterByName("Screen_Front_Distance_Medium").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Front_Distance_Far").category.Size(); i++)
+        {
+            frontFar.AddName(storage.GetFilterByName("Screen_Front_Distance_Far").category[i].GetClassName());
+        }
+
+        for (let i = 0; i < storage.GetFilterByName("Screen_Right_Distance_Close").category.Size(); i++)
+        {
+            rigitClose.AddName(storage.GetFilterByName("Screen_Right_Distance_Close").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Right_Distance_Medium").category.Size(); i++)
+        {
+            rigitMid.AddName(storage.GetFilterByName("Screen_Right_Distance_Medium").category[i].GetClassName());
+        }
+        for (let i = 0; i < storage.GetFilterByName("Screen_Right_Distance_Far").category.Size(); i++)
+        {
+            rigitFar.AddName(storage.GetFilterByName("Screen_Right_Distance_Far").category[i].GetClassName());
         }
 
         double posX = 0;
