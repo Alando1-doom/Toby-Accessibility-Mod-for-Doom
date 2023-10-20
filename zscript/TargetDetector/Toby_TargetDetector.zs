@@ -30,8 +30,7 @@ class Toby_TargetDetector
     {
         if (paused) { return; }
         if (consoleState == c_down) { return; }
-        Toby_MenuStaticHandler menuHandler = Toby_MenuStaticHandler(StaticEventHandler.Find("Toby_MenuStaticHandler"));
-        if (menuHandler.IsUiProcessor) { return; }
+        if (menuactive) { return; }
         Toby_TargetDetectorEntry currentEntry = FindEntryByClassName(className);
         cooldownMax = currentEntry.cooldown;
         if (cooldown != cooldownMax) { return; }
