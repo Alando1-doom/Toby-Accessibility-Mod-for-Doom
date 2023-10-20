@@ -28,6 +28,9 @@ class Toby_TargetDetector
 
     private ui void PlayTargetSound(string className)
     {
+        if (paused) { return; }
+        Toby_MenuStaticHandler menuHandler = Toby_MenuStaticHandler(StaticEventHandler.Find("Toby_MenuStaticHandler"));
+        if (menuHandler.IsUiProcessor) { return; }
         Toby_TargetDetectorEntry currentEntry = FindEntryByClassName(className);
         cooldownMax = currentEntry.cooldown;
         if (cooldown != cooldownMax) { return; }
