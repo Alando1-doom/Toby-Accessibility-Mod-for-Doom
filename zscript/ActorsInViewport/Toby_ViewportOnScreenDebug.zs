@@ -167,3 +167,35 @@ class Toby_ViewportOnScreenDebug
         Screen.DrawLine(twoThirds, 0, twoThirds, Screen.GetHeight(), 0xff00ff00);
     }
 }
+
+class PosInfo
+{
+    string name;
+    int amount;
+}
+
+class PosInfoStorage
+{
+    Array<PosInfo> storage;
+
+    void AddName(string name)
+    {
+        bool nameFound = false;
+
+        for (let i = 0; i < storage.Size(); i++)
+        {
+            if (storage[i].name == name)
+            {
+                nameFound = true;
+                storage[i].amount++;
+            }
+        }
+        if (!nameFound)
+        {
+            PosInfo info = new("PosInfo");
+            info.name = name;
+            info.amount = 1;
+            storage.push(info);
+        }
+    }
+}
