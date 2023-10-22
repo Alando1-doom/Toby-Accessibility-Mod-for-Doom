@@ -36,4 +36,9 @@ class Toby_SoundQueue
         queue.Append(tempQueue);
         tempQueue.Clear();
     }
+
+    bool IsEmpty()
+    {
+        return queue.Size() == 0;
+    }
 }

@@ -10,6 +10,8 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
     Array<Toby_ViewportProjector> projectors;
     ui Array<bool> checkingActorsInViewport;
 
+    ui Toby_SoundBindingsContainer actorsInViewportSoundBindings;
+
     override void OnRegister()
     {
         projector = Toby_ViewportProjector.Create();
@@ -30,6 +32,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
+            actorsInViewportSoundBindings = Toby_SoundBindingsContainer.Create("Toby_ActorsInViewportSoundBindings");
             for (int i = 0; i < maxPlayers; i++)
             {
                 checkingActorsInViewport.push(false);
@@ -48,8 +51,10 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         storage.GetActorsThatCanSeePlayer(playerActor);
     }
 
+    //This is debug only
     override void RenderOverlay(RenderEvent e)
     {
+        if (!(CVar.FindCvar("Toby_Developer").GetBool() && CVar.FindCvar("Toby_Developer_ActorsInViewportDebug").GetBool())) { return; }
         projector.viewport.FromHud();
         if (!projector.canProject)
         {
@@ -60,8 +65,6 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!player) { return; }
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
-
-        if (!(CVar.FindCvar("Toby_Developer").GetBool() && CVar.FindCvar("Toby_Developer_ActorsInViewportDebug").GetBool())) { return; }
 
         projector.projection.CacheResolution();
         projector.projection.CacheFov(player.fov);
@@ -87,6 +90,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         Toby_ViewportOnScreenDebug.DrawDebugInformation(storage);
     }
 
+    //This is actual feature
     override void RenderUnderlay(RenderEvent e)
     {
         if (!checkingActorsInViewport[consoleplayer]) { return; }
@@ -117,6 +121,8 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
             if (!projector.projection.IsInScreen()) { continue; }
             storages[consoleplayer].FilterActor(actorTofilter);
         }
+
+        Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
 
         checkingActorsInViewport[consoleplayer] = false;
     }
