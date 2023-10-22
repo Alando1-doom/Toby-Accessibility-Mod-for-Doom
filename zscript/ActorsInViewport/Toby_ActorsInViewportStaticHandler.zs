@@ -67,17 +67,21 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         projector.projection.CacheFov(player.fov);
         projector.projection.OrientForRenderOverlay(e);
         projector.projection.BeginProjection();
+        TextureId debugTexture = TexMan.CheckForTexture("STCDROM",TexMan.TYPE_ANY);
 
         storage.ResetFilters(playerActor, projector);
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
-            if (!storage.actorsThatCanSeePlayer[i]) { continue; }
-            if (storage.actorsThatCanSeePlayer[i] == playerActor) { continue; }
-            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), 1.0);
+            Actor actorTofilter = storage.actorsThatCanSeePlayer[i];
+            if (!actorTofilter) { continue; }
+            if (actorTofilter == playerActor) { continue; }
+            projector.projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
-            storage.FilterActor(storage.actorsThatCanSeePlayer[i]);
+            let screenPos = projector.viewport.SceneToWindow(normalPos);
+            storage.FilterActor(actorTofilter);
+            Screen.DrawTexture(debugTexture, false, screenPos.x, screenPos.y);
         }
 
         Toby_ViewportOnScreenDebug.DrawDebugInformation(storage);
@@ -104,13 +108,14 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
 
         for (let i = 0; i < storages[consoleplayer].actorsThatCanSeePlayer.Size(); i++)
         {
-            if (!storages[consoleplayer].actorsThatCanSeePlayer[i]) { continue; }
-            if (storages[consoleplayer].actorsThatCanSeePlayer[i] == playerActor) { continue; }
-            projector.projection.projectActorPos(storages[consoleplayer].actorsThatCanSeePlayer[i], (0,0,0), 1.0);
+            Actor actorTofilter = storages[consoleplayer].actorsThatCanSeePlayer[i];
+            if (!actorTofilter) { continue; }
+            if (actorTofilter == playerActor) { continue; }
+            projector.projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
-            storages[consoleplayer].FilterActor(storages[consoleplayer].actorsThatCanSeePlayer[i]);
+            storages[consoleplayer].FilterActor(actorTofilter);
         }
 
         checkingActorsInViewport[consoleplayer] = false;
