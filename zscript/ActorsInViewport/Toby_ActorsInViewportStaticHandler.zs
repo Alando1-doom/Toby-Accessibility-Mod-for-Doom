@@ -9,6 +9,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
     Array<Toby_ActorsInViewportStorage> storages;
     Array<Toby_ViewportProjector> projectors;
     ui Array<bool> checkingActorsInViewport;
+    ui Array<int> narrationPresets;
 
     ui Toby_SoundBindingsContainer actorsInViewportSoundBindings;
 
@@ -20,9 +21,6 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         for (int i = 0; i < maxPlayers; i++)
         {
             storages.push(Toby_ActorsInViewportStorage.Create());
-        }
-        for (int i = 0; i < maxPlayers; i++)
-        {
             projectors.push(Toby_ViewportProjector.Create());
         }
     }
@@ -36,10 +34,12 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
             for (int i = 0; i < maxPlayers; i++)
             {
                 checkingActorsInViewport.push(false);
+                narrationPresets.push(0);
             }
         }
     }
 
+    //This is debug only
     override void WorldTick()
     {
         PlayerInfo player = players[consoleplayer];
@@ -96,7 +96,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!checkingActorsInViewport[consoleplayer]) { return; }
 
         projectors[consoleplayer].viewport.FromHud();
-        if (!projector.canProject) { return; }
+        if (!projectors[consoleplayer].canProject) { return; }
 
         PlayerInfo player = players[consoleplayer];
         if (!player) { return; }
@@ -108,21 +108,36 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         projectors[consoleplayer].projection.OrientForRenderOverlay(e);
         projectors[consoleplayer].projection.BeginProjection();
 
-        storages[consoleplayer].ResetFilters(playerActor, projector);
+        storages[consoleplayer].ResetFilters(playerActor, projectors[consoleplayer]);
 
         for (let i = 0; i < storages[consoleplayer].actorsThatCanSeePlayer.Size(); i++)
         {
             Actor actorTofilter = storages[consoleplayer].actorsThatCanSeePlayer[i];
             if (!actorTofilter) { continue; }
             if (actorTofilter == playerActor) { continue; }
-            projector.projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
-            let normalPos = projector.projection.projectToNormal();
-            if (!projector.viewport.IsInside(normalPos)) { continue; }
-            if (!projector.projection.IsInScreen()) { continue; }
+            projectors[consoleplayer].projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
+            let normalPos = projectors[consoleplayer].projection.projectToNormal();
+            if (!projectors[consoleplayer].viewport.IsInside(normalPos)) { continue; }
+            if (!projectors[consoleplayer].projection.IsInScreen()) { continue; }
             storages[consoleplayer].FilterActor(actorTofilter);
         }
 
-        Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+        if (narrationPresets[consoleplayer] == 0)
+        {
+            Toby_ActorsInViewportPresets.PlayGeneralOverview(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
+        if (narrationPresets[consoleplayer] == 1)
+        {
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
+        if (narrationPresets[consoleplayer] == 2)
+        {
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistance(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
+        if (narrationPresets[consoleplayer] == 3)
+        {
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
 
         checkingActorsInViewport[consoleplayer] = false;
     }
@@ -133,9 +148,25 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!player) { return; }
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
-        if (e.Name == "Toby_CheckActorsInViewportInterface")
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset0")
         {
             checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 0;
+        }
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset1")
+        {
+            checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 1;
+        }
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset2")
+        {
+            checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 2;
+        }
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset3")
+        {
+            checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 3;
         }
     }
 
@@ -145,10 +176,26 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!player) { return; }
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
-        if (e.Name == "Toby_CheckActorsInViewport")
+
+        if (e.Name == "Toby_CheckActorsInViewport_Preset0")
         {
             storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
-            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface");
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset0");
+        }
+        if (e.Name == "Toby_CheckActorsInViewport_Preset1")
+        {
+            storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset1");
+        }
+        if (e.Name == "Toby_CheckActorsInViewport_Preset2")
+        {
+            storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset2");
+        }
+        if (e.Name == "Toby_CheckActorsInViewport_Preset3")
+        {
+            storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset3");
         }
     }
 }
