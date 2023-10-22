@@ -52,6 +52,15 @@ class Toby_SoundQueueStaticHandler : StaticEventHandler
         handler.queue.Insert(0, Toby_QueuedSound.Create(sound, pause));
     }
 
+    ui static void AddQueue(Toby_SoundQueue soundQueue)
+    {
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
+        for (int i = 0; i < soundQueue.queue.Size(); i++)
+        {
+            handler.queue.push(soundQueue.queue[i]);
+        }
+    }
+
     ui static void PlayQueue(int initialPause)
     {
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));

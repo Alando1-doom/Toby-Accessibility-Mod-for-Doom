@@ -7,6 +7,8 @@ version "4.6"
 #include "zscript/Utils/SoundQueue/Toby_StringToVoice.zs"
 #include "zscript/Utils/SoundQueue/Toby_OrdinalToVoice.zs"
 #include "zscript/Utils/SoundQueue/Toby_MonthToVoice.zs"
+#include "zscript/Utils/SoundQueue/Toby_SoundQueue.zs"
+#include "zscript/Utils/SoundQueue/Toby_NumberToSoundQueue.zs"
 
 //Player status checker
 #include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
