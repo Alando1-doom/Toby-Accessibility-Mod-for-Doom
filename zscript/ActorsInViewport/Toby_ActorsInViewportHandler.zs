@@ -41,12 +41,12 @@ class Toby_ActorsInViewportHandler: EventHandler
         projector.projection.OrientForRenderOverlay(e);
         projector.projection.BeginProjection();
 
-        storage.ResetFilters(playerActor, projector, e.fractic);
+        storage.ResetFilters(playerActor, projector);
         for (let i = 0; i < storage.actorsThatCanSeePlayer.Size(); i++)
         {
             if (!storage.actorsThatCanSeePlayer[i]) { continue; }
             if (storage.actorsThatCanSeePlayer[i] == playerActor) { continue; }
-            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), e.fractic);
+            projector.projection.projectActorPos(storage.actorsThatCanSeePlayer[i], (0,0,0), 1.0);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
             if (!projector.projection.IsInScreen()) { continue; }
