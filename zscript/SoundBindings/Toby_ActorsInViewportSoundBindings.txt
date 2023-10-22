@@ -115,7 +115,7 @@
 
 {"ActorClass":"Backpack_TO", "SoundToPlay":"toby/actorsinviewport/pickups/backpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/backpacks", "Article":"a"}
 {"ActorClass":"Clip_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/clip", "SoundToPlayPlural":"toby/actorsinviewport/pickups/clips", "Article":"a"}
-{"ActorClass":"Clip_Toby_Zombie", "SoundToPlay":"toby/actorsinviewport/pickups/clipdroppedbyformerhuman", "SoundToPlayPlural":"toby/actorsinviewport/pickups/clipsdroppedbyformerhuman", "Article":"a"}
+{"ActorClass":"Clip_Toby_Zombie", "SoundToPlay":"toby/actorsinviewport/pickups/clipdroppedbyformerhuman", "SoundToPlayPlural":"toby/actorsinviewport/pickups/clipsdroppedbyformerhumans", "Article":"a"}
 {"ActorClass":"ClipBox_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/boxofammo", "SoundToPlayPlural":"toby/actorsinviewport/pickups/boxesofammo", "Article":"a"}
 {"ActorClass":"Shell_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/shell", "SoundToPlayPlural":"toby/actorsinviewport/pickups/shells", "Article":"a"}
 {"ActorClass":"ShellBox_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/boxofshells", "SoundToPlayPlural":"toby/actorsinviewport/pickups/boxesofshells", "Article":"a"}
