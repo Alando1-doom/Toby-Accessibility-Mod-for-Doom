@@ -28,6 +28,9 @@ class Toby_TargetDetector
 
     private ui void PlayTargetSound(string className)
     {
+        if (paused) { return; }
+        if (consoleState == c_down) { return; }
+        if (menuactive) { return; }
         Toby_TargetDetectorEntry currentEntry = FindEntryByClassName(className);
         cooldownMax = currentEntry.cooldown;
         if (cooldown != cooldownMax) { return; }
