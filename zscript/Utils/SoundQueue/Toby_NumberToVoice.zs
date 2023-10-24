@@ -1,3 +1,4 @@
+//Will be obsoleted by Toby_NumberToSoundQueue and removed
 class Toby_NumberToVoice ui
 {
     ui static void AddStringNumberToQueue(string numberAsString)

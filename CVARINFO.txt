@@ -9,6 +9,8 @@ user bool   Toby_Developer_OptionValueChangedEvents = false;
 user bool   Toby_Developer_SaveSlotChangedEvents = false;
 user bool   Toby_Developer_KeyPressedEvents = false;
 
+user bool   Toby_Developer_ActorsInViewportDebug = false;
+
 user bool   Toby_Developer_MapInformation = false;
 
 user bool   Toby_SkipSlotWord = false;

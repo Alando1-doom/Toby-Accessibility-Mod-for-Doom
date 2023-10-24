@@ -1,26 +1,45 @@
-//Will be obsoleted by Toby_StringToSoundQueue and removed
-
-class Toby_StringToVoice ui
+class Toby_StringToSoundQueue
 {
-    ui static void ConvertAndAddToQueue(string text)
+    Toby_SoundQueue soundQueue;
+
+    static Toby_StringToSoundQueue Create()
+    {
+        Toby_StringToSoundQueue numberToSoundQueue = new("Toby_StringToSoundQueue");
+        numberToSoundQueue.soundQueue = new("Toby_SoundQueue");
+        return numberToSoundQueue;
+    }
+
+    void Reset()
+    {
+        soundQueue = new("Toby_SoundQueue");
+    }
+
+    Toby_SoundQueue CreateQueueFromText(string text)
+    {
+        Reset();
+        ConvertAndAddToQueue(text);
+        return soundQueue;
+    }
+
+    private void ConvertAndAddToQueue(string text)
     {
         for (int i = 0; i < text.Length(); i++)
         {
             string character = text.Mid(i, 1).MakeLower();
-            Toby_SoundQueueStaticHandler.AddSound(GetCharSoundName(character), -1);
+            soundQueue.AddSound(GetCharSoundName(character), -1);
         }
     }
 
-    ui static void ConvertAndAddToQueueReverse(string text)
+    private void ConvertAndAddToQueueReverse(string text)
     {
         for (int i = text.Length()-1; i >= 0; i--)
         {
             string character = text.Mid(i, 1).MakeLower();
-            Toby_SoundQueueStaticHandler.UnshiftSound(GetCharSoundName(character), -1);
+            soundQueue.UnshiftSound(GetCharSoundName(character), -1);
         }
     }
 
-    ui static string GetCharSoundName(string character)
+    private string GetCharSoundName(string character)
     {
         string characterSoundName = "alphabet/Space";
         if (character == " ") characterSoundName = "alphabet/Space";
