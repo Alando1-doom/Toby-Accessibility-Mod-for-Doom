@@ -21,6 +21,9 @@ class Toby_ActorsInViewportStorage
         int distanceClose = 200;
         int distanceMedium = 1000;
 
+        //Proydoha: I hate following segment
+        //Maybe: create filter and then get them by name when need to check against them?
+
         Toby_ActorFilter allFilter = Toby_ActorFilterAll.Create("All");
 
         Toby_ActorFilter remainsFilter = Toby_ActorFilterRemains.Create("Remains");
@@ -32,6 +35,10 @@ class Toby_ActorsInViewportStorage
         Toby_ActorFilter screenLeftFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Left", projector, 0, 0.33);
         Toby_ActorFilter screenFrontFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Front", projector, 0.33, 0.66);
         Toby_ActorFilter screenRightFilter = Toby_ActorFilterHorizontalScreenPosition.Create("Screen_Right", projector, 0.66, 1);
+        Toby_ActorFilter levelLowerFilter = Toby_ActorFilterVerticalDistance.Create("Level_Lower", playerActor, -int.Max, -playerActor.MaxStepHeight - 1);
+        Toby_ActorFilter levelAboutSameFilter = Toby_ActorFilterVerticalDistance.Create("Level_AboutSame", playerActor, -playerActor.MaxStepHeight - 1, playerActor.MaxStepHeight);
+        Toby_ActorFilter levelHigherRightFilter = Toby_ActorFilterVerticalDistance.Create("Level_Higher", playerActor, playerActor.MaxStepHeight, int.Max);
+
 
         Toby_ActorFilter screenLeftCloseFilter = Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Close", screenLeftFilter, distanceCloseFilter);
         Toby_ActorFilter screenLeftMediumFilter = Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Medium", screenLeftFilter, distanceMeduimFilter);
@@ -44,6 +51,19 @@ class Toby_ActorsInViewportStorage
         Toby_ActorFilter screenRightCloseFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Close", screenRightFilter, distanceCloseFilter);
         Toby_ActorFilter screenRightMediumFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Medium", screenRightFilter, distanceMeduimFilter);
         Toby_ActorFilter screenRightFarFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Far", screenRightFilter, distanceFarFilter);
+
+
+        Toby_ActorFilter screenLeftLowerFilter = Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Lower", screenLeftFilter, levelLowerFilter);
+        Toby_ActorFilter screenLeftAboutSameFilter = Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_AboutSame", screenLeftFilter, levelAboutSameFilter);
+        Toby_ActorFilter screenLeftHigherFilter = Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Higher", screenLeftFilter, levelHigherRightFilter);
+
+        Toby_ActorFilter screenFrontLowerFilter = Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Lower", screenFrontFilter, levelLowerFilter);
+        Toby_ActorFilter screenFrontAboutSameFilter = Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_AboutSame", screenFrontFilter, levelAboutSameFilter);
+        Toby_ActorFilter screenFrontHigherFilter = Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Higher", screenFrontFilter, levelHigherRightFilter);
+
+        Toby_ActorFilter screenRightLowerFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Lower", screenRightFilter, levelLowerFilter);
+        Toby_ActorFilter screenRightAboutSameFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_AboutSame", screenRightFilter, levelAboutSameFilter);
+        Toby_ActorFilter screenRightHigherFilter = Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Higher", screenRightFilter, levelHigherRightFilter);
 
         filters.push(allFilter);
         filters.push(Toby_ActorFilterLogicAnd.Create("All_Remains", allFilter, remainsFilter));
@@ -68,6 +88,16 @@ class Toby_ActorsInViewportStorage
         filters.push(screenRightFilter);
         filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Remains", screenRightFilter, remainsFilter));
         filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_NotRemains", screenRightFilter, notRemainsFilter));
+
+        filters.push(levelLowerFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_Lower_Remains", levelLowerFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_Lower_NotRemains", levelLowerFilter, notRemainsFilter));
+        filters.push(levelAboutSameFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_AboutSame_Remains", levelAboutSameFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_AboutSame_NotRemains", levelAboutSameFilter, notRemainsFilter));
+        filters.push(levelHigherRightFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_Higher_Remains", levelHigherRightFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Level_Higher_NotRemains", levelHigherRightFilter, notRemainsFilter));
 
         filters.push(screenLeftCloseFilter);
         filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Distance_Close_Remains", screenLeftCloseFilter, remainsFilter));
@@ -98,6 +128,36 @@ class Toby_ActorsInViewportStorage
         filters.push(screenRightFarFilter);
         filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Far_Remains", screenRightFarFilter, remainsFilter));
         filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Distance_Far_NotRemains", screenRightFarFilter, notRemainsFilter));
+
+        filters.push(screenLeftLowerFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Lower_Remains", screenLeftLowerFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Lower_NotRemains", screenLeftLowerFilter, notRemainsFilter));
+        filters.push(screenLeftAboutSameFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_AboutSame_Remains", screenLeftAboutSameFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_AboutSame_NotRemains", screenLeftAboutSameFilter, notRemainsFilter));
+        filters.push(screenLeftHigherFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Higher_Remains", screenLeftHigherFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Left_Level_Higher_NotRemains", screenLeftHigherFilter, notRemainsFilter));
+
+        filters.push(screenFrontLowerFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Lower_Remains", screenFrontLowerFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Lower_NotRemains", screenFrontLowerFilter, notRemainsFilter));
+        filters.push(screenFrontAboutSameFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_AboutSame_Remains", screenFrontAboutSameFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_AboutSame_NotRemains", screenFrontAboutSameFilter, notRemainsFilter));
+        filters.push(screenFrontHigherFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Higher_Remains", screenFrontHigherFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Front_Level_Higher_NotRemains", screenFrontHigherFilter, notRemainsFilter));
+
+        filters.push(screenRightLowerFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Lower_Remains", screenRightLowerFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Lower_NotRemains", screenRightLowerFilter, notRemainsFilter));
+        filters.push(screenRightAboutSameFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_AboutSame_Remains", screenRightAboutSameFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_AboutSame_NotRemains", screenRightAboutSameFilter, notRemainsFilter));
+        filters.push(screenRightHigherFilter);
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Higher_Remains", screenRightHigherFilter, remainsFilter));
+        filters.push(Toby_ActorFilterLogicAnd.Create("Screen_Right_Level_Higher_NotRemains", screenRightHigherFilter, notRemainsFilter));
     }
 
     void FilterActor(Actor actorToFilter)

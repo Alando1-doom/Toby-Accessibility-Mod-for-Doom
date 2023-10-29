@@ -116,6 +116,50 @@ class Toby_ActorsInViewportPresets
         handler.PlayQueue(0);
     }
 
+    static ui void PlayDetailedOverviewByLevel(Toby_ActorsInViewportStorage storage, Toby_SoundBindingsContainer bindings)
+    {
+        Toby_SoundQueue queue = new("Toby_SoundQueue");
+
+        Toby_ActorCounterToSoundQueue actorCounterToSoundQueue = Toby_ActorCounterToSoundQueue.Create();
+
+        Toby_ActorsInViewportActorCounter lowerRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Lower_Remains", true);
+        Toby_ActorsInViewportActorCounter lowerNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Lower_NotRemains", false);
+
+        Toby_ActorsInViewportActorCounter aboutSameRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_AboutSame_Remains", true);
+        Toby_ActorsInViewportActorCounter aboutSameNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_AboutSame_NotRemains", false);
+
+        Toby_ActorsInViewportActorCounter higherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Higher_Remains", true);
+        Toby_ActorsInViewportActorCounter higherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Higher_NotRemains", false);
+
+        Toby_SoundQueue lowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(lowerRemains, bindings);
+        Toby_SoundQueue lowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(lowerNotRemains, bindings);
+
+        Toby_SoundQueue aboutSameRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(aboutSameRemains, bindings);
+        Toby_SoundQueue aboutSameNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(aboutSameNotRemains, bindings);
+
+        Toby_SoundQueue higherRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(higherRemains, bindings);
+        Toby_SoundQueue higherNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(higherNotRemains, bindings);
+
+        if (lowerRemainsQueue.isEmpty()
+            && lowerNotRemainsQueue.isEmpty()
+            && aboutSameRemainsQueue.isEmpty()
+            && aboutSameNotRemainsQueue.isEmpty()
+            && higherRemainsQueue.isEmpty()
+            && higherNotRemainsQueue.isEmpty()
+            )
+        {
+            queue.AddSound("toby/actorsinviewport/general/nonotableactorsaround", -1);
+        }
+
+        AddSubQueuePairToQueue(queue, lowerNotRemainsQueue, lowerRemainsQueue, "toby/actorsinviewport/general/lowerthanyou");
+        AddSubQueuePairToQueue(queue, aboutSameNotRemainsQueue, aboutSameRemainsQueue, "toby/actorsinviewport/general/aboutsamelevelasyou");
+        AddSubQueuePairToQueue(queue, higherNotRemainsQueue, higherRemainsQueue, "toby/actorsinviewport/general/higherthanyou");
+
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
+        handler.AddQueue(queue);
+        handler.PlayQueue(0);
+    }
+
 
     static ui void PlayDetailedOverviewByDistanceAndScreenPosition(Toby_ActorsInViewportStorage storage, Toby_SoundBindingsContainer bindings)
     {
@@ -216,6 +260,112 @@ class Toby_ActorsInViewportPresets
             AddSubQueuePairToQueue(queue, rightCloseNotRemainsQueue, rightCloseRemainsQueue, "toby/actorsinviewport/general/close");
             AddSubQueuePairToQueue(queue, rightMediumNotRemainsQueue, rightMediumRemainsQueue, "toby/actorsinviewport/general/mediumdistance");
             AddSubQueuePairToQueue(queue, rightFarNotRemainsQueue, rightFarRemainsQueue, "toby/actorsinviewport/general/faraway");
+        }
+
+        Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
+        handler.AddQueue(queue);
+        handler.PlayQueue(0);
+    }
+
+    static ui void PlayDetailedOverviewByLevelAndScreenPosition(Toby_ActorsInViewportStorage storage, Toby_SoundBindingsContainer bindings)
+    {
+        Toby_SoundQueue queue = new("Toby_SoundQueue");
+
+        Toby_ActorCounterToSoundQueue actorCounterToSoundQueue = Toby_ActorCounterToSoundQueue.Create();
+
+        Toby_ActorsInViewportActorCounter leftLowerRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_Lower_Remains", true);
+        Toby_ActorsInViewportActorCounter leftLowerNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_Lower_NotRemains", false);
+        Toby_ActorsInViewportActorCounter leftAboutSameRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_AboutSame_Remains", true);
+        Toby_ActorsInViewportActorCounter leftAboutSameNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_AboutSame_NotRemains", false);
+        Toby_ActorsInViewportActorCounter leftHigherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_Higher_Remains", true);
+        Toby_ActorsInViewportActorCounter leftHigherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Left_Level_Higher_NotRemains", false);
+
+        Toby_ActorsInViewportActorCounter frontLowerRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_Lower_Remains", true);
+        Toby_ActorsInViewportActorCounter frontLowerNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_Lower_NotRemains", false);
+        Toby_ActorsInViewportActorCounter frontAboutSameRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_AboutSame_Remains", true);
+        Toby_ActorsInViewportActorCounter frontAboutSameNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_AboutSame_NotRemains", false);
+        Toby_ActorsInViewportActorCounter frontHigherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_Higher_Remains", true);
+        Toby_ActorsInViewportActorCounter frontHigherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Front_Level_Higher_NotRemains", false);
+
+        Toby_ActorsInViewportActorCounter rightLowerRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Lower_Remains", true);
+        Toby_ActorsInViewportActorCounter rightLowerNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Lower_NotRemains", false);
+        Toby_ActorsInViewportActorCounter rightAboutSameRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_AboutSame_Remains", true);
+        Toby_ActorsInViewportActorCounter rightAboutSameNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_AboutSame_NotRemains", false);
+        Toby_ActorsInViewportActorCounter rightHigherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Higher_Remains", true);
+        Toby_ActorsInViewportActorCounter rightHigherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Higher_NotRemains", false);
+
+        Toby_SoundQueue leftLowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftLowerRemains, bindings);
+        Toby_SoundQueue leftLowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftLowerNotRemains, bindings);
+        Toby_SoundQueue leftAboutSameRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftAboutSameRemains, bindings);
+        Toby_SoundQueue leftAboutSameNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftAboutSameNotRemains, bindings);
+        Toby_SoundQueue leftHigherRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftHigherRemains, bindings);
+        Toby_SoundQueue leftHigherNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftHigherNotRemains, bindings);
+
+        Toby_SoundQueue frontLowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontLowerRemains, bindings);
+        Toby_SoundQueue frontLowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontLowerNotRemains, bindings);
+        Toby_SoundQueue frontAboutSameRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontAboutSameRemains, bindings);
+        Toby_SoundQueue frontAboutSameNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontAboutSameNotRemains, bindings);
+        Toby_SoundQueue frontHigherRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontHigherRemains, bindings);
+        Toby_SoundQueue frontHigherNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(frontHigherNotRemains, bindings);
+
+        Toby_SoundQueue rightLowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightLowerRemains, bindings);
+        Toby_SoundQueue rightLowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightLowerNotRemains, bindings);
+        Toby_SoundQueue rightAboutSameRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightAboutSameRemains, bindings);
+        Toby_SoundQueue rightAboutSameNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightAboutSameNotRemains, bindings);
+        Toby_SoundQueue rightHigherRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightHigherRemains, bindings);
+        Toby_SoundQueue rightHigherNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(rightHigherNotRemains, bindings);
+
+        bool isLeftSideEmpty = leftLowerRemainsQueue.isEmpty()
+            && leftLowerNotRemainsQueue.isEmpty()
+            && leftAboutSameRemainsQueue.isEmpty()
+            && leftAboutSameNotRemainsQueue.isEmpty()
+            && leftHigherRemainsQueue.isEmpty()
+            && leftHigherNotRemainsQueue.isEmpty();
+
+        bool isFrontSideEmpty = frontLowerRemainsQueue.isEmpty()
+            && frontLowerNotRemainsQueue.isEmpty()
+            && frontAboutSameRemainsQueue.isEmpty()
+            && frontAboutSameNotRemainsQueue.isEmpty()
+            && frontHigherRemainsQueue.isEmpty()
+            && frontHigherNotRemainsQueue.isEmpty();
+
+        bool isRightSideEmpty = rightLowerRemainsQueue.isEmpty()
+            && rightLowerNotRemainsQueue.isEmpty()
+            && rightAboutSameRemainsQueue.isEmpty()
+            && rightAboutSameNotRemainsQueue.isEmpty()
+            && rightHigherRemainsQueue.isEmpty()
+            && rightHigherNotRemainsQueue.isEmpty();
+
+        if (isLeftSideEmpty && isFrontSideEmpty && isRightSideEmpty)
+        {
+            queue.AddSound("toby/actorsinviewport/general/nonotableactorsaround", -1);
+        }
+
+        if (!isLeftSideEmpty)
+        {
+            queue.AddSound("toby/actorsinviewport/general/onyourleft", -1);
+
+            AddSubQueuePairToQueue(queue, leftLowerNotRemainsQueue, leftLowerRemainsQueue, "toby/actorsinviewport/general/lowerthanyou");
+            AddSubQueuePairToQueue(queue, leftAboutSameNotRemainsQueue, leftAboutSameRemainsQueue, "toby/actorsinviewport/general/aboutsamelevelasyou");
+            AddSubQueuePairToQueue(queue, leftHigherNotRemainsQueue, leftHigherRemainsQueue, "toby/actorsinviewport/general/higherthanyou");
+        }
+
+        if (!isFrontSideEmpty)
+        {
+            queue.AddSound("toby/actorsinviewport/general/infrontofyou", -1);
+
+            AddSubQueuePairToQueue(queue, frontLowerNotRemainsQueue, frontLowerRemainsQueue, "toby/actorsinviewport/general/lowerthanyou");
+            AddSubQueuePairToQueue(queue, frontAboutSameNotRemainsQueue, frontAboutSameRemainsQueue, "toby/actorsinviewport/general/aboutsamelevelasyou");
+            AddSubQueuePairToQueue(queue, frontHigherNotRemainsQueue, frontHigherRemainsQueue, "toby/actorsinviewport/general/higherthanyou");
+        }
+
+        if (!isRightSideEmpty)
+        {
+            queue.AddSound("toby/actorsinviewport/general/onyourright", -1);
+
+            AddSubQueuePairToQueue(queue, rightLowerNotRemainsQueue, rightLowerRemainsQueue, "toby/actorsinviewport/general/lowerthanyou");
+            AddSubQueuePairToQueue(queue, rightAboutSameNotRemainsQueue, rightAboutSameRemainsQueue, "toby/actorsinviewport/general/aboutsamelevelasyou");
+            AddSubQueuePairToQueue(queue, rightHigherNotRemainsQueue, rightHigherRemainsQueue, "toby/actorsinviewport/general/higherthanyou");
         }
 
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
