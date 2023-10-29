@@ -63,26 +63,9 @@ class Toby_ActorsInViewportPresets
             queue.AddSound("toby/actorsinviewport/general/nonotableactorsaround", -1);
         }
 
-        if (!leftRemainsQueue.isEmpty() || !leftNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/onyourleft", -1);
-            queue.AddQueue(leftNotRemainsQueue);
-            queue.AddQueue(leftRemainsQueue);
-        }
-
-        if (!frontRemainsQueue.isEmpty() || !frontNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/infrontofyou", -1);
-            queue.AddQueue(frontNotRemainsQueue);
-            queue.AddQueue(frontRemainsQueue);
-        }
-
-        if (!rightRemainsQueue.isEmpty() || !rightNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/onyourright", -1);
-            queue.AddQueue(rightNotRemainsQueue);
-            queue.AddQueue(rightRemainsQueue);
-        }
+        AddSubQueuePairToQueue(queue, leftNotRemainsQueue, leftRemainsQueue, "toby/actorsinviewport/general/onyourleft");
+        AddSubQueuePairToQueue(queue, frontNotRemainsQueue, frontRemainsQueue, "toby/actorsinviewport/general/infrontofyou");
+        AddSubQueuePairToQueue(queue, rightNotRemainsQueue, rightRemainsQueue, "toby/actorsinviewport/general/onyourright");
 
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         handler.AddQueue(queue);
@@ -124,26 +107,9 @@ class Toby_ActorsInViewportPresets
             queue.AddSound("toby/actorsinviewport/general/nonotableactorsaround", -1);
         }
 
-        if (!closeRemainsQueue.isEmpty() || !closeNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/close", -1);
-            queue.AddQueue(closeNotRemainsQueue);
-            queue.AddQueue(closeRemainsQueue);
-        }
-
-        if (!mediumRemainsQueue.isEmpty() || !mediumNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/mediumdistance", -1);
-            queue.AddQueue(mediumNotRemainsQueue);
-            queue.AddQueue(mediumRemainsQueue);
-        }
-
-        if (!farRemainsQueue.isEmpty() || !farNotRemainsQueue.isEmpty())
-        {
-            queue.AddSound("toby/actorsinviewport/general/faraway", -1);
-            queue.AddQueue(farNotRemainsQueue);
-            queue.AddQueue(farRemainsQueue);
-        }
+        AddSubQueuePairToQueue(queue, closeNotRemainsQueue, closeRemainsQueue, "toby/actorsinviewport/general/close");
+        AddSubQueuePairToQueue(queue, mediumNotRemainsQueue, mediumRemainsQueue, "toby/actorsinviewport/general/mediumdistance");
+        AddSubQueuePairToQueue(queue, farNotRemainsQueue, farRemainsQueue, "toby/actorsinviewport/general/faraway");
 
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         handler.AddQueue(queue);
@@ -229,76 +195,45 @@ class Toby_ActorsInViewportPresets
         {
             queue.AddSound("toby/actorsinviewport/general/onyourleft", -1);
 
-            if (!leftCloseRemainsQueue.isEmpty() || !leftCloseNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/close", -1);
-                queue.AddQueue(leftCloseNotRemainsQueue);
-                queue.AddQueue(leftCloseRemainsQueue);
-            }
-            if (!leftMediumRemainsQueue.isEmpty() || !leftMediumNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/mediumdistance", -1);
-                queue.AddQueue(leftMediumNotRemainsQueue);
-                queue.AddQueue(leftMediumRemainsQueue);
-            }
-            if (!leftFarRemainsQueue.isEmpty() || !leftFarNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/faraway", -1);
-                queue.AddQueue(leftFarNotRemainsQueue);
-                queue.AddQueue(leftFarRemainsQueue);
-            }
+            AddSubQueuePairToQueue(queue, leftCloseNotRemainsQueue, leftCloseRemainsQueue, "toby/actorsinviewport/general/close");
+            AddSubQueuePairToQueue(queue, leftMediumNotRemainsQueue, leftMediumRemainsQueue, "toby/actorsinviewport/general/mediumdistance");
+            AddSubQueuePairToQueue(queue, leftFarNotRemainsQueue, leftFarRemainsQueue, "toby/actorsinviewport/general/faraway");
         }
 
         if (!isFrontSideEmpty)
         {
             queue.AddSound("toby/actorsinviewport/general/infrontofyou", -1);
 
-            if (!frontCloseRemainsQueue.isEmpty() || !frontCloseNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/close", -1);
-                queue.AddQueue(frontCloseNotRemainsQueue);
-                queue.AddQueue(frontCloseRemainsQueue);
-            }
-            if (!frontMediumRemainsQueue.isEmpty() || !frontMediumNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/mediumdistance", -1);
-                queue.AddQueue(frontMediumNotRemainsQueue);
-                queue.AddQueue(frontMediumRemainsQueue);
-            }
-            if (!frontFarRemainsQueue.isEmpty() || !frontFarNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/faraway", -1);
-                queue.AddQueue(frontFarNotRemainsQueue);
-                queue.AddQueue(frontFarRemainsQueue);
-            }
+            AddSubQueuePairToQueue(queue, frontCloseNotRemainsQueue, frontCloseRemainsQueue, "toby/actorsinviewport/general/close");
+            AddSubQueuePairToQueue(queue, frontMediumNotRemainsQueue, frontMediumRemainsQueue, "toby/actorsinviewport/general/mediumdistance");
+            AddSubQueuePairToQueue(queue, frontFarNotRemainsQueue, frontFarRemainsQueue, "toby/actorsinviewport/general/faraway");
         }
 
         if (!isRightSideEmpty)
         {
             queue.AddSound("toby/actorsinviewport/general/onyourright", -1);
 
-            if (!rightCloseRemainsQueue.isEmpty() || !rightCloseNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/close", -1);
-                queue.AddQueue(rightCloseNotRemainsQueue);
-                queue.AddQueue(rightCloseRemainsQueue);
-            }
-            if (!rightMediumRemainsQueue.isEmpty() || !rightMediumNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/mediumdistance", -1);
-                queue.AddQueue(rightMediumNotRemainsQueue);
-                queue.AddQueue(rightMediumRemainsQueue);
-            }
-            if (!rightFarRemainsQueue.isEmpty() || !rightFarNotRemainsQueue.isEmpty())
-            {
-                queue.AddSound("toby/actorsinviewport/general/faraway", -1);
-                queue.AddQueue(rightFarNotRemainsQueue);
-                queue.AddQueue(rightFarRemainsQueue);
-            }
+            AddSubQueuePairToQueue(queue, rightCloseNotRemainsQueue, rightCloseRemainsQueue, "toby/actorsinviewport/general/close");
+            AddSubQueuePairToQueue(queue, rightMediumNotRemainsQueue, rightMediumRemainsQueue, "toby/actorsinviewport/general/mediumdistance");
+            AddSubQueuePairToQueue(queue, rightFarNotRemainsQueue, rightFarRemainsQueue, "toby/actorsinviewport/general/faraway");
         }
 
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         handler.AddQueue(queue);
         handler.PlayQueue(0);
+    }
+
+    static ui void AddSubQueuePairToQueue(
+        Toby_SoundQueue queue,
+        Toby_SoundQueue subqueueNotRemains,
+        Toby_SoundQueue subqueueRemains,
+        string soundToPlay)
+    {
+        if (!subqueueNotRemains.isEmpty() || !subqueueRemains.isEmpty())
+        {
+            queue.AddSound(soundToPlay, -1);
+            queue.AddQueue(subqueueNotRemains);
+            queue.AddQueue(subqueueRemains);
+        }
     }
 }
