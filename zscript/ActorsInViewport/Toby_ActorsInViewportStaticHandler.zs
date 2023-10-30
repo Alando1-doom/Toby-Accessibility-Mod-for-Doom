@@ -138,6 +138,14 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         {
             Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
         }
+        if (narrationPresets[consoleplayer] == 4)
+        {
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevel(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
+        if (narrationPresets[consoleplayer] == 5)
+        {
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevelAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+        }
 
         checkingActorsInViewport[consoleplayer] = false;
     }
@@ -168,6 +176,16 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
             checkingActorsInViewport[consoleplayer] = true;
             narrationPresets[consoleplayer] = 3;
         }
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset4")
+        {
+            checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 4;
+        }
+        if (e.Name == "Toby_CheckActorsInViewportInterface_Preset5")
+        {
+            checkingActorsInViewport[consoleplayer] = true;
+            narrationPresets[consoleplayer] = 5;
+        }
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -196,6 +214,16 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         {
             storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset3");
+        }
+        if (e.Name == "Toby_CheckActorsInViewport_Preset4")
+        {
+            storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset4");
+        }
+        if (e.Name == "Toby_CheckActorsInViewport_Preset5")
+        {
+            storages[e.Player].GetActorsThatCanSeePlayer(playerActor);
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckActorsInViewportInterface_Preset5");
         }
     }
 }

@@ -9,3 +9,6 @@ toby/actorsinviewport/general/generaloverview           "sounds/ActorsInViewport
 toby/actorsinviewport/general/close                     "sounds/ActorsInViewport/General/Close.ogg"
 toby/actorsinviewport/general/mediumdistance            "sounds/ActorsInViewport/General/MediumDistance.ogg"
 toby/actorsinviewport/general/faraway                   "sounds/ActorsInViewport/General/FarAway.ogg"
+toby/actorsinviewport/general/lowerthanyou              "sounds/ActorsInViewport/General/LowerThanYou.ogg"
+toby/actorsinviewport/general/aboutsamelevelasyou       "sounds/ActorsInViewport/General/AboutSameLevelAsYou.ogg"
+toby/actorsinviewport/general/higherthanyou             "sounds/ActorsInViewport/General/HigherThanYou.ogg"
