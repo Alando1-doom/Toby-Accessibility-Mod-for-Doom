@@ -38,7 +38,7 @@
 {"ActorClass":"Medikit", "SoundToPlay":"toby/actorsinviewport/pickups/medikit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/medikits", "Article":"a"}
 
 {"ActorClass":"Allmap", "SoundToPlay":"toby/actorsinviewport/pickups/computermap", "SoundToPlayPlural":"toby/actorsinviewport/pickups/computermaps", "Article":"a"}
-{"ActorClass":"RadSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuites", "Article":"a"}
+{"ActorClass":"RadSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuits", "Article":"a"}
 {"ActorClass":"Megasphere", "SoundToPlay":"toby/actorsinviewport/pickups/megasphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/megaspheres", "Article":"a"}
 {"ActorClass":"Soulsphere", "SoundToPlay":"toby/actorsinviewport/pickups/soulsphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/soulspheres", "Article":"a"}
 {"ActorClass":"Berserk", "SoundToPlay":"toby/actorsinviewport/pickups/berserkpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/berserkpacks", "Article":"a"}
@@ -105,7 +105,7 @@
 {"ActorClass":"Medikit_Pickup", "SoundToPlay":"toby/actorsinviewport/pickups/medikit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/medikits", "Article":"a"}
 
 {"ActorClass":"ComputerMap2", "SoundToPlay":"toby/actorsinviewport/pickups/computermap", "SoundToPlayPlural":"toby/actorsinviewport/pickups/computermaps", "Article":"a"}
-{"ActorClass":"BioSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuites", "Article":"a"}
+{"ActorClass":"BioSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuits", "Article":"a"}
 {"ActorClass":"Megasphere_TO", "SoundToPlay":"toby/actorsinviewport/pickups/megasphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/megaspheres", "Article":"a"}
 {"ActorClass":"SuperCharge", "SoundToPlay":"toby/actorsinviewport/pickups/soulsphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/soulspheres", "Article":"a"}
 {"ActorClass":"Berserk_TO", "SoundToPlay":"toby/actorsinviewport/pickups/berserkpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/berserkpacks", "Article":"a"}

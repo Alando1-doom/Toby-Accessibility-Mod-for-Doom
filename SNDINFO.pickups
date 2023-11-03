@@ -1,118 +1,118 @@
-toby/actorsinviewport/pickups/chainsaw          dscsann
+toby/actorsinviewport/pickups/chainsaw          "sounds/ActorsInViewport/Pickups/Chainsaw.ogg"
 toby/actorsinviewport/pickups/chainsaws         "sounds/ActorsInViewport/Pickups/Chainsaws.ogg"
 
 toby/actorsinviewport/pickups/pistol            "sounds/PlayerStats/DoomWeapons/Pistol.ogg"
 toby/actorsinviewport/pickups/pistols           "sounds/ActorsInViewport/Pickups/Pistols.ogg"
 
-toby/actorsinviewport/pickups/shotgun           dssgann
+toby/actorsinviewport/pickups/shotgun           "sounds/ActorsInViewport/Pickups/Shotgun.ogg"
 toby/actorsinviewport/pickups/shotguns          "sounds/ActorsInViewport/Pickups/Shotguns.ogg"
 
-toby/actorsinviewport/pickups/supershotgun      dsssgann
+toby/actorsinviewport/pickups/supershotgun      "sounds/ActorsInViewport/Pickups/SuperShotgun.ogg"
 toby/actorsinviewport/pickups/supershotguns     "sounds/ActorsInViewport/Pickups/SuperShotguns.ogg"
 
-toby/actorsinviewport/pickups/chaingun          dscgann
+toby/actorsinviewport/pickups/chaingun          "sounds/ActorsInViewport/Pickups/Chaingun.ogg"
 toby/actorsinviewport/pickups/chainguns         "sounds/ActorsInViewport/Pickups/Chainguns.ogg"
 
-toby/actorsinviewport/pickups/rocketlauncher    dsrlann
+toby/actorsinviewport/pickups/rocketlauncher    "sounds/ActorsInViewport/Pickups/RocketLauncher.ogg"
 toby/actorsinviewport/pickups/rocketlaunchers   "sounds/ActorsInViewport/Pickups/RocketLaunchers.ogg"
 
-toby/actorsinviewport/pickups/plasmagun         dspgann
+toby/actorsinviewport/pickups/plasmagun         "sounds/ActorsInViewport/Pickups/PlasmaGun.ogg"
 toby/actorsinviewport/pickups/plasmaguns        "sounds/ActorsInViewport/Pickups/PlasmaGuns.ogg"
 
-toby/actorsinviewport/pickups/bfg9000           dsbfgann
+toby/actorsinviewport/pickups/bfg9000           "sounds/ActorsInViewport/Pickups/BFG9000.ogg"
 toby/actorsinviewport/pickups/bfgs9000          "sounds/ActorsInViewport/Pickups/BFGs9000.ogg"
 
 
-toby/actorsinviewport/pickups/armorbonus        dsabonan
+toby/actorsinviewport/pickups/armorbonus        "sounds/ActorsInViewport/Pickups/ArmorBonus.ogg"
 toby/actorsinviewport/pickups/armorbonuses      "sounds/ActorsInViewport/Pickups/ArmorBonuses.ogg"
 
-toby/actorsinviewport/pickups/armor             dsarm1an
+toby/actorsinviewport/pickups/armor             "sounds/ActorsInViewport/Pickups/Armor.ogg"
 toby/actorsinviewport/pickups/armors            "sounds/ActorsInViewport/Pickups/Armors.ogg"
 
-toby/actorsinviewport/pickups/megaarmor         dsarm2an
+toby/actorsinviewport/pickups/megaarmor         "sounds/ActorsInViewport/Pickups/MegaArmor.ogg"
 toby/actorsinviewport/pickups/megaarmors        "sounds/ActorsInViewport/Pickups/MegaArmors.ogg"
 
-toby/actorsinviewport/pickups/healthbonus       dshbonan
+toby/actorsinviewport/pickups/healthbonus       "sounds/ActorsInViewport/Pickups/HealthBonus.ogg"
 toby/actorsinviewport/pickups/healthbonuses     "sounds/ActorsInViewport/Pickups/HealthBonuses.ogg"
 
-toby/actorsinviewport/pickups/stimpack          dsstiman
+toby/actorsinviewport/pickups/stimpack          "sounds/ActorsInViewport/Pickups/Stimpack.ogg"
 toby/actorsinviewport/pickups/stimpacks         "sounds/ActorsInViewport/Pickups/Stimpacks.ogg"
 
-toby/actorsinviewport/pickups/medikit           dsmedann
+toby/actorsinviewport/pickups/medikit           "sounds/ActorsInViewport/Pickups/MediKit.ogg"
 toby/actorsinviewport/pickups/medikits          "sounds/ActorsInViewport/Pickups/MediKits.ogg"
 
 
-toby/actorsinviewport/pickups/computermap       dscmapan
+toby/actorsinviewport/pickups/computermap       "sounds/ActorsInViewport/Pickups/ComputerMap.ogg"
 toby/actorsinviewport/pickups/computermaps      "sounds/ActorsInViewport/Pickups/ComputerMaps.ogg"
 
-toby/actorsinviewport/pickups/biosuit           dssuitan
-toby/actorsinviewport/pickups/biosuites         "sounds/ActorsInViewport/Pickups/BioSuites.ogg"
+toby/actorsinviewport/pickups/biosuit           "sounds/ActorsInViewport/Pickups/BioSuit.ogg"
+toby/actorsinviewport/pickups/biosuits         "sounds/ActorsInViewport/Pickups/BioSuits.ogg"
 
-toby/actorsinviewport/pickups/megasphere        a2mega
+toby/actorsinviewport/pickups/megasphere        "sounds/ActorsInViewport/Pickups/Megasphere.ogg"
 toby/actorsinviewport/pickups/megaspheres       "sounds/ActorsInViewport/Pickups/Megaspheres.ogg"
 
-toby/actorsinviewport/pickups/soulsphere        a2soul
+toby/actorsinviewport/pickups/soulsphere        "sounds/ActorsInViewport/Pickups/Soulsphere.ogg"
 toby/actorsinviewport/pickups/soulspheres       "sounds/ActorsInViewport/Pickups/Soulspheres.ogg"
 
 toby/actorsinviewport/pickups/berserkpack       "sounds/ActorsInViewport/Pickups/BerserkPack.ogg"
 toby/actorsinviewport/pickups/berserkpacks      "sounds/ActorsInViewport/Pickups/BerserkPacks.ogg"
 
-toby/actorsinviewport/pickups/nightvision       dsnvisan
-toby/actorsinviewport/pickups/nightvisions      dsnvisan
+toby/actorsinviewport/pickups/nightvision       "sounds/ActorsInViewport/Pickups/LightAmp.ogg"
+toby/actorsinviewport/pickups/nightvisions      "sounds/ActorsInViewport/Pickups/LightAmps.ogg"
 
-toby/actorsinviewport/pickups/invulnerability       a2invul
+toby/actorsinviewport/pickups/invulnerability       "sounds/ActorsInViewport/Pickups/Invulnerability.ogg"
 toby/actorsinviewport/pickups/invulnerabilities     "sounds/ActorsInViewport/Pickups/Invulnerabilities.ogg"
 
-toby/actorsinviewport/pickups/partialinvisibility   a2pinvs
+toby/actorsinviewport/pickups/partialinvisibility   "sounds/ActorsInViewport/Pickups/PartialInvisibility.ogg"
 toby/actorsinviewport/pickups/partialinvisibilities "sounds/ActorsInViewport/Pickups/PartialInvisibilities.ogg"
 
 
-toby/actorsinviewport/pickups/backpack          dsbpkann
+toby/actorsinviewport/pickups/backpack          "sounds/ActorsInViewport/Pickups/Backpack.ogg"
 toby/actorsinviewport/pickups/backpacks         "sounds/ActorsInViewport/Pickups/Backpacks.ogg"
 
-toby/actorsinviewport/pickups/clip              dsclipan
+toby/actorsinviewport/pickups/clip              "sounds/ActorsInViewport/Pickups/Clip.ogg"
 toby/actorsinviewport/pickups/clips             "sounds/ActorsInViewport/Pickups/Clips.ogg"
 
 toby/actorsinviewport/pickups/clipdroppedbyformerhuman      "sounds/ActorsInViewport/Pickups/ClipDroppedByFormerHuman.ogg"
 toby/actorsinviewport/pickups/clipsdroppedbyformerhumans    "sounds/ActorsInViewport/Pickups/ClipsDroppedByFormerHumans.ogg"
 
-toby/actorsinviewport/pickups/boxofammo         dsaboxan
+toby/actorsinviewport/pickups/boxofammo         "sounds/ActorsInViewport/Pickups/BoxOfAmmo.ogg"
 toby/actorsinviewport/pickups/boxesofammo       "sounds/ActorsInViewport/Pickups/BoxesOfAmmo.ogg"
 
-toby/actorsinviewport/pickups/shell             dsshelan
-toby/actorsinviewport/pickups/shells            dsshelan
+toby/actorsinviewport/pickups/shell             "sounds/ActorsInViewport/Pickups/PackOf4Shells.ogg"
+toby/actorsinviewport/pickups/shells            "sounds/ActorsInViewport/Pickups/PacksOf4Shells.ogg"
 
-toby/actorsinviewport/pickups/boxofshells       dssboxan
+toby/actorsinviewport/pickups/boxofshells       "sounds/ActorsInViewport/Pickups/BoxOfShells.ogg"
 toby/actorsinviewport/pickups/boxesofshells     "sounds/ActorsInViewport/Pickups/BoxesOfShells.ogg"
 
-toby/actorsinviewport/pickups/rocket            dsrktann
+toby/actorsinviewport/pickups/rocket            "sounds/PlayerStats/DoomAmmo/Rocket.ogg"
 toby/actorsinviewport/pickups/rockets           "sounds/PlayerStats/DoomAmmo/Rockets.ogg"
 
-toby/actorsinviewport/pickups/boxofrockets      dsrboxan
+toby/actorsinviewport/pickups/boxofrockets      "sounds/ActorsInViewport/Pickups/BoxOfRockets.ogg"
 toby/actorsinviewport/pickups/boxesofrockets    "sounds/ActorsInViewport/Pickups/BoxesOfRockets.ogg"
 
-toby/actorsinviewport/pickups/cellpack          dscpakan
+toby/actorsinviewport/pickups/cellpack          "sounds/ActorsInViewport/Pickups/Cellpack.ogg"
 toby/actorsinviewport/pickups/cellpacks         "sounds/ActorsInViewport/Pickups/Cellpacks.ogg"
 
-toby/actorsinviewport/pickups/bulkcellpack      dscpk2an
+toby/actorsinviewport/pickups/bulkcellpack      "sounds/ActorsInViewport/Pickups/BulkCellpack.ogg"
 toby/actorsinviewport/pickups/bulkcellpacks     "sounds/ActorsInViewport/Pickups/BulkCellpacks.ogg"
 
 
 
-toby/actorsinviewport/pickups/redkeycard        "sounds/Keys/RedKeycard.ogg"
+toby/actorsinviewport/pickups/redkeycard        "sounds/ActorsInViewport/Pickups/RedKeyCard.ogg"
 toby/actorsinviewport/pickups/redkeycards       "sounds/ActorsInViewport/Pickups/RedKeyCards.ogg"
 
-toby/actorsinviewport/pickups/bluekeycard       "sounds/Keys/BlueKeycard.ogg"
+toby/actorsinviewport/pickups/bluekeycard       "sounds/ActorsInViewport/Pickups/BlueKeyCard.ogg"
 toby/actorsinviewport/pickups/bluekeycards      "sounds/ActorsInViewport/Pickups/BlueKeyCards.ogg"
 
-toby/actorsinviewport/pickups/yellowkeycard     "sounds/Keys/YellowKeycard.ogg"
+toby/actorsinviewport/pickups/yellowkeycard     "sounds/ActorsInViewport/Pickups/YellowKeyCard.ogg"
 toby/actorsinviewport/pickups/yellowkeycards    "sounds/ActorsInViewport/Pickups/YellowKeyCards.ogg"
 
-toby/actorsinviewport/pickups/redskull          "sounds/Keys/RedSkull.ogg"
+toby/actorsinviewport/pickups/redskull          "sounds/ActorsInViewport/Pickups/RedSkull.ogg"
 toby/actorsinviewport/pickups/redskulls         "sounds/ActorsInViewport/Pickups/RedSkulls.ogg"
 
-toby/actorsinviewport/pickups/blueskull         "sounds/Keys/BlueSkull.ogg"
+toby/actorsinviewport/pickups/blueskull         "sounds/ActorsInViewport/Pickups/BlueSkull.ogg"
 toby/actorsinviewport/pickups/blueskulls        "sounds/ActorsInViewport/Pickups/BlueSkulls.ogg"
 
-toby/actorsinviewport/pickups/yellowskull       "sounds/Keys/YellowSkull.ogg"
+toby/actorsinviewport/pickups/yellowskull       "sounds/ActorsInViewport/Pickups/YellowSkull.ogg"
 toby/actorsinviewport/pickups/yellowskulls      "sounds/ActorsInViewport/Pickups/YellowSkulls.ogg"
