@@ -1,3 +1,12 @@
+toby/actorsinviewport/monsters/lowtiermon       "sounds/ActorsInViewport/Monsters/LowTierMon.ogg"
+toby/actorsinviewport/monsters/lowtiermons      "sounds/ActorsInViewport/Monsters/LowTierMons.ogg"
+
+toby/actorsinviewport/monsters/midtiermon       "sounds/ActorsInViewport/Monsters/MidTierMon.ogg"
+toby/actorsinviewport/monsters/midtiermons      "sounds/ActorsInViewport/Monsters/MidTierMons.ogg"
+
+toby/actorsinviewport/monsters/hightiermon      "sounds/ActorsInViewport/Monsters/HighTierMon.ogg"
+toby/actorsinviewport/monsters/hightiermons     "sounds/ActorsInViewport/Monsters/HighTierMons.ogg"
+
 toby/actorsinviewport/monsters/formerhuman      "sounds/ActorsInViewport/Monsters/FormerHuman.ogg"
 toby/actorsinviewport/monsters/formerhumans     "sounds/ActorsInViewport/Monsters/FormerHumans.ogg"
 
@@ -60,4 +69,3 @@ toby/actorsinviewport/monsters/hangingcommanderkeens    "sounds/ActorsInViewport
 
 toby/actorsinviewport/monsters/marine     "sounds/ActorsInViewport/Monsters/Marine.ogg"
 toby/actorsinviewport/monsters/marines    "sounds/ActorsInViewport/Monsters/Marines.ogg"
-
