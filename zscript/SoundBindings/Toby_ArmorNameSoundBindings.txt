@@ -5,6 +5,7 @@
 {"ActorClass":"GreenArmor", "SoundToPlay":"stats/doom/armor/greenarmor"}
 {"ActorClass":"BlueArmor", "SoundToPlay":"stats/doom/armor/megaarmor"}
 {"ActorClass":"BlueArmorForMegasphere", "SoundToPlay":"stats/doom/armor/megaarmor"}
+{"ActorClass":"BasicArmorPickup", "SoundToPlay":"stats/doom/armor/megaarmor"}
 
 //Toby
 {"ActorClass":"ArmorBonus_TO", "SoundToPlay":"stats/doom/armor/shard"}
