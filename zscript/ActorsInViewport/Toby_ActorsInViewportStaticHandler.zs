@@ -78,6 +78,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
             Actor actorTofilter = storage.actorsThatCanSeePlayer[i];
             if (!actorTofilter) { continue; }
             if (actorTofilter == playerActor) { continue; }
+            if (Inventory(actorTofilter)) { if (Inventory(actorTofilter).owner != null) { continue; } }
             projector.projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
             let normalPos = projector.projection.projectToNormal();
             if (!projector.viewport.IsInside(normalPos)) { continue; }
@@ -115,6 +116,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
             Actor actorTofilter = storages[consoleplayer].actorsThatCanSeePlayer[i];
             if (!actorTofilter) { continue; }
             if (actorTofilter == playerActor) { continue; }
+            if (Inventory(actorTofilter)) { if (Inventory(actorTofilter).owner != null) { continue; } }
             projectors[consoleplayer].projection.projectActorPos(actorTofilter, (0, 0, actorTofilter.height/2), 1.0);
             let normalPos = projectors[consoleplayer].projection.projectToNormal();
             if (!projectors[consoleplayer].viewport.IsInside(normalPos)) { continue; }
