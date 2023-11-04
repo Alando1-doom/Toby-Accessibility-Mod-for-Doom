@@ -24,7 +24,17 @@ class Toby_ActorCounterToSoundQueue
         {
             int amount = actorCounter.namesAndAmounts[i].amount;
             string classNameToFind = actorCounter.namesAndAmounts[i].name;
-            string soundToPlay = GetSoundName(bindings, classNameToFind, amount);
+            string soundToPlay = "";
+            if (actorCounter.namesAndAmounts[i].countKill)
+            {
+                soundToPlay = GetGenericMonsterName(amount, actorCounter.namesAndAmounts[i].maxHp);
+            }
+            string toPlay = GetSoundName(bindings, classNameToFind, amount);
+            if (toPlay != "")
+            {
+                soundToPlay = toPlay;
+            }
+
             if (soundToPlay == "") { continue; }
 
             if (actorCounter.isRemains)
@@ -41,6 +51,31 @@ class Toby_ActorCounterToSoundQueue
         }
 
         return soundQueue;
+    }
+
+    string GetGenericMonsterName(int amount, int maxHp)
+    {
+        if (maxHp < 300)
+        {
+            if (amount == 1)
+            {
+                return "toby/actorsinviewport/monsters/lowtiermon";
+            }
+            return "toby/actorsinviewport/monsters/lowtiermons";
+        }
+        if (maxHp < 3000)
+        {
+            if (amount == 1)
+            {
+                return "toby/actorsinviewport/monsters/midtiermon";
+            }
+            return "toby/actorsinviewport/monsters/midtiermons";
+        }
+        if (amount == 1)
+        {
+            return "toby/actorsinviewport/monsters/hightiermon";
+        }
+        return "toby/actorsinviewport/monsters/hightiermons";
     }
 
     string GetSoundName(Toby_SoundBindingsContainer bindings, string classNameToFind, int amount)

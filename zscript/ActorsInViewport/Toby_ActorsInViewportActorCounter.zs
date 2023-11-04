@@ -19,11 +19,15 @@ class Toby_ActorsInViewportActorCounter
         Toby_ActorFilter filter = storage.GetFilterByName(filterName);
         for (let i = 0; i < filter.category.Size(); i++)
         {
-            AddName(filter.category[i].GetClassName());
+            AddName(
+                filter.category[i].GetClassName(),
+                filter.category[i].bCountkill,
+                filter.category[i].SpawnHealth()
+            );
         }
     }
 
-    private void AddName(string name)
+    private void AddName(string name, bool countkill, int maxHp)
     {
         bool nameFound = false;
 
@@ -38,7 +42,7 @@ class Toby_ActorsInViewportActorCounter
         }
         if (!nameFound)
         {
-            namesAndAmounts.push(Toby_NameAndAmount.Create(name, 1));
+            namesAndAmounts.push(Toby_NameAndAmount.Create(name, 1, countKill, maxHp));
         }
     }
 }
