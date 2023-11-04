@@ -79,7 +79,7 @@
 {"ActorClass":"DeadMarine", "SoundToPlay":"toby/actorsinviewport/decorations/marinecorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/marinecorpses", "Article":"a"}
 {"ActorClass":"DeadShotgunGuy", "SoundToPlay":"toby/actorsinviewport/decorations/shotgunnercorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shotgunnercorpses", "Article":"a"}
 {"ActorClass":"DeadZombieMan", "SoundToPlay":"toby/actorsinviewport/decorations/zombiemancorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/zombiemancorpses", "Article":"a"}
-{"ActorClass":"GibbedMarine", "SoundToPlay":"toby/actorsinviewport/decorations/crushedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/crushedcorpses", "Article":"a"}
+{"ActorClass":"GibbedMarine", "SoundToPlay":"toby/actorsinviewport/decorations/gibbedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/gibbedcorpses", "Article":"a"}
 {"ActorClass":"GibbedMarineExtra", "SoundToPlay":"toby/actorsinviewport/decorations/gibbedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/gibbedcorpses", "Article":"a"}
 
 
@@ -110,7 +110,7 @@
 {"ActorClass":"BrainStem", "SoundToPlay":"toby/actorsinviewport/decorations/brain", "SoundToPlayPlural":"toby/actorsinviewport/decorations/brains", "Article":"a"}
 {"ActorClass":"ColonGibs", "SoundToPlay":"toby/actorsinviewport/decorations/pileofflesh", "SoundToPlayPlural":"toby/actorsinviewport/decorations/pilesofflesh", "Article":"a"}
 {"ActorClass":"SmallBloodPool", "SoundToPlay":"toby/actorsinviewport/decorations/poolofblood", "SoundToPlayPlural":"toby/actorsinviewport/decorations/poolsofblood", "Article":"a"}
-//{"ActorClass":"Gibs", "SoundToPlay":"", "SoundToPlayPlural":"", "Article":"a"}
+{"ActorClass":"Gibs", "SoundToPlay":"toby/actorsinviewport/decorations/crushedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/crushedcorpses", "Article":"a"}
 
 {"ActorClass":"LiveStick", "SoundToPlay":"toby/actorsinviewport/decorations/twitchingimpaledguy", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchingimpaledguys", "Article":"a"}
 {"ActorClass":"DeadStick", "SoundToPlay":"toby/actorsinviewport/decorations/impaledguy", "SoundToPlayPlural":"toby/actorsinviewport/decorations/impaledguys", "Article":"a"}
