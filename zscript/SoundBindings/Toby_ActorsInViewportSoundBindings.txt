@@ -38,7 +38,7 @@
 {"ActorClass":"Medikit", "SoundToPlay":"toby/actorsinviewport/pickups/medikit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/medikits", "Article":"a"}
 
 {"ActorClass":"Allmap", "SoundToPlay":"toby/actorsinviewport/pickups/computermap", "SoundToPlayPlural":"toby/actorsinviewport/pickups/computermaps", "Article":"a"}
-{"ActorClass":"RadSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuites", "Article":"a"}
+{"ActorClass":"RadSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuits", "Article":"a"}
 {"ActorClass":"Megasphere", "SoundToPlay":"toby/actorsinviewport/pickups/megasphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/megaspheres", "Article":"a"}
 {"ActorClass":"Soulsphere", "SoundToPlay":"toby/actorsinviewport/pickups/soulsphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/soulspheres", "Article":"a"}
 {"ActorClass":"Berserk", "SoundToPlay":"toby/actorsinviewport/pickups/berserkpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/berserkpacks", "Article":"a"}
@@ -71,6 +71,75 @@
 {"ActorClass":"TechLamp2", "SoundToPlay":"toby/actorsinviewport/decorations/smalltechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/smalltechlamps", "Article":"a"}
 {"ActorClass":"TechLamp", "SoundToPlay":"toby/actorsinviewport/decorations/largetechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/largetechlamps", "Article":"a"}
 {"ActorClass":"TechPillar", "SoundToPlay":"toby/actorsinviewport/decorations/techpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/techpillars", "Article":"a"}
+
+
+{"ActorClass":"DeadCacodemon", "SoundToPlay":"toby/actorsinviewport/decorations/cacodemoncorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/cacodemoncorpses", "Article":"a"}
+{"ActorClass":"DeadDemon", "SoundToPlay":"toby/actorsinviewport/decorations/pinkycorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/pinkycorpses", "Article":"a"}
+{"ActorClass":"DeadDoomImp", "SoundToPlay":"toby/actorsinviewport/decorations/impcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/impcorpses", "Article":"an"}
+{"ActorClass":"DeadMarine", "SoundToPlay":"toby/actorsinviewport/decorations/marinecorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/marinecorpses", "Article":"a"}
+{"ActorClass":"DeadShotgunGuy", "SoundToPlay":"toby/actorsinviewport/decorations/shotgunnercorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shotgunnercorpses", "Article":"a"}
+{"ActorClass":"DeadZombieMan", "SoundToPlay":"toby/actorsinviewport/decorations/zombiemancorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/zombiemancorpses", "Article":"a"}
+{"ActorClass":"GibbedMarine", "SoundToPlay":"toby/actorsinviewport/decorations/gibbedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/gibbedcorpses", "Article":"a"}
+{"ActorClass":"GibbedMarineExtra", "SoundToPlay":"toby/actorsinviewport/decorations/gibbedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/gibbedcorpses", "Article":"a"}
+
+
+{"ActorClass":"BloodyTwitch", "SoundToPlay":"toby/actorsinviewport/decorations/twitchhangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchhangingmen", "Article":"a"}
+{"ActorClass":"NonsolidTwitch", "SoundToPlay":"toby/actorsinviewport/decorations/twitchhangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchhangingmen", "Article":"a"}
+
+{"ActorClass":"HangBNoBrain", "SoundToPlay":"toby/actorsinviewport/decorations/hangmannobrain", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangmennobrain", "Article":"a"}
+{"ActorClass":"HangNoGuts", "SoundToPlay":"toby/actorsinviewport/decorations/hangmannoguts", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangmennoguts", "Article":"a"}
+
+{"ActorClass":"Meat2", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen", "Article":"a"}
+{"ActorClass":"NonsolidMeat2", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen", "Article":"a"}
+
+{"ActorClass":"Meat3", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman1leg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen1leg", "Article":"a"}
+{"ActorClass":"NonsolidMeat3", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman1leg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen1leg", "Article":"a"}
+
+{"ActorClass":"HangTLookingDown", "SoundToPlay":"toby/actorsinviewport/decorations/torsolookdown", "SoundToPlayPlural":"toby/actorsinviewport/decorations/torsoslookdown", "Article":"a"}
+{"ActorClass":"HangTLookingUp", "SoundToPlay":"toby/actorsinviewport/decorations/torsolookup", "SoundToPlayPlural":"toby/actorsinviewport/decorations/torsoslookup", "Article":"a"}
+{"ActorClass":"HangTNoBrain", "SoundToPlay":"toby/actorsinviewport/decorations/torsonobrain", "SoundToPlayPlural":"toby/actorsinviewport/decorations/torsosnobrain", "Article":"a"}
+{"ActorClass":"HangTSkull", "SoundToPlay":"toby/actorsinviewport/decorations/torsoexposedbrain", "SoundToPlayPlural":"toby/actorsinviewport/decorations/torsosexposedbrain", "Article":"a"}
+
+{"ActorClass":"Meat4", "SoundToPlay":"toby/actorsinviewport/decorations/hangingpairoflegs", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingpairsoflegs", "Article":"a"}
+{"ActorClass":"NonsolidMeat4", "SoundToPlay":"toby/actorsinviewport/decorations/hangingpairoflegs", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingpairsoflegs", "Article":"a"}
+
+{"ActorClass":"Meat5", "SoundToPlay":"toby/actorsinviewport/decorations/hangingleg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hanginglegs", "Article":"a"}
+{"ActorClass":"NonsolidMeat5", "SoundToPlay":"toby/actorsinviewport/decorations/hangingleg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hanginglegs", "Article":"a"}
+
+
+{"ActorClass":"BrainStem", "SoundToPlay":"toby/actorsinviewport/decorations/brain", "SoundToPlayPlural":"toby/actorsinviewport/decorations/brains", "Article":"a"}
+{"ActorClass":"ColonGibs", "SoundToPlay":"toby/actorsinviewport/decorations/pileofflesh", "SoundToPlayPlural":"toby/actorsinviewport/decorations/pilesofflesh", "Article":"a"}
+{"ActorClass":"SmallBloodPool", "SoundToPlay":"toby/actorsinviewport/decorations/poolofblood", "SoundToPlayPlural":"toby/actorsinviewport/decorations/poolsofblood", "Article":"a"}
+{"ActorClass":"Gibs", "SoundToPlay":"toby/actorsinviewport/decorations/crushedcorpse", "SoundToPlayPlural":"toby/actorsinviewport/decorations/crushedcorpses", "Article":"a"}
+
+{"ActorClass":"LiveStick", "SoundToPlay":"toby/actorsinviewport/decorations/twitchingimpaledguy", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchingimpaledguys", "Article":"a"}
+{"ActorClass":"DeadStick", "SoundToPlay":"toby/actorsinviewport/decorations/impaledguy", "SoundToPlayPlural":"toby/actorsinviewport/decorations/impaledguys", "Article":"a"}
+{"ActorClass":"HeadOnAStick", "SoundToPlay":"toby/actorsinviewport/decorations/headpike", "SoundToPlayPlural":"toby/actorsinviewport/decorations/headpikes", "Article":"a"}
+{"ActorClass":"HeadsOnAStick", "SoundToPlay":"toby/actorsinviewport/decorations/multiheadpike", "SoundToPlayPlural":"toby/actorsinviewport/decorations/multiheadpikes", "Article":"a"}
+
+
+{"ActorClass":"BigTree", "SoundToPlay":"toby/actorsinviewport/decorations/largehelltree", "SoundToPlayPlural":"toby/actorsinviewport/decorations/largehelltrees", "Article":"a"}
+{"ActorClass":"TorchTree", "SoundToPlay":"toby/actorsinviewport/decorations/shorthelltree", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shorthelltrees", "Article":"a"}
+{"ActorClass":"Candelabra", "SoundToPlay":"toby/actorsinviewport/decorations/candelabra", "SoundToPlayPlural":"toby/actorsinviewport/decorations/candelabras", "Article":"a"}
+{"ActorClass":"Candlestick", "SoundToPlay":"toby/actorsinviewport/decorations/candle", "SoundToPlayPlural":"toby/actorsinviewport/decorations/candles", "Article":"a"}
+{"ActorClass":"EvilEye", "SoundToPlay":"toby/actorsinviewport/decorations/evileye", "SoundToPlayPlural":"toby/actorsinviewport/decorations/evileyes", "Article":"a"}
+{"ActorClass":"FloatingSkull", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull", "SoundToPlayPlural":"toby/actorsinviewport/decorations/floatingskulls", "Article":"a"}
+{"ActorClass":"Stalagtite", "SoundToPlay":"toby/actorsinviewport/decorations/stalagmite", "SoundToPlayPlural":"toby/actorsinviewport/decorations/stalagmites", "Article":"a"}
+{"ActorClass":"Stalagmite", "SoundToPlay":"toby/actorsinviewport/decorations/stalagmite", "SoundToPlayPlural":"toby/actorsinviewport/decorations/stalagmites", "Article":"a"}
+
+{"ActorClass":"ShortRedTorch", "SoundToPlay":"toby/actorsinviewport/decorations/shortredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortredtorches", "Article":"a"}
+{"ActorClass":"ShortGreenTorch", "SoundToPlay":"toby/actorsinviewport/decorations/shortgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortgreentorches", "Article":"a"}
+{"ActorClass":"ShortBlueTorch", "SoundToPlay":"toby/actorsinviewport/decorations/shortbluetorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortbluetorches", "Article":"a"}
+{"ActorClass":"RedTorch", "SoundToPlay":"toby/actorsinviewport/decorations/tallredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallredtorches", "Article":"a"}
+{"ActorClass":"GreenTorch", "SoundToPlay":"toby/actorsinviewport/decorations/tallgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallgreentorches", "Article":"a"}
+{"ActorClass":"BlueTorch", "SoundToPlay":"toby/actorsinviewport/decorations/tallbluetorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallbluetorches", "Article":"a"}
+
+{"ActorClass":"HeartColumn", "SoundToPlay":"toby/actorsinviewport/decorations/heartpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/heartpillars", "Article":"a"}
+{"ActorClass":"SkullColumn", "SoundToPlay":"toby/actorsinviewport/decorations/redskullpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/redskullpillars", "Article":"a"}
+{"ActorClass":"ShortGreenColumn", "SoundToPlay":"toby/actorsinviewport/decorations/shortgreenpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortgreenpillars", "Article":"a"}
+{"ActorClass":"ShortRedColumn", "SoundToPlay":"toby/actorsinviewport/decorations/shortredpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortredpillars", "Article":"a"}
+{"ActorClass":"TallGreenColumn", "SoundToPlay":"toby/actorsinviewport/decorations/tallgreenpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallgreenpillars", "Article":"a"}
+{"ActorClass":"TallRedColumn", "SoundToPlay":"toby/actorsinviewport/decorations/tallredpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallredpillars", "Article":"a"}
 
 //Toby
 {"ActorClass":"ZombieMan_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/formerhuman", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formerhumans", "Article":"a"}
@@ -105,7 +174,7 @@
 {"ActorClass":"Medikit_Pickup", "SoundToPlay":"toby/actorsinviewport/pickups/medikit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/medikits", "Article":"a"}
 
 {"ActorClass":"ComputerMap2", "SoundToPlay":"toby/actorsinviewport/pickups/computermap", "SoundToPlayPlural":"toby/actorsinviewport/pickups/computermaps", "Article":"a"}
-{"ActorClass":"BioSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuites", "Article":"a"}
+{"ActorClass":"BioSuit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit", "SoundToPlayPlural":"toby/actorsinviewport/pickups/biosuits", "Article":"a"}
 {"ActorClass":"Megasphere_TO", "SoundToPlay":"toby/actorsinviewport/pickups/megasphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/megaspheres", "Article":"a"}
 {"ActorClass":"SuperCharge", "SoundToPlay":"toby/actorsinviewport/pickups/soulsphere", "SoundToPlayPlural":"toby/actorsinviewport/pickups/soulspheres", "Article":"a"}
 {"ActorClass":"Berserk_TO", "SoundToPlay":"toby/actorsinviewport/pickups/berserkpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/berserkpacks", "Article":"a"}
@@ -136,3 +205,10 @@
 {"ActorClass":"BurningBarrel_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/burningbarrel", "SoundToPlayPlural":"toby/actorsinviewport/decorations/burningbarrels", "Article":"a"}
 
 {"ActorClass":"Column_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/minitechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/minitechlamps", "Article":"a"}
+
+{"ActorClass":"ShortRedTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/shortredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortredtorches", "Article":"a"}
+{"ActorClass":"ShortGreenTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/shortgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortgreentorches", "Article":"a"}
+{"ActorClass":"ShortBlueTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/shortbluetorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortbluetorches", "Article":"a"}
+{"ActorClass":"RedTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallredtorches", "Article":"a"}
+{"ActorClass":"GreenTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallgreentorches", "Article":"a"}
+{"ActorClass":"BlueTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallbluetorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallbluetorches", "Article":"a"}
