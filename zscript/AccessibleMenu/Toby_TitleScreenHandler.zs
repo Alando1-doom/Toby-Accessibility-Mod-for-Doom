@@ -32,18 +32,16 @@ class Toby_TitleScreenHandler : EventHandler
         if (titlePicHeight < screenHeight)
         {
             virtualHeight = screenHeight;
-            ratio = screenHeight/titlePicHeight;
+            ratio = float(screenHeight) / float(titlePicHeight);
             virtualWidth = titlePicWidth * ratio;
         }
         else
         {
             virtualWidth = screenWidth;
-            ratio = screenWidth/titlePicWidth;
+            ratio = float(screenWidth) / float(titlePicWidth);
             virtualHeight = titlePicHeight * ratio;
         }
-        //It seems like I need an additional width correction.
-        //0.9 is a magic number. It should be 0.83333 (1/1.2) but for some reason it isn't.
-        virtualWidth = virtualWidth * 0.9;
+
         posX = (screenWidth - virtualWidth) / 2;
         posY = (screenHeight - virtualHeight) / 2;
         Screen.DrawTexture(titlePic, false, posX, posY, DTA_KeepRatio, false, DTA_DESTWIDTH, virtualWidth, DTA_DESTHEIGHT, virtualHeight);
