@@ -28,6 +28,7 @@ class Toby_TargetDetectorStaticHandler : StaticEventHandler
 
     override void PostUITick()
     {
+        if (!handler) { return; }
         if (!handler.playerAimTargets[consoleplayer]) { return; }
         targetDetector.Update(handler.playerAimTargets[consoleplayer].GetClassName());
     }
