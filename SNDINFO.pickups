@@ -85,8 +85,8 @@ toby/actorsinviewport/pickups/shells            "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/boxofshells       "sounds/ActorsInViewport/Pickups/BoxOfShells.ogg"
 toby/actorsinviewport/pickups/boxesofshells     "sounds/ActorsInViewport/Pickups/BoxesOfShells.ogg"
 
-toby/actorsinviewport/pickups/rocket            "sounds/PlayerStats/DoomAmmo/Rocket.ogg"
-toby/actorsinviewport/pickups/rockets           "sounds/PlayerStats/DoomAmmo/Rockets.ogg"
+toby/actorsinviewport/pickups/rocket            "sounds/ActorsInViewport/Pickups/Rocket.ogg"
+toby/actorsinviewport/pickups/rockets           "sounds/ActorsInViewport/Pickups/Rockets.ogg"
 
 toby/actorsinviewport/pickups/boxofrockets      "sounds/ActorsInViewport/Pickups/BoxOfRockets.ogg"
 toby/actorsinviewport/pickups/boxesofrockets    "sounds/ActorsInViewport/Pickups/BoxesOfRockets.ogg"
