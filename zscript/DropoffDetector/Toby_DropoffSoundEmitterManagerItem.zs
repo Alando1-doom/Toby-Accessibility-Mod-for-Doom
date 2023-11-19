@@ -17,6 +17,11 @@ class Toby_DropoffSoundEmitterManagerItem : Inventory
     override void Tick()
     {
         super.Tick();
+        if (!owner)
+        {
+            Destroy();
+            return;
+        }
 
         if (!wallDetector) {
             wallDetector = Toby_WallDetector.Create(owner);
