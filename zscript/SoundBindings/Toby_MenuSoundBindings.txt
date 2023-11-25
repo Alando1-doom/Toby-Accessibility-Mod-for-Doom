@@ -1,10 +1,10 @@
-//MENU DISMISSED*
+//MENU DISMISSED
 
 {"EventType":"MenuDismissed", "SoundToPlay":"menusnd/dismiss"}
 
 
 
-//MAIN MENU*
+//MAIN MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menusnd/mainmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_NGAME", "SoundToPlay":"menusnd/new"}
@@ -17,7 +17,7 @@
 
 
 
-//EPISODE MENU*
+//EPISODE MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Episodemenu", "SoundToPlay":"menusnd/epimenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI1", "SoundToPlay":"menusnd/episode1"}
@@ -27,12 +27,11 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI5", "SoundToPlay":"menusnd/episode5"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_HELL", "SoundToPlay":"menusnd/episode6"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_NOREST", "SoundToPlay":"menusnd/episode7"}
-//Toby Mega Deluxe Map Pack
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 1", "SoundToPlay":"menusnd/tobye1"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 2", "SoundToPlay":"menusnd/tobye2"}
 
 
-//DIFFICULTY MENU*
+//DIFFICULTY MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListPatchString":"M_JKILL", "SoundToPlay":"menusnd/skill1"}
@@ -47,7 +46,7 @@
 
 
 
-//TOBY SIMPLE OPTIONS MENU*
+//TOBY SIMPLE OPTIONS MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"SimpleOptionsMenu", "SoundToPlay":"menusnd/option"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Sound Options", "SoundToPlay":"menusnd/soundopt"}
@@ -202,7 +201,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
 
 
-//MOUSE MENU*
+//MOUSE MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"MouseOptions", "SoundToPlay":"menu/option/mouse"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"$OPTMNU_MOUSE", "SoundToPlay":"menu/option/mouse"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MouseOptions", "CurrentMenuItemOptionName":"Mouse Options", "SoundToPlay":"menu/option/mouse"}
@@ -238,7 +237,7 @@
 
 
 
-//PLAYER SETUP MENU*
+//PLAYER SETUP MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"NewPlayerMenu", "SoundToPlay":"menu/option/player"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$OPTMNU_PLAYER", "SoundToPlay":"menu/option/player"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"Player Setup", "SoundToPlay":"menu/option/player"}
@@ -250,6 +249,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERSKIN", "SoundToPlay":"menu/player/skin"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERGENDER", "SoundToPlay":"menu/player/gender"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_AUTOAIM", "SoundToPlay":"menu/player/autoaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_VERTSPREAD", "SoundToPlay":"menu/player/vertspread"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_SWITCHONPICKUP", "SoundToPlay":"menu/player/weapswitch"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_ALWAYSRUN", "SoundToPlay":"menu/player/alwaysrun"}
 //player sex
@@ -282,7 +282,7 @@
 
 
 
-//GAMEPLAY OPTIONS MENU*
+//GAMEPLAY OPTIONS MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"GameplayOptions", "SoundToPlay":"menu/option/gameplay"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$OPTMNU_GAMEPLAY", "SoundToPlay":"menu/option/gameplay"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"Gameplay Options", "SoundToPlay":"menu/option/gameplay"}
@@ -353,7 +353,7 @@
 
 
 
-//COMPATIBILITY OPTIONS MENU*
+//COMPATIBILITY OPTIONS MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"CompatibilityOptions", "SoundToPlay":"menu/option/compat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$OPTMNU_COMPATIBILITY", "SoundToPlay":"menu/option/compat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"Compatibility Options", "SoundToPlay":"menu/option/compat"}
@@ -431,7 +431,7 @@
 
 
 
-//NETWORK OPTIONS*
+//NETWORK OPTIONS
 {"EventType":"MenuChanged",   "CurrentMenuName":"NetworkOptions", "SoundToPlay":"menu/option/network"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$OPTMNU_NETWORK", "SoundToPlay":"menu/option/network"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"Network Options", "SoundToPlay":"menu/option/network"}
@@ -447,7 +447,7 @@
 
 
 
-//SOUND OPTIONS MENU*
+//SOUND OPTIONS MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"SoundOptions", "SoundToPlay":"menusnd/soundopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$MODMNU_MASTERVOLUME", "SoundToPlay":"menusnd/mastervol"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_SFXVOLUME", "SoundToPlay":"menusnd/soundvol"}
@@ -476,14 +476,13 @@
 
 
 
-//GO TO CONSOLE*
+//GO TO CONSOLE
 {"EventType":"MenuChanged",   "CurrentMenuName":"menuconsole", "SoundToPlay":"menu/option/console"}
 {"EventType":"OptionChanged", "CurrentMenuName":"menuconsole", "CurrentMenuItemOptionName":"$OPTMNU_CONSOLE", "SoundToPlay":"menu/option/console"}
 {"EventType":"OptionChanged", "CurrentMenuName":"menuconsole", "CurrentMenuItemOptionName":"Go to Console", "SoundToPlay":"menu/option/console"}
 
 
-//SAVE-LOAD GAME MENU*
-
+//SAVE-LOAD GAME MENU
 {"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "PreviousMenuClass": "TextEnterMenu", "SoundToPlay":"save/cancelled"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"LoadMenu", "SoundToPlay":"menusnd/load"}
 {"EventType":"MenuChanged", "CurrentMenuClass":"Savemenu", "SoundToPlay":"menusnd/save"}
@@ -491,7 +490,7 @@
 {"EventType":"GameSaved", "SoundToPlay":"save/saved"}
 
 
-//OPTION VALUES*
+//OPTION VALUES
 
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_OFF", "SoundToPlay":"menusnd/off"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ON", "SoundToPlay":"menusnd/on"}

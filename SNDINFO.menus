@@ -33,6 +33,10 @@ menusnd/readselect      "sounds/Menus/MainMenu/dsread_s.ogg"
 //menu/clear            "sounds/Menus/Generic/dsmback.ogg"
 
 //Episode Menu
+menusnd/tobye1          "sounds/Menus/EpisodeMenu/dstobye1.ogg"
+$volume menusnd/tobye1  0.75
+menusnd/tobye2          "sounds/Menus/EpisodeMenu/dstobye2.ogg"
+$volume menusnd/tobye2  0.75
 menusnd/epimenu         "sounds/Menus/EpisodeMenu/dscepis.ogg"
 menusnd/episode1        "sounds/Menus/EpisodeMenu/dsep1.ogg"
 menusnd/episode2        "sounds/Menus/EpisodeMenu/dsep2.ogg"
@@ -41,10 +45,7 @@ menusnd/episode4        "sounds/Menus/EpisodeMenu/dsep4.ogg"
 menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
 menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
 menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
-menusnd/tobye1          "sounds/Menus/EpisodeMenu/dstobye1.ogg"
-$volume menusnd/tobye1  0.75
-menusnd/tobye1          "sounds/Menus/EpisodeMenu/dstobye2.ogg"
-$volume menusnd/tobye2  0.75
+
 
 //Skill Menu
 menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
@@ -1028,6 +1029,8 @@ menu/player/gender                  "sounds/Menus/PlayerSetup/mgender.ogg"
 $volume menu/player/gender          0.5
 menu/player/autoaim                 "sounds/Menus/PlayerSetup/mautoaim.ogg"
 $volume menu/player/autoaim         0.5
+menu/player/vertspread			"sounds/Menus/PlayerSetup/vertsprd.ogg"
+$volume menu/player/vertspread         0.5
 menu/player/weapswitch              "sounds/Menus/PlayerSetup/mwswitch.ogg"
 $volume menu/player/weapswitch      0.5
 menu/player/alwaysrun               "sounds/Menus/PlayerSetup/malwyrun.ogg"
