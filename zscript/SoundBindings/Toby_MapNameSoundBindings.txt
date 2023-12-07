@@ -424,6 +424,7 @@
 {"Checksum":"7dd08f342c847d18d393f741ec26e946", "SoundToPlay":"map/mdk/miningcomplex", "LevelStartPlaybackDelay":"260"}
 // MAP06 - The Mines
 {"Checksum":"20b1313009ec894be784e855b6433747", "SoundToPlay":"map/mdk/themines", "LevelStartPlaybackDelay":"150"}
+{"Checksum":"d1e19c03867c038a5da1075f3924656b", "SoundToPlay":"map/mdk/themines", "LevelStartPlaybackDelay":"150"}
 // MAP07 - The Rift
 {"Checksum":"5561b0ff3efac7b4d1fea336d28fccd4", "SoundToPlay":"map/mdk/therift"}
 // MAP08 - Gateway Research
