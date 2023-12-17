@@ -1029,8 +1029,6 @@ menu/player/gender                  "sounds/Menus/PlayerSetup/mgender.ogg"
 $volume menu/player/gender          0.5
 menu/player/autoaim                 "sounds/Menus/PlayerSetup/mautoaim.ogg"
 $volume menu/player/autoaim         0.5
-menu/player/vertspread			"sounds/Menus/PlayerSetup/vertsprd.ogg"
-$volume menu/player/vertspread         0.5
 menu/player/weapswitch              "sounds/Menus/PlayerSetup/mwswitch.ogg"
 $volume menu/player/weapswitch      0.5
 menu/player/alwaysrun               "sounds/Menus/PlayerSetup/malwyrun.ogg"

@@ -1,0 +1,812 @@
+//*****************************************************************
+// POWER UPS
+//*****************************************************************
+
+// Invulnerability Sphere ---------------------------------------------------
+
+ACTOR InvulnerabilitySphere_TO : PowerupGiver
+{
+	Game Doom
+	SpawnID 133
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.BIGPOWERUP
+	Inventory.MaxAmount 0
+	Powerup.Type Invulnerable
+	Powerup.Color GoldMap
+	Inventory.PickupMessage "$GOTINVUL"
+	States
+	{
+	Spawn:
+		PINV ABCD 6 Bright
+		Loop
+	}
+}
+
+ACTOR Shield : CustomInventory replaces InvulnerabilitySphere
+{
+	Game Doom
+	SpawnID 132
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "$GOTINVUL"
+	Inventory.PickupSound "misc/getinv"
+	States
+	{
+	Spawn:
+		PINV A 0 Bright A_SpawnItemEx("ShieldPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PINV ABCDCB 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("InvulnerabilitySphere_TO", 1)
+		TNT1 A 0 A_PlaySound("misc/invann")
+		Stop
+	}
+}
+
+ACTOR ShieldPickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/invsnd", "SoundSlot6", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}	
+
+// Soulsphere --------------------------------------------------------------
+
+ACTOR Soulsphere_TO : Health
+{
+	Game Doom
+	SpawnID 25
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.FANCYPICKUPSOUND
+	Inventory.Amount 100
+	Inventory.MaxAmount 200
+	Inventory.PickupMessage "$GOTSUPER"
+	Inventory.PickupSound "misc/p_pkup"
+	States
+	{
+	Spawn:
+		SOUL ABCDCB 6 Bright
+		Loop
+	}
+}
+
+ACTOR SuperCharge : CustomInventory replaces Soulsphere
+{
+	Game Doom
+	SpawnID 132
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "$GOTSUPER"
+	Inventory.PickupSound "misc/getsoul"
+	States
+	{
+	Spawn:
+		SOUL A 0 Bright A_SpawnItemEx("SoulSpherePickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		SOUL ABCDCB 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("Soulsphere_TO", 1)
+		TNT1 A 0 A_PlaySound("misc/soulann")
+		Stop
+	}
+}
+
+ACTOR SoulSpherePickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/soulsnd", "SoundSlot5", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}	
+
+// Mega sphere --------------------------------------------------------------
+
+ACTOR MegasphereHealth_TO : Health	// for manipulation by Dehacked
+{
+	Inventory.Amount 200
+	Inventory.MaxAmount 200
+	+INVENTORY.ALWAYSPICKUP
+}
+
+// DeHackEd can only modify the blue armor's type, not the megasphere's.
+actor BlueArmorForMegasphere_TO : BlueArmor
+{
+	Armor.SavePercent 50
+	Armor.SaveAmount 200
+}
+
+ACTOR Megasphere_TO : CustomInventory replaces Megasphere
+{
+	Game Doom
+	SpawnID 132
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "$GOTMSPHERE"
+	Inventory.PickupSound "misc/getmega"
+	States
+	{
+	Spawn:
+		MEGA A 0 Bright A_SpawnItemEx("MegaSpherePickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		MEGA ABCDCB 6 BRIGHT
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("BlueArmorForMegasphere_TO", 1)
+		TNT1 A 0 A_GiveInventory("MegasphereHealth_TO", 1)
+		TNT1 A 0 A_PlaySound("misc/megaann")
+		Stop
+	}
+}	
+
+ACTOR MegaSpherePickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/megasnd", "SoundSlot5", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}
+
+// Invisibility -------------------------------------------------------------
+
+ACTOR BlurSphere_TO : PowerupGiver
+{
+	Game Doom
+	SpawnID 135
+	+COUNTITEM
+	+VISIBILITYPULSE
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.BIGPOWERUP
+	Inventory.MaxAmount 0
+	Powerup.Type Invisibility
+	RenderStyle Translucent
+	Inventory.PickupMessage "$GOTINVIS"
+	States
+	{
+	Spawn:
+		PINS ABCD 6 Bright
+		Loop
+	}
+}	
+
+ACTOR Invisibility : CustomInventory replaces BlurSphere
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "misc/getinvs"
+	Inventory.PickupMessage "$GOTINVIS"
+	States
+	{
+	Spawn:
+		PINS A 0 Bright A_SpawnItemEx("BlurSpherePickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PINS ABCDCB 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("BlurSphere_TO", 1)
+		TNT1 A 0 A_PlaySound("misc/invsann")
+		Stop
+	}
+}	
+
+ACTOR BlurSpherePickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/invssnd", "SoundSlot6", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}
+
+// Radiation suit (aka iron feet) -------------------------------------------
+
+ACTOR RadSuit_TO : PowerupGiver
+{
+	Game Doom
+	SpawnID 136
+	Height 46
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Inventory.PickupMessage "$GOTSUIT"
+	Powerup.Type IronFeet
+	States
+	{
+	Spawn:
+		SUIT A -1 Bright
+		Stop
+	}
+}	
+
+ACTOR BioSuit : CustomInventory replaces RadSuit
+{
+	-COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "misc/getsuit"
+	Inventory.PickupMessage "$GOTSUIT"
+	States
+	{
+	Spawn:
+		SUIT A 23 Bright A_SpawnItemEx("SuitPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		SUIT A 1 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("ann/suit")
+		TNT1 A 0 A_GiveInventory("RadSuit_TO", 1)
+		Stop
+	}
+}	
+
+ACTOR SuitPickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/suitsnd", "SoundSlot7", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}
+
+// infrared -----------------------------------------------------------------
+
+ACTOR Infrared_TO : PowerupGiver
+{
+	Game Doom
+	SpawnID 138
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Powerup.Type LightAmp
+	Inventory.PickupMessage "$GOTVISOR"
+	States
+	{
+	Spawn:
+		PVIS A 6 Bright
+		PVIS B 6
+		Loop
+	}
+}
+
+ACTOR NightVisors : CustomInventory replaces Infrared
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "misc/getvisor"
+	Inventory.PickupMessage "$GOTVISOR"
+	States
+	{
+	Spawn:
+		PVIS A 6 Bright A_SpawnItemEx("VisorPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PVIS B 6  
+		PVIS A 6 Bright		
+		PVIS B 6
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("ann/visor")
+		TNT1 A 0 A_GiveInventory("Infrared_TO", 1)
+		Stop
+	}
+}	
+
+ACTOR VisorPickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/visorsnd", "SoundSlot7", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}
+	
+// Allmap -------------------------------------------------------------------
+
+ACTOR Allmap_TO : MapRevealer
+{
+	Game Doom
+	SpawnID 137
+	+COUNTITEM
+	+INVENTORY.FANCYPICKUPSOUND
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Inventory.PickupSound "misc/p_pkup"
+	Inventory.PickupMessage "$GOTMAP"
+	States
+	{
+	Spawn:
+		PMAP ABCDCB 6 Bright
+		Loop
+	}
+}
+
+ACTOR ComputerMap2 : CustomInventory replaces Allmap
+{
+	Game Doom
+	SpawnID 132
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "misc/getmap"
+	Inventory.PickupMessage "$GOTMAP"
+	States
+	{
+	Spawn:
+	    PMAP A 0 Bright A_SpawnItemEx("MapPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PMAP ABCD 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("ann/map")
+		TNT1 A 0 A_GiveInventory("Allmap_TO", 1)
+		Stop
+	}
+}
+
+ACTOR MapPickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/mapsnd", "SoundSlot7", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}	
+
+// Berserk ------------------------------------------------------------------
+
+ACTOR Berserk_TO : CustomInventory replaces Berserk
+{
+	Game Doom
+	SpawnID 134
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "$GOTBERSERK"
+	Inventory.PickupSound "misc/getbers"
+	States
+	{
+	Spawn:
+		PSTR A 23 Bright A_SpawnItemEx("BerserkPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PSTR A 1 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("PowerStrength")
+		TNT1 A 0 HealThing(100, 0)
+		TNT1 A 0 A_SelectWeapon("Fist")
+		TNT1 A 0 A_PlaySound("misc/bersann")
+		Stop
+	}
+}
+
+ACTOR BerserkPickupChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 8
+    	Speed 0
+	    Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER 
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+INVULNERABLE
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	//PainSound "null"
+        //DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn: 
+        TNT1 A 1 A_Look
+		TNT1 A 0 A_CheckSight("Death")
+        Goto See 
+    See: 
+        TNT1 A 1 A_Chase
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Missile:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Melee:
+        TNT1 A 1 A_FaceTarget
+		TNT1 A 0 A_CheckSight("Death")
+		TNT1 A 1 A_CheckSight("Death")
+        Goto ISeeYou
+    Pain: 
+        TNT1 A 1
+        TNT1 A 1 A_Pain 
+        Goto See
+    ISeeYou:
+         TNT1 A 1 A_PlaySoundEx("misc/berssnd", "SoundSlot5", 0, 0)
+		 TNT1 A 4
+         Goto Death
+    Death: 
+        TNT1 A 1
+        Stop
+        }
+}

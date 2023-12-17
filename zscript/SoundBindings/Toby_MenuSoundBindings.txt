@@ -249,6 +249,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERSKIN", "SoundToPlay":"menu/player/skin"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_PLAYERGENDER", "SoundToPlay":"menu/player/gender"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_AUTOAIM", "SoundToPlay":"menu/player/autoaim"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_VERTSPREAD", "SoundToPlay":"menu/player/vertspread"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_SWITCHONPICKUP", "SoundToPlay":"menu/player/weapswitch"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NewPlayerMenu", "CurrentMenuItemOptionName":"$PLYRMNU_ALWAYSRUN", "SoundToPlay":"menu/player/alwaysrun"}
 //player sex
