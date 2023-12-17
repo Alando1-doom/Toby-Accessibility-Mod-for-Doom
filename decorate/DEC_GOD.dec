@@ -1,0 +1,24 @@
+Actor GodModeGiver : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 1 A_JumpIfInventory("GodToken", 1, "GodOff")
+		TNT1 A 1 A_GiveInventory("GodToken", 1)
+		TNT1 A 1 A_PlaySoundEx("cheat/godon", "Auto", 0, 2)
+		TNT1 A 1 A_ChangeFlag("INVULNERABLE", 1)
+		TNT1 A 1 A_Print("God Mode Activated")
+		Fail
+	GodOff:
+		TNT1 A 1 A_TakeInventory("GodToken", 1)
+		TNT1 A 1 A_PlaySoundEx("cheat/godoff", "Auto", 0, 2)
+		TNT1 A 1 A_ChangeFlag("INVULNERABLE", 0)
+		TNT1 A 1 A_Print("God Mode De-Activated")
+		Fail
+		}
+}
+
+ACTOR GodToken : Inventory { Inventory.MaxAmount 1 }

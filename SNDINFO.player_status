@@ -1,0 +1,22 @@
+stats/general/health         "sounds/PlayerStats/Health/Health.ogg"
+stats/general/percent        "sounds/Menus/CustomizeControls/Keyboard/kpercent.ogg"
+
+stats/doom/weapons/fist      "sounds/PlayerStats/DoomWeapons/Fist.ogg"
+stats/doom/weapons/pistol    "sounds/PlayerStats/DoomWeapons/Pistol.ogg"
+
+stats/doom/ammo/bullet       "sounds/PlayerStats/DoomAmmo/Bullet.ogg"
+stats/doom/ammo/bullets      "sounds/PlayerStats/DoomAmmo/Bullets.ogg"
+stats/doom/ammo/shell        "sounds/PlayerStats/DoomAmmo/Shell.ogg"
+stats/doom/ammo/shells       "sounds/PlayerStats/DoomAmmo/Shells.ogg"
+stats/doom/ammo/rocket       "sounds/PlayerStats/DoomAmmo/Rocket.ogg"
+stats/doom/ammo/rockets      "sounds/PlayerStats/DoomAmmo/Rockets.ogg"
+stats/doom/ammo/cell         "sounds/PlayerStats/DoomAmmo/Cell.ogg"
+stats/doom/ammo/cells        "sounds/PlayerStats/DoomAmmo/Cells.ogg"
+
+//Charges are an alternate to Cells - I think it sounds better, to be honest, however, to keep consistency, Cells should be used.
+stats/doom/ammo/charge       "sounds/PlayerStats/DoomAmmo/Charge.ogg"
+stats/doom/ammo/charges      "sounds/PlayerStats/DoomAmmo/Charges.ogg"
+
+stats/doom/armor/shard       "sounds/PlayerStats/DoomArmor/ArmorShard.ogg"
+stats/doom/armor/greenarmor  "sounds/PlayerStats/DoomArmor/GreenArmor.ogg"
+stats/doom/armor/megaarmor   "sounds/PlayerStats/DoomArmor/MegaArmor.ogg"

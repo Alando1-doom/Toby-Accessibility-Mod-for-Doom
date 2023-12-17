@@ -1,0 +1,15 @@
+GameInfo
+{
+    AddEventHandlers = "Toby_SoundQueueStaticHandler"
+    AddEventHandlers = "ZS_MarkerHandler"
+    AddEventHandlers = "Toby_MenuStaticHandler"
+    AddEventHandlers = "Toby_MapAnnouncementStaticHandler"
+    AddEventHandlers = "Toby_PlayerStatusCheckStaticHandler"
+    AddEventHandlers = "Toby_TitleScreenHandler"
+    AddEventHandlers = "hitmarkershandler"
+    AddEventHandlers = "Toby_SnapToTargetHandler"
+    AddEventHandlers = "Toby_DropoffDetectorHandler"
+    AddEventHandlers = "Toby_TargetDetectorStaticHandler"
+    AddEventHandlers = "Toby_TargetDetectorHandler"
+    AddEventHandlers = "Toby_ActorsInViewportStaticHandler"
+}

@@ -1,0 +1,54 @@
+#library "KEYCHECK"
+#include "zcommon.acs"
+
+Script "CheckKeys" (void)
+{
+	bool anykey;
+	If(CheckInventory("RedCard"))
+	{
+		PlaySound(0,"keys/redkeycard");
+		Print(s:"Red Key Card");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("RedSkull"))
+	{
+		PlaySound(0,"keys/redskull");
+		Print(s:"Red Skull");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("BlueCard"))
+	{
+		PlaySound(0,"keys/bluekeycard");
+		Print(s:"Blue Key Card");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("BlueSkull"))
+	{
+		PlaySound(0,"keys/blueskull");
+		Print(s:"Blue Skull");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("YellowCard"))
+	{
+		PlaySound(0,"keys/yellowkeycard");
+		Print(s:"Yellow Key Card");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("YellowSkull"))
+	{
+		PlaySound(0,"keys/yellowskull");
+		Print(s:"Yellow Skull");
+		anykey = true;
+		Delay(48);
+	}
+	If(anykey == false)
+	{
+		Print(s:"You have no keys in your pocket!");
+		PlaySound(0,"ann/nokey");
+	}
+}

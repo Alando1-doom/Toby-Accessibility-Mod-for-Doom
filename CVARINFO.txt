@@ -1,14 +1,24 @@
 user int   zs_em_MaxDistance = 500;
 user bool   Toby_Developer = false;
+
+user bool   Toby_Developer_MenuEvents = false;
 user bool   Toby_Developer_ControlType = false;
 user bool   Toby_Developer_MenuChangedEvents = false;
 user bool   Toby_Developer_OptionChangedEvents = false;
 user bool   Toby_Developer_OptionValueChangedEvents = false;
 user bool   Toby_Developer_SaveSlotChangedEvents = false;
 user bool   Toby_Developer_KeyPressedEvents = false;
+
+user bool   Toby_Developer_ActorsInViewportDebug = false;
+
+user bool   Toby_Developer_MapInformation = false;
+
 user bool   Toby_SkipSlotWord = false;
 user bool   Toby_SkipTotalSlots = false;
 user bool   Toby_StopAllSoundsBeforePlayingNewOne = false;
+user bool   Toby_PlayMapNameAnnouncement = true;
+user bool   Toby_UseLegacyAmmoChecker = false;
+user bool   Toby_UseLegacyHealthChecker = false;
 
 
 //Hit Marker CVAR

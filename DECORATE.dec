@@ -1,0 +1,15 @@
+#include decorate/DEC_WEAP.dec
+#include decorate/DEC_HLTH.dec
+#include decorate/DEC_ARMR.dec
+#include decorate/DEC_AMMO.dec
+#include decorate/DEC_PRX1.dec
+#include decorate/DEC_POW.dec
+#include decorate/DEC_KEYS.dec
+#include decorate/DEC_MONS.dec
+#include decorate/DEC_DECO.dec
+#include decorate/DEC_BEAC.dec
+//Player
+#include decorate/DEC_PLAYER.dec
+#include decorate/Detectors/FloorChecker.dec
+#include decorate/Detectors/WalkThing.dec
+#include decorate/Detectors/WallHit.dec

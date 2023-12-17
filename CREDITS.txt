@@ -14,6 +14,8 @@ Powerup Wearoff -- silentzora & Xterra
 
 Terrain FX -- Daniel & Raven Software
 
+libeye -- KeksDose / MemeDose
+
 - fvox sounds are taken from Half-Life, now removed after prototyping was finished
 - Alphabet is downloaded from this url: https://evolution.voxeo.com/library/audio/prompts/alphabet/index.jsp, now removed after prototyping was finished
 - tts taken from https://www.naturalreaders.com/online/, now removed after prototyping was finished

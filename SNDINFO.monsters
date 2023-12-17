@@ -1,0 +1,71 @@
+toby/actorsinviewport/monsters/lowtiermon       "sounds/ActorsInViewport/Monsters/LowTierMon.ogg"
+toby/actorsinviewport/monsters/lowtiermons      "sounds/ActorsInViewport/Monsters/LowTierMons.ogg"
+
+toby/actorsinviewport/monsters/midtiermon       "sounds/ActorsInViewport/Monsters/MidTierMon.ogg"
+toby/actorsinviewport/monsters/midtiermons      "sounds/ActorsInViewport/Monsters/MidTierMons.ogg"
+
+toby/actorsinviewport/monsters/hightiermon      "sounds/ActorsInViewport/Monsters/HighTierMon.ogg"
+toby/actorsinviewport/monsters/hightiermons     "sounds/ActorsInViewport/Monsters/HighTierMons.ogg"
+
+toby/actorsinviewport/monsters/formerhuman      "sounds/ActorsInViewport/Monsters/FormerHuman.ogg"
+toby/actorsinviewport/monsters/formerhumans     "sounds/ActorsInViewport/Monsters/FormerHumans.ogg"
+
+toby/actorsinviewport/monsters/imp              "sounds/ActorsInViewport/Monsters/Imp.ogg"
+toby/actorsinviewport/monsters/imps             "sounds/ActorsInViewport/Monsters/Imps.ogg"
+
+toby/actorsinviewport/monsters/formersergeant   "sounds/ActorsInViewport/Monsters/FormerSergeant.ogg"
+toby/actorsinviewport/monsters/formersergeants  "sounds/ActorsInViewport/Monsters/FormerSergeants.ogg"
+
+toby/actorsinviewport/monsters/formercommando   "sounds/ActorsInViewport/Monsters/FormerCommando.ogg"
+toby/actorsinviewport/monsters/formercommandos  "sounds/ActorsInViewport/Monsters/FormerCommandos.ogg"
+
+toby/actorsinviewport/monsters/pinkydemon       "sounds/ActorsInViewport/Monsters/PinkyDemon.ogg"
+toby/actorsinviewport/monsters/pinkydemons      "sounds/ActorsInViewport/Monsters/PinkyDemons.ogg"
+
+toby/actorsinviewport/monsters/spectre          "sounds/ActorsInViewport/Monsters/Spectre.ogg"
+toby/actorsinviewport/monsters/spectres         "sounds/ActorsInViewport/Monsters/Spectres.ogg"
+
+toby/actorsinviewport/monsters/cacodemon        "sounds/ActorsInViewport/Monsters/Cacodemon.ogg"
+toby/actorsinviewport/monsters/cacodemons       "sounds/ActorsInViewport/Monsters/Cacodemons.ogg"
+
+toby/actorsinviewport/monsters/hellknight       "sounds/ActorsInViewport/Monsters/HellKnight.ogg"
+toby/actorsinviewport/monsters/hellknights      "sounds/ActorsInViewport/Monsters/HellKnights.ogg"
+
+toby/actorsinviewport/monsters/baronofhell      "sounds/ActorsInViewport/Monsters/BaronOfHell.ogg"
+toby/actorsinviewport/monsters/baronsofhell     "sounds/ActorsInViewport/Monsters/BaronsOfHell.ogg"
+
+toby/actorsinviewport/monsters/mancubus         "sounds/ActorsInViewport/Monsters/Mancubus.ogg"
+toby/actorsinviewport/monsters/mancubi          "sounds/ActorsInViewport/Monsters/Mancubi.ogg"
+
+toby/actorsinviewport/monsters/revenant         "sounds/ActorsInViewport/Monsters/Revenant.ogg"
+toby/actorsinviewport/monsters/revenants        "sounds/ActorsInViewport/Monsters/Revenants.ogg"
+
+toby/actorsinviewport/monsters/lostsoul         "sounds/ActorsInViewport/Monsters/LostSoul.ogg"
+toby/actorsinviewport/monsters/lostsouls        "sounds/ActorsInViewport/Monsters/LostSouls.ogg"
+
+toby/actorsinviewport/monsters/painelemental    "sounds/ActorsInViewport/Monsters/PainElemental.ogg"
+toby/actorsinviewport/monsters/painelementals   "sounds/ActorsInViewport/Monsters/PainElementals.ogg"
+
+toby/actorsinviewport/monsters/arachnotron      "sounds/ActorsInViewport/Monsters/Arachnotron.ogg"
+toby/actorsinviewport/monsters/arachnotrons     "sounds/ActorsInViewport/Monsters/Arachnotrons.ogg"
+
+toby/actorsinviewport/monsters/archvile         "sounds/ActorsInViewport/Monsters/Archvile.ogg"
+toby/actorsinviewport/monsters/archviles        "sounds/ActorsInViewport/Monsters/Archviles.ogg"
+
+toby/actorsinviewport/monsters/cyberdemon       "sounds/ActorsInViewport/Monsters/Cyberdemon.ogg"
+toby/actorsinviewport/monsters/cyberdemons      "sounds/ActorsInViewport/Monsters/Cyberdemons.ogg"
+
+toby/actorsinviewport/monsters/spidermastermind     "sounds/ActorsInViewport/Monsters/SpiderMastermind.ogg"
+toby/actorsinviewport/monsters/spidermasterminds    "sounds/ActorsInViewport/Monsters/SpiderMasterminds.ogg"
+
+toby/actorsinviewport/monsters/romeroshead          "sounds/ActorsInViewport/Monsters/RomerosHead.ogg"
+toby/actorsinviewport/monsters/romerosheads         "sounds/ActorsInViewport/Monsters/RomerosHeads.ogg"
+
+toby/actorsinviewport/monsters/wolfensteinsoldier   "sounds/ActorsInViewport/Monsters/WolfensteinSoldier.ogg"
+toby/actorsinviewport/monsters/wolfensteinsoldiers  "sounds/ActorsInViewport/Monsters/WolfensteinSoldiers.ogg"
+
+toby/actorsinviewport/monsters/hangingcommanderkeen     "sounds/ActorsInViewport/Monsters/HangingCommanderKeen.ogg"
+toby/actorsinviewport/monsters/hangingcommanderkeens    "sounds/ActorsInViewport/Monsters/HangingCommanderKeens.ogg"
+
+toby/actorsinviewport/monsters/marine     "sounds/ActorsInViewport/Monsters/Marine.ogg"
+toby/actorsinviewport/monsters/marines    "sounds/ActorsInViewport/Monsters/Marines.ogg"

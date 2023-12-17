@@ -1,0 +1,165 @@
+//Tech
+toby/actorsinviewport/decorations/explosivebarrel       "sounds/ActorsInViewport/Decorations/Tech/ExplosiveBarrel.ogg"
+toby/actorsinviewport/decorations/explosivebarrels      "sounds/ActorsInViewport/Decorations/Tech/ExplosiveBarrels.ogg"
+
+toby/actorsinviewport/decorations/burningbarrel         "sounds/ActorsInViewport/Decorations/Tech/BurningBarrel.ogg"
+toby/actorsinviewport/decorations/burningbarrels        "sounds/ActorsInViewport/Decorations/Tech/BurningBarrels.ogg"
+
+toby/actorsinviewport/decorations/minitechlamp         "sounds/ActorsInViewport/Decorations/Tech/MiniTechLamp.ogg"
+toby/actorsinviewport/decorations/minitechlamps        "sounds/ActorsInViewport/Decorations/Tech/MiniTechLamps.ogg"
+
+toby/actorsinviewport/decorations/smalltechlamp         "sounds/ActorsInViewport/Decorations/Tech/SmallTechLamp.ogg"
+toby/actorsinviewport/decorations/smalltechlamps        "sounds/ActorsInViewport/Decorations/Tech/SmallTechLamps.ogg"
+
+toby/actorsinviewport/decorations/largetechlamp         "sounds/ActorsInViewport/Decorations/Tech/LargeTechLamp.ogg"
+toby/actorsinviewport/decorations/largetechlamps        "sounds/ActorsInViewport/Decorations/Tech/LargeTechLamps.ogg"
+
+toby/actorsinviewport/decorations/techpillar            "sounds/ActorsInViewport/Decorations/Tech/TechPillar.ogg"
+toby/actorsinviewport/decorations/techpillars           "sounds/ActorsInViewport/Decorations/Tech/TechPillars.ogg"
+
+
+//Corpses
+toby/actorsinviewport/decorations/cacodemoncorpse       "sounds/ActorsInViewport/Decorations/Gore/CacodemonCorpse.ogg"
+toby/actorsinviewport/decorations/cacodemoncorpses      "sounds/ActorsInViewport/Decorations/Gore/CacodemonCorpses.ogg"
+
+toby/actorsinviewport/decorations/pinkycorpse           "sounds/ActorsInViewport/Decorations/Gore/PinkyCorpse.ogg"
+toby/actorsinviewport/decorations/pinkycorpses          "sounds/ActorsInViewport/Decorations/Gore/PinkyCorpses.ogg"
+
+toby/actorsinviewport/decorations/impcorpse             "sounds/ActorsInViewport/Decorations/Gore/ImpCorpse.ogg"
+toby/actorsinviewport/decorations/impcorpses            "sounds/ActorsInViewport/Decorations/Gore/ImpCorpses.ogg"
+
+toby/actorsinviewport/decorations/marinecorpse          "sounds/ActorsInViewport/Decorations/Gore/MarineCorpse.ogg"
+toby/actorsinviewport/decorations/marinecorpses         "sounds/ActorsInViewport/Decorations/Gore/MarineCorpses.ogg"
+
+toby/actorsinviewport/decorations/shotgunnercorpse      "sounds/ActorsInViewport/Decorations/Gore/ShotgunnerCorpse.ogg"
+toby/actorsinviewport/decorations/shotgunnercorpses     "sounds/ActorsInViewport/Decorations/Gore/ShotgunnerCorpses.ogg"
+
+toby/actorsinviewport/decorations/zombiemancorpse       "sounds/ActorsInViewport/Decorations/Gore/ZombiemanCorpse.ogg"
+toby/actorsinviewport/decorations/zombiemancorpses      "sounds/ActorsInViewport/Decorations/Gore/ZombiemanCorpses.ogg"
+
+toby/actorsinviewport/decorations/crushedcorpse         "sounds/ActorsInViewport/Decorations/Gore/CrushedCorpse.ogg"
+toby/actorsinviewport/decorations/crushedcorpses        "sounds/ActorsInViewport/Decorations/Gore/CrushedCorpses.ogg"
+
+toby/actorsinviewport/decorations/gibbedcorpse          "sounds/ActorsInViewport/Decorations/Gore/GibbedCorpse.ogg"
+toby/actorsinviewport/decorations/gibbedcorpses         "sounds/ActorsInViewport/Decorations/Gore/GibbedCorpses.ogg"
+
+
+//Gore
+toby/actorsinviewport/decorations/impaledguy            "sounds/ActorsInViewport/Decorations/Gore/ImpaledGuy.ogg"
+toby/actorsinviewport/decorations/impaledguys           "sounds/ActorsInViewport/Decorations/Gore/ImpaledGuys.ogg"
+
+toby/actorsinviewport/decorations/twitchingimpaledguy   "sounds/ActorsInViewport/Decorations/Gore/TwitchingImpaledGuy.ogg"
+toby/actorsinviewport/decorations/twitchingimpaledguys  "sounds/ActorsInViewport/Decorations/Gore/TwitchingImpaledGuys.ogg"
+
+toby/actorsinviewport/decorations/twitchhangingman      "sounds/ActorsInViewport/Decorations/Gore/TwitchHangingMan.ogg"
+toby/actorsinviewport/decorations/twitchhangingmen      "sounds/ActorsInViewport/Decorations/Gore/TwitchHangingMen.ogg"
+
+toby/actorsinviewport/decorations/brain                 "sounds/ActorsInViewport/Decorations/Gore/Brain.ogg"
+toby/actorsinviewport/decorations/brains                "sounds/ActorsInViewport/Decorations/Gore/Brains.ogg"
+
+toby/actorsinviewport/decorations/pileofflesh           "sounds/ActorsInViewport/Decorations/Gore/PileOfFlesh.ogg"
+toby/actorsinviewport/decorations/pilesofflesh          "sounds/ActorsInViewport/Decorations/Gore/PilesOfFlesh.ogg"
+
+//Crushed gibs?
+
+toby/actorsinviewport/decorations/hangmannobrain        "sounds/ActorsInViewport/Decorations/Gore/HangManNoBrain.ogg"
+toby/actorsinviewport/decorations/hangmennobrain        "sounds/ActorsInViewport/Decorations/Gore/HangMenNoBrain.ogg"
+
+toby/actorsinviewport/decorations/hangmannoguts         "sounds/ActorsInViewport/Decorations/Gore/HangManNoGuts.ogg"
+toby/actorsinviewport/decorations/hangmennoguts         "sounds/ActorsInViewport/Decorations/Gore/HangMenNoGuts.ogg"
+
+toby/actorsinviewport/decorations/torsolookdown         "sounds/ActorsInViewport/Decorations/Gore/TorsoLookDown.ogg"
+toby/actorsinviewport/decorations/torsoslookdown        "sounds/ActorsInViewport/Decorations/Gore/TorsosLookDown.ogg"
+
+toby/actorsinviewport/decorations/torsolookup           "sounds/ActorsInViewport/Decorations/Gore/TorsoLookUp.ogg"
+toby/actorsinviewport/decorations/torsoslookup          "sounds/ActorsInViewport/Decorations/Gore/TorsosLookUp.ogg"
+
+toby/actorsinviewport/decorations/torsonobrain          "sounds/ActorsInViewport/Decorations/Gore/TorsoNoBrain.ogg"
+toby/actorsinviewport/decorations/torsosnobrain         "sounds/ActorsInViewport/Decorations/Gore/TorsosNoBrain.ogg"
+
+toby/actorsinviewport/decorations/torsoexposedbrain     "sounds/ActorsInViewport/Decorations/Gore/TorsoExposedBrain.ogg"
+toby/actorsinviewport/decorations/torsosexposedbrain    "sounds/ActorsInViewport/Decorations/Gore/TorsosExposedBrain.ogg"
+
+toby/actorsinviewport/decorations/hangingleg            "sounds/ActorsInViewport/Decorations/Gore/HangingLeg.ogg"
+toby/actorsinviewport/decorations/hanginglegs           "sounds/ActorsInViewport/Decorations/Gore/HangingLegs.ogg"
+
+toby/actorsinviewport/decorations/hangingman1leg        "sounds/ActorsInViewport/Decorations/Gore/HangingMan1Leg.ogg"
+toby/actorsinviewport/decorations/hangingmen1leg        "sounds/ActorsInViewport/Decorations/Gore/HangingMen1Leg.ogg"
+
+toby/actorsinviewport/decorations/hangingman            "sounds/ActorsInViewport/Decorations/Gore/HangingMan.ogg"
+toby/actorsinviewport/decorations/hangingmen            "sounds/ActorsInViewport/Decorations/Gore/HangingMen.ogg"
+
+toby/actorsinviewport/decorations/hangingpairoflegs     "sounds/ActorsInViewport/Decorations/Gore/HangingPairOfLegs.ogg"
+toby/actorsinviewport/decorations/hangingpairsoflegs    "sounds/ActorsInViewport/Decorations/Gore/HangingPairsOfLegs.ogg"
+
+toby/actorsinviewport/decorations/headpike              "sounds/ActorsInViewport/Decorations/Gore/HeadPike.ogg"
+toby/actorsinviewport/decorations/headpikes             "sounds/ActorsInViewport/Decorations/Gore/HeadPikes.ogg"
+
+toby/actorsinviewport/decorations/multiheadpike         "sounds/ActorsInViewport/Decorations/Gore/MultiHeadPike.ogg"
+toby/actorsinviewport/decorations/multiheadpikes        "sounds/ActorsInViewport/Decorations/Gore/MultiHeadPikes.ogg"
+
+toby/actorsinviewport/decorations/poolofblood           "sounds/ActorsInViewport/Decorations/Gore/PoolOfBlood.ogg"
+toby/actorsinviewport/decorations/poolsofblood          "sounds/ActorsInViewport/Decorations/Gore/PoolsOfBlood.ogg"
+
+
+//Hell
+toby/actorsinviewport/decorations/largehelltree         "sounds/ActorsInViewport/Decorations/Hell/LargeHellTree.ogg"
+toby/actorsinviewport/decorations/largehelltrees        "sounds/ActorsInViewport/Decorations/Hell/LargeHellTrees.ogg"
+
+toby/actorsinviewport/decorations/shorthelltree         "sounds/ActorsInViewport/Decorations/Hell/ShortHellTree.ogg"
+toby/actorsinviewport/decorations/shorthelltrees        "sounds/ActorsInViewport/Decorations/Hell/ShortHellTrees.ogg"
+
+toby/actorsinviewport/decorations/candelabra            "sounds/ActorsInViewport/Decorations/Hell/Candelabra.ogg"
+toby/actorsinviewport/decorations/candelabras           "sounds/ActorsInViewport/Decorations/Hell/Candelabras.ogg"
+
+toby/actorsinviewport/decorations/candle                "sounds/ActorsInViewport/Decorations/Hell/Candle.ogg"
+toby/actorsinviewport/decorations/candles               "sounds/ActorsInViewport/Decorations/Hell/Candles.ogg"
+
+toby/actorsinviewport/decorations/candleskullpile       "sounds/ActorsInViewport/Decorations/Hell/CandleSkullPile.ogg"
+toby/actorsinviewport/decorations/candleskullpiles      "sounds/ActorsInViewport/Decorations/Hell/CandleSkullPiles.ogg"
+
+toby/actorsinviewport/decorations/evileye               "sounds/ActorsInViewport/Decorations/Hell/EvilEye.ogg"
+toby/actorsinviewport/decorations/evileyes              "sounds/ActorsInViewport/Decorations/Hell/EvilEyes.ogg"
+
+toby/actorsinviewport/decorations/floatingskull         "sounds/ActorsInViewport/Decorations/Hell/FloatingSkull.ogg"
+toby/actorsinviewport/decorations/floatingskulls        "sounds/ActorsInViewport/Decorations/Hell/FloatingSkulls.ogg"
+
+toby/actorsinviewport/decorations/heartpillar           "sounds/ActorsInViewport/Decorations/Hell/HeartPillar.ogg"
+toby/actorsinviewport/decorations/heartpillars          "sounds/ActorsInViewport/Decorations/Hell/HeartPillars.ogg"
+
+toby/actorsinviewport/decorations/redskullpillar        "sounds/ActorsInViewport/Decorations/Hell/RedSkullPillar.ogg"
+toby/actorsinviewport/decorations/redskullpillars       "sounds/ActorsInViewport/Decorations/Hell/RedSkullPillars.ogg"
+
+toby/actorsinviewport/decorations/stalagmite            "sounds/ActorsInViewport/Decorations/Hell/Stalagmite.ogg"
+toby/actorsinviewport/decorations/stalagmites           "sounds/ActorsInViewport/Decorations/Hell/Stalagmites.ogg"
+
+
+toby/actorsinviewport/decorations/shortbluetorch        "sounds/ActorsInViewport/Decorations/Hell/ShortBlueTorch.ogg"
+toby/actorsinviewport/decorations/shortbluetorches      "sounds/ActorsInViewport/Decorations/Hell/ShortBlueTorches.ogg"
+
+toby/actorsinviewport/decorations/shortgreentorch      "sounds/ActorsInViewport/Decorations/Hell/ShortGreenTorch.ogg"
+toby/actorsinviewport/decorations/shortgreentorches     "sounds/ActorsInViewport/Decorations/Hell/ShortGreenTorches.ogg"
+
+toby/actorsinviewport/decorations/shortredtorch         "sounds/ActorsInViewport/Decorations/Hell/ShortRedTorch.ogg"
+toby/actorsinviewport/decorations/shortredtorches       "sounds/ActorsInViewport/Decorations/Hell/ShortRedTorches.ogg"
+
+toby/actorsinviewport/decorations/tallbluetorch         "sounds/ActorsInViewport/Decorations/Hell/TallBlueTorch.ogg"
+toby/actorsinviewport/decorations/tallbluetorches       "sounds/ActorsInViewport/Decorations/Hell/TallBlueTorches.ogg"
+
+toby/actorsinviewport/decorations/tallgreentorch        "sounds/ActorsInViewport/Decorations/Hell/TallGreenTorch.ogg"
+toby/actorsinviewport/decorations/tallgreentorches      "sounds/ActorsInViewport/Decorations/Hell/TallGreenTorches.ogg"
+
+toby/actorsinviewport/decorations/tallredtorch          "sounds/ActorsInViewport/Decorations/Hell/TallRedTorch.ogg"
+toby/actorsinviewport/decorations/tallredtorches        "sounds/ActorsInViewport/Decorations/Hell/TallRedTorches.ogg"
+
+toby/actorsinviewport/decorations/shortgreenpillar      "sounds/ActorsInViewport/Decorations/Hell/ShortGreenPillar.ogg"
+toby/actorsinviewport/decorations/shortgreenpillars     "sounds/ActorsInViewport/Decorations/Hell/ShortGreenPillars.ogg"
+
+toby/actorsinviewport/decorations/shortredpillar        "sounds/ActorsInViewport/Decorations/Hell/ShortRedPillar.ogg"
+toby/actorsinviewport/decorations/shortredpillars       "sounds/ActorsInViewport/Decorations/Hell/ShortRedPillars.ogg"
+
+toby/actorsinviewport/decorations/tallgreenpillar       "sounds/ActorsInViewport/Decorations/Hell/TallGreenPillar.ogg"
+toby/actorsinviewport/decorations/tallgreenpillars      "sounds/ActorsInViewport/Decorations/Hell/TallGreenPillars.ogg"
+
+toby/actorsinviewport/decorations/tallredpillar         "sounds/ActorsInViewport/Decorations/Hell/TallRedPillar.ogg"
+toby/actorsinviewport/decorations/tallredpillars        "sounds/ActorsInViewport/Decorations/Hell/TallRedPillars.ogg"

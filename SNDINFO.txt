@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 numbers/000        "sounds/Numbers/num0.ogg"
 numbers/001        "sounds/Numbers/num1.ogg"
 numbers/002        "sounds/Numbers/num2.ogg"
@@ -110,6 +111,8 @@ alphabet/Z       "sounds/Alphabet/Z.ogg"
 alphabet/Space   "sounds/Alphabet/_.wav"
 
 
+=======
+>>>>>>> cde2d77032d8f8575eddfa798f280de348419da2
 //Announcer
 
 marker/marker1      "sounds/Markers/dsm1plc.ogg"
@@ -211,3 +214,5 @@ teamfortress2kill	HMTF2K
 
 // Titanfall 2
 titanfall2kill		HMT2K
+
+dropoff/beacon		"sounds/DropoffDetector/DROPOFF.ogg"
