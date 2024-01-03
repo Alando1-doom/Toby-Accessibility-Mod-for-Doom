@@ -32,6 +32,14 @@ ACTOR ZombieMan_Toby replaces ZombieMan
 		POSS DD 4 A_Chase
 		POSS AA 4 A_Chase
 		POSS BB 4 A_Chase
+		POSS CC 4 A_Chase
+		POSS DD 4 A_Chase
+		POSS AA 4 A_Chase
+		POSS BB 4 A_Chase
+		POSS CC 4 A_Chase
+		POSS DD 4 A_Chase
+		POSS AA 4 A_Chase
+		POSS BB 4 A_Chase
 		POSS B 0 A_ActiveSound
 		POSS CC 4 A_Chase
 		POSS DD 4 A_Chase
@@ -101,6 +109,14 @@ ACTOR ShotgunGuy_Toby replaces ShotgunGuy
 		SPOS DD 3 A_Chase
 		SPOS AA 3 A_Chase
 		SPOS BB 3 A_Chase
+		SPOS CC 3 A_Chase
+		SPOS DD 3 A_Chase
+		SPOS AA 3 A_Chase
+		SPOS BB 3 A_Chase
+		SPOS CC 3 A_Chase
+		SPOS DD 3 A_Chase
+		SPOS AA 3 A_Chase
+		SPOS BB 3 A_Chase
 		SPOS B 0 A_ActiveSound
 		SPOS CC 3 A_Chase
 		SPOS DD 3 A_Chase
@@ -164,6 +180,14 @@ ACTOR ChaingunGuy_Toby replaces ChaingunGuy
 		CPOS AB 10 A_Look
 		Loop
 	See:
+		CPOS AA 3 A_Chase
+		CPOS BB 3 A_Chase
+		CPOS CC 3 A_Chase
+		CPOS DD 3 A_Chase
+		CPOS AA 3 A_Chase
+		CPOS BB 3 A_Chase
+		CPOS CC 3 A_Chase
+		CPOS DD 3 A_Chase
 		CPOS AA 3 A_Chase
 		CPOS BB 3 A_Chase
 		CPOS CC 3 A_Chase
