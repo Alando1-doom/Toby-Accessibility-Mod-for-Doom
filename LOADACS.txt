@@ -1,0 +1,5 @@
+WEAROFF
+KEYCHECK
+CHECKS
+COMPASS
+hitmarkers

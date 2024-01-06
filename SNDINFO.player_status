@@ -20,3 +20,5 @@ stats/doom/ammo/charges      "sounds/PlayerStats/DoomAmmo/Charges.ogg"
 stats/doom/armor/shard       "sounds/PlayerStats/DoomArmor/ArmorShard.ogg"
 stats/doom/armor/greenarmor  "sounds/PlayerStats/DoomArmor/GreenArmor.ogg"
 stats/doom/armor/megaarmor   "sounds/PlayerStats/DoomArmor/MegaArmor.ogg"
+
+dropoff/beacon		"sounds/DropoffDetector/DROPOFF.ogg"
