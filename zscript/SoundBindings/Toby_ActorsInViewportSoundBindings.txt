@@ -203,6 +203,9 @@
 {"ActorClass":"BurningBarrel_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/burningbarrel", "SoundToPlayPlural":"toby/actorsinviewport/decorations/burningbarrels", "Article":"a"}
 
 {"ActorClass":"Column_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/minitechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/minitechlamps", "Article":"a"}
+{"ActorClass":"TechLamp2_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/smalltechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/smalltechlamps", "Article":"a"}
+{"ActorClass":"TechLamp_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/largetechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/largetechlamps", "Article":"a"}
+{"ActorClass":"TechPillar_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/techpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/techpillars", "Article":"a"}
 
 {"ActorClass":"ShortRedTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/shortredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortredtorches", "Article":"a"}
 {"ActorClass":"ShortGreenTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/shortgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shortgreentorches", "Article":"a"}
@@ -210,3 +213,14 @@
 {"ActorClass":"RedTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallredtorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallredtorches", "Article":"a"}
 {"ActorClass":"GreenTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallgreentorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallgreentorches", "Article":"a"}
 {"ActorClass":"BlueTorch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/tallbluetorch", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallbluetorches", "Article":"a"}
+
+{"ActorClass":"BloodyTwitch_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/twitchhangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchhangingmen", "Article":"a"}
+{"ActorClass":"BloodyTwitch2_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/twitchhangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchhangingmen", "Article":"a"}
+{"ActorClass":"HangingMan_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen", "Article":"a"}
+{"ActorClass":"HangingMan2_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen", "Article":"a"}
+{"ActorClass":"OneLegMan_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman1leg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen1leg", "Article":"a"}
+{"ActorClass":"OneLegMan2_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/hangingman1leg", "SoundToPlayPlural":"toby/actorsinviewport/decorations/hangingmen1leg", "Article":"a"}
+{"ActorClass":"ImpaledGuy_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/twitchingimpaledguy", "SoundToPlayPlural":"toby/actorsinviewport/decorations/twitchingimpaledguys", "Article":"a"}
+{"ActorClass":"EvilEye_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/evileye", "SoundToPlayPlural":"toby/actorsinviewport/decorations/evileyes", "Article":"a"}
+{"ActorClass":"FloatingSkull_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull", "SoundToPlayPlural":"toby/actorsinviewport/decorations/floatingskulls", "Article":"a"}
+{"ActorClass":"HeartColumn_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/heartpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/heartpillars", "Article":"a"}

@@ -467,7 +467,7 @@ ACTOR Demon_Toby replaces Demon
 ACTOR Spectre_Toby : Demon_Toby replaces Spectre
 {
 	SpawnID 9
-	+SHADOW
+	//+SHADOW
 	RenderStyle OptFuzzy
 	Alpha 0.5
 	SeeSound "spectre/sight"
