@@ -4,7 +4,7 @@ Impact Detection System, Weapon Targeting System, Pickup Beacons, Sound Defs for
 
 Compass, Key Checker, Stat Checker, Line Beacon Spawner -- Jarewill
 
-Drop-off Detector, Accessible Menu, Map Markers -- Proydoha
+Drop-off Detector, Accessible Menu, Map Markers, Updated Targeting System, Snap-To-Target System, Area Scanner, Updated Stat Checkers -- Proydoha
 
 Map Markers -- ZikShadow
 
@@ -33,3 +33,17 @@ HitMarkers utilizes sounds from the following games:
 - Quake Live by id Software
 - Team Fortress 2 by Valve
 - Titanfall 2 by Respawn Entertainment
+
+
+Additional Credit & Thanks:
+
+Toby Ott
+Berk Icel (dansg08)
+Karl Grantham
+Janus3003
+Alchestbreach
+SightlessKombat
+m8f
+Enjay
+MWTab
+stormdragon2976
