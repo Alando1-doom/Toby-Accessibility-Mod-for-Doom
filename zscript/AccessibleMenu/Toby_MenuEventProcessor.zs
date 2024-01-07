@@ -39,7 +39,6 @@ class Toby_MenuEventProcessor
         ConvertStatesToDictionary(currentState, previousState);
         string eventType = GetEventTypeAsString(detectedChange);
 
-        //Bad case of tight copuling?
         for (int i = 0; i < menuSoundBindingsContainer.soundBindings.Size(); i++)
         {
             if (menuSoundBindingsContainer.soundBindings[i].At("EventType") != eventType) { continue; }
@@ -72,7 +71,6 @@ class Toby_MenuEventProcessor
 
     ui void Init(Toby_SoundBindingsContainer bindings)
     {
-        //Bad case of tight copuling?
         menuSoundBindingsContainer = bindings;
     }
 
