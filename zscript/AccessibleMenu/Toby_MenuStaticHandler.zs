@@ -45,7 +45,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
     {
         if (!isNotFirstRun)
         {
-            SetupAccessibleMenus();
+            InitAccessibleMenus();
         }
 
         Menu currentMenu = Menu.GetCurrentMenu();
@@ -62,7 +62,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
         currentMenuState.CopyValuesTo(previousMenuState);
     }
 
-    ui void SetupAccessibleMenus()
+    ui void InitAccessibleMenus()
     {
         isNotFirstRun = true;
         lastKeyPressed = -1;
