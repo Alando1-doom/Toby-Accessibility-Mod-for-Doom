@@ -30,10 +30,10 @@ class Toby_MenuEventProcessor
             {
                 Toby_SoundQueueStaticHandler.UnshiftSound("save/quicksave", -1);
             }
-			else
-			{
-				Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
-			}
+            else
+            {
+                Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
+            }
             //Option to disable 'of <total save slots>' to shorten time to get more valuable information
             if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
             {
