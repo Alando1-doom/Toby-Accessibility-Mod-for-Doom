@@ -17,36 +17,7 @@ class Toby_MenuEventProcessor
         //Basic save load handling
         else if (detectedChange == Toby_MenuState.SaveSlotChanged)
         {
-            Toby_SoundQueueStaticHandler.Clear();
-            if (currentState.isNewSlot)
-            {
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/new", -1);
-            }
-            else if (currentState.isAutosave)
-            {
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/autosave", -1);
-            }
-            else if (currentState.isQuicksave)
-            {
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/quicksave", -1);
-            }
-            else
-            {
-                Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
-            }
-            //Option to disable 'of <total save slots>' to shorten time to get more valuable information
-            if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
-            {
-                Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGamesTotal);
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/of", -1);
-            }
-            Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGameSlot);
-            //Option to disable word 'Slot' to shorten time to get more valuable information
-            if (!CVar.FindCvar("Toby_SkipSlotWord").GetBool())
-            {
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/slot", -1);
-            }
-            Toby_SoundQueueStaticHandler.PlayQueue(0);
+            ProcessSaveSlotChangedEvent(currentState);
         }
         //Left and Right handling
         else if (detectedChange == Toby_MenuState.KeyPressed)
@@ -233,5 +204,39 @@ class Toby_MenuEventProcessor
             Toby_Logger.Message("Unknown event type. Seems like an error happened.", "Toby_Developer");
         }
         return eventType;
+    }
+
+    ui void ProcessSaveSlotChangedEvent(Toby_MenuState currentState)
+    {
+        Toby_SoundQueueStaticHandler.Clear();
+        if (currentState.isNewSlot)
+        {
+            Toby_SoundQueueStaticHandler.UnshiftSound("save/new", -1);
+        }
+        else if (currentState.isAutosave)
+        {
+            Toby_SoundQueueStaticHandler.UnshiftSound("save/autosave", -1);
+        }
+        else if (currentState.isQuicksave)
+        {
+            Toby_SoundQueueStaticHandler.UnshiftSound("save/quicksave", -1);
+        }
+        else
+        {
+            Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
+        }
+        //Option to disable 'of <total save slots>' to shorten time to get more valuable information
+        if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
+        {
+            Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGamesTotal);
+            Toby_SoundQueueStaticHandler.UnshiftSound("save/of", -1);
+        }
+        Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGameSlot);
+        //Option to disable word 'Slot' to shorten time to get more valuable information
+        if (!CVar.FindCvar("Toby_SkipSlotWord").GetBool())
+        {
+            Toby_SoundQueueStaticHandler.UnshiftSound("save/slot", -1);
+        }
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 }
