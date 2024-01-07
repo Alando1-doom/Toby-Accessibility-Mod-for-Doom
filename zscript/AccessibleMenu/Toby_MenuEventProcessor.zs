@@ -209,34 +209,44 @@ class Toby_MenuEventProcessor
     ui void ProcessSaveSlotChangedEvent(Toby_MenuState currentState)
     {
         Toby_SoundQueueStaticHandler.Clear();
-        if (currentState.isNewSlot)
-        {
-            Toby_SoundQueueStaticHandler.UnshiftSound("save/new", -1);
-        }
-        else if (currentState.isAutosave)
-        {
-            Toby_SoundQueueStaticHandler.UnshiftSound("save/autosave", -1);
-        }
-        else if (currentState.isQuicksave)
-        {
-            Toby_SoundQueueStaticHandler.UnshiftSound("save/quicksave", -1);
-        }
-        else
-        {
-            Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.saveLoadValue);
-        }
-        //Option to disable 'of <total save slots>' to shorten time to get more valuable information
-        if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
-        {
-            Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGamesTotal);
-            Toby_SoundQueueStaticHandler.UnshiftSound("save/of", -1);
-        }
-        Toby_NumberToVoice.ConvertAndAddToQueue(currentState.saveGameSlot);
+
+        Toby_SoundQueue finalSoundQueue = Toby_SoundQueue.Create();
         //Option to disable word 'Slot' to shorten time to get more valuable information
         if (!CVar.FindCvar("Toby_SkipSlotWord").GetBool())
         {
-            Toby_SoundQueueStaticHandler.UnshiftSound("save/slot", -1);
+            finalSoundQueue.AddSound("save/slot", -1);
         }
+
+        Toby_NumberToSoundQueue saveSlotQueueBuilder = Toby_NumberToSoundQueue.Create();
+        finalSoundQueue.AddQueue(saveSlotQueueBuilder.CreateQueueFromInt(currentState.saveGameSlot));
+
+        //Option to disable 'of <total save slots>' to shorten time to get more valuable information
+        if (!CVar.FindCVar("Toby_SkipTotalSlots").GetBool())
+        {
+            finalSoundQueue.AddSound("save/of", -1);
+
+            Toby_NumberToSoundQueue totalSlotsQueueBuilder = Toby_NumberToSoundQueue.Create();
+            finalSoundQueue.AddQueue(totalSlotsQueueBuilder.CreateQueueFromInt(currentState.saveGamesTotal));
+        }
+
+        if (currentState.isNewSlot)
+        {
+            finalSoundQueue.AddSound("save/new", -1);
+        }
+        else if (currentState.isAutosave)
+        {
+            finalSoundQueue.AddSound("save/autosave", -1);
+        }
+        else if (currentState.isQuicksave)
+        {
+            finalSoundQueue.AddSound("save/quicksave", -1);
+        }
+        else
+        {
+            Toby_StringToSoundQueue stringToSoundQueue = Toby_StringToSoundQueue.Create();
+            finalSoundQueue.AddQueue(stringToSoundQueue.CreateQueueFromText(currentState.saveLoadValue));
+        }
+        Toby_SoundQueueStaticHandler.AddQueue(finalSoundQueue);
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 }
