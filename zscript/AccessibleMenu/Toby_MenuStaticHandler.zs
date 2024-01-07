@@ -92,19 +92,4 @@ class Toby_MenuStaticHandler : StaticEventHandler
         lastKeyPressed = -1;
         currentMenuState.CopyValuesTo(previousMenuState);
     }
-
-    ui int KeyCharToMKey(int keyChar)
-    {
-        int mKey = -1;
-        if (keyChar == UiEvent.Key_Return) mKey = Menu.MKEY_Enter;
-        if (keyChar == UiEvent.Key_Escape) mKey = Menu.MKEY_Back;
-        if (keyChar == UiEvent.Key_Up) mKey = Menu.MKEY_Up;
-        if (keyChar == UiEvent.Key_Down) mKey = Menu.MKEY_Down;
-        if (keyChar == UiEvent.Key_Left) mKey = Menu.MKEY_Left;
-        if (keyChar == UiEvent.Key_Right) mKey = Menu.MKEY_Right;
-        if (keyChar == UiEvent.Key_PgUp) mKey = Menu.MKEY_PageUp;
-        if (keyChar == UiEvent.Key_PgDn) mKey = Menu.MKEY_PageDown;
-        if (keyChar == UiEvent.Key_Backspace) mKey = Menu.MKEY_Clear;
-        return mKey;
-    }
 }
