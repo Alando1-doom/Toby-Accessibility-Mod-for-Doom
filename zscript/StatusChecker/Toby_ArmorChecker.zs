@@ -20,13 +20,11 @@ class Toby_ArmorChecker
             }
         }
 
+        Toby_SoundQueueStaticHandler.AddSound(soundToPlay, -1);
         if (armor.Amount > 0)
         {
-            Toby_NumberToVoice.ConvertAndAddToQueue(armor.Amount);
-        }
-        Toby_SoundQueueStaticHandler.UnshiftSound(soundToPlay, -1);
-        if (armor.Amount > 0)
-        {
+            Toby_NumberToSoundQueue numberToSoundQueue = Toby_NumberToSoundQueue.Create();
+            Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(armor.Amount));
             Toby_SoundQueueStaticHandler.AddSound("stats/general/percent", -1);
         }
         Toby_SoundQueueStaticHandler.PlayQueue(0);
