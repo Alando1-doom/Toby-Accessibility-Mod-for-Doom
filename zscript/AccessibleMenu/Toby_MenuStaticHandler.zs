@@ -45,20 +45,38 @@ class Toby_MenuStaticHandler : StaticEventHandler
     {
         if (!isNotFirstRun)
         {
-            isNotFirstRun = true;
-            lastKeyPressed = -1;
-            currentMenuState = new("Toby_MenuState");
-            previousMenuState = new("Toby_MenuState");
-            currentMenuState.SetNullState();
-            previousMenuState.SetNullState();
-            menuSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MenuSoundBindings");
-            menuEventProcessor = new("Toby_MenuEventProcessor");
-            menuEventProcessor.Init(menuSoundBindingsContainer);
+            SetupAccessibleMenus();
         }
 
         Menu currentMenu = Menu.GetCurrentMenu();
         currentMenuState.UpdateMenuState(currentMenu, lastKeyPressed);
+
         int detectedChange = currentMenuState.DetectChanges(previousMenuState);
+        HandleUiProcessor(detectedChange);
+
+        if (detectedChange > 0)
+        {
+            menuEventProcessor.Process(currentMenuState, previousMenuState, detectedChange);
+        }
+        lastKeyPressed = -1;
+        currentMenuState.CopyValuesTo(previousMenuState);
+    }
+
+    ui void SetupAccessibleMenus()
+    {
+        isNotFirstRun = true;
+        lastKeyPressed = -1;
+        currentMenuState = new("Toby_MenuState");
+        previousMenuState = new("Toby_MenuState");
+        currentMenuState.SetNullState();
+        previousMenuState.SetNullState();
+        menuSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MenuSoundBindings");
+        menuEventProcessor = new("Toby_MenuEventProcessor");
+        menuEventProcessor.Init(menuSoundBindingsContainer);
+    }
+
+    ui void HandleUiProcessor(int detectedChange)
+    {
         if (detectedChange == Toby_MenuState.MenuDismissed
             || detectedChange == Toby_MenuState.GameSaved
             || detectedChange == Toby_MenuState.GameLoaded
@@ -85,11 +103,5 @@ class Toby_MenuStaticHandler : StaticEventHandler
             EventHandler.SendNetworkEvent("Toby_EnableUiProcessor");
             Toby_Logger.Message("SentNetworkEvent - Toby_EnableUiProcessor", "Toby_Developer");
         }
-        if (detectedChange > 0)
-        {
-            menuEventProcessor.Process(currentMenuState, previousMenuState, detectedChange);
-        }
-        lastKeyPressed = -1;
-        currentMenuState.CopyValuesTo(previousMenuState);
     }
 }
