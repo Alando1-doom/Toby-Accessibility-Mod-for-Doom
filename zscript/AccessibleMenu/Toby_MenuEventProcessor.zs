@@ -251,17 +251,18 @@ class Toby_MenuEventProcessor
             if (currentState.saveGameDate != "null")
             {
                 Toby_SaveGameDate dateTime = Toby_SaveGameUtils.getDate(currentState.saveGameDate);
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/seconds", -1);
-                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.seconds);
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/minutes", -1);
-                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.minutes);
-                Toby_SoundQueueStaticHandler.UnshiftSound("save/hours", -1);
-                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.hours);
-                Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
-                Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
-                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.year);
-                Toby_OrdinalToVoice.ConvertAndAddToQueue(dateTime.day);
-                Toby_MonthToVoice.ConvertAndUnshiftToQueue(dateTime.month);
+                Toby_MonthToSoundQueue monthToSoundQueueBuilder = Toby_MonthToSoundQueue.Create();
+                finalSoundQueue.AddQueue(monthToSoundQueueBuilder.CreateQueueFromMonthNumber(dateTime.month));
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateOrdinalQueueFromInt(dateTime.day));
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(dateTime.year));
+                finalSoundQueue.AddSound("alphabet/Space", -1);
+                finalSoundQueue.AddSound("alphabet/Space", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(dateTime.hours));
+                finalSoundQueue.AddSound("save/hours", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(dateTime.minutes));
+                finalSoundQueue.AddSound("save/minutes", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(dateTime.seconds));
+                finalSoundQueue.AddSound("save/seconds", -1);
             }
         }
         Toby_SoundQueueStaticHandler.AddQueue(finalSoundQueue);
