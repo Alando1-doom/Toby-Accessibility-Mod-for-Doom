@@ -28,6 +28,13 @@ class Toby_NumberToSoundQueue
         return soundQueue;
     }
 
+    Toby_SoundQueue CreateQueueFromFloatAsString(string numberAsString)
+    {
+        Reset();
+        AddStringNumberToQueue(numberAsString);
+        return soundQueue;
+    }
+
     private void AddStringNumberToQueue(string numberAsString)
     {
         int dotPlace = numberAsString.IndexOf(".", 0);

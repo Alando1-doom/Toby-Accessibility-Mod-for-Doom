@@ -17,7 +17,7 @@ class Toby_MenuEventProcessor
         //Basic save load handling
         else if (detectedChange == Toby_MenuState.SaveSlotChanged)
         {
-            ProcessSaveSlotChangedEvent(currentState);
+            HandleSaveSlotChangedEvent(currentState);
         }
         //Left and Right handling
         else if (detectedChange == Toby_MenuState.KeyPressed)
@@ -29,73 +29,7 @@ class Toby_MenuEventProcessor
             Toby_Logger.Message("Is saveLoad: "..currentState.isSaveLoad, "Toby_Developer_ControlType");
             if (currentState.lastKeyPressed == UiEvent.Key_Left || currentState.lastKeyPressed == UiEvent.Key_Right)
             {
-                Toby_SoundQueueStaticHandler.Clear();
-                if (currentState.isSlider)
-                {
-                    Toby_NumberToVoice.AddStringNumberToQueue(currentState.mItemOptionValue);
-                }
-                if (currentState.isField)
-                {
-                    Toby_StringToVoice.ConvertAndAddToQueueReverse(currentState.mItemOptionValue);
-                }
-                if (!currentState.isSlider && !currentState.isField
-                    && !currentState.isOption && !currentState.isControl)
-                {
-                    //Proydoha:
-                    //I can't remember why I've added this line but it is causing a bug
-                    //Commenting it for now
-                    //FindAndPlayDictionaryEntryForEvent(currentState, previousState, Toby_MenuState.OptionChanged);
-                }
-                if (currentState.isSaveLoad && currentState.saveGamesTotal > 0)
-                {
-                    if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Left)
-                    {
-                        if (currentState.saveGameDate != "null")
-                        {
-                            Toby_SaveGameTime time = Toby_SaveGameUtils.getTime(currentState.saveGameTime);
-                            Toby_SaveGameMap mapInfo = Toby_SaveGameUtils.getMapInfo(currentState.saveGameMap);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/seconds", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(time.seconds);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/minutes", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(time.minutes);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/hours", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(time.hours);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1); //Oops, pause is too short, remove if not needed
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/timespent", -1);
-                            if (mapInfo.isMap)
-                            {
-                                Toby_NumberToVoice.ConvertAndAddToQueue(mapInfo.mapNumber);
-                                Toby_SoundQueueStaticHandler.UnshiftSound("save/map", -1);
-                            }
-                            else if (mapInfo.isEpisodic)
-                            {
-                                Toby_NumberToVoice.ConvertAndAddToQueue(mapInfo.mapNumber);
-                                Toby_SoundQueueStaticHandler.UnshiftSound("save/map", -1);
-                                Toby_NumberToVoice.ConvertAndAddToQueue(mapInfo.episodeNumber);
-                                Toby_SoundQueueStaticHandler.UnshiftSound("save/episode", -1);
-                            }
-                        }
-                    }
-                    else if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Right)
-                    {
-                        if (currentState.saveGameDate != "null")
-                        {
-                            Toby_SaveGameDate dateTime = Toby_SaveGameUtils.getDate(currentState.saveGameDate);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/seconds", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.seconds);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/minutes", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.minutes);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("save/hours", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.hours);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
-                            Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
-                            Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.year);
-                            Toby_OrdinalToVoice.ConvertAndAddToQueue(dateTime.day);
-                            Toby_MonthToVoice.ConvertAndUnshiftToQueue(dateTime.month);
-                        }
-                    }
-                }
-                Toby_SoundQueueStaticHandler.PlayQueue(0);
+                HandleLeftRightKeyPress(currentState);
             }
         }
     }
@@ -206,7 +140,7 @@ class Toby_MenuEventProcessor
         return eventType;
     }
 
-    ui void ProcessSaveSlotChangedEvent(Toby_MenuState currentState)
+    ui void HandleSaveSlotChangedEvent(Toby_MenuState currentState)
     {
         Toby_SoundQueueStaticHandler.Clear();
 
@@ -243,8 +177,94 @@ class Toby_MenuEventProcessor
         }
         else
         {
-            Toby_StringToSoundQueue stringToSoundQueue = Toby_StringToSoundQueue.Create();
-            finalSoundQueue.AddQueue(stringToSoundQueue.CreateQueueFromText(currentState.saveLoadValue));
+            Toby_StringToSoundQueue stringQueueBuilder = Toby_StringToSoundQueue.Create();
+            finalSoundQueue.AddQueue(stringQueueBuilder.CreateQueueFromText(currentState.saveLoadValue));
+        }
+        Toby_SoundQueueStaticHandler.AddQueue(finalSoundQueue);
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui void HandleLeftRightKeyPress(Toby_MenuState currentState)
+    {
+        if (currentState.isSlider)
+        {
+            HandleLeftRightKeyPressForSlider(currentState);
+        }
+        if (currentState.isField)
+        {
+            HandleLeftRightKeyPressForField(currentState);
+        }
+        if (currentState.isSaveLoad && currentState.saveGamesTotal > 0)
+        {
+            HandleLeftRightKeyPressInSaveLoadMenu(currentState);
+        }
+    }
+
+    ui void HandleLeftRightKeyPressForSlider(Toby_MenuState currentState)
+    {
+        Toby_SoundQueueStaticHandler.Clear();
+        Toby_NumberToSoundQueue numberQueueBuilder = Toby_NumberToSoundQueue.Create();
+        Toby_SoundQueueStaticHandler.AddQueue(numberQueueBuilder.CreateQueueFromFloatAsString(currentState.mItemOptionValue));
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui void HandleLeftRightKeyPressForField(Toby_MenuState currentState)
+    {
+        Toby_SoundQueueStaticHandler.Clear();
+        Toby_StringToSoundQueue stringQueueBuilder = Toby_StringToSoundQueue.Create();
+        Toby_SoundQueueStaticHandler.AddQueue(stringQueueBuilder.CreateQueueFromText(currentState.mItemOptionValue));
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui void HandleLeftRightKeyPressInSaveLoadMenu(Toby_MenuState currentState)
+    {
+        Toby_SoundQueueStaticHandler.Clear();
+        Toby_SoundQueue finalSoundQueue = Toby_SoundQueue.Create();
+        Toby_NumberToSoundQueue numberQueueBuilder = Toby_NumberToSoundQueue.Create();
+        if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Left)
+        {
+            if (currentState.saveGameDate != "null")
+            {
+                Toby_SaveGameTime time = Toby_SaveGameUtils.getTime(currentState.saveGameTime);
+                Toby_SaveGameMap mapInfo = Toby_SaveGameUtils.getMapInfo(currentState.saveGameMap);
+
+                //Episode (if any) and map
+                if (mapInfo.isEpisodic)
+                {
+                    finalSoundQueue.AddSound("save/episode", -1);
+                    finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(mapInfo.episodeNumber));
+                }
+                finalSoundQueue.AddSound("save/map", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(mapInfo.mapNumber));
+
+                //Time spent
+                finalSoundQueue.AddSound("save/timespent", -1);
+                finalSoundQueue.AddSound("alphabet/Space", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(time.hours));
+                finalSoundQueue.AddSound("save/hours", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(time.minutes));
+                finalSoundQueue.AddSound("save/minutes", -1);
+                finalSoundQueue.AddQueue(numberQueueBuilder.CreateQueueFromInt(time.seconds));
+                finalSoundQueue.AddSound("save/seconds", -1);
+            }
+        }
+        else if (currentState.saveGameSlot >= 0 && !currentState.isNewSlot && currentState.lastKeyPressed == UiEvent.Key_Right)
+        {
+            if (currentState.saveGameDate != "null")
+            {
+                Toby_SaveGameDate dateTime = Toby_SaveGameUtils.getDate(currentState.saveGameDate);
+                Toby_SoundQueueStaticHandler.UnshiftSound("save/seconds", -1);
+                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.seconds);
+                Toby_SoundQueueStaticHandler.UnshiftSound("save/minutes", -1);
+                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.minutes);
+                Toby_SoundQueueStaticHandler.UnshiftSound("save/hours", -1);
+                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.hours);
+                Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
+                Toby_SoundQueueStaticHandler.UnshiftSound("alphabet/Space", -1);
+                Toby_NumberToVoice.ConvertAndAddToQueue(dateTime.year);
+                Toby_OrdinalToVoice.ConvertAndAddToQueue(dateTime.day);
+                Toby_MonthToVoice.ConvertAndUnshiftToQueue(dateTime.month);
+            }
         }
         Toby_SoundQueueStaticHandler.AddQueue(finalSoundQueue);
         Toby_SoundQueueStaticHandler.PlayQueue(0);
