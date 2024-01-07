@@ -16,6 +16,18 @@ class Toby_AmmoChecker
         Inventory ammoPrimary = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
         Inventory ammoSecondary = playerActor.FindInventory(currentWeaponSecondaryAmmoClass);
 
+        //Weapon name
+        for (int i = 0; i < weaponsSoundBindings.soundBindings.Size(); i++)
+        {
+            string className = weaponsSoundBindings.soundBindings[i].At("ActorClass");
+            if (player.ReadyWeapon.GetClassName() == className)
+            {
+                string soundName = weaponsSoundBindings.soundBindings[i].At("SoundToPlay");
+                Toby_SoundQueueStaticHandler.AddSound(soundName, -1);
+                break;
+            }
+        }
+
         Toby_NumberToSoundQueue numberToSoundQueue = Toby_NumberToSoundQueue.Create();
         if (ammoPrimary) {
             string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoPrimary.GetClassName(), ammoPrimary.amount);
@@ -27,17 +39,6 @@ class Toby_AmmoChecker
             string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoSecondary.GetClassName(), ammoSecondary.amount);
             Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(ammoSecondary.amount));
             Toby_SoundQueueStaticHandler.AddSound(soundToPlay, -1);
-        }
-
-        for (int i = 0; i < weaponsSoundBindings.soundBindings.Size(); i++)
-        {
-            string className = weaponsSoundBindings.soundBindings[i].At("ActorClass");
-            if (player.ReadyWeapon.GetClassName() == className)
-            {
-                string soundName = weaponsSoundBindings.soundBindings[i].At("SoundToPlay");
-                Toby_SoundQueueStaticHandler.UnshiftSound(soundName, -1);
-                break;
-            }
         }
 
         Toby_SoundQueueStaticHandler.PlayQueue(0);
