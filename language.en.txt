@@ -67,12 +67,12 @@ TOBY_MOD_OPTIONS = "Toby Accessibility Mod Options";
 TOBY_SNAP_TO_TARGET = "Snap to target keybind";
 TOBY_SNAP_TO_TARGET_SECTION = "Snap to target";
 
-TOBY_VIEWPORT_NARRATION_SECTION = "Viewport narration";
-TOBY_VIEWPORT_NARRATION_PRESET0 = "General overview narration keybind";
-TOBY_VIEWPORT_NARRATION_PRESET1 = "Directional (Left / Center / Right) narration keybind";
-TOBY_VIEWPORT_NARRATION_PRESET2 = "Distance (Close / Medium / Far) narration keybind";
-TOBY_VIEWPORT_NARRATION_PRESET3 = "Combined Directional and Distance narration keybind";
-TOBY_VIEWPORT_NARRATION_PRESET4 = "Height (Low / Same level / High) narration keybind";
-TOBY_VIEWPORT_NARRATION_PRESET5 = "Combined Directional and Height narration keybind";
+TOBY_VIEWPORT_NARRATION_SECTION = "Area scanner";
+TOBY_VIEWPORT_NARRATION_PRESET0 = "Area scanner - General overview";
+TOBY_VIEWPORT_NARRATION_PRESET1 = "Area scanner - Directional (Left / Center / Right)";
+TOBY_VIEWPORT_NARRATION_PRESET2 = "Area scanner - Distance (Close / Medium / Far)";
+TOBY_VIEWPORT_NARRATION_PRESET3 = "Area scanner - Combined Directional and Distance";
+TOBY_VIEWPORT_NARRATION_PRESET4 = "Area scanner - Height (Low / Same level / High)";
+TOBY_VIEWPORT_NARRATION_PRESET5 = "Area scanner - Combined Directional and Height";
 
 TOBY_DEVELOPER_MENU_TITLE = "Toby Developer Menu";
