@@ -1,6 +1,12 @@
 class Toby_TitleScreenHandler : EventHandler
 {
     string levelChecksum;
+    string titlemapChecksum;
+
+    override void OnRegister()
+    {
+        titlemapChecksum = "8596787f9daad2bf1a1b129f6d724619";
+    }
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -8,11 +14,21 @@ class Toby_TitleScreenHandler : EventHandler
         Toby_Logger.Message("Map name: "..level.mapName, "Toby_Developer_MapInformation");
         Toby_Logger.Message("Level name: "..level.levelName, "Toby_Developer_MapInformation");
         Toby_Logger.Message("Map checksum: "..levelChecksum, "Toby_Developer_MapInformation");
+
+        if (levelChecksum != titlemapChecksum) { return; }
+        console.printf(isUltimateDoom().."");
+        if (isUltimateDoom())
+        {
+            S_ChangeMusic("D_INTRO");
+        }
+        else
+        {
+            S_ChangeMusic("D_DM2TTL");
+        }
     }
 
     override void RenderOverlay(RenderEvent e)
     {
-        string titlemapChecksum = "8596787f9daad2bf1a1b129f6d724619";
         if (levelChecksum != titlemapChecksum) { return; }
         TextureId titlePic = TexMan.CheckForTexture("TITLEPIC");
         if (!titlepic.IsValid())
@@ -45,5 +61,41 @@ class Toby_TitleScreenHandler : EventHandler
         posX = (screenWidth - virtualWidth) / 2;
         posY = (screenHeight - virtualHeight) / 2;
         Screen.DrawTexture(titlePic, false, posX, posY, DTA_KeepRatio, false, DTA_DESTWIDTH, virtualWidth, DTA_DESTHEIGHT, virtualHeight);
+    }
+
+    //Based on this thread: https://forum.zdoom.org/viewtopic.php?p=1150314
+    //I have no idea how it works
+    bool isUltimateDoom()
+    {
+        if (
+            Wads.CheckNumForName("E1M1", 0) != -1 &&
+            Wads.CheckNumForName("E2M1", 0) != -1 &&
+            Wads.CheckNumForName("E2M2", 0) != -1 &&
+            Wads.CheckNumForName("E2M3", 0) != -1 &&
+            Wads.CheckNumForName("E2M4", 0) != -1 &&
+            Wads.CheckNumForName("E2M5", 0) != -1 &&
+            Wads.CheckNumForName("E2M6", 0) != -1 &&
+            Wads.CheckNumForName("E2M7", 0) != -1 &&
+            Wads.CheckNumForName("E2M8", 0) != -1 &&
+            Wads.CheckNumForName("E2M9", 0) != -1 &&
+            Wads.CheckNumForName("E3M1", 0) != -1 &&
+            Wads.CheckNumForName("E3M2", 0) != -1 &&
+            Wads.CheckNumForName("E3M3", 0) != -1 &&
+            Wads.CheckNumForName("E3M4", 0) != -1 &&
+            Wads.CheckNumForName("E3M5", 0) != -1 &&
+            Wads.CheckNumForName("E3M6", 0) != -1 &&
+            Wads.CheckNumForName("E3M7", 0) != -1 &&
+            Wads.CheckNumForName("E3M8", 0) != -1 &&
+            Wads.CheckNumForName("E3M9", 0) != -1 &&
+            Wads.CheckNumForName("DPHOOF", 0) != -1 &&
+            Wads.CheckNumForName("E4M2", 0) != -1
+        )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
