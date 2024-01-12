@@ -4,6 +4,14 @@ $compiledFolderName = "compiled-pk3"
 
 $currentFolder = Get-Item -LiteralPath ".\"
 $savePath = Join-Path $currentFolder $compiledFolderName
+
+if (-not (Test-Path -Path $savePath -PathType Container)) {
+    Write-Host "Creating ""$compiledFolderName"" folder..."
+    New-Item -ItemType Directory -Path $savePath -Force
+    Write-Host "Done!"
+    Write-Host ""
+}
+
 $finalSavePath = Join-Path $savePath $archiveName
 $pk3SavePath = Join-Path $savePath $pk3Name
 
