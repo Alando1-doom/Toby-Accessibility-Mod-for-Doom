@@ -121,6 +121,7 @@
 {"ActorClass":"TorchTree", "SoundToPlay":"toby/actorsinviewport/decorations/shorthelltree", "SoundToPlayPlural":"toby/actorsinviewport/decorations/shorthelltrees", "Article":"a"}
 {"ActorClass":"Candelabra", "SoundToPlay":"toby/actorsinviewport/decorations/candelabra", "SoundToPlayPlural":"toby/actorsinviewport/decorations/candelabras", "Article":"a"}
 {"ActorClass":"Candlestick", "SoundToPlay":"toby/actorsinviewport/decorations/candle", "SoundToPlayPlural":"toby/actorsinviewport/decorations/candles", "Article":"a"}
+{"ActorClass":"HeadCandles", "SoundToPlay":"toby/actorsinviewport/decorations/candleskullpile", "SoundToPlayPlural":"toby/actorsinviewport/decorations/candleskullpiles", "Article":"a"}
 {"ActorClass":"EvilEye", "SoundToPlay":"toby/actorsinviewport/decorations/evileye", "SoundToPlayPlural":"toby/actorsinviewport/decorations/evileyes", "Article":"a"}
 {"ActorClass":"FloatingSkull", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull", "SoundToPlayPlural":"toby/actorsinviewport/decorations/floatingskulls", "Article":"a"}
 {"ActorClass":"Stalagtite", "SoundToPlay":"toby/actorsinviewport/decorations/stalagmite", "SoundToPlayPlural":"toby/actorsinviewport/decorations/stalagmites", "Article":"a"}

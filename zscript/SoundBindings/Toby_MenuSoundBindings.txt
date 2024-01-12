@@ -197,8 +197,16 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Keys", "SoundToPlay":"menu/controls/keychecker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Health Stats", "SoundToPlay":"menu/controls/healthstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Ammo Stats", "SoundToPlay":"menu/controls/ammostat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Armor Stats", "SoundToPlay":"menu/controls/armorstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "SoundToPlay":"menu/controls/placemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET", "SoundToPlay":"menu/controls/snaptotarget"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET0", "SoundToPlay":"menu/controls/asgeneral"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET1", "SoundToPlay":"menu/controls/asdirection"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET2", "SoundToPlay":"menu/controls/asdistance"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET3", "SoundToPlay":"menu/controls/asdirdis"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET4", "SoundToPlay":"menu/controls/asheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
 
 
 //MOUSE MENU
@@ -302,6 +310,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOSEFRAG", "SoundToPlay":"menu/gameplay/losefrag"}
 {"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPFRAGS", "SoundToPlay":"menu/gameplay/keepfrag"}
 {"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOTEAMSWITCH", "SoundToPlay":"menu/gameplay/noteamswitch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DeathmatchOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOEXTRAAMMO", "SoundToPlay":"menu/gameplay/givextraammo"}
 //sub-menu COOP
 {"EventType":"MenuChanged",   "CurrentMenuName":"CoopOptions", "SoundToPlay":"menu/gameplay/title/coop"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_COOPERATIVE", "SoundToPlay":"menu/gameplay/title/coop"}
@@ -348,6 +357,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KILLBOSSSPAWNS", "SoundToPlay":"menu/gameplay/iconofsin"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOCOUNTENDMONSTER", "SoundToPlay":"menu/gameplay/endsector"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALWAYSSPAWNMULTI", "SoundToPlay":"menu/gameplay/multiplayobj"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOVERTSPREAD", "SoundToPlay":"menu/gameplay/vertbulletspread"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NEVERFRIENDS", "SoundToPlay":"menu/smartaim/nofriends"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ONLYMONSTERS", "SoundToPlay":"menu/smartaim/onlymons"}
 

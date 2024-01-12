@@ -411,6 +411,24 @@ menu/controls/healthstat            "sounds/Menus/TobyOptions/mhlstat.ogg"
 $volume menu/controls/healthstat    0.5
 menu/controls/ammostat              "sounds/Menus/TobyOptions/mamstat.ogg"
 $volume menu/controls/ammostat      0.5
+menu/controls/armorstat              "sounds/Menus/TobyOptions/marmstat.ogg"
+$volume menu/controls/armorstat      0.5
+
+menu/controls/snaptotarget		"sounds/Menus/TobyOptions/msnap.ogg"
+$volume menu/controls/snaptotarget      0.5
+
+menu/controls/asgeneral					"sounds/Menus/TobyOptions/mascangn.ogg"
+$volume menu/controls/asgeneral    0.5
+menu/controls/asdirection				"sounds/Menus/TobyOptions/mascandr.ogg"
+$volume menu/controls/asdirection    0.5
+menu/controls/asdistance				"sounds/Menus/TobyOptions/mascands.ogg"
+$volume menu/controls/asdistance   0.5
+menu/controls/asdirdis					"sounds/Menus/TobyOptions/mascandd.ogg"
+$volume menu/controls/asdirdis    0.5
+menu/controls/asheight					"sounds/Menus/TobyOptions/mascanht.ogg"
+$volume menu/controls/asheight    0.5
+menu/controls/asdirheight				"sounds/Menus/TobyOptions/mascandh.ogg"
+$volume menu/controls/asdirheight    0.5
 
 menu/controls/openmarkmenu          "sounds/Menus/TobyOptions/mmrkmen.ogg"
 $volume menu/controls/openmarkmenu  0.5
@@ -690,6 +708,8 @@ menu/gameplay/endsector             "sounds/Menus/GameplayOptions/mkilprct.ogg"
 $volume menu/gameplay/endsector     0.5
 menu/gameplay/multiplayobj          "sounds/Menus/GameplayOptions/malwmpob.ogg"
 $volume menu/gameplay/multiplayobj  0.5
+menu/gameplay/vertbulletspread          "sounds/Menus/GameplayOptions/malwvbul.ogg"
+$volume menu/gameplay/vertbulletspread  0.5
 
 
 //Deathmatch Settings Menu
@@ -722,6 +742,9 @@ menu/gameplay/keepfrag              "sounds/Menus/GameplayOptions/DeathmatchSett
 $volume menu/gameplay/keepfrag      0.5
 menu/gameplay/noteamswitch          "sounds/Menus/GameplayOptions/DeathmatchSettings/mteamswt.ogg"
 $volume menu/gameplay/noteamswitch  0.5
+menu/gameplay/givextraammo          "sounds/Menus/GameplayOptions/DeathmatchSettings/mwepammo.ogg"
+$volume menu/gameplay/givextraammo  0.5
+
 
 
 //Coop Settings Menu
