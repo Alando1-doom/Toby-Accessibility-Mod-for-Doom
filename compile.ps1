@@ -34,16 +34,16 @@ if (Test-Path $pk3SavePath) {
 Write-Host "Archiving..."
 Compress-Archive -Path $itemsToArchive.FullName -DestinationPath $finalSavePath -CompressionLevel 'NoCompression'
 Write-Host "Done!"
-
 Write-Host ""
+
 Write-Host "Renaming to .pk3..."
 Rename-Item -Path $finalSavePath -NewName $pk3Name
 Write-Host "Done!"
-
 Write-Host ""
+
 Write-Host ".pk3 file created at: "
 Write-Host $pk3SavePath
-
 Write-Host ""
+
 Write-Host "Press any key to close this powershell window..."
 $key = [System.Console]::ReadKey()
