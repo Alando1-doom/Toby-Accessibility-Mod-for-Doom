@@ -7,7 +7,7 @@ $savePath = Join-Path $currentFolder $compiledFolderName
 
 if (-not (Test-Path -Path $savePath -PathType Container)) {
     Write-Host "Creating ""$compiledFolderName"" folder..."
-    New-Item -ItemType Directory -Path $savePath -Force
+    New-Item -ItemType Directory -Path $savePath -Force | Out-Null
     Write-Host "Done!`n"
 }
 
