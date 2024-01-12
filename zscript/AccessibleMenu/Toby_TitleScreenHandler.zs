@@ -2,6 +2,24 @@ class Toby_TitleScreenHandler : EventHandler
 {
     string levelChecksum;
     string titlemapChecksum;
+    ui int menuTextureSwitchTimer;
+    ui int titlePicTime;
+    ui int creditPicTime;
+    ui bool showTitlePic;
+    ui bool isNotFirstRun;
+
+    override void UITick()
+    {
+        if (!isNotFirstRun)
+        {
+            isNotFirstRun = true;
+            showTitlePic = true;
+            titlePicTime = 15000 / 35;
+            creditPicTime = 20000 / 35;
+            menuTextureSwitchTimer = titlePicTime;
+        }
+        HandleMenuTextureTimers();
+    }
 
     override void OnRegister()
     {
@@ -31,13 +49,43 @@ class Toby_TitleScreenHandler : EventHandler
     {
         if (levelChecksum != titlemapChecksum) { return; }
         TextureId titlePic = TexMan.CheckForTexture("TITLEPIC");
+        TextureId creditPic = TexMan.CheckForTexture("CREDIT");
         if (!titlepic.IsValid())
         {
             titlePic = TexMan.CheckForTexture("TITLE");
         }
-        int titlePicWidth;
-        int titlePicHeight;
-        [titlePicWidth, titlePicHeight] = TexMan.GetSize(titlePic);
+        if (showTitlePic)
+        {
+            DrawMenuTexture(titlePic);
+        }
+        else
+        {
+            DrawMenuTexture(creditPic);
+        }
+    }
+
+    ui void HandleMenuTextureTimers()
+    {
+        menuTextureSwitchTimer--;
+        if (menuTextureSwitchTimer <= 0)
+        {
+            if (showTitlePic)
+            {
+                menuTextureSwitchTimer = creditPicTime;
+            }
+            else
+            {
+                menuTextureSwitchTimer = titlePicTime;
+            }
+            showTitlePic = !showTitlePic;
+        }
+    }
+
+    ui void DrawMenuTexture(TextureId texture)
+    {
+        int textureWidth;
+        int textureHeight;
+        [textureWidth, textureHeight] = TexMan.GetSize(texture);
         int screenWidth = Screen.GetWidth();
         int screenHeight = Screen.GetHeight();
         int posX = 0;
@@ -45,22 +93,22 @@ class Toby_TitleScreenHandler : EventHandler
         int virtualWidth;
         int virtualHeight;
         float ratio;
-        if (titlePicHeight < screenHeight)
+        if (textureHeight < screenHeight)
         {
             virtualHeight = screenHeight;
-            ratio = float(screenHeight) / float(titlePicHeight);
-            virtualWidth = titlePicWidth * ratio;
+            ratio = float(screenHeight) / float(textureHeight);
+            virtualWidth = textureWidth * ratio;
         }
         else
         {
             virtualWidth = screenWidth;
-            ratio = float(screenWidth) / float(titlePicWidth);
-            virtualHeight = titlePicHeight * ratio;
+            ratio = float(screenWidth) / float(textureWidth);
+            virtualHeight = textureHeight * ratio;
         }
 
         posX = (screenWidth - virtualWidth) / 2;
         posY = (screenHeight - virtualHeight) / 2;
-        Screen.DrawTexture(titlePic, false, posX, posY, DTA_KeepRatio, false, DTA_DESTWIDTH, virtualWidth, DTA_DESTHEIGHT, virtualHeight);
+        Screen.DrawTexture(texture, false, posX, posY, DTA_KeepRatio, false, DTA_DESTWIDTH, virtualWidth, DTA_DESTHEIGHT, virtualHeight);
     }
 
     //Based on this thread: https://forum.zdoom.org/viewtopic.php?p=1150314
