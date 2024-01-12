@@ -225,3 +225,18 @@
 {"ActorClass":"EvilEye_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/evileye", "SoundToPlayPlural":"toby/actorsinviewport/decorations/evileyes", "Article":"a"}
 {"ActorClass":"FloatingSkull_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull", "SoundToPlayPlural":"toby/actorsinviewport/decorations/floatingskulls", "Article":"a"}
 {"ActorClass":"HeartColumn_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/heartpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/heartpillars", "Article":"a"}
+
+//Environmental Objects
+{"ActorClass":"BasicDoorChecker", "SoundToPlay":"toby/actorsinviewport/env/door", "SoundToPlayPlural":"toby/actorsinviewport/env/doors", "Article":"a"}
+{"ActorClass":"BasicSwitchChecker", "SoundToPlay":"toby/actorsinviewport/env/switch", "SoundToPlayPlural":"toby/actorsinviewport/env/switches", "Article":"a"}
+{"ActorClass":"ExitBeacon1", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
+{"ActorClass":"TeleporterBeacon_Toby", "SoundToPlay":"toby/actorsinviewport/env/teleport", "SoundToPlayPlural":"toby/actorsinviewport/env/teleports", "Article":"a"}
+{"ActorClass":"RedKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/redlock", "SoundToPlayPlural":"toby/actorsinviewport/env/redlocks", "Article":"a"}
+{"ActorClass":"RedSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/redlock", "SoundToPlayPlural":"toby/actorsinviewport/env/redlocks", "Article":"a"}
+{"ActorClass":"BlueKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/bluelock", "SoundToPlayPlural":"toby/actorsinviewport/env/bluelocks", "Article":"a"}
+{"ActorClass":"BlueSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/bluelock", "SoundToPlayPlural":"toby/actorsinviewport/env/bluelocks", "Article":"a"}
+{"ActorClass":"YellowKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/yellowlock", "SoundToPlayPlural":"toby/actorsinviewport/env/yellowlocks", "Article":"a"}
+{"ActorClass":"YellowSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/yellowlock", "SoundToPlayPlural":"toby/actorsinviewport/env/yellowlocks", "Article":"a"}
+{"ActorClass":"3KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
+{"ActorClass":"6KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
+{"ActorClass":"AnyKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
