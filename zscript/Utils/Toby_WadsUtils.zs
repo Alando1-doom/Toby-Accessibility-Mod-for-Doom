@@ -17,6 +17,7 @@ class Toby_WadsUtils
 
             splitTokens.Clear();
             lumpFileNameWithExtension.Split(splitTokens, ".");
+            if (splitTokens.Size() == 0) { continue; }
             string lumpOnlyFileName = splitTokens[0];
             if (splitTokens.Size() > 1)
             {
