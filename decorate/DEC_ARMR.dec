@@ -7,7 +7,7 @@ Actor ArmorBonus_TO : BasicArmorBonus replaces ArmorBonus
 	Inventory.Pickupmessage "$GOTARMBONUS"
 	Inventory.PickupSound "armor/bonus"
 	Inventory.Icon "BON2A0"
-	Inventory.PickupFlash "ArmorBonus_ID"
+	Inventory.PickupFlash "ArmorBonus_ID2"
 	Armor.Savepercent 33.335
 	Armor.Saveamount 1
 	Armor.Maxsaveamount 200
@@ -74,6 +74,40 @@ actor ArmorBonus_ID
 		TNT1 A 8 A_PlaySoundEx("ann/armorbonus", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor ArmorBonus_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ArmorBonusAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ArmorBonusAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ArmorBonusAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/armorbonus", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 // Green armor --------------------------------------------------------------
@@ -151,7 +185,7 @@ ACTOR GreenArmor_Pickup : CustomInventory replaces GreenArmor
 	Height 16
 	Inventory.Pickupmessage "$GOTARMOR"
 	Inventory.PickupSound "armor/green"
-	Inventory.PickupFlash "Armor_ID"
+	Inventory.PickupFlash "Armor_ID2"
 States
 	{
 	Spawn:
@@ -177,9 +211,43 @@ States
 		TNT1 A 1 A_GiveInventory("GreenArmor_TO", 1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 1)
 		Fail
 	}
+}
+
+actor Armor_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ArmorAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ArmorAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ArmorAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/armor", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 // Blue armor ---------------------------------------------------------------
@@ -259,7 +327,7 @@ ACTOR BlueArmor_Pickup : CustomInventory replaces BlueArmor
 	Height 16
 	Inventory.Pickupmessage "$GOTMEGA"
 	Inventory.PickupSound "armor/blue"
-	Inventory.PickupFlash "Armor2_ID"
+	Inventory.PickupFlash "Armor2_ID2"
 States
 	{
 	Spawn:
@@ -277,9 +345,43 @@ States
 		TNT1 A 1 A_GiveInventory("BlueArmor_TO", 1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 1)
 		Fail
 	}
+}
+
+actor Armor2_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("Armor2Ann", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("Armor2Ann", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor Armor2Ann : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/armor2", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 //**********************************************************

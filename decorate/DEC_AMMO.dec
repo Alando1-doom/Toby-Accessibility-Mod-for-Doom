@@ -4,7 +4,7 @@ ACTOR Clip_Toby : CustomInventory replaces Clip
 {
 	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "Clip_ID"
+	Inventory.PickupFlash "Clip_ID2"
 States
 	{
 	Spawn:
@@ -24,7 +24,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -33,7 +33,7 @@ ACTOR Clip_Toby_Zombie : CustomInventory //Ammo dropped by Pistol Dude
 {
 	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "Clip_ID"
+	Inventory.PickupFlash "Clip_ID2"
 States
 	{
 	Spawn:
@@ -53,7 +53,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -104,13 +104,47 @@ actor Clip_ID
 	}
 }
 
+actor Clip_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ClipAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ClipAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ClipAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/clip", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}
+
 // Clip box ----------------------------------------------------------------
 
 ACTOR ClipBox_Toby : CustomInventory replaces ClipBox
 {
 	Inventory.PickupMessage "$GOTCLIPBOX"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "ClipBox_ID"
+	Inventory.PickupFlash "ClipBox_ID2"
 States
 	{
 	Spawn:
@@ -130,7 +164,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -179,6 +213,40 @@ actor ClipBox_ID
 		TNT1 A 8 A_PlaySoundEx("ann/ammo", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor ClipBox_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ClipBoxAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ClipBoxAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ClipBoxAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/ammo", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 ACTOR AmmoPickupChecker_Clip
@@ -311,7 +379,7 @@ ACTOR RocketAmmo_Toby : CustomInventory replaces RocketAmmo
 {
 	Inventory.PickupMessage "$GOTROCKET"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "Rocket_ID"
+	Inventory.PickupFlash "Rocket_ID2"
 States
 	{
 	Spawn:
@@ -331,7 +399,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -382,13 +450,47 @@ actor Rocket_ID
 	}
 }
 
+actor Rocket_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("RocketAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("RocketAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor RocketAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/rocket", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}
+
 // Rocket box --------------------------------------------------------------
 
 ACTOR RocketBox_Toby : CustomInventory replaces RocketBox
 {
 	Inventory.PickupMessage "$GOTROCKBOX"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "RocketBox_ID"
+	Inventory.PickupFlash "RocketBox_ID2"
 States
 	{
 	Spawn:
@@ -408,7 +510,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -457,6 +559,40 @@ actor RocketBox_ID
 		TNT1 A 8 A_PlaySoundEx("ann/rocketbox", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor RocketBox_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("RocketBoxAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("RocketBoxAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor RocketBoxAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/rocketbox", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 ACTOR AmmoPickupChecker_Rocket
@@ -589,7 +725,7 @@ ACTOR Cell_Toby : CustomInventory replaces Cell
 {
 	Inventory.PickupMessage "$GOTCELL"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "Cell_ID"
+	Inventory.PickupFlash "Cell_ID2"
 States
 	{
 	Spawn:
@@ -609,7 +745,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -660,13 +796,47 @@ actor Cell_ID
 	}
 }
 
+actor Cell_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("CellAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("CellAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor CellAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/cell", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}
+
 // Cell pack ---------------------------------------------------------------
 
 ACTOR CellPack_Toby : CustomInventory replaces CellPack
 {
 	Inventory.PickupMessage "$GOTCELLBOX"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "CellPack_ID"
+	Inventory.PickupFlash "CellPack_ID2"
 States
 	{
 	Spawn:
@@ -686,7 +856,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -735,6 +905,40 @@ actor CellPack_ID
 		TNT1 A 8 A_PlaySoundEx("ann/cellpack", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor CellPack_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("CellPackAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("CellPackAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor CellPackAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/cellpack", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 ACTOR AmmoPickupChecker_Cell
@@ -867,7 +1071,7 @@ ACTOR Shell_Toby : CustomInventory replaces Shell
 {
 	Inventory.PickupMessage "$GOTSHELLS"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "Shells_ID"
+	Inventory.PickupFlash "Shells_ID2"
 States
 	{
 	Spawn:
@@ -887,7 +1091,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -938,13 +1142,47 @@ actor Shells_ID
 	}
 }
 
+actor Shells_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ShellsAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ShellsAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ShellsAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/shells", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}
+
 // Shell box ---------------------------------------------------------------
 
 ACTOR ShellBox_Toby : CustomInventory replaces ShellBox
 {
 	Inventory.PickupMessage "$GOTSHELLBOX"
 	Inventory.PickupSound "misc/ammo_pkup"
-	Inventory.PickupFlash "ShellBox_ID"
+	Inventory.PickupFlash "ShellBox_ID2"
 States
 	{
 	Spawn:
@@ -964,7 +1202,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
@@ -1013,6 +1251,40 @@ actor ShellBox_ID
 		TNT1 A 8 A_PlaySoundEx("ann/shellbox", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor ShellBox_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("ShellBoxAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("ShellBoxAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor ShellBoxAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/shellbox", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 ACTOR AmmoPickupChecker_Shell
@@ -1144,7 +1416,7 @@ ACTOR AmmoPickupChecker_ShellBox
 ACTOR Backpack_TO : Backpack replaces Backpack
 {
 	Inventory.PickupSound "misc/bpack"
-	Inventory.PickupFlash "BPack_ID"
+	Inventory.PickupFlash "BPack_ID2"
 	States
 	{
 	Spawn:
@@ -1185,6 +1457,40 @@ actor BPack_ID
 		TNT1 A 8 A_PlaySoundEx("ann/backpack", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor BPack_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("BPackAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("BPackAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor BPackAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/backpack", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 ACTOR BPackPickupChecker
