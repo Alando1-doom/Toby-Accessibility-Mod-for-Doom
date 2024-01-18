@@ -6,7 +6,7 @@ ACTOR HealthBonus_TO : Health replaces HealthBonus
 	Inventory.MaxAmount 200
 	Inventory.PickupMessage "$GOTHTHBONUS"
 	Inventory.PickupSound "health/bonus"
-	Inventory.PickupFlash "HealthBonus_ID"
+	Inventory.PickupFlash "HealthBonus_ID2"
 	States
 	{
 	Spawn:
@@ -64,6 +64,40 @@ actor HealthBonus_ID
 		TNT1 A 8 A_PlaySoundEx("ann/healthbonus", "WeaponSlot7", 0, 2)
 		Stop
 	}
+}
+
+actor HealthBonus_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("HealthBonusAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("HealthBonusAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor HealthBonusAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/healthbonus", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 	
 // Stimpack -----------------------------------------------------------------
@@ -128,7 +162,7 @@ ACTOR Stimpack_Pickup : CustomInventory replaces Stimpack
 {
 	Inventory.PickupMessage "$GOTSTIM"
 	Inventory.PickupSound "health/stim"
-	Inventory.PickupFlash "Stimpack_ID"
+	Inventory.PickupFlash "Stimpack_ID2"
 States
 	{
 	Spawn:
@@ -142,9 +176,43 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
+}
+
+actor Stimpack_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("StimpackAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("StimpackAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor StimpackAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/stimpack", "WeaponSlot7", 0, -1)
+        Stop
+    }
 }
 
 // Medikit -----------------------------------------------------------------
@@ -211,7 +279,7 @@ ACTOR Medikit_Pickup : CustomInventory replaces Medikit
 {
 	Inventory.PickupMessage "$GOTMEDIKIT"
 	Inventory.PickupSound "health/medkit"
-	Inventory.PickupFlash "Medikit_ID"
+	Inventory.PickupFlash "Medikit_ID2"
 States
 	{
 	Spawn:
@@ -225,10 +293,46 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 2)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
 		Fail
 	}
 }
+
+actor Medikit_ID2
+{
+	Radius 11
+	Height 8
+	Speed 0
+    +CORPSE
+    +FLOORCLIP
+    +DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 8 A_RadiusGive("MedikitAnn", 128, RGF_PLAYERS, 1)
+		Goto Death
+	Death:
+		TNT1 A 8 A_RadiusGive("MedikitAnn", 128, RGF_PLAYERS, 1)
+		Stop
+	}
+}
+
+Actor MedikitAnn : CustomInventory
+{
+ inventory.pickupmessage ""
+ -COUNTITEM
+ States
+ {
+  Spawn: 
+       TNT1 A 1
+       Loop
+ Pickup:
+		TNT1 A 1 A_PlaySoundEx("ann/medikit", "WeaponSlot7", 0, -1)
+        Stop
+    }
+}
+
+//************************************************************************************
 
 ACTOR HealthPickupChecker
 {
