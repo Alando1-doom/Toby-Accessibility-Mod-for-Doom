@@ -58,7 +58,7 @@ ACTOR Pistol_TO : Weapon replaces Pistol
         Loop
     Fire:
         BERT B 2
-        BERF A 2 Bright A_FireBullets(3,1,1,6,"BulletPuff")
+        BERF A 2 Bright A_FireBullets(5, 0, 1, 5,"BulletPuff")
         BERT BFE 1
         BERT C 1
         BERT D 2
@@ -86,7 +86,7 @@ ACTOR Chainsaw_TO : Weapon replaces Chainsaw
     Weapon.UpSound "weapons/sawup"
     Weapon.ReadySound "weapons/sawidle"
     Inventory.PickupSound "weapons/chainsaw_pkup"
-    Inventory.PickupFlash "Chainsaw_ID2"
+    //Inventory.PickupFlash "Chainsaw_ID2"
     Weapon.SlotNumber 1
     Inventory.PickupMessage "$GOTCHAINSAW"
     Obituary "$OB_MPCHAINSAW"
@@ -111,25 +111,6 @@ ACTOR Chainsaw_TO : Weapon replaces Chainsaw
         CSAW A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         CSAW A 1
         Loop
-    }
-}
-
-actor Chainsaw_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/chainsaw", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/chainsaw", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -179,7 +160,7 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
     AttackSound "weapons/shotgf"
     Weapon.UpSound "weapons/shotup"
     Inventory.PickupSound "weapons/shotgun_pkup"
-    Inventory.PickupFlash "Shotgun_ID2"
+    //Inventory.PickupFlash "Shotgun_ID2"
     Inventory.PickupMessage "$GOTSHOTGUN"
     Obituary "$OB_MPSHOTGUN"
     Tag "$TAG_SHOTGUN"
@@ -198,7 +179,7 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
         Loop
     Fire:
         SHTG A 3 A_GunFlash
-        SHTG A 7 A_FireBullets(4,3,7,7,"BulletPuff")
+        SHTG A 7 A_FireBullets(4,3,8,5,"BulletPuff")
         SHTG BCDEFGHIJKLM 1
         SHTG LKJIHGFEDCB 1
         SHTG A 2
@@ -212,25 +193,6 @@ ACTOR Shotgun_TO : DoomWeapon Replaces Shotgun
         SHOT A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         SHOT A 1
         Loop
-    }
-}
-
-actor Shotgun_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/shotgun", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/shotgun", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -277,7 +239,7 @@ ACTOR SuperShotgun_TO : DoomWeapon Replaces SuperShotgun
     Weapon.AmmoGive 8
     Weapon.AmmoType "Shell"
     Weapon.UpSound "weapons/ssgup"
-    Inventory.PickupFlash "SSG_ID2"
+    //Inventory.PickupFlash "SSG_ID2"
     Inventory.PickupSound "weapons/ssg_pkup"
     Inventory.PickupMessage "$GOTSHOTGUN2"
     Obituary "$OB_MPSSHOTGUN"
@@ -321,25 +283,6 @@ ACTOR SuperShotgun_TO : DoomWeapon Replaces SuperShotgun
         SGN2 A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         SGN2 A 1
         Loop
-    }
-}
-
-actor SSG_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/ssg", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/ssg", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -388,7 +331,7 @@ ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
     Weapon.SlotNumber 4
     AttackSound "weapons/chaing"
     Weapon.UpSound "weapons/chaingunup"
-    Inventory.PickupFlash "Chaingun_ID2"
+    //Inventory.PickupFlash "Chaingun_ID2"
     Inventory.PickupSound "weapons/chaingun_pkup"
     Inventory.PickupMessage "$GOTCHAINGUN"
     Obituary "$OB_MPCHAINGUN"
@@ -407,9 +350,9 @@ ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
         Loop
     Fire:
         CHG1 A 0 A_GunFlash
-        CHG1 A 2 A_FireBullets (5,1,1,6,"BulletPuff")
+        CHG1 A 2 A_FireBullets (5,0,1,6,"BulletPuff")
         CHG1 B 2
-        CHG1 C 2 A_FireBullets (5,1,1,6,"BulletPuff")
+        CHG1 C 2 A_FireBullets (5,0,1,6,"BulletPuff")
         CHG1 D 2
         CHG1 D 0 A_ReFire
         CHG1 ABCDABCD 2 A_WeaponReady
@@ -424,25 +367,6 @@ ACTOR Chaingun_TO : DoomWeapon Replaces Chaingun
         MGUN A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         MGUN A 1
         Loop
-    }
-}
-
-actor Chaingun_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/chaingun", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/chaingun", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -490,7 +414,7 @@ ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
     Weapon.AmmoType "RocketAmmo"
     Weapon.UpSound "weapons/rocketup"
     Inventory.PickupSound "weapons/rocket_pkup"
-    Inventory.PickupFlash "RocketLauncher_ID2"
+    //Inventory.PickupFlash "RocketLauncher_ID2"
     Weapon.SlotNumber 5
     +WEAPON.NOAUTOFIRE
     Inventory.PickupMessage "$GOTLAUNCHER"
@@ -522,25 +446,6 @@ ACTOR RocketLauncher_TO : DoomWeapon Replaces RocketLauncher
         LAUN A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         LAUN A 1
         Loop
-    }
-}
-
-actor RocketLauncher_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/rlauncher", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/rlauncher", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -639,7 +544,7 @@ ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
     Weapon.AmmoGive 40
     Weapon.AmmoType "Cell"
     Weapon.UpSound "weapons/plasmaup"
-    Inventory.PickupFlash "Plasmagun_ID2"
+    //Inventory.PickupFlash "Plasmagun_ID2"
     Inventory.PickupSound "weapons/plasma_pkup"
     Weapon.SlotNumber 6
     Inventory.PickupMessage "$GOTPLASMA"
@@ -670,25 +575,6 @@ ACTOR PlasmaRifle_TO : DoomWeapon Replaces PlasmaRifle
         PLAS A 19 A_SpawnItemEx("WeaponPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         PLAS A 1
         Loop
-    }
-}
-
-actor Plasmagun_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/plasmagun", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/plasmagun", "WeaponSlot7", 0, 2)
-        Stop
     }
 }
 
@@ -765,7 +651,7 @@ ACTOR BFG9000_TO : DoomWeapon Replaces BFG9000
     Weapon.AmmoGive 40
     Weapon.AmmoType "Cell"
     Weapon.UpSound "weapons/bfgup"
-    Inventory.PickupFlash "BFG_ID2"
+    //Inventory.PickupFlash "BFG_ID2"
     Inventory.PickupSound "weapons/bfg_pkup"
     Weapon.SlotNumber 7
     +WEAPON.NOAUTOFIRE
@@ -827,25 +713,6 @@ ACTOR BFGBall_Toby replaces BFGBall
         BFE1 AB 8 Bright
         BFE1 C 8 Bright A_BFGSpray
         BFE1 DEF 8 Bright
-        Stop
-    }
-}
-
-actor BFG_ID
-{
-    Radius 11
-    Height 8
-    Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-    States
-    {
-    Spawn:
-        TNT1 A 8 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, 2)
-        Goto Death
-    Death:
-        TNT1 A 8 A_PlaySoundEx("ann/bfg", "WeaponSlot7", 0, 2)
         Stop
     }
 }

@@ -32,50 +32,6 @@ Actor ArmorBonus_TO : BasicArmorBonus replaces ArmorBonus
 	}
 }
 
-Actor ArmorBonus_TO_2 : BasicArmorBonus 
-{
-	Game Doom
-	SpawnID 22
-	Radius 20
-	Height 16
-	Inventory.Pickupmessage "$GOTARMBONUS"
-	Inventory.PickupSound "armor/bonus"
-	Inventory.Icon "BON2A0"
-	Inventory.PickupFlash "ArmorBonus_ID"
-	Armor.Savepercent 33.335
-	Armor.Saveamount 1
-	Armor.Maxsaveamount 200
-	+COUNTITEM
-	+INVENTORY.ALWAYSPICKUP
-	States
-	{
-	Spawn:
-		BON2 A 3 Bright A_SpawnItemEx("ArmorPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//BON2 A 0 Bright A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		BON2 BCDCB 3 Bright
-		loop
-	}
-}
-
-actor ArmorBonus_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/armorbonus", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/armorbonus", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
 actor ArmorBonus_ID2
 {
 	Radius 11
@@ -112,73 +68,6 @@ Actor ArmorBonusAnn : CustomInventory
 
 // Green armor --------------------------------------------------------------
 
-Actor GreenArmor_TO : BasicArmorPickup
-{
-	Radius 20
-	Height 16
-	Inventory.Pickupmessage "$GOTARMOR"
-	Inventory.PickupSound "armor/green"
-	Inventory.PickupFlash "Armor_ID"
-	Inventory.Icon "ARM1A0"
-	Armor.SavePercent 33.335
-	Armor.SaveAmount 100
-	States
-	{
-	Spawn:
-		ARM1 A 6 A_SpawnItemEx("ArmorPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		ARM1 A 0 A_SpawnItemEx("ArmorInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		ARM1 B 6 Bright
-		ARM1 A 6
-		ARM1 B 6 Bright
-		ARM1 A 6
-		ARM1 B 6 Bright
-		Loop
-	}
-}
-
-Actor GreenArmor_TO_2 : BasicArmorPickup 
-{
-	Radius 20
-	Height 16
-	Inventory.Pickupmessage "$GOTARMOR"
-	Inventory.PickupSound "armor/green"
-	Inventory.PickupFlash "Armor_ID"
-	Inventory.Icon "ARM1A0"
-	Armor.SavePercent 33.335
-	Armor.SaveAmount 100
-	States
-	{
-	Spawn:
-		ARM1 A 6 A_SpawnItemEx("ArmorPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//ARM1 A 0 A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		ARM1 B 7 bright
-		ARM1 A 6
-		ARM1 B 7 bright
-		loop
-	}
-}
-
-actor Armor_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/armor", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/armor", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
-//Alternate Green Armor
-
 ACTOR GreenArmor_Pickup : CustomInventory replaces GreenArmor
 {
 	Radius 20
@@ -211,7 +100,7 @@ States
 		TNT1 A 1 A_GiveInventory("GreenArmor_TO", 1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 1)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 0)
 		Fail
 	}
 }
@@ -252,75 +141,6 @@ Actor ArmorAnn : CustomInventory
 
 // Blue armor ---------------------------------------------------------------
 
-Actor BlueArmor_TO : BasicArmorPickup
-{
-	Radius 20
-	Height 16
-	Inventory.Pickupmessage "$GOTMEGA"
-	Inventory.PickupSound "armor/blue"
-	Inventory.PickupFlash "Armor2_ID"
-	Inventory.Icon "ARM2A0"
-	Armor.Savepercent 50
-	Armor.Saveamount 200
-	States
-	{
-	Spawn:
-		ARM2 A 6 A_SpawnItemEx("ArmorPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		ARM2 A 0 A_SpawnItemEx("ArmorInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		ARM2 B 6 Bright
-		ARM2 A 6
-		ARM2 B 6 Bright
-		ARM2 A 6
-		ARM2 B 6 Bright
-		Loop
-	}
-}
-
-Actor BlueArmor_TO_2 : BasicArmorPickup 
-{
-	Game Doom
-	SpawnID 69
-	Radius 20
-	Height 16
-	Inventory.Pickupmessage "$GOTMEGA"
-	Inventory.PickupSound "armor/blue"
-	Inventory.PickupFlash "Armor2_ID"
-	Inventory.Icon "ARM2A0"
-	Armor.Savepercent 50
-	Armor.Saveamount 200
-	States
-	{
-	Spawn:
-		ARM2 A 6 A_SpawnItemEx("ArmorPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//ARM2 A 0 A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		ARM2 B 6 bright
-		ARM2 A 6
-		ARM2 B 6 bright
-		loop
-	}
-}
-
-actor Armor2_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/armor2", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/armor2", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
-//Alternate Blue Armor
-
 ACTOR BlueArmor_Pickup : CustomInventory replaces BlueArmor
 {
 	Radius 20
@@ -345,7 +165,7 @@ States
 		TNT1 A 1 A_GiveInventory("BlueArmor_TO", 1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 1)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 0)
 		Fail
 	}
 }
@@ -631,7 +451,7 @@ ACTOR ArmorInventoryChecker
 		 TNT1 A 4
 		 Goto Death
 	ArmFull2:
-		 TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 2)
+		 TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 0)
 		 TNT1 A 1
          Goto Death
     Death: 

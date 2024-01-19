@@ -26,46 +26,6 @@ ACTOR HealthBonus_TO : Health replaces HealthBonus
 	}
 }
 
-ACTOR HealthBonus_TO_2 : Health 
-{
-	Game Doom
-	SpawnID 152
-	+COUNTITEM
-	+INVENTORY.ALWAYSPICKUP
-	Inventory.Amount 1
-	Inventory.MaxAmount 200
-	Inventory.PickupMessage "$GOTHTHBONUS"
-	Inventory.PickupSound "health/bonus"
-	Inventory.PickupFlash "HealthBonus_ID"
-	States
-	{
-	Spawn:
-		BON1 A 3 Bright A_SpawnItemEx("HealthPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//BON1 A 0 Bright A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		BON1 BCDCB 3 Bright
-		Loop
-	}
-}
-
-actor HealthBonus_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/healthbonus", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/healthbonus", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
 actor HealthBonus_ID2
 {
 	Radius 11
@@ -102,62 +62,6 @@ Actor HealthBonusAnn : CustomInventory
 	
 // Stimpack -----------------------------------------------------------------
 
-ACTOR Stimpack_TO : Health
-{
-	Inventory.Amount 10
-	Inventory.PickupMessage "$GOTSTIM"
-	Inventory.PickupSound "health/stim"
-	Inventory.PickupFlash "Stimpack_ID"
-	States
-	{
-	Spawn:
-		STIM A 1 A_SpawnItemEx("HealthPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		STIM A 0 A_SpawnItemEx("HealthInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		STIM A 30
-		STIM A 1
-		Loop
-	}
-}
-
-ACTOR Stimpack_TO_2 : Health
-{
-	Game Doom
-	SpawnID 23
-	Inventory.Amount 10
-	Inventory.PickupMessage "$GOTSTIM"
-	Inventory.PickupSound "health/stim"
-	Inventory.PickupFlash "Stimpack_ID"
-	States
-	{
-	Spawn:
-		STIM A 17 A_SpawnItemEx("HealthPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//STIM A 0 A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		STIM A 1
-		Loop
-	}
-}
-
-actor Stimpack_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/stimpack", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/stimpack", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
-//Alternate Stimpack
-
 ACTOR Stimpack_Pickup : CustomInventory replaces Stimpack
 {
 	Inventory.PickupMessage "$GOTSTIM"
@@ -176,7 +80,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
 		Fail
 	}
 }
@@ -217,64 +121,6 @@ Actor StimpackAnn : CustomInventory
 
 // Medikit -----------------------------------------------------------------
 
-ACTOR Medikit_TO : Health
-{
-	Inventory.Amount 25
-	Inventory.PickupMessage "$GOTMEDIKIT"
-	Health.LowMessage 25, "$GOTMEDINEED"
-	Inventory.PickupSound "health/medkit"
-	Inventory.PickupFlash "Medikit_ID"
-	States
-	{
-	Spawn:
-		MEDI A 1 A_SpawnItemEx("HealthPickupChecker_Medikit", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		MEDI A 0 A_SpawnItemEx("HealthInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		MEDI A 30
-		MEDI A 1
-		Loop
-	}
-}
-
-ACTOR Medikit_TO_2 : Health 
-{
-	Game Doom
-	SpawnID 24
-	Inventory.Amount 25
-	Inventory.PickupMessage "$GOTMEDIKIT"
-	Health.LowMessage 25, "$GOTMEDINEED"
-	Inventory.PickupSound "health/medkit"
-	Inventory.PickupFlash "Medikit_ID"
-	States
-	{
-	Spawn:
-		MEDI A 17 A_SpawnItemEx("HealthPickupChecker_V3-0", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		//MEDI A 0 A_SpawnItemEx("ProxyChecker", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		MEDI A 1
-		Loop
-	}
-}
-
-actor Medikit_ID
-{
-	Radius 11
-	Height 8
-	Speed 0
-    +CORPSE
-    +FLOORCLIP
-    +DONTSPLASH
-	States
-	{
-	Spawn:
-		TNT1 A 8 A_PlaySoundEx("ann/medikit", "WeaponSlot7", 0, 2)
-		Goto Death
-	Death:
-		TNT1 A 8 A_PlaySoundEx("ann/medikit", "WeaponSlot7", 0, 2)
-		Stop
-	}
-}
-
-//Alternate Medikit
-
 ACTOR Medikit_Pickup : CustomInventory replaces Medikit
 {
 	Inventory.PickupMessage "$GOTMEDIKIT"
@@ -293,7 +139,7 @@ States
 		Stop
 	NoPickup:
 		//TNT1 A 1 ACS_NamedExecuteWithResult("InventoryFullBeeper")
-		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 1)
+		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot6", 0, 0)
 		Fail
 	}
 }
