@@ -105,6 +105,30 @@ States
 	}
 }
 
+Actor GreenArmor_TO : BasicArmorPickup
+{
+	Radius 20
+	Height 16
+	Inventory.Pickupmessage "$GOTARMOR"
+	Inventory.PickupSound "armor/green"
+	//Inventory.PickupFlash "Armor_ID"
+	Inventory.Icon "ARM1A0"
+	Armor.SavePercent 33.335
+	Armor.SaveAmount 100
+	States
+	{
+	Spawn:
+		ARM1 A 6 A_SpawnItemEx("ArmorPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		ARM1 A 0 A_SpawnItemEx("ArmorInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		ARM1 B 6 Bright
+		ARM1 A 6
+		ARM1 B 6 Bright
+		ARM1 A 6
+		ARM1 B 6 Bright
+		Loop
+	}
+}
+
 actor Armor_ID2
 {
 	Radius 11
@@ -167,6 +191,30 @@ States
 	NoPickup:
 		TNT1 A 1 A_PlaySoundEx("stat/armor/full", "SoundSlot5", 0, 0)
 		Fail
+	}
+}
+
+Actor BlueArmor_TO : BasicArmorPickup
+{
+	Radius 20
+	Height 16
+	Inventory.Pickupmessage "$GOTMEGA"
+	Inventory.PickupSound "armor/blue"
+	//Inventory.PickupFlash "Armor2_ID"
+	Inventory.Icon "ARM2A0"
+	Armor.Savepercent 50
+	Armor.Saveamount 200
+	States
+	{
+	Spawn:
+		ARM2 A 6 A_SpawnItemEx("ArmorPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		ARM2 A 0 A_SpawnItemEx("ArmorInventoryChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		ARM2 B 6 Bright
+		ARM2 A 6
+		ARM2 B 6 Bright
+		ARM2 A 6
+		ARM2 B 6 Bright
+		Loop
 	}
 }
 
