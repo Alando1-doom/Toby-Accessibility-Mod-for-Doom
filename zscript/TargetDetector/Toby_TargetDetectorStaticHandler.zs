@@ -30,6 +30,7 @@ class Toby_TargetDetectorStaticHandler : StaticEventHandler
     {
         if (!handler) { return; }
         if (!handler.playerAimTargets[consoleplayer]) { return; }
+        if (gamestate != GS_LEVEL) { return; }
         targetDetector.Update(handler.playerAimTargets[consoleplayer].GetClassName());
     }
 }
