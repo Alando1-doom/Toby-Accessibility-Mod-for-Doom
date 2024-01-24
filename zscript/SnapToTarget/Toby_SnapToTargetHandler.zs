@@ -45,7 +45,8 @@ class Toby_SnapToTargetHandler : EventHandler
         FindVisiableShootableActors(playerActor, foundActors);
         Actor closestActor = FindClosestShootableActor(playerActor, foundActors, maxDistance);
         if (!closestActor) { return; }
-        playerActor.A_Face(closestActor);
+        double angleToTarget = playerActor.AngleTo(closestActor);
+        playerActor.A_SetAngle(angleToTarget, SPF_INTERPOLATE);
     }
 
     private Actor FindClosestShootableActor(Actor playerActor, Array<Actor> foundActors, float maxDistance)
