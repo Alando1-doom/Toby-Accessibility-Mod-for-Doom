@@ -403,6 +403,8 @@ menu/controls/compleft              "sounds/Menus/TobyOptions/mtrnlft.ogg"
 $volume menu/controls/compleft      0.5
 menu/controls/compright             "sounds/Menus/TobyOptions/mtrnrit.ogg"
 $volume menu/controls/compright     0.5
+menu/controls/quickturn             "sounds/Menus/CustomizeControls/QuickTurn.ogg"
+$volume menu/controls/quickturn     0.5
 
 menu/controls/togglegod              "sounds/Menus/TobyOptions/mtgglgod.ogg"
 $volume menu/controls/togglegod      0.5
