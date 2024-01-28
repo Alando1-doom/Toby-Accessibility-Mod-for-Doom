@@ -12,11 +12,12 @@ GameInfo
     AddEventHandlers = "Toby_TargetDetectorStaticHandler"
     AddEventHandlers = "Toby_TargetDetectorHandler"
     AddEventHandlers = "Toby_ActorsInViewportStaticHandler"
+    AddEventHandlers = "Toby_CompassEventHandler"
 }
 
 
 map TITLEMAP "Welcome to Toby Doom!"
 {
-	levelnum = 0
-	music = "D_DM2TTL"
+    levelnum = 0
+    music = "D_DM2TTL"
 }

@@ -16,6 +16,9 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_ArmorChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 
+//Compass
+#include "zscript/Compass/Toby_CompassEventHandler.zs"
+
 //Markers
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"

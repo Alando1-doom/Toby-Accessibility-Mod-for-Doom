@@ -194,7 +194,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Face North", "SoundToPlay":"menu/controls/facenorth"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Turn Left", "SoundToPlay":"menu/controls/compleft"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Turn Right", "SoundToPlay":"menu/controls/compright"}
-{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Quick Turn - 180 Degree Turn", "SoundToPlay":"menu/controls/quickturn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Quick Turn / 180 Degree Turn", "SoundToPlay":"compass/quickturn"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Keys", "SoundToPlay":"menu/controls/keychecker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Health Stats", "SoundToPlay":"menu/controls/healthstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Ammo Stats", "SoundToPlay":"menu/controls/ammostat"}
