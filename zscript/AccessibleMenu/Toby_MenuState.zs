@@ -70,18 +70,6 @@ class Toby_MenuState
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
     {
-        if (gameStatus != otherState.gameStatus)
-        {
-            Toby_Logger.Message("EventType : GameStateChanged", "Toby_Developer_MenuEvents");
-            Toby_Logger.Message("PreviousGameState: "..otherState.gameStatus.." -> CurrentGameState: "..gameStatus, "Toby_Developer_MenuEvents");
-            return GameStateChanged;
-        }
-        if (consoleStatus != otherState.consoleStatus)
-        {
-            Toby_Logger.Message("EventType : ConsoleStateChanged", "Toby_Developer_MenuEvents");
-            Toby_Logger.Message("PreviousConsoleState: "..otherState.consoleStatus.." -> CurrentConsoleState: "..consoleStatus, "Toby_Developer_MenuEvents");
-            return ConsoleStateChanged;
-        }
         if (menuClass == "null"
             && menuName == "null"
             && otherState.menuClass == "ListMenu"
@@ -113,6 +101,19 @@ class Toby_MenuState
         {
                 Toby_Logger.Message("EventType : MenuDismissed", "Toby_Developer_MenuEvents");
                 return MenuDismissed;
+        }
+
+        if (gameStatus != otherState.gameStatus)
+        {
+            Toby_Logger.Message("EventType : GameStateChanged", "Toby_Developer_MenuEvents");
+            Toby_Logger.Message("PreviousGameState: "..otherState.gameStatus.." -> CurrentGameState: "..gameStatus, "Toby_Developer_MenuEvents");
+            return GameStateChanged;
+        }
+        if (consoleStatus != otherState.consoleStatus)
+        {
+            Toby_Logger.Message("EventType : ConsoleStateChanged", "Toby_Developer_MenuEvents");
+            Toby_Logger.Message("PreviousConsoleState: "..otherState.consoleStatus.." -> CurrentConsoleState: "..consoleStatus, "Toby_Developer_MenuEvents");
+            return ConsoleStateChanged;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
