@@ -2,7 +2,9 @@
 
 {"EventType":"MenuDismissed", "SoundToPlay":"menusnd/dismiss"}
 
-
+//CONSOLE
+{"EventType":"ConsoleStateChanged", "PreviousConsoleState":"2", "CurrentConsoleState":"1", "SoundToPlay":"console/open"}
+{"EventType":"ConsoleStateChanged", "PreviousConsoleState":"3", "CurrentConsoleState":"0", "SoundToPlay":"console/close"}
 
 //MAIN MENU
 

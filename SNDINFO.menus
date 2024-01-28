@@ -9,6 +9,11 @@ $volume menusnd/yes     0.5
 menusnd/no              "sounds/Menus/Generic/ono.ogg"
 $volume menusnd/no      0.5
 
+//Console
+console/open            "sounds/Menus/Console/ConsoleOpen.ogg"
+console/close           "sounds/Menus/Console/ConsoleClosed.ogg"
+console/error           "sounds/Menus/Console/ConsoleError.ogg"
+
 //Main Menu
 menusnd/mainmenu        "sounds/Menus/MainMenu/dsmenu.ogg"
 menusnd/new             "sounds/Menus/MainMenu/dsnewg.ogg"
