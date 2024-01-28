@@ -404,6 +404,13 @@ $volume menu/controls/compleft      0.5
 menu/controls/compright             "sounds/Menus/TobyOptions/mtrnrit.ogg"
 $volume menu/controls/compright     0.5
 
+menu/controls/togglegod              "sounds/Menus/TobyOptions/mtgglgod.ogg"
+$volume menu/controls/togglegod      0.5
+menu/controls/idkfa              "sounds/Menus/TobyOptions/midkfa.ogg"
+$volume menu/controls/idkfa      0.5
+menu/controls/levelwarp              "sounds/Menus/TobyOptions/mmapwarp.ogg"
+$volume menu/controls/levelwarp      0.5
+
 menu/controls/keychecker            "sounds/Menus/TobyOptions/mkeychk.ogg"
 $volume menu/controls/keychecker    0.5
 
