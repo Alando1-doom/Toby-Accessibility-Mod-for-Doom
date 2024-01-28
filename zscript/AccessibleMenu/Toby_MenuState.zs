@@ -31,6 +31,7 @@ class Toby_MenuState
     ui int saveGameSlot;
 
     ui int consoleStatus;
+    ui int gameStatus;
 
     ui void CopyValuesTo(Toby_MenuState otherState)
     {
@@ -64,10 +65,17 @@ class Toby_MenuState
         otherState.saveGameSlot = saveGameSlot;
 
         otherState.consoleStatus = consoleStatus;
+        otherState.gameStatus = gameStatus;
     }
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
     {
+        if (gameStatus != otherState.gameStatus)
+        {
+            Toby_Logger.Message("EventType : GameStateChanged", "Toby_Developer_MenuEvents");
+            Toby_Logger.Message("PreviousGameState: "..otherState.gameStatus.." -> CurrentGameState: "..gameStatus, "Toby_Developer_MenuEvents");
+            return GameStateChanged;
+        }
         if (consoleStatus != otherState.consoleStatus)
         {
             Toby_Logger.Message("EventType : ConsoleStateChanged", "Toby_Developer_MenuEvents");
@@ -189,6 +197,7 @@ class Toby_MenuState
         saveGameSlot = -1;
 
         consoleStatus = 0;
+        gameStatus = GS_STARTUP;
 
         lastKeyPressed = -1;
         isSlider = false;
@@ -201,6 +210,7 @@ class Toby_MenuState
     {
         SetNullState();
 
+        gameStatus = gameState;
         consoleStatus = consoleState;
 
         if (m == null) { return; }
@@ -362,5 +372,6 @@ class Toby_MenuState
         GameLoaded = 8,
         GameSaved = 9,
         ConsoleStateChanged = 10,
+        GameStateChanged = 11,
     };
 }

@@ -102,6 +102,8 @@ class Toby_MenuEventProcessor
 
         menuStateAsDictionary.Insert("CurrentConsoleState", ""..currentState.consoleStatus);
         menuStateAsDictionary.Insert("PreviousConsoleState", ""..previousState.consoleStatus);
+        menuStateAsDictionary.Insert("CurrentGameState", ""..currentState.gameStatus);
+        menuStateAsDictionary.Insert("PreviousGameState", ""..previousState.gameStatus);
 
         //Not need to be exposed
         //menuStateAsDictionary.Insert("CurrentLastKeyPressed", ""..currentState.lastKeyPressed);
@@ -135,6 +137,8 @@ class Toby_MenuEventProcessor
                 eventType = "GameSaved"; break;
             case Toby_MenuState.ConsoleStateChanged:
                 eventType = "ConsoleStateChanged"; break;
+            case Toby_MenuState.GameStateChanged:
+                eventType = "GameStateChanged"; break;
         }
         if (eventType == "Unknown")
         {

@@ -3,6 +3,7 @@
 {"EventType":"MenuDismissed", "SoundToPlay":"menusnd/dismiss"}
 
 //CONSOLE
+{"EventType":"GameStateChanged", "CurrentGameState":"4", "SoundToPlay":"console/error"}
 {"EventType":"ConsoleStateChanged", "PreviousConsoleState":"2", "CurrentConsoleState":"1", "SoundToPlay":"console/open"}
 {"EventType":"ConsoleStateChanged", "PreviousConsoleState":"3", "CurrentConsoleState":"0", "SoundToPlay":"console/close"}
 
