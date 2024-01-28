@@ -1,9 +1,3 @@
-//Toby Player Class
-
-weaponsection compilation
-clearplayerclasses
-addplayerclass Player_TO
-
 //Toby Compass
 
 addkeysection "Compass Options" CompassMod
@@ -16,6 +10,11 @@ defaultbind E "pukename TurnCompass 1"
 addmenukey "Turn Right" "pukename TurnCompass 0"
 defaultbind R "pukename TurnCompass 0"
 
+
+//Special Movement
+addkeysection "Toby Special Movement" TobyMove
+alias turnaround "turn180; give 180Giver"
+addmenukey "Quick Turn / 180 Degree Turn" "turnaround"
 
 
 //Stat Checker - Health, Armor, Ammo, Keys
@@ -31,20 +30,17 @@ defaultbind K "netevent Toby_CheckKeys"
 
 
 //God Mode Hotkey
-
+addkeysection "Quick Cheats" TobyCheats
 alias godmode "iddqd; give GodModeGiver"
+addmenukey "Toggle God Mode" "godmode"
 defaultbind KP5 "godmode"
-
-
 //IDKFA Hotkey
-
 alias allstuff "give IDKFAGiver"
+addmenukey "Give All" "allstuff"
 defaultbind KP7 "allstuff"
-
-
 //Level Warp Hotkey
-
 alias levelwarp "give MapWarpSound; wait 52; changemap +"
+addmenukey "Change to Next Level" "levelwarp"
 defaultbind KP9 "levelwarp"
 
 

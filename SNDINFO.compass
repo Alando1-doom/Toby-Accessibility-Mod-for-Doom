@@ -1,0 +1,10 @@
+//COMPASS
+
+compass/north				"sounds/Compass/cmpnorth.ogg"
+compass/northeast		"sounds/Compass/cmpneast.ogg"
+compass/northwest		"sounds/Compass/cmpnwest.ogg"
+compass/south			"sounds/Compass/cmpsouth.ogg"
+compass/southeast		"sounds/Compass/cmpseast.ogg"
+compass/southwest		"sounds/Compass/cmpswest.ogg"
+compass/east				"sounds/Compass/cmpeast.ogg"
+compass/west				"sounds/Compass/cmpwest.ogg"

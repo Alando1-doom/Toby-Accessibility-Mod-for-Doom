@@ -69,3 +69,12 @@ toby/actorsinviewport/monsters/hangingcommanderkeens    "sounds/ActorsInViewport
 
 toby/actorsinviewport/monsters/marine     "sounds/ActorsInViewport/Monsters/Marine.ogg"
 toby/actorsinviewport/monsters/marines    "sounds/ActorsInViewport/Monsters/Marines.ogg"
+
+toby/actorsinviewport/monsters/cybruiser     "sounds/ActorsInViewport/Monsters/Cybruiser.ogg"
+toby/actorsinviewport/monsters/cybruisers    "sounds/ActorsInViewport/Monsters/Cybruisers.ogg"
+
+toby/actorsinviewport/monsters/icon     "sounds/ActorsInViewport/Monsters/IconOfSin.ogg"
+toby/actorsinviewport/monsters/icons    "sounds/ActorsInViewport/Monsters/IconsOfSin.ogg"
+
+toby/actorsinviewport/monsters/warlord     "sounds/ActorsInViewport/Monsters/Warlord.ogg"
+toby/actorsinviewport/monsters/warlords    "sounds/ActorsInViewport/Monsters/Warlords.ogg"

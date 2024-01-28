@@ -1,0 +1,10 @@
+$random          misc/walk     { walk/p1  walk/p2  walk/p3 }
+walk/p1                                               stwalk1
+walk/p2                                               stwalk2
+walk/p3                                               stwalk3
+
+//MISC
+player/wound		dswound
+player/healthalert	dshalert
+player/danger		dsheart
+barrel/tooclose		dsbrprox
