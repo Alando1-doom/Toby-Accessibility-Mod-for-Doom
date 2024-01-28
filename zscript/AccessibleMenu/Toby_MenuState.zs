@@ -260,13 +260,13 @@ class Toby_MenuState
                 {
                     savegame = mLoadSave.manager.GetSavegame(mLoadSave.Selected);
                 }
-				if (mLoadSave.Selected == -1)
-				{
-					saveLoadValue = "null";
-				}
-				else
-				{
-					saveLoadValue = savegame.SaveTitle;
+                if (mLoadSave.Selected == -1)
+                {
+                    saveLoadValue = "null";
+                }
+                else
+                {
+                    saveLoadValue = savegame.SaveTitle;
 
                     if (mLoadSave.Selected == 0 && saveLoadValue == "<New Save Game>")
                     {
@@ -280,14 +280,14 @@ class Toby_MenuState
                     {
                         isQuicksave = true;
                     }
-				}
+                }
                 //This is potentially volatile and may stop working after GZDoom updates
                 if (mLoadSave.BrokenSaveComment.Count() == 3)
-				{
+                {
                     saveGameDate = mLoadSave.BrokenSaveComment.StringAt(0);
                     saveGameMap = mLoadSave.BrokenSaveComment.StringAt(1);
                     saveGameTime = mLoadSave.BrokenSaveComment.StringAt(2);
-				}
+                }
             }
         }
         else if (mList)
