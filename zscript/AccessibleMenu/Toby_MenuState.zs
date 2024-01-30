@@ -30,6 +30,8 @@ class Toby_MenuState
     ui int saveGamesTotal;
     ui int saveGameSlot;
 
+    ui int consoleStatus;
+    ui int gameStatus;
 
     ui void CopyValuesTo(Toby_MenuState otherState)
     {
@@ -61,6 +63,9 @@ class Toby_MenuState
         otherState.saveGameTime = saveGameTime;
         otherState.saveGamesTotal = saveGamesTotal;
         otherState.saveGameSlot = saveGameSlot;
+
+        otherState.consoleStatus = consoleStatus;
+        otherState.gameStatus = gameStatus;
     }
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
@@ -96,6 +101,19 @@ class Toby_MenuState
         {
                 Toby_Logger.Message("EventType : MenuDismissed", "Toby_Developer_MenuEvents");
                 return MenuDismissed;
+        }
+
+        if (gameStatus != otherState.gameStatus)
+        {
+            Toby_Logger.Message("EventType : GameStateChanged", "Toby_Developer_MenuEvents");
+            Toby_Logger.Message("PreviousGameState: "..otherState.gameStatus.." -> CurrentGameState: "..gameStatus, "Toby_Developer_MenuEvents");
+            return GameStateChanged;
+        }
+        if (consoleStatus != otherState.consoleStatus)
+        {
+            Toby_Logger.Message("EventType : ConsoleStateChanged", "Toby_Developer_MenuEvents");
+            Toby_Logger.Message("PreviousConsoleState: "..otherState.consoleStatus.." -> CurrentConsoleState: "..consoleStatus, "Toby_Developer_MenuEvents");
+            return ConsoleStateChanged;
         }
 
         if (otherState.menuClass != menuClass || otherState.menuName != menuName)
@@ -179,6 +197,9 @@ class Toby_MenuState
         saveGamesTotal = -1;
         saveGameSlot = -1;
 
+        consoleStatus = 0;
+        gameStatus = GS_STARTUP;
+
         lastKeyPressed = -1;
         isSlider = false;
         isField = false;
@@ -189,6 +210,9 @@ class Toby_MenuState
     ui void UpdateMenuState(Menu m, int keyPressed)
     {
         SetNullState();
+
+        gameStatus = gameState;
+        consoleStatus = consoleState;
 
         if (m == null) { return; }
 
@@ -236,13 +260,13 @@ class Toby_MenuState
                 {
                     savegame = mLoadSave.manager.GetSavegame(mLoadSave.Selected);
                 }
-				if (mLoadSave.Selected == -1)
-				{
-					saveLoadValue = "null";
-				}
-				else
-				{
-					saveLoadValue = savegame.SaveTitle;
+                if (mLoadSave.Selected == -1)
+                {
+                    saveLoadValue = "null";
+                }
+                else
+                {
+                    saveLoadValue = savegame.SaveTitle;
 
                     if (mLoadSave.Selected == 0 && saveLoadValue == "<New Save Game>")
                     {
@@ -256,14 +280,14 @@ class Toby_MenuState
                     {
                         isQuicksave = true;
                     }
-				}
+                }
                 //This is potentially volatile and may stop working after GZDoom updates
                 if (mLoadSave.BrokenSaveComment.Count() == 3)
-				{
+                {
                     saveGameDate = mLoadSave.BrokenSaveComment.StringAt(0);
                     saveGameMap = mLoadSave.BrokenSaveComment.StringAt(1);
                     saveGameTime = mLoadSave.BrokenSaveComment.StringAt(2);
-				}
+                }
             }
         }
         else if (mList)
@@ -347,6 +371,8 @@ class Toby_MenuState
         SaveSlotChanged = 6,
         GameStarted = 7,
         GameLoaded = 8,
-        GameSaved = 9
+        GameSaved = 9,
+        ConsoleStateChanged = 10,
+        GameStateChanged = 11,
     };
 }
