@@ -12,9 +12,9 @@ defaultbind R "pukename TurnCompass 0"
 
 
 //Special Movement
-addkeysection "Toby Special Movement" TobyMove
-alias turnaround "turn180; give 180Giver"
-addmenukey "Quick Turn / 180 Degree Turn" "turnaround"
+//addkeysection "Toby Special Movement" TobyMove
+//alias turnaround "turn180; give 180Giver"
+//addmenukey "Quick Turn - 180 Degree Turn" "turnaround"
 
 
 //Stat Checker - Health, Armor, Ammo, Keys

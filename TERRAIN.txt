@@ -1,0 +1,166 @@
+// TERRAIN lump for Doom 2
+// edited by Daniel
+splash Water
+{
+	smallclass		WaterSplash
+	smallclip		12
+	smallsound		world/water
+
+	baseclass		WaterSplashBase
+	chunkclass		WaterSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift  8
+	chunkbasezvel	4
+	sound			world/water
+}
+
+splash Blood
+{
+	smallclass		BloodSplash
+	smallclip		12
+	smallsound		world/blood
+
+	baseclass		BloodSplashBase
+	chunkclass		BloodSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	4
+	sound			world/blood
+}
+
+splash Lava
+{
+	smallclass		LavaSmoke
+	smallclip		12
+	smallsound		world/lava
+
+	baseclass		LavaSplash
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lava
+}
+
+splash Slime
+{
+	smallclass		SludgeChunk
+	smallclip		12
+	smallsound		world/slime
+
+	baseclass		SludgeSplash
+	chunkclass		SludgeChunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slime
+}
+
+splash Nuke
+{
+	smallclass		SlimeSplash
+	smallclip		12
+	smallsound		world/slime
+
+	baseclass		SlimeSplash
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/nuke
+}
+
+splash Hot
+{
+	smallclass		LavaSmoke
+	smallclip		12
+	smallsound		world/lava
+
+	baseclass		SlimeChunk
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/hot
+}
+
+// Terrain definitions
+terrain Water
+{
+	splash			Water
+	footclip		6
+	liquid
+}
+
+terrain Lava
+{
+	splash			Lava
+	footclip		6
+	liquid
+}
+
+terrain Blood
+{
+	splash			Blood
+	footclip		6
+	liquid
+}
+
+terrain Slime
+{
+	splash			Slime
+	footclip		6
+	liquid
+}
+
+terrain Nuke
+{
+	splash			Nuke
+	footclip		6
+	liquid
+}
+
+terrain Hot
+{
+	splash			Hot
+	footclip		0
+	liquid
+}
+
+ifdoom
+// Doom 2 flats
+floor NUKAGE1 Nuke
+floor NUKAGE2 Nuke
+floor NUKAGE3 Nuke
+floor FWATER1 Water
+floor FWATER2 Water
+floor FWATER3 Water
+floor FWATER4 Water
+floor LAVA1 Lava
+floor LAVA2 Lava
+floor LAVA3 Lava
+floor LAVA4 Lava
+floor BLOOD1 Blood
+floor BLOOD2 Blood
+floor BLOOD3 Blood
+floor RROCK05 Hot
+floor RROCK06 Hot
+floor RROCK07 Hot
+floor RROCK08 Hot
+floor SLIME01 Slime
+floor SLIME02 Slime
+floor SLIME03 Slime
+floor SLIME04 Slime
+floor SLIME05 Slime
+floor SLIME06 Slime
+floor SLIME07 Slime
+floor SLIME08 Slime
+floor SLIME09 Hot
+floor SLIME10 Hot
+floor SLIME11 Hot
+floor SLIME12 Hot

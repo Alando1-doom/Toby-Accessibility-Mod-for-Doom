@@ -1,0 +1,86 @@
+Actor GodModeGiver : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 1 A_JumpIfInventory("GodToken", 1, "GodOff")
+		TNT1 A 1 A_GiveInventory("GodToken", 1)
+		TNT1 A 1 A_PlaySoundEx("cheat/godon", "Auto", 0, 0)
+		//TNT1 A 1 A_ChangeFlag("INVULNERABLE", 1)
+		TNT1 A 1 A_Print("God Mode Activated")
+		Fail
+	GodOff:
+		TNT1 A 1 A_TakeInventory("GodToken", 1)
+		TNT1 A 1 A_PlaySoundEx("cheat/godoff", "Auto", 0, 0)
+		//TNT1 A 1 A_ChangeFlag("INVULNERABLE", 0)
+		TNT1 A 1 A_Print("God Mode De-Activated")
+		Fail
+		}
+}
+
+ACTOR GodToken : Inventory { Inventory.MaxAmount 1 }
+
+
+Actor IDKFAGiver : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 1 A_PlaySoundEx("cheat/idkfa", "Auto", 0, 0)
+		TNT1 A 1 A_Print("All Weapons, Ammo, Keys, and Armor!")
+		TNT1 A 1 A_GiveInventory("Backpack_TO", 1)
+		TNT1 A 1 A_GiveInventory("Chainsaw_TO", 1)
+		TNT1 A 1 A_GiveInventory("Shotgun_TO", 1)
+		TNT1 A 1 A_GiveInventory("SuperShotgun_TO", 1)
+		TNT1 A 1 A_GiveInventory("Chaingun_TO", 1)
+		TNT1 A 1 A_GiveInventory("RocketLauncher_TO", 1)
+		TNT1 A 1 A_GiveInventory("PlasmaRifle_TO", 1)
+		TNT1 A 1 A_GiveInventory("BFG9000_TO", 1)
+		TNT1 A 1 A_GiveInventory("RedCard", 1)
+		TNT1 A 1 A_GiveInventory("RedSkull", 1)
+		TNT1 A 1 A_GiveInventory("BlueCard", 1)
+		TNT1 A 1 A_GiveInventory("BlueSkull", 1)
+		TNT1 A 1 A_GiveInventory("YellowCard", 1)
+		TNT1 A 1 A_GiveInventory("YellowSkull", 1)
+		TNT1 A 1 A_GiveInventory("Clip", 400)
+		TNT1 A 1 A_GiveInventory("Shell", 100)
+		TNT1 A 1 A_GiveInventory("RocketAmmo", 100)
+		TNT1 A 1 A_GiveInventory("Cell", 600)
+		TNT1 A 1 A_GiveInventory("BlueArmor_TO", 1)
+		Stop
+		}
+}
+
+
+Actor MapWarpSound : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 1 A_PlaySoundEx("cheat/levelwarp", "Auto", 0, 0)
+		TNT1 A 1 A_Print("Changing Level...")
+		Stop
+		}
+}
+
+Actor 180Giver : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 1 A_PlaySoundEx("misc/quickturn", "Auto", 0, 0)
+		Stop
+		}
+}
