@@ -78,3 +78,9 @@ version "4.6"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterLogicAnd.zs"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterLogicNot.zs"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterRemains.zs"
+
+//Quick turn sound
+#include "zscript/quickturn.zs"
+
+//Line Spawner
+#include "zscript/linespawner.zs"
