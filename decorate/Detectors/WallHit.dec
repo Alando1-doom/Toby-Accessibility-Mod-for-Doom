@@ -11,6 +11,7 @@ actor WallHit
     +NOTIMEFREEZE
     -NOGRAVITY
     +THRUGHOST
+	+BLOCKASPLAYER
     //+ActivatePCross
     SeeSound "null"
     DeathSound "misc/wallhit"

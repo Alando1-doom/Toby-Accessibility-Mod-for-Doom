@@ -35,7 +35,7 @@ alias godmode "iddqd; give GodModeGiver"
 addmenukey "Toggle God Mode" "godmode"
 defaultbind KP5 "godmode"
 //IDKFA Hotkey
-alias allstuff "give IDKFAGiver"
+alias allstuff "give all; give IDKFAGiver"
 addmenukey "Give All" "allstuff"
 defaultbind KP7 "allstuff"
 //Level Warp Hotkey
