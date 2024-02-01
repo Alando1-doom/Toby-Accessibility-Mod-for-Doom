@@ -34,25 +34,6 @@ Actor IDKFAGiver : CustomInventory
 	Pickup:
 		TNT1 A 1 A_PlaySoundEx("cheat/idkfa", "Auto", 0, 0)
 		TNT1 A 1 A_Print("All Weapons, Ammo, Keys, and Armor!")
-		TNT1 A 1 A_GiveInventory("Backpack_TO", 1)
-		TNT1 A 1 A_GiveInventory("Chainsaw_TO", 1)
-		TNT1 A 1 A_GiveInventory("Shotgun_TO", 1)
-		TNT1 A 1 A_GiveInventory("SuperShotgun_TO", 1)
-		TNT1 A 1 A_GiveInventory("Chaingun_TO", 1)
-		TNT1 A 1 A_GiveInventory("RocketLauncher_TO", 1)
-		TNT1 A 1 A_GiveInventory("PlasmaRifle_TO", 1)
-		TNT1 A 1 A_GiveInventory("BFG9000_TO", 1)
-		TNT1 A 1 A_GiveInventory("RedCard", 1)
-		TNT1 A 1 A_GiveInventory("RedSkull", 1)
-		TNT1 A 1 A_GiveInventory("BlueCard", 1)
-		TNT1 A 1 A_GiveInventory("BlueSkull", 1)
-		TNT1 A 1 A_GiveInventory("YellowCard", 1)
-		TNT1 A 1 A_GiveInventory("YellowSkull", 1)
-		TNT1 A 1 A_GiveInventory("Clip", 400)
-		TNT1 A 1 A_GiveInventory("Shell", 100)
-		TNT1 A 1 A_GiveInventory("RocketAmmo", 100)
-		TNT1 A 1 A_GiveInventory("Cell", 600)
-		TNT1 A 1 A_GiveInventory("BlueArmor_TO", 1)
 		Stop
 		}
 }
