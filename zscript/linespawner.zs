@@ -1,5 +1,3 @@
-Version "3.0"
-
 //This is an event handler which spawns sound making actors at exit lines
 //First Actor.Spawn spawns a normal sound actor for normal exits and end game exits
 //Second Actor.Spawn spawns a secret sound actor for secret exits
