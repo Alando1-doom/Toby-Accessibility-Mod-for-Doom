@@ -156,6 +156,11 @@
 {"ActorClass":"Revenant_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/revenant", "SoundToPlayPlural":"toby/actorsinviewport/monsters/revenants", "Article":"a"}
 {"ActorClass":"PainElemental_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/painelemental", "SoundToPlayPlural":"toby/actorsinviewport/monsters/painelementals", "Article":"a"}
 {"ActorClass":"Archvile_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/archvile", "SoundToPlayPlural":"toby/actorsinviewport/monsters/archviles", "Article":"an"}
+{"ActorClass":"Cybruiser", "SoundToPlay":"toby/actorsinviewport/monsters/cybruiser", "SoundToPlayPlural":"toby/actorsinviewport/monsters/cybruisers", "Article":"a"}
+{"ActorClass":"Warlord", "SoundToPlay":"toby/actorsinviewport/monsters/warlord", "SoundToPlayPlural":"toby/actorsinviewport/monsters/warlords", "Article":"a"}
+{"ActorClass":"BossBrain_Toby_Easy", "SoundToPlay":"toby/actorsinviewport/monsters/icon", "SoundToPlayPlural":"toby/actorsinviewport/monsters/icons", "Article":"an"}
+{"ActorClass":"BossBrain_Toby_Medium", "SoundToPlay":"toby/actorsinviewport/monsters/icon", "SoundToPlayPlural":"toby/actorsinviewport/monsters/icons", "Article":"an"}
+{"ActorClass":"BossBrain_Toby_Hard", "SoundToPlay":"toby/actorsinviewport/monsters/icon", "SoundToPlayPlural":"toby/actorsinviewport/monsters/icons", "Article":"an"}
 
 {"ActorClass":"Chainsaw_TO", "SoundToPlay":"toby/actorsinviewport/pickups/chainsaw", "SoundToPlayPlural":"toby/actorsinviewport/pickups/chainsaws", "Article":"a"}
 {"ActorClass":"Pistol_TO", "SoundToPlay":"toby/actorsinviewport/pickups/pistol", "SoundToPlayPlural":"toby/actorsinviewport/pickups/pistols", "Article":"a"}

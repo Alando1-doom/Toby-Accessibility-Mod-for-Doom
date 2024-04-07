@@ -12,11 +12,6 @@ GameInfo
     AddEventHandlers = "Toby_TargetDetectorStaticHandler"
     AddEventHandlers = "Toby_TargetDetectorHandler"
     AddEventHandlers = "Toby_ActorsInViewportStaticHandler"
-}
-
-
-map TITLEMAP "Welcome to Toby Doom!"
-{
-	levelnum = 0
-	music = "D_DM2TTL"
+	AddEventHandlers = "Toby_QuickTurnHandler"
+	AddEventHandlers = "TobyEventHandler" //Line Spawner
 }

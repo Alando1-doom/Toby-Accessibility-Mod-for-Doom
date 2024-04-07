@@ -100,6 +100,11 @@ class Toby_MenuEventProcessor
         menuStateAsDictionary.Insert("CurrentMenuItemOptionValueLocalized", currentState.mItemOptionValueLocalized);
         menuStateAsDictionary.Insert("PreviousMenuItemOptionValueLocalized", previousState.mItemOptionValueLocalized);
 
+        menuStateAsDictionary.Insert("CurrentConsoleState", ""..currentState.consoleStatus);
+        menuStateAsDictionary.Insert("PreviousConsoleState", ""..previousState.consoleStatus);
+        menuStateAsDictionary.Insert("CurrentGameState", ""..currentState.gameStatus);
+        menuStateAsDictionary.Insert("PreviousGameState", ""..previousState.gameStatus);
+
         //Not need to be exposed
         //menuStateAsDictionary.Insert("CurrentLastKeyPressed", ""..currentState.lastKeyPressed);
         //menuStateAsDictionary.Insert("PreviousLastKeyPressed", ""..previousState.lastKeyPressed);
@@ -130,6 +135,10 @@ class Toby_MenuEventProcessor
                 eventType = "GameLoaded"; break;
             case Toby_MenuState.GameSaved:
                 eventType = "GameSaved"; break;
+            case Toby_MenuState.ConsoleStateChanged:
+                eventType = "ConsoleStateChanged"; break;
+            case Toby_MenuState.GameStateChanged:
+                eventType = "GameStateChanged"; break;
         }
         if (eventType == "Unknown")
         {

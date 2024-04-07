@@ -25,28 +25,28 @@ marker/cleared      "sounds/Markers/dsmclear.ogg"
 
 //Interface
 
-marker/Markers/maxout       dsmaxout
-marker/Markers/undofail     dsnoundo
+marker/Markers/maxout       "sounds/Markers/dsmaxout.ogg"
+marker/Markers/undofail     "sounds/Markers/dsnoundo.ogg"
 
 //Map Marker Sounds
 
 $rolloff marker/beacon1     linear	96 640
-marker/beacon1              dsmark1
+marker/beacon1              "sounds/Markers/dsmark1.wav"
 $rolloff marker/beacon2     linear	96 640
-marker/beacon2              dsmark2
+marker/beacon2              "sounds/Markers/dsmark2.ogg"
 $rolloff marker/beacon3     linear	96 640
-marker/beacon3              dsmark3
+marker/beacon3              "sounds/Markers/dsmark3.ogg"
 $rolloff marker/beacon4     linear	96 640
-marker/beacon4              dsmark4
+marker/beacon4              "sounds/Markers/dsmark4.ogg"
 $rolloff marker/beacon5     linear	96 640
-marker/beacon5              dsmark5
+marker/beacon5              "sounds/Markers/dsmark5.wav"
 $rolloff marker/beacon6     linear	96 640
-marker/beacon6              dsmark6
+marker/beacon6              "sounds/Markers/dsmark6.ogg"
 $rolloff marker/beacon7     linear	96 640
-marker/beacon7              dsmark7
+marker/beacon7              "sounds/Markers/dsmark7.wav"
 $rolloff marker/beacon8     linear	96 640
-marker/beacon8              dsmark8
+marker/beacon8              "sounds/Markers/dsmark8.ogg"
 $rolloff marker/beacon9     linear	96 640
-marker/beacon9              dsmark9
+marker/beacon9              "sounds/Markers/dsmark9.ogg"
 $rolloff marker/beacon10    linear	96 640
-marker/beacon10             dsmark10
+marker/beacon10             "sounds/Markers/dsmark10.ogg"
