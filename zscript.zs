@@ -45,6 +45,8 @@ version "4.6"
 
 //Accessible menus
 #include "zscript/AccessibleMenu/Toby_MenuStaticHandler.zs"
+#include "zscript/AccessibleMenu/Toby_MenuOutputBySoundBindings.zs"
+#include "zscript/AccessibleMenu/Toby_MenuOutputToConsole.zs"
 #include "zscript/AccessibleMenu/Toby_TitleScreenHandler.zs"
 #include "zscript/AccessibleMenu/Toby_MenuState.zs"
 #include "zscript/AccessibleMenu/Toby_MenuEventProcessor.zs"
