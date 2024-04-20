@@ -4,6 +4,7 @@ class Toby_SoundBindingsLoaderStaticHandler : StaticEventHandler
 
     ui Toby_SoundBindingsContainer keysSoundBindingsContainer;
     ui Toby_SoundBindingsContainer weaponsSoundBindingsContainer;
+    ui Toby_SoundBindingsContainer itemsSoundBindingsContainer;
     ui Toby_SoundBindingsContainer ammoSoundBindingsContainer;
     ui Toby_SoundBindingsContainer armorSoundBindingsContainer;
     ui Toby_SoundBindingsContainer targetDetectorBindingsContainer;
@@ -28,6 +29,7 @@ class Toby_SoundBindingsLoaderStaticHandler : StaticEventHandler
             isNotFirstRun = true;
             keysSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_KeyNameSoundBindings");
             weaponsSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_WeaponNameSoundBindings");
+            itemsSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_ItemNameSoundBindings");
             ammoSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_AmmoNameSoundBindings");
             armorSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_ArmorNameSoundBindings");
             targetDetectorBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_TargetDetectorSoundBindings");
