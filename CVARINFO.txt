@@ -20,6 +20,8 @@ user bool   Toby_PlayMapNameAnnouncement = true;
 user bool   Toby_UseLegacyAmmoChecker = false;
 user bool   Toby_UseLegacyHealthChecker = false;
 
+user bool   Toby_SelectionNarrationWeapons = true;
+user bool   Toby_SelectionNarrationItems = true;
 
 //Hit Marker CVAR
 

@@ -19,6 +19,10 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_ArmorChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 
+//Weapon/item selection narration
+#include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
+#include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
+
 //Markers
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"

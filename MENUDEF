@@ -257,4 +257,8 @@ OptionMenu "toby_developer"
     Option "Toby_PlayMapNameAnnouncement", "Toby_PlayMapNameAnnouncement", "OnOff"
     Option "Toby_UseLegacyAmmoChecker", "Toby_UseLegacyAmmoChecker", "OnOff"
     Option "Toby_UseLegacyHealthChecker", "Toby_UseLegacyHealthChecker", "OnOff"
+    StaticText ""
+    StaticText "User accessible options", "Gold"
+    Option "Toby_SelectionNarrationWeapons", "Toby_SelectionNarrationWeapons", "OnOff"
+    Option "Toby_SelectionNarrationItems", "Toby_SelectionNarrationItems", "OnOff"
 }

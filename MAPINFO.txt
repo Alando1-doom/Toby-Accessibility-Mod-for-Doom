@@ -6,6 +6,7 @@ GameInfo
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_MapAnnouncementStaticHandler"
     AddEventHandlers = "Toby_PlayerStatusCheckStaticHandler"
+    AddEventHandlers = "Toby_SelectionNarrationHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
     AddEventHandlers = "hitmarkershandler"
     AddEventHandlers = "Toby_SnapToTargetHandler"
