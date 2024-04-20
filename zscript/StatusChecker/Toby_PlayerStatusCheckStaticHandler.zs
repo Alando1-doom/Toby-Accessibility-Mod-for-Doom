@@ -10,7 +10,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            bindings = Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
         }
     }
 

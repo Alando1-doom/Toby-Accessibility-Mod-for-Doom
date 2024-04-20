@@ -29,7 +29,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            bindings = Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
             for (int i = 0; i < maxPlayers; i++)
             {
                 checkingActorsInViewport.push(false);

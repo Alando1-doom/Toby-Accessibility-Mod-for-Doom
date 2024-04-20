@@ -18,7 +18,7 @@ class Toby_MapAnnouncementStaticHandler : StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            bindings = Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
             manager = Toby_MapAnnouncementManager.Create(bindings.mapNamesBindingsContainer);
         }
 

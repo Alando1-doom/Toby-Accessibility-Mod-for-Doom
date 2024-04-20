@@ -69,7 +69,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
         previousMenuState = new("Toby_MenuState");
         currentMenuState.SetNullState();
         previousMenuState.SetNullState();
-        bindings = Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+        bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
 
         menuEventProcessor = new("Toby_MenuEventProcessor");
         menuEventProcessor.Init(bindings.menuSoundBindingsContainer);

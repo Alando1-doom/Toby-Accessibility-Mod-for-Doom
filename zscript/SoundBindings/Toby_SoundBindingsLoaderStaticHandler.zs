@@ -11,6 +11,11 @@ class Toby_SoundBindingsLoaderStaticHandler : StaticEventHandler
     ui Toby_SoundBindingsContainer actorsInViewportSoundBindings;
     ui Toby_SoundBindingsContainer menuSoundBindingsContainer;
 
+    ui static Toby_SoundBindingsLoaderStaticHandler GetInstance()
+    {
+        return Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+    }
+
     override void OnRegister()
     {
         Toby_Logger.Message("Toby_SoundBindingsLoaderStaticHandler registered!", "Toby_Developer");
