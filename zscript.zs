@@ -8,6 +8,9 @@ version "4.6"
 #include "zscript/Utils/SoundQueue/Toby_NumberToSoundQueue.zs"
 #include "zscript/Utils/SoundQueue/Toby_MonthToSoundQueue.zs"
 
+//Sound bindings loader
+#include "zscript/SoundBindings/Toby_SoundBindingsLoaderStaticHandler.zs"
+
 //Player status checker
 #include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
 #include "zscript/StatusChecker/Toby_HealthChecker.zs"

@@ -7,8 +7,7 @@ class Toby_MenuStaticHandler : StaticEventHandler
     ui Toby_MenuState previousMenuState;
     ui Toby_MenuEventProcessor menuEventProcessor;
     ui bool isNotFirstRun;
-
-    ui Toby_SoundBindingsContainer menuSoundBindingsContainer;
+    ui Toby_SoundBindingsLoaderStaticHandler bindings;
 
     ui int lastKeyPressed;
 
@@ -70,9 +69,10 @@ class Toby_MenuStaticHandler : StaticEventHandler
         previousMenuState = new("Toby_MenuState");
         currentMenuState.SetNullState();
         previousMenuState.SetNullState();
-        menuSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MenuSoundBindings");
+        bindings = Toby_SoundBindingsLoaderStaticHandler(StaticEventHandler.Find("Toby_SoundBindingsLoaderStaticHandler"));
+
         menuEventProcessor = new("Toby_MenuEventProcessor");
-        menuEventProcessor.Init(menuSoundBindingsContainer);
+        menuEventProcessor.Init(bindings.menuSoundBindingsContainer);
     }
 
     ui void HandleUiProcessor(int detectedChange)
