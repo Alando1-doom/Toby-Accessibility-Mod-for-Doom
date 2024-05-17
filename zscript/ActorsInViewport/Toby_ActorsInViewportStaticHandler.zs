@@ -10,8 +10,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
     Array<Toby_ViewportProjector> projectors;
     ui Array<bool> checkingActorsInViewport;
     ui Array<int> narrationPresets;
-
-    ui Toby_SoundBindingsContainer actorsInViewportSoundBindings;
+    ui Toby_SoundBindingsLoaderStaticHandler bindings;
 
     override void OnRegister()
     {
@@ -30,7 +29,7 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            actorsInViewportSoundBindings = Toby_SoundBindingsContainer.Create("Toby_ActorsInViewportSoundBindings");
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
             for (int i = 0; i < maxPlayers; i++)
             {
                 checkingActorsInViewport.push(false);
@@ -126,27 +125,27 @@ class Toby_ActorsInViewportStaticHandler: StaticEventHandler
 
         if (narrationPresets[consoleplayer] == 0)
         {
-            Toby_ActorsInViewportPresets.PlayGeneralOverview(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayGeneralOverview(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
         if (narrationPresets[consoleplayer] == 1)
         {
-            Toby_ActorsInViewportPresets.PlayDetailedOverviewByScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByScreenPosition(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
         if (narrationPresets[consoleplayer] == 2)
         {
-            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistance(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistance(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
         if (narrationPresets[consoleplayer] == 3)
         {
-            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByDistanceAndScreenPosition(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
         if (narrationPresets[consoleplayer] == 4)
         {
-            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevel(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevel(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
         if (narrationPresets[consoleplayer] == 5)
         {
-            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevelAndScreenPosition(storages[consoleplayer], actorsInViewportSoundBindings);
+            Toby_ActorsInViewportPresets.PlayDetailedOverviewByLevelAndScreenPosition(storages[consoleplayer], bindings.actorsInViewportSoundBindings);
         }
 
         checkingActorsInViewport[consoleplayer] = false;

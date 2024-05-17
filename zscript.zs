@@ -8,6 +8,9 @@ version "4.6"
 #include "zscript/Utils/SoundQueue/Toby_NumberToSoundQueue.zs"
 #include "zscript/Utils/SoundQueue/Toby_MonthToSoundQueue.zs"
 
+//Sound bindings loader
+#include "zscript/SoundBindings/Toby_SoundBindingsLoaderStaticHandler.zs"
+
 //Player status checker
 #include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
 #include "zscript/StatusChecker/Toby_HealthChecker.zs"
@@ -15,6 +18,10 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_KeyChecker.zs"
 #include "zscript/StatusChecker/Toby_ArmorChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
+
+//Weapon/item selection narration
+#include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
+#include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
 
 //Markers
 #include "zscript/Markers/ZS_MarkerHandler.zs"

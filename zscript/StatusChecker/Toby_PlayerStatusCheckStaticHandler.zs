@@ -3,20 +3,14 @@
 class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
 {
     ui bool isNotFirstRun;
-    ui Toby_SoundBindingsContainer keysSoundBindingsContainer;
-    ui Toby_SoundBindingsContainer weaponsSoundBindingsContainer;
-    ui Toby_SoundBindingsContainer ammoSoundBindingsContainer;
-    ui Toby_SoundBindingsContainer armorSoundBindingsContainer;
+    ui Toby_SoundBindingsLoaderStaticHandler bindings;
 
     override void UITick()
     {
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            keysSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_KeyNameSoundBindings");
-            weaponsSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_WeaponNameSoundBindings");
-            ammoSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_AmmoNameSoundBindings");
-            armorSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_ArmorNameSoundBindings");
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
         }
     }
 
@@ -38,7 +32,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         }
         if (e.Name == "Toby_CheckArmorInterface")
         {
-            Toby_ArmorChecker.CheckArmor(player, armorSoundBindingsContainer);
+            Toby_ArmorChecker.CheckArmor(player, bindings.armorSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {
@@ -48,12 +42,12 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             }
             else
             {
-                Toby_AmmoChecker.CheckAmmo(player, weaponsSoundBindingsContainer, ammoSoundBindingsContainer);
+                Toby_AmmoChecker.CheckAmmo(player, bindings.weaponsSoundBindingsContainer, bindings.ammoSoundBindingsContainer);
             }
         }
         if (e.Name == "Toby_CheckKeysInterface")
         {
-            Toby_KeyChecker.CheckKeys(player, keysSoundBindingsContainer);
+            Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
         }
     }
 
