@@ -49,6 +49,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
         }
+        if (e.Name == "Toby_CheckCurrentItemInterface")
+        {
+            Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
+        }
     }
 
     //Is this stupid?
@@ -72,6 +76,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (e.Name == "Toby_CheckKeys")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckKeysInterface");
+        }
+        if (e.Name == "Toby_CheckCurrentItem")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckCurrentItemInterface");
         }
     }
 }
