@@ -27,6 +27,8 @@ addmenukey "Check Ammo Stats" "netevent Toby_CheckAmmo"
 defaultbind B "netevent Toby_CheckAmmo"
 addmenukey "Check Keys" "netevent Toby_CheckKeys"
 defaultbind K "netevent Toby_CheckKeys"
+addmenukey "Check current item" "netevent Toby_CheckCurrentItem"
+defaultbind I "netevent Toby_CheckCurrentItem"
 
 
 //God Mode Hotkey

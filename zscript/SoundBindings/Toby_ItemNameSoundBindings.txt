@@ -1,0 +1,2 @@
+//Expected format:
+//{"ActorClass":"<class name>", "SoundToPlay":"<SNDINFO definition>"}
