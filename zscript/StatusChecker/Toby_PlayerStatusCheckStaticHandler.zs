@@ -27,12 +27,26 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             }
             else
             {
-                Toby_HealthChecker.CheckHealth(player);
+                if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+                {
+                    Toby_HealthChecker.CheckHealthTextOnly(player);
+                }
+                else
+                {
+                    Toby_HealthChecker.CheckHealth(player);
+                }
             }
         }
         if (e.Name == "Toby_CheckArmorInterface")
         {
-            Toby_ArmorChecker.CheckArmor(player, bindings.armorSoundBindingsContainer);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_ArmorChecker.CheckArmorTextOnly(player);
+            }
+            else
+            {
+                Toby_ArmorChecker.CheckArmor(player, bindings.armorSoundBindingsContainer);
+            }
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {
