@@ -264,6 +264,6 @@ OptionMenu "toby_developer"
 OptionValue "Toby_NarrationOutputTypes"
 {
     0, "MrAlanD1"
-    1, "Text-to-speech"
+    // 1, "Text-to-speech"
     2, "Console output"
 }
