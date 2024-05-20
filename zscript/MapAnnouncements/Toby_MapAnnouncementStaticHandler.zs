@@ -1,7 +1,7 @@
 class Toby_MapAnnouncementStaticHandler : StaticEventHandler
 {
     ui Toby_MapAnnouncementManager manager;
-    ui Toby_SoundBindingsContainer mapNamesBindingsContainer;
+    ui Toby_SoundBindingsLoaderStaticHandler bindings;
     ui bool isNotFirstRun;
 
     bool isSaveGame;
@@ -18,8 +18,8 @@ class Toby_MapAnnouncementStaticHandler : StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-            mapNamesBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MapNameSoundBindings");
-            manager = Toby_MapAnnouncementManager.Create(mapNamesBindingsContainer);
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
+            manager = Toby_MapAnnouncementManager.Create(bindings.mapNamesBindingsContainer);
         }
 
         if (worldLoadedEvent)

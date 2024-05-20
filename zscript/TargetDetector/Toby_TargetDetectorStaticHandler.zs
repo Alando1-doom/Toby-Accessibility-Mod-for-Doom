@@ -1,8 +1,8 @@
 class Toby_TargetDetectorStaticHandler : StaticEventHandler
 {
-    private ui Toby_SoundBindingsContainer targetDetectorBindingsContainer;
     private ui Toby_TargetDetector targetDetector;
     private ui bool isNotFirstRun;
+    private ui Toby_SoundBindingsLoaderStaticHandler bindings;
     private Toby_TargetDetectorHandler handler;
 
     override void OnRegister()
@@ -15,9 +15,8 @@ class Toby_TargetDetectorStaticHandler : StaticEventHandler
         if (!isNotFirstRun)
         {
             isNotFirstRun = true;
-
-            targetDetectorBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_TargetDetectorSoundBindings");
-            targetDetector = Toby_TargetDetector.Create(targetDetectorBindingsContainer);
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
+            targetDetector = Toby_TargetDetector.Create(bindings.targetDetectorBindingsContainer);
         }
     }
 
