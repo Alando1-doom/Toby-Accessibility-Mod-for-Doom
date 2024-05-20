@@ -44,6 +44,34 @@ class Toby_AmmoChecker
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 
+    ui static void CheckAmmoTextOnly(PlayerInfo player)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+
+        Class<Ammo> currentWeaponPrimaryAmmoClass = player.ReadyWeapon.AmmoType1;
+        Class<Ammo> currentWeaponSecondaryAmmoClass = player.ReadyWeapon.AmmoType2;
+        Inventory ammoPrimary = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
+        Inventory ammoSecondary = playerActor.FindInventory(currentWeaponSecondaryAmmoClass);
+
+        string textToPrint = player.ReadyWeapon.GetTag();
+        if (ammoPrimary)
+        {
+            textToPrint = textToPrint .. " " .. ammoPrimary.amount .. " " .. ammoPrimary.GetTag();
+        }
+        if (ammoPrimary && ammoSecondary)
+        {
+            textToPrint = textToPrint .. ",";
+        }
+        if (ammoSecondary)
+        {
+            textToPrint = textToPrint .. " " .. ammoSecondary.amount .. " " .. ammoSecondary.GetTag();
+        }
+
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+    }
+
     ui static string GetAmmoSoundName(Toby_SoundBindingsContainer ammoSoundBindings, string classNameToFind, int amount)
     {
         string soundToPlay = "";

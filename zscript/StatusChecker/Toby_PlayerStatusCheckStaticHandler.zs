@@ -42,7 +42,14 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             }
             else
             {
-                Toby_AmmoChecker.CheckAmmo(player, bindings.weaponsSoundBindingsContainer, bindings.ammoSoundBindingsContainer);
+                if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+                {
+                    Toby_AmmoChecker.CheckAmmoTextOnly(player);
+                }
+                else
+                {
+                    Toby_AmmoChecker.CheckAmmo(player, bindings.weaponsSoundBindingsContainer, bindings.ammoSoundBindingsContainer);
+                }
             }
         }
         if (e.Name == "Toby_CheckKeysInterface")
