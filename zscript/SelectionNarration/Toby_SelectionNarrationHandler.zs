@@ -66,6 +66,8 @@ class Toby_SelectionNarrationHandler : EventHandler
         for (int i = 0; i < maxPlayers; i++)
         {
             if (!players[i].mo) { continue; }
+            if (!players[i].mo.player) { continue; }
+            if (!players[i].mo.player.ReadyWeapon) { continue; }
             string currentWeapon = players[i].mo.player.ReadyWeapon.GetClassName();
             if (currentWeapon == previousWeapon[i]) { continue; }
             if (previousWeapon[i] == "")
