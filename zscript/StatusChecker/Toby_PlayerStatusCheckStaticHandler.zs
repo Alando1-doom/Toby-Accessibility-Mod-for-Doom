@@ -19,6 +19,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         PlayerInfo player = players[consoleplayer];
         if (!player) { return; }
         if (!player.mo) { return; }
+        if (e.Name == "Toby_CheckCoordinatesInterface")
+        {
+            Toby_CoordinateChecker.CheckCoordinates(player);
+        }
         if (e.Name == "Toby_CheckHealthInterface")
         {
             if (CVar.FindCvar("Toby_UseLegacyHealthChecker").GetBool())
@@ -70,6 +74,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
         }
+        if (e.Name == "Toby_CheckCurrentItemInterface")
+        {
+            Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
+        }
     }
 
     //Is this stupid?
@@ -78,6 +86,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         PlayerInfo player = players[e.Player];
         if (!player) { return; }
         if (!player.mo) { return; }
+        if (e.Name == "Toby_CheckCoordinates")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckCoordinatesInterface");
+        }
         if (e.Name == "Toby_CheckHealth")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckHealthInterface");
@@ -93,6 +105,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (e.Name == "Toby_CheckKeys")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckKeysInterface");
+        }
+        if (e.Name == "Toby_CheckCurrentItem")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckCurrentItemInterface");
         }
     }
 }

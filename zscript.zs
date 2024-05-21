@@ -13,10 +13,12 @@ version "4.6"
 
 //Player status checker
 #include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
+#include "zscript/StatusChecker/Toby_CoordinateChecker.zs"
 #include "zscript/StatusChecker/Toby_HealthChecker.zs"
 #include "zscript/StatusChecker/Toby_AmmoChecker.zs"
 #include "zscript/StatusChecker/Toby_KeyChecker.zs"
 #include "zscript/StatusChecker/Toby_ArmorChecker.zs"
+#include "zscript/StatusChecker/Toby_CurrentItemChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 
 //Weapon/item selection narration

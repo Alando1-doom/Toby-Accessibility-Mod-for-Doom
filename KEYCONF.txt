@@ -20,6 +20,8 @@ defaultbind R "pukename TurnCompass 0"
 //Stat Checker - Health, Armor, Ammo, Keys
 
 addkeysection "Status Checker Options" CheckMod
+addmenukey "Check Coordinates" "netevent Toby_CheckCoordinates"
+defaultbind O "netevent Toby_CheckCoordinates"
 addmenukey "Check Health Stats" "netevent Toby_CheckHealth"
 addmenukey "Check Armor Stats" "netevent Toby_CheckArmor"
 defaultbind H "netevent Toby_CheckHealth"
@@ -27,6 +29,8 @@ addmenukey "Check Ammo Stats" "netevent Toby_CheckAmmo"
 defaultbind B "netevent Toby_CheckAmmo"
 addmenukey "Check Keys" "netevent Toby_CheckKeys"
 defaultbind K "netevent Toby_CheckKeys"
+addmenukey "Check current item" "netevent Toby_CheckCurrentItem"
+defaultbind I "netevent Toby_CheckCurrentItem"
 
 
 //God Mode Hotkey

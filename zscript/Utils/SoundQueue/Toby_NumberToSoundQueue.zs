@@ -80,7 +80,7 @@ class Toby_NumberToSoundQueue
         int power = 0;
         bool hasMinus = false;
         string numberAsString = ""..number;
-        if (numberAsString.Mid(1,1) == "-")
+        if (numberAsString.Mid(0,1) == "-")
         {
             numberAsString = numberAsString.Mid(1, numberAsString.Length() - 1);
             hasMinus = true;
