@@ -18,6 +18,13 @@ class Toby_SelectionNarrator
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 
+    ui static void NarrateWeaponNameTextOnly(string weaponName)
+    {
+        class<Actor> cls = weaponName;
+        string textToPrint = GetDefaultByType(cls).GetTag();
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+    }
+
     ui static void NarrateItemName(string itemName, int amount, Toby_SoundBindingsContainer itemsSoundBindings)
     {
         Toby_SoundQueueStaticHandler.Clear();
@@ -37,5 +44,12 @@ class Toby_SelectionNarrator
         Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(amount));
 
         Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui static void NarrateItemNameTextOnly(string itemName, int amount)
+    {
+        class<Actor> cls = itemName;
+        string textToPrint = GetDefaultByType(cls).GetTag() .. " " .. amount;
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
     }
 }
