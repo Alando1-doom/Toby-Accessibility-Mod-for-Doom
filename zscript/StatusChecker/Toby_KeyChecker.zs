@@ -24,4 +24,24 @@ class Toby_KeyChecker
         }
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
+
+    ui static void CheckKeysTextOnly(PlayerInfo player)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+
+        string textToPrint = "";
+        for (Inventory item = playerActor.inv; item; item = item.inv)
+        {
+            if (!(item is "Key")) { continue; }
+            textToPrint = textToPrint .. item.GetTag() .. " ";
+        }
+        if (textToPrint == "")
+        {
+            console.printf("[Toby Accessibility Mod] No keys");
+            return;
+        }
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+    }
 }

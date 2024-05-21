@@ -21,7 +21,14 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (!player.mo) { return; }
         if (e.Name == "Toby_CheckCoordinatesInterface")
         {
-            Toby_CoordinateChecker.CheckCoordinates(player);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_CoordinateChecker.CheckCoordinatesTextOnly(player);
+            }
+            else
+            {
+                Toby_CoordinateChecker.CheckCoordinates(player);
+            }
         }
         if (e.Name == "Toby_CheckHealthInterface")
         {
@@ -72,11 +79,25 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         }
         if (e.Name == "Toby_CheckKeysInterface")
         {
-            Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_KeyChecker.CheckKeysTextOnly(player);
+            }
+            else
+            {
+                Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
+            }
         }
         if (e.Name == "Toby_CheckCurrentItemInterface")
         {
-            Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_CurrentItemChecker.CheckCurrentItemTextOnly(player);
+            }
+            else
+            {
+                Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
+            }
         }
     }
 
