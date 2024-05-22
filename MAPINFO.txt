@@ -16,4 +16,5 @@ GameInfo
     AddEventHandlers = "Toby_ActorsInViewportStaticHandler"
     AddEventHandlers = "Toby_QuickTurnHandler"
     AddEventHandlers = "TobyEventHandler" //Line Spawner
+    AddEventHandlers = "Toby_UniversalPickupBeaconHandler"
 }

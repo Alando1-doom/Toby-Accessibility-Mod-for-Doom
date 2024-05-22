@@ -88,6 +88,10 @@ version "4.6"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterLogicNot.zs"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterRemains.zs"
 
+//Universal pickup beacon
+#include "zscript/UniversalPickupBeacon/Toby_UniversalPickupBeacon.zs"
+#include "zscript/UniversalPickupBeacon/Toby_UniversalPickupBeaconHandler.zs"
+
 //Quick turn sound
 #include "zscript/quickturn.zs"
 
