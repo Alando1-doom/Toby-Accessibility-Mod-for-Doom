@@ -2,7 +2,7 @@ class Toby_ClassIgnoreListContainer
 {
     Array<string> classNames;
 
-    static ui Toby_ClassIgnoreListContainer Create(string lumpName)
+    static Toby_ClassIgnoreListContainer Create(string lumpName)
     {
         Toby_ClassIgnoreListContainer container = new("Toby_ClassIgnoreListContainer");
         Array<String> splitTokens;
@@ -30,7 +30,9 @@ class Toby_ClassIgnoreListContainer
                 }
                 if (!sameClassNameFound)
                 {
-                    container.classNames.push(splitTokens[i]);
+                    string strippedValue = ""..splitTokens[i];
+                    strippedValue.StripRight();
+                    container.classNames.push(strippedValue);
                 }
             }
             Toby_Logger.Message("Classes added to ignore list: "..container.classNames.Size(), "Toby_Developer");
