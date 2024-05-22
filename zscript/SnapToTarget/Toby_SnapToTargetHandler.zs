@@ -42,7 +42,7 @@ class Toby_SnapToTargetHandler : EventHandler
     private void SnapToNearestShootableActor(Actor playerActor)
     {
         Array<Actor> foundActors;
-        FindVisiableShootableActors(playerActor, foundActors);
+        FindVisibleShootableActors(playerActor, foundActors);
         Actor closestActor = FindClosestShootableActor(playerActor, foundActors, maxDistance);
         if (!closestActor) { return; }
         double angleToTarget = playerActor.AngleTo(closestActor);
@@ -66,7 +66,7 @@ class Toby_SnapToTargetHandler : EventHandler
         return closestActor;
     }
 
-    private void FindVisiableShootableActors(Actor playerActor, Array<Actor> foundActors)
+    private void FindVisibleShootableActors(Actor playerActor, Array<Actor> foundActors)
     {
         ThinkerIterator actorFinder = ThinkerIterator.Create("Actor");
         Actor foundActor;
