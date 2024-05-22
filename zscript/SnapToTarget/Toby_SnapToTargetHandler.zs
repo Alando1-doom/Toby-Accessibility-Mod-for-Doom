@@ -1,8 +1,14 @@
 class Toby_SnapToTargetHandler : EventHandler
 {
+    Toby_ClassIgnoreListLoaderStaticHandler classIgnoreListLoader;
     Array<bool> playerSnappingToTarget;
     int maxPlayers;
     float maxDistance;
+
+    override void OnRegister()
+    {
+        classIgnoreListLoader = Toby_ClassIgnoreListLoaderStaticHandler.GetInstance();
+    }
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -76,6 +82,7 @@ class Toby_SnapToTargetHandler : EventHandler
             if (!foundActor.bShootable) { continue; }
             if (foundActor == playerActor) { continue; }
             if (!playerActor.IsVisible(foundActor, false)) { continue; }
+            if (classIgnoreListLoader.IsInIgnoreList(foundActor, classIgnoreListLoader.snapToTargetIgnoreList)) { continue; }
 
             foundActors.push(foundActor);
         }
