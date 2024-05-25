@@ -11,6 +11,9 @@ version "4.6"
 //Sound bindings loader
 #include "zscript/SoundBindings/Toby_SoundBindingsLoaderStaticHandler.zs"
 
+//Class ignore lists loader
+#include "zscript/IgnoreLists/Toby_ClassIgnoreListLoaderStaticHandler.zs"
+
 //Player status checker
 #include "zscript/StatusChecker/Toby_PlayerStatusCondition.zs"
 #include "zscript/StatusChecker/Toby_CoordinateChecker.zs"
@@ -60,6 +63,7 @@ version "4.6"
 
 //Utils
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
+#include "zscript/Utils/Toby_ClassIgnoreListContainer.zs"
 #include "zscript/Utils/Toby_WadsUtils.zs"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
@@ -87,6 +91,10 @@ version "4.6"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterLogicAnd.zs"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterLogicNot.zs"
 #include "zscript/ActorsInViewport/Filters/Toby_ActorFilterRemains.zs"
+
+//Universal pickup beacon
+#include "zscript/UniversalPickupBeacon/Toby_UniversalPickupBeacon.zs"
+#include "zscript/UniversalPickupBeacon/Toby_UniversalPickupBeaconHandler.zs"
 
 //Quick turn sound
 #include "zscript/quickturn.zs"
