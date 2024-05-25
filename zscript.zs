@@ -57,6 +57,8 @@ version "4.6"
 
 //Accessible menus
 #include "zscript/AccessibleMenu/Toby_MenuStaticHandler.zs"
+#include "zscript/AccessibleMenu/Toby_MenuOutputBySoundBindings.zs"
+#include "zscript/AccessibleMenu/Toby_MenuOutputToConsole.zs"
 #include "zscript/AccessibleMenu/Toby_TitleScreenHandler.zs"
 #include "zscript/AccessibleMenu/Toby_MenuState.zs"
 #include "zscript/AccessibleMenu/Toby_MenuEventProcessor.zs"
@@ -67,6 +69,7 @@ version "4.6"
 #include "zscript/Utils/Toby_WadsUtils.zs"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
+#include "zscript/Utils/Toby_Enums.zs"
 
 //libeye
 #include "zscript/libeye/Toby_projector gl.zs"

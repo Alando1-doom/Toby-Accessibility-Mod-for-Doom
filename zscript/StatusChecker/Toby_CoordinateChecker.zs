@@ -16,4 +16,14 @@ class Toby_CoordinateChecker
         Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(playerActor.pos.z));
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
+
+    ui static void CheckCoordinatesTextOnly(PlayerInfo player)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+
+        string textToPrint = "X " .. int(playerActor.pos.x) .. " Y " .. int(playerActor.pos.y) .. " Z " .. int(playerActor.pos.z);
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+    }
 }

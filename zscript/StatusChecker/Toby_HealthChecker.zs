@@ -34,4 +34,14 @@ class Toby_HealthChecker
         Toby_SoundQueueStaticHandler.AddSound("stats/general/percent", -1);
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
+
+    ui static void CheckHealthTextOnly(PlayerInfo player)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+
+        string textToPrint = "Health " .. playerActor.health .. "%";
+        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+    }
 }

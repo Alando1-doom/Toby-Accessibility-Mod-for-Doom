@@ -52,12 +52,26 @@ class Toby_SelectionNarrationHandler : EventHandler
 
         if (event == "Toby_SelectionNarrationWeapon")
         {
-            Toby_SelectionNarrator.NarrateWeaponName(args[0], bindings.weaponsSoundBindingsContainer);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_SelectionNarrator.NarrateWeaponNameTextOnly(args[0]);
+            }
+            else
+            {
+                Toby_SelectionNarrator.NarrateWeaponName(args[0], bindings.weaponsSoundBindingsContainer);
+            }
         }
 
         if (event == "Toby_SelectionNarrationItem")
         {
-            Toby_SelectionNarrator.NarrateItemName(args[0], args[1].ToInt(), bindings.itemsSoundBindingsContainer);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_SelectionNarrator.NarrateItemNameTextOnly(args[0], args[1].ToInt());
+            }
+            else
+            {
+                Toby_SelectionNarrator.NarrateItemName(args[0], args[1].ToInt(), bindings.itemsSoundBindingsContainer);
+            }
         }
     }
 

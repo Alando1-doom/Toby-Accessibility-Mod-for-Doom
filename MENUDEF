@@ -238,6 +238,8 @@ OptionMenu "toby_developer"
     StaticText "Developer CVARs", "Gold"
     Option "Toby_Developer", "Toby_Developer", "OnOff"
     StaticText ""
+    Option "Toby_NarrationOutputType", "Toby_NarrationOutputType", "Toby_NarrationOutputTypes"
+    StaticText ""
     Option "Toby_Developer_MenuEvents", "Toby_Developer_MenuEvents", "OnOff"
     Option "Toby_Developer_ControlType", "Toby_Developer_ControlType", "OnOff"
     Option "Toby_Developer_MenuChangedEvents", "Toby_Developer_MenuChangedEvents", "OnOff"
@@ -261,4 +263,11 @@ OptionMenu "toby_developer"
     StaticText "User accessible options", "Gold"
     Option "Toby_SelectionNarrationWeapons", "Toby_SelectionNarrationWeapons", "OnOff"
     Option "Toby_SelectionNarrationItems", "Toby_SelectionNarrationItems", "OnOff"
+}
+
+OptionValue "Toby_NarrationOutputTypes"
+{
+    0, "MrAlanD1"
+    // 1, "Text-to-speech"
+    2, "Console output"
 }

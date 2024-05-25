@@ -29,4 +29,24 @@ class Toby_ArmorChecker
         }
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
+
+    ui static void CheckArmorTextOnly(PlayerInfo player)
+    {
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        Actor playerActor = player.mo;
+        BasicArmor armor = BasicArmor(playerActor.FindInventory("BasicArmor"));
+        if (!armor) { return; }
+        if (armor.Amount > 0)
+        {
+            class<Actor> cls = armor.ArmorType;
+            string textToPrint = GetDefaultByType(cls).GetTag() .. " " .. armor.Amount .. "%";
+            console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        }
+        else
+        {
+            string textToPrint = "No armor";
+            console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        }
+    }
 }
