@@ -104,3 +104,14 @@ version "4.6"
 
 //Line Spawner
 #include "zscript/linespawner.zs"
+
+//Pathfinder
+#include "zscript/Pathfinder/Toby_Pathfinder.zs"
+#include "zscript/Pathfinder/Toby_PathfinderDebugRender.zs"
+#include "zscript/Pathfinder/Toby_PathfinderFollower.zs"
+#include "zscript/Pathfinder/Toby_PathfinderThinker.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNode.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNodeBuilder.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNodeContainer.zs"
+#include "zscript/Pathfinder/Toby_SectorMathUtil.zs"
+#include "zscript/Pathfinder/Toby_LineSegmentIntersectionUtil.zs"
