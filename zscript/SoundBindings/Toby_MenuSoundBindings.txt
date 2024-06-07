@@ -202,6 +202,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Health Stats", "SoundToPlay":"menu/controls/healthstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Ammo Stats", "SoundToPlay":"menu/controls/ammostat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Armor Stats", "SoundToPlay":"menu/controls/armorstat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Coordinates", "SoundToPlay":"menu/controls/coordinates"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check current item", "SoundToPlay":"menu/controls/checkitem"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle God Mode", "SoundToPlay":"menu/controls/togglegod"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Give All", "SoundToPlay":"menu/controls/idkfa"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Change to Next Level", "SoundToPlay":"menu/controls/levelwarp"}
