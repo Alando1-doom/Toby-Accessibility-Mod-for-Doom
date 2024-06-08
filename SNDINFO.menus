@@ -426,6 +426,11 @@ $volume menu/controls/ammostat      0.5
 menu/controls/armorstat              "sounds/Menus/TobyOptions/marmstat.ogg"
 $volume menu/controls/armorstat      0.5
 
+menu/controls/coordinates              "sounds/Menus/TobyOptions/mchkpos.ogg"
+$volume menu/controls/coordinates      0.5
+menu/controls/checkitem              "sounds/Menus/TobyOptions/mchkitem.ogg"
+$volume menu/controls/checkitem      0.5
+
 menu/controls/snaptotarget		"sounds/Menus/TobyOptions/msnap.ogg"
 $volume menu/controls/snaptotarget      0.5
 

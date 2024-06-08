@@ -22,3 +22,5 @@ stats/doom/armor/greenarmor  "sounds/PlayerStats/DoomArmor/GreenArmor.ogg"
 stats/doom/armor/megaarmor   "sounds/PlayerStats/DoomArmor/MegaArmor.ogg"
 
 dropoff/beacon		"sounds/DropoffDetector/DROPOFF.ogg"
+
+stats/inventory/selected			"sounds/Selected.ogg"
