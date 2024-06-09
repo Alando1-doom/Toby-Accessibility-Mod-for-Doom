@@ -21,6 +21,8 @@ class Toby_PathfindingNodeBuilder: Thinker
         nodeBuilder.nodeContainer = nodeContainer;
         nodeBuilder.playerActor = playerActor;
 
+        if (!playerActor) { return nodeBuilder; }
+
         nodeBuilder.currentSectorId = playerActor.curSector.Index();
         nodeBuilder.previousSectorId = playerActor.curSector.Index();
 
@@ -190,6 +192,8 @@ class Toby_PathfindingNodeBuilder: Thinker
 
     Toby_PathfindingNode GetNearestAccessibleNode(Actor playerActor)
     {
+        if (!playerActor) { return null; }
+
         double minDistance = Int.Max;
         Toby_PathfindingNode minDistanceNode = null;
         for (int i = 0; i < nodeContainer.nodes.Size(); i++)
@@ -217,6 +221,8 @@ class Toby_PathfindingNodeBuilder: Thinker
 
     void LinkNodesInSector(Toby_PathfindingNode newNode, Actor playerActor)
     {
+        if (!playerActor) { return; }
+
         for (int i = 0; i < nodeContainer.nodes.Size(); i++)
         {
             Toby_PathfindingNode node = nodeContainer.nodes[i];
