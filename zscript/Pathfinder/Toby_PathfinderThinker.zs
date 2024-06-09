@@ -21,7 +21,13 @@ class Toby_PathfinderThinker : Thinker
 
     override void Tick()
     {
+        if (!receivingActor) { return; }
         pf.FindPath();
         pfFollower.UpdateCurrentPathNode(receivingActor);
+    }
+
+    void SetReceivingActor(Actor a)
+    {
+        receivingActor = a;
     }
 }

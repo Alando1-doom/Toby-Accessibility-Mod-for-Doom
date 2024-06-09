@@ -77,6 +77,7 @@ class Toby_PathfinderFollower
     {
         if (destinationReached) { return; }
         if (!pf.pathFinalized) { return; }
+        if (!a) { return; }
         bool nodeReached = IsCurrentPathNodeReached(a, range);
         if (!nodeReached) { return; }
         bool isLastNode = currentPathNode == pf.path.Size() - 1;
