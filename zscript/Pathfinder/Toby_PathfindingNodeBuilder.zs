@@ -79,9 +79,9 @@ class Toby_PathfindingNodeBuilder: Thinker
                 Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, previousIntersectedLineId);
                 Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                 newPreviousPosNode.AddEdge(newCurrentPosNode);
-                LinkNodesInSector(newCurrentPosNode, playerActor);
-                LinkNodesInSector(newPreviousPosNode, playerActor);
-                console.printf("Jumped over multiple lines, possible teleportation");
+                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                // console.printf("Jumped over multiple lines, possible teleportation");
             }
             bool stepHeightExceeded = IsStepHeightExceeded(currentPos, previousPos, playerActor);
             if (stepHeightExceeded)
@@ -91,9 +91,9 @@ class Toby_PathfindingNodeBuilder: Thinker
                     Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, previousIntersectedLineId);
                     Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                     newPreviousPosNode.AddEdge(newCurrentPosNode);
-                    LinkNodesInSector(newCurrentPosNode, playerActor);
-                    LinkNodesInSector(newPreviousPosNode, playerActor);
-                    console.printf("Jumped down");
+                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                    // console.printf("Jumped down");
                 }
                 if (previousPos.z < currentPos.z)
                 {
@@ -101,9 +101,9 @@ class Toby_PathfindingNodeBuilder: Thinker
                     Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                     newPreviousPosNode.AddEdge(newCurrentPosNode);
                     newCurrentPosNode.AddEdge(newPreviousPosNode);
-                    LinkNodesInSector(newCurrentPosNode, playerActor);
-                    LinkNodesInSector(newPreviousPosNode, playerActor);
-                    console.printf("Jumped up");
+                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                    // console.printf("Jumped up");
                 }
             }
             else
@@ -112,9 +112,9 @@ class Toby_PathfindingNodeBuilder: Thinker
                 Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                 newPreviousPosNode.AddEdge(newCurrentPosNode);
                 newCurrentPosNode.AddEdge(newPreviousPosNode);
-                LinkNodesInSector(newCurrentPosNode, playerActor);
-                LinkNodesInSector(newPreviousPosNode, playerActor);
-                console.printf("Regular sector crossing");
+                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                // console.printf("Regular sector crossing");
             }
         }
 
@@ -124,19 +124,14 @@ class Toby_PathfindingNodeBuilder: Thinker
         if (currentVisibleNodes == 2 && previousVisibleNodes == 1)
         {
             Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, -1);
-            LinkNodesInSector(newCurrentPosNode, playerActor);
-            console.printf("Existing nodes linked up");
+            LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+            // console.printf("Existing nodes linked up");
         }
         if (currentVisibleNodes == 0)
         {
             Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, -1);
-            LinkNodesInSector(newPreviousPosNode, playerActor);
-            if (lastClosestNode)
-            {
-                lastClosestNode.AddEdge(newPreviousPosNode);
-                console.printf("There is a chance that gap was crossed. Last closest node was: "..lastClosestNode.id);
-            }
-            console.printf("No nodes around!");
+            LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+            // console.printf("No nodes around!");
         }
         Toby_PathfindingNode updatedLastClosestNode = GetNearestAccessibleNode(playerActor);
         if (updatedLastClosestNode != null)
@@ -225,7 +220,7 @@ class Toby_PathfindingNodeBuilder: Thinker
         return minDistanceNode;
     }
 
-    void LinkNodesInSector(Toby_PathfindingNode newNode, Actor playerActor)
+    void LinkNodesInSector(Toby_PathfindingNode newNode, Actor playerActor, Toby_PathfindingNode lastClosestNode)
     {
         if (!playerActor) { return; }
 
@@ -242,6 +237,11 @@ class Toby_PathfindingNodeBuilder: Thinker
             if (!(sameHeight || withinMaxStepHeight)) { continue; }
             newNode.AddEdge(node);
             node.AddEdge(newNode);
+        }
+
+        if (lastClosestNode)
+        {
+            lastClosestNode.AddEdge(newNode);
         }
     }
 
