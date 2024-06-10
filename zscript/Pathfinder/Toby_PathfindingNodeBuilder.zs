@@ -38,10 +38,16 @@ class Toby_PathfindingNodeBuilder: Thinker
         if (!playerActor) { return; }
         vector3 playerPos = playerActor.pos;
         // Hopefully prevents connecting across the small cracks on the floor
-        console.printf("Floor pos at: "..GetFloorHeightAtActorCoords(playerActor));
-        console.printf("Player z: "..playerActor.pos.z);
-        if (!((playerPos.z == GetFloorHeightAtActorCoords(playerActor))
-            || ((playerActor.pos.z - GetFloorHeightAtActorCoords(playerActor)) < playerActor.MaxStepHeight) && playerActor.vel.z == 0)) { return; }
+
+        //console.printf("Floor pos at: "..GetFloorHeightAtActorCoords(playerActor));
+        //console.printf("Player z: "..playerActor.pos.z);
+        bool playerIsOnFloorLevel = playerPos.z == GetFloorHeightAtActorCoords(playerActor);
+        bool playerIsWithinMaxStepHeight = Abs((playerActor.pos.z - GetFloorHeightAtActorCoords(playerActor)) < playerActor.MaxStepHeight);
+        //console.printf("playerIsOnFloorLevel: "..playerIsOnFloorLevel);
+        //console.printf("playerIsWithinMaxStepHeight: "..playerIsWithinMaxStepHeight);
+        if (!(playerIsOnFloorLevel
+            || playerIsWithinMaxStepHeight && playerActor.vel.z == 0)) { return; }
+
         // Replaced with velocity check, seemingly nothing is broken:
         // if (playerActor.vel.z != 0) { return; }
 
@@ -75,7 +81,7 @@ class Toby_PathfindingNodeBuilder: Thinker
                 newPreviousPosNode.AddEdge(newCurrentPosNode);
                 LinkNodesInSector(newCurrentPosNode, playerActor);
                 LinkNodesInSector(newPreviousPosNode, playerActor);
-                // console.printf("Jumped over multiple lines, possible teleportation");
+                console.printf("Jumped over multiple lines, possible teleportation");
             }
             bool stepHeightExceeded = IsStepHeightExceeded(currentPos, previousPos, playerActor);
             if (stepHeightExceeded)
@@ -87,7 +93,7 @@ class Toby_PathfindingNodeBuilder: Thinker
                     newPreviousPosNode.AddEdge(newCurrentPosNode);
                     LinkNodesInSector(newCurrentPosNode, playerActor);
                     LinkNodesInSector(newPreviousPosNode, playerActor);
-                    // console.printf("Jumped down");
+                    console.printf("Jumped down");
                 }
                 if (previousPos.z < currentPos.z)
                 {
@@ -97,7 +103,7 @@ class Toby_PathfindingNodeBuilder: Thinker
                     newCurrentPosNode.AddEdge(newPreviousPosNode);
                     LinkNodesInSector(newCurrentPosNode, playerActor);
                     LinkNodesInSector(newPreviousPosNode, playerActor);
-                    // console.printf("Jumped up");
+                    console.printf("Jumped up");
                 }
             }
             else
@@ -108,7 +114,7 @@ class Toby_PathfindingNodeBuilder: Thinker
                 newCurrentPosNode.AddEdge(newPreviousPosNode);
                 LinkNodesInSector(newCurrentPosNode, playerActor);
                 LinkNodesInSector(newPreviousPosNode, playerActor);
-                // console.printf("Regular sector crossing");
+                console.printf("Regular sector crossing");
             }
         }
 
@@ -119,7 +125,7 @@ class Toby_PathfindingNodeBuilder: Thinker
         {
             Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, -1);
             LinkNodesInSector(newCurrentPosNode, playerActor);
-            // console.printf("Existing nodes linked up");
+            console.printf("Existing nodes linked up");
         }
         if (currentVisibleNodes == 0)
         {
@@ -231,7 +237,9 @@ class Toby_PathfindingNodeBuilder: Thinker
             if (!inSameSector) { continue; }
             bool intersectsAnyLine = Toby_SectorMathUtil.IntersectsSectorBoundary(newNode.pos.xy, node.pos.xy);
             if (intersectsAnyLine) { continue; }
-            if (node.pos.z != newNode.pos.z) { continue; }
+            bool sameHeight = node.pos.z == newNode.pos.z;
+            bool withinMaxStepHeight = Abs(node.pos.z - newNode.pos.z) < playerActor.MaxStepHeight;
+            if (!(sameHeight || withinMaxStepHeight)) { continue; }
             newNode.AddEdge(node);
             node.AddEdge(newNode);
         }
