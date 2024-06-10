@@ -259,4 +259,9 @@ class Toby_PathfindingNodeBuilder: Thinker
         }
         return false;
     }
+
+    void SetPlayerActor(Actor a)
+    {
+        playerActor = a;
+    }
 }
