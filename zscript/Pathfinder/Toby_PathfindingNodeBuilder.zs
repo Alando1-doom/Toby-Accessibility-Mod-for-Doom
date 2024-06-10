@@ -37,25 +37,20 @@ class Toby_PathfindingNodeBuilder: Thinker
         Super.Tick();
         if (!playerActor) { return; }
         vector3 playerPos = playerActor.pos;
-        // Hopefully prevents connecting across the small cracks on the floor
 
-        //console.printf("Floor pos at: "..GetFloorHeightAtActorCoords(playerActor));
-        //console.printf("Player z: "..playerActor.pos.z);
         bool playerIsOnFloorLevel = playerPos.z == GetFloorHeightAtActorCoords(playerActor);
-        bool playerIsWithinMaxStepHeight = Abs((playerActor.pos.z - GetFloorHeightAtActorCoords(playerActor)) < playerActor.MaxStepHeight);
-        //console.printf("playerIsOnFloorLevel: "..playerIsOnFloorLevel);
-        //console.printf("playerIsWithinMaxStepHeight: "..playerIsWithinMaxStepHeight);
+        bool playerIsWithinMaxStepHeight = Abs((playerActor.pos.z - GetFloorHeightAtActorCoords(playerActor)) <= playerActor.MaxStepHeight);
+
         if (!(playerIsOnFloorLevel
             || playerIsWithinMaxStepHeight && playerActor.vel.z == 0)) { return; }
-
-        // Replaced with velocity check, seemingly nothing is broken:
-        // if (playerActor.vel.z != 0) { return; }
 
         previousSectorId = currentSectorId;
         currentSectorId = playerActor.curSector.Index();
 
         previousPos = (currentPos.x, currentPos.y, currentPos.z);
         currentPos = (playerPos.x, playerPos.y, playerPos.z);
+
+        int minDistance = 200;
 
         if (currentSectorId != previousSectorId)
         {
@@ -70,7 +65,6 @@ class Toby_PathfindingNodeBuilder: Thinker
                 previousPos
             );
 
-            int minDistance = 200;
             bool similarExists = IsSimilarNodeExists(currentPos, currentIntersectedLineId, minDistance);
             if (similarExists) { return; }
 
@@ -79,8 +73,8 @@ class Toby_PathfindingNodeBuilder: Thinker
                 Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, previousIntersectedLineId);
                 Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                 newPreviousPosNode.AddEdge(newCurrentPosNode);
-                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
-                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode, minDistance);
                 // console.printf("Jumped over multiple lines, possible teleportation");
             }
             bool stepHeightExceeded = IsStepHeightExceeded(currentPos, previousPos, playerActor);
@@ -91,8 +85,8 @@ class Toby_PathfindingNodeBuilder: Thinker
                     Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, previousIntersectedLineId);
                     Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                     newPreviousPosNode.AddEdge(newCurrentPosNode);
-                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
-                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode, minDistance);
                     // console.printf("Jumped down");
                 }
                 if (previousPos.z < currentPos.z)
@@ -101,8 +95,8 @@ class Toby_PathfindingNodeBuilder: Thinker
                     Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                     newPreviousPosNode.AddEdge(newCurrentPosNode);
                     newCurrentPosNode.AddEdge(newPreviousPosNode);
-                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
-                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                    LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+                    LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode, minDistance);
                     // console.printf("Jumped up");
                 }
             }
@@ -112,8 +106,8 @@ class Toby_PathfindingNodeBuilder: Thinker
                 Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, currentIntersectedLineId);
                 newPreviousPosNode.AddEdge(newCurrentPosNode);
                 newCurrentPosNode.AddEdge(newPreviousPosNode);
-                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
-                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+                LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode, minDistance);
                 // console.printf("Regular sector crossing");
             }
         }
@@ -124,13 +118,13 @@ class Toby_PathfindingNodeBuilder: Thinker
         if (currentVisibleNodes == 2 && previousVisibleNodes == 1)
         {
             Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, -1);
-            LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode);
+            LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
             // console.printf("Existing nodes linked up");
         }
         if (currentVisibleNodes == 0)
         {
             Toby_PathfindingNode newPreviousPosNode = nodeContainer.AddNode(previousPos, -1);
-            LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode);
+            LinkNodesInSector(newPreviousPosNode, playerActor, lastClosestNode, minDistance);
             // console.printf("No nodes around!");
         }
         Toby_PathfindingNode updatedLastClosestNode = GetNearestAccessibleNode(playerActor);
@@ -200,6 +194,7 @@ class Toby_PathfindingNodeBuilder: Thinker
         for (int i = 0; i < nodeContainer.nodes.Size(); i++)
         {
             Toby_PathfindingNode node = nodeContainer.nodes[i];
+            if (!node) { continue; }
             if ((node.pos.xy - playerActor.pos.xy).Length() <= playerActor.radius * 2)
             {
                 minDistanceNode = node;
@@ -220,7 +215,7 @@ class Toby_PathfindingNodeBuilder: Thinker
         return minDistanceNode;
     }
 
-    void LinkNodesInSector(Toby_PathfindingNode newNode, Actor playerActor, Toby_PathfindingNode lastClosestNode)
+    void LinkNodesInSector(Toby_PathfindingNode newNode, Actor playerActor, Toby_PathfindingNode lastClosestNode, int distance)
     {
         if (!playerActor) { return; }
 
@@ -233,7 +228,7 @@ class Toby_PathfindingNodeBuilder: Thinker
             bool intersectsAnyLine = Toby_SectorMathUtil.IntersectsSectorBoundary(newNode.pos.xy, node.pos.xy);
             if (intersectsAnyLine) { continue; }
             bool sameHeight = node.pos.z == newNode.pos.z;
-            bool withinMaxStepHeight = Abs(node.pos.z - newNode.pos.z) < playerActor.MaxStepHeight;
+            bool withinMaxStepHeight = Abs(node.pos.z - newNode.pos.z) <= playerActor.MaxStepHeight;
             if (!(sameHeight || withinMaxStepHeight)) { continue; }
             newNode.AddEdge(node);
             node.AddEdge(newNode);
@@ -242,6 +237,12 @@ class Toby_PathfindingNodeBuilder: Thinker
         if (lastClosestNode)
         {
             lastClosestNode.AddEdge(newNode);
+            bool withinMaxStepHeight = Abs(lastClosestNode.pos.z - newNode.pos.z) <= playerActor.MaxStepHeight;
+            bool nodeIsCloseEnough = (lastClosestNode.pos.xy - newNode.pos.xy).Length() < distance;
+            if (withinMaxStepHeight && nodeIsCloseEnough)
+            {
+                newNode.AddEdge(lastClosestNode);
+            }
         }
     }
 
@@ -252,7 +253,7 @@ class Toby_PathfindingNodeBuilder: Thinker
             Toby_PathfindingNode node = nodeContainer.nodes[i];
             bool inSameSector = Toby_SectorMathUtil.IsInSameSector(pos, node.pos);
             if (!inSameSector) { continue; }
-            if (node.lineId == lineId && (pos.xy - node.pos.xy).Length() < distance)
+            if (node.lineId == lineId && (pos.xy - node.pos.xy).Length() < distance && pos.z == node.pos.z)
             {
                 return true;
             }
