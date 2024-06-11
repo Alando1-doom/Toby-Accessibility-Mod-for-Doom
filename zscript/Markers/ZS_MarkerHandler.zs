@@ -1,26 +1,47 @@
 class ZS_MarkerHandler : EventHandler
 {
-    Array<String> whiteList;
-    int sequentalMarkerSpawnIndex;
-    int lastMarkerId;
-    String baseMarkerName;
+    int maxPlayers;
+    Array<Toby_MarkerRecordContainer> recordContainers;
+    Toby_MarkerDatabase db;
+
+    override void OnRegister()
+    {
+        Toby_Logger.Message("ZS_MarkerHandler registered!", "Toby_Developer");
+    }
 
     override void WorldLoaded(WorldEvent e)
     {
-        baseMarkerName = "ZS_Marker_Base";
-        sequentalMarkerSpawnIndex = 0;
-        lastMarkerId = GetLastMarkerId();
+        maxPlayers = 8;
+        int i = 0;
+        for (i = 0; i < maxPlayers; i++)
+        {
+            Actor playerActor = players[i].mo;
+            Toby_MarkerRecordContainer recordContainer = Toby_MarkerRecordContainer.Create();
+            recordContainers.push(recordContainer);
+        }
 
-        whiteList.push("Toby_Marker_1");
-        whiteList.push("Toby_Marker_2");
-        whiteList.push("Toby_Marker_3");
-        whiteList.push("Toby_Marker_4");
-        whiteList.push("Toby_Marker_5");
-        whiteList.push("Toby_Marker_6");
-        whiteList.push("Toby_Marker_7");
-        whiteList.push("Toby_Marker_8");
-        whiteList.push("Toby_Marker_9");
-        whiteList.push("Toby_Marker_10");
+        for (i = 0; i < maxPlayers; i++)
+        {
+            PlayerInfo player = players[i];
+            if (!player) { continue; }
+            Actor playerActor = players[i].mo;
+            if (!playerActor) { continue; }
+
+            recordContainers[i].AddMarker("Toby_Marker_LevelStart", playerActor.pos, "Level start");
+        }
+
+        db = Toby_MarkerDatabase.Create();
+
+        db.AddItem("Toby_Marker_1", "Marker 1", "marker/marker1", "marker/undo1");
+        db.AddItem("Toby_Marker_2", "Marker 2", "marker/marker2", "marker/undo2");
+        db.AddItem("Toby_Marker_3", "Marker 3", "marker/marker3", "marker/undo3");
+        db.AddItem("Toby_Marker_4", "Marker 4", "marker/marker4", "marker/undo4");
+        db.AddItem("Toby_Marker_5", "Marker 5", "marker/marker5", "marker/undo5");
+        db.AddItem("Toby_Marker_6", "Marker 6", "marker/marker6", "marker/undo6");
+        db.AddItem("Toby_Marker_7", "Marker 7", "marker/marker7", "marker/undo7");
+        db.AddItem("Toby_Marker_8", "Marker 8", "marker/marker8", "marker/undo8");
+        db.AddItem("Toby_Marker_9", "Marker 9", "marker/marker9", "marker/undo9");
+        db.AddItem("Toby_Marker_10", "Marker 10", "marker/marker10", "marker/undo10");
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -29,360 +50,69 @@ class ZS_MarkerHandler : EventHandler
         if (!player) { return; }
         Actor playerActor = players[e.Player].mo;
         if (!playerActor) { return; }
+
         int maxRemovalDistance = CVar.GetCVar("zs_em_MaxDistance", player).GetInt();
+
         Array<String> eventAndArgument;
-        //Sorry, this is dirty, but there were no other way to pass a string as an argument -Proydoha
         e.Name.split(eventAndArgument, ":", TOK_KEEPEMPTY);
 
         if (eventAndArgument[0] == "ZS_PlaceMarker" && IsMarkerInWhitelist(eventAndArgument[1]))
         {
-            PlaceMarker(eventAndArgument[1], playerActor);
+            recordContainers[e.Player].AddMarker(eventAndArgument[1], playerActor.pos, eventAndArgument[1]);
         }
-        if (eventAndArgument[0] == "ZS_RemoveMarker" && (IsMarkerInWhitelist(eventAndArgument[1]) || eventAndArgument[1] == baseMarkerName))
+        if (eventAndArgument[0] == "ZS_RemoveMarker")
         {
-            RemoveNearestMarkerOfType(eventAndArgument[1], playerActor, maxRemovalDistance);
-        }
-        if (eventAndArgument[0] == "ZS_RemoveAllMarkersOfType" && IsMarkerInWhitelist(eventAndArgument[1]))
-        {
-            ThinkerIterator MarkerFinder = ThinkerIterator.Create(eventAndArgument[1]);
-            Actor mo;
-            while (mo = Actor(MarkerFinder.Next()))
-            {
-                mo.Destroy();
-            }
-            DisplayAllMarkersOfTypeRemoved(eventAndArgument[1]);
-        }
-        if (eventAndArgument[0] == "ZS_RemoveAllMarkers")
-        {
-            ThinkerIterator MarkerFinder = ThinkerIterator.Create(baseMarkerName);
-            Actor mo;
-            while (mo = Actor(MarkerFinder.Next()))
-            {
-                mo.Destroy();
-            }
-            S_StartSound("marker/cleared", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-            Console.MidPrint(SmallFont, "Map Markers Cleared");
-        }
-        if (eventAndArgument[0] == "ZS_PlaceNextMarker")
-        {
-            int markerArrayPos = Modulo(sequentalMarkerSpawnIndex, whiteList.Size());
-            PlaceMarker(whiteList[markerArrayPos], playerActor);
-            sequentalMarkerSpawnIndex++;
-        }
-        if (eventAndArgument[0] == "ZS_RemoveLastMarker")
-        {
-            ZS_Marker_Base lastMarker = GetLastMarker();
-            if (lastMarker)
-            {
-                string markerClassName = lastMarker.GetClassName();
-                lastMarker.Destroy();
-                sequentalMarkerSpawnIndex--;
-                PlayUndoSound(markerClassName);
-                DisplayMarkerRemovedMessage(markerClassName);
-            }
+            recordContainers[e.Player].RemoveMarker(eventAndArgument[1].ToInt());
         }
     }
 
-    //Prevents ability to spawn anything except markers with sv_cheats 0 by typing
-    //netevent ZS_PlaceMarker:<any actor class> in console -Proydoha
     bool IsMarkerInWhitelist(String markerClassName)
     {
-        for (int i = 0; i < whiteList.Size(); i++)
-        {
-            if (whiteList[i] == markerClassName)
-            {
-                return true;
-            }
-        }
-        return false;
+        Toby_MarkerDatabaseItem item = db.GetItemByClassName(markerClassName);
+        if (!item) { return false; }
+        return true;
     }
 
-    void PlaceMarker(string markerClassName, Actor player)
+    ui void PlayUndoSound(string markerClassName)
     {
-        ZS_Marker_Base mo = ZS_Marker_Base(Actor.Spawn(markerClassName, player.pos));
-        mo.markerId = lastMarkerId;
-        lastMarkerId++;
-        PlayPlaceSound(markerClassName);
-        DisplayMarkerPlacedMessage(markerClassName);
+        Toby_MarkerDatabaseItem item = db.GetItemByClassName(markerClassName);
+        if (!item) { return; }
+        S_StartSound(item.removedSound, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
     }
 
-    void RemoveNearestMarkerOfType(string markerClassName, Actor playerActor, int maxRemovalDistance)
+    ui void PlayPlaceSound(string markerClassName)
     {
-        double minDistance = int.Max;
-        double distance;
-
-        ThinkerIterator MarkerFinder = ThinkerIterator.Create(markerClassName);
-        Actor minDistanceActor;
-        Actor mo;
-        while (mo = Actor(MarkerFinder.Next()))
-        {
-            distance = ((playerActor.pos.x, playerActor.pos.y) - (mo.pos.x, mo.pos.y)).length();
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                minDistanceActor = mo;
-            }
-        }
-        if (minDistanceActor && (maxRemovalDistance == 0 || minDistance < maxRemovalDistance))
-        {
-            string mClassName = minDistanceActor.GetClassName();
-            minDistanceActor.Destroy();
-            PlayUndoSound(mClassName);
-            DisplayMarkerRemovedMessage(mClassName);
-        }
+        Toby_MarkerDatabaseItem item = db.GetItemByClassName(markerClassName);
+        if (!item) { return; }
+        S_StartSound(item.placedSound, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
     }
 
-    void PlayUndoSound(string markerClassName)
+    ui void DisplayMarkerPlacedMessage(string markerClassName)
     {
-        if (markerClassName == "Toby_Marker_1")
-        {
-            S_StartSound("marker/undo1", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_2")
-        {
-            S_StartSound("marker/undo2", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_3")
-        {
-            S_StartSound("marker/undo3", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_4")
-        {
-            S_StartSound("marker/undo4", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_5")
-        {
-            S_StartSound("marker/undo5", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_6")
-        {
-            S_StartSound("marker/undo6", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_7")
-        {
-            S_StartSound("marker/undo7", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_8")
-        {
-            S_StartSound("marker/undo8", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_9")
-        {
-            S_StartSound("marker/undo9", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_10")
-        {
-            S_StartSound("marker/undo10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
+        Toby_MarkerDatabaseItem item = db.GetItemByClassName(markerClassName);
+        if (!item) { return; }
+        Console.MidPrint(SmallFont, item.description.." Placed");
     }
 
-    void PlayPlaceSound(string markerClassName)
+    ui void DisplayMarkerRemovedMessage(string markerClassName)
     {
-        if (markerClassName == "Toby_Marker_1")
-        {
-            S_StartSound("marker/marker1", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_2")
-        {
-            S_StartSound("marker/marker2", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_3")
-        {
-            S_StartSound("marker/marker3", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_4")
-        {
-            S_StartSound("marker/marker4", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_5")
-        {
-            S_StartSound("marker/marker5", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_6")
-        {
-            S_StartSound("marker/marker6", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_7")
-        {
-            S_StartSound("marker/marker7", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_8")
-        {
-            S_StartSound("marker/marker8", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_9")
-        {
-            S_StartSound("marker/marker9", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-        if (markerClassName == "Toby_Marker_10")
-        {
-            S_StartSound("marker/marker10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
-    }
-
-    void DisplayMarkerPlacedMessage(string markerClassName)
-    {
-        if (markerClassName == "Toby_Marker_1")
-        {
-            Console.MidPrint(SmallFont, "Marker 1 Placed");
-        }
-        if (markerClassName == "Toby_Marker_2")
-        {
-            Console.MidPrint(SmallFont, "Marker 2 Placed");
-        }
-        if (markerClassName == "Toby_Marker_3")
-        {
-            Console.MidPrint(SmallFont, "Marker 3 Placed");
-        }
-        if (markerClassName == "Toby_Marker_4")
-        {
-            Console.MidPrint(SmallFont, "Marker 4 Placed");
-        }
-        if (markerClassName == "Toby_Marker_5")
-        {
-            Console.MidPrint(SmallFont, "Marker 5 Placed");
-        }
-        if (markerClassName == "Toby_Marker_6")
-        {
-            Console.MidPrint(SmallFont, "Marker 6 Placed");
-        }
-        if (markerClassName == "Toby_Marker_7")
-        {
-            Console.MidPrint(SmallFont, "Marker 7 Placed");
-        }
-        if (markerClassName == "Toby_Marker_8")
-        {
-            Console.MidPrint(SmallFont, "Marker 8 Placed");
-        }
-        if (markerClassName == "Toby_Marker_9")
-        {
-            Console.MidPrint(SmallFont, "Marker 9 Placed");
-        }
-        if (markerClassName == "Toby_Marker_10")
-        {
-            Console.MidPrint(SmallFont, "Marker 10 Placed");
-        }
-    }
-
-    void DisplayMarkerRemovedMessage(string markerClassName)
-    {
-        if (markerClassName == "Toby_Marker_1")
-        {
-            Console.MidPrint(SmallFont, "Marker 1 Removed");
-        }
-        if (markerClassName == "Toby_Marker_2")
-        {
-            Console.MidPrint(SmallFont, "Marker 2 Removed");
-        }
-        if (markerClassName == "Toby_Marker_3")
-        {
-            Console.MidPrint(SmallFont, "Marker 3 Removed");
-        }
-        if (markerClassName == "Toby_Marker_4")
-        {
-            Console.MidPrint(SmallFont, "Marker 4 Removed");
-        }
-        if (markerClassName == "Toby_Marker_5")
-        {
-            Console.MidPrint(SmallFont, "Marker 5 Removed");
-        }
-        if (markerClassName == "Toby_Marker_6")
-        {
-            Console.MidPrint(SmallFont, "Marker 6 Removed");
-        }
-        if (markerClassName == "Toby_Marker_7")
-        {
-            Console.MidPrint(SmallFont, "Marker 7 Removed");
-        }
-        if (markerClassName == "Toby_Marker_8")
-        {
-            Console.MidPrint(SmallFont, "Marker 8 Removed");
-        }
-        if (markerClassName == "Toby_Marker_9")
-        {
-            Console.MidPrint(SmallFont, "Marker 9 Removed");
-        }
-        if (markerClassName == "Toby_Marker_10")
-        {
-            Console.MidPrint(SmallFont, "Marker 10 Removed");
-        }
-    }
-
-    void DisplayAllMarkersOfTypeRemoved(string markerClassName)
-    {
-        if (markerClassName == "Toby_Marker_1")
-        {
-            Console.MidPrint(SmallFont, "All 1 marker removed");
-        }
-        if (markerClassName == "Toby_Marker_2")
-        {
-            Console.MidPrint(SmallFont, "All 2 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_3")
-        {
-            Console.MidPrint(SmallFont, "All 3 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_4")
-        {
-            Console.MidPrint(SmallFont, "All 4 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_5")
-        {
-            Console.MidPrint(SmallFont, "All 5 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_6")
-        {
-            Console.MidPrint(SmallFont, "All 6 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_7")
-        {
-            Console.MidPrint(SmallFont, "All 7 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_8")
-        {
-            Console.MidPrint(SmallFont, "All 8 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_9")
-        {
-            Console.MidPrint(SmallFont, "All 9 markers removed");
-        }
-        if (markerClassName == "Toby_Marker_10")
-        {
-            Console.MidPrint(SmallFont, "All 10 markers removed");
-        }
-    }
-
-    ZS_Marker_Base GetLastMarker()
-    {
-        ZS_Marker_Base lastMarker = null;
-        int lastMarkerId = -1;
-        ThinkerIterator MarkerFinder = ThinkerIterator.Create(baseMarkerName);
-        ZS_Marker_Base mo;
-        while (mo = ZS_Marker_Base(MarkerFinder.Next()))
-        {
-            if (mo.markerId > lastMarkerId)
-            {
-                lastMarkerId = mo.markerId;
-                lastMarker = mo;
-            }
-        }
-
-        return lastMarker;
-    }
-
-    int GetLastMarkerId()
-    {
-        int lastMarkerId = 0;
-        ZS_Marker_Base lastMarker = GetLastMarker();
-        if (lastMarker)
-        {
-            lastMarkerId = lastMarker.markerId;
-        }
-        return lastMarkerId;
+        Toby_MarkerDatabaseItem item = db.GetItemByClassName(markerClassName);
+        if (!item) { return; }
+        Console.MidPrint(SmallFont, item.description.." Removed");
     }
 
     int Modulo(int a, int b)
     {
         return int(((a % b) + b) % b);
+    }
+
+    ui static ZS_MarkerHandler GetInstanceUi()
+    {
+        return ZS_MarkerHandler(EventHandler.Find("ZS_MarkerHandler"));
+    }
+
+    play static ZS_MarkerHandler GetInstancePlay()
+    {
+        return ZS_MarkerHandler(EventHandler.Find("ZS_MarkerHandler"));
     }
 }

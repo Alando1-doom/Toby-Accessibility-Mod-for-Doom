@@ -28,7 +28,20 @@ version "4.6"
 #include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
 #include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
 
+//Marker menus
+#include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerAddMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerAddMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveMenuItem.zs"
+
 //Markers
+#include "zscript/Markers/Toby_MarkerDatabase.zs"
+#include "zscript/Markers/Toby_MarkerDatabaseItem.zs"
+#include "zscript/Markers/Toby_MarkerRecordContainer.zs"
+#include "zscript/Markers/Toby_MarkerRecord.zs"
 #include "zscript/Markers/ZS_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"
 
@@ -106,6 +119,7 @@ version "4.6"
 #include "zscript/linespawner.zs"
 
 //Pathfinder
+#include "zscript/Pathfinder/Toby_PathfinderHandler.zs"
 #include "zscript/Pathfinder/Toby_Pathfinder.zs"
 #include "zscript/Pathfinder/Toby_PathfinderDebugRender.zs"
 #include "zscript/Pathfinder/Toby_PathfinderFollower.zs"

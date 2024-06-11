@@ -10,6 +10,28 @@ class ZS_Marker_Base : Mapmarker
     }
 }
 
+class Toby_Marker_Silent : ZS_Marker_Base
+{
+    States
+    {
+        Spawn:
+            TNT1 A 1 Bright;
+            TNT1 BBBBBBBB 4 Bright;
+            TNT1 B 2 Bright;
+            Loop;
+    }
+}
+
+class Toby_Marker_LevelStart : Toby_Marker_Silent
+{
+
+}
+
+class Toby_Marker_LevelExit : Toby_Marker_Silent
+{
+
+}
+
 class Toby_Marker_1 : ZS_Marker_Base
 {
     States

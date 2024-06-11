@@ -18,4 +18,5 @@ GameInfo
     AddEventHandlers = "TobyEventHandler" //Line Spawner
     AddEventHandlers = "Toby_UniversalPickupBeaconHandler"
     AddEventHandlers = "Toby_ClassIgnoreListLoaderStaticHandler"
+    AddEventHandlers = "Toby_PathfinderHandler"
 }
