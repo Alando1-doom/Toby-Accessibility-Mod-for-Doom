@@ -3,6 +3,7 @@ class ZS_MarkerHandler : EventHandler
     int maxPlayers;
     Array<Toby_MarkerRecordContainer> recordContainers;
     Toby_MarkerDatabase db;
+    Toby_AutoMarkerDatabase autoMarkerDb;
 
     override void OnRegister()
     {
@@ -42,6 +43,26 @@ class ZS_MarkerHandler : EventHandler
         db.AddItem("Toby_Marker_8", "Marker 8", "marker/marker8", "marker/undo8");
         db.AddItem("Toby_Marker_9", "Marker 9", "marker/marker9", "marker/undo9");
         db.AddItem("Toby_Marker_10", "Marker 10", "marker/marker10", "marker/undo10");
+
+        autoMarkerDb = Toby_AutoMarkerDatabase.Create();
+        autoMarkerDb.AddItem("RedKeyChecker_V2", "Toby_Marker_RedKeyDoor", "Red key door");
+        autoMarkerDb.AddItem("BlueKeyChecker_V2", "Toby_Marker_BlueKeyDoor", "Blue key door");
+        autoMarkerDb.AddItem("YellowKeyChecker_V2", "Toby_Marker_YellowKeyDoor", "Yellow key door");
+
+        autoMarkerDb.AddItem("RedSkullChecker_V2", "Toby_Marker_RedSkullDoor", "Red skull door");
+        autoMarkerDb.AddItem("BlueSkullChecker_V2", "Toby_Marker_BlueSkullDoor", "Blue skull door");
+        autoMarkerDb.AddItem("YellowSkullChecker_V2", "Toby_Marker_YellowSkullDoor", "Yellow skull door");
+
+        autoMarkerDb.AddItem("3KeyChecker_V2", "Toby_Marker_ThreeKeyDoor", "Three key door");
+        autoMarkerDb.AddItem("6KeyChecker_V2", "Toby_Marker_SixKeyDoorDoor", "Six key door");
+        autoMarkerDb.AddItem("AnyKeyChecker_V2", "Toby_Marker_AnyKeyDoor", "Any key door");
+
+        autoMarkerDb.AddItem("ExitBeacon1", "Toby_Marker_Exit", "Exit");
+    }
+
+    override void WorldTick()
+    {
+        AutoPlaceMarkers();
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -114,5 +135,47 @@ class ZS_MarkerHandler : EventHandler
     play static ZS_MarkerHandler GetInstancePlay()
     {
         return ZS_MarkerHandler(EventHandler.Find("ZS_MarkerHandler"));
+    }
+
+    private void AutoPlaceMarkers()
+    {
+        int minDistance = 130;
+        int minPlacementDistance = minDistance * 2.5;
+
+        for (int j = 0; j < autoMarkerDb.items.Size(); j++)
+        {
+            ThinkerIterator actorFinder = ThinkerIterator.Create(autoMarkerDb.items[j].targetActorName);
+            Actor foundActor;
+            while (foundActor = Actor(actorFinder.Next()))
+            {
+                for (int i = 0; i < maxPlayers; i++)
+                {
+                    PlayerInfo player = players[i];
+                    if (!player) { continue; }
+                    Actor playerActor = player.mo;
+                    if (!playerActor) { continue; }
+                    if (!playerActor.IsVisible(foundActor, true)) { continue; }
+                    if ((playerActor.pos - foundActor.pos).length() > minDistance) { continue; }
+
+                    if (SimilarMarkerExists(recordContainers[i], j, foundActor, minPlacementDistance)) { continue; }
+                    recordContainers[i].AddMarker(autoMarkerDb.items[j].markerActorName, playerActor.pos, autoMarkerDb.items[j].description);
+                }
+            }
+        }
+    }
+
+    private bool SimilarMarkerExists(Toby_MarkerRecordContainer recordContainer, int autoMarkerItemIndex, Actor foundActor, int minPlacementDistance)
+    {
+        for (int k = 0; k < recordContainer.records.Size(); k++)
+        {
+            Actor markerActor = recordContainer.records[k].markerActor;
+            bool classNameMatch = markerActor.GetClassName() == autoMarkerDb.items[autoMarkerItemIndex].markerActorName;
+            bool withinMinPlacementDistance = (markerActor.pos - foundActor.pos).Length() < minPlacementDistance;
+            if (classNameMatch && withinMinPlacementDistance)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

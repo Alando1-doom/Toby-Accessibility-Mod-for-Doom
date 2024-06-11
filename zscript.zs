@@ -38,6 +38,8 @@ version "4.6"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveMenuItem.zs"
 
 //Markers
+#include "zscript/Markers/Toby_AutoMarkerDatabase.zs"
+#include "zscript/Markers/Toby_AutoMarkerDatabaseItem.zs"
 #include "zscript/Markers/Toby_MarkerDatabase.zs"
 #include "zscript/Markers/Toby_MarkerDatabaseItem.zs"
 #include "zscript/Markers/Toby_MarkerRecordContainer.zs"
