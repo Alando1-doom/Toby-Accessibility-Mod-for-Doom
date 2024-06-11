@@ -80,7 +80,7 @@ class Toby_PathfinderDebugRender
                 edges = edges..", "..node.edges[j].id;
             }
 
-            RenderCircle(screenPos.x, screenPos.y, circleRadius, color(0, 0, 0), circle, transform);
+            RenderCircle(screenPos.x, screenPos.y, circleRadius, color(25, 25, 25), circle, transform);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 1, "Node ID: "..node.id);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 2, "Linked to: "..edges);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 3, "Line ID: "..node.lineId);
@@ -197,7 +197,7 @@ class Toby_PathfinderDebugRender
                 if (!projector.viewport.IsInside(edgeNormalPos)) { continue; }
                 if (!projector.projection.IsInScreen()) { continue; }
                 let edgeScreenPos = projector.viewport.SceneToWindow(edgeNormalPos);
-                Screen.DrawThickLine(screenPos.x, screenPos.y, edgeScreenPos.x, edgeScreenPos.y, 5, Color(0, 0, 0));
+                Screen.DrawThickLine(screenPos.x, screenPos.y, edgeScreenPos.x, edgeScreenPos.y, 5, Color(25, 25, 25));
             }
         }
     }
