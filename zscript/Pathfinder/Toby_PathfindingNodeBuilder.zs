@@ -50,7 +50,7 @@ class Toby_PathfindingNodeBuilder: Thinker
         previousPos = (currentPos.x, currentPos.y, currentPos.z);
         currentPos = (playerPos.x, playerPos.y, playerPos.z);
 
-        int minDistance = 200;
+        int minDistance = 100;
 
         if (currentSectorId != previousSectorId)
         {

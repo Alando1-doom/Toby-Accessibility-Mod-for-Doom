@@ -206,6 +206,14 @@ class Toby_Pathfinder
         Toby_PathfindingNode currentNode = path[0];
         Toby_PathfindingNode minScoreNode = null;
         double minFScore = Int.Max;
+        if (!currentNode)
+        {
+            pathDoesNotExist = true;
+            pathFound = false;
+            pathfindingActive = false;
+            pathConstructed = false;
+            return;
+        }
         for(int i = 0; i < currentNode.backwardsEdges.Size(); i++)
         {
             Toby_PathfindingNode processedNode = currentNode.backwardsEdges[i];

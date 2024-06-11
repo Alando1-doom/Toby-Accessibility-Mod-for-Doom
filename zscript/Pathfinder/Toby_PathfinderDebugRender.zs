@@ -128,6 +128,7 @@ class Toby_PathfinderDebugRender
         for (int i = 0; i < p.path.Size(); i++)
         {
             let node = p.path[i];
+            if (!node) { continue; }
             Screen.DrawText(smallfont, Font.CR_WHITE, 350, 50 + 10 * (1 + i), "Node "..node.id);
 
             projector.projection.ProjectWorldPos(node.pos);
