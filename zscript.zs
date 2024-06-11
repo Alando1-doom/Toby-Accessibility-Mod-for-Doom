@@ -36,6 +36,7 @@ version "4.6"
 #include "zscript/Markers/Menu/Toby_MarkerAddMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveNearestMenu.zs"
 
 //Markers
 #include "zscript/Markers/Toby_AutoMarkerDatabase.zs"

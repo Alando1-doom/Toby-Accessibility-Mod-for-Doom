@@ -79,7 +79,9 @@ class Toby_MarkerHandler : EventHandler
 
         if (eventAndArgument[0] == "ZS_PlaceMarker" && IsMarkerInWhitelist(eventAndArgument[1]))
         {
-            recordContainers[e.Player].AddMarker(eventAndArgument[1], playerActor.pos, eventAndArgument[1]);
+            Toby_MarkerDatabaseItem item = db.GetItemByClassName(eventAndArgument[1]);
+            if (!item) { return; }
+            recordContainers[e.Player].AddMarker(eventAndArgument[1], playerActor.pos, item.description);
         }
         if (eventAndArgument[0] == "ZS_RemoveMarker")
         {

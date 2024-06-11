@@ -170,3 +170,9 @@ OptionMenu "toby_marker_remove"
   class Toby_MarkerRemoveMenu
   Title "Remove marker"
 }
+
+OptionMenu "toby_marker_remove_nearest"
+{
+  class Toby_MarkerRemoveNearestMenu
+  Title "Remove marker"
+}
