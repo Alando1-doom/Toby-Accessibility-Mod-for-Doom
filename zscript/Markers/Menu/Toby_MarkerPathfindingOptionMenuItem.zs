@@ -3,7 +3,14 @@ class Toby_MarkerPathfindingOptionMenuItem : Toby_BaseMarkerOptionMenuItem
     override bool Activate()
     {
         Menu.MenuSound("menu/choose");
-        EventHandler.SendNetworkEvent("Toby_FindPath:"..command);
+        if (command == "Toby_ResetPathfindingCommand")
+        {
+            EventHandler.SendNetworkEvent("Toby_StopPathfinding");
+        }
+        else
+        {
+            EventHandler.SendNetworkEvent("Toby_FindPath:"..command);
+        }
 
         CloseAllMenus();
 

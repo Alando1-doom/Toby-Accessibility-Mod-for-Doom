@@ -43,6 +43,14 @@ class Toby_Pathfinder
         return pathfinder;
     }
 
+    void TotalReset()
+    {
+        ResetPathfinder((0, 0, 0), (0, 0, 0));
+        pathStart = null;
+        pathEnd = null;
+        pathfindingActive = false;
+    }
+
     void FindPath()
     {
         if (!pathfindingActive) { return; }

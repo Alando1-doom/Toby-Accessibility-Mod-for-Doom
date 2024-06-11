@@ -13,6 +13,12 @@ class Toby_PathfinderFollower
         return follower;
     }
 
+    void Reset()
+    {
+        currentPathNode = 0;
+        destinationReached = true;
+    }
+
     void StartFollowingPath()
     {
         currentPathNode = 0;

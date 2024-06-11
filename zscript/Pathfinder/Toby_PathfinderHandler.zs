@@ -147,6 +147,12 @@ class Toby_PathfinderHandler : EventHandler
             pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos);
             return;
         }
+
+        if (e.Name == "Toby_StopPathfinding")
+        {
+            pathfinderThinkers[e.Player].Reset();
+            return;
+        }
     }
 
     //This is debug only
@@ -177,25 +183,25 @@ class Toby_PathfinderHandler : EventHandler
     {
         if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
         {
-            console.printf("Path found");
+            // console.printf("Path found");
             S_StartSound("menusnd/yes", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
         {
-            console.printf("Path can't be found");
+            // console.printf("Path can't be found");
             S_StartSound("menusnd/no", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
         {
-            console.printf("Destination reached");
+            // console.printf("Destination reached");
             S_StartSound("marker/beacon10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (currentNodePrevious[consoleplayer] != currentNodeCurrent[consoleplayer] && !destinationReachedCurrent[consoleplayer])
         {
-            console.printf("Next node reached");
+            // console.printf("Next node reached");
             S_StartSound("misc/key", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
     }

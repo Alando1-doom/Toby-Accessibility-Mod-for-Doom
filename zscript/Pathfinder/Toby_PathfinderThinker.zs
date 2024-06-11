@@ -30,4 +30,10 @@ class Toby_PathfinderThinker : Thinker
     {
         receivingActor = a;
     }
+
+    void Reset()
+    {
+        pf.TotalReset();
+        pfFollower.Reset();
+    }
 }
