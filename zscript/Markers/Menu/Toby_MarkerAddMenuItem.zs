@@ -4,7 +4,7 @@ class Toby_MarkerAddMenuItem : Toby_BaseMarkerOptionMenuItem
     {
         Menu.MenuSound("menu/choose");
 
-        ZS_MarkerHandler markerHandler = ZS_MarkerHandler.GetInstanceUi();
+        Toby_MarkerHandler markerHandler = Toby_MarkerHandler.GetInstanceUi();
         markerHandler.PlayPlaceSound(command);
         markerHandler.DisplayMarkerPlacedMessage(command);
 

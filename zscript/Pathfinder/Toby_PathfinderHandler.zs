@@ -60,7 +60,7 @@ class Toby_PathfinderHandler : EventHandler
 
         if (eventAndArgument[0] == "Toby_FindPath")
         {
-            ZS_MarkerHandler markerHandler = ZS_MarkerHandler.GetInstancePlay();
+            Toby_MarkerHandler markerHandler = Toby_MarkerHandler.GetInstancePlay();
             int markerId = eventAndArgument[1].ToInt();
             Toby_MarkerRecord record = markerHandler.recordContainers[e.Player].GetMarkerById(markerId);
             if (!record) { return; }

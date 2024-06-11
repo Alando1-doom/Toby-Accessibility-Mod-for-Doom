@@ -1,4 +1,4 @@
-class ZS_MarkerHandler : EventHandler
+class Toby_MarkerHandler : EventHandler
 {
     int maxPlayers;
     Array<Toby_MarkerRecordContainer> recordContainers;
@@ -7,7 +7,7 @@ class ZS_MarkerHandler : EventHandler
 
     override void OnRegister()
     {
-        Toby_Logger.Message("ZS_MarkerHandler registered!", "Toby_Developer");
+        Toby_Logger.Message("Toby_MarkerHandler registered!", "Toby_Developer");
     }
 
     override void WorldLoaded(WorldEvent e)
@@ -127,14 +127,14 @@ class ZS_MarkerHandler : EventHandler
         return int(((a % b) + b) % b);
     }
 
-    ui static ZS_MarkerHandler GetInstanceUi()
+    ui static Toby_MarkerHandler GetInstanceUi()
     {
-        return ZS_MarkerHandler(EventHandler.Find("ZS_MarkerHandler"));
+        return Toby_MarkerHandler(EventHandler.Find("Toby_MarkerHandler"));
     }
 
-    play static ZS_MarkerHandler GetInstancePlay()
+    play static Toby_MarkerHandler GetInstancePlay()
     {
-        return ZS_MarkerHandler(EventHandler.Find("ZS_MarkerHandler"));
+        return Toby_MarkerHandler(EventHandler.Find("Toby_MarkerHandler"));
     }
 
     private void AutoPlaceMarkers()

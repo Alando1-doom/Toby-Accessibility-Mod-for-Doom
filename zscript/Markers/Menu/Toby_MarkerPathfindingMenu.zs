@@ -6,7 +6,7 @@ class Toby_MarkerPathfindingMenu : OptionMenu
         mDesc.mItems.Clear();
         mDesc.mSelectedItem = -1;
 
-        ZS_MarkerHandler handler = ZS_MarkerHandler.GetInstanceUi();
+        Toby_MarkerHandler handler = Toby_MarkerHandler.GetInstanceUi();
         for (uint i = 0; i < handler.recordContainers[consoleplayer].records.Size(); i++) {
             string description = handler.recordContainers[consoleplayer].records[i].markerDescription;
             int markerId = handler.recordContainers[consoleplayer].records[i].id;

@@ -6,7 +6,7 @@ class Toby_MarkerAddMenu : OptionMenu
         mDesc.mItems.Clear();
         mDesc.mSelectedItem = -1;
 
-        ZS_MarkerHandler handler = ZS_MarkerHandler.GetInstanceUi();
+        Toby_MarkerHandler handler = Toby_MarkerHandler.GetInstanceUi();
 
         for (uint i = 0; i < handler.db.items.Size(); i++)
         {
