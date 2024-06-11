@@ -78,10 +78,7 @@ class Toby_PathfinderHandler : EventHandler
     //This is debug only
     override void RenderOverlay(RenderEvent e)
     {
-        if (!(CVar.FindCvar("Toby_Developer").GetBool()))
-        {
-            return;
-        }
+        if (!(CVar.FindCvar("Toby_Developer").GetBool() && CVar.FindCvar("Toby_Developer_PathfindingDebug").GetBool())) { return; }
 
         projector.viewport.FromHud();
         if (!projector.canProject)
