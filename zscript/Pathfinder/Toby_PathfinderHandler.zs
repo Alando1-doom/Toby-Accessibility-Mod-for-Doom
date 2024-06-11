@@ -100,7 +100,7 @@ class Toby_PathfinderHandler : EventHandler
                 }
             }
 
-            if (pathfinderFollowers[i].destinationReached)
+            if (pathfinderFollowers[i].destinationReached || pathfinders[i].pathDoesNotExist)
             {
                 if (!pathfindingMarkers[i].InStateSequence(pathfindingMarkers[i].CurState, pathfindingMarkers[i].ResolveState("Spawn")))
                 {
