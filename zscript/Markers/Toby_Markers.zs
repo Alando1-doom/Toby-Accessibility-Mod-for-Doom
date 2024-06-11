@@ -36,6 +36,21 @@ class Toby_Marker_AnyKeyDoor : Toby_Marker_Silent {}
 
 class Toby_Marker_Exit : Toby_Marker_Silent {}
 
+class Toby_Marker_Pathfinding : ZS_Marker_Base
+{
+    States
+    {
+        Spawn:
+            MRK1 B 2 Bright;
+            Loop;
+        Enabled:
+            MRK1 B 2 Bright;
+            MRK1 BBBBBBBB 4 Bright;
+            MRK1 B 2 Bright A_StartSound("marker/beacon1", CHAN_5, 0, 1.0, ATTN_NORM);
+            Loop;
+    }
+}
+
 class Toby_Marker_1 : ZS_Marker_Base
 {
     States
