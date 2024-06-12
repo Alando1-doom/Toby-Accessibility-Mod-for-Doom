@@ -268,6 +268,7 @@ class Toby_PathfindingNodeBuilder: Thinker
             node.AddEdge(newNode);
         }
 
+        //This dumb part somehow breaks everything sometimes -PR
         if (lastClosestNode)
         {
             lastClosestNode.AddEdge(newNode);

@@ -159,7 +159,9 @@ class Toby_Pathfinder
             bool isInOpenList = !(openList.Find(processedNode) == openList.Size());
             if (isInOpenList || isInClosedList) { continue; }
             openList.Push(processedNode);
-            double hScore = CalculateScore(processedNode, endNode);
+            //I've added this coefficient to break the symmetry when H + G always resulted in same F in some situations -PR
+            double heuristicCoefficient = 1.1;
+            double hScore = CalculateScore(processedNode, endNode) * heuristicCoefficient;
             double gScore = CalculateScore(processedNode, currentNode) + currentNode.gScore;
             if (processedNode.GetFScore() < gScore + hScore) { continue; }
             processedNode.SetScore(gScore, hScore);
@@ -206,6 +208,11 @@ class Toby_Pathfinder
         Toby_PathfindingNode currentNode = path[0];
         Toby_PathfindingNode minScoreNode = null;
         double minFScore = Int.Max;
+
+        // This is a bit stupid but it prevents crashes so I'm leaving it in
+        // Crashes occur when player's center is handing over the edge of a sector that
+        // is not visited yet and pathfinding attempt is made.
+        // I don't know how to fix this otherwise -PR
         if (!currentNode)
         {
             pathDoesNotExist = true;
@@ -219,6 +226,8 @@ class Toby_Pathfinder
             Toby_PathfindingNode processedNode = currentNode.backwardsEdges[i];
             bool isInPath = !(path.Find(processedNode) == path.Size());
             if (isInPath) { continue; }
+            // Symmetry?
+            // console.printf("Node "..processedNode.id..": "..processedNode.hScore.." + "..processedNode.gScore.." = "..processedNode.GetFScore());
             if (processedNode.GetFScore() < minFScore)
             {
                 minFScore = processedNode.GetFScore();

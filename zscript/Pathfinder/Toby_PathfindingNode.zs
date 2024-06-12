@@ -27,11 +27,11 @@ class Toby_PathfindingNode
 
     void AddEdge(Toby_PathfindingNode otherNode)
     {
-        if (!IsAlreadyConnected(otherNode))
-        {
-            edges.push(otherNode);
-            otherNode.backwardsEdges.push(self);
-        }
+        if (self == otherNode) { return; }
+        if (IsAlreadyConnected(otherNode)) { return; }
+
+        edges.push(otherNode);
+        otherNode.backwardsEdges.push(self);
     }
 
     bool IsAlreadyConnected(Toby_PathfindingNode otherNode)
