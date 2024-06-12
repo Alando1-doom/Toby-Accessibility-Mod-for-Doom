@@ -12,6 +12,13 @@ class Toby_PathfindingNodeContainer
 
     Toby_PathfindingNode AddNode(Vector3 pos, int lineId)
     {
+        for (int i = 0; i < nodes.Size(); i++)
+        {
+            if ((nodes[i].pos - pos).Length() == 0)
+            {
+                return nodes[i];
+            }
+        }
         Toby_PathfindingNode newNode = Toby_PathfindingNode.Create(pos, lineId, lastId);
         lastId++;
         nodes.push(newNode);
