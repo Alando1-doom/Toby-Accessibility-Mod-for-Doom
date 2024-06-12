@@ -38,6 +38,12 @@ class Toby_Marker_Exit : Toby_Marker_Silent {}
 
 class Toby_Marker_Pathfinding : ZS_Marker_Base
 {
+    default
+    {
+        Radius 16;
+        Height 20;
+        +INVISIBLE
+    }
     States
     {
         Spawn:
