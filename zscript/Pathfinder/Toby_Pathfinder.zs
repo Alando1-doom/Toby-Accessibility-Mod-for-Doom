@@ -164,7 +164,7 @@ class Toby_Pathfinder
                 openList.Push(processedNode);
             }
             //I've added this coefficient to break the symmetry when H + G always resulted in same F in some situations -PR
-            double heuristicCoefficient = 1.1;
+            double heuristicCoefficient = 1.0;
             double hScore = CalculateScore(processedNode, endNode) * heuristicCoefficient;
             double gScore = CalculateScore(processedNode, currentNode) + currentNode.gScore;
             if (processedNode.GetFScore() < gScore + hScore) { continue; }
@@ -233,7 +233,7 @@ class Toby_Pathfinder
             if (isInPath) { continue; }
             // Symmetry?
             // console.printf("Current node: "..currentNode.id.."; ".."Processed Node "..processedNode.id..": "..processedNode.hScore.." + "..processedNode.gScore.." = "..processedNode.GetFScore());
-            if (processedNode.GetFScore() < minFScore)
+            if (processedNode.GetFScore() <= minFScore)
             {
                 minFScore = processedNode.GetFScore();
                 minScoreNode = processedNode;
