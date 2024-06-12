@@ -80,11 +80,18 @@ class Toby_PathfinderDebugRender
                 edges = edges..", "..node.edges[j].id;
             }
 
+            let backwardsEdges = "";
+            for (int j = 0; j < node.backwardsEdges.Size(); j++)
+            {
+                backwardsEdges = backwardsEdges..", "..node.backwardsEdges[j].id;
+            }
+
             RenderCircle(screenPos.x, screenPos.y, circleRadius, color(25, 25, 25), circle, transform);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 1, "Node ID: "..node.id);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 2, "Linked to: "..edges);
-            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 3, "Line ID: "..node.lineId);
-            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 4, "Score (G + H = F): ".. node.gScore .. " + ".. node.hScore .." = "..node.fScore);
+            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 3, "Backlinked to: "..backwardsEdges);
+            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 4, "Line ID: "..node.lineId);
+            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 5, "Score (G + H = F): ".. node.gScore .. " + ".. node.hScore .." = "..node.fScore);
         }
     }
 
