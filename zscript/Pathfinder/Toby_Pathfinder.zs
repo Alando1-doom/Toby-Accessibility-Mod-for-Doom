@@ -248,7 +248,6 @@ class Toby_Pathfinder
             console.printf("Path construction failed on minScoreNode");
             return;
         }
-        console.printf("Min score node id: "..minScoreNode.id);
         path.Insert(0, minScoreNode);
         if (minScoreNode == startNode)
         {
