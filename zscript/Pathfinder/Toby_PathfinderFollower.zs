@@ -66,20 +66,20 @@ class Toby_PathfinderFollower
         return pf.path[currentPathNode];
     }
 
-    bool IsCurrentPathNodeReached(Actor a, int range = 50)
+    bool IsCurrentPathNodeReached(Actor a, int range = 80)
     {
         if (!pf.pathFinalized) { return false; }
         Toby_PathfindingNode node = GetCurrentPathNode();
         if (!node) { return false; }
         if (!a) { return false; }
-        if ((a.pos.xy - node.pos.xy).Length() < range)
+        if ((a.pos - node.pos).Length() < range)
         {
             return true;
         }
         return false;
     }
 
-    void UpdateCurrentPathNode(Actor a, int range = 50)
+    void UpdateCurrentPathNode(Actor a, int range = 80)
     {
         if (destinationReached) { return; }
         if (!pf.pathFinalized) { return; }
