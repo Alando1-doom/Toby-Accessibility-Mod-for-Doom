@@ -150,7 +150,7 @@ OptionMenu "toby_marker_main"
     Submenu "Pathfinding", "toby_marker_pathfinding"
     Submenu "Add marker", "toby_marker_add"
     Submenu "Remove marker", "toby_marker_remove"
-    Submenu "Add remove nearest marker", "toby_marker_remove_nearest"
+    Submenu "Remove nearest marker", "toby_marker_remove_nearest"
 }
 
 OptionMenu "toby_marker_pathfinding"
@@ -174,5 +174,5 @@ OptionMenu "toby_marker_remove"
 OptionMenu "toby_marker_remove_nearest"
 {
   class Toby_MarkerRemoveNearestMenu
-  Title "Remove marker"
+  Title "Remove nearest marker"
 }
