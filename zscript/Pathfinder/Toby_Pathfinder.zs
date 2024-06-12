@@ -58,7 +58,7 @@ class Toby_Pathfinder
         {
             return;
         }
-        int maxCycles = 500;
+        int maxCycles = 100;
         for (int i = 0; i < maxCycles; i++)
         {
             if (!pathFound)
