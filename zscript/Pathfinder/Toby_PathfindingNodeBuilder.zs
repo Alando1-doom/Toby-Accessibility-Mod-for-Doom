@@ -18,6 +18,11 @@ class Toby_PathfindingNodeBuilder: Thinker
     vector3 currentPos;
     vector3 previousPos;
 
+    vector3 currentPosIncludingAirtime;
+    vector3 previousPosIncludingAirtime;
+
+    double averageMovement;
+
     int previousVisibleNodes;
     int currentVisibleNodes;
 
@@ -47,6 +52,11 @@ class Toby_PathfindingNodeBuilder: Thinker
         nodeBuilder.currentPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
         nodeBuilder.previousPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
 
+        nodeBuilder.currentPosIncludingAirtime = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
+        nodeBuilder.previousPosIncludingAirtime = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
+
+        nodeBuilder.averageMovement = playerActor.radius * 2;
+
         return nodeBuilder;
     }
 
@@ -54,6 +64,54 @@ class Toby_PathfindingNodeBuilder: Thinker
     {
         Super.Tick();
         if (!playerActor) { return; }
+        int minDistance = 100;
+
+        bool teleportOccured = false;
+        double movement = (currentPosIncludingAirtime.xy - previousPosIncludingAirtime.xy).Length();
+        int doubleRadius = playerActor.radius * 2;
+        if (movement > averageMovement)
+        {
+            teleportOccured = true;
+        }
+        else
+        {
+            averageMovement = (movement + averageMovement) / 2;
+        }
+        if (averageMovement < doubleRadius)
+        {
+            averageMovement = doubleRadius;
+        }
+
+        if (teleportOccured)
+        {
+            Toby_PathfindingNode startNode = null;
+            Toby_PathfindingNode endNode = null;
+            if (!IsSimilarNodeExists(previousPosIncludingAirtime, -3, minDistance))
+            {
+                console.printf("Start node does not exist");
+                startNode = nodeContainer.AddNode(previousPosIncludingAirtime, -3);
+                LinkNodesInSector(startNode, playerActor, lastClosestNode, minDistance);
+            }
+            if (!IsSimilarNodeExists(currentPosIncludingAirtime, -3, minDistance))
+            {
+                console.printf("End node does not exist");
+                endNode = nodeContainer.AddNode(currentPosIncludingAirtime, -3);
+                LinkNodesInSector(endNode, playerActor, lastClosestNode, minDistance);
+            }
+            if (startNode)
+            {
+                if (endNode)
+                {
+                    console.printf("Teleport connected");
+                    startNode.AddEdge(endNode);
+                    endNode.AddEdge(startNode);
+                }
+            }
+        }
+
+        previousPosIncludingAirtime = currentPosIncludingAirtime;
+        currentPosIncludingAirtime = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
+
         vector3 playerPos = playerActor.pos;
 
         bool playerIsOnFloorLevel = playerPos.z == GetFloorHeightAtActorCoords(playerActor);
@@ -90,8 +148,6 @@ class Toby_PathfindingNodeBuilder: Thinker
 
         previousPos = (currentPos.x, currentPos.y, currentPos.z);
         currentPos = (playerPos.x, playerPos.y, playerPos.z);
-
-        int minDistance = 100;
 
         if (currentSectorId != previousSectorId)
         {
@@ -179,8 +235,6 @@ class Toby_PathfindingNodeBuilder: Thinker
                     endNode.AddEdge(startNode);
                 }
             }
-
-
         }
 
         previousVisibleNodes = currentVisibleNodes;
