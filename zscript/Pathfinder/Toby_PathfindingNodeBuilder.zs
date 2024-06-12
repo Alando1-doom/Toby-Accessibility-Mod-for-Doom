@@ -146,8 +146,6 @@ class Toby_PathfindingNodeBuilder: Thinker
             //console.printf("Floor level changes");
         }
 
-        console.printf(""..accumulatedFloorHeightChange.." "..previousFloorLevel.." "..currentFloorLevel);
-
         previousVisibleNodes = currentVisibleNodes;
         currentVisibleNodes = GetPossibleConnectionsCount(currentPos);
 
