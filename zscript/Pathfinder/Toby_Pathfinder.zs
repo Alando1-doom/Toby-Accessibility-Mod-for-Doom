@@ -157,8 +157,12 @@ class Toby_Pathfinder
             Toby_PathfindingNode processedNode = currentNode.edges[i];
             bool isInClosedList = !(closedList.Find(processedNode) == closedList.Size());
             bool isInOpenList = !(openList.Find(processedNode) == openList.Size());
-            if (isInOpenList || isInClosedList) { continue; }
-            openList.Push(processedNode);
+            // if (isInOpenList || isInClosedList) { continue; }
+            if (isInClosedList) { continue; }
+            if(!isInOpenList)
+            {
+                openList.Push(processedNode);
+            }
             //I've added this coefficient to break the symmetry when H + G always resulted in same F in some situations -PR
             double heuristicCoefficient = 1.1;
             double hScore = CalculateScore(processedNode, endNode) * heuristicCoefficient;
@@ -219,6 +223,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
+            console.printf("Path construction failed on currentNode");
             return;
         }
         for(int i = 0; i < currentNode.backwardsEdges.Size(); i++)
@@ -227,13 +232,23 @@ class Toby_Pathfinder
             bool isInPath = !(path.Find(processedNode) == path.Size());
             if (isInPath) { continue; }
             // Symmetry?
-            // console.printf("Node "..processedNode.id..": "..processedNode.hScore.." + "..processedNode.gScore.." = "..processedNode.GetFScore());
+            // console.printf("Current node: "..currentNode.id.."; ".."Processed Node "..processedNode.id..": "..processedNode.hScore.." + "..processedNode.gScore.." = "..processedNode.GetFScore());
             if (processedNode.GetFScore() < minFScore)
             {
                 minFScore = processedNode.GetFScore();
                 minScoreNode = processedNode;
             }
         }
+        if (!minScoreNode)
+        {
+            pathDoesNotExist = true;
+            pathFound = false;
+            pathfindingActive = false;
+            pathConstructed = false;
+            console.printf("Path construction failed on minScoreNode");
+            return;
+        }
+        console.printf("Min score node id: "..minScoreNode.id);
         path.Insert(0, minScoreNode);
         if (minScoreNode == startNode)
         {
@@ -302,7 +317,7 @@ class Toby_Pathfinder
 
     double CalculateScore(Toby_PathfindingNode currentNode, Toby_PathfindingNode otherNode)
     {
-        return (currentNode.pos.xy - otherNode.pos.xy).length();
+        return (currentNode.pos - otherNode.pos).length();
     }
 
     Toby_PathfindingNode GetMinFScoreNodeFromOpenList()

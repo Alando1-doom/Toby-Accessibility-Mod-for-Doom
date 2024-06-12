@@ -9,7 +9,11 @@ class Toby_PathfindingNodeBuilder: Thinker
     int currentFloorLevel;
     int previousFloorLevel;
 
-    int accumulatedFloorHeightChange;
+    bool elevatorRideStarted;
+    bool currentElevatorRideStarted;
+    bool previousElevatorRideStarted;
+    vector3 elevatorRideStartPos;
+    vector3 elevatorRideEndPos;
 
     vector3 currentPos;
     vector3 previousPos;
@@ -31,7 +35,11 @@ class Toby_PathfindingNodeBuilder: Thinker
         nodeBuilder.currentSectorId = playerActor.curSector.Index();
         nodeBuilder.previousSectorId = playerActor.curSector.Index();
 
-        nodeBuilder.accumulatedFloorHeightChange = 0;
+        nodeBuilder.elevatorRideStarted = false;
+        nodeBuilder.currentElevatorRideStarted = false;
+        nodeBuilder.previousElevatorRideStarted = false;
+        nodeBuilder.elevatorRideStartPos = playerActor.pos;
+        nodeBuilder.elevatorRideEndPos = playerActor.pos;
 
         nodeBuilder.currentFloorLevel = playerActor.curSector.floorplane.ZatPoint((playerActor.pos.x, playerActor.pos.y));
         nodeBuilder.previousFloorLevel = playerActor.curSector.floorplane.ZatPoint((playerActor.pos.x, playerActor.pos.y));
@@ -60,13 +68,24 @@ class Toby_PathfindingNodeBuilder: Thinker
         previousFloorLevel = currentFloorLevel;
         currentFloorLevel = GetFloorHeightAtActorCoords(playerActor);
 
+        previousElevatorRideStarted = currentElevatorRideStarted;
+        currentElevatorRideStarted = elevatorRideStarted;
+
         if (previousFloorLevel != currentFloorLevel)
         {
-            accumulatedFloorHeightChange += currentFloorLevel - previousFloorLevel;
+            if (!elevatorRideStarted)
+            {
+                elevatorRideStarted = true;
+                elevatorRideStartPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
+            }
         }
         else
         {
-            accumulatedFloorHeightChange = 0;
+            if (elevatorRideStarted)
+            {
+                elevatorRideStarted = false;
+                elevatorRideEndPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
+            }
         }
 
         previousPos = (currentPos.x, currentPos.y, currentPos.z);
@@ -134,16 +153,34 @@ class Toby_PathfindingNodeBuilder: Thinker
             }
         }
 
-        if (currentSectorId == previousSectorId && playerActor.vel.z == 0 && Abs(accumulatedFloorHeightChange) >= playerActor.MaxStepHeight)
+        if (currentSectorId == previousSectorId && playerActor.vel.z == 0 && previousElevatorRideStarted != currentElevatorRideStarted && !elevatorRideStarted)
         {
-            accumulatedFloorHeightChange = 0;
-
-            if (!IsSimilarElevatorNodeExists(currentPos, playerActor))
+            // console.printf("Elevator ride ended");
+            Toby_PathfindingNode startNode = null;
+            Toby_PathfindingNode endNode = null;
+            if (!IsSimilarElevatorNodeExists(elevatorRideStartPos, playerActor))
             {
-                Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, -2);
-                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+                // console.printf("Start node does not exist");
+                startNode = nodeContainer.AddNode(elevatorRideStartPos, -2);
+                LinkNodesInSector(startNode, playerActor, lastClosestNode, minDistance);
             }
-            //console.printf("Floor level changes");
+            if (!IsSimilarElevatorNodeExists(elevatorRideEndPos, playerActor))
+            {
+                // console.printf("End node does not exist");
+                endNode = nodeContainer.AddNode(elevatorRideEndPos, -2);
+                LinkNodesInSector(endNode, playerActor, lastClosestNode, minDistance);
+            }
+            if (startNode)
+            {
+                if (endNode)
+                {
+                    // console.printf("Elevator ride connected");
+                    startNode.AddEdge(endNode);
+                    endNode.AddEdge(startNode);
+                }
+            }
+
+
         }
 
         previousVisibleNodes = currentVisibleNodes;
@@ -268,10 +305,11 @@ class Toby_PathfindingNodeBuilder: Thinker
             node.AddEdge(newNode);
         }
 
-        //This dumb part somehow breaks everything sometimes -PR
+        // This dumb part somehow breaks everything sometimes, I don't know how to fix it -PR
         if (lastClosestNode)
         {
             lastClosestNode.AddEdge(newNode);
+
             bool withinMaxStepHeight = Abs(lastClosestNode.pos.z - newNode.pos.z) <= playerActor.MaxStepHeight;
             bool nodeIsCloseEnough = (lastClosestNode.pos.xy - newNode.pos.xy).Length() < distance;
             if (withinMaxStepHeight && nodeIsCloseEnough)
