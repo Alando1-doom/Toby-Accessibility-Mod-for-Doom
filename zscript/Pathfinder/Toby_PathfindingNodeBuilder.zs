@@ -88,13 +88,13 @@ class Toby_PathfindingNodeBuilder: Thinker
             Toby_PathfindingNode endNode = null;
             if (!IsSimilarNodeExists(previousPosIncludingAirtime, -3, minDistance))
             {
-                console.printf("Start node does not exist");
+                // console.printf("Start node does not exist");
                 startNode = nodeContainer.AddNode(previousPosIncludingAirtime, -3);
                 LinkNodesInSector(startNode, playerActor, lastClosestNode, minDistance);
             }
             if (!IsSimilarNodeExists(currentPosIncludingAirtime, -3, minDistance))
             {
-                console.printf("End node does not exist");
+                // console.printf("End node does not exist");
                 endNode = nodeContainer.AddNode(currentPosIncludingAirtime, -3);
                 LinkNodesInSector(endNode, playerActor, lastClosestNode, minDistance);
             }
@@ -102,7 +102,7 @@ class Toby_PathfindingNodeBuilder: Thinker
             {
                 if (endNode)
                 {
-                    console.printf("Teleport connected");
+                    // console.printf("Teleport connected");
                     startNode.AddEdge(endNode);
                     endNode.AddEdge(startNode);
                 }
