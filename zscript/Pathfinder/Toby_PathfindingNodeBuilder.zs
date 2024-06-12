@@ -6,6 +6,11 @@ class Toby_PathfindingNodeBuilder: Thinker
     int currentSectorId;
     int previousSectorId;
 
+    int currentFloorLevel;
+    int previousFloorLevel;
+
+    int accumulatedFloorHeightChange;
+
     vector3 currentPos;
     vector3 previousPos;
 
@@ -25,6 +30,11 @@ class Toby_PathfindingNodeBuilder: Thinker
 
         nodeBuilder.currentSectorId = playerActor.curSector.Index();
         nodeBuilder.previousSectorId = playerActor.curSector.Index();
+
+        nodeBuilder.accumulatedFloorHeightChange = 0;
+
+        nodeBuilder.currentFloorLevel = playerActor.curSector.floorplane.ZatPoint((playerActor.pos.x, playerActor.pos.y));
+        nodeBuilder.previousFloorLevel = playerActor.curSector.floorplane.ZatPoint((playerActor.pos.x, playerActor.pos.y));
 
         nodeBuilder.currentPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
         nodeBuilder.previousPos = (playerActor.pos.x, playerActor.pos.y, playerActor.pos.z);
@@ -46,6 +56,18 @@ class Toby_PathfindingNodeBuilder: Thinker
 
         previousSectorId = currentSectorId;
         currentSectorId = playerActor.curSector.Index();
+
+        previousFloorLevel = currentFloorLevel;
+        currentFloorLevel = GetFloorHeightAtActorCoords(playerActor);
+
+        if (previousFloorLevel != currentFloorLevel)
+        {
+            accumulatedFloorHeightChange += currentFloorLevel - previousFloorLevel;
+        }
+        else
+        {
+            accumulatedFloorHeightChange = 0;
+        }
 
         previousPos = (currentPos.x, currentPos.y, currentPos.z);
         currentPos = (playerPos.x, playerPos.y, playerPos.z);
@@ -111,6 +133,20 @@ class Toby_PathfindingNodeBuilder: Thinker
                 // console.printf("Regular sector crossing");
             }
         }
+
+        if (currentSectorId == previousSectorId && playerActor.vel.z == 0 && Abs(accumulatedFloorHeightChange) >= playerActor.MaxStepHeight)
+        {
+            accumulatedFloorHeightChange = 0;
+
+            if (!IsSimilarElevatorNodeExists(currentPos, playerActor))
+            {
+                Toby_PathfindingNode newCurrentPosNode = nodeContainer.AddNode(currentPos, -2);
+                LinkNodesInSector(newCurrentPosNode, playerActor, lastClosestNode, minDistance);
+            }
+            //console.printf("Floor level changes");
+        }
+
+        console.printf(""..accumulatedFloorHeightChange.." "..previousFloorLevel.." "..currentFloorLevel);
 
         previousVisibleNodes = currentVisibleNodes;
         currentVisibleNodes = GetPossibleConnectionsCount(currentPos);
@@ -254,6 +290,26 @@ class Toby_PathfindingNodeBuilder: Thinker
             bool inSameSector = Toby_SectorMathUtil.IsInSameSector(pos, node.pos);
             if (!inSameSector) { continue; }
             if (node.lineId == lineId && (pos.xy - node.pos.xy).Length() < distance && pos.z == node.pos.z)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool IsSimilarElevatorNodeExists(Vector3 pos, Actor playerActor)
+    {
+        if (!playerActor)
+        {
+            return false;
+        }
+        for (int i = 0; i < nodeContainer.nodes.Size(); i++)
+        {
+            Toby_PathfindingNode node = nodeContainer.nodes[i];
+            if (node.lineId != -2) { continue; }
+            bool inSameSector = Toby_SectorMathUtil.IsInSameSector(pos, node.pos);
+            if (!inSameSector) { continue; }
+            if (Abs(pos.z - node.pos.z) < playerActor.MaxStepHeight)
             {
                 return true;
             }
