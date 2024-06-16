@@ -388,7 +388,7 @@
 // MAP29 - Processing Plant
 {"Checksum":"ddd6e377b8e7d614b0a6aaea0a29b249", "SoundToPlay":"map/toby/processingplant"}
 // MAP30 - Refueling Base
-{"Checksum":"80986140b82f4febb6fee2621cc11af4", "SoundToPlay":"map/toby/refuelingbase"}
+{"Checksum":"479e739e2650f4a6e971914100864871", "SoundToPlay":"map/toby/refuelingbase"}
 // MAP31 - Circle of Death
 {"Checksum":"88df69f18dc497e90c1cc694367c7d9f", "SoundToPlay":"map/toby/circleofdeath"}
 // MAP32 - Baphomet's Citadel
