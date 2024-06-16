@@ -28,8 +28,24 @@ version "4.6"
 #include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
 #include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
 
+//Marker menus
+#include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerAddMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerAddMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerRemoveNearestMenu.zs"
+
 //Markers
-#include "zscript/Markers/ZS_MarkerHandler.zs"
+#include "zscript/Markers/Toby_AutoMarkerDatabase.zs"
+#include "zscript/Markers/Toby_AutoMarkerDatabaseItem.zs"
+#include "zscript/Markers/Toby_MarkerDatabase.zs"
+#include "zscript/Markers/Toby_MarkerDatabaseItem.zs"
+#include "zscript/Markers/Toby_MarkerRecordContainer.zs"
+#include "zscript/Markers/Toby_MarkerRecord.zs"
+#include "zscript/Markers/Toby_MarkerHandler.zs"
 #include "zscript/Markers/Toby_Markers.zs"
 
 //Dropdoff detector
@@ -104,3 +120,15 @@ version "4.6"
 
 //Line Spawner
 #include "zscript/linespawner.zs"
+
+//Pathfinder
+#include "zscript/Pathfinder/Toby_PathfinderHandler.zs"
+#include "zscript/Pathfinder/Toby_Pathfinder.zs"
+#include "zscript/Pathfinder/Toby_PathfinderDebugRender.zs"
+#include "zscript/Pathfinder/Toby_PathfinderFollower.zs"
+#include "zscript/Pathfinder/Toby_PathfinderThinker.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNode.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNodeBuilder.zs"
+#include "zscript/Pathfinder/Toby_PathfindingNodeContainer.zs"
+#include "zscript/Pathfinder/Toby_SectorMathUtil.zs"
+#include "zscript/Pathfinder/Toby_LineSegmentIntersectionUtil.zs"

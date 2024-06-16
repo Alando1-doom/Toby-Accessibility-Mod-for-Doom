@@ -2,7 +2,7 @@ GameInfo
 {
     AddEventHandlers = "Toby_SoundBindingsLoaderStaticHandler"
     AddEventHandlers = "Toby_SoundQueueStaticHandler"
-    AddEventHandlers = "ZS_MarkerHandler"
+    AddEventHandlers = "Toby_MarkerHandler"
     AddEventHandlers = "Toby_MenuStaticHandler"
     AddEventHandlers = "Toby_MapAnnouncementStaticHandler"
     AddEventHandlers = "Toby_PlayerStatusCheckStaticHandler"
@@ -18,4 +18,5 @@ GameInfo
     AddEventHandlers = "TobyEventHandler" //Line Spawner
     AddEventHandlers = "Toby_UniversalPickupBeaconHandler"
     AddEventHandlers = "Toby_ClassIgnoreListLoaderStaticHandler"
+    AddEventHandlers = "Toby_PathfinderHandler"
 }
