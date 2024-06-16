@@ -29,10 +29,12 @@ class Toby_WallDetector: Thinker
         if (!player) { return; }
         if (player.cmd.forwardmove == 0 && player.cmd.sidemove == 0) { return; }
         if (cooldown != 0) { return; }
-        owner.A_ThrowGrenade("WallHit", -12, 2.5, 1);
-        owner.A_ThrowGrenade("WallHit", -12, -2.5, 1);
-        owner.A_SpawnProjectile("WallHit",24,0,100,2,0);
-        owner.A_SpawnProjectile("WallHit",24,0,260,2,0);
+        //owner.A_ThrowGrenade("WallHit", -12, 2.5, 1);
+        //owner.A_ThrowGrenade("WallHit", -12, -2.5, 1);
+		owner.A_SpawnProjectile("WallHit",28,0,0,2,0);
+        owner.A_SpawnProjectile("WallHit",28,0,180,2,0);
+        owner.A_SpawnProjectile("WallHit",28,0,100,2,0);
+        owner.A_SpawnProjectile("WallHit",28,0,260,2,0);
         cooldown = cooldownMax;
     }
 }
