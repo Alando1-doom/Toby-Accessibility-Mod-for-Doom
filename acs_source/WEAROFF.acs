@@ -43,7 +43,10 @@ script "Timers" Enter
 	}
 	ACS_NamedExecute("RadTimer",0);		//Environment Suit
 	ACS_NamedExecute("BlurTimer",0);	//Blursphere
+	ACS_NamedExecute("GhostTimer",0);	//Shadow Sphere
 	ACS_NamedExecute("InvulnTimer",0);	//Invulnerability
+	ACS_NamedExecute("FlightTimer",0);	//Wings of Wrath
+	ACS_NamedExecute("TomeTimer",0);	//Tome of Power
 }
 
 script "RadTimer" (void)
@@ -80,6 +83,23 @@ script "BlurTimer" (void)
     }
 }
 
+script "GhostTimer" (void)
+{
+	if(ClassifyActor(0) & ACTOR_VOODOODOLL)
+	{
+		terminate;
+	}
+    while(true)
+	{
+        if(GetActorPowerupTics(0, "PowerGhost") == 112)
+		{
+            PlaySound(0,"artifact/shadow/wear",CHAN_5);
+			//terminate;
+            }
+        Delay(1);
+    }
+}
+
 script "InvulnTimer" (void)
 {
 	if(ClassifyActor(0) & ACTOR_VOODOODOLL){
@@ -90,6 +110,40 @@ script "InvulnTimer" (void)
         if(GetActorPowerupTics(0, "PowerInvulnerable") == 112)
 		{
             PlaySound(0,"invul/wearoff",CHAN_5);
+			//terminate;
+            }
+        Delay(1);
+    }
+}
+
+script "FlightTimer" (void)
+{
+	if(ClassifyActor(0) & ACTOR_VOODOODOLL)
+	{
+		terminate;
+	}
+    while(true)
+	{
+        if(GetActorPowerupTics(0, "PowerFlight") == 112)
+		{
+            PlaySound(0,"artifact/wings/wear",CHAN_5);
+			//terminate;
+            }
+        Delay(1);
+    }
+}
+
+script "TomeTimer" (void)
+{
+	if(ClassifyActor(0) & ACTOR_VOODOODOLL)
+	{
+		terminate;
+	}
+    while(true)
+	{
+        if(GetActorPowerupTics(0, "PowerWeaponLevel2") == 112)
+		{
+            PlaySound(0,"tome/wearoff",CHAN_5);
 			//terminate;
             }
         Delay(1);
