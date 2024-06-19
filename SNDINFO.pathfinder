@@ -1,0 +1,35 @@
+//Doors
+
+pathfinder/reddoor            "sounds/PathFinder/RedDoor.ogg"
+pathfinder/redskull            "sounds/PathFinder/RedSkullDoor.ogg"
+pathfinder/bluedoor           "sounds/PathFinder/BlueDoor.ogg"
+pathfinder/blueskull           "sounds/PathFinder/BlueSkullDoor.ogg"
+pathfinder/yellowdoor        "sounds/PathFinder/YellowDoor.ogg"
+pathfinder/yellowskull        "sounds/PathFinder/YellowSkullDoor.ogg"
+pathfinder/greendoor         "sounds/PathFinder/GreenDoor.ogg"
+pathfinder/3keydoor           "sounds/PathFinder/3KeyDoor.ogg"
+pathfinder/6keydoor           "sounds/PathFinder/6KeyDoor.ogg"
+pathfinder/anykeydoor       "sounds/PathFinder/AnyKeyDoor.ogg"
+
+
+//Exits
+
+pathfinder/exit                    "sounds/PathFinder/Exit.ogg"
+pathfinder/secretexit           "sounds/PathFinder/SecretExit.ogg"
+
+
+//Path Finder Menu and Actions
+
+pathfinder/markers              "sounds/PathFinder/Markers.ogg"
+pathfinder/nodereached      "sounds/PathFinder/NodeReached.ogg"
+pathfinder/nopath                "sounds/PathFinder/NoPath.ogg"
+pathfinder/pathfound           "sounds/PathFinder/PathFound.ogg"
+pathfinder/placemarkers      "sounds/PathFinder/PlaceMarkers.ogg"
+pathfinder/removenearest    "sounds/PathFinder/RemNearestMark.ogg"
+pathfinder/removemarker     "sounds/PathFinder/RemoveMarker.ogg"
+pathfinder/stoppath               "sounds/PathFinder/StopPath.ogg"
+pathfinder/beep1					  "sounds/PathFinder/BEEP1.wav"
+pathfinder/beep2					  "sounds/PathFinder/BEEPING.wav"
+pathfinder/cricket1				  "sounds/PathFinder/CRICKET1.wav"
+pathfinder/cricket2				  "sounds/PathFinder/CRICKET2.wav"
+pathfinder/hum				      "sounds/PathFinder/HUM1.wav"

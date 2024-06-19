@@ -46,6 +46,27 @@ Script "CheckKeys" (void)
 		anykey = true;
 		Delay(48);
 	}
+	If(CheckInventory("KeyGreen"))
+	{
+		PlaySound(0,"ann/green");
+		Print(s:"Green Key");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("KeyBlue"))
+	{
+		PlaySound(0,"ann/blue");
+		Print(s:"Blue Key");
+		anykey = true;
+		Delay(48);
+	}
+	If(CheckInventory("KeyYellow"))
+	{
+		PlaySound(0,"ann/yellow");
+		Print(s:"Yellow Key");
+		anykey = true;
+		Delay(48);
+	}
 	If(anykey == false)
 	{
 		Print(s:"You have no keys in your pocket!");
