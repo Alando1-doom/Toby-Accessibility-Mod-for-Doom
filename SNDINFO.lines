@@ -1,0 +1,9 @@
+$rolloff amb/door2 linear 48 160
+amb/door2				dsbdrsnd
+$rolloff amb/switch linear 48 160
+amb/switch				dsswsnd
+
+$rolloff amb/exit1	linear  64 144
+$rolloff amb/exit2	linear	96 144
+amb/exit1		dsexit1
+amb/exit2		dstelebc

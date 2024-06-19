@@ -143,7 +143,7 @@ script "TomeTimer" (void)
 	{
         if(GetActorPowerupTics(0, "PowerWeaponLevel2") == 112)
 		{
-            PlaySound(0,"tome/wearoff",CHAN_5);
+            PlaySound(0,"artifact/tome/wear",CHAN_5);
 			//terminate;
             }
         Delay(1);
