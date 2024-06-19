@@ -5,3 +5,8 @@
 {"ActorClass":"BlueSkull", "TextToPrint":"Blue skull key", "SoundToPlay":"keys/blueskull"}
 {"ActorClass":"YellowCard", "TextToPrint":"Yellow keycard", "SoundToPlay":"keys/yellowkeycard"}
 {"ActorClass":"YellowSkull", "TextToPrint":"Yellow skull key", "SoundToPlay":"keys/yellowskull"}
+
+//Heretic
+{"ActorClass":"KeyGreen", "TextToPrint":"Green Key", "SoundToPlay":"ann/green"}
+{"ActorClass":"KeyBlue", "TextToPrint":"Blue Key", "SoundToPlay":"ann/blue"}
+{"ActorClass":"KeyYellow", "TextToPrint":"Yellow Key", "SoundToPlay":"ann/yellow"}
