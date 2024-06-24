@@ -24,3 +24,31 @@ stats/doom/armor/megaarmor   "sounds/PlayerStats/DoomArmor/MegaArmor.ogg"
 dropoff/beacon		"sounds/DropoffDetector/DROPOFF.ogg"
 
 stats/inventory/selected			"sounds/Selected.ogg"
+
+
+//Heretic Stats
+
+heretic/weapon/staff					"sounds/PlayerStats/HereticWeapons/STAFF.ogg"
+heretic/weapon/beak					"sounds/PlayerStats/HereticWeapons/BEAK.ogg"
+heretic/weapon/gauntlets			"sounds/PlayerStats/HereticWeapons/Gauntlets.ogg"
+heretic/weapon/goldwand			"sounds/PlayerStats/HereticWeapons/GoldWand.ogg"
+heretic/weapon/crossbow			"sounds/PlayerStats/HereticWeapons/ECrossbow.ogg"
+heretic/weapon/dragonclaw		"sounds/PlayerStats/HereticWeapons/DragonClaw.ogg"
+heretic/weapon/hellstaff				"sounds/PlayerStats/HereticWeapons/HellStaff.ogg"
+heretic/weapon/phoenixrod			"sounds/PlayerStats/HereticWeapons/PhoenixRod.ogg"
+heretic/weapon/mace					"sounds/PlayerStats/HereticWeapons/FireMace.ogg"
+
+heretic/ammo/wandcrystal			"sounds/PlayerStats/HereticAmmo/WandCrystal.ogg"
+heretic/ammo/wandcrystals			"sounds/PlayerStats/HereticAmmo/WandCrystals.ogg"
+heretic/ammo/arrow					"sounds/PlayerStats/HereticAmmo/Arrow.ogg"
+heretic/ammo/arrows					"sounds/PlayerStats/HereticAmmo/Arrows.ogg"
+heretic/ammo/claworb					"sounds/PlayerStats/HereticAmmo/ClawOrb.ogg"
+heretic/ammo/claworbs				"sounds/PlayerStats/HereticAmmo/ClawOrbs.ogg"
+heretic/ammo/rune						"sounds/PlayerStats/HereticAmmo/Rune.ogg"
+heretic/ammo/runes					"sounds/PlayerStats/HereticAmmo/Runes.ogg"
+heretic/ammo/flameorb				"sounds/PlayerStats/HereticAmmo/FlameOrb.ogg"
+heretic/ammo/flameorbs				"sounds/PlayerStats/HereticAmmo/FlameOrbs.ogg"
+heretic/ammo/macespheres		"sounds/PlayerStats/HereticAmmo/MaceSpheres.ogg"
+
+heretic/armor/silvershield			"sounds/PlayerStats/HereticArmor/SilverShield.ogg"
+heretic/armor/enchantedshield	"sounds/PlayerStats/HereticArmor/EnchantedShield.ogg"

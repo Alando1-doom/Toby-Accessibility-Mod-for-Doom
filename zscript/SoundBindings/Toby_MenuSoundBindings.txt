@@ -7,6 +7,7 @@
 {"EventType":"ConsoleStateChanged", "PreviousConsoleState":"2", "CurrentConsoleState":"1", "SoundToPlay":"console/open"}
 {"EventType":"ConsoleStateChanged", "PreviousConsoleState":"3", "CurrentConsoleState":"0", "SoundToPlay":"console/close"}
 
+
 //MAIN MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Mainmenu", "SoundToPlay":"menusnd/mainmenu"}
@@ -18,6 +19,17 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quit"}
 {"EventType":"MenuChanged", "PreviousMenuName":"Mainmenu", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuItemListPatchString":"M_QUITG", "SoundToPlay":"menusnd/quitselect"}
 
+
+//HERETIC MAIN MENU
+
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListTextString":"$MNU_NEWGAME", "SoundToPlay":"heretic/menu/newgame"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListTextString":"$MNU_OPTIONS", "SoundToPlay":"heretic/menu/options"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListTextString":"$MNU_GAMEFILES", "SoundToPlay":"heretic/menu/gamefiles"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameFilesMenu", "CurrentMenuItemListTextString":"$MNU_LOADGAME", "SoundToPlay":"heretic/menu/loadgame"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameFilesMenu", "CurrentMenuItemListTextString":"$MNU_SAVEGAME", "SoundToPlay":"heretic/menu/savegame"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListTextString":"$MNU_INFO", "SoundToPlay":"heretic/menu/info"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Mainmenu", "CurrentMenuItemListTextString":"$MNU_QUITGAME", "SoundToPlay":"heretic/menu/quitgame"}
+{"EventType":"MenuChanged", "PreviousMenuName":"Mainmenu", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuItemListTextString":"$MNU_QUITGAME", "SoundToPlay":"heretic/menu/quitmsg"}
 
 
 //EPISODE MENU
@@ -34,6 +46,17 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 2", "SoundToPlay":"menusnd/tobye2"}
 
 
+//HERETIC EPISODES
+
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"$MNU_COTD", "SoundToPlay":"heretic/menu/episode1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"$MNU_HELLSMAW", "SoundToPlay":"heretic/menu/episode2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"$MNU_DOME", "SoundToPlay":"heretic/menu/episode3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"$MNU_OSSUARY", "SoundToPlay":"heretic/menu/episode4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"$MNU_DEMESNE", "SoundToPlay":"heretic/menu/episode5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Heretic", "SoundToPlay":"heretic/menu/tobyheretic"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Demo Map", "SoundToPlay":"heretic/menu/demomap"}
+
+
 //DIFFICULTY MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
@@ -47,6 +70,14 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
 
+
+//HERETIC SKILLS
+
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_WETNURSE", "SoundToPlay":"heretic/menu/skill/baby"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_YELLOWBELLIES", "SoundToPlay":"heretic/menu/skill/easy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_BRINGEST", "SoundToPlay":"heretic/menu/skill/novice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_SMITE", "SoundToPlay":"heretic/menu/skill/hard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_BLACKPLAGUE", "SoundToPlay":"heretic/menu/skill/nightmare"}
 
 
 //TOBY SIMPLE OPTIONS MENU

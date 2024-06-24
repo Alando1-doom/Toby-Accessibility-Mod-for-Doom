@@ -78,3 +78,56 @@ toby/actorsinviewport/monsters/icons    "sounds/ActorsInViewport/Monsters/IconsO
 
 toby/actorsinviewport/monsters/warlord     "sounds/ActorsInViewport/Monsters/Warlord.ogg"
 toby/actorsinviewport/monsters/warlords    "sounds/ActorsInViewport/Monsters/Warlords.ogg"
+
+//Heretic Monsters
+
+heretic/monster/chicken				"sounds/ActorsInViewport/Heretic/Monsters/Chicken.ogg"
+heretic/monster/chickens			"sounds/ActorsInViewport/Heretic/Monsters/Chickens.ogg"
+
+heretic/monster/disciple				"sounds/ActorsInViewport/Heretic/Monsters/Disciple.ogg"
+heretic/monster/disciples				"sounds/ActorsInViewport/Heretic/Monsters/Disciples.ogg"
+
+heretic/monster/dsparil				"sounds/ActorsInViewport/Heretic/Monsters/Dsparil.ogg"
+heretic/monster/dsparils				"sounds/ActorsInViewport/Heretic/Monsters/Dsparils.ogg"
+
+heretic/monster/dsparilmount		"sounds/ActorsInViewport/Heretic/Monsters/DsparilMounted.ogg"
+heretic/monster/dsparilsmount	"sounds/ActorsInViewport/Heretic/Monsters/DsparilsMounted.ogg"
+
+heretic/monster/gargoyle				"sounds/ActorsInViewport/Heretic/Monsters/Gargoyle.ogg"
+heretic/monster/gargoyles			"sounds/ActorsInViewport/Heretic/Monsters/Gargoyles.ogg"
+
+heretic/monster/gargleader			"sounds/ActorsInViewport/Heretic/Monsters/GargoyleLeader.ogg"
+heretic/monster/gargleaders		"sounds/ActorsInViewport/Heretic/Monsters/GargoyleLeaders.ogg"
+
+heretic/monster/golem					"sounds/ActorsInViewport/Heretic/Monsters/Golem.ogg"
+heretic/monster/golems				"sounds/ActorsInViewport/Heretic/Monsters/Golems.ogg"
+
+heretic/monster/ghostgolem		"sounds/ActorsInViewport/Heretic/Monsters/GhostGolem.ogg"
+heretic/monster/ghostgolems		"sounds/ActorsInViewport/Heretic/Monsters/GhostGolems.ogg"
+
+heretic/monster/nitrogolem			"sounds/ActorsInViewport/Heretic/Monsters/NitroGolem.ogg"
+heretic/monster/nitrogolems		"sounds/ActorsInViewport/Heretic/Monsters/NitroGolems.ogg"
+
+heretic/monster/ghostnitro			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolem.ogg"
+heretic/monster/ghostnitro			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolems.ogg"
+
+heretic/monster/knight					"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarrior.ogg"
+heretic/monster/knights				"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarriors.ogg"
+
+heretic/monster/ghostknight		"sounds/ActorsInViewport/Heretic/Monsters/GhostWarrior.ogg"
+heretic/monster/ghostknights		"sounds/ActorsInViewport/Heretic/Monsters/GhostWarriors.ogg"
+
+heretic/monster/ironlich				"sounds/ActorsInViewport/Heretic/Monsters/Ironlich.ogg"
+heretic/monster/ironliches			"sounds/ActorsInViewport/Heretic/Monsters/Ironliches.ogg"
+
+heretic/monster/minotaur			"sounds/ActorsInViewport/Heretic/Monsters/Minotaur.ogg"
+heretic/monster/minotaurs			"sounds/ActorsInViewport/Heretic/Monsters/Minotaurs.ogg"
+
+heretic/monster/ophidian				"sounds/ActorsInViewport/Heretic/Monsters/Ophidian.ogg"
+heretic/monster/ophidians			"sounds/ActorsInViewport/Heretic/Monsters/Ophidians.ogg"
+
+heretic/monster/clink					"sounds/ActorsInViewport/Heretic/Monsters/SabreClaw.ogg"
+heretic/monster/clinks					"sounds/ActorsInViewport/Heretic/Monsters/SabreClaws.ogg"
+
+heretic/monster/weredragon		"sounds/ActorsInViewport/Heretic/Monsters/Weredragon.ogg"
+heretic/monster/weredragons		"sounds/ActorsInViewport/Heretic/Monsters/Weredragons.ogg"

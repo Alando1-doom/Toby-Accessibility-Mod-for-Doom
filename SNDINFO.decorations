@@ -163,3 +163,62 @@ toby/actorsinviewport/decorations/tallgreenpillars      "sounds/ActorsInViewport
 
 toby/actorsinviewport/decorations/tallredpillar         "sounds/ActorsInViewport/Decorations/Hell/TallRedPillar.ogg"
 toby/actorsinviewport/decorations/tallredpillars        "sounds/ActorsInViewport/Decorations/Hell/TallRedPillars.ogg"
+
+
+//Heretic
+
+heretic/deco/barrel						"sounds/ActorsInViewport/Heretic/Decorations/Barrel.ogg"
+heretic/deco/barrels						"sounds/ActorsInViewport/Heretic/Decorations/Barrels.ogg"
+
+heretic/deco/bluemarker				"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/BlueMarker.ogg"
+heretic/deco/bluemarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/BlueMarkers.ogg"
+
+heretic/deco/brownpillar				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/BrownPillar.ogg"
+heretic/deco/brownpillars			"sounds/ActorsInViewport/Heretic/Decorations/Pillars/BrownPillars.ogg"
+
+heretic/deco/chandelier				"sounds/ActorsInViewport/Heretic/Decorations/Lights/Chandelier.ogg"
+heretic/deco/chandeliers				"sounds/ActorsInViewport/Heretic/Decorations/Lights/Chandeliers.ogg"
+
+heretic/deco/firebrazier				"sounds/ActorsInViewport/Heretic/Decorations/Lights/FireBrazier.ogg"
+heretic/deco/firebraziers				"sounds/ActorsInViewport/Heretic/Decorations/Lights/FireBraziers.ogg"
+
+heretic/deco/greenmarker			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/GreenMarker.ogg"
+heretic/deco/greenmarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/GreenMarkers.ogg"
+
+heretic/deco/hangingcorpse		"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingCorpse.ogg"
+heretic/deco/hangingcorpses		"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingCorpses.ogg"
+
+heretic/deco/hangingskull			"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingSkull.ogg"
+heretic/deco/hangingskulls			"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingSkulls.ogg"
+
+heretic/deco/largestc					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalactite.ogg"
+heretic/deco/largestcs					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalactites.ogg"
+
+heretic/deco/largestm					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalagmite.ogg"
+heretic/deco/largestms				"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalagmites.ogg"
+
+heretic/deco/moss						"sounds/ActorsInViewport/Heretic/Decorations/Environment/Moss.ogg"
+
+heretic/deco/pod							"sounds/ActorsInViewport/Heretic/Decorations/Pod.ogg"
+heretic/deco/pods						"sounds/ActorsInViewport/Heretic/Decorations/Pods.ogg"
+
+heretic/deco/serpenttorch			"sounds/ActorsInViewport/Heretic/Decorations/Lights/SerpentTorch.ogg"
+heretic/deco/serpenttorches		"sounds/ActorsInViewport/Heretic/Decorations/Lights/SerpentTorches.ogg"
+
+heretic/deco/smallpillar				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/SmallPillar.ogg"
+heretic/deco/smallpillars				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/SmallPillars.ogg"
+
+heretic/deco/smallstc					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalactite.ogg"
+heretic/deco/smallstcs					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalactites.ogg"
+
+heretic/deco/smallstm					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalagmite.ogg"
+heretic/deco/smallstms				"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalagmites.ogg"
+
+heretic/deco/volcano					"sounds/ActorsInViewport/Heretic/Decorations/Environment/Volcano.ogg"
+heretic/deco/volcanoes				"sounds/ActorsInViewport/Heretic/Decorations/Environment/Volcanoes.ogg"
+
+heretic/deco/walltorch					"sounds/ActorsInViewport/Heretic/Decorations/Lights/WallTorch.ogg"
+heretic/deco/walltorches				"sounds/ActorsInViewport/Heretic/Decorations/Lights/WallTorches.ogg"
+
+heretic/deco/yellowmarker			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarker.ogg"
+heretic/deco/yellowmarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarkers.ogg"

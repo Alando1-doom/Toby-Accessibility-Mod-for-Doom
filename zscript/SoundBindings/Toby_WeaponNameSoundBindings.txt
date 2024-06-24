@@ -19,3 +19,42 @@
 {"ActorClass":"RocketLauncher", "SoundToPlay":"ann/rlauncher"}
 {"ActorClass":"PlasmaRifle", "SoundToPlay":"ann/plasmagun"}
 {"ActorClass":"BFG9000", "SoundToPlay":"ann/bfg"}
+
+
+//Heretic - Toby
+
+{"ActorClass":"Staff_Toby", "SoundToPlay":"heretic/weapon/staff"}
+{"ActorClass":"StaffPowered_Toby", "SoundToPlay":"heretic/weapon/staff"}
+{"ActorClass":"Gauntlets_Toby", "SoundToPlay":"heretic/weapon/gauntlets"}
+{"ActorClass":"GauntletsPowered_Toby", "SoundToPlay":"heretic/weapon/gauntlets"}
+{"ActorClass":"GoldWand_Toby", "SoundToPlay":"heretic/weapon/goldwand"}
+{"ActorClass":"GoldWandPowered_Toby", "SoundToPlay":"heretic/weapon/goldwand"}
+{"ActorClass":"Crossbow_Toby", "SoundToPlay":"heretic/weapon/crossbow"}
+{"ActorClass":"CrossbowPowered_Toby", "SoundToPlay":"heretic/weapon/crossbow"}
+{"ActorClass":"DragonClaw_Toby", "SoundToPlay":"heretic/weapon/dragonclaw"}
+{"ActorClass":"DragonClawPowered_Toby", "SoundToPlay":"heretic/weapon/dragonclaw"}
+{"ActorClass":"HellStaff_Toby", "SoundToPlay":"heretic/weapon/hellstaff"}
+{"ActorClass":"HellStaffPowered_Toby", "SoundToPlay":"heretic/weapon/hellstaff"}
+{"ActorClass":"PhoenixRod_Toby", "SoundToPlay":"heretic/weapon/phoenixrod"}
+{"ActorClass":"PhoenixRodPowered_Toby", "SoundToPlay":"heretic/weapon/phoenixrod"}
+{"ActorClass":"FireMace_Toby", "SoundToPlay":"heretic/weapon/mace"}
+{"ActorClass":"FireMacePowered_Toby", "SoundToPlay":"heretic/weapon/mace"}
+
+//Heretic
+
+{"ActorClass":"Staff", "SoundToPlay":"heretic/weapon/staff"}
+{"ActorClass":"StaffPowered", "SoundToPlay":"heretic/weapon/staff"}
+{"ActorClass":"Gauntlets", "SoundToPlay":"heretic/weapon/gauntlets"}
+{"ActorClass":"GauntletsPowered", "SoundToPlay":"heretic/weapon/gauntlets"}
+{"ActorClass":"GoldWand", "SoundToPlay":"heretic/weapon/goldwand"}
+{"ActorClass":"GoldWandPowered", "SoundToPlay":"heretic/weapon/goldwand"}
+{"ActorClass":"Crossbow", "SoundToPlay":"heretic/weapon/crossbow"}
+{"ActorClass":"CrossbowPowered", "SoundToPlay":"heretic/weapon/crossbow"}
+{"ActorClass":"Blaster", "SoundToPlay":"heretic/weapon/dragonclaw"}
+{"ActorClass":"BlasterPowered", "SoundToPlay":"heretic/weapon/dragonclaw"}
+{"ActorClass":"SkullRod", "SoundToPlay":"heretic/weapon/hellstaff"}
+{"ActorClass":"SkullRodPowered", "SoundToPlay":"heretic/weapon/hellstaff"}
+{"ActorClass":"PhoenixRod", "SoundToPlay":"heretic/weapon/phoenixrod"}
+{"ActorClass":"PhoenixRodPowered", "SoundToPlay":"heretic/weapon/phoenixrod"}
+{"ActorClass":"Mace", "SoundToPlay":"heretic/weapon/mace"}
+{"ActorClass":"MacePowered", "SoundToPlay":"heretic/weapon/mace"}

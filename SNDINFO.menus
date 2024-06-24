@@ -28,6 +28,17 @@ menusnd/quit            "sounds/Menus/MainMenu/dsquit.ogg"
 menusnd/quitselect      "sounds/Menus/MainMenu/dsquit_s.ogg"
 menusnd/readme          "sounds/Menus/MainMenu/dsread.ogg"
 menusnd/readselect      "sounds/Menus/MainMenu/dsread_s.ogg"
+
+//Main Menu - Heretic
+heretic/menu/newgame				"sounds/Menus/MainMenu/Heretic/NewGame.ogg"
+heretic/menu/options					"sounds/Menus/MainMenu/Heretic/Options.ogg"
+heretic/menu/gamefiles				"sounds/Menus/MainMenu/Heretic/GameFiles.ogg"
+heretic/menu/savegame				"sounds/Menus/MainMenu/Heretic/SaveGame.ogg"
+heretic/menu/loadgame				"sounds/Menus/MainMenu/Heretic/LoadGame.ogg"
+heretic/menu/info							"sounds/Menus/MainMenu/Heretic/Info.ogg"
+heretic/menu/quitgame				"sounds/Menus/MainMenu/Heretic/QuitGame.ogg"
+heretic/menu/quitmsg				    "sounds/Menus/MainMenu/Heretic/QuitMessage.ogg"
+
 //That's what causing double sound on main menu and on save/load menu hotkey:
 //menu/activate         "sounds/Menus/MainMenu/dsmenu.ogg"
 // ???
@@ -51,6 +62,15 @@ menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
 menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
 menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
 
+//Episode Menu - Heretic
+heretic/menu/episode1		"sounds/Menus/EpisodeMenu/Heretic/HereticE1.ogg"
+heretic/menu/episode2		"sounds/Menus/EpisodeMenu/Heretic/HereticE2.ogg"
+heretic/menu/episode3		"sounds/Menus/EpisodeMenu/Heretic/HereticE3.ogg"
+heretic/menu/episode4		"sounds/Menus/EpisodeMenu/Heretic/HereticE4.ogg"
+heretic/menu/episode5		"sounds/Menus/EpisodeMenu/Heretic/HereticE5.ogg"
+heretic/menu/tobyheretic		"sounds/Menus/EpisodeMenu/Heretic/TobyHeretic.ogg"
+heretic/menu/demomap		"sounds/Menus/EpisodeMenu/Heretic/DemoMap.ogg"
+
 
 //Skill Menu
 menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
@@ -62,6 +82,13 @@ menusnd/skill2          "sounds/Menus/SkillMenu/dsskill2.ogg"
 menusnd/skill3          "sounds/Menus/SkillMenu/dsskill3.ogg"
 menusnd/skill4          "sounds/Menus/SkillMenu/dsskill4.ogg"
 menusnd/skill5          "sounds/Menus/SkillMenu/dsskill5.ogg"
+
+//Skill Menu - Heretic
+heretic/menu/skill/baby				"sounds/Menus/SkillMenu/Heretic/BabyMode.ogg"
+heretic/menu/skill/easy				"sounds/Menus/SkillMenu/Heretic/Easy.ogg"
+heretic/menu/skill/novice				"sounds/Menus/SkillMenu/Heretic/Novice.ogg"
+heretic/menu/skill/hard				"sounds/Menus/SkillMenu/Heretic/Hard.ogg"
+heretic/menu/skill/nightmare		"sounds/Menus/SkillMenu/Heretic/Nightmare.ogg"
 
 //Sound Options
 menusnd/soundopt                    "sounds/Menus/SoundOptions/dssndop.ogg"
