@@ -141,7 +141,7 @@
 {"ActorClass":"TallGreenColumn", "SoundToPlay":"toby/actorsinviewport/decorations/tallgreenpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallgreenpillars", "Article":"a"}
 {"ActorClass":"TallRedColumn", "SoundToPlay":"toby/actorsinviewport/decorations/tallredpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/tallredpillars", "Article":"a"}
 
-//Toby
+//Doom - Toby
 {"ActorClass":"ZombieMan_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/formerhuman", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formerhumans", "Article":"a"}
 {"ActorClass":"DoomImp_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/imp", "SoundToPlayPlural":"toby/actorsinviewport/monsters/imps", "Article":"an"}
 {"ActorClass":"ShotgunGuy_Toby", "SoundToPlay":"toby/actorsinviewport/monsters/formersergeant", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formersergeants", "Article":"a"}
@@ -231,7 +231,7 @@
 {"ActorClass":"FloatingSkull_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull", "SoundToPlayPlural":"toby/actorsinviewport/decorations/floatingskulls", "Article":"a"}
 {"ActorClass":"HeartColumn_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/heartpillar", "SoundToPlayPlural":"toby/actorsinviewport/decorations/heartpillars", "Article":"a"}
 
-//Environmental Objects
+//Toby Environmental Objects
 {"ActorClass":"BasicDoorChecker", "SoundToPlay":"toby/actorsinviewport/env/door", "SoundToPlayPlural":"toby/actorsinviewport/env/doors", "Article":"a"}
 {"ActorClass":"BasicSwitchChecker", "SoundToPlay":"toby/actorsinviewport/env/switch", "SoundToPlayPlural":"toby/actorsinviewport/env/switches", "Article":"a"}
 {"ActorClass":"ExitBeacon1", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
@@ -245,3 +245,169 @@
 {"ActorClass":"3KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
 {"ActorClass":"6KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
 {"ActorClass":"AnyKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
+
+
+//Heretic
+{"ActorClass":"HereticImp", "SoundToPlay":"heretic/monster/gargoyle", "SoundToPlayPlural":"heretic/monster/gargoyles", "Article":"a"}
+{"ActorClass":"HereticImpLeader", "SoundToPlay":"heretic/monster/gargleader", "SoundToPlayPlural":"heretic/monster/gargleaders", "Article":"a"}
+{"ActorClass":"Mummy", "SoundToPlay":"heretic/monster/golem", "SoundToPlayPlural":"heretic/monster/golems", "Article":"a"}
+{"ActorClass":"MummyLeader", "SoundToPlay":"heretic/monster/nitrogolem", "SoundToPlayPlural":"heretic/monster/nitrogolems", "Article":"a"}
+{"ActorClass":"MummyGhost", "SoundToPlay":"heretic/monster/ghostgolem", "SoundToPlayPlural":"heretic/monster/ghostgolems", "Article":"a"}
+{"ActorClass":"MummyLeaderGhost", "SoundToPlay":"heretic/monster/ghostnitro", "SoundToPlayPlural":"heretic/monster/ghostnitro", "Article":"a"}
+{"ActorClass":"Knight", "SoundToPlay":"heretic/monster/knight", "SoundToPlayPlural":"heretic/monster/knights", "Article":"a"}
+{"ActorClass":"KnightGhost", "SoundToPlay":"heretic/monster/ghostknight", "SoundToPlayPlural":"heretic/monster/ghostknights", "Article":"a"}
+{"ActorClass":"Wizard", "SoundToPlay":"heretic/monster/disciple", "SoundToPlayPlural":"heretic/monster/disciples", "Article":"a"}
+{"ActorClass":"Clink", "SoundToPlay":"heretic/monster/clink", "SoundToPlayPlural":"heretic/monster/clinks", "Article":"a"}
+{"ActorClass":"Beast", "SoundToPlay":"heretic/monster/weredragon", "SoundToPlayPlural":"heretic/monster/weredragons", "Article":"a"}
+{"ActorClass":"Snake", "SoundToPlay":"heretic/monster/ophidian", "SoundToPlayPlural":"heretic/monster/ophidians", "Article":"a"}
+{"ActorClass":"Ironlich", "SoundToPlay":"heretic/monster/ironlich", "SoundToPlayPlural":"heretic/monster/ironliches", "Article":"an"}
+{"ActorClass":"Minotaur", "SoundToPlay":"heretic/monster/minotaur", "SoundToPlayPlural":"heretic/monster/minotaurs", "Article":"a"}
+{"ActorClass":"Sorcerer1", "SoundToPlay":"heretic/monster/dsparilmount", "SoundToPlayPlural":"heretic/monster/dsparilsmount", "Article":"a"}
+{"ActorClass":"Sorcerer2", "SoundToPlay":"heretic/monster/dsparil", "SoundToPlayPlural":"heretic/monster/dsparils", "Article":"a"}
+{"ActorClass":"Chicken", "SoundToPlay":"heretic/monster/chicken", "SoundToPlayPlural":"heretic/monster/chickens", "Article":"a"}
+
+{"ActorClass":"Gauntlets", "SoundToPlay":"heretic/actorsinviewport/weapon/gauntlets", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/gauntlets", "Article":"a"}
+{"ActorClass":"GoldWand", "SoundToPlay":"heretic/actorsinviewport/weapon/goldwand", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/goldwands", "Article":"a"}
+{"ActorClass":"Crossbow", "SoundToPlay":"heretic/actorsinviewport/weapon/crossbow", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/crossbows", "Article":"a"}
+{"ActorClass":"Blaster", "SoundToPlay":"heretic/actorsinviewport/weapon/dragonclaw", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/dragonclaws", "Article":"a"}
+{"ActorClass":"SkullRod", "SoundToPlay":"heretic/actorsinviewport/weapon/hellstaff", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/hellstaffs", "Article":"a"}
+{"ActorClass":"PhoenixRod", "SoundToPlay":"heretic/actorsinviewport/weapon/phoenixrod", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/phoenixrods", "Article":"a"}
+{"ActorClass":"Mace", "SoundToPlay":"heretic/actorsinviewport/weapon/mace", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/maces", "Article":"a"}
+
+{"ActorClass":"GoldWandAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/wandcrystal", "Article":"a"}
+{"ActorClass":"GoldWandHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/geode", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/geodes", "Article":"a"}
+{"ActorClass":"CrossbowAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/packofarrows", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/packsofarrows", "Article":"a"}
+{"ActorClass":"CrossbowHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/quiver", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/quivers", "Article":"a"}
+{"ActorClass":"BlasterAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/claworb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/claworbs", "Article":"a"}
+{"ActorClass":"BlasterHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/energyorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/energyorbs", "Article":"an"}
+{"ActorClass":"SkullRodAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/lesserrunes", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/lesserrunes", "Article":"a"}
+{"ActorClass":"SkullRodHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/greaterrunes", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/greaterrunes", "Article":"a"}
+{"ActorClass":"PhoenixRodAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/flameorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/flameorbs", "Article":"a"}
+{"ActorClass":"PhoenixRodHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/infernoorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/infernoorbs", "Article":"an"}
+{"ActorClass":"MaceAmmo", "SoundToPlay":"heretic/actorsinviewport/ammo/macespheres", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macespheres", "Article":"a"}
+{"ActorClass":"MaceHefty", "SoundToPlay":"heretic/actorsinviewport/ammo/macepile", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macepiles", "Article":"a"}
+{"ActorClass":"BagOfHolding", "SoundToPlay":"heretic/actorsinviewport/ammo/bagofholding", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/bagsofholding", "Article":"a"}
+
+{"ActorClass":"SilverShield", "SoundToPlay":"heretic/actorsinviewport/armor/silvershield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/silvershields", "Article":"a"}
+{"ActorClass":"EnchantedShield", "SoundToPlay":"heretic/actorsinviewport/armor/enchantedshield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/enchantedshields", "Article":"an"}
+
+{"ActorClass":"CrystalVial", "SoundToPlay":"heretic/actorsinviewport/health/vial", "SoundToPlayPlural":"heretic/actorsinviewport/health/vials", "Article":"a"}
+{"ActorClass":"ArtiHealth", "SoundToPlay":"heretic/actorsinviewport/health/flask", "SoundToPlayPlural":"heretic/actorsinviewport/health/flasks", "Article":"a"}
+{"ActorClass":"ArtiSuperHealth", "SoundToPlay":"heretic/actorsinviewport/health/urn", "SoundToPlayPlural":"heretic/actorsinviewport/health/urn", "Article":"a"}
+
+{"ActorClass":"KeyGreen", "SoundToPlay":"heretic/actorsinviewport/key/greenkey", "SoundToPlayPlural":"heretic/actorsinviewport/key/greenkeys", "Article":"a"}
+{"ActorClass":"KeyBlue", "SoundToPlay":"heretic/actorsinviewport/key/bluekey", "SoundToPlayPlural":"heretic/actorsinviewport/key/bluekeys", "Article":"a"}
+{"ActorClass":"KeyYellow", "SoundToPlay":"heretic/actorsinviewport/key/yellowkey", "SoundToPlayPlural":"heretic/actorsinviewport/key/yellowkeys", "Article":"a"}
+
+{"ActorClass":"ArtiInvulnerability", "SoundToPlay":"heretic/actorsinviewport/artifact/ring", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/rings", "Article":"a"}
+{"ActorClass":"ArtiFly", "SoundToPlay":"heretic/actorsinviewport/artifact/wings", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/wings", "Article":"a"}
+{"ActorClass":"ArtiTorch", "SoundToPlay":"heretic/actorsinviewport/artifact/torch", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/torches", "Article":"a"}
+{"ActorClass":"SuperMap", "SoundToPlay":"heretic/actorsinviewport/artifact/mapscroll", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/mapscrolls", "Article":"a"}
+{"ActorClass":"ArtiInvisibility", "SoundToPlay":"heretic/actorsinviewport/artifact/shadowsphere", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/shadowspheres", "Article":"a"}
+{"ActorClass":"ArtiTomeOfPower", "SoundToPlay":"heretic/actorsinviewport/artifact/tome", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/tomes", "Article":"a"}
+{"ActorClass":"ArtiTimeBomb", "SoundToPlay":"heretic/actorsinviewport/artifact/timebomb", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/timebombs", "Article":"a"}
+{"ActorClass":"ArtiEgg", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/morphovums", "Article":"a"}
+{"ActorClass":"ArtiTeleport", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/chaosdevices", "Article":"a"}
+
+{"ActorClass":"SkullHang70", "SoundToPlay":"heretic/deco/hangingskull", "SoundToPlayPlural":"heretic/deco/hangingskulls", "Article":"a"}
+{"ActorClass":"SkullHang60", "SoundToPlay":"heretic/deco/hangingskull", "SoundToPlayPlural":"heretic/deco/hangingskulls", "Article":"a"}
+{"ActorClass":"SkullHang45", "SoundToPlay":"heretic/deco/hangingskull", "SoundToPlayPlural":"heretic/deco/hangingskulls", "Article":"a"}
+{"ActorClass":"SkullHang35", "SoundToPlay":"heretic/deco/hangingskull", "SoundToPlayPlural":"heretic/deco/hangingskulls", "Article":"a"}
+{"ActorClass":"HangingCorpse", "SoundToPlay":"heretic/deco/hangingcorpse", "SoundToPlayPlural":"heretic/deco/hangingcorpses", "Article":"a"}
+
+{"ActorClass":"Chandelier", "SoundToPlay":"heretic/deco/chandelier", "SoundToPlayPlural":"heretic/deco/chandeliers", "Article":"a"}
+{"ActorClass":"SerpentTorch", "SoundToPlay":"heretic/deco/serpenttorch", "SoundToPlayPlural":"heretic/deco/serpenttorches", "Article":"a"}
+{"ActorClass":"FireBrazier", "SoundToPlay":"heretic/deco/firebrazier", "SoundToPlayPlural":"heretic/deco/firebraziers", "Article":"a"}
+{"ActorClass":"WallTorch", "SoundToPlay":"heretic/deco/walltorch", "SoundToPlayPlural":"heretic/deco/walltorches", "Article":"a"}
+
+{"ActorClass":"KeyGizmoBlue", "SoundToPlay":"heretic/deco/bluemarker", "SoundToPlayPlural":"heretic/deco/bluemarkers", "Article":"a"}
+{"ActorClass":"KeyGizmoGreen", "SoundToPlay":"heretic/deco/greenmarker", "SoundToPlayPlural":"heretic/deco/greenmarkers", "Article":"a"}
+{"ActorClass":"KeyGizmoYellow", "SoundToPlay":"heretic/deco/yellowmarker", "SoundToPlayPlural":"heretic/deco/yellowmarkers", "Article":"a"}
+
+{"ActorClass":"SmallPillar", "SoundToPlay":"heretic/deco/smallpillar", "SoundToPlayPlural":"heretic/deco/smallpillars", "Article":"a"}
+{"ActorClass":"BrownPillar", "SoundToPlay":"heretic/deco/brownpillar", "SoundToPlayPlural":"heretic/deco/brownpillars", "Article":"a"}
+{"ActorClass":"Barrel", "SoundToPlay":"heretic/deco/barrel", "SoundToPlayPlural":"heretic/deco/barrels", "Article":"a"}
+
+{"ActorClass":"Pod", "SoundToPlay":"heretic/deco/pod", "SoundToPlayPlural":"heretic/deco/pods", "Article":"a"}
+
+{"ActorClass":"StalagmiteSmall", "SoundToPlay":"heretic/deco/smallstm", "SoundToPlayPlural":"heretic/deco/smallstms", "Article":"a"}
+{"ActorClass":"StalagmiteLarge", "SoundToPlay":"heretic/deco/largestm", "SoundToPlayPlural":"heretic/deco/largestms", "Article":"a"}
+{"ActorClass":"StalactiteSmall", "SoundToPlay":"heretic/deco/smallstc", "SoundToPlayPlural":"heretic/deco/smallstcs", "Article":"a"}
+{"ActorClass":"StalactiteLarge", "SoundToPlay":"heretic/deco/largestc", "SoundToPlayPlural":"heretic/deco/largestcs", "Article":"a"}
+{"ActorClass":"Moss1", "SoundToPlay":"heretic/deco/moss", "SoundToPlayPlural":"heretic/deco/moss", "Article":"a"}
+{"ActorClass":"Moss2", "SoundToPlay":"heretic/deco/moss", "SoundToPlayPlural":"heretic/deco/moss", "Article":"a"}
+{"ActorClass":"Volcano", "SoundToPlay":"heretic/deco/volcano", "SoundToPlayPlural":"heretic/deco/volcanoes", "Article":"a"}
+
+//Heretic - Toby
+{"ActorClass":"HereticImp_Toby", "SoundToPlay":"heretic/monster/gargoyle", "SoundToPlayPlural":"heretic/monster/gargoyles", "Article":"a"}
+{"ActorClass":"HereticImpLeader_Toby", "SoundToPlay":"heretic/monster/gargleader", "SoundToPlayPlural":"heretic/monster/gargleaders", "Article":"a"}
+{"ActorClass":"Mummy_Toby", "SoundToPlay":"heretic/monster/golem", "SoundToPlayPlural":"heretic/monster/golems", "Article":"a"}
+{"ActorClass":"MummyLeader_Toby", "SoundToPlay":"heretic/monster/nitrogolem", "SoundToPlayPlural":"heretic/monster/nitrogolems", "Article":"a"}
+{"ActorClass":"MummyGhost_Toby", "SoundToPlay":"heretic/monster/ghostgolem", "SoundToPlayPlural":"heretic/monster/ghostgolems", "Article":"a"}
+{"ActorClass":"MummyLeaderGhost_Toby", "SoundToPlay":"heretic/monster/ghostnitro", "SoundToPlayPlural":"heretic/monster/ghostnitro", "Article":"a"}
+{"ActorClass":"Knight_Toby", "SoundToPlay":"heretic/monster/knight", "SoundToPlayPlural":"heretic/monster/knights", "Article":"a"}
+{"ActorClass":"KnightGhost_Toby", "SoundToPlay":"heretic/monster/ghostknight", "SoundToPlayPlural":"heretic/monster/ghostknights", "Article":"a"}
+{"ActorClass":"Wizard_Toby", "SoundToPlay":"heretic/monster/disciple", "SoundToPlayPlural":"heretic/monster/disciples", "Article":"a"}
+{"ActorClass":"Clink_Toby", "SoundToPlay":"heretic/monster/clink", "SoundToPlayPlural":"heretic/monster/clinks", "Article":"a"}
+{"ActorClass":"Beast_Toby", "SoundToPlay":"heretic/monster/weredragon", "SoundToPlayPlural":"heretic/monster/weredragons", "Article":"a"}
+{"ActorClass":"Snake_Toby", "SoundToPlay":"heretic/monster/ophidian", "SoundToPlayPlural":"heretic/monster/ophidians", "Article":"a"}
+{"ActorClass":"Ironlich_Toby", "SoundToPlay":"heretic/monster/ironlich", "SoundToPlayPlural":"heretic/monster/ironliches", "Article":"an"}
+{"ActorClass":"Minotaur_Toby", "SoundToPlay":"heretic/monster/minotaur", "SoundToPlayPlural":"heretic/monster/minotaurs", "Article":"a"}
+{"ActorClass":"Sorcerer1_Toby", "SoundToPlay":"heretic/monster/dsparilmount", "SoundToPlayPlural":"heretic/monster/dsparilsmount", "Article":"a"}
+{"ActorClass":"Sorcerer2_Toby", "SoundToPlay":"heretic/monster/dsparil", "SoundToPlayPlural":"heretic/monster/dsparils", "Article":"a"}
+
+{"ActorClass":"Gauntlets_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/gauntlets", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/gauntlets", "Article":"a"}
+{"ActorClass":"GoldWand_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/goldwand", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/goldwands", "Article":"a"}
+{"ActorClass":"Crossbow_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/crossbow", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/crossbows", "Article":"a"}
+{"ActorClass":"DragonClaw_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/dragonclaw", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/dragonclaws", "Article":"a"}
+{"ActorClass":"HellStaff_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/hellstaff", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/hellstaffs", "Article":"a"}
+{"ActorClass":"PhoenixRod_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/phoenixrod", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/phoenixrods", "Article":"a"}
+{"ActorClass":"FireMace_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/mace", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/maces", "Article":"a"}
+
+{"ActorClass":"GoldWandAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/wandcrystal", "Article":"a"}
+{"ActorClass":"GoldWandAmmoDropped_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/wandcrystal", "Article":"a"}
+{"ActorClass":"GoldWandHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/geode", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/geodes", "Article":"a"}
+{"ActorClass":"CrossbowAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/packofarrows", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/packsofarrows", "Article":"a"}
+{"ActorClass":"CrossbowAmmoDropped_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/packofarrows", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/packsofarrows", "Article":"a"}
+{"ActorClass":"CrossbowHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/quiver", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/quivers", "Article":"a"}
+{"ActorClass":"ClawOrb_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/claworb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/claworbs", "Article":"a"}
+{"ActorClass":"ClawOrbDropped_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/claworb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/claworbs", "Article":"a"}
+{"ActorClass":"ClawOrbHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/energyorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/energyorbs", "Article":"an"}
+{"ActorClass":"HellStaffAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/lesserrunes", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/lesserrunes", "Article":"a"}
+{"ActorClass":"HellStaffAmmoDropped_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/lesserrunes", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/lesserrunes", "Article":"a"}
+{"ActorClass":"HellStaffHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/greaterrunes", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/greaterrunes", "Article":"a"}
+{"ActorClass":"PhoenixRodAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/flameorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/flameorbs", "Article":"a"}
+{"ActorClass":"PhoenixRodHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/infernoorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/infernoorbs", "Article":"an"}
+{"ActorClass":"MaceAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/macespheres", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macespheres", "Article":"a"}
+{"ActorClass":"MaceHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/macepile", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macepiles", "Article":"a"}
+{"ActorClass":"BagOfHolding_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/bagofholding", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/bagsofholding", "Article":"a"}
+
+{"ActorClass":"SilverShield_Toby", "SoundToPlay":"heretic/actorsinviewport/armor/silvershield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/silvershields", "Article":"a"}
+{"ActorClass":"EnchantedShield_Toby", "SoundToPlay":"heretic/actorsinviewport/armor/enchantedshield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/enchantedshields", "Article":"an"}
+
+{"ActorClass":"CrystalVial_Toby", "SoundToPlay":"heretic/actorsinviewport/health/vial", "SoundToPlayPlural":"heretic/actorsinviewport/health/vials", "Article":"a"}
+{"ActorClass":"QuartzFlask_Toby", "SoundToPlay":"heretic/actorsinviewport/health/flask", "SoundToPlayPlural":"heretic/actorsinviewport/health/flasks", "Article":"a"}
+{"ActorClass":"MysticUrn_Toby", "SoundToPlay":"heretic/actorsinviewport/health/urn", "SoundToPlayPlural":"heretic/actorsinviewport/health/urns", "Article":"a"}
+
+{"ActorClass":"GreenKey_Toby", "SoundToPlay":"heretic/actorsinviewport/key/greenkey", "SoundToPlayPlural":"heretic/actorsinviewport/key/greenkeys", "Article":"a"}
+{"ActorClass":"BlueKey_Toby", "SoundToPlay":"heretic/actorsinviewport/key/bluekey", "SoundToPlayPlural":"heretic/actorsinviewport/key/bluekeys", "Article":"a"}
+{"ActorClass":"YellowKey_Toby", "SoundToPlay":"heretic/actorsinviewport/key/yellowkey", "SoundToPlayPlural":"heretic/actorsinviewport/key/yellowkeys", "Article":"a"}
+
+{"ActorClass":"ArtiInvulnerability_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/ring", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/rings", "Article":"a"}
+{"ActorClass":"ArtiFly_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/wings", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/wings", "Article":"a"}
+{"ActorClass":"ArtiTorch_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/torch", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/torches", "Article":"a"}
+{"ActorClass":"MapScroll_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/mapscroll", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/mapscrolls", "Article":"a"}
+{"ActorClass":"ArtiInvisibility_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/shadowsphere", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/shadowspheres", "Article":"a"}
+{"ActorClass":"ArtiTomeOfPower_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/tome", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/tomes", "Article":"a"}
+{"ActorClass":"ArtiTimeBomb_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/timebomb", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/timebombs", "Article":"a"}
+{"ActorClass":"ArtiEgg_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/morphovums", "Article":"a"}
+{"ActorClass":"ArtiTeleport_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice", "SoundToPlayPlural":"heretic/actorsinviewport/artifact/chaosdevices", "Article":"a"}
+
+{"ActorClass":"Chandelier_Toby", "SoundToPlay":"heretic/deco/chandelier", "SoundToPlayPlural":"heretic/deco/chandeliers", "Article":"a"}
+{"ActorClass":"SerpentTorch_Toby", "SoundToPlay":"heretic/deco/serpenttorch", "SoundToPlayPlural":"heretic/deco/serpenttorches", "Article":"a"}
+{"ActorClass":"FireBrazier_Toby", "SoundToPlay":"heretic/deco/firebrazier", "SoundToPlayPlural":"heretic/deco/firebraziers", "Article":"a"}
+{"ActorClass":"WallTorch_Toby", "SoundToPlay":"heretic/deco/walltorch", "SoundToPlayPlural":"heretic/deco/walltorches", "Article":"a"}
+{"ActorClass":"KeyGizmoBlue_Toby", "SoundToPlay":"heretic/deco/bluemarker", "SoundToPlayPlural":"heretic/deco/bluemarkers", "Article":"a"}
+{"ActorClass":"KeyGizmoGreen_Toby", "SoundToPlay":"heretic/deco/greenmarker", "SoundToPlayPlural":"heretic/deco/greenmarkers", "Article":"a"}
+{"ActorClass":"KeyGizmoYellow_Toby", "SoundToPlay":"heretic/deco/yellowmarker", "SoundToPlayPlural":"heretic/deco/yellowmarkers", "Article":"a"}
+{"ActorClass":"Pod_Toby", "SoundToPlay":"heretic/deco/pod", "SoundToPlayPlural":"heretic/deco/pods", "Article":"a"}

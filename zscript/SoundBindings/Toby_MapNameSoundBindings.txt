@@ -443,3 +443,122 @@
 {"Checksum":"0c097085121f1f77ebac5e72fc447ccb", "SoundToPlay":"map/mdk/thewarlordsdomain", "LevelStartPlaybackDelay":"270"}
 // MAP15 - The Gatekeeper
 {"Checksum":"0386cdb05624bba70d45d14fff694f63", "SoundToPlay":"map/mdk/thegatekeeper", "LevelStartPlaybackDelay":"270"}
+
+//Toby Heretic Maps
+//E1M1 - The Docks
+{"Checksum":"59dcf5a7681613e96877570d91b68941", "SoundToPlay":"heretic/e1m1"}
+//E1M2 - The Dungeons
+{"Checksum":"8a2e9eef05ba563adf0375baf6bea84c", "SoundToPlay":"heretic/e1m2"}
+//E1M3 - The Gatehouse
+{"Checksum":"4faac7e45b495f422b484bb2fdb7114c", "SoundToPlay":"heretic/e1m3"}
+//E1M4 - The Guard Tower
+{"Checksum":"422fc6d0ac8b535afdf919d228d6db40", "SoundToPlay":"heretic/e1m4"}
+//E1M5 - The Citadel
+{"Checksum":"b7f15dcf9c23ab110ab90ab3a9151cff", "SoundToPlay":"heretic/e1m5"}
+//E1M6 - The Cathedral
+{"Checksum":"11e9e475b21630f165cf266e8d26abe9", "SoundToPlay":"heretic/e1m6"}
+//E1M7 - The Crypt
+{"Checksum":"53e1515a22a1c9d0767a0c8716754445", "SoundToPlay":"heretic/e1m7"}
+//E1M8 - Hell's Maw
+{"Checksum":"456735a26815746d13b57577b074e4fc", "SoundToPlay":"heretic/e1m8"}
+
+//Classic Heretic Maps
+//Episode 1
+//E1M1 - The Docks
+{"Checksum":"006deab129c225f3ed4bf70f67a122f9", "SoundToPlay":"heretic/e1m1"}
+//E1M2 - The Dungeons
+{"Checksum":"d94587625ba779644d58151a87897cf1", "SoundToPlay":"heretic/e1m2"}
+//E1M3 - The Gatehouse
+{"Checksum":"add0fac41afb0b3c9b9f3c0006f93805", "SoundToPlay":"heretic/e1m3"}
+//E1M4 - The Guard Tower
+{"Checksum":"916318d8b06dac2d83424b23e4b66531", "SoundToPlay":"heretic/e1m4"}
+//E1M5 - The Citadel
+{"Checksum":"5800d43560330827e05f9bb7068db8d8", "SoundToPlay":"heretic/e1m5"}
+//E1M6 - The Cathedral
+{"Checksum":"ad3687e5984c0f03d9cc38920eb775a1", "SoundToPlay":"heretic/e1m6"}
+//E1M7 - The Crypts
+{"Checksum":"84ca1839049b7a3266ee3cfe78874af1", "SoundToPlay":"heretic/e1m7"}
+//E1M8 - Hell's Maw
+{"Checksum":"27639d04f8090d57a47d354992435893", "SoundToPlay":"heretic/e1m8"}
+//E1M9 - The Graveyard
+{"Checksum":"9dbc65690993f7988baac71d35f2ac4f", "SoundToPlay":"heretic/e1m9"}
+
+//Episode 2
+//E2M1 - The Crater
+{"Checksum":"eb08016dffc6c5505df29ee350762f12", "SoundToPlay":"heretic/e2m1"}
+//E2M2 - The Lava Pits
+{"Checksum":"397a0e17a39542e4e8294e156fab0502", "SoundToPlay":"heretic/e2m2"}
+//E2M3 - The River Of Fire
+{"Checksum":"b43106250033c9c3c7beae4d55e44a2d", "SoundToPlay":"heretic/e2m3"}
+//E2M4 - The Ice Grotto
+{"Checksum":"196810e6877808e5d665644a6b0b7519", "SoundToPlay":"heretic/e2m4"}
+//E2M5 - The Catacombs
+{"Checksum":"f73033f55d3f63da6b5eae4cca4f5bd8", "SoundToPlay":"heretic/e2m5"}
+//E2M6 - The Labyrinth
+{"Checksum":"2225de84bfdd74e984c39022e6499834", "SoundToPlay":"heretic/e2m6"}
+//E2M7 - The Great Hall
+{"Checksum":"faa0550be9923b3a3332b4f7db897a4a", "SoundToPlay":"heretic/e2m7"}
+//E2M8 - The Portals Of Chaos
+{"Checksum":"5158c22a0f30ce5e558fd2a05d67685e", "SoundToPlay":"heretic/e2m8"}
+//E2M9 - The Glacier
+{"Checksum":"7285877bb9726c7b934c28f7e733c28b", "SoundToPlay":"heretic/e2m9"}
+
+//Episode 3
+//E3M1 - The Storehouse
+{"Checksum":"84ec63f1412348f3275075489713478c", "SoundToPlay":"heretic/e3m1"}
+//E3M2 - The Cesspool
+{"Checksum":"d4c44a46daab28bd7935d1cd9e96bbf7", "SoundToPlay":"heretic/e3m2"}
+//E3M3 - The Confluence
+{"Checksum":"2c9f8f32d6d5713f57a79279718eb30a", "SoundToPlay":"heretic/e3m3"}
+//E3M4 - The Azure Fortress
+{"Checksum":"adea9de9e47202e1c4038acfa6ed7b85", "SoundToPlay":"heretic/e3m4"}
+//E3M5 - The Ophidian Lair
+{"Checksum":"bf863a89de2108fc24979d0565f2f65e", "SoundToPlay":"heretic/e3m5"}
+//E3M6 - The Halls Of Fear
+{"Checksum":"ca3773ed313e8899311f3dd0ca195a68", "SoundToPlay":"heretic/e3m6"}
+//E3M7 - The Chasm
+{"Checksum":"a94561ff9bc91bc28305627cf3bce856", "SoundToPlay":"heretic/e3m7"}
+//E3M8 - D'Sparil's Keep
+{"Checksum":"4719c2c71ef28f52310b889dd5a9778b", "SoundToPlay":"heretic/e3m8"}
+//E3M9 - The Aquafier
+{"Checksum":"9299ac9604195379f01ba27d43468464", "SoundToPlay":"heretic/e3m9"}
+
+//Episode 4
+//E4M1 - Catafalque
+{"Checksum":"a7dbab356525123955a31806ca7e244e", "SoundToPlay":"heretic/e4m1"}
+//E4M2 - Blockhouse
+{"Checksum":"674196be64a0eda97ba7916962c20d16", "SoundToPlay":"heretic/e4m2"}
+//E4M3 - Ambulatory
+{"Checksum":"ff6c17c38044e1edacf96f4f4fcf4806", "SoundToPlay":"heretic/e4m3"}
+//E4M4 - Sepulcher
+{"Checksum":"db4716b9a4860c8ebc3cd90ccf58cc5b", "SoundToPlay":"heretic/e4m4"}
+//E4M5 - Great Stair
+{"Checksum":"9bd531882129c4366845ec1877a46283", "SoundToPlay":"heretic/e4m5"}
+//E4M6 - Halls of the Apostate
+{"Checksum":"85c8dd2c557a490d571fdd44b3963ea3", "SoundToPlay":"heretic/e4m6"}
+//E4M7 - Ramparts of Perdition
+{"Checksum":"5e3fcfde78310bb89f92b1626a47d0ad", "SoundToPlay":"heretic/e4m7"}
+//E4M8 - Shattered Bridge
+{"Checksum":"30d1480a6d4f3a3153739d4ccf659c4e", "SoundToPlay":"heretic/e4m8"}
+//E4M9 - Mausoleum
+{"Checksum":"41c5437160f07d607af413c7742de70c", "SoundToPlay":"heretic/e4m9"}
+
+//Episode 5
+//E5M1 - Ochre Cliffs
+{"Checksum":"cab396cf990de6b4ff5cf3c60fb2babf", "SoundToPlay":"heretic/e5m1"}
+//E5M2 - Rapids
+{"Checksum":"17654c1688ab18d046f3b30292ee144f", "SoundToPlay":"heretic/e5m2"}
+//E5M3 - Quay
+{"Checksum":"a6a0e37c60c04e88bd4b03d26ea171f7", "SoundToPlay":"heretic/e5m3"}
+//E5M4 - Courtyard
+{"Checksum":"fa52aa4ac70fb6e699dcc09c8d241f85", "SoundToPlay":"heretic/e5m4"}
+//E5M5 - Hydratyr
+{"Checksum":"ebdf3d5c49b057c24279002461ad2066", "SoundToPlay":"heretic/e5m5"}
+//E5M6 - Colonnade
+{"Checksum":"882cba8401c29488df07dc93792995b2", "SoundToPlay":"heretic/e5m6"}
+//E5M7 - Foetid Manse
+{"Checksum":"df1dc38bf77a1cd1653718db51cee9da", "SoundToPlay":"heretic/e5m7"}
+//E5M8 - Field of Judgement
+{"Checksum":"85ac7d20d18f9bc49b9696cc2e67f029", "SoundToPlay":"heretic/e5m8"}
+//E5M9 - Skein of D'sparil
+{"Checksum":"b7fdab05b21af564bc9552676f695213", "SoundToPlay":"heretic/e5m9"}
