@@ -4,6 +4,8 @@ $rolloff amb/switch linear 48 160
 amb/switch				dsswsnd
 
 $rolloff amb/exit1	linear  64 144
+$rolloff amb/secretexit	linear  64 144
 $rolloff amb/exit2	linear	96 144
 amb/exit1		dsexit1
+amb/secretexit		dsexit2
 amb/exit2		dstelebc
