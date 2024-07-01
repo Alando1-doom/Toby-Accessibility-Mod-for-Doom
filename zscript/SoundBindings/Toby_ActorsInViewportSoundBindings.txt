@@ -235,6 +235,7 @@
 {"ActorClass":"BasicDoorChecker", "SoundToPlay":"toby/actorsinviewport/env/door", "SoundToPlayPlural":"toby/actorsinviewport/env/doors", "Article":"a"}
 {"ActorClass":"BasicSwitchChecker", "SoundToPlay":"toby/actorsinviewport/env/switch", "SoundToPlayPlural":"toby/actorsinviewport/env/switches", "Article":"a"}
 {"ActorClass":"ExitBeacon1", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
+{"ActorClass":"SecretExitBeacon", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
 {"ActorClass":"TeleporterBeacon_Toby", "SoundToPlay":"toby/actorsinviewport/env/teleport", "SoundToPlayPlural":"toby/actorsinviewport/env/teleports", "Article":"a"}
 {"ActorClass":"RedKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/redlock", "SoundToPlayPlural":"toby/actorsinviewport/env/redlocks", "Article":"a"}
 {"ActorClass":"RedSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/redlock", "SoundToPlayPlural":"toby/actorsinviewport/env/redlocks", "Article":"a"}

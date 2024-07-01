@@ -1,0 +1,33 @@
+$rolloff amb/rdoor linear 96 208
+amb/rdoor				rdoor
+$rolloff amb/bdoor linear 96 208
+amb/bdoor				bdoor
+$rolloff amb/ydoor linear 96 208
+amb/ydoor				ydoor
+$rolloff amb/rskulldoor linear 96 208
+amb/rskulldoor			rdoordm
+$rolloff amb/bskulldoor linear 96 208
+amb/bskulldoor		bdoordm
+$rolloff amb/yskulldoor linear 96 208
+amb/yskulldoor		ydoordm
+$rolloff amb/3door linear 96 208
+amb/3door				3keydm
+$rolloff amb/6door linear 96 208
+amb/6door				6keydm
+$rolloff amb/anydoor linear 96 208
+amb/anydoor			anykdoor
+
+
+door/deniedred			dsredtry
+door/deniedblue			dsblutry
+door/deniedyellow		dsyeltry
+door/deniedredskull		rskultry
+door/deniedblueskull	bskultry
+door/deniedyellowskull	yskultry
+door/denied3				ds3key
+door/denied6				ds6key
+door/deniedany			dsanykey
+door/granted				dsaccyes
+door/redgranted			dsredyes
+door/bluegranted			dsbluyes
+door/yellowgranted		dsyelyes

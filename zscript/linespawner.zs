@@ -17,7 +17,7 @@ Class TobyEventHandler : EventHandler
 			}
 			Else If(level.lines[l].special==244)
 			{
-				Actor.Spawn("ExitBeacon1",(pos.x,pos.y,0));
+				Actor.Spawn("SecretExitBeacon",(pos.x,pos.y,0));
 			}
 			//Figuring this out caused me a massive headache
 			//Why does the Doom format and UDMF have different door locking?

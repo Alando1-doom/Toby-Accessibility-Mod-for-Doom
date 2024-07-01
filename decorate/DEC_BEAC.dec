@@ -45,6 +45,21 @@ Actor ExitBeacon1	7113
     }
 }
 
+Actor SecretExitBeacon
+{
+//$Category Accesibility Objects
+  Radius 16
+  Height 56
+  +NOCLIP
+  +GHOST
+   States
+   {
+     Spawn:
+          TNT1 A 1 A_PlaySoundEx("amb/secretexit", "SoundSlot6", 1, 0)
+          Loop
+    }
+}
+
 //This beacons teleporters
 Actor TeleporterBeacon_Toby	 7114
 {
