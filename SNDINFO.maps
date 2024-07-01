@@ -263,3 +263,67 @@ map/mdk/citadelofthedamned      "sounds/Maps/doom2_opmdk/CitadelOfTheDamned.ogg"
 map/mdk/thewarlordsdomain       "sounds/Maps/doom2_opmdk/TheWarlordsDomain.ogg"
 map/mdk/thegatekeeper           "sounds/Maps/doom2_opmdk/TheGateKeeper.ogg"
 map/mdk/missioncomplete         "sounds/Maps/doom2_opmdk/MissionComplete.ogg"
+
+//Heretic - Episode 1
+
+heretic/e1m1		"sounds/Maps/heretic_e1/TheDocks.ogg"
+heretic/e1m2		"sounds/Maps/heretic_e1/TheDungeons.ogg"
+heretic/e1m3		"sounds/Maps/heretic_e1/TheGatehouse.ogg"
+heretic/e1m4		"sounds/Maps/heretic_e1/TheGuardTower.ogg"
+heretic/e1m5		"sounds/Maps/heretic_e1/TheCitadel.ogg"
+heretic/e1m6		"sounds/Maps/heretic_e1/TheCathedral.ogg"
+heretic/e1m7		"sounds/Maps/heretic_e1/TheCrypts.ogg"
+heretic/e1m8		"sounds/Maps/heretic_e1/HellsMaw.ogg"
+heretic/e1m9		"sounds/Maps/heretic_e1/TheGraveyard.ogg"
+
+
+//Heretic - Episode 2
+
+heretic/e2m1		"sounds/Maps/heretic_e2/TheCrater.ogg"
+heretic/e2m2		"sounds/Maps/heretic_e2/TheLavaPits.ogg"
+heretic/e2m3		"sounds/Maps/heretic_e2/TheRiverOfFire.ogg"
+heretic/e2m4		"sounds/Maps/heretic_e2/TheIceGrotto.ogg"
+heretic/e2m5		"sounds/Maps/heretic_e2/TheCatacombs.ogg"
+heretic/e2m6		"sounds/Maps/heretic_e2/TheLabyrinth.ogg"
+heretic/e2m7		"sounds/Maps/heretic_e2/TheGreatHall.ogg"
+heretic/e2m8		"sounds/Maps/heretic_e2/PortalsOfChaos.ogg"
+heretic/e2m9		"sounds/Maps/heretic_e2/TheGlacier.ogg"
+
+
+//Heretic - Episode 3
+
+heretic/e3m1		"sounds/Maps/heretic_e3/TheStorehouse.ogg"
+heretic/e3m2		"sounds/Maps/heretic_e3/TheCesspool.ogg"
+heretic/e3m3		"sounds/Maps/heretic_e3/TheConfluence.ogg"
+heretic/e3m4		"sounds/Maps/heretic_e3/AzureFortress.ogg"
+heretic/e3m5		"sounds/Maps/heretic_e3/OphidianLair.ogg"
+heretic/e3m6		"sounds/Maps/heretic_e3/HallsOfFear.ogg"
+heretic/e3m7		"sounds/Maps/heretic_e3/TheChasm.ogg"
+heretic/e3m8		"sounds/Maps/heretic_e3/DsparilsKeep.ogg"
+heretic/e3m9		"sounds/Maps/heretic_e3/TheAquafier.ogg"
+
+
+//Heretic - Episode 4
+
+heretic/e4m1		"sounds/Maps/heretic_e4/Catafalque.ogg"
+heretic/e4m2		"sounds/Maps/heretic_e4/Blockhouse.ogg"
+heretic/e4m3		"sounds/Maps/heretic_e4/Ambulatory.ogg"
+heretic/e4m4		"sounds/Maps/heretic_e4/Sepulcher.ogg"
+heretic/e4m5		"sounds/Maps/heretic_e4/GreatStair.ogg"
+heretic/e4m6		"sounds/Maps/heretic_e4/HallsOfTheApostate.ogg"
+heretic/e4m7		"sounds/Maps/heretic_e4/RampartsOfPerdition.ogg"
+heretic/e4m8		"sounds/Maps/heretic_e4/ShatteredBridge.ogg"
+heretic/e4m9		"sounds/Maps/heretic_e4/Mausoleum.ogg"
+
+
+//Heretic - Episode 5
+
+heretic/e5m1		"sounds/Maps/heretic_e5/OchreCliffs.ogg"
+heretic/e5m2		"sounds/Maps/heretic_e5/Rapids.ogg"
+heretic/e5m3		"sounds/Maps/heretic_e5/Quay.ogg"
+heretic/e5m4		"sounds/Maps/heretic_e5/Courtyard.ogg"
+heretic/e5m5		"sounds/Maps/heretic_e5/Hydratyr.ogg"
+heretic/e5m6		"sounds/Maps/heretic_e5/Colonnade.ogg"
+heretic/e5m7		"sounds/Maps/heretic_e5/FoetidManse.ogg"
+heretic/e5m8		"sounds/Maps/heretic_e5/FieldOfJudgement.ogg"
+heretic/e5m9		"sounds/Maps/heretic_e5/SkeinOfDsparil.ogg"

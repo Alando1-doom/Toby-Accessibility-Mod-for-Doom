@@ -1,2 +1,32 @@
 //Expected format:
 //{"ActorClass":"<class name>", "SoundToPlay":"<SNDINFO definition>"}
+
+{"ActorClass":"ArtiHealth_Toby", "SoundToPlay":"heretic/actorsinviewport/health/flask"}
+{"ActorClass":"ArtiHealth", "SoundToPlay":"heretic/actorsinviewport/health/flask"}
+
+{"ActorClass":"ArtiSuperHealth_Toby", "SoundToPlay":"heretic/actorsinviewport/health/urn"}
+{"ActorClass":"ArtiSuperHealth", "SoundToPlay":"heretic/actorsinviewport/health/urn"}
+
+{"ActorClass":"RingGiver", "SoundToPlay":"heretic/actorsinviewport/artifact/ring"}
+{"ActorClass":"ArtiInvulnerability", "SoundToPlay":"heretic/actorsinviewport/artifact/ring"}
+
+{"ActorClass":"WingsGiver", "SoundToPlay":"heretic/actorsinviewport/artifact/wings"}
+{"ActorClass":"ArtiFly", "SoundToPlay":"heretic/actorsinviewport/artifact/wings"}
+
+{"ActorClass":"TorchGiver", "SoundToPlay":"heretic/actorsinviewport/artifact/torch"}
+{"ActorClass":"ArtiTorch", "SoundToPlay":"heretic/actorsinviewport/artifact/torch"}
+
+{"ActorClass":"ShadowGiver", "SoundToPlay":"heretic/actorsinviewport/artifact/shadowsphere"}
+{"ActorClass":"ArtiInvisibility", "SoundToPlay":"heretic/actorsinviewport/artifact/shadowsphere"}
+
+{"ActorClass":"TomeGiver", "SoundToPlay":"heretic/actorsinviewport/artifact/tome"}
+{"ActorClass":"ArtiTomeOfPower", "SoundToPlay":"heretic/actorsinviewport/artifact/tome"}
+
+{"ActorClass":"ArtiTimeBomb_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/timebomb"}
+{"ActorClass":"ArtiTimeBomb", "SoundToPlay":"heretic/actorsinviewport/artifact/timebomb"}
+
+{"ActorClass":"ArtiEgg_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum"}
+{"ActorClass":"ArtiEgg", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum"}
+
+{"ActorClass":"ArtiTeleport_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}
+{"ActorClass":"ArtiTeleport", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}

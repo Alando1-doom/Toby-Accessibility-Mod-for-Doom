@@ -116,3 +116,118 @@ toby/actorsinviewport/pickups/blueskulls        "sounds/ActorsInViewport/Pickups
 
 toby/actorsinviewport/pickups/yellowskull       "sounds/ActorsInViewport/Pickups/YellowSkull.ogg"
 toby/actorsinviewport/pickups/yellowskulls      "sounds/ActorsInViewport/Pickups/YellowSkulls.ogg"
+
+
+//Heretic
+
+heretic/actorsinviewport/weapon/staff					"sounds/ActorsInViewport/Heretic/Pickups/STAFF.ogg"
+
+heretic/actorsinviewport/weapon/beak					"sounds/ActorsInViewport/Heretic/Pickups/BEAK.ogg"
+
+heretic/actorsinviewport/weapon/gauntlets			"sounds/ActorsInViewport/Heretic/Pickups/Gauntlets.ogg"
+
+heretic/actorsinviewport/weapon/goldwand			"sounds/ActorsInViewport/Heretic/Pickups/GoldWand.ogg"
+heretic/actorsinviewport/weapon/goldwands			"sounds/ActorsInViewport/Heretic/Pickups/GoldWands.ogg"
+
+heretic/actorsinviewport/weapon/crossbow			"sounds/ActorsInViewport/Heretic/Pickups/ECrossbow.ogg"
+heretic/actorsinviewport/weapon/crossbows			"sounds/ActorsInViewport/Heretic/Pickups/ECrossbows.ogg"
+
+heretic/actorsinviewport/weapon/dragonclaw		"sounds/ActorsInViewport/Heretic/Pickups/DragonClaw.ogg"
+heretic/actorsinviewport/weapon/dragonclaws		"sounds/ActorsInViewport/Heretic/Pickups/DragonClaws.ogg"
+
+heretic/actorsinviewport/weapon/hellstaff				"sounds/ActorsInViewport/Heretic/Pickups/HellStaff.ogg"
+heretic/actorsinviewport/weapon/hellstaffs				"sounds/ActorsInViewport/Heretic/Pickups/HellStaffs.ogg"
+
+heretic/actorsinviewport/weapon/phoenixrod			"sounds/ActorsInViewport/Heretic/Pickups/PhoenixRod.ogg"
+heretic/actorsinviewport/weapon/phoenixrods		"sounds/ActorsInViewport/Heretic/Pickups/PhoenixRods.ogg"
+
+heretic/actorsinviewport/weapon/mace					"sounds/ActorsInViewport/Heretic/Pickups/FireMace.ogg"
+heretic/actorsinviewport/weapon/maces				"sounds/ActorsInViewport/Heretic/Pickups/FireMaces.ogg"
+
+heretic/actorsinviewport/ammo/wandcrystal			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystal.ogg"
+heretic/actorsinviewport/ammo/wandcrystals			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystals.ogg"
+
+heretic/actorsinviewport/ammo/geode					"sounds/ActorsInViewport/Heretic/Pickups/Geode.ogg"
+heretic/actorsinviewport/ammo/geodes					"sounds/ActorsInViewport/Heretic/Pickups/Geodes.ogg"
+
+heretic/actorsinviewport/ammo/arrow					"sounds/ActorsInViewport/Heretic/Pickups/Arrow.ogg"
+heretic/actorsinviewport/ammo/arrows					"sounds/ActorsInViewport/Heretic/Pickups/Arrows.ogg"
+
+heretic/actorsinviewport/ammo/packofarrows		"sounds/ActorsInViewport/Heretic/Pickups/PackOf5Arrows.ogg"
+heretic/actorsinviewport/ammo/packsofarrows		"sounds/ActorsInViewport/Heretic/Pickups/PacksOf5Arrows.ogg"
+
+heretic/actorsinviewport/ammo/quiver					"sounds/ActorsInViewport/Heretic/Pickups/Quiver.ogg"
+heretic/actorsinviewport/ammo/quivers					"sounds/ActorsInViewport/Heretic/Pickups/Quivers.ogg"
+
+heretic/actorsinviewport/ammo/claworb					"sounds/ActorsInViewport/Heretic/Pickups/ClawOrb.ogg"
+heretic/actorsinviewport/ammo/claworbs				"sounds/ActorsInViewport/Heretic/Pickups/ClawOrbs.ogg"
+
+heretic/actorsinviewport/ammo/energyorb				"sounds/ActorsInViewport/Heretic/Pickups/EnergyOrb.ogg"
+heretic/actorsinviewport/ammo/energyorbs			"sounds/ActorsInViewport/Heretic/Pickups/EnergyOrbs.ogg"
+
+heretic/actorsinviewport/ammo/lesserrunes			"sounds/ActorsInViewport/Heretic/Pickups/LesserRunes.ogg"
+heretic/actorsinviewport/ammo/greaterrunes			"sounds/ActorsInViewport/Heretic/Pickups/GreaterRunes.ogg"
+
+heretic/actorsinviewport/ammo/flameorb				"sounds/ActorsInViewport/Heretic/Pickups/FlameOrb.ogg"
+heretic/actorsinviewport/ammo/flameorbs				"sounds/ActorsInViewport/Heretic/Pickups/FlameOrbs.ogg"
+
+heretic/actorsinviewport/ammo/infernoorb				"sounds/ActorsInViewport/Heretic/Pickups/InfernoOrb.ogg"
+heretic/actorsinviewport/ammo/infernoorbs			"sounds/ActorsInViewport/Heretic/Pickups/InfernoOrbs.ogg"
+
+heretic/actorsinviewport/ammo/macespheres		"sounds/ActorsInViewport/Heretic/Pickups/MaceSpheres.ogg"
+heretic/actorsinviewport/ammo/macepile				"sounds/ActorsInViewport/Heretic/Pickups/MaceSpherePile.ogg"
+
+heretic/actorsinviewport/ammo/macepiles				"sounds/ActorsInViewport/Heretic/Pickups/MaceSpherePiles.ogg"
+
+heretic/actorsinviewport/ammo/bagofholding			"sounds/ActorsInViewport/Heretic/Pickups/BagOfHolding.ogg"
+heretic/actorsinviewport/ammo/bagsofholding		"sounds/ActorsInViewport/Heretic/Pickups/BagsOfHolding.ogg"
+
+heretic/actorsinviewport/health/vial						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVial.ogg"
+heretic/actorsinviewport/health/vials						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVials.ogg"
+
+heretic/actorsinviewport/health/flask						"sounds/ActorsInViewport/Heretic/Pickups/QuartzFlask.ogg"
+heretic/actorsinviewport/health/flasks					"sounds/ActorsInViewport/Heretic/Pickups/QuartzFlasks.ogg"
+
+heretic/actorsinviewport/health/urn						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrn.ogg"
+heretic/actorsinviewport/health/urns						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrns.ogg"
+
+heretic/actorsinviewport/armor/silvershield			"sounds/ActorsInViewport/Heretic/Pickups/SilverShield.ogg"
+heretic/actorsinviewport/armor/silvershields			"sounds/ActorsInViewport/Heretic/Pickups/SilverShields.ogg"
+
+heretic/actorsinviewport/armor/enchantedshield	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShield.ogg"
+heretic/actorsinviewport/armor/enchantedshields	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShields.ogg"
+
+heretic/actorsinviewport/key/bluekey						"sounds/ActorsInViewport/Heretic/Pickups/BlueKey.ogg"
+heretic/actorsinviewport/key/bluekeys					"sounds/ActorsInViewport/Heretic/Pickups/BlueKeys.ogg"
+
+heretic/actorsinviewport/key/greenkey					"sounds/ActorsInViewport/Heretic/Pickups/GreenKey.ogg"
+heretic/actorsinviewport/key/greenkeys					"sounds/ActorsInViewport/Heretic/Pickups/GreenKeys.ogg"
+
+heretic/actorsinviewport/key/yellowkey					"sounds/ActorsInViewport/Heretic/Pickups/YellowKey.ogg"
+heretic/actorsinviewport/key/yellowkeys				"sounds/ActorsInViewport/Heretic/Pickups/YellowKeys.ogg"
+
+heretic/actorsinviewport/artifact/chaosdevice			"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevice.ogg"
+heretic/actorsinviewport/artifact/chaosdevices		"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevices.ogg"
+
+heretic/actorsinviewport/artifact/morphovum			"sounds/ActorsInViewport/Heretic/Pickups/MorphOvum.ogg"
+heretic/actorsinviewport/artifact/morphovums		"sounds/ActorsInViewport/Heretic/Pickups/MorphOvums.ogg"
+
+heretic/actorsinviewport/artifact/mapscroll				"sounds/ActorsInViewport/Heretic/Pickups/MapScroll.ogg"
+heretic/actorsinviewport/artifact/mapscrolls			"sounds/ActorsInViewport/Heretic/Pickups/MapScrolls.ogg"
+
+heretic/actorsinviewport/artifact/shadowsphere		"sounds/ActorsInViewport/Heretic/Pickups/ShadowSphere.ogg"
+heretic/actorsinviewport/artifact/shadowspheres	"sounds/ActorsInViewport/Heretic/Pickups/ShadowSpheres.ogg"
+
+heretic/actorsinviewport/artifact/ring						"sounds/ActorsInViewport/Heretic/Pickups/Ring.ogg"
+heretic/actorsinviewport/artifact/rings						"sounds/ActorsInViewport/Heretic/Pickups/Rings.ogg"
+
+heretic/actorsinviewport/artifact/torch						"sounds/ActorsInViewport/Heretic/Pickups/TorchPowerup.ogg"
+heretic/actorsinviewport/artifact/torches					"sounds/ActorsInViewport/Heretic/Pickups/TorchPowerups.ogg"
+
+heretic/actorsinviewport/artifact/tome						"sounds/ActorsInViewport/Heretic/Pickups/Tome.ogg"
+heretic/actorsinviewport/artifact/tomes					"sounds/ActorsInViewport/Heretic/Pickups/Tomes.ogg"
+
+heretic/actorsinviewport/artifact/timebomb				"sounds/ActorsInViewport/Heretic/Pickups/TimeBomb.ogg"
+heretic/actorsinviewport/artifact/timebombs			"sounds/ActorsInViewport/Heretic/Pickups/TimeBombs.ogg"
+
+heretic/actorsinviewport/artifact/wings					"sounds/ActorsInViewport/Heretic/Pickups/Wings.ogg"

@@ -12,3 +12,9 @@ misc/keytry         "sounds/Keys/KeyIsRequired.ogg"
 
 $rolloff misc/key   linear  96 384
 misc/key            "sounds/Keys/KeyBeep.wav"
+
+
+//Heretic
+heretic/key/bluekey						"sounds/Keys/Heretic/BlueKey.ogg"
+heretic/key/greenkey					"sounds/Keys/Heretic/GreenKey.ogg"
+heretic/key/yellowkey					"sounds/Keys/Heretic/YellowKey.ogg"

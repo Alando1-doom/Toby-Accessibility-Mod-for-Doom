@@ -12,3 +12,14 @@
 {"ActorClass":"GreenArmor_TO", "SoundToPlay":"stats/doom/armor/greenarmor"}
 {"ActorClass":"BlueArmor_TO", "SoundToPlay":"stats/doom/armor/megaarmor"}
 {"ActorClass":"BlueArmorForMegasphere_TO", "SoundToPlay":"stats/doom/armor/megaarmor"}
+
+
+//Heretic Toby
+
+{"ActorClass":"SilverShield_Toby", "SoundToPlay":"ann/shield1"}
+{"ActorClass":"EnchantedShield_Toby", "SoundToPlay":"ann/shield2"}
+
+//Heretic
+
+{"ActorClass":"SilverShield", "SoundToPlay":"ann/shield1"}
+{"ActorClass":"EnchantedShield", "SoundToPlay":"ann/shield2"}
