@@ -150,7 +150,7 @@ class Toby_MarkerHandler : EventHandler
         {
             ThinkerIterator actorFinder = ThinkerIterator.Create(autoMarkerDb.items[j].targetActorName);
             Actor foundActor;
-            while (foundActor = Actor(actorFinder.Next()))
+            while (foundActor = Actor(actorFinder.Next(true)))
             {
                 for (int i = 0; i < maxPlayers; i++)
                 {
