@@ -48,6 +48,7 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("RedKeyChecker_V2", "Toby_Marker_RedKeyDoor", "Red key door");
         autoMarkerDb.AddItem("BlueKeyChecker_V2", "Toby_Marker_BlueKeyDoor", "Blue key door");
         autoMarkerDb.AddItem("YellowKeyChecker_V2", "Toby_Marker_YellowKeyDoor", "Yellow key door");
+        autoMarkerDb.AddItem("GreenKeyChecker_V2", "Toby_Marker_GreenKeyDoor", "Green key door"); //Heretic
 
         autoMarkerDb.AddItem("RedSkullChecker_V2", "Toby_Marker_RedSkullDoor", "Red skull door");
         autoMarkerDb.AddItem("BlueSkullChecker_V2", "Toby_Marker_BlueSkullDoor", "Blue skull door");

@@ -89,6 +89,9 @@ ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
         }
 }
 
+//I'm too afraid to touch it so I've just made a copy -P
+ACTOR GreenKeyChecker_V2 : RedKeyChecker_V2 {}
+
 ACTOR RedSkullChecker_V2
 {
     	Health 10000000000000000000000

@@ -646,6 +646,7 @@
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Red key door", "SoundToPlay":"pathfinder/reddoor"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Blue key door", "SoundToPlay":"pathfinder/bluedoor"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Yellow key door", "SoundToPlay":"pathfinder/yellowdoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Green key door", "SoundToPlay":"pathfinder/greendoor"}
 
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Red skull door", "SoundToPlay":"pathfinder/redskull"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Blue skull door", "SoundToPlay":"pathfinder/blueskull"}

@@ -8,6 +8,12 @@ Class TobyEventHandler : EventHandler
 {
 	Override void WorldLoaded(WorldEvent e)
 	{
+        if (GameInfo.GameType & GAME_Heretic) {
+            console.printf("We're in Heretic");
+        } else {
+            console.printf("We're NOT in Heretic");
+        }
+
 		For(int l = 0; l < level.lines.size(); l++)
 		{
 			Vector2 pos = level.lines[l].v1.p + (level.lines[l].delta / 2.0);
@@ -26,15 +32,30 @@ Class TobyEventHandler : EventHandler
 			//Red Key
 			Else If(level.lines[l].locknumber==1 || level.lines[l].locknumber==129 || level.lines[l].locknumber==132)
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==1 || level.lines[l].args[3]==129 || level.lines[l].args[3]==132))
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==1 || level.lines[l].args[4]==129 || level.lines[l].args[4]==132))
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			//Blue Key
 			Else If(level.lines[l].locknumber==2 || level.lines[l].locknumber==130 || level.lines[l].locknumber==133)
