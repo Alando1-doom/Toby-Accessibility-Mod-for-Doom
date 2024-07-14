@@ -8,12 +8,6 @@ Class TobyEventHandler : EventHandler
 {
 	Override void WorldLoaded(WorldEvent e)
 	{
-        if (GameInfo.GameType & GAME_Heretic) {
-            console.printf("We're in Heretic");
-        } else {
-            console.printf("We're NOT in Heretic");
-        }
-
 		For(int l = 0; l < level.lines.size(); l++)
 		{
 			Vector2 pos = level.lines[l].v1.p + (level.lines[l].delta / 2.0);
