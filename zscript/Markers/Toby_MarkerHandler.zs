@@ -48,6 +48,7 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("RedKeyChecker_V2", "Toby_Marker_RedKeyDoor", "Red key door");
         autoMarkerDb.AddItem("BlueKeyChecker_V2", "Toby_Marker_BlueKeyDoor", "Blue key door");
         autoMarkerDb.AddItem("YellowKeyChecker_V2", "Toby_Marker_YellowKeyDoor", "Yellow key door");
+        autoMarkerDb.AddItem("GreenKeyChecker_V2", "Toby_Marker_GreenKeyDoor", "Green key door"); //Heretic
 
         autoMarkerDb.AddItem("RedSkullChecker_V2", "Toby_Marker_RedSkullDoor", "Red skull door");
         autoMarkerDb.AddItem("BlueSkullChecker_V2", "Toby_Marker_BlueSkullDoor", "Blue skull door");
@@ -58,6 +59,7 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("AnyKeyChecker_V2", "Toby_Marker_AnyKeyDoor", "Any key door");
 
         autoMarkerDb.AddItem("ExitBeacon1", "Toby_Marker_Exit", "Exit");
+        autoMarkerDb.AddItem("SecretExitBeacon", "Toby_Marker_Secret_Exit", "Secret Exit");
     }
 
     override void WorldTick()
@@ -148,7 +150,7 @@ class Toby_MarkerHandler : EventHandler
         {
             ThinkerIterator actorFinder = ThinkerIterator.Create(autoMarkerDb.items[j].targetActorName);
             Actor foundActor;
-            while (foundActor = Actor(actorFinder.Next()))
+            while (foundActor = Actor(actorFinder.Next(true)))
             {
                 for (int i = 0; i < maxPlayers; i++)
                 {

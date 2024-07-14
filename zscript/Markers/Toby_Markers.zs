@@ -25,6 +25,7 @@ class Toby_Marker_LevelStart : Toby_Marker_Silent {}
 class Toby_Marker_RedKeyDoor : Toby_Marker_Silent {}
 class Toby_Marker_BlueKeyDoor : Toby_Marker_Silent {}
 class Toby_Marker_YellowKeyDoor : Toby_Marker_Silent {}
+class Toby_Marker_GreenKeyDoor : Toby_Marker_Silent {} //Heretic
 
 class Toby_Marker_RedSkullDoor : Toby_Marker_Silent {}
 class Toby_Marker_BlueSkullDoor : Toby_Marker_Silent {}
@@ -35,6 +36,7 @@ class Toby_Marker_SixKeyDoorDoor : Toby_Marker_Silent {}
 class Toby_Marker_AnyKeyDoor : Toby_Marker_Silent {}
 
 class Toby_Marker_Exit : Toby_Marker_Silent {}
+class Toby_Marker_Secret_Exit : Toby_Marker_Silent {}
 
 class Toby_Marker_Pathfinding : ZS_Marker_Base
 {

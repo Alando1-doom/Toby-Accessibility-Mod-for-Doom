@@ -26,15 +26,30 @@ Class TobyEventHandler : EventHandler
 			//Red Key
 			Else If(level.lines[l].locknumber==1 || level.lines[l].locknumber==129 || level.lines[l].locknumber==132)
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==1 || level.lines[l].args[3]==129 || level.lines[l].args[3]==132))
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==1 || level.lines[l].args[4]==129 || level.lines[l].args[4]==132))
 			{
-				Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                //This is awful -Proydoha
+                if (GameInfo.GameType & GAME_Heretic) {
+                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                } else {
+                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                }
 			}
 			//Blue Key
 			Else If(level.lines[l].locknumber==2 || level.lines[l].locknumber==130 || level.lines[l].locknumber==133)

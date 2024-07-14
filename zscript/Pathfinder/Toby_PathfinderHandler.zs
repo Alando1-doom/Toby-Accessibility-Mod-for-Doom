@@ -184,25 +184,25 @@ class Toby_PathfinderHandler : EventHandler
         if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
         {
             // console.printf("Path found");
-            S_StartSound("menusnd/yes", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            S_StartSound("pathfinder/pathfound", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
         {
             // console.printf("Path can't be found");
-            S_StartSound("menusnd/no", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            S_StartSound("pathfinder/nopath", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
         {
             // console.printf("Destination reached");
-            S_StartSound("marker/beacon10", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            S_StartSound("pathfinder/destreached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
 
         if (currentNodePrevious[consoleplayer] != currentNodeCurrent[consoleplayer] && !destinationReachedCurrent[consoleplayer])
         {
             // console.printf("Next node reached");
-            S_StartSound("misc/key", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            S_StartSound("pathfinder/nodereached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
     }
 }

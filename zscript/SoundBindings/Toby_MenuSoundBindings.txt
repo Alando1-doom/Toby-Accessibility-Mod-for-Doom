@@ -606,3 +606,52 @@
 {"EventType":"MenuChanged",   "CurrentMenuName":"writeini", "SoundToPlay":"menu/option/saveset"}
 {"EventType":"OptionChanged", "CurrentMenuName":"writeini", "CurrentMenuItemOptionName":"$OPTMNU_WRITEINI", "SoundToPlay":"menu/option/saveset"}
 {"EventType":"OptionChanged", "CurrentMenuName":"writeini", "CurrentMenuItemOptionName":"Save Current Settings", "SoundToPlay":"menu/option/saveset"}
+
+//Pathfinder - Main menu
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_marker_main", "SoundToPlay":"pathfinder/markermenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Pathfinding", "SoundToPlay":"pathfinder/pathfinding"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Add marker", "SoundToPlay":"pathfinder/addmarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Remove marker", "SoundToPlay":"pathfinder/removemarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Remove nearest marker", "SoundToPlay":"pathfinder/removenearest"}
+
+//Pathfinder - Pathfinding
+{"EventType":"MenuChanged",   "CurrentMenuName":"Toby_Marker_Pathfinding", "SoundToPlay":"pathfinder/pathfinding"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Toby_Marker_Pathfinding", "CurrentMenuItemOptionName":"Stop pathfinding", "SoundToPlay":"pathfinder/stoppath"}
+
+//Pathfinder - Add marker
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_marker_add", "SoundToPlay":"pathfinder/addmarker"}
+
+//Pathfinder - Remove marker
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_marker_remove", "SoundToPlay":"pathfinder/removemarker"}
+
+//Pathfinder - Remove nearest marker
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_marker_remove_nearest", "SoundToPlay":"pathfinder/removenearest"}
+
+//Pathfinder - Shared bindings
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 1", "SoundToPlay":"pathfinder/marker1"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 2", "SoundToPlay":"pathfinder/marker2"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 3", "SoundToPlay":"pathfinder/marker3"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 4", "SoundToPlay":"pathfinder/marker4"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 5", "SoundToPlay":"pathfinder/marker5"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 6", "SoundToPlay":"pathfinder/marker6"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 7", "SoundToPlay":"pathfinder/marker7"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 8", "SoundToPlay":"pathfinder/marker8"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 9", "SoundToPlay":"pathfinder/marker9"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 10", "SoundToPlay":"pathfinder/marker10"}
+
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Level start", "SoundToPlay":"pathfinder/levelstart"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"pathfinder/exit"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Secret Exit", "SoundToPlay":"pathfinder/secretexit"}
+
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Red key door", "SoundToPlay":"pathfinder/reddoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Blue key door", "SoundToPlay":"pathfinder/bluedoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Yellow key door", "SoundToPlay":"pathfinder/yellowdoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Green key door", "SoundToPlay":"pathfinder/greendoor"}
+
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Red skull door", "SoundToPlay":"pathfinder/redskull"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Blue skull door", "SoundToPlay":"pathfinder/blueskull"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Yellow skull door", "SoundToPlay":"pathfinder/yellowskull"}
+
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Three key door", "SoundToPlay":"pathfinder/3keydoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Six key door", "SoundToPlay":"pathfinder/6keydoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Any key door", "SoundToPlay":"pathfinder/anykeydoor"}
