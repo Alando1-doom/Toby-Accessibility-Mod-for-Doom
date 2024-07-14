@@ -35,6 +35,7 @@ class Toby_Marker_SixKeyDoorDoor : Toby_Marker_Silent {}
 class Toby_Marker_AnyKeyDoor : Toby_Marker_Silent {}
 
 class Toby_Marker_Exit : Toby_Marker_Silent {}
+class Toby_Marker_Secret_Exit : Toby_Marker_Silent {}
 
 class Toby_Marker_Pathfinding : ZS_Marker_Base
 {

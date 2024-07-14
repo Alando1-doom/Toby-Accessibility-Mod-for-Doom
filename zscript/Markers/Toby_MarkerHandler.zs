@@ -58,6 +58,7 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("AnyKeyChecker_V2", "Toby_Marker_AnyKeyDoor", "Any key door");
 
         autoMarkerDb.AddItem("ExitBeacon1", "Toby_Marker_Exit", "Exit");
+        autoMarkerDb.AddItem("SecretExitBeacon", "Toby_Marker_Secret_Exit", "Secret Exit");
     }
 
     override void WorldTick()
