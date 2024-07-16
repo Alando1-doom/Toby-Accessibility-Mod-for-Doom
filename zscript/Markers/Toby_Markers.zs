@@ -54,7 +54,7 @@ class Toby_Marker_Pathfinding : ZS_Marker_Base
         Enabled:
             MRK1 B 2 Bright;
             MRK1 BBBBBBBB 4 Bright;
-            MRK1 B 2 Bright A_StartSound("marker/beacon1", CHAN_5, 0, 1.0, ATTN_NORM);
+            MRK1 B 2 Bright A_StartSound("pathfinder/nodebeacon", CHAN_5, 0, 1.0, ATTN_NORM);
             Loop;
     }
 }
