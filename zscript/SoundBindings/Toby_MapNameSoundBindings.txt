@@ -450,7 +450,7 @@
 //E1M2 - The Dungeons
 {"Checksum":"8a2e9eef05ba563adf0375baf6bea84c", "SoundToPlay":"heretic/e1m2"}
 //E1M3 - The Gatehouse
-{"Checksum":"4faac7e45b495f422b484bb2fdb7114c", "SoundToPlay":"heretic/e1m3"}
+{"Checksum":"fbbb5e3b9e77e4ad11fcec05d87b0064", "SoundToPlay":"heretic/e1m3"}
 //E1M4 - The Guard Tower
 {"Checksum":"422fc6d0ac8b535afdf919d228d6db40", "SoundToPlay":"heretic/e1m4"}
 //E1M5 - The Citadel
