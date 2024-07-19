@@ -44,17 +44,18 @@ class Toby_Marker_Pathfinding : ZS_Marker_Base
     {
         Radius 16;
         Height 20;
-        +INVISIBLE
+        -INVISIBLE
+		Scale 0.5;
     }
     States
     {
         Spawn:
-            MRK1 B 2 Bright;
+            TNT1 A 2 Bright;
             Loop;
         Enabled:
-            MRK1 B 2 Bright;
-            MRK1 BBBBBBBB 4 Bright;
-            MRK1 B 2 Bright A_StartSound("marker/beacon1", CHAN_5, 0, 1.0, ATTN_NORM);
+            NODE A 2 Bright;
+            NODE BCDABCDABC 4 Bright;
+            NODE D 2 Bright A_StartSound("pathfinder/nodebeacon", CHAN_5, 0, 1.0, ATTN_NORM);
             Loop;
     }
 }
