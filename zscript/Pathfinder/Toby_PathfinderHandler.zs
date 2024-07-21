@@ -91,11 +91,12 @@ class Toby_PathfinderHandler : EventHandler
                     if (nextNodeVector.Length() >= minDistance)
                     {
                         Vector3 newPos = playerActor.pos + nextNodeVector.Unit() * minDistance;
-                        pathfindingMarkers[i].SetOrigin(newPos, false);
+                        int zPos = Max(playerActor.GetZAt(newPos.x, newPos.y, 0, GZF_ABSOLUTEPOS), newPos.z);
+                        pathfindingMarkers[i].SetOrigin((newPos.xy, zPos), true);
                     }
                     else
                     {
-                        pathfindingMarkers[i].SetOrigin(currentNodeCurrent[i].pos, false);
+                        pathfindingMarkers[i].SetOrigin(currentNodeCurrent[i].pos, true);
                     }
                 }
             }
