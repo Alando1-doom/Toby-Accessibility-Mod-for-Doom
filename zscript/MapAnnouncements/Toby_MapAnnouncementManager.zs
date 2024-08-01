@@ -41,7 +41,15 @@ class Toby_MapAnnouncementManager
 
         if (tickCount == targetTickCount)
         {
-            S_StartSound(FindEntryByChecksum(currentChecksum).soundToPlay, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                string textToPrint = level.MapName .. " - " .. level.LevelName;
+                console.printf("[Toby Accessibility Mod] %s", textToPrint);
+            }
+            else
+            {
+                S_StartSound(FindEntryByChecksum(currentChecksum).soundToPlay, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
         }
     }
 
