@@ -38,8 +38,13 @@ class Toby_SelectionNarrationHandler : EventHandler
 
     override void InterfaceProcess(ConsoleEvent e)
     {
+        if (!bindings) { return; }
+        if (!bindings.weaponsSoundBindingsContainer) { return; }
+        if (!bindings.itemsSoundBindingsContainer) { return; }
+
         Array<String> eventAndArguments;
         e.Name.split(eventAndArguments, ":", TOK_KEEPEMPTY);
+        if (eventAndArguments.Size() <= 1) { return; }
         string event = eventAndArguments[0];
         Array<string> args;
         if (eventAndArguments.Size() > 1)
