@@ -34,7 +34,6 @@ class Toby_TitleScreenHandler : EventHandler
         Toby_Logger.Message("Map checksum: "..levelChecksum, "Toby_Developer_MapInformation");
 
         if (levelChecksum != titlemapChecksum) { return; }
-        console.printf(isUltimateDoom().."");
         if (isUltimateDoom())
         {
             S_ChangeMusic("D_INTRO");
