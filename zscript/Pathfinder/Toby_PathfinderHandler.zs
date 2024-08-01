@@ -182,22 +182,42 @@ class Toby_PathfinderHandler : EventHandler
 
     override void UiTick()
     {
-        if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
         {
-            // console.printf("Path found");
-            S_StartSound("pathfinder/pathfound", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
+            if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
+            {
+                console.printf("[Toby Accessibility Mod] Path found");
+            }
 
-        if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
-        {
-            // console.printf("Path can't be found");
-            S_StartSound("pathfinder/nopath", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
-        }
+            if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
+            {
+                console.printf("[Toby Accessibility Mod] Path not found");
+            }
 
-        if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
+            if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
+            {
+                console.printf("[Toby Accessibility Mod] Destination reached");
+            }
+        }
+        else
         {
-            // console.printf("Destination reached");
-            S_StartSound("pathfinder/destreached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
+            {
+                // console.printf("Path found");
+                S_StartSound("pathfinder/pathfound", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
+
+            if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
+            {
+                // console.printf("Path can't be found");
+                S_StartSound("pathfinder/nopath", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
+
+            if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
+            {
+                // console.printf("Destination reached");
+                S_StartSound("pathfinder/destreached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
         }
 
         if (currentNodePrevious[consoleplayer] != currentNodeCurrent[consoleplayer] && !destinationReachedCurrent[consoleplayer])
