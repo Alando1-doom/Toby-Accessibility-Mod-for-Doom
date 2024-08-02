@@ -1,24 +1,18 @@
 //Toby
-//{"ActorClass":"Fist_TO", "SoundToPlay":"stats/doom/weapons/fist"}
-//{"ActorClass":"Chainsaw_TO", "SoundToPlay":"stats/doom/weapons/chainsaw"}
-//{"ActorClass":"Pistol_TO", "SoundToPlay":"stats/doom/weapons/pistol"}
-//{"ActorClass":"Shotgun_TO", "SoundToPlay":"stats/doom/weapons/shotgun"}
-//{"ActorClass":"SuperShotgun_TO", "SoundToPlay":"stats/doom/weapons/ssg"}
-//{"ActorClass":"Chaingun_TO", "SoundToPlay":"stats/doom/weapons/chaingun"}
-//{"ActorClass":"RocketLauncher_TO", "SoundToPlay":"stats/doom/weapons/rlauncher"}
-//{"ActorClass":"PlasmaRifle_TO", "SoundToPlay":"stats/doom/weapons/plasmagun"}
-//{"ActorClass":"BFG9000_TO", "SoundToPlay":"stats/doom/weapons/bfg"}
+{"ActorClass":"Fist_TO", "SoundToPlay":"stats/doom/weapons/fist"}
+{"ActorClass":"Chainsaw_TO", "SoundToPlay":"stats/doom/weapons/chainsaw"}
+{"ActorClass":"Pistol_TO", "SoundToPlay":"stats/doom/weapons/pistol"}
+{"ActorClass":"Shotgun_TO", "SoundToPlay":"stats/doom/weapons/shotgun"}
+{"ActorClass":"SuperShotgun_TO", "SoundToPlay":"stats/doom/weapons/ssg"}
+{"ActorClass":"Chaingun_TO", "SoundToPlay":"stats/doom/weapons/chaingun"}
+{"ActorClass":"RocketLauncher_TO", "SoundToPlay":"stats/doom/weapons/rlauncher"}
+{"ActorClass":"PlasmaRifle_TO", "SoundToPlay":"stats/doom/weapons/plasmagun"}
+{"ActorClass":"BFG9000_TO", "SoundToPlay":"stats/doom/weapons/bfg"}
 
 //Doom 2
 {"ActorClass":"Fist", "SoundToPlay":"stats/doom/weapons/fist"}
 {"ActorClass":"Chainsaw", "SoundToPlay":"stats/doom/weapons/chainsaw"}
 {"ActorClass":"Pistol", "SoundToPlay":"stats/doom/weapons/pistol"}
-{"ActorClass":"Shotgun", "SoundToPlay":"ann/shotgun"}
-{"ActorClass":"SuperShotgun", "SoundToPlay":"ann/ssg"}
-{"ActorClass":"Chaingun", "SoundToPlay":"ann/chaingun"}
-{"ActorClass":"RocketLauncher", "SoundToPlay":"ann/rlauncher"}
-{"ActorClass":"PlasmaRifle", "SoundToPlay":"ann/plasmagun"}
-{"ActorClass":"BFG9000", "SoundToPlay":"ann/bfg"}
 {"ActorClass":"Shotgun", "SoundToPlay":"stats/doom/weapons/shotgun"}
 {"ActorClass":"SuperShotgun", "SoundToPlay":"stats/doom/weapons/ssg"}
 {"ActorClass":"Chaingun", "SoundToPlay":"stats/doom/weapons/chaingun"}
@@ -45,22 +39,6 @@
 {"ActorClass":"PhoenixRodPowered_Toby", "SoundToPlay":"heretic/weapon/phoenixrod"}
 {"ActorClass":"FireMace_Toby", "SoundToPlay":"heretic/weapon/mace"}
 {"ActorClass":"FireMacePowered_Toby", "SoundToPlay":"heretic/weapon/mace"}
-//{"ActorClass":"Staff_Toby", "SoundToPlay":"heretic/weapon/staff"}
-//{"ActorClass":"StaffPowered_Toby", "SoundToPlay":"heretic/weapon/staff"}
-//{"ActorClass":"Gauntlets_Toby", "SoundToPlay":"heretic/weapon/gauntlets"}
-//{"ActorClass":"GauntletsPowered_Toby", "SoundToPlay":"heretic/weapon/gauntlets"}
-//{"ActorClass":"GoldWand_Toby", "SoundToPlay":"heretic/weapon/goldwand"}
-//{"ActorClass":"GoldWandPowered_Toby", "SoundToPlay":"heretic/weapon/goldwand"}
-//{"ActorClass":"Crossbow_Toby", "SoundToPlay":"heretic/weapon/crossbow"}
-//{"ActorClass":"CrossbowPowered_Toby", "SoundToPlay":"heretic/weapon/crossbow"}
-//{"ActorClass":"DragonClaw_Toby", "SoundToPlay":"heretic/weapon/dragonclaw"}
-//{"ActorClass":"DragonClawPowered_Toby", "SoundToPlay":"heretic/weapon/dragonclaw"}
-//{"ActorClass":"HellStaff_Toby", "SoundToPlay":"heretic/weapon/hellstaff"}
-//{"ActorClass":"HellStaffPowered_Toby", "SoundToPlay":"heretic/weapon/hellstaff"}
-//{"ActorClass":"PhoenixRod_Toby", "SoundToPlay":"heretic/weapon/phoenixrod"}
-//{"ActorClass":"PhoenixRodPowered_Toby", "SoundToPlay":"heretic/weapon/phoenixrod"}
-//{"ActorClass":"FireMace_Toby", "SoundToPlay":"heretic/weapon/mace"}
-//{"ActorClass":"FireMacePowered_Toby", "SoundToPlay":"heretic/weapon/mace"}
 
 //Heretic
 
