@@ -10,6 +10,6 @@
 {"ActorClass":"GoldWandAmmo", "SoundToPlay":"heretic/ammo/wandcrystal", "SoundToPlayPlural":"heretic/ammo/wandcrystals"}
 {"ActorClass":"CrossbowAmmo", "SoundToPlay":"heretic/ammo/arrow", "SoundToPlayPlural":"heretic/ammo/arrows"}
 {"ActorClass":"BlasterAmmo", "SoundToPlay":"heretic/ammo/claworb", "SoundToPlayPlural":"heretic/ammo/claworbs"}
-{"ActorClass":"SkullRodAmmo", "SoundToPlay":"heretic/ammo/lesserrunes", "SoundToPlayPlural":"heretic/ammo/lesserrunes"}
+{"ActorClass":"SkullRodAmmo", "SoundToPlay":"heretic/ammo/rune", "SoundToPlayPlural":"heretic/ammo/runes"}
 {"ActorClass":"PhoenixRodAmmo", "SoundToPlay":"heretic/ammo/flameorb", "SoundToPlayPlural":"heretic/ammo/flameorbs"}
 {"ActorClass":"MaceAmmo", "SoundToPlay":"heretic/ammo/macespheres", "SoundToPlayPlural":"heretic/ammo/macespheres"}
