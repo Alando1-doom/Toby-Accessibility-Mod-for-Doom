@@ -18,6 +18,10 @@ class Toby_SelectionNarrationHandler : EventHandler
             isNotFirstRun = true;
             bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
         }
+        if (!bindings)
+        {
+            bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
+        }
     }
 
     override void WorldLoaded(WorldEvent e)
