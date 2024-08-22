@@ -1,3 +1,5 @@
+server bool Toby_UniversalBeacon_UseUniversalSounds = false;
+
 user int   zs_em_MaxDistance = 500;
 user bool   Toby_Developer = false;
 

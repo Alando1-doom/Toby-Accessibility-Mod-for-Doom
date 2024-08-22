@@ -19,6 +19,10 @@ OptionMenu "toby_mod_options"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET3", "toby_actors_in_viewport_narration_preset_3_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET4", "toby_actors_in_viewport_narration_preset_4_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET5", "toby_actors_in_viewport_narration_preset_5_keybind"
+
+    StaticText "$TOBY_UNIVERSAL_BEACONS_SECTION"
+    Option "$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "Toby_UniversalBeacon_UseUniversalSounds", "toby_universal_beacons_use_universal_sounds_state"
+    Command "$TOBY_UNIVERSAL_BEACONS_UPDATE", "netevent Toby_UniversalBeaconUseUniversalSoundsUpdate"
 }
 
 OptionMenu "toby_developer"
@@ -94,4 +98,10 @@ OptionMenu "toby_marker_remove_nearest"
 {
   class Toby_MarkerRemoveNearestMenu
   Title "Remove nearest marker"
+}
+
+OptionValue "toby_universal_beacons_use_universal_sounds_state"
+{
+    0, "No"
+    1, "Yes"
 }

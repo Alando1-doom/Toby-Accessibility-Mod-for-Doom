@@ -1,10 +1,12 @@
 class Toby_UniversalPickupBeaconHandler: EventHandler
 {
     Toby_ClassIgnoreListLoaderStaticHandler classIgnoreListLoader;
+    bool useUniversalSounds;
 
     override void OnRegister()
     {
         classIgnoreListLoader = Toby_ClassIgnoreListLoaderStaticHandler.GetInstance();
+        useUniversalSounds = Cvar.GetCvar("Toby_UniversalBeacon_UseUniversalSounds").GetBool();
     }
 
     override void WorldThingSpawned(WorldEvent e)
@@ -12,6 +14,20 @@ class Toby_UniversalPickupBeaconHandler: EventHandler
         if (!(e.Thing is 'Inventory')) { return; }
         if (classIgnoreListLoader.IsInIgnoreList(e.Thing, classIgnoreListLoader.universalPickupBeaconIgnoreList)) { return; }
         Toby_UniversalPickupBeacon beacon = Toby_UniversalPickupBeacon(e.Thing.Spawn("Toby_UniversalPickupBeacon", e.Thing.pos));
-        beacon.SetReferenceActor(e.Thing);
+        beacon.SetReferenceActor(e.Thing, useUniversalSounds);
+    }
+
+    override void NetworkProcess(ConsoleEvent e)
+    {
+        if (e.Name == "Toby_UniversalBeaconUseUniversalSoundsUpdate")
+        {
+            useUniversalSounds = Cvar.GetCvar("Toby_UniversalBeacon_UseUniversalSounds").GetBool();
+            ThinkerIterator actorFinder = ThinkerIterator.Create("Toby_UniversalPickupBeacon");
+            Toby_UniversalPickupBeacon foundActor;
+            while (foundActor = Toby_UniversalPickupBeacon(actorFinder.Next(true)))
+            {
+                foundActor.UpdateUseUniversalSounds(useUniversalSounds);
+            }
+        }
     }
 }

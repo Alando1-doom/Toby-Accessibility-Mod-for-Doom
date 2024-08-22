@@ -1,6 +1,7 @@
 class Toby_UniversalPickupBeacon : Actor
 {
     Actor referenceActor;
+    bool useUniversalSounds;
 
     Default
     {
@@ -51,7 +52,30 @@ class Toby_UniversalPickupBeacon : Actor
             beacon.A_StartSound("marker/Markers/undofail", CHAN_AUTO);
             return;
         }
+
+        string soundByItemType = beacon.GetSoundByItemType(invItem);
+        if (soundByItemType != "" && beacon.useUniversalSounds) {
+            beacon.A_StartSound(soundByItemType, CHAN_AUTO);
+            return;
+        }
+
         beacon.A_StartSound(invItem.PickupSound, CHAN_AUTO);
+    }
+
+    string GetSoundByItemType(Inventory item)
+    {
+        if (item is "Ammo") return "toby/universalbeacons/ammo";
+        if (item is "BasicArmor") return "toby/universalbeacons/armor";
+        if (item is "Health") return "toby/universalbeacons/health";
+        if (item is "Key") return "toby/universalbeacons/key";
+        if (item is "Weapon") return "toby/universalbeacons/weapon";
+
+        return "";
+    }
+
+    void UpdateUseUniversalSounds(bool useUniversalSounds)
+    {
+        self.useUniversalSounds = useUniversalSounds;
     }
 
     bool CheckIfCollidesWithAnyPlayer()
@@ -71,8 +95,9 @@ class Toby_UniversalPickupBeacon : Actor
         return false;
     }
 
-    void SetReferenceActor(Actor referenceActor)
+    void SetReferenceActor(Actor referenceActor, bool useUniversalSounds)
     {
         self.referenceActor = referenceActor;
+        self.useUniversalSounds = useUniversalSounds;
     }
 }

@@ -76,3 +76,7 @@ TOBY_VIEWPORT_NARRATION_PRESET4 = "Area scanner - Height (Low / Same level / Hig
 TOBY_VIEWPORT_NARRATION_PRESET5 = "Area scanner - Combined Directional and Height";
 
 TOBY_DEVELOPER_MENU_TITLE = "Toby Developer Menu";
+
+TOBY_UNIVERSAL_BEACONS_SECTION = "Universal Beacons";
+TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS = "Use universal sounds for beacons";
+TOBY_UNIVERSAL_BEACONS_UPDATE = "Update beacons on this level";
