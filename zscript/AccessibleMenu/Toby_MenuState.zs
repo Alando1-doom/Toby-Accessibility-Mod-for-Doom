@@ -32,6 +32,7 @@ class Toby_MenuState
 
     ui int consoleStatus;
     ui int gameStatus;
+    ui int selectedMenuItemNumber;
 
     ui void CopyValuesTo(Toby_MenuState otherState)
     {
@@ -66,6 +67,7 @@ class Toby_MenuState
 
         otherState.consoleStatus = consoleStatus;
         otherState.gameStatus = gameStatus;
+        otherState.selectedMenuItemNumber = selectedMenuItemNumber;
     }
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
@@ -129,7 +131,8 @@ class Toby_MenuState
             || otherState.mItemListTextStringLocalized != mItemListTextStringLocalized
             || otherState.mItemListPatchString != mItemListPatchString
             || otherState.mItemOptionName != mItemOptionName
-            || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized)
+            || otherState.mItemOptionNameLocalized != mItemOptionNameLocalized
+            || otherState.selectedMenuItemNumber != selectedMenuItemNumber)
         {
             Toby_Logger.Message("EventType : OptionChanged", "Toby_Developer_MenuEvents");
             Toby_Logger.Message("PreviousMenuItemListSelectableString : "..otherState.mItemListSelectableString.." -> CurrentMenuItemListSelectableString : "..mItemListSelectableString, "Toby_Developer_OptionChangedEvents");
@@ -296,6 +299,7 @@ class Toby_MenuState
             menuName = mListDesc.mMenuName;
             if (mListDesc.mSelectedItem != -1)
             {
+                selectedMenuItemNumber = mListDesc.mSelectedItem;
                 mItemList = mListDesc.mItems[mListDesc.mSelectedItem];
                 mItemListSelectable = ListMenuItemSelectable(mItemList);
                 mItemListText = ListMenuItemTextItem(mItemList);
@@ -308,6 +312,7 @@ class Toby_MenuState
             menuName = mOptionDesc.mMenuName;
             if (mOptionDesc.mSelectedItem != -1)
             {
+                selectedMenuItemNumber = mOptionDesc.mSelectedItem;
                 mItemOption = mOptionDesc.mItems[mOptionDesc.mSelectedItem];
                 mItemOptionBase = OptionMenuItemOptionBase(mItemOption);
                 mItemOptionControl = OptionMenuItemControlBase(mItemOption);
