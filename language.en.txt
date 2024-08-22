@@ -76,3 +76,10 @@ TOBY_VIEWPORT_NARRATION_PRESET4 = "Area scanner - Height (Low / Same level / Hig
 TOBY_VIEWPORT_NARRATION_PRESET5 = "Area scanner - Combined Directional and Height";
 
 TOBY_DEVELOPER_MENU_TITLE = "Toby Developer Menu";
+
+TOBY_PROXIMITY_DETECTOR_SECTION = "Proximity Detector Options";
+TOBY_PROXIMITY_DETECTOR_TOGGLE = "Toggle proximity detector";
+TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT = "Enabled by default";
+TOBY_PROXIMITY_MAX_DISTANCE = "Max distance";
+TOBY_PROXIMITY_ATTENUATION = "Attenuation";
+TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";

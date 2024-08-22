@@ -12,6 +12,7 @@ OptionMenu "toby_mod_options"
 {
     StaticText "$TOBY_SNAP_TO_TARGET_SECTION"
     Control "$TOBY_SNAP_TO_TARGET", "+toby_snap_to_target_keybind"
+    StaticText ""
     StaticText "$TOBY_VIEWPORT_NARRATION_SECTION"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET0", "toby_actors_in_viewport_narration_preset_0_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET1", "toby_actors_in_viewport_narration_preset_1_keybind"
@@ -19,6 +20,14 @@ OptionMenu "toby_mod_options"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET3", "toby_actors_in_viewport_narration_preset_3_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET4", "toby_actors_in_viewport_narration_preset_4_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET5", "toby_actors_in_viewport_narration_preset_5_keybind"
+
+    StaticText  ""
+    StaticText  "$TOBY_PROXIMITY_DETECTOR_SECTION"
+    Control     "$TOBY_PROXIMITY_DETECTOR_TOGGLE", "toby_proximity_toggle_keybind"
+    Option      "$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "Toby_Proximity_EnabledByDefault", "toby_proximity_default_state"
+    Slider      "$TOBY_PROXIMITY_MAX_DISTANCE", "Toby_Proximity_MaxDistance" , 100, 1000, 50
+    Slider      "$TOBY_PROXIMITY_ATTENUATION", "Toby_Proximity_Attenuation" , 0.5, 50.0, 0.5
+    Command     "$TOBY_PROXIMITY_APPLY_SETTINGS", "netevent Toby_ProximityUpdate"
 }
 
 OptionMenu "toby_developer"
@@ -94,4 +103,10 @@ OptionMenu "toby_marker_remove_nearest"
 {
   class Toby_MarkerRemoveNearestMenu
   Title "Remove nearest marker"
+}
+
+OptionValue "toby_proximity_default_state"
+{
+    0, "No"
+    1, "Yes"
 }
