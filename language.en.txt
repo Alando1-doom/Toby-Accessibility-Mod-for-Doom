@@ -77,6 +77,10 @@ TOBY_VIEWPORT_NARRATION_PRESET5 = "Area scanner - Combined Directional and Heigh
 
 TOBY_DEVELOPER_MENU_TITLE = "Toby Developer Menu";
 
+TOBY_UNIVERSAL_BEACONS_SECTION = "Universal Beacons";
+TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS = "Use universal sounds for beacons";
+TOBY_UNIVERSAL_BEACONS_UPDATE = "Update beacons on this level";
+
 TOBY_PROXIMITY_DETECTOR_SECTION = "Proximity Detector Options";
 TOBY_PROXIMITY_DETECTOR_TOGGLE = "Toggle proximity detector";
 TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT = "Enabled by default";

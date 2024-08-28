@@ -99,6 +99,17 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
                 Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
             }
         }
+        if (e.Name == "Toby_CheckLevelStatsInterface")
+        {
+            if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+            {
+                Toby_LevelStatsChecker.CheckLevelStatsTextOnly();
+            }
+            else
+            {
+                Toby_LevelStatsChecker.CheckLevelStats();
+            }
+        }
     }
 
     //Is this stupid?
@@ -130,6 +141,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (e.Name == "Toby_CheckCurrentItem")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckCurrentItemInterface");
+        }
+        if (e.Name == "Toby_CheckLevelStats")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckLevelStatsInterface");
         }
     }
 }

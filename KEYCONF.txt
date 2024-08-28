@@ -31,6 +31,7 @@ addmenukey "Check Keys" "netevent Toby_CheckKeys"
 defaultbind K "netevent Toby_CheckKeys"
 addmenukey "Check current item" "netevent Toby_CheckCurrentItem"
 defaultbind I "netevent Toby_CheckCurrentItem"
+addmenukey "Check level stats" "netevent Toby_CheckLevelStats"
 
 
 //God Mode Hotkey
