@@ -133,3 +133,7 @@ version "4.6"
 #include "zscript/Pathfinder/Toby_PathfindingNodeContainer.zs"
 #include "zscript/Pathfinder/Toby_SectorMathUtil.zs"
 #include "zscript/Pathfinder/Toby_LineSegmentIntersectionUtil.zs"
+
+//Proximity Detector
+#include "zscript/ProximityDetector/Toby_ProximityDetector.zs"
+#include "zscript/ProximityDetector/Toby_ProximityDetectorHandler.zs"

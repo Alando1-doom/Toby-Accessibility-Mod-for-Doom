@@ -34,6 +34,7 @@ HitMarkers utilizes sounds from the following games:
 - Team Fortress 2 by Valve
 - Titanfall 2 by Respawn Entertainment
 
+- Wind sound clip for proximity detector taken from "FilmCow Royalty Free Sound Effects Library - Volume 2", file "beach - far, waves.wav"
 
 Additional Credit & Thanks:
 
@@ -48,4 +49,3 @@ Enjay
 MWTab
 stormdragon2976
 TheDOOMMan (For Doomguy in the title picture)
-

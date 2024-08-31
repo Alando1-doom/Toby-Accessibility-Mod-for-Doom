@@ -28,6 +28,10 @@ user bool   Toby_SelectionNarrationItems = true;
 
 user int    Toby_NarrationOutputType = 0;
 
+user int    Toby_Proximity_MaxDistance = 300;
+user float  Toby_Proximity_Attenuation = 8.0;
+user bool   Toby_Proximity_EnabledByDefault = false;
+
 //Hit Marker CVAR
 
 user bool hm_enabled = true;
