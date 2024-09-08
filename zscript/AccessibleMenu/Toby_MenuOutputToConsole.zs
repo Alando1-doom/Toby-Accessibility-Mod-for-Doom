@@ -19,7 +19,7 @@ class Toby_MenuOutputToConsole
             } else if (currentState.menuClass != "null") {
                 menuName = currentState.menuClass;
             }
-            console.printf("[Toby Accessibility Mod] %s", menuName);
+            Toby_Logger.ConsoleOutputModeMessage(menuName);
             return;
         }
         if (detectedChange == Toby_MenuState.OptionChanged)
@@ -36,7 +36,7 @@ class Toby_MenuOutputToConsole
             {
                 optionName = currentState.mItemOptionNameLocalized;
             }
-            console.printf("[Toby Accessibility Mod] %s", optionName);
+            Toby_Logger.ConsoleOutputModeMessage(optionName);
             return;
         }
         else if (detectedChange == Toby_MenuState.SaveSlotChanged)
@@ -46,7 +46,7 @@ class Toby_MenuOutputToConsole
         }
         else if (detectedChange == Toby_MenuState.OptionValueChanged)
         {
-            console.printf("[Toby Accessibility Mod] %s", currentState.mItemOptionValueLocalized);
+            Toby_Logger.ConsoleOutputModeMessage(currentState.mItemOptionValueLocalized);
             return;
         }
         //Left and Right handling
@@ -75,7 +75,7 @@ class Toby_MenuOutputToConsole
         {
             saveInfo = saveInfo .. currentState.saveLoadValue;
         }
-        console.printf("[Toby Accessibility Mod] %s", saveInfo);
+        Toby_Logger.ConsoleOutputModeMessage(saveInfo);
     }
 
     ui void HandleLeftRightKeyPress(Toby_MenuState currentState)
@@ -111,6 +111,6 @@ class Toby_MenuOutputToConsole
                 saveInfo = saveInfo .. String.Format("%d.%d.%d %d hours, %d minutes, %d seconds", dateTime.month, dateTime.day, dateTime.year, dateTime.hours, dateTime.minutes, dateTime.seconds);
             }
         }
-        console.printf("[Toby Accessibility Mod] %s", saveInfo);
+        Toby_Logger.ConsoleOutputModeMessage(saveInfo);
     }
 }

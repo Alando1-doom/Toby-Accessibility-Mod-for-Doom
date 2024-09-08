@@ -41,12 +41,12 @@ class Toby_ArmorChecker
         {
             class<Actor> cls = armor.ArmorType;
             string textToPrint = GetDefaultByType(cls).GetTag() .. " " .. armor.Amount .. "%";
-            console.printf("[Toby Accessibility Mod] %s", textToPrint);
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
         }
         else
         {
             string textToPrint = "No armor";
-            console.printf("[Toby Accessibility Mod] %s", textToPrint);
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
         }
     }
 }

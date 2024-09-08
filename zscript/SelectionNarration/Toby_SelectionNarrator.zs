@@ -22,7 +22,7 @@ class Toby_SelectionNarrator
     {
         class<Actor> cls = weaponName;
         string textToPrint = GetDefaultByType(cls).GetTag();
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 
     ui static void NarrateItemName(string itemName, int amount, Toby_SoundBindingsContainer itemsSoundBindings)
@@ -50,6 +50,6 @@ class Toby_SelectionNarrator
     {
         class<Actor> cls = itemName;
         string textToPrint = GetDefaultByType(cls).GetTag() .. " " .. amount;
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 }

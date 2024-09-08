@@ -24,6 +24,6 @@ class Toby_CoordinateChecker
         Actor playerActor = player.mo;
 
         string textToPrint = "X " .. int(playerActor.pos.x) .. " Y " .. int(playerActor.pos.y) .. " Z " .. int(playerActor.pos.z);
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 }

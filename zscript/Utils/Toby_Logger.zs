@@ -7,4 +7,9 @@ class Toby_Logger
             console.Printf(message);
         }
     }
+
+    static void ConsoleOutputModeMessage(string message)
+    {
+        console.Printf("[Toby Accessibility Mod] %s", message);
+    }
 }
