@@ -49,6 +49,19 @@ class Toby_MenuOutputToConsole
             Toby_Logger.ConsoleOutputModeMessage(currentState.mItemOptionValueLocalized);
             return;
         }
+        else if (detectedChange == Toby_MenuState.ConsoleStateChanged)
+        {
+            HandleConsoleEvents(currentState, previousState);
+            return;
+        }
+        else if (detectedChange == Toby_MenuState.GameStateChanged)
+        {
+            if (currentState.gameStatus == 4)
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Full screen console is opened. Most likely it happened because of an error.");
+            }
+            return;
+        }
         //Left and Right handling
         else if (detectedChange == Toby_MenuState.KeyPressed)
         {
@@ -112,5 +125,19 @@ class Toby_MenuOutputToConsole
             }
         }
         Toby_Logger.ConsoleOutputModeMessage(saveInfo);
+    }
+
+    ui void HandleConsoleEvents(Toby_MenuState currentState, Toby_MenuState previousState)
+    {
+        if (previousState.consoleStatus == 2 && currentState.consoleStatus == 1)
+        {
+            Toby_Logger.ConsoleOutputModeMessage("Console opened");
+            return;
+        }
+        if (previousState.consoleStatus == 3 && currentState.consoleStatus == 0)
+        {
+            Toby_Logger.ConsoleOutputModeMessage("Console closed");
+            return;
+        }
     }
 }
