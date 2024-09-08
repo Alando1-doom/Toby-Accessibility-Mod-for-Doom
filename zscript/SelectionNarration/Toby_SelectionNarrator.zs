@@ -21,6 +21,7 @@ class Toby_SelectionNarrator
     ui static void NarrateWeaponNameTextOnly(string weaponName)
     {
         class<Actor> cls = weaponName;
+        if (!cls) { return; }
         string textToPrint = GetDefaultByType(cls).GetTag();
         console.printf("[Toby Accessibility Mod] %s", textToPrint);
     }
@@ -49,6 +50,7 @@ class Toby_SelectionNarrator
     ui static void NarrateItemNameTextOnly(string itemName, int amount)
     {
         class<Actor> cls = itemName;
+        if (!cls) { return; }
         string textToPrint = GetDefaultByType(cls).GetTag() .. " " .. amount;
         console.printf("[Toby Accessibility Mod] %s", textToPrint);
     }
