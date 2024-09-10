@@ -1,9 +1,9 @@
 stats/general/health        "sounds/PlayerStats/Health/Health.ogg"
 stats/general/percent       "sounds/Menus/CustomizeControls/Keyboard/kpercent.ogg"
 
-stats/level/secrets         "sounds/DropoffDetector/DROPOFF.ogg"
-stats/level/monsters        "sounds/DropoffDetector/DROPOFF.ogg"
-stats/level/items           "sounds/DropoffDetector/DROPOFF.ogg"
+stats/level/secrets         "sounds/PlayerStats/MapStats/Secrets.ogg"
+stats/level/monsters        "sounds/PlayerStats/MapStats/Monsters.ogg"
+stats/level/items           "sounds/PlayerStats/MapStats/Items.ogg"
 
 stats/doom/weapons/fist         "sounds/PlayerStats/DoomWeapons/Fist.ogg"
 stats/doom/weapons/chainsaw     "sounds/PlayerStats/DoomWeapons/Chainsaw.ogg"
