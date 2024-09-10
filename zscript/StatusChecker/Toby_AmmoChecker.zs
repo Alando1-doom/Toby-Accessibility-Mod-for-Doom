@@ -68,8 +68,7 @@ class Toby_AmmoChecker
         {
             textToPrint = textToPrint .. " " .. ammoSecondary.amount .. " " .. ammoSecondary.GetTag();
         }
-
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 
     ui static string GetAmmoSoundName(Toby_SoundBindingsContainer ammoSoundBindings, string classNameToFind, int amount)

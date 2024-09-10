@@ -44,7 +44,7 @@ class Toby_MapAnnouncementManager
             if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
             {
                 string textToPrint = level.MapName .. " - " .. level.LevelName;
-                console.printf("[Toby Accessibility Mod] %s", textToPrint);
+                Toby_Logger.ConsoleOutputModeMessage(textToPrint);
             }
             else
             {

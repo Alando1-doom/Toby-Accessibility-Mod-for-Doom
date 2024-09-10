@@ -42,6 +42,6 @@ class Toby_HealthChecker
         Actor playerActor = player.mo;
 
         string textToPrint = "Health " .. playerActor.health .. "%";
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 }

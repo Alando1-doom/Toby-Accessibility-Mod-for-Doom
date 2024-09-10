@@ -186,17 +186,17 @@ class Toby_PathfinderHandler : EventHandler
         {
             if (pathFoundPrevious[consoleplayer] != pathFoundCurrent[consoleplayer] && pathFoundCurrent[consoleplayer])
             {
-                console.printf("[Toby Accessibility Mod] Path found");
+                Toby_Logger.ConsoleOutputModeMessage("Path found");
             }
 
             if (pathCantBeFoundPrevious[consoleplayer] != pathCantBeFoundCurrent[consoleplayer] && pathCantBeFoundCurrent[consoleplayer])
             {
-                console.printf("[Toby Accessibility Mod] Path not found");
+                Toby_Logger.ConsoleOutputModeMessage("Path not found");
             }
 
             if (destinationReachedPrevious[consoleplayer] != destinationReachedCurrent[consoleplayer] && destinationReachedCurrent[consoleplayer])
             {
-                console.printf("[Toby Accessibility Mod] Destination reached");
+                Toby_Logger.ConsoleOutputModeMessage("Destination reached");
             }
         }
         else

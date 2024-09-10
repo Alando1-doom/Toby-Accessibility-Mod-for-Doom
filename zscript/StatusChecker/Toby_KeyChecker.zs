@@ -39,9 +39,9 @@ class Toby_KeyChecker
         }
         if (textToPrint == "")
         {
-            console.printf("[Toby Accessibility Mod] No keys");
+            Toby_Logger.ConsoleOutputModeMessage("No keys");
             return;
         }
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 }

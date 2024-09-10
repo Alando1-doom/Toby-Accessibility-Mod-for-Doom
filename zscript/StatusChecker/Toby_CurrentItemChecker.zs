@@ -27,6 +27,6 @@ class Toby_CurrentItemChecker
         amount = inv.amount;
         if (amount == 0) { return; }
         string textToPrint = "" .. currentItem .. " " .. inv.amount;
-        console.printf("[Toby Accessibility Mod] %s", textToPrint);
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 }
