@@ -31,9 +31,10 @@ class Toby_LevelStatsChecker
 
     ui static void CheckLevelStatsTextOnly()
     {
-        console.printf("[Toby Accessibility Mod] "..
-            "Secrets: "..level.Found_Secrets.." of "..level.Total_Secrets.."; "..
+        string textToPrint = "Secrets: "..level.Found_Secrets.." of "..level.Total_Secrets.."; "..
             "Monsters: "..level.Killed_Monsters.." of "..level.Total_Monsters.."; "..
-            "Items: "..level.Found_Items.." of "..level.Total_Items);
+            "Items: "..level.Found_Items.." of "..level.Total_Items;
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+
     }
 }
