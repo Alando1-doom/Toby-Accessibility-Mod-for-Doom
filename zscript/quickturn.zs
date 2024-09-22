@@ -21,7 +21,14 @@ class Toby_QuickTurnItem : Inventory
         }
         if (owner.player.turnticks > 0 && owner.player.cmd.buttons & BT_TURN180 && !(owner.player.oldbuttons & BT_TURN180))
         {
-            owner.A_StartSound("misc/quickturn", CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_STATIC, 0, 0);
+            if (CVar.GetCVar("Toby_NarrationOutputType", owner.player).GetInt() == TNOT_CONSOLE)
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Quickturn");
+            }
+            else
+            {
+                owner.A_StartSound("misc/quickturn", CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_STATIC, 0, 0);
+            }
         }
     }
 }
