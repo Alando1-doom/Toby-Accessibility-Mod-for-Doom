@@ -71,6 +71,13 @@ class Toby_MenuOutputBySoundBindings
                 }
                 Toby_SoundQueueStaticHandler.Clear();
                 Toby_SoundQueueStaticHandler.AddSound(menuSoundBindingsContainer.soundBindings[i].At("SoundToPlay"), -1);
+
+                //A bit optimistic but should be enough -P
+                if (currentState.menuItemsCount == 0 && detectedChange == Toby_MenuState.MenuChanged)
+                {
+                    Toby_SoundQueueStaticHandler.AddSound("alphabet/Space", -1);
+                    Toby_SoundQueueStaticHandler.AddSound("menusnd/nomenuitems", -1);
+                }
                 Toby_SoundQueueStaticHandler.PlayQueue(0);
                 break;
             }

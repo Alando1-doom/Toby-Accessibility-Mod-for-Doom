@@ -13,6 +13,8 @@ class Toby_MenuState
     ui string mItemOptionValue;
     ui string mItemOptionValueLocalized;
 
+    ui int menuItemsCount;
+
     ui int lastKeyPressed;
     ui bool isSlider;
     ui bool isField;
@@ -48,6 +50,8 @@ class Toby_MenuState
         otherState.mItemOptionNameLocalized = mItemOptionNameLocalized;
         otherState.mItemOptionValue = mItemOptionValue;
         otherState.mItemOptionValueLocalized = mItemOptionValueLocalized;
+
+        otherState.menuItemsCount = menuItemsCount;
 
         otherState.lastKeyPressed = lastKeyPressed;
         otherState.isSlider = isSlider;
@@ -189,6 +193,8 @@ class Toby_MenuState
         mItemOptionValue = "null";
         mItemOptionValueLocalized = "null";
 
+        menuItemsCount = -1;
+
         isSaveLoad = false;
         isNewSlot = false;
         isAutosave = false;
@@ -296,6 +302,7 @@ class Toby_MenuState
         else if (mList)
         {
             ListMenuDescriptor mListDesc = mList.mDesc;
+            menuItemsCount = mListDesc.mItems.Size();
             menuName = mListDesc.mMenuName;
             if (mListDesc.mSelectedItem != -1)
             {
@@ -309,6 +316,7 @@ class Toby_MenuState
         else if (mOption)
         {
             OptionMenuDescriptor mOptionDesc = mOption.mDesc;
+            menuItemsCount = mOptionDesc.mItems.Size();
             menuName = mOptionDesc.mMenuName;
             if (mOptionDesc.mSelectedItem != -1)
             {
