@@ -87,6 +87,7 @@ version "4.6"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
 #include "zscript/Utils/Toby_Enums.zs"
+#include "zscript/Utils/Toby_IntegerSet.zs"
 
 //libeye
 #include "zscript/libeye/Toby_projector gl.zs"
