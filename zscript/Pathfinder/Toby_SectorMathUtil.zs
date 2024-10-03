@@ -29,4 +29,16 @@ class Toby_SectorMathUtil
     {
         return Level.PointInSector(pos1.xy).Index() == Level.PointInSector(pos2.xy).Index();
     }
+
+    static int GetWindowFloor(Sector sectorA, Sector sectorB)
+    {
+        return Max(sectorA.CenterFloor(), sectorB.CenterFloor());
+    }
+
+    static int GetWindowSize(Sector sectorA, Sector sectorB)
+    {
+        int maxFloor = GetWindowFloor(sectorA, sectorB);
+        int minCeiling = Min(sectorA.CenterCeiling(), sectorB.CenterCeiling());
+        return minCeiling - maxFloor;
+    }
 }
