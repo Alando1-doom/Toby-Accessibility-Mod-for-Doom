@@ -13,6 +13,11 @@ class Toby_IntegerSet
         values.Clear();
     }
 
+    void Copy(Toby_IntegerSet set)
+    {
+        values.Copy(set.values);
+    }
+
     int Size()
     {
         return values.Size();
