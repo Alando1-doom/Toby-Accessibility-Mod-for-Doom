@@ -31,6 +31,8 @@ version "4.6"
 
 //Marker menus
 #include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerExplorationMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerExplorationMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerAddMenu.zs"
@@ -124,6 +126,10 @@ version "4.6"
 #include "zscript/linespawner.zs"
 
 //Pathfinder
+#include "zscript/Pathfinder/Toby_LineInteractionTracker.zs"
+#include "zscript/Pathfinder/Toby_ExplorationTracker.zs"
+#include "zscript/Pathfinder/Toby_ExplorationDetector.zs"
+#include "zscript/Pathfinder/Toby_SectorMovementDetector.zs"
 #include "zscript/Pathfinder/Toby_PathfinderHandler.zs"
 #include "zscript/Pathfinder/Toby_Pathfinder.zs"
 #include "zscript/Pathfinder/Toby_PathfinderDebugRender.zs"

@@ -3,6 +3,11 @@ class Toby_PathfinderHandler : EventHandler
     //I feel like I need to move visual debuggers to separate class
     Toby_ViewportProjector projector;
 
+    Toby_SectorMovementDetector sectorMovementDetector;
+
+    Toby_LineInteractionTracker lineInteractionTracker;
+    Array<Toby_ExplorationTracker> explorationTrackers;
+
     Array<Toby_PathfindingNodeContainer> nodeContainers;
     Array<Toby_PathfindingNodeBuilder> nodeBuilders;
     Array<Toby_Pathfinder> pathfinders;
@@ -28,6 +33,8 @@ class Toby_PathfinderHandler : EventHandler
 
     override void WorldLoaded(WorldEvent e)
     {
+        lineInteractionTracker = Toby_LineInteractionTracker.Create();
+        sectorMovementDetector = Toby_SectorMovementDetector.Create();
         projector = Toby_ViewportProjector.Create();
 
         maxPlayers = 8;
@@ -35,6 +42,9 @@ class Toby_PathfinderHandler : EventHandler
         for (i = 0; i < maxPlayers; i++)
         {
             Actor playerActor = players[i].mo;
+
+            Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
+            explorationTrackers.push(explorationTracker);
 
             Toby_PathfindingNodeContainer nodeContainer = Toby_PathfindingNodeContainer.Create();
             Toby_PathfindingNodeBuilder nodeBuilder = Toby_PathfindingNodeBuilder.Create(nodeContainer, playerActor);
@@ -62,8 +72,14 @@ class Toby_PathfinderHandler : EventHandler
         }
     }
 
+    override void WorldLineActivated(WorldEvent e)
+    {
+        lineInteractionTracker.ActivateLine(e.ActivatedLine.Index());
+    }
+
     override void WorldTick()
     {
+        sectorMovementDetector.Update();
         for (int i = 0; i < maxPlayers; i++)
         {
 
@@ -71,6 +87,8 @@ class Toby_PathfinderHandler : EventHandler
             if (!player) { continue; }
             Actor playerActor = player.mo;
             if (!playerActor) { continue; }
+
+            explorationTrackers[i].Update();
 
             // I feel like this is not great -PR
             // pathfinderThinkers[i].SetReceivingActor(players[i].mo);
@@ -121,6 +139,7 @@ class Toby_PathfinderHandler : EventHandler
             currentNodePrevious[i] = currentNodeCurrent[i];
             currentNodeCurrent[i] = pathfinderFollowers[i].GetCurrentPathNode();
         }
+        lineInteractionTracker.Update();
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -225,5 +244,15 @@ class Toby_PathfinderHandler : EventHandler
             // console.printf("Next node reached");
             S_StartSound("pathfinder/nodereached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
+    }
+
+    ui static Toby_PathfinderHandler GetInstanceUi()
+    {
+        return Toby_PathfinderHandler(EventHandler.Find("Toby_PathfinderHandler"));
+    }
+
+    play static Toby_PathfinderHandler GetInstancePlay()
+    {
+        return Toby_PathfinderHandler(EventHandler.Find("Toby_PathfinderHandler"));
     }
 }
