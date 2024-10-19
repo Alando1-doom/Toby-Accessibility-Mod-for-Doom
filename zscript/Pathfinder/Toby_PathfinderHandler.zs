@@ -159,12 +159,12 @@ class Toby_PathfinderHandler : EventHandler
             Toby_MarkerRecord record = markerHandler.recordContainers[e.Player].GetMarkerById(markerId);
             if (!record) { return; }
             Actor markerActor = record.markerActor;
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, markerActor.pos);
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, markerActor.pos, nodeContainers[e.Player]);
         }
 
         if (e.Name == "Toby_FindPath")
         {
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos);
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos, nodeContainers[e.Player]);
             return;
         }
 

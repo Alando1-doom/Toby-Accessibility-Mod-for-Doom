@@ -97,9 +97,11 @@ class Toby_Pathfinder
         }
     }
 
-    void StartPathfinding(Vector3 start, Vector3 end)
+    void StartPathfinding(Vector3 start, Vector3 end, Toby_PathfindingNodeContainer nodeContainer)
     {
         if (pathfindingActive) { return; }
+        self.nodeContainer = nodeContainer;
+
         ResetPathfinder(start, end);
         if (!Toby_SectorMathUtil.IntersectsSectorBoundary(start.xy, end.xy))
         {
