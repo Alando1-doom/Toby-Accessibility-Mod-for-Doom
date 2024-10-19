@@ -4,6 +4,7 @@ class Toby_PathfinderHandler : EventHandler
     Toby_ViewportProjector projector;
 
     Toby_SectorMovementDetector sectorMovementDetector;
+    Toby_InSectorNodeBuilder inSectorNodeBuilder;
 
     Toby_LineInteractionTracker lineInteractionTracker;
     Array<Toby_ExplorationTracker> explorationTrackers;
@@ -34,6 +35,7 @@ class Toby_PathfinderHandler : EventHandler
     override void WorldLoaded(WorldEvent e)
     {
         lineInteractionTracker = Toby_LineInteractionTracker.Create();
+        inSectorNodeBuilder = Toby_InSectorNodeBuilder.Create();
         sectorMovementDetector = Toby_SectorMovementDetector.Create();
         projector = Toby_ViewportProjector.Create();
 
@@ -70,6 +72,11 @@ class Toby_PathfinderHandler : EventHandler
 
             pathfindingMarkers.push(Actor.Spawn("Toby_Marker_Pathfinding", (0, 0, 0)));
         }
+    }
+
+    void GenerateNodesInsideAllSectors()
+    {
+
     }
 
     override void WorldLineActivated(WorldEvent e)
@@ -165,6 +172,12 @@ class Toby_PathfinderHandler : EventHandler
         if (e.Name == "Toby_FindPath")
         {
             pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos, nodeContainers[e.Player]);
+            return;
+        }
+
+        if (e.Name == "Toby_FindPathInSector")
+        {
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, (1108, 647, 40), inSectorNodeBuilder.GetNodesForSector(playerActor.curSector.Index()));
             return;
         }
 
