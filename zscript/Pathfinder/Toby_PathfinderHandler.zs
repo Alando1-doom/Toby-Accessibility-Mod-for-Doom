@@ -173,19 +173,14 @@ class Toby_PathfinderHandler : EventHandler
             pathfinderThinkers[e.Player].FindPath(playerActor.pos, markerActor.pos, nodeContainers[e.Player]);
         }
 
-        if (e.Name == "Toby_FindPath")
+        if (eventAndArgument[0] == "Toby_FindPathExploration")
         {
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos, nodeContainers[e.Player]);
-            return;
-        }
-
-        if (e.Name == "Toby_FindPathInSector")
-        {
-            //pathfinderThinkers[e.Player].FindPath(playerActor.pos, (1108, 647, 40), inSectorNodeBuilder.GetNodesForSector(playerActor.curSector.Index()));
-            int destinationSector = level.PointInSector((201, 1633)).Index();
+            vector2 destinationFlat = (eventAndArgument[1].ToDouble(), eventAndArgument[2].ToDouble());
+            vector3 destination = (destinationFlat, eventAndArgument[3].ToDouble());
+            console.printf("Destination: "..destination);
+            int destinationSector = level.PointInSector(destinationFlat).Index();
             explorationPathfinders[e.Player].FindPathFromDestinationToExploredSector(destinationSector);
-
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, (201, 1633, 57), explorationPathfinders[e.Player].explorationNodes);
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, destination, explorationPathfinders[e.Player].explorationNodes);
 
             return;
         }

@@ -12,15 +12,25 @@ class Toby_MarkerExplorationMenu : OptionMenu
         Toby_ExplorationTracker tracker = handler.explorationTrackers[consoleplayer];
 
         for (uint i = 0; i < tracker.unexploredLines.Size(); i++) {
-            string description = "Unexplored line: "..tracker.unexploredLines.values[i];
             int lineId = tracker.unexploredLines.values[i];
-            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..lineId));
+            Line l = level.lines[lineId];
+            Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
+            if (!s) { continue; }
+            vector2 normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+            string description = "Unexplored line: "..lineId;
+            string coordinates = normal.x..":"..normal.y..":"..s.CenterFloor();
+            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..coordinates));
         }
 
         for (uint i = 0; i < tracker.nonInteractedLines.Size(); i++) {
-            string description = "Non-interacted line: "..tracker.nonInteractedLines.values[i];
             int lineId = tracker.nonInteractedLines.values[i];
-            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..lineId));
+            Line l = level.lines[lineId];
+            Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
+            if (!s) { continue; }
+            vector2 normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+            string description = "Non-interacted line: "..lineId;
+            string coordinates = normal.x..":"..normal.y..":"..s.CenterFloor();
+            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..coordinates));
         }
     }
 

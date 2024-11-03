@@ -250,4 +250,18 @@ class Toby_ExplorationTracker
     {
         return exploredSectors.isInSet(sectorIndex);
     }
+
+    Sector GetExploredOrVisitedSectorForLine(Line l)
+    {
+        Sector exploredSector = null;
+        if (IsExplored(l.frontSector.Index())
+            || IsVisited(l.frontSector.Index())) {
+            exploredSector = l.frontSector;
+        }
+        if (IsExplored(l.backSector.Index())
+            || IsVisited(l.backSector.Index())) {
+            exploredSector = l.frontSector;
+        }
+        return exploredSector;
+    }
 }
