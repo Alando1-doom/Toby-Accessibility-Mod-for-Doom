@@ -247,7 +247,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
-            console.printf("Path construction failed on minScoreNode");
+            // console.printf("Path construction failed on minScoreNode");
             return;
         }
         path.Insert(0, minScoreNode);
