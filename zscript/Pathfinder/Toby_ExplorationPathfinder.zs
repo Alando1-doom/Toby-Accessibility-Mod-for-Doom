@@ -195,24 +195,12 @@ class Toby_ExplorationPathfinder
 
     void AddSectorConnectionNodes(Line l, Sector source, Sector destination)
     {
-        vector2 deltaUnit = l.delta.Unit();
-        vector2 normal1 = (-deltaUnit.y, deltaUnit.x);
-        vector2 normal2 = (deltaUnit.y, -deltaUnit.x);
-        vector2 lineMidpoint = l.v1.p + (l.delta * 0.5);
-        vector2 normalPoint1 = lineMidpoint + normal1;
-        vector2 normalPoint2 = lineMidpoint + normal2;
-        if (level.PointInSector(normalPoint1) == source)
-        {
-            Toby_PathfindingNode node1 = explorationNodes.AddNode((normalPoint1, source.CenterFloor()), l.Index());
-            Toby_PathfindingNode node2 = explorationNodes.AddNode((normalPoint2, destination.CenterFloor()), l.Index());
-            node1.AddEdge(node2);
-        }
-        else
-        {
-            Toby_PathfindingNode node1 = explorationNodes.AddNode((normalPoint1, destination.CenterFloor()), l.Index());
-            Toby_PathfindingNode node2 = explorationNodes.AddNode((normalPoint2, source.CenterFloor()), l.Index());
-            node2.AddEdge(node1);
-        }
+        vector2 normalPoint1 = Toby_SectorMathUtil.GetMidlineNormalToSector(source, l);
+        vector2 normalPoint2 = Toby_SectorMathUtil.GetMidlineNormalToSector(destination, l);
+
+        Toby_PathfindingNode node1 = explorationNodes.AddNode((normalPoint1, source.CenterFloor()), l.Index());
+        Toby_PathfindingNode node2 = explorationNodes.AddNode((normalPoint2, destination.CenterFloor()), l.Index());
+        node1.AddEdge(node2);
     }
 
     bool IsValidConnection(Line l, Sector source, Sector destination, Actor a)
