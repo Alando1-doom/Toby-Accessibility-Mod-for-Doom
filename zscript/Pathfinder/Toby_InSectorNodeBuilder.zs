@@ -30,7 +30,7 @@ class Toby_InSectorNodeBuilder
 
         FillLinePairArray(s);
         PlaceNodes(s, container);
-        LinkAllNodesInSector(container);
+        container.LinkAllNodesInSectors();
 
         return container;
     }
@@ -102,25 +102,6 @@ class Toby_InSectorNodeBuilder
             }
             if (!bisectorPointFound) { continue; }
             container.AddNode((bisectorPointInThisSector, s.CenterFloor()), -4);
-        }
-    }
-
-    void LinkAllNodesInSector(Toby_PathfindingNodeContainer container)
-    {
-        for (int i = 0; i < container.nodes.Size(); i++)
-        {
-            Toby_PathfindingNode node = container.nodes[i];
-            for (int j = 0; j < container.nodes.Size(); j++)
-            {
-                Toby_PathfindingNode newNode = container.nodes[j];
-                if (node == newNode) { continue; }
-                bool inSameSector = Toby_SectorMathUtil.IsInSameSector(newNode.pos, node.pos);
-                if (!inSameSector) { continue; }
-                bool intersectsAnyLine = Toby_SectorMathUtil.IntersectsSectorBoundary(newNode.pos.xy, node.pos.xy);
-                if (intersectsAnyLine) { continue; }
-                newNode.AddEdge(node);
-                node.AddEdge(newNode);
-            }
         }
     }
 }
