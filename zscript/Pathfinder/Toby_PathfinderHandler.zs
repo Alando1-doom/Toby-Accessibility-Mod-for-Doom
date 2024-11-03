@@ -46,16 +46,17 @@ class Toby_PathfinderHandler : EventHandler
         {
             Actor playerActor = players[i].mo;
 
-            Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
-            Toby_ExplorationPathfinder explorationPathfinder = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker);
-            explorationTrackers.push(explorationTracker);
-            explorationPathfinders.push(explorationPathfinder);
+
 
             Toby_PathfindingNodeContainer nodeContainer = Toby_PathfindingNodeContainer.Create();
             Toby_PathfindingNodeBuilder nodeBuilder = Toby_PathfindingNodeBuilder.Create(nodeContainer, playerActor);
             Toby_Pathfinder pathfinder = Toby_Pathfinder.Create(nodeContainer);
             Toby_PathfinderFollower pathfinderFollower = Toby_PathfinderFollower.Create(pathfinder);
             Toby_PathfinderThinker pathfinderThinker = Toby_PathfinderThinker.Create(pathfinder, pathfinderFollower, playerActor);
+            Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
+            Toby_ExplorationPathfinder explorationPathfinder = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker, inSectorNodeBuilder, nodeContainer);
+            explorationTrackers.push(explorationTracker);
+            explorationPathfinders.push(explorationPathfinder);
             nodeContainers.push(nodeContainer);
             nodeBuilders.push(nodeBuilder);
             pathfinders.push(pathfinder);
@@ -183,6 +184,8 @@ class Toby_PathfinderHandler : EventHandler
             //pathfinderThinkers[e.Player].FindPath(playerActor.pos, (1108, 647, 40), inSectorNodeBuilder.GetNodesForSector(playerActor.curSector.Index()));
             int destinationSector = level.PointInSector((201, 1633)).Index();
             explorationPathfinders[e.Player].FindPathFromDestinationToExploredSector(destinationSector);
+
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, (201, 1633, 57), explorationPathfinders[e.Player].explorationNodes);
 
             return;
         }

@@ -2,17 +2,27 @@ class Toby_ExplorationPathfinder
 {
     Actor explorer;
     Toby_ExplorationTracker tracker;
+    Toby_InSectorNodeBuilder inSectorNodeBuilder;
     Toby_IntegerSet sectorOpenList;
     Toby_IntegerSet sectorClosedList;
     Array<int> sectorWeights;
     Array<int> sectorPath;
     int firstVisitedSector;
+    Toby_PathfindingNodeContainer explorationNodes;
+    Toby_PathfindingNodeContainer mainContainer;
 
-    play static Toby_ExplorationPathfinder Create(Actor explorer, Toby_ExplorationTracker tracker)
+    play static Toby_ExplorationPathfinder Create(
+        Actor explorer,
+        Toby_ExplorationTracker tracker,
+        Toby_InSectorNodeBuilder inSectorNodeBuilder,
+        Toby_PathfindingNodeContainer mainContainer
+    )
     {
         Toby_ExplorationPathfinder epf = new("Toby_ExplorationPathfinder");
         epf.explorer = explorer;
         epf.tracker = tracker;
+        epf.inSectorNodeBuilder = inSectorNodeBuilder;
+        epf.mainContainer = mainContainer;
         epf.sectorOpenList = Toby_IntegerSet.Create();
         epf.sectorClosedList = Toby_IntegerSet.Create();
         epf.firstVisitedSector = -1;
@@ -28,6 +38,7 @@ class Toby_ExplorationPathfinder
     void FindPathFromDestinationToExploredSector(int destinationSectorIndex)
     {
         firstVisitedSector = -1;
+        explorationNodes = Toby_PathfindingNodeContainer.Create();
         sectorOpenList.Clear();
         sectorClosedList.Clear();
         ResetSectorWeights();
@@ -62,7 +73,7 @@ class Toby_ExplorationPathfinder
 
         if (sourceSectorIndex == -1)
         {
-            // console.printf("Exploration pathfinder: failed to find explored area");
+            console.printf("Exploration pathfinder: failed to find explored area");
             return;
         }
         ConstructSectorPath(sourceSectorIndex, destinationSectorIndex);
@@ -104,7 +115,7 @@ class Toby_ExplorationPathfinder
 
             if (minWeightSectorIndex == -1)
             {
-                // console.printf("Exploration pathfinder: failed to construct sector path");
+                console.printf("Exploration pathfinder: failed to construct sector path");
                 break;
             }
             currentSectorIndex = minWeightSectorIndex;
@@ -120,6 +131,8 @@ class Toby_ExplorationPathfinder
         //     sectorPathString = sectorPathString..", "..sectorPath[i];
         // }
         // console.printf(sectorPathString);
+
+        CreateConnectionNodes();
     }
 
     void AddSectorsToOpenList(int sectorIndex)
@@ -149,5 +162,67 @@ class Toby_ExplorationPathfinder
         {
             sectorWeights[i] = Int.Max;
         }
+    }
+
+    void CreateConnectionNodes()
+    {
+        if (sectorPath.Size() < 1)
+        {
+            console.printf("Exploration pathfinder: Less than one sector path nodes");
+            return;
+        }
+
+        explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(sectorPath[sectorPath.Size() - 1]));
+
+        for (int i = 0; i < sectorPath.Size() - 1; i++)
+        {
+            Sector source = level.sectors[sectorPath[i]];
+            Sector destination = level.sectors[sectorPath[i + 1]];
+
+            for (int j = 0; j < source.lines.Size(); j++)
+            {
+                Line l = source.lines[j];
+                bool isValid = IsValidConnection(l, source, destination, explorer);
+                if (!isValid) { continue; }
+                AddSectorConnectionNodes(l, source, destination);
+                break;
+            }
+            explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(source.Index()));
+        }
+        explorationNodes.MergeOtherContainer(mainContainer);
+        explorationNodes.LinkAllNodesInSectors();
+    }
+
+    void AddSectorConnectionNodes(Line l, Sector source, Sector destination)
+    {
+        vector2 deltaUnit = l.delta.Unit();
+        vector2 normal1 = (-deltaUnit.y, deltaUnit.x);
+        vector2 normal2 = (deltaUnit.y, -deltaUnit.x);
+        vector2 lineMidpoint = l.v1.p + (l.delta * 0.5);
+        vector2 normalPoint1 = lineMidpoint + normal1;
+        vector2 normalPoint2 = lineMidpoint + normal2;
+        if (level.PointInSector(normalPoint1) == source)
+        {
+            Toby_PathfindingNode node1 = explorationNodes.AddNode((normalPoint1, source.CenterFloor()), l.Index());
+            Toby_PathfindingNode node2 = explorationNodes.AddNode((normalPoint2, destination.CenterFloor()), l.Index());
+            node1.AddEdge(node2);
+        }
+        else
+        {
+            Toby_PathfindingNode node1 = explorationNodes.AddNode((normalPoint1, destination.CenterFloor()), l.Index());
+            Toby_PathfindingNode node2 = explorationNodes.AddNode((normalPoint2, source.CenterFloor()), l.Index());
+            node2.AddEdge(node1);
+        }
+    }
+
+    bool IsValidConnection(Line l, Sector source, Sector destination, Actor a)
+    {
+        if (!((l.frontSector == source && l.backSector == destination)
+            || (l.frontSector == destination && l.backSector == source))
+        ) { return false; }
+        bool isReachable = Toby_SectorMathUtil.IsSectorReachableByActor(source, l, a);
+        if (!isReachable) { return false; }
+
+        return true;
     }
 }
