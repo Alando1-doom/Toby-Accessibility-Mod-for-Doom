@@ -8,6 +8,7 @@ class Toby_PathfinderHandler : EventHandler
 
     Toby_LineInteractionTracker lineInteractionTracker;
     Array<Toby_ExplorationTracker> explorationTrackers;
+    Array<Toby_ExplorationPathfinder> explorationPathfinders;
 
     Array<Toby_PathfindingNodeContainer> nodeContainers;
     Array<Toby_PathfindingNodeBuilder> nodeBuilders;
@@ -46,7 +47,9 @@ class Toby_PathfinderHandler : EventHandler
             Actor playerActor = players[i].mo;
 
             Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
+            Toby_ExplorationPathfinder explorationPathfinder = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker);
             explorationTrackers.push(explorationTracker);
+            explorationPathfinders.push(explorationPathfinder);
 
             Toby_PathfindingNodeContainer nodeContainer = Toby_PathfindingNodeContainer.Create();
             Toby_PathfindingNodeBuilder nodeBuilder = Toby_PathfindingNodeBuilder.Create(nodeContainer, playerActor);
@@ -177,7 +180,10 @@ class Toby_PathfinderHandler : EventHandler
 
         if (e.Name == "Toby_FindPathInSector")
         {
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, (1108, 647, 40), inSectorNodeBuilder.GetNodesForSector(playerActor.curSector.Index()));
+            //pathfinderThinkers[e.Player].FindPath(playerActor.pos, (1108, 647, 40), inSectorNodeBuilder.GetNodesForSector(playerActor.curSector.Index()));
+            int destinationSector = level.PointInSector((201, 1633)).Index();
+            explorationPathfinders[e.Player].FindPathFromDestinationToExploredSector(destinationSector);
+
             return;
         }
 

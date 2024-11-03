@@ -140,6 +140,7 @@ version "4.6"
 #include "zscript/Pathfinder/Toby_InSectorNodeBuilder.zs"
 #include "zscript/Pathfinder/Toby_LinePair.zs"
 #include "zscript/Pathfinder/Toby_PathfindingNodeContainer.zs"
+#include "zscript/Pathfinder/Toby_ExplorationPathfinder.zs"
 #include "zscript/Pathfinder/Toby_SectorMathUtil.zs"
 #include "zscript/Pathfinder/Toby_LineSegmentIntersectionUtil.zs"
 

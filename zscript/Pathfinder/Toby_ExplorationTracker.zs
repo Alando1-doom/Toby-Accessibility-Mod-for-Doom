@@ -120,7 +120,7 @@ class Toby_ExplorationTracker
                     || visitedSectors[backIndex];
                 if (!isExploredOrVisited) { continue; }
                 int lineIndex = l.Index();
-                if (!isReachable(s, l, explorer)) { continue; }
+                if (!Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer)) { continue; }
                 unexploredLines.Add(lineIndex);
             }
             UpdateNonInteractedLines();
@@ -195,43 +195,11 @@ class Toby_ExplorationTracker
         {
             Line l = s.lines[i];
 
-            bool isTwoSided = (l.flags & Line.ML_TWOSIDED) == Line.ML_TWOSIDED;
-            bool isBlocking = (l.flags & Line.ML_BLOCKING) == Line.ML_BLOCKING;
-            if (!isTwoSided) { continue; }
-            if (isBlocking) { continue; }
             int lineIndex = l.Index();
             if (exploredLines.IsInSet(lineIndex)) { continue; }
-            if (!isReachable(s, l, explorer)) { continue; }
+            if (!Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer)) { continue; }
             unexploredLines.Add(lineIndex);
         }
-    }
-
-    bool isReachable(Sector s, Line l, Actor explorer)
-    {
-        if (!explorer) { return false; }
-        if (!l.frontsector) { return false; }
-        if (!l.backsector) { return false; }
-
-        Sector otherSector;
-        if (l.backsector == s)
-        {
-            otherSector = l.frontsector;
-        }
-        else
-        {
-            otherSector = l.backsector;
-        }
-
-        int floorDifference = otherSector.CenterFloor() - s.CenterFloor();
-        if (Toby_SectorMathUtil.GetWindowSize(otherSector, s) < explorer.height)
-        {
-            return false;
-        }
-        if (floorDifference <= explorer.MaxStepHeight)
-        {
-            return true;
-        }
-        return false;
     }
 
     bool isLineFlushWithFloor(Line l)
@@ -271,5 +239,15 @@ class Toby_ExplorationTracker
         }
 
         return false;
+    }
+
+    bool IsVisited(int sectorIndex)
+    {
+        return visitedSectors[sectorIndex];
+    }
+
+    bool IsExplored(int sectorIndex)
+    {
+        return exploredSectors.isInSet(sectorIndex);
     }
 }

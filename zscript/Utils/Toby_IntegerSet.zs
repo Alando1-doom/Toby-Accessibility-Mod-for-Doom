@@ -54,4 +54,14 @@ class Toby_IntegerSet
         }
         return isInSet;
     }
+
+    void Print()
+    {
+        string stringToPrint = "";
+        for (int i = 0; i < values.Size(); i++)
+        {
+            stringToPrint = stringToPrint..", "..values[i];
+        }
+        console.printf(stringToPrint);
+    }
 }
