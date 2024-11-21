@@ -9,7 +9,7 @@
 {"ActorClass":"PlasmaRifle_TO", "SoundToPlay":"stats/doom/weapons/plasmagun"}
 {"ActorClass":"BFG9000_TO", "SoundToPlay":"stats/doom/weapons/bfg"}
 
-//Doom 2
+//Doom
 {"ActorClass":"Fist", "SoundToPlay":"stats/doom/weapons/fist"}
 {"ActorClass":"Chainsaw", "SoundToPlay":"stats/doom/weapons/chainsaw"}
 {"ActorClass":"Pistol", "SoundToPlay":"stats/doom/weapons/pistol"}
@@ -58,3 +58,37 @@
 {"ActorClass":"PhoenixRodPowered", "SoundToPlay":"heretic/weapon/phoenixrod"}
 {"ActorClass":"Mace", "SoundToPlay":"heretic/weapon/mace"}
 {"ActorClass":"MacePowered", "SoundToPlay":"heretic/weapon/mace"}
+
+
+//Hexen
+{"ActorClass":"Snout", "SoundToPlay":"hexen/weapon/snout"}
+
+//Fighter
+{"ActorClass":"FWeapFist_Toby", "SoundToPlay":"hexen/weapon/fists"}
+{"ActorClass":"FWeapFist", "SoundToPlay":"hexen/weapon/fists"}
+{"ActorClass":"FWeapAxe_Toby", "SoundToPlay":"hexen/weapon/axe"}
+{"ActorClass":"FWeapAxe", "SoundToPlay":"hexen/weapon/axe"}
+{"ActorClass":"FWeapHammer_Toby", "SoundToPlay":"hexen/weapon/hammer"}
+{"ActorClass":"FWeapHammer", "SoundToPlay":"hexen/weapon/hammer"}
+{"ActorClass":"FWeapQuietus_Toby", "SoundToPlay":"hexen/weapon/quietus"}
+{"ActorClass":"FWeapQuietus", "SoundToPlay":"hexen/weapon/quietus"}
+
+//Cleric
+{"ActorClass":"CWeapMace_Toby", "SoundToPlay":"hexen/weapon/mace"}
+{"ActorClass":"CWeapMace", "SoundToPlay":"hexen/weapon/mace"}
+{"ActorClass":"CWeapStaff_Toby", "SoundToPlay":"hexen/weapon/serpentstaff"}
+{"ActorClass":"CWeapStaff", "SoundToPlay":"hexen/weapon/serpentstaff"}
+{"ActorClass":"CWeapFlame_Toby", "SoundToPlay":"hexen/weapon/firestorm"}
+{"ActorClass":"CWeapFlame", "SoundToPlay":"hexen/weapon/firestorm"}
+{"ActorClass":"CWeapWraithverge_Toby", "SoundToPlay":"hexen/weapon/wraithverge"}
+{"ActorClass":"CWeapWraithverge", "SoundToPlay":"hexen/weapon/wraithverge"}
+
+//Mage
+{"ActorClass":"MWeapWand_Toby", "SoundToPlay":"hexen/weapon/wand"}
+{"ActorClass":"MWeapWand", "SoundToPlay":"hexen/weapon/wand"}
+{"ActorClass":"MWeapFrost_Toby", "SoundToPlay":"hexen/weapon/frostspell"}
+{"ActorClass":"MWeapFrost", "SoundToPlay":"hexen/weapon/frostspell"}
+{"ActorClass":"MWeapLightning_Toby", "SoundToPlay":"hexen/weapon/arc"}
+{"ActorClass":"MWeapLightning", "SoundToPlay":"hexen/weapon/arc"}
+{"ActorClass":"MWeapBloodscourge_Toby", "SoundToPlay":"hexen/weapon/bloodscourge"}
+{"ActorClass":"MWeapBloodscourge", "SoundToPlay":"hexen/weapon/bloodscourge"}

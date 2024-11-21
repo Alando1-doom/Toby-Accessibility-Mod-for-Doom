@@ -26,8 +26,10 @@ Class TobyEventHandler : EventHandler
 			//Red Key
 			Else If(level.lines[l].locknumber==1 || level.lines[l].locknumber==129 || level.lines[l].locknumber==132)
 			{
-                //This is awful -Proydoha
-                if (GameInfo.GameType & GAME_Heretic) {
+                //This is awful -Proydoha; Oh it gets worse -Jarewill
+				if (GameInfo.GameType & GAME_Hexen) {
+					Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+				} else if (GameInfo.GameType & GAME_Heretic) {
                     Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
                 } else {
                     Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
@@ -36,7 +38,9 @@ Class TobyEventHandler : EventHandler
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==1 || level.lines[l].args[3]==129 || level.lines[l].args[3]==132))
 			{
                 //This is awful -Proydoha
-                if (GameInfo.GameType & GAME_Heretic) {
+                if (GameInfo.GameType & GAME_Hexen) {
+					Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+				} else if (GameInfo.GameType & GAME_Heretic) {
                     Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
                 } else {
                     Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
@@ -45,7 +49,9 @@ Class TobyEventHandler : EventHandler
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==1 || level.lines[l].args[4]==129 || level.lines[l].args[4]==132))
 			{
                 //This is awful -Proydoha
-                if (GameInfo.GameType & GAME_Heretic) {
+                if (GameInfo.GameType & GAME_Hexen) {
+					Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+				} else if (GameInfo.GameType & GAME_Heretic) {
                     Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
                 } else {
                     Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
@@ -54,93 +60,222 @@ Class TobyEventHandler : EventHandler
 			//Blue Key
 			Else If(level.lines[l].locknumber==2 || level.lines[l].locknumber==130 || level.lines[l].locknumber==133)
 			{
-				Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==2 || level.lines[l].args[3]==130 || level.lines[l].args[3]==133))
 			{
-				Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==2 || level.lines[l].args[4]==130 || level.lines[l].args[4]==133))
 			{
-				Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//Yellow Key
 			Else If(level.lines[l].locknumber==3 || level.lines[l].locknumber==131 || level.lines[l].locknumber==134)
 			{
-				Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==3 || level.lines[l].args[3]==131 || level.lines[l].args[3]==134))
 			{
-				Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==3 || level.lines[l].args[4]==131 || level.lines[l].args[4]==134))
 			{
-				Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//Red Skull Key
 			Else If(level.lines[l].locknumber==4)
 			{
-				Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && level.lines[l].args[3]==4)
 			{
-				Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && level.lines[l].args[4]==4)
 			{
-				Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//Blue Skull Key
 			Else If(level.lines[l].locknumber==5)
 			{
-				Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && level.lines[l].args[3]==5)
 			{
-				Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && level.lines[l].args[4]==5)
 			{
-				Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//Yellow Skull Key
 			Else If(level.lines[l].locknumber==6)
 			{
-				Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && level.lines[l].args[3]==6)
 			{
-				Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && level.lines[l].args[4]==6)
 			{
-				Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+				}
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==7){
+				Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==7){
+				Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==7){
+				Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==8){
+				Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==8){
+				Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==8){
+				Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==9){
+				Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==9){
+				Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==9){
+				Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==10){
+				Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==10){
+				Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==10){
+				Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==11){
+				Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==11){
+				Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
+			}
+			Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==11){
+				Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
 			}
 			//3 Key Checker
 			Else If(level.lines[l].locknumber==229)
 			{
-				Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==229))
 			{
-				Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==229))
 			{
-				Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//6 Key Checker
 			Else If(level.lines[l].locknumber==101)
 			{
-				Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==13 && (level.lines[l].args[3]==101))
 			{
-				Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			Else If(level.lines[l].special==202 && (level.lines[l].args[4]==101))
 			{
-				Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				If(GameInfo.GameType & GAME_Hexen){
+					Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+				}Else{
+					Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+				}
 			}
 			//Any Key Checker
 			Else If(level.lines[l].locknumber==100 || level.lines[l].locknumber==228)

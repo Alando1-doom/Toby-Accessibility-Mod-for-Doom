@@ -23,3 +23,13 @@
 
 {"ActorClass":"SilverShield", "SoundToPlay":"ann/shield1"}
 {"ActorClass":"EnchantedShield", "SoundToPlay":"ann/shield2"}
+
+
+//Hexen
+
+{"ActorClass":"MeshArmor", "SoundToPlay":"hexen/armor/mesharmor"}
+{"ActorClass":"FalconShield", "SoundToPlay":"hexen/armor/shield"}
+{"ActorClass":"PlatinumHelm", "SoundToPlay":"hexen/armor/helmet"}
+{"ActorClass":"AmuletOfWarding", "SoundToPlay":"hexen/armor/amulet"}
+{"ActorClass":"ArtiBoostArmor", "SoundToPlay":"hexen/armor/bracers"}
+{"ActorClass":"ArtiBoostArmor_2", "SoundToPlay":"hexen/armor/bracers"}

@@ -32,6 +32,15 @@
 {"EventType":"MenuChanged", "PreviousMenuName":"Mainmenu", "CurrentMenuClass":"MessageBoxMenu", "PreviousMenuItemListTextString":"$MNU_QUITGAME", "SoundToPlay":"heretic/menu/quitmsg"}
 
 
+//HEXEN PLAYER CLASS MENU
+
+{"EventType":"MenuChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_CHOOSECLASS", "SoundToPlay":"hexen/menu/choose"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_FIGHTER", "SoundToPlay":"hexen/menu/fighter"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_CLERIC", "SoundToPlay":"hexen/menu/cleric"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_MAGE", "SoundToPlay":"hexen/menu/mage"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_RANDOM", "SoundToPlay":"hexen/menu/random"}
+
+
 //EPISODE MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Episodemenu", "SoundToPlay":"menusnd/epimenu"}
@@ -57,6 +66,11 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Demo Map", "SoundToPlay":"heretic/menu/demomap"}
 
 
+//HEXEN EPISODES
+
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Hexen", "SoundToPlay":"hexen/menu/tobyhexen"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Demo Map", "SoundToPlay":"hexen/menu/demomap"}
+
 //DIFFICULTY MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
@@ -78,6 +92,29 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_BRINGEST", "SoundToPlay":"heretic/menu/skill/novice"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_SMITE", "SoundToPlay":"heretic/menu/skill/hard"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_BLACKPLAGUE", "SoundToPlay":"heretic/menu/skill/nightmare"}
+
+
+//HEXEN SKILLS
+//FIGHTER
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_SQUIRE", "SoundToPlay":"hexen/menu/skill/fighter/squire"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_KNIGHT", "SoundToPlay":"hexen/menu/skill/fighter/knight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_WARRIOR", "SoundToPlay":"hexen/menu/skill/fighter/warrior"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_BERSERKER", "SoundToPlay":"hexen/menu/skill/fighter/berserker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_TITAN", "SoundToPlay":"hexen/menu/skill/fighter/titan"}
+
+//CLERIC
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_ALTARBOY", "SoundToPlay":"hexen/menu/skill/cleric/altarboy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_ACOLYTE", "SoundToPlay":"hexen/menu/skill/cleric/acolyte"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_PRIEST", "SoundToPlay":"hexen/menu/skill/cleric/priest"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_CARDINAL", "SoundToPlay":"hexen/menu/skill/cleric/cardinal"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_POPE", "SoundToPlay":"hexen/menu/skill/cleric/pope"}
+
+//MAGE
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_APPRENTICE", "SoundToPlay":"hexen/menu/skill/mage/apprentice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_ENCHANTER", "SoundToPlay":"hexen/menu/skill/mage/enchanter"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_SORCERER", "SoundToPlay":"hexen/menu/skill/mage/sorcerer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_WARLOCK", "SoundToPlay":"hexen/menu/skill/mage/warlock"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"$MNU_ARCHMAGE", "SoundToPlay":"hexen/menu/skill/mage/archmage"}
 
 
 //TOBY SIMPLE OPTIONS MENU

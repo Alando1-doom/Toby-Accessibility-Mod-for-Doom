@@ -10,3 +10,16 @@
 {"ActorClass":"KeyGreen", "TextToPrint":"Green Key", "SoundToPlay":"ann/green"}
 {"ActorClass":"KeyBlue", "TextToPrint":"Blue Key", "SoundToPlay":"ann/blue"}
 {"ActorClass":"KeyYellow", "TextToPrint":"Yellow Key", "SoundToPlay":"ann/yellow"}
+
+//Hexen
+{"ActorClass":"KeyAxe", "TextToPrint":"Axe Key", "SoundToPlay":"hexen/key/axe"}
+{"ActorClass":"KeyCastle", "TextToPrint":"Castle Key", "SoundToPlay":"hexen/key/castle"}
+{"ActorClass":"KeyCave", "TextToPrint":"Cave Key", "SoundToPlay":"hexen/key/cave"}
+{"ActorClass":"KeyDungeon", "TextToPrint":"Dungeon Key", "SoundToPlay":"hexen/key/dungeon"}
+{"ActorClass":"KeyEmerald", "TextToPrint":"Emerald Key", "SoundToPlay":"hexen/key/emerald"}
+{"ActorClass":"KeyFire", "TextToPrint":"Fire Key", "SoundToPlay":"hexen/key/fire"}
+{"ActorClass":"KeyHorn", "TextToPrint":"Horn Key", "SoundToPlay":"hexen/key/horn"}
+{"ActorClass":"KeyRusted", "TextToPrint":"Rusted Key", "SoundToPlay":"hexen/key/rusted"}
+{"ActorClass":"KeySilver", "TextToPrint":"Silver Key", "SoundToPlay":"hexen/key/silver"}
+{"ActorClass":"KeySteel", "TextToPrint":"Steel Key", "SoundToPlay":"hexen/key/steel"}
+{"ActorClass":"KeySwamp", "TextToPrint":"Swamp Key", "SoundToPlay":"hexen/key/swamp"}
