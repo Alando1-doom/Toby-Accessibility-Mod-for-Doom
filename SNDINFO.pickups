@@ -1,3 +1,5 @@
+//Doom - Weapons
+
 toby/actorsinviewport/pickups/chainsaw          "sounds/ActorsInViewport/Pickups/Chainsaw.ogg"
 toby/actorsinviewport/pickups/chainsaws         "sounds/ActorsInViewport/Pickups/Chainsaws.ogg"
 
@@ -22,6 +24,7 @@ toby/actorsinviewport/pickups/plasmaguns        "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/bfg9000           "sounds/ActorsInViewport/Pickups/BFG9000.ogg"
 toby/actorsinviewport/pickups/bfgs9000          "sounds/ActorsInViewport/Pickups/BFGs9000.ogg"
 
+//Doom - Armor
 
 toby/actorsinviewport/pickups/armorbonus        "sounds/ActorsInViewport/Pickups/ArmorBonus.ogg"
 toby/actorsinviewport/pickups/armorbonuses      "sounds/ActorsInViewport/Pickups/ArmorBonuses.ogg"
@@ -32,6 +35,8 @@ toby/actorsinviewport/pickups/armors            "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/megaarmor         "sounds/ActorsInViewport/Pickups/MegaArmor.ogg"
 toby/actorsinviewport/pickups/megaarmors        "sounds/ActorsInViewport/Pickups/MegaArmors.ogg"
 
+//Doom - Health
+
 toby/actorsinviewport/pickups/healthbonus       "sounds/ActorsInViewport/Pickups/HealthBonus.ogg"
 toby/actorsinviewport/pickups/healthbonuses     "sounds/ActorsInViewport/Pickups/HealthBonuses.ogg"
 
@@ -41,6 +46,7 @@ toby/actorsinviewport/pickups/stimpacks         "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/medikit           "sounds/ActorsInViewport/Pickups/MediKit.ogg"
 toby/actorsinviewport/pickups/medikits          "sounds/ActorsInViewport/Pickups/MediKits.ogg"
 
+//Doom - Powerups
 
 toby/actorsinviewport/pickups/computermap       "sounds/ActorsInViewport/Pickups/ComputerMap.ogg"
 toby/actorsinviewport/pickups/computermaps      "sounds/ActorsInViewport/Pickups/ComputerMaps.ogg"
@@ -66,6 +72,7 @@ toby/actorsinviewport/pickups/invulnerabilities     "sounds/ActorsInViewport/Pic
 toby/actorsinviewport/pickups/partialinvisibility   "sounds/ActorsInViewport/Pickups/PartialInvisibility.ogg"
 toby/actorsinviewport/pickups/partialinvisibilities "sounds/ActorsInViewport/Pickups/PartialInvisibilities.ogg"
 
+//Doom - Ammo
 
 toby/actorsinviewport/pickups/backpack          "sounds/ActorsInViewport/Pickups/Backpack.ogg"
 toby/actorsinviewport/pickups/backpacks         "sounds/ActorsInViewport/Pickups/Backpacks.ogg"
@@ -97,7 +104,7 @@ toby/actorsinviewport/pickups/cellpacks         "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/bulkcellpack      "sounds/ActorsInViewport/Pickups/BulkCellpack.ogg"
 toby/actorsinviewport/pickups/bulkcellpacks     "sounds/ActorsInViewport/Pickups/BulkCellpacks.ogg"
 
-
+//Doom - Keys
 
 toby/actorsinviewport/pickups/redkeycard        "sounds/ActorsInViewport/Pickups/RedKeyCard.ogg"
 toby/actorsinviewport/pickups/redkeycards       "sounds/ActorsInViewport/Pickups/RedKeyCards.ogg"
@@ -117,8 +124,9 @@ toby/actorsinviewport/pickups/blueskulls        "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/yellowskull       "sounds/ActorsInViewport/Pickups/YellowSkull.ogg"
 toby/actorsinviewport/pickups/yellowskulls      "sounds/ActorsInViewport/Pickups/YellowSkulls.ogg"
 
+//*****************************************************************************************************************
 
-//Heretic
+//Heretic - Weapons
 
 heretic/actorsinviewport/weapon/staff					"sounds/ActorsInViewport/Heretic/Pickups/STAFF.ogg"
 
@@ -143,6 +151,8 @@ heretic/actorsinviewport/weapon/phoenixrods		"sounds/ActorsInViewport/Heretic/Pi
 
 heretic/actorsinviewport/weapon/mace					"sounds/ActorsInViewport/Heretic/Pickups/FireMace.ogg"
 heretic/actorsinviewport/weapon/maces				"sounds/ActorsInViewport/Heretic/Pickups/FireMaces.ogg"
+
+//Heretic - Ammo
 
 heretic/actorsinviewport/ammo/wandcrystal			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystal.ogg"
 heretic/actorsinviewport/ammo/wandcrystals			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystals.ogg"
@@ -182,6 +192,8 @@ heretic/actorsinviewport/ammo/macepiles				"sounds/ActorsInViewport/Heretic/Pick
 heretic/actorsinviewport/ammo/bagofholding			"sounds/ActorsInViewport/Heretic/Pickups/BagOfHolding.ogg"
 heretic/actorsinviewport/ammo/bagsofholding		"sounds/ActorsInViewport/Heretic/Pickups/BagsOfHolding.ogg"
 
+//Heretic - Health
+
 heretic/actorsinviewport/health/vial						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVial.ogg"
 heretic/actorsinviewport/health/vials						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVials.ogg"
 
@@ -191,11 +203,15 @@ heretic/actorsinviewport/health/flasks					"sounds/ActorsInViewport/Heretic/Pick
 heretic/actorsinviewport/health/urn						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrn.ogg"
 heretic/actorsinviewport/health/urns						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrns.ogg"
 
+//Heretic - Armor
+
 heretic/actorsinviewport/armor/silvershield			"sounds/ActorsInViewport/Heretic/Pickups/SilverShield.ogg"
 heretic/actorsinviewport/armor/silvershields			"sounds/ActorsInViewport/Heretic/Pickups/SilverShields.ogg"
 
 heretic/actorsinviewport/armor/enchantedshield	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShield.ogg"
 heretic/actorsinviewport/armor/enchantedshields	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShields.ogg"
+
+//Heretic - Keys
 
 heretic/actorsinviewport/key/bluekey						"sounds/ActorsInViewport/Heretic/Pickups/BlueKey.ogg"
 heretic/actorsinviewport/key/bluekeys					"sounds/ActorsInViewport/Heretic/Pickups/BlueKeys.ogg"
@@ -205,6 +221,8 @@ heretic/actorsinviewport/key/greenkeys					"sounds/ActorsInViewport/Heretic/Pick
 
 heretic/actorsinviewport/key/yellowkey					"sounds/ActorsInViewport/Heretic/Pickups/YellowKey.ogg"
 heretic/actorsinviewport/key/yellowkeys				"sounds/ActorsInViewport/Heretic/Pickups/YellowKeys.ogg"
+
+//Heretic - Powerups
 
 heretic/actorsinviewport/artifact/chaosdevice			"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevice.ogg"
 heretic/actorsinviewport/artifact/chaosdevices		"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevices.ogg"
@@ -231,3 +249,185 @@ heretic/actorsinviewport/artifact/timebomb				"sounds/ActorsInViewport/Heretic/P
 heretic/actorsinviewport/artifact/timebombs			"sounds/ActorsInViewport/Heretic/Pickups/TimeBombs.ogg"
 
 heretic/actorsinviewport/artifact/wings					"sounds/ActorsInViewport/Heretic/Pickups/Wings.ogg"
+
+//*****************************************************************************************************************************
+
+//Hexen - Weapons
+
+hexen/actorsinviewport/weapon/arc						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Arc.ogg"
+hexen/actorsinviewport/weapon/arcs						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Arcs.ogg"
+
+hexen/actorsinviewport/weapon/axe						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Axe.ogg"
+hexen/actorsinviewport/weapon/axes						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Axes.ogg"
+
+hexen/actorsinviewport/weapon/bloodscourge		"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge.ogg"
+hexen/actorsinviewport/weapon/bspiece1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P1.ogg"
+hexen/actorsinviewport/weapon/bspiece2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P2.ogg"
+hexen/actorsinviewport/weapon/bspiece3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P3.ogg"
+
+hexen/actorsinviewport/weapon/firestorm				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FireStorm.ogg"
+hexen/actorsinviewport/weapon/firestorms				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FireStorms.ogg"
+
+hexen/actorsinviewport/weapon/frostspell				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FrostSpell.ogg"
+hexen/actorsinviewport/weapon/frostspells			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FrostSpells.ogg"
+
+hexen/actorsinviewport/weapon/hammer				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Hammer.ogg"
+hexen/actorsinviewport/weapon/hammers				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Hammers.ogg"
+
+hexen/actorsinviewport/weapon/quietus					"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus.ogg"
+hexen/actorsinviewport/weapon/quietusp1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P1.ogg"
+hexen/actorsinviewport/weapon/quietusp2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P2.ogg"
+hexen/actorsinviewport/weapon/quietusp3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P3.ogg"
+
+hexen/actorsinviewport/weapon/serpentstaff			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/SerpentStaff.ogg"
+hexen/actorsinviewport/weapon/serpentstaffs		"sounds/ActorsInViewport/Hexen/Pickups/Weapons/SerpentStaffs.ogg"
+
+hexen/actorsinviewport/weapon/wraithverge			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge.ogg"
+hexen/actorsinviewport/weapon/wvpiece1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P1.ogg"
+hexen/actorsinviewport/weapon/wvpiece2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P2.ogg"
+hexen/actorsinviewport/weapon/wvpiece3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P3.ogg"
+
+//Hexen - Ammo
+
+hexen/actorsinviewport/ammo/bluemana				"sounds/ActorsInViewport/Hexen/Pickups/Ammo/BlueMana.ogg"
+
+hexen/actorsinviewport/ammo/greenmana				"sounds/ActorsInViewport/Hexen/Pickups/Ammo/GreenMana.ogg"
+
+hexen/actorsinviewport/ammo/combomana			"sounds/ActorsInViewport/Hexen/Pickups/Ammo/ComboMana.ogg"
+
+hexen/actorsinviewport/ammo/krater						"sounds/ActorsInViewport/Hexen/Pickups/Ammo/Krater.ogg"
+hexen/actorsinviewport/ammo/kraters					"sounds/ActorsInViewport/Hexen/Pickups/Ammo/Kraters.ogg"
+
+//Hexen - Health 
+
+hexen/actorsinviewport/health/vial							"sounds/ActorsInViewport/Hexen/Pickups/Health/CrystalVial.ogg"
+hexen/actorsinviewport/health/vials						"sounds/ActorsInViewport/Hexen/Pickups/Health/CrystalVials.ogg"
+
+hexen/actorsinviewport/health/flask						"sounds/ActorsInViewport/Hexen/Pickups/Health/QuartzFlask.ogg"
+hexen/actorsinviewport/health/flasks						"sounds/ActorsInViewport/Hexen/Pickups/Health/QuartzFlasks.ogg"
+
+hexen/actorsinviewport/health/urn							"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticUrn.ogg"
+hexen/actorsinviewport/health/urns						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticUrns.ogg"
+
+hexen/actorsinviewport/health/ambit						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticAmbit.ogg"
+hexen/actorsinviewport/health/ambits						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticAmbits.ogg"
+
+//Hexen - Armor
+
+hexen/actorsinviewport/armor/amulet						"sounds/ActorsInViewport/Hexen/Pickups/Armor/Amulet.ogg"
+hexen/actorsinviewport/armor/amulets					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Amulets.ogg"
+
+hexen/actorsinviewport/armor/bracers					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Bracers.ogg"
+
+hexen/actorsinviewport/armor/shield						"sounds/ActorsInViewport/Hexen/Pickups/Armor/FalconShield.ogg"
+hexen/actorsinviewport/armor/shields						"sounds/ActorsInViewport/Hexen/Pickups/Armor/FalconShields.ogg"
+
+hexen/actorsinviewport/armor/helmet						"sounds/ActorsInViewport/Hexen/Pickups/Armor/Helmet.ogg"
+hexen/actorsinviewport/armor/helmets					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Helmets.ogg"
+
+hexen/actorsinviewport/armor/mesharmor				"sounds/ActorsInViewport/Hexen/Pickups/Armor/MeshArmor.ogg"
+hexen/actorsinviewport/armor/mesharmors			"sounds/ActorsInViewport/Hexen/Pickups/Armor/MeshArmors.ogg"
+
+//Hexen - Powerups
+
+hexen/actorsinviewport/artifact/bandevice				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/BanishDevice.ogg"
+hexen/actorsinviewport/artifact/bandevices			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/BanishDevices.ogg"
+
+hexen/actorsinviewport/artifact/chaosdevice			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/ChaosDevice.ogg"
+hexen/actorsinviewport/artifact/chaosdevices			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/ChaosDevices.ogg"
+
+hexen/actorsinviewport/artifact/servant					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DarkServant.ogg"
+hexen/actorsinviewport/artifact/servants					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DarkServants.ogg"
+
+hexen/actorsinviewport/artifact/icon						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DefenderIcon.ogg"
+hexen/actorsinviewport/artifact/icons						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DefenderIcons.ogg"
+
+hexen/actorsinviewport/artifact/flechette					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Flechette.ogg"
+hexen/actorsinviewport/artifact/flechettes				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Flechettes.ogg"
+
+hexen/actorsinviewport/artifact/porkalator				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Porkalator.ogg"
+hexen/actorsinviewport/artifact/porkalators				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Porkalators.ogg"
+
+hexen/actorsinviewport/artifact/repdisc					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/RepDisc.ogg"
+hexen/actorsinviewport/artifact/repdiscs					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/RepDiscs.ogg"
+
+hexen/actorsinviewport/artifact/boots						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/SpeedBoots.ogg"
+
+hexen/actorsinviewport/artifact/torch						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/TorchPowerup.ogg"
+hexen/actorsinviewport/artifact/torches					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/TorchPowerups.ogg"
+
+hexen/actorsinviewport/artifact/wings						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Wings.ogg"
+
+//Hexen - Keys
+
+hexen/actorsinviewport/keys/axekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/AxeKey.ogg"
+hexen/actorsinviewport/keys/axekeys						"sounds/ActorsInViewport/Hexen/Pickups/Keys/AxeKeys.ogg"
+
+hexen/actorsinviewport/keys/castlekey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CastleKey.ogg"
+hexen/actorsinviewport/keys/castlekeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CastleKeys.ogg"
+
+hexen/actorsinviewport/keys/cavekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/CaveKey.ogg"
+hexen/actorsinviewport/keys/cavekeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CaveKeys.ogg"
+
+hexen/actorsinviewport/keys/dungeonkey				"sounds/ActorsInViewport/Hexen/Pickups/Keys/DungeonKey.ogg"
+hexen/actorsinviewport/keys/dungeonkeys			"sounds/ActorsInViewport/Hexen/Pickups/Keys/DungeonKeys.ogg"
+
+hexen/actorsinviewport/keys/emeraldkey				"sounds/ActorsInViewport/Hexen/Pickups/Keys/EmeraldKey.ogg"
+hexen/actorsinviewport/keys/emeraldkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/EmeraldKeys.ogg"
+
+hexen/actorsinviewport/keys/firekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/FireKey.ogg"
+hexen/actorsinviewport/keys/firekeys						"sounds/ActorsInViewport/Hexen/Pickups/Keys/FireKeys.ogg"
+
+hexen/actorsinviewport/keys/hornkey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/HornKey.ogg"
+hexen/actorsinviewport/keys/hornkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/HornKeys.ogg"
+
+hexen/actorsinviewport/keys/rustedkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/RustedKey.ogg"
+hexen/actorsinviewport/keys/rustedkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/RustedKeys.ogg"
+
+hexen/actorsinviewport/keys/silverkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SilverKey.ogg"
+hexen/actorsinviewport/keys/silverkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SilverKeys.ogg"
+
+hexen/actorsinviewport/keys/steelkey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/SteelKey.ogg"
+hexen/actorsinviewport/keys/steelkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SteelKeys.ogg"
+
+hexen/actorsinviewport/keys/swampkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SwampKey.ogg"
+hexen/actorsinviewport/keys/swampkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/SwampKeys.ogg"
+
+//Hexen - Puzzle Items
+
+hexen/actorsinviewport/puzzle/bluegem1				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/BlueGem1.ogg"
+hexen/actorsinviewport/puzzle/bluegem2				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/BlueGem2.ogg"
+hexen/actorsinviewport/puzzle/greengem1				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GreenGem1.ogg"
+hexen/actorsinviewport/puzzle/greengem2				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GreenGem2.ogg"
+hexen/actorsinviewport/puzzle/rubygem					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/RubyGem.ogg"
+hexen/actorsinviewport/puzzle/gems						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gems.ogg"
+
+hexen/actorsinviewport/puzzle/codex						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Codex.ogg"
+hexen/actorsinviewport/puzzle/codexes					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Codexes.ogg"
+
+hexen/actorsinviewport/puzzle/mask						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/FlameMask.ogg"
+hexen/actorsinviewport/puzzle/masks					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/FlameMasks.ogg"
+
+hexen/actorsinviewport/puzzle/gear1						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear1.ogg"
+hexen/actorsinviewport/puzzle/gear2						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear2.ogg"
+hexen/actorsinviewport/puzzle/gear3						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear3.ogg"
+hexen/actorsinviewport/puzzle/gear4						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear4.ogg"
+hexen/actorsinviewport/puzzle/gears						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gears.ogg"
+
+hexen/actorsinviewport/puzzle/glaiveseal				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GlaiveSeal.ogg"
+hexen/actorsinviewport/puzzle/glaiveseals				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GlaiveSeals.ogg"
+
+hexen/actorsinviewport/puzzle/dsparilheart			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HeartOfDSparil.ogg"
+hexen/actorsinviewport/puzzle/dsparilhearts			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HeartsOfDSparil.ogg"
+
+hexen/actorsinviewport/puzzle/holyrelic					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HolyRelic.ogg"
+hexen/actorsinviewport/puzzle/holyrelics				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HolyRelics.ogg"
+
+hexen/actorsinviewport/puzzle/ascura					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/LibreAscura.ogg"
+hexen/actorsinviewport/puzzle/ascuras					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/LibreAscuras.ogg"
+
+hexen/actorsinviewport/puzzle/sigil							"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/SigilMagus.ogg"
+hexen/actorsinviewport/puzzle/sigils						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/SigilsMagus.ogg"
+
+hexen/actorsinviewport/puzzle/yorickskull				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/YorickSkull.ogg"
+hexen/actorsinviewport/puzzle/yorickskulls			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/YorickSkulls.ogg"

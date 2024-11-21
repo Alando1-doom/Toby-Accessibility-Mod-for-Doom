@@ -264,6 +264,8 @@ map/mdk/thewarlordsdomain       "sounds/Maps/doom2_opmdk/TheWarlordsDomain.ogg"
 map/mdk/thegatekeeper           "sounds/Maps/doom2_opmdk/TheGateKeeper.ogg"
 map/mdk/missioncomplete         "sounds/Maps/doom2_opmdk/MissionComplete.ogg"
 
+
+
 //Heretic - Episode 1
 
 heretic/e1m1		"sounds/Maps/heretic_e1/TheDocks.ogg"
@@ -327,3 +329,54 @@ heretic/e5m6		"sounds/Maps/heretic_e5/Colonnade.ogg"
 heretic/e5m7		"sounds/Maps/heretic_e5/FoetidManse.ogg"
 heretic/e5m8		"sounds/Maps/heretic_e5/FieldOfJudgement.ogg"
 heretic/e5m9		"sounds/Maps/heretic_e5/SkeinOfDsparil.ogg"
+
+
+
+//Toby Hexen Levels
+
+toby/hexen/hex01		"sounds/Maps/hexen_toby/DarkCastle.ogg"
+toby/hexen/hex02		"sounds/Maps/hexen_toby/ValleyOfChronos.ogg"
+toby/hexen/hex03		"sounds/Maps/hexen_toby/DungeonOfDespair.ogg"
+toby/hexen/hex04		"sounds/Maps/hexen_toby/TheOutpost.ogg"
+toby/hexen/hex05		"sounds/Maps/hexen_toby/TheTemple.ogg"
+toby/hexen/hex06		"sounds/Maps/hexen_toby/UnholyCathedral.ogg"
+toby/hexen/hex07		"sounds/Maps/hexen_toby/FortressOfFire.ogg"
+toby/hexen/hex08		"sounds/Maps/hexen_toby/WhatTheHex.ogg"
+toby/hexen/hex09		"sounds/Maps/hexen_toby/CitadelOfTheDoomed.ogg"
+toby/hexen/hex10		"sounds/Maps/hexen_toby/Korax.ogg"
+toby/hexen/hex11		"sounds/Maps/hexen_toby/TheSecretTomb.ogg"
+
+
+//Hexen - Main
+
+hexen/map01				"sounds/Maps/hexen/WinnowingHall.ogg"
+hexen/map02				"sounds/Maps/hexen/SevenPortals.ogg"
+hexen/map03				"sounds/Maps/hexen/GuardianOfIce.ogg"
+hexen/map04				"sounds/Maps/hexen/GuardianOfFire.ogg"
+hexen/map05				"sounds/Maps/hexen/GuardianOfSteel.ogg"
+hexen/map06				"sounds/Maps/hexen/BrightCrucible.ogg"
+hexen/map07				"sounds/Maps/hexen/ShadowWood.ogg"
+hexen/map08				"sounds/Maps/hexen/Darkmere.ogg"
+hexen/map09				"sounds/Maps/hexen/CavesOfCirce.ogg"
+hexen/map10				"sounds/Maps/hexen/Wastelands.ogg"
+hexen/map11				"sounds/Maps/hexen/SacredGrove.ogg"
+hexen/map12				"sounds/Maps/hexen/Hypostyle.ogg"
+hexen/map13				"sounds/Maps/hexen/HeresiarchSeminary.ogg"
+hexen/map14				"sounds/Maps/hexen/DragonChapel.ogg"
+hexen/map15				"sounds/Maps/hexen/GriffinChapel.ogg"
+hexen/map16				"sounds/Maps/hexen/DeathwindChapel.ogg"
+hexen/map17				"sounds/Maps/hexen/OrchardOfLament.ogg"
+hexen/map18				"sounds/Maps/hexen/SilentRefectory.ogg"
+hexen/map19				"sounds/Maps/hexen/WolfChapel.ogg"
+hexen/map20				"sounds/Maps/hexen/ForsakenOutpost.ogg"
+hexen/map21				"sounds/Maps/hexen/CastleOfGrief.ogg"
+hexen/map22				"sounds/Maps/hexen/Gibbet.ogg"
+hexen/map23				"sounds/Maps/hexen/Effluvium.ogg"
+hexen/map24				"sounds/Maps/hexen/Dungeons.ogg"
+hexen/map25				"sounds/Maps/hexen/DesolateGarden.ogg"
+hexen/map26				"sounds/Maps/hexen/Necropolis.ogg"
+hexen/map27				"sounds/Maps/hexen/ZedeksTomb.ogg"
+hexen/map28				"sounds/Maps/hexen/MenelkirsTomb.ogg"
+hexen/map29				"sounds/Maps/hexen/TraductusTomb.ogg"
+hexen/map30				"sounds/Maps/hexen/Vivarium.ogg"
+hexen/map31				"sounds/Maps/hexen/DarkCrucible.ogg"

@@ -1,4 +1,36 @@
+//Explosive Decorations
+
 { "ClassName":"ExplosiveBarrel_SFX", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
 { "ClassName":"ExplosiveBarrel", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
 { "ClassName":"Pod_Toby", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
 { "ClassName":"Pod", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
+{ "ClassName":"ZPoisonShroom_Toby", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
+{ "ClassName":"ZPoisonShroom", "SoundToPlay":"weapons/barrellock", "Cooldown":"12" }
+
+//Player Pawns
+
+{ "ClassName":"Player_TO", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"DoomPlayer", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+
+{ "ClassName":"Corvus_Toby", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"HereticPlayer", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+
+{ "ClassName":"FighterPlayer_Toby", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"FighterPlayer", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"ClericPlayer_Toby", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"ClericPlayer", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"MagePlayer_Toby", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+{ "ClassName":"MagePlayer", "SoundToPlay":"weapons/playerlock", "Cooldown":"12" }
+
+//Shootable Decorations
+
+{ "ClassName":"TreeDestructible", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZXmasTree", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZBell", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZSuitOfArmor", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZShrub1", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZShrub2", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"ZCorpseSitting", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"Pottery1", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"Pottery2", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"Pottery3", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }

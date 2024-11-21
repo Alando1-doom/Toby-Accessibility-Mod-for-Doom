@@ -13,3 +13,9 @@
 {"ActorClass":"SkullRodAmmo", "SoundToPlay":"heretic/ammo/rune", "SoundToPlayPlural":"heretic/ammo/runes"}
 {"ActorClass":"PhoenixRodAmmo", "SoundToPlay":"heretic/ammo/flameorb", "SoundToPlayPlural":"heretic/ammo/flameorbs"}
 {"ActorClass":"MaceAmmo", "SoundToPlay":"heretic/ammo/macespheres", "SoundToPlayPlural":"heretic/ammo/macespheres"}
+
+
+//Hexen
+
+{"ActorClass":"Mana1", "SoundToPlay":"hexen/ammo/bluemana", "SoundToPlayPlural":"hexen/ammo/bluemana"}
+{"ActorClass":"Mana2", "SoundToPlay":"hexen/ammo/greenmana", "SoundToPlayPlural":"hexen/ammo/greenmana"}

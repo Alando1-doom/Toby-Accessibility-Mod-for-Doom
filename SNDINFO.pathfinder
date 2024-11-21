@@ -11,6 +11,18 @@ pathfinder/3keydoor         "sounds/PathFinder/3KeyDoor.ogg"
 pathfinder/6keydoor         "sounds/PathFinder/6KeyDoor.ogg"
 pathfinder/anykeydoor       "sounds/PathFinder/AnyKeyDoor.ogg"
 
+pathfinder/axedoor					"sounds/PathFinder/AxeDoor.ogg"
+pathfinder/castledoor				"sounds/PathFinder/CastleDoor.ogg"
+pathfinder/cavedoor				"sounds/PathFinder/CaveDoor.ogg"
+pathfinder/dungeondoor			"sounds/PathFinder/DungeonDoor.ogg"
+pathfinder/emeralddoor			"sounds/PathFinder/EmeraldDoor.ogg"
+pathfinder/firedoor					"sounds/PathFinder/FireDoor.ogg"
+pathfinder/horndoor					"sounds/PathFinder/HornDoor.ogg"
+pathfinder/rusteddoor				"sounds/PathFinder/RustedDoor.ogg"
+pathfinder/silverdoor				"sounds/PathFinder/SilverDoor.ogg"
+pathfinder/steeldoor				"sounds/PathFinder/SteelDoor.ogg"
+pathfinder/swampdoor				"sounds/PathFinder/SwampDoor.ogg"
+
 
 //Exits
 
