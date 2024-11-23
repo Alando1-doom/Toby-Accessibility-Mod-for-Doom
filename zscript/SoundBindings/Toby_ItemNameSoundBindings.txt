@@ -1,6 +1,8 @@
 //Expected format:
 //{"ActorClass":"<class name>", "SoundToPlay":"<SNDINFO definition>"}
 
+//Heretic & Hexen Artifacts
+
 {"ActorClass":"ArtiHealth_Toby", "SoundToPlay":"heretic/actorsinviewport/health/flask"}
 {"ActorClass":"ArtiHealth", "SoundToPlay":"heretic/actorsinviewport/health/flask"}
 
@@ -29,4 +31,78 @@
 {"ActorClass":"ArtiEgg", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum"}
 
 {"ActorClass":"ArtiTeleport_Toby", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}
+{"ActorClass":"ArtiTeleport_2", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}
 {"ActorClass":"ArtiTeleport", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}
+
+//Hexen Only Artifacts
+
+{"ActorClass":"ArtiInvulnerability2_Giver", "SoundToPlay":"hexen/actorsinviewport/artifact/icon"}
+{"ActorClass":"ArtiInvulnerability2", "SoundToPlay":"hexen/actorsinviewport/artifact/icon"}
+
+{"ActorClass":"ArtiPoisonBag", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"ActorClass":"ArtiPoisonBag1", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"ActorClass":"ArtiPoisonBag2", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"ActorClass":"ArtiPoisonBag3", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"ActorClass":"ArtiPoisonBagGiver", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"ActorClass":"ArtiPoisonBagShooter", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+
+{"ActorClass":"ArtiPork_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator"}
+{"ActorClass":"ArtiPork", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator"}
+
+{"ActorClass":"ArtiTeleportOther_2", "SoundToPlay":"hexen/actorsinviewport/artifact/bandevice"}
+{"ActorClass":"ArtiTeleportOther", "SoundToPlay":"hexen/actorsinviewport/artifact/bandevice"}
+
+{"ActorClass":"ArtiBlastRadius_2", "SoundToPlay":"hexen/actorsinviewport/artifact/repdisc"}
+{"ActorClass":"ArtiBlastRadius", "SoundToPlay":"hexen/actorsinviewport/artifact/repdisc"}
+
+{"ActorClass":"ArtiDarkServant_2", "SoundToPlay":"hexen/actorsinviewport/artifact/servant"}
+{"ActorClass":"ArtiDarkServant", "SoundToPlay":"hexen/actorsinviewport/artifact/servant"}
+
+{"ActorClass":"ArtiSpeedBoots_Giver", "SoundToPlay":"hexen/actorsinviewport/artifact/boots"}
+{"ActorClass":"ArtiSpeedBoots", "SoundToPlay":"hexen/actorsinviewport/artifact/boots"}
+
+{"ActorClass":"ArtiBoostMana_Toby", "SoundToPlay":"hexen/actorsinviewport/ammo/krater"}
+{"ActorClass":"ArtiBoostMana", "SoundToPlay":"hexen/actorsinviewport/ammo/krater"}
+
+{"ActorClass":"ArtiBoostArmor_2", "SoundToPlay":"hexen/actorsinviewport/armor/bracers"}
+{"ActorClass":"ArtiBoostArmor", "SoundToPlay":"hexen/actorsinviewport/armor/bracers"}
+
+{"ActorClass":"ArtiHealingRadius_2", "SoundToPlay":"hexen/actorsinviewport/health/ambit"}
+{"ActorClass":"ArtiHealingRadius", "SoundToPlay":"hexen/actorsinviewport/health/ambit"}
+
+
+//Hexen Puzzle Items
+
+{"ActorClass":"PuzzSkull", "SoundToPlay":"hexen/actorsinviewport/puzzle/yorickskull"}
+
+{"ActorClass":"PuzzGemBig", "SoundToPlay":"hexen/actorsinviewport/puzzle/dsparilheart"}
+
+{"ActorClass":"PuzzGemRed", "SoundToPlay":"hexen/actorsinviewport/puzzle/rubygem"}
+
+{"ActorClass":"PuzzGemGreen1", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem1"}
+
+{"ActorClass":"PuzzGemGreen2", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem2"}
+
+{"ActorClass":"PuzzGemBlue1", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem1"}
+
+{"ActorClass":"PuzzGemBlue2", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem2"}
+
+{"ActorClass":"PuzzBook1", "SoundToPlay":"hexen/actorsinviewport/puzzle/codex"}
+
+{"ActorClass":"PuzzBook2", "SoundToPlay":"hexen/actorsinviewport/puzzle/ascura"}
+
+{"ActorClass":"PuzzFlameMask", "SoundToPlay":"hexen/actorsinviewport/puzzle/mask"}
+
+{"ActorClass":"PuzzFWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/glaiveseal"}
+
+{"ActorClass":"PuzzCWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/holyrelic"}
+
+{"ActorClass":"PuzzMWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/sigil"}
+
+{"ActorClass":"PuzzGear1", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear1"}
+
+{"ActorClass":"PuzzGear2", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear2"}
+
+{"ActorClass":"PuzzGear3", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear3"}
+
+{"ActorClass":"PuzzGear4", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear4"}

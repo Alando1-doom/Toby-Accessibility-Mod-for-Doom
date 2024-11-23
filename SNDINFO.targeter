@@ -1,3 +1,12 @@
 //Targeting System
+//For enemies
 weapons/lock			dswlock
+
+//For explosive barrels and other explosive decorations alike
 weapons/barrellock			dstrgbar
+
+//For identifying players
+weapons/playerlock			dstrgply
+
+//For shootable decorations
+weapons/decolock			dstrgdec

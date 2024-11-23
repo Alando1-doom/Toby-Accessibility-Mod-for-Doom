@@ -25,6 +25,9 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_LevelStatsChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 
+//Player state change narration
+#include "zscript/PlayerStateChangeDetector/Toby_PlayerStateChangeHandler.zs"
+
 //Weapon/item selection narration
 #include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
 #include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
@@ -147,3 +150,6 @@ version "4.6"
 //Proximity Detector
 #include "zscript/ProximityDetector/Toby_ProximityDetector.zs"
 #include "zscript/ProximityDetector/Toby_ProximityDetectorHandler.zs"
+
+//Footsteps
+#include "zscript/StepEventHandler.zs"

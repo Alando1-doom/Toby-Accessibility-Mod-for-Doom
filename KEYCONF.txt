@@ -75,6 +75,9 @@ alias toby_actors_in_viewport_narration_preset_3_keybind "netevent Toby_CheckAct
 alias toby_actors_in_viewport_narration_preset_4_keybind "netevent Toby_CheckActorsInViewport_Preset4"
 alias toby_actors_in_viewport_narration_preset_5_keybind "netevent Toby_CheckActorsInViewport_Preset5"
 
+
+//Area Scanner System
+
 addkeysection "Area Scanner System" Scanner
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET0" toby_actors_in_viewport_narration_preset_0_keybind
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET1" toby_actors_in_viewport_narration_preset_1_keybind
@@ -82,6 +85,9 @@ AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET2" toby_actors_in_viewport_narration_
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET3" toby_actors_in_viewport_narration_preset_3_keybind
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET4" toby_actors_in_viewport_narration_preset_4_keybind
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET5" toby_actors_in_viewport_narration_preset_5_keybind
+
+
+//Proximity Detector
 
 addkeysection "Proximity Detector System" ProximityDetector
 alias toby_proximity_toggle_keybind "netevent Toby_ProximityToggle";

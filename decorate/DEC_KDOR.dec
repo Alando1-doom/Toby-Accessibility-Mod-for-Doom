@@ -1,4 +1,5 @@
-ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
+//Red Door - Red Key Card
+ACTOR RedKeyChecker_V2
 {
     	Health 10000000000000000000000
     	Radius 8
@@ -32,31 +33,31 @@ ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
     TNT1 A 1 A_Look
     TNT1 A 0 A_JumpIfInventory("RedCard", 1, "ActiveOn")
 	TNT1 A 0 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
-	TNT1 A 0 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+	//TNT1 A 0 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
     Loop
     See:
 	TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
     TNT1 A 1 A_JumpIfInventory("RedCard", 1, "ActiveOn")
 	TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
-	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+	//TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
     TNT1 A 0 A_Chase
     Loop
     Missile:
     TNT1 A 1 A_FaceTarget
     TNT1 A 0 A_JumpIfInventory("RedCard", 1, "ActiveOn")
 	TNT1 A 0 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
-	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+	//TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
     Goto Spawn
     Melee:
     TNT1 A 1 A_JumpIfInventory("RedCard", 1, "ActiveOn")
 	TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
-	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+	//TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
     TNT1 A 0 A_FaceTarget
 	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Red", 1, "ActiveOn2")
     TNT1 A 0 A_JumpIfInTargetInventory("RedCard", 1, "Activation")
 	TNT1 A 0 A_JumpIfInTargetInventory("RedSkull", 1, "Activation")
-	TNT1 A 0 A_JumpIfInTargetInventory("KeyGreen", 1, "Activation")
-    TNT1 A 0 A_Print("Red / Green Key is required")
+	//TNT1 A 0 A_JumpIfInTargetInventory("KeyGreen", 1, "Activation")
+    TNT1 A 0 A_Print("Red Key is required")
 	TNT1 A 1 A_PlaySoundEx("door/deniedred", "Voice", 0, 2)
     TNT1 AAA 35
     Goto Spawn
@@ -70,7 +71,7 @@ ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
          TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
          TNT1 A 1 A_GiveInventory("RedCard", 1)
 	     TNT1 A 1 A_GiveInventory("RedSkull", 1)
-		 TNT1 A 1 A_GiveInventory("KeyGreen", 1)
+		 //TNT1 A 1 A_GiveInventory("KeyGreen", 1)
          TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
 		 TNT1 A 1 A_GiveToTarget("NoNotice_Red", 1)
          Goto ActiveOn2
@@ -78,7 +79,7 @@ ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
          TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
          TNT1 A 1 A_JumpIfInventory("RedCard", 1, "ActiveOn")
 	     TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
-		 TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+		 //TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
          Loop
    ActiveOn2:
 	TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
@@ -89,9 +90,23 @@ ACTOR RedKeyChecker_V2 //Will Check for Heretic Green Key also
         }
 }
 
-//I'm too afraid to touch it so I've just made a copy -P
-ACTOR GreenKeyChecker_V2 : RedKeyChecker_V2 {}
+actor NoNotice_Red : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
 
+
+//Red Door - Red Skull
 ACTOR RedSkullChecker_V2
 {
     	Health 10000000000000000000000
@@ -169,21 +184,6 @@ ACTOR RedSkullChecker_V2
         }
 }
 
-actor NoNotice_Red : Inventory //Will be given even if you have the green key
-{
-  inventory.pickupmessage " "
-  inventory.icon "TNT1A0"
-inventory.amount 1
-inventory.maxamount 1
- inventory.InterHubAmount 0
-  States
-      {
-       Spawn:
-                  TNT1 A 6
-                  loop
-       }
-}
-
 actor NoNotice_RedSkull : Inventory
 {
   inventory.pickupmessage " "
@@ -199,8 +199,106 @@ inventory.maxamount 1
        }
 }
 
-//**************************************************************************************************
 
+//I'm too afraid to touch it so I've just made a copy -P
+//Got your back :) -Alando1
+//ACTOR GreenKeyChecker_V2 : RedKeyChecker_V2 {}
+
+//Green Door - Green Key
+ACTOR GreenKeyChecker_V2 //Heretic
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+	Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Green", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyGreen", 1, "Activation")
+    TNT1 A 0 A_Print("Green Key is required")
+	TNT1 A 1 A_PlaySoundEx("door/deniedgreen", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/greengranted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		 TNT1 A 1 A_GiveInventory("KeyGreen", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_Green", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
+		 TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+actor NoNotice_Green : Inventory //Heretic
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//**************************************************************************************************
+//Blue Door - Blue Key Card - Blue Heretic Key
 ACTOR BlueKeyChecker_V2 //Will accept Heretic Blue Key
 {
     	Health 10000000000000000000000
@@ -292,6 +390,23 @@ ACTOR BlueKeyChecker_V2 //Will accept Heretic Blue Key
         }
 }
 
+actor NoNotice_Blue : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+
+//Blue Door - Blue Skull
 ACTOR BlueSkullChecker_V2
 {
     	Health 10000000000000000000000
@@ -369,21 +484,6 @@ ACTOR BlueSkullChecker_V2
         }
 }
 
-actor NoNotice_Blue : Inventory
-{
-  inventory.pickupmessage " "
-  inventory.icon "TNT1A0"
-inventory.amount 1
-inventory.maxamount 1
- inventory.InterHubAmount 0
-  States
-      {
-       Spawn:
-                  TNT1 A 6
-                  loop
-       }
-}
-
 actor NoNotice_BlueSkull : Inventory
 {
   inventory.pickupmessage " "
@@ -400,7 +500,7 @@ inventory.maxamount 1
 }
 
 //************************************************************************************
-
+//Yellow Door - Yellow Key Card - Yellow Heretic Key
 ACTOR YellowKeyChecker_V2 //Will check for Heretic Yellow Key
 {
     	Health 10000000000000000000000
@@ -492,6 +592,23 @@ ACTOR YellowKeyChecker_V2 //Will check for Heretic Yellow Key
         }
 }
 
+actor NoNotice_Yellow : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+
+//Yellow Door - Yellow Skull
 ACTOR YellowSkullChecker_V2
 {
     	Health 10000000000000000000000
@@ -569,21 +686,6 @@ ACTOR YellowSkullChecker_V2
         }
 }
 
-actor NoNotice_Yellow : Inventory
-{
-  inventory.pickupmessage " "
-  inventory.icon "TNT1A0"
-inventory.amount 1
-inventory.maxamount 1
- inventory.InterHubAmount 0
-  States
-      {
-       Spawn:
-                  TNT1 A 6
-                  loop
-       }
-}
-
 actor NoNotice_YellowSkull : Inventory
 {
   inventory.pickupmessage " "
@@ -600,7 +702,7 @@ inventory.maxamount 1
 }
 
 //**************************************************************
-
+//Any-Key Door
 ACTOR AnyKeyChecker_V2 //Will accept Heretic Keys
 {
     	Health 10000000000000000000000
@@ -749,7 +851,7 @@ inventory.maxamount 1
 }
 
 //**************************************************************
-
+//3-Key Door
 ACTOR 3KeyChecker_V2 //Will look for Heretic Keys also
 {
     	Health 10000000000000000000000
@@ -946,7 +1048,7 @@ inventory.maxamount 3
 }
 
 //**************************************************************
-
+//6-Key Door
 ACTOR 6KeyChecker_V2 //Not needed for Heretic - For Doom only
 {
     	Health 10000000000000000000000
@@ -1163,6 +1265,1381 @@ inventory.maxamount 1
 }
 
 actor DontCheckYellowSkull : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+
+//Hexen Keys - Get ready for this...
+
+//Axe Key Checker
+ACTOR AxeKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AxeKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyAxe", 1, "Activation")
+    TNT1 A 0 A_Print("Axe Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/axe", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyAxe", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_AxeKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_AxeKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Cave Key Checker
+ACTOR CaveKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CaveKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyCave", 1, "Activation")
+    TNT1 A 0 A_Print("Cave Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/cave", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyCave", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_CaveKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_CaveKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Castle Key Checker
+ACTOR CastleKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CastleKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyCastle", 1, "Activation")
+    TNT1 A 0 A_Print("Castle Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/castle", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyCastle", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_CastleKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_CastleKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Dungeon Key Checker
+ACTOR DungeonKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_DungeonKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyDungeon", 1, "Activation")
+    TNT1 A 0 A_Print("Dungeon Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/dungeon", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyDungeon", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_DungeonKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_DungeonKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Emerald Key Checker
+ACTOR EmeraldKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_EmeraldKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyEmerald", 1, "Activation")
+    TNT1 A 0 A_Print("Emerald Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/emerald", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyEmerald", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_EmeraldKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_EmeraldKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Fire Key Checker
+ACTOR FireKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_FireKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyFire", 1, "Activation")
+    TNT1 A 0 A_Print("Fire Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/fire", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyFire", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_FireKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_FireKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Horn Key Checker
+ACTOR HornKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_HornKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyHorn", 1, "Activation")
+    TNT1 A 0 A_Print("Horn Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/horn", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyHorn", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_HornKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_HornKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Rusted Key Checker
+ACTOR RustedKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_RustedKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyRusted", 1, "Activation")
+    TNT1 A 0 A_Print("Rusted Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/rusted", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeyRusted", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_RustedKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_RustedKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Silver Key Checker
+ACTOR SilverKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SilverKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySilver", 1, "Activation")
+    TNT1 A 0 A_Print("Silver Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/silver", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeySilver", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_SilverKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_SilverKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Steel Key Checker
+ACTOR SteelKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SteelKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySteel", 1, "Activation")
+    TNT1 A 0 A_Print("Steel Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/steel", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeySteel", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_SteelKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_SteelKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+//Swamp Key Checker
+ACTOR SwampKeyChecker
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+	TNT1 A 0 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
+    TNT1 A 0 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+	TNT1 A 0 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
+    Goto Spawn
+    Melee:
+	TNT1 A 1 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SwampKey", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySwamp", 1, "Activation")
+    TNT1 A 0 A_Print("Swamp Key is required")
+	TNT1 A 1 A_PlaySoundEx("hexen/door/denied/swamp", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto Spawn
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+         //TNT1 A 1 Door_Open(700, 16, 0)
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+	 TNT1 A 1 A_GiveInventory("KeySwamp", 1)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_SwampKey", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
+	 TNT1 A 1 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
+        Goto Death
+    Death:
+        TNT1 A -1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+
+actor NoNotice_SwampKey : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+
+//**************************************************************
+//All Key Door
+ACTOR AllKeyChecker //For Hexen - This is a big one...
+{
+    	Health 10000000000000000000000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+		Mass 2000000000000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
+    	States
+    	{
+	Spawn:
+	TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Look
+    Loop
+    See:
+	TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
+    TNT1 A 1 A_Chase
+    Loop
+    Missile:
+    TNT1 A 1 A_FaceTarget
+    Goto CheckMyKeys
+    Melee:
+	TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AllKeys", 1, "ActiveOn2")
+	TNT1 A 0 A_JumpIfInventory("HasAllKeys", 11, "Activation")
+    TNT1 A 0 A_FaceTarget
+    TNT1 A 0 A_Print("All 11 Keys are required")
+	TNT1 A 1 A_PlaySoundEx("door/deniedall", "Voice", 0, 2)
+    TNT1 AAA 35
+    Goto CheckMyKeys
+    Pain:
+        TNT1 A 1
+        TNT1 A 1 A_Pain
+        Goto Melee
+    Activation:
+		 TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
+         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
+		 TNT1 A 1 A_GiveToTarget("NoNotice_AllKeys", 1)
+         Goto ActiveOn2
+   ActiveOn:
+         TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
+         TNT1 A 1 A_JumpIfInventory("HasAllKeys", 11, "ActiveOn")
+         Loop
+   ActiveOn2:
+	TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
+        Goto Death
+	CheckMyKeys:
+	TNT1 A 1 A_JumpIfInventory("DontCheckAxe", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyAxe", 1, "GotAxeKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckCastle", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyCastle", 1, "GotCastleKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckCave", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyCave", 1, "GotCaveKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckDungeon", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyDungeon", 1, "GotDungeonKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckEmerald", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyEmerald", 1, "GotEmeraldKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckFire", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyFire", 1, "GotFireKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckHorn", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyHorn", 1, "GotHornKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckRusted", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeyRusted", 1, "GotRustedKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckSilver", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySilver", 1, "GotSilverKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckSteel", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySteel", 1, "GotSteelKey")
+	TNT1 A 1 A_JumpIfInventory("DontCheckSwamp", 1, 2)
+	TNT1 A 0 A_JumpIfInTargetInventory("KeySwamp", 1, "GotSwampKey")
+	TNT1 A 1
+	Goto Spawn
+	GotAxeKey:
+		TNT1 A 1 A_GiveInventory("DontCheckAxe", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotCastleKey:
+		TNT1 A 1 A_GiveInventory("DontCheckCastle", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotCaveKey:
+		TNT1 A 1 A_GiveInventory("DontCheckCave", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotDungeonKey:
+		TNT1 A 1 A_GiveInventory("DontCheckDungeon", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotEmeraldKey:
+		TNT1 A 1 A_GiveInventory("DontCheckEmerald", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotFireKey:
+		TNT1 A 1 A_GiveInventory("DontCheckFire", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotHornKey:
+		TNT1 A 1 A_GiveInventory("DontCheckHorn", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotRustedKey:
+		TNT1 A 1 A_GiveInventory("DontCheckRusted", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotSilverKey:
+		TNT1 A 1 A_GiveInventory("DontCheckSilver", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotSteelKey:
+		TNT1 A 1 A_GiveInventory("DontCheckSteel", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+	GotSwampKey:
+		TNT1 A 1 A_GiveInventory("DontCheckSwamp", 1)
+		TNT1 A 1 A_GiveInventory("HasAllKeys", 1)
+		Goto Spawn
+    Death:
+        TNT1 A -1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
+        Stop
+        }
+}
+
+actor NoNotice_AllKeys : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor HasAllKeys : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 11
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckAxe : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckCastle : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckCave : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckDungeon : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckEmerald : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckFire : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckHorn : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckRusted : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckSilver : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckSteel : Inventory
+{
+  inventory.pickupmessage " "
+  inventory.icon "TNT1A0"
+inventory.amount 1
+inventory.maxamount 1
+ inventory.InterHubAmount 0
+  States
+      {
+       Spawn:
+                  TNT1 A 6
+                  loop
+       }
+}
+
+actor DontCheckSwamp : Inventory
 {
   inventory.pickupmessage " "
   inventory.icon "TNT1A0"

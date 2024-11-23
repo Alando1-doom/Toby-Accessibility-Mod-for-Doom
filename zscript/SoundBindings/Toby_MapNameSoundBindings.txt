@@ -562,3 +562,68 @@
 {"Checksum":"85ac7d20d18f9bc49b9696cc2e67f029", "SoundToPlay":"heretic/e5m8"}
 //E5M9 - Skein of D'sparil
 {"Checksum":"b7fdab05b21af564bc9552676f695213", "SoundToPlay":"heretic/e5m9"}
+
+
+//Classic Hexen Maps
+//Winnowing Hall
+{"Checksum":"e1b55285aa0157a2af1396da2576b57f", "SoundToPlay":"hexen/map01"}
+//Seven Portals
+{"Checksum":"ca332333a50fc7aef4c82d0403a91594", "SoundToPlay":"hexen/map02"}
+//Guardian of Ice
+{"Checksum":"2805ab25f19f719c8e228a5239e0565d", "SoundToPlay":"hexen/map03"}
+//Guardian of Fire
+{"Checksum":"cbde77e3acb4b166d53c1812e5c72f54", "SoundToPlay":"hexen/map04"}
+//Guardian of Steel
+{"Checksum":"dd91e89c70e1c43d610bfc10d1fe1ca2", "SoundToPlay":"hexen/map05"}
+//Bright Crucible
+{"Checksum":"1b6df1fd51fdc3d882009d287b5a28c6", "SoundToPlay":"hexen/map06"}
+//Shadow Wood - it's really MAP13
+{"Checksum":"297c0350acf8bfff59d5b3679f5f7756", "SoundToPlay":"hexen/map07"}
+//Darkmere
+{"Checksum":"6cda2721aa1076f063557cf89d88e92b", "SoundToPlay":"hexen/map08"}
+//Caves of Circe
+{"Checksum":"008227fe7a5e78f0f04c6c7009cf17ac", "SoundToPlay":"hexen/map09"}
+//Wastelands
+{"Checksum":"7729174baa658c8fd86cf8290422f512", "SoundToPlay":"hexen/map10"}
+//Sacred Grove
+{"Checksum":"f8dfdcbaa677f83e2cd2409f5c00505f", "SoundToPlay":"hexen/map11"}
+//Hypostyle
+{"Checksum":"55e321849f3699655d7e062c90682f63", "SoundToPlay":"hexen/map12"}
+//Heresiarch's Seminary - it's really MAP27
+{"Checksum":"d3c5fa777ba52264546e6569f167af0d", "SoundToPlay":"hexen/map13"}
+//Dragon Chapel - it's really MAP28
+{"Checksum":"5c8c5fc89623c9ef22c5f47f79b28590", "SoundToPlay":"hexen/map14"}
+//Griffin Chapel - it's really MAP30
+{"Checksum":"e89ccc7e155f1032f693359cc219be6c", "SoundToPlay":"hexen/map15"}
+//Deathwind Chapel - it's really MAP31
+{"Checksum":"4a4436544ebfa930ae3c4c8c2409fd6e", "SoundToPlay":"hexen/map16"}
+//Orchard of Lamentations - it's really MAP32
+{"Checksum":"4e1c251c44ed29e1255e0fa137b1542a", "SoundToPlay":"hexen/map17"}
+//Silent Refectory - it's really MAP33
+{"Checksum":"0396dc9b793addb0d8805b8bca22afa0", "SoundToPlay":"hexen/map18"}
+//Wolf Chapel - it's really MAP34
+{"Checksum":"a3597a7946669b5010d3e0b8ced21565", "SoundToPlay":"hexen/map19"}
+//Forsaken Outpost
+{"Checksum":"ae1a5b740ff2d40527116ff80f9db6a8", "SoundToPlay":"hexen/map20"}
+//Castle of Grief
+{"Checksum":"28f6766308d3b39ec5e662ff7156c6c5", "SoundToPlay":"hexen/map21"}
+//Gibbet
+{"Checksum":"91ad797f95cc4c6d6ae33b21f664c60b", "SoundToPlay":"hexen/map22"}
+//Effluvium
+{"Checksum":"ab1830a7bf82824ea2021cf3ab22edc8", "SoundToPlay":"hexen/map23"}
+//Dungeons
+{"Checksum":"dfded622f689cc39ca16bfad8ae6cf56", "SoundToPlay":"hexen/map24"}
+//Desolate Garden
+{"Checksum":"339b4b50b615be6e1d8454f6c605a97c", "SoundToPlay":"hexen/map25"}
+//Necropolis
+{"Checksum":"66342e4468e151fb418f30989a1c78f5", "SoundToPlay":"hexen/map26"}
+//Zedek's Tomb
+{"Checksum":"3ffaf2f624c1b4bb6f581dcf7b99cba7", "SoundToPlay":"hexen/map27"}
+//Menelkir's Tomb
+{"Checksum":"088ece0e0f3e68448fa1d901001a0084", "SoundToPlay":"hexen/map28"}
+//Traductus' Tomb
+{"Checksum":"5c63a02b0b04d9ae95ca51687dc3406f", "SoundToPlay":"hexen/map29"}
+//Vivarium
+{"Checksum":"2639c89b8b7052e2ce4cb9cfc63f4c53", "SoundToPlay":"hexen/map30"}
+//Dark Crucible
+{"Checksum":"2a6c4235b942467d25fd50d5b313e67a", "SoundToPlay":"hexen/map31"}

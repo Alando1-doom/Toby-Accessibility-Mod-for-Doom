@@ -222,3 +222,339 @@ heretic/deco/walltorches				"sounds/ActorsInViewport/Heretic/Decorations/Lights/
 
 heretic/deco/yellowmarker			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarker.ogg"
 heretic/deco/yellowmarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarkers.ogg"
+
+
+//Hexen - Get ready for one hell of a list...
+
+hexen/deco/barrel						"sounds/ActorsInViewport/Hexen/Decorations/Barrel.ogg"
+hexen/deco/barrels						"sounds/ActorsInViewport/Hexen/Decorations/Barrels.ogg"
+
+hexen/deco/bucket						"sounds/ActorsInViewport/Hexen/Decorations/Bucket.ogg"
+hexen/deco/buckets					"sounds/ActorsInViewport/Hexen/Decorations/Buckets.ogg"
+
+hexen/deco/spike						"sounds/ActorsInViewport/Hexen/Decorations/Spike.ogg"
+hexen/deco/spikes						"sounds/ActorsInViewport/Hexen/Decorations/Spikes.ogg"
+
+hexen/deco/banner						"sounds/ActorsInViewport/Hexen/Decorations/TatteredBanner.ogg"
+hexen/deco/banners					"sounds/ActorsInViewport/Hexen/Decorations/TatteredBanners.ogg"
+
+hexen/deco/bridge						"sounds/ActorsInViewport/Hexen/Decorations/BridgeThing.ogg"
+hexen/deco/bridges						"sounds/ActorsInViewport/Hexen/Decorations/BridgeThings.ogg"
+
+//Hexen - Castle Decorations
+
+//[VOID - Armor pieces not needed]
+//hexen/deco/armorpiece				"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorPiece.ogg"
+//hexen/deco/armorpieces				"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorPieces.ogg"
+
+hexen/deco/armorsuit					"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorSuit.ogg"
+hexen/deco/armorsuits				"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorSuits.ogg"
+
+hexen/deco/pedestal					"sounds/ActorsInViewport/Hexen/Decorations/Castle/Pedestal.ogg"
+hexen/deco/pedestals					"sounds/ActorsInViewport/Hexen/Decorations/Castle/Pedestals.ogg"
+
+hexen/deco/vase							"sounds/ActorsInViewport/Hexen/Decorations/Castle/VasePedestal.ogg"
+hexen/deco/vases						"sounds/ActorsInViewport/Hexen/Decorations/Castle/VasePedestals.ogg"
+
+hexen/deco/bell							"sounds/ActorsInViewport/Hexen/Decorations/Castle/Bell.ogg"
+hexen/deco/bells							"sounds/ActorsInViewport/Hexen/Decorations/Castle/Bell.ogg"
+
+//Hexen - Dungeon Decorations
+
+hexen/deco/ironmaiden				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/IronMaiden.ogg"
+hexen/deco/ironmaidens				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/IronMaidens.ogg"
+
+hexen/deco/largehook					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LargeHook.ogg"
+hexen/deco/largehooks				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LargeHooks.ogg"
+
+hexen/deco/longchain					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LongChain.ogg"
+hexen/deco/longchains				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LongChains.ogg"
+
+hexen/deco/shortchain				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/ShortChain.ogg"
+hexen/deco/shortchains				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/ShortChains.ogg"
+
+hexen/deco/smallhook				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SmallHook.ogg"
+hexen/deco/smallhooks				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SmallHooks.ogg"
+
+hexen/deco/spikeball					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SpikeBall.ogg"
+hexen/deco/spikeballs					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SpikeBalls.ogg"
+
+//Hexen - Gore
+
+hexen/deco/chaincorpse				"sounds/ActorsInViewport/Hexen/Decorations/Gore/ChainCorpse.ogg"
+hexen/deco/chaincorpses			"sounds/ActorsInViewport/Hexen/Decorations/Gore/ChainCorpses.ogg"
+
+hexen/deco/hangingcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/HangingCorpseHeart.ogg"
+hexen/deco/hangingcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/HangingCorpseHearts.ogg"
+
+hexen/deco/impaledcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/ImpaledCorpse.ogg"
+hexen/deco/impaledcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/ImpaledCorpses.ogg"
+
+hexen/deco/meathook					"sounds/ActorsInViewport/Hexen/Decorations/Gore/MeatHook.ogg"
+hexen/deco/meathooks				"sounds/ActorsInViewport/Hexen/Decorations/Gore/MeatHooks.ogg"
+
+hexen/deco/sittingcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/SittingCorpse.ogg"
+hexen/deco/sittingcorpses			"sounds/ActorsInViewport/Hexen/Decorations/Gore/SittingCorpses.ogg"
+
+hexen/deco/skullhook					"sounds/ActorsInViewport/Hexen/Decorations/Gore/SkullHook.ogg"
+hexen/deco/skullhooks				"sounds/ActorsInViewport/Hexen/Decorations/Gore/SkullHooks.ogg"
+
+hexen/deco/sleepingcorpse		"sounds/ActorsInViewport/Hexen/Decorations/Gore/SleepingCorpse.ogg"
+hexen/deco/sleepingcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/SleepingCorpses.ogg"
+
+//Hexen - Graveyard Decorations
+
+hexen/deco/tombstone				"sounds/ActorsInViewport/Hexen/Decorations/Graveyard/TombStone.ogg"
+hexen/deco/tombstones				"sounds/ActorsInViewport/Hexen/Decorations/Graveyard/TombStones.ogg"
+
+//Hexen - Kitchen, Tableware, Pottery, etc.
+
+hexen/deco/cauldron						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cauldron.ogg"
+hexen/deco/cauldrons					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cauldrons.ogg"
+
+hexen/deco/cleaver						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cleaver.ogg"
+hexen/deco/cleavers					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cleavers.ogg"
+
+hexen/deco/goblet						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Goblet.ogg"
+hexen/deco/goblets						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Goblets.ogg"
+
+hexen/deco/largemug					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/LargeMug.ogg"
+hexen/deco/largemugs				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/LargeMugs.ogg"
+
+hexen/deco/medmug					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumMug.ogg"
+hexen/deco/medmugs					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumMugs.ogg"
+
+hexen/deco/medpot					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumPot.ogg"
+hexen/deco/medpots					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumPots.ogg"
+
+hexen/deco/shortpot					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/ShortPot.ogg"
+hexen/deco/shortpots					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/ShortPots.ogg"
+
+hexen/deco/spilledgob				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/SpillGoblet.ogg"
+hexen/deco/spilledgobs				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/SpillGoblets.ogg"
+
+hexen/deco/tallpot						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/TallPot.ogg"
+hexen/deco/tallpots						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/TallPots.ogg"
+
+//Hexen - Lights
+
+hexen/deco/bluecandle				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BlueCandle.ogg"
+hexen/deco/bluecandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BlueCandles.ogg"
+
+hexen/deco/brasstorch				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BrassTorch.ogg"
+hexen/deco/brasstorches			"sounds/ActorsInViewport/Hexen/Decorations/Lights/BrassTorches.ogg"
+
+hexen/deco/candles					"sounds/ActorsInViewport/Hexen/Decorations/Lights/Candles.ogg"
+
+hexen/deco/chandelier				"sounds/ActorsInViewport/Hexen/Decorations/Lights/Chandelier.ogg"
+hexen/deco/chandeliers				"sounds/ActorsInViewport/Hexen/Decorations/Lights/Chandeliers.ogg"
+
+hexen/deco/bull							"sounds/ActorsInViewport/Hexen/Decorations/Lights/FireBullStatue.ogg"
+hexen/deco/bulls							"sounds/ActorsInViewport/Hexen/Decorations/Lights/FireBullStatues.ogg"
+
+hexen/deco/largeflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlame.ogg"
+hexen/deco/largeflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlames.ogg"
+
+hexen/deco/skulltorch					"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorch.ogg"
+hexen/deco/skulltorches				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorches.ogg"
+
+hexen/deco/smallflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlame.ogg"
+hexen/deco/smallflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlames.ogg"
+
+hexen/deco/tallcandle					"sounds/ActorsInViewport/Hexen/Decorations/Lights/TallUnlitCandle.ogg"
+hexen/deco/tallcandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/TallUnlitCandles.ogg"
+
+hexen/deco/twinedtorch				"sounds/ActorsInViewport/Hexen/Decorations/Lights/TwinedTorch.ogg"
+hexen/deco/twinedtorches			"sounds/ActorsInViewport/Hexen/Decorations/Lights/TwinedTorches.ogg"
+
+hexen/deco/unlitcandle				"sounds/ActorsInViewport/Hexen/Decorations/Lights/UnlitCandle.ogg"
+hexen/deco/unlitcandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/UnlitCandles.ogg"
+
+hexen/deco/walltorch					"sounds/ActorsInViewport/Hexen/Decorations/Lights/WallTorch.ogg"
+hexen/deco/walltorches				"sounds/ActorsInViewport/Hexen/Decorations/Lights/WallTorches.ogg"
+
+//Hexen - Nature - Trees, Plants, etc.
+
+hexen/deco/burntstump				"sounds/ActorsInViewport/Hexen/Decorations/Nature/BurntTreeStump.ogg"
+hexen/deco/burntstumps				"sounds/ActorsInViewport/Hexen/Decorations/Nature/BurntTreeStumps.ogg"
+
+hexen/deco/deadtree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/DeadTree.ogg"
+hexen/deco/deadtrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/DeadTrees.ogg"
+
+hexen/deco/gnarledtree				"sounds/ActorsInViewport/Hexen/Decorations/Nature/GnarledTree.ogg"
+hexen/deco/gnarledtrees			"sounds/ActorsInViewport/Hexen/Decorations/Nature/GnarledTrees.ogg"
+
+hexen/deco/graytree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayTree.ogg"
+hexen/deco/graytrees					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayTrees.ogg"
+
+hexen/deco/largeshrub				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeShrub.ogg"
+hexen/deco/largeshrubs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeShrubs.ogg"
+
+hexen/deco/largetree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeTree.ogg"
+hexen/deco/largetrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeTrees.ogg"
+
+hexen/deco/leaf							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Leaf.ogg"
+hexen/deco/leaves						"sounds/ActorsInViewport/Hexen/Decorations/Nature/Leaves.ogg"
+
+hexen/deco/smallshrub				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallShrub.ogg"
+hexen/deco/smallshrubs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallShrubs.ogg"
+
+hexen/deco/swampstump			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampTreeStump.ogg"
+hexen/deco/swampstumps			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampTreeStumps.ogg"
+
+hexen/deco/swampvine				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampVine.ogg"
+hexen/deco/swampvines				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampVines.ogg"
+
+hexen/deco/swamptree				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TallSwampTree.ogg"
+hexen/deco/swamptrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TallSwampTrees.ogg"
+
+//Generic
+hexen/deco/tree							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Tree.ogg"
+hexen/deco/trees							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Trees.ogg"
+
+hexen/deco/log							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Log.ogg"
+hexen/deco/logs							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Logs.ogg"
+
+hexen/deco/stump						"sounds/ActorsInViewport/Hexen/Decorations/Nature/TreeStump.ogg"
+hexen/deco/stumps						"sounds/ActorsInViewport/Hexen/Decorations/Nature/TreeStumps.ogg"
+
+hexen/deco/xmastree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/XmasTree.ogg"
+hexen/deco/xmastrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/XmasTrees.ogg"
+
+//Hexen - Nature - Dirt, Rocks, etc.
+
+//[VOID Clumps - Not Needed]
+//hexen/deco/dirtclump					"sounds/ActorsInViewport/Hexen/Decorations/Nature/DirtClump.ogg"
+//hexen/deco/dirtclumps				"sounds/ActorsInViewport/Hexen/Decorations/Nature/DirtClumps.ogg"
+
+hexen/deco/grayrock					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayRock.ogg"
+hexen/deco/grayrocks					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayRocks.ogg"
+
+hexen/deco/largebrownrock		"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeBrownRock.ogg"
+hexen/deco/largebrownrocks		"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeBrownRocks.ogg"
+
+hexen/deco/medbrownrock			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumBrownRock.ogg"
+hexen/deco/medbrownrocks		"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumBrownRocks.ogg"
+
+hexen/deco/medrubble				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumRubble.ogg"
+
+//Generic
+hexen/deco/rock							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Rockdm.ogg"
+hexen/deco/rocks						"sounds/ActorsInViewport/Hexen/Decorations/Nature/Rocksdm.ogg"
+
+hexen/deco/smallrubble				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallRubble.ogg"
+
+//Hexen - Cave Decoration - Rock & Ice
+
+hexen/deco/largeicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIceSpike.ogg"
+hexen/deco/largeicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIceSpikes.ogg"
+
+hexen/deco/largeicicle				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIcicle.ogg"
+hexen/deco/largeicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIcicles.ogg"
+
+hexen/deco/largestac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalactite.ogg"
+hexen/deco/largestacs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalactites.ogg"
+
+hexen/deco/largestag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalagmite.ogg"
+hexen/deco/largestags				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalagmites.ogg"
+
+hexen/deco/medicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIceSpike.ogg"
+hexen/deco/medicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIceSpikes.ogg"
+
+hexen/deco/medicicle					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIcicle.ogg"
+hexen/deco/medicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIcicles.ogg"
+
+hexen/deco/medstac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalactite.ogg"
+hexen/deco/medstacs					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalactites.ogg"
+
+hexen/deco/medstag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalagmite.ogg"
+hexen/deco/medstags					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalagmites.ogg"
+
+hexen/deco/smallicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIceSpike.ogg"
+hexen/deco/smallicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIceSpikes.ogg"
+
+hexen/deco/smallicicle				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIcicle.ogg"
+hexen/deco/smallicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIcicles.ogg"
+
+hexen/deco/smallstac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalactite.ogg"
+hexen/deco/smallstacs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalactites.ogg"
+
+hexen/deco/smallstag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalagmite.ogg"
+hexen/deco/smallstags				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalagmites.ogg"
+
+hexen/deco/stagpillar					"sounds/ActorsInViewport/Hexen/Decorations/Nature/StalagmitePillar.ogg"
+hexen/deco/stagpillars				"sounds/ActorsInViewport/Hexen/Decorations/Nature/StalagmitePillars.ogg"
+
+hexen/deco/tinyicespike				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIceSpike.ogg"
+hexen/deco/tinyicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIceSpikes.ogg"
+
+hexen/deco/tinyicicle					"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIcicle.ogg"
+hexen/deco/tinyicicles					"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIcicles.ogg"
+
+//Hexen - Misc Nature 
+
+//[VOID - Fog Not Needed]
+//hexen/deco/largefog					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeFogCloud.ogg"
+//hexen/deco/largefogs					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeFogClouds.ogg"
+
+//hexen/deco/mediumfog				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumFogCloud.ogg"
+//hexen/deco/mediumfogs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumFogClouds.ogg"
+
+//hexen/deco/smallfog					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallFogCloud.ogg"
+//hexen/deco/smallfogs					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallFogClouds.ogg"
+
+//Generic
+hexen/deco/mushroom				"sounds/ActorsInViewport/Hexen/Decorations/Nature/Mushroom.ogg"
+hexen/deco/mushrooms				"sounds/ActorsInViewport/Hexen/Decorations/Nature/Mushrooms.ogg"
+
+hexen/deco/poisonshroom			"sounds/ActorsInViewport/Hexen/Decorations/Nature/PoisonMushroom.ogg"
+hexen/deco/poisonshrooms		"sounds/ActorsInViewport/Hexen/Decorations/Nature/PoisonMushrooms.ogg"
+
+//Hexen - Statues
+
+hexen/deco/demonskull				"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatue.ogg"
+hexen/deco/demonskulls			"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatues.ogg"
+
+hexen/deco/demonnoskull			"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatue2.ogg"
+hexen/deco/demonnoskulls		"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatues2.ogg"
+
+hexen/deco/shortfiregarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFireGargoyle.ogg"
+hexen/deco/shortfiregargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFireGargoyles.ogg"
+
+hexen/deco/shortfsgarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFSGargoyle.ogg"
+hexen/deco/shortfsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFSGargoyles.ogg"
+
+hexen/deco/shortgarg					"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortGargoyle.ogg"
+hexen/deco/shortgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortGargoyles.ogg"
+
+hexen/deco/shorticegarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortIceGargoyle.ogg"
+hexen/deco/shorticegargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortIceGargoyles.ogg"
+
+hexen/deco/shortmetalgarg		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortMetalGargoyle.ogg"
+hexen/deco/shortmetalgargs		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortMetalGargoyles.ogg"
+
+hexen/deco/shortwoodgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortWoodGargoyle.ogg"
+hexen/deco/shortwoodgargs		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortWoodGargoyles.ogg"
+
+hexen/deco/tallfiregarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFireGargoyle.ogg"
+hexen/deco/tallfiregargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFireGargoyles.ogg"
+
+hexen/deco/tallfsgarg					"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFSGargoyle.ogg"
+hexen/deco/tallfsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFSGargoyles.ogg"
+
+hexen/deco/tallgarg						"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallGargoyle.ogg"
+hexen/deco/tallgargs					"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallGargoyles.ogg"
+
+hexen/deco/tallicegarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallIceGargoyle.ogg"
+hexen/deco/tallicegargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallIceGargoyles.ogg"
+
+hexen/deco/tallmetalgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallMetalGargoyle.ogg"
+hexen/deco/tallmetalgargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallMetalGargoyles.ogg"
+
+hexen/deco/tallwoodgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodGargoyle.ogg"
+hexen/deco/tallwoodgargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodGargoyles.ogg"
+
+hexen/deco/tallwsgarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodStoneGargoyle.ogg"
+hexen/deco/tallwsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodStoneGargoyles.ogg"
+
+//Oy Vey... That was a lot! LOL! :P

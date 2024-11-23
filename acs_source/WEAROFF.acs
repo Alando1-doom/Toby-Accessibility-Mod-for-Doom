@@ -47,6 +47,7 @@ script "Timers" Enter
 	ACS_NamedExecute("InvulnTimer",0);	//Invulnerability
 	ACS_NamedExecute("FlightTimer",0);	//Wings of Wrath
 	ACS_NamedExecute("TomeTimer",0);	//Tome of Power
+	ACS_NamedExecute("SpeedTimer",0);	//Tome of Power
 }
 
 script "RadTimer" (void)
@@ -144,6 +145,23 @@ script "TomeTimer" (void)
         if(GetActorPowerupTics(0, "PowerWeaponLevel2") == 112)
 		{
             PlaySound(0,"artifact/tome/wear",CHAN_5);
+			//terminate;
+            }
+        Delay(1);
+    }
+}
+
+script "SpeedTimer" (void)
+{
+	if(ClassifyActor(0) & ACTOR_VOODOODOLL)
+	{
+		terminate;
+	}
+    while(true)
+	{
+        if(GetActorPowerupTics(0, "PowerSpeed") == 112)
+		{
+            PlaySound(0,"artifact/boots/wear",CHAN_5);
 			//terminate;
             }
         Delay(1);

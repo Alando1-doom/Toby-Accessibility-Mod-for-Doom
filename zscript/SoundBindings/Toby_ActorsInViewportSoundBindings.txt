@@ -243,10 +243,23 @@
 {"ActorClass":"BlueSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/bluelock", "SoundToPlayPlural":"toby/actorsinviewport/env/bluelocks", "Article":"a"}
 {"ActorClass":"YellowKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/yellowlock", "SoundToPlayPlural":"toby/actorsinviewport/env/yellowlocks", "Article":"a"}
 {"ActorClass":"YellowSkullChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/yellowlock", "SoundToPlayPlural":"toby/actorsinviewport/env/yellowlocks", "Article":"a"}
-{"ActorClass":"GreenKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/redlock", "SoundToPlayPlural":"toby/actorsinviewport/env/redlocks", "Article":"a"}
+{"ActorClass":"GreenKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/greenlock", "SoundToPlayPlural":"toby/actorsinviewport/env/greenlocks", "Article":"a"}
 {"ActorClass":"3KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
 {"ActorClass":"6KeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
 {"ActorClass":"AnyKeyChecker_V2", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
+{"ActorClass":"AxeKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/axedoor", "SoundToPlayPlural":"toby/actorsinviewport/env/axedoors", "Article":"an"}
+{"ActorClass":"CastleKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/castledoor", "SoundToPlayPlural":"toby/actorsinviewport/env/castledoors", "Article":"a"}
+{"ActorClass":"CaveKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/cavedoor", "SoundToPlayPlural":"toby/actorsinviewport/env/cavedoors", "Article":"a"}
+{"ActorClass":"DungeonKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/dungeondoor", "SoundToPlayPlural":"toby/actorsinviewport/env/dungeondoors", "Article":"a"}
+{"ActorClass":"EmeraldKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/emeralddoor", "SoundToPlayPlural":"toby/actorsinviewport/env/emeralddoors", "Article":"an"}
+{"ActorClass":"FireKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/firedoor", "SoundToPlayPlural":"toby/actorsinviewport/env/firedoors", "Article":"a"}
+{"ActorClass":"HornKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/horndoor", "SoundToPlayPlural":"toby/actorsinviewport/env/horndoors", "Article":"a"}
+{"ActorClass":"RustedKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/rusteddoor", "SoundToPlayPlural":"toby/actorsinviewport/env/rusteddoors", "Article":"a"}
+{"ActorClass":"SilverKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/silverdoor", "SoundToPlayPlural":"toby/actorsinviewport/env/silverdoors", "Article":"a"}
+{"ActorClass":"SteelKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/steeldoor", "SoundToPlayPlural":"toby/actorsinviewport/env/steeldoors", "Article":"a"}
+{"ActorClass":"SwampKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/swampdoor", "SoundToPlayPlural":"toby/actorsinviewport/env/swampdoors", "Article":"a"}
+{"ActorClass":"AllKeyChecker", "SoundToPlay":"toby/actorsinviewport/env/multilock", "SoundToPlayPlural":"toby/actorsinviewport/env/multilocks", "Article":"a"}
+
 
 
 //Heretic
@@ -413,3 +426,358 @@
 {"ActorClass":"KeyGizmoGreen_Toby", "SoundToPlay":"heretic/deco/greenmarker", "SoundToPlayPlural":"heretic/deco/greenmarkers", "Article":"a"}
 {"ActorClass":"KeyGizmoYellow_Toby", "SoundToPlay":"heretic/deco/yellowmarker", "SoundToPlayPlural":"heretic/deco/yellowmarkers", "Article":"a"}
 {"ActorClass":"Pod_Toby", "SoundToPlay":"heretic/deco/pod", "SoundToPlayPlural":"heretic/deco/pods", "Article":"a"}
+
+
+//Hexen - Get ready for a whole lot of stuff!
+
+//Weapons
+//Fighter
+{"ActorClass":"FWeapAxe_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/axe", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/axes", "Article":"an"}
+{"ActorClass":"FWeapAxe", "SoundToPlay":"hexen/actorsinviewport/weapon/axe", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/axes", "Article":"an"}
+{"ActorClass":"FWeapHammer_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/hammers", "Article":"a"}
+{"ActorClass":"FWeapHammer", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/hammers", "Article":"a"}
+{"ActorClass":"FWeapQuietus_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietus", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietus", "Article":"a"}
+{"ActorClass":"QuietusP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp1", "Article":"a"}
+{"ActorClass":"FWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp1", "Article":"a"}
+{"ActorClass":"QuietusP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp2", "Article":"a"}
+{"ActorClass":"FWeaponPiece2", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp2", "Article":"a"}
+{"ActorClass":"QuietusP3_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp3", "Article":"a"}
+{"ActorClass":"FWeaponPiece3", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp3", "Article":"a"}
+
+//Cleric
+{"ActorClass":"CWeapStaff_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/serpentstaffs", "Article":"a"}
+{"ActorClass":"CWeapStaff", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/serpentstaffs", "Article":"a"}
+{"ActorClass":"CWeapFlame_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/firestorms", "Article":"a"}
+{"ActorClass":"CWeapFlame", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/firestorms", "Article":"a"}
+{"ActorClass":"CWeapWraithverge_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wraithverge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wraithverge", "Article":"a"}
+{"ActorClass":"WraithVergeP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece1", "Article":"a"}
+{"ActorClass":"CWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece1", "Article":"a"}
+{"ActorClass":"WraithVergeP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece2", "Article":"a"}
+{"ActorClass":"CWeaponPiece2", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece2", "Article":"a"}
+{"ActorClass":"WraithVergeP3_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece3", "Article":"a"}
+{"ActorClass":"CWeaponPiece3", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece3", "Article":"a"}
+
+//Mage
+{"ActorClass":"MWeapFrost_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/frostspells", "Article":"a"}
+{"ActorClass":"MWeapFrost", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/frostspells", "Article":"a"}
+{"ActorClass":"MWeapLightning_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/arc", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/arcs", "Article":"an"}
+{"ActorClass":"MWeapLightning", "SoundToPlay":"hexen/actorsinviewport/weapon/arc", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/arcs", "Article":"an"}
+{"ActorClass":"MWeapBloodscourge_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bloodscourge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bloodscourge", "Article":"a"}
+{"ActorClass":"BloodscourgeP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece1", "Article":"a"}
+{"ActorClass":"MWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece1", "Article":"a"}
+{"ActorClass":"BloodscourgeP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece2", "Article":"a"}
+{"ActorClass":"MWeaponPiece2", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece2", "Article":"a"}
+{"ActorClass":"BloodscourgeP3_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece3", "Article":"a"}
+{"ActorClass":"MWeaponPiece3", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece3", "Article":"a"}
+
+//Ammo
+{"ActorClass":"Mana1_Toby", "SoundToPlay":"hexen/actorsinviewport/ammo/bluemana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/bluemana", "Article":"a"}
+{"ActorClass":"Mana1", "SoundToPlay":"hexen/actorsinviewport/ammo/bluemana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/bluemana", "Article":"a"}
+{"ActorClass":"Mana2_Toby", "SoundToPlay":"hexen/actorsinviewport/ammo/greenmana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/greenmana", "Article":"a"}
+{"ActorClass":"Mana2", "SoundToPlay":"hexen/actorsinviewport/ammo/greenmana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/greenmana", "Article":"a"}
+{"ActorClass":"Mana3_Toby", "SoundToPlay":"hexen/actorsinviewport/ammo/combomana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/combomana", "Article":"a"}
+{"ActorClass":"Mana3", "SoundToPlay":"hexen/actorsinviewport/ammo/combomana", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/combomana", "Article":"a"}
+
+//Armor
+{"ActorClass":"MeshArmor_Toby", "SoundToPlay":"hexen/actorsinviewport/armor/mesharmor", "SoundToPlayPlural":"hexen/actorsinviewport/armor/mesharmors", "Article":"a"}
+{"ActorClass":"MeshArmor", "SoundToPlay":"hexen/actorsinviewport/armor/mesharmor", "SoundToPlayPlural":"hexen/actorsinviewport/armor/mesharmors", "Article":"a"}
+{"ActorClass":"FalconShield_Toby", "SoundToPlay":"hexen/actorsinviewport/armor/shield", "SoundToPlayPlural":"hexen/actorsinviewport/armor/shields", "Article":"a"}
+{"ActorClass":"FalconShield", "SoundToPlay":"hexen/actorsinviewport/armor/shield", "SoundToPlayPlural":"hexen/actorsinviewport/armor/shields", "Article":"a"}
+{"ActorClass":"PlatinumHelm_Toby", "SoundToPlay":"hexen/actorsinviewport/armor/helmet", "SoundToPlayPlural":"hexen/actorsinviewport/armor/helmets", "Article":"a"}
+{"ActorClass":"PlatinumHelm", "SoundToPlay":"hexen/actorsinviewport/armor/helmet", "SoundToPlayPlural":"hexen/actorsinviewport/armor/helmets", "Article":"a"}
+{"ActorClass":"AmuletOfWarding_Toby", "SoundToPlay":"hexen/actorsinviewport/armor/amulet", "SoundToPlayPlural":"hexen/actorsinviewport/armor/amulets", "Article":"an"}
+{"ActorClass":"AmuletOfWarding", "SoundToPlay":"hexen/actorsinviewport/armor/amulet", "SoundToPlayPlural":"hexen/actorsinviewport/armor/amulets", "Article":"an"}
+
+//Artifacts - Powerups
+{"ActorClass":"ArtiInvulnerability2_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/icon", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/icons", "Article":"an"}
+{"ActorClass":"ArtiInvulnerability2", "SoundToPlay":"hexen/actorsinviewport/artifact/icon", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/icons", "Article":"an"}
+{"ActorClass":"Flechette_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/flechettes", "Article":"a"}
+{"ActorClass":"ArtiPoisonBag", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/flechettes", "Article":"a"}
+{"ActorClass":"ArtiPork_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/porkalators", "Article":"a"}
+{"ActorClass":"ArtiPork", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/porkalators", "Article":"a"}
+{"ActorClass":"ArtiTeleportOther_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/bandevice", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/bandevices", "Article":"a"}
+{"ActorClass":"ArtiTeleportOther", "SoundToPlay":"hexen/actorsinviewport/artifact/bandevice", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/bandevices", "Article":"a"}
+{"ActorClass":"ArtiBlastRadius_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/repdisc", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/repdiscs", "Article":"a"}
+{"ActorClass":"ArtiBlastRadius", "SoundToPlay":"hexen/actorsinviewport/artifact/repdisc", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/repdiscs", "Article":"a"}
+{"ActorClass":"DarkServant_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/servant", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/servants", "Article":"a"}
+{"ActorClass":"DarkServant", "SoundToPlay":"hexen/actorsinviewport/artifact/servant", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/servants", "Article":"a"}
+{"ActorClass":"SpeedBoots_Toby", "SoundToPlay":"hexen/actorsinviewport/artifact/boots", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/boots", "Article":"a"}
+{"ActorClass":"ArtiSpeedBoots", "SoundToPlay":"hexen/actorsinviewport/artifact/boots", "SoundToPlayPlural":"hexen/actorsinviewport/artifact/boots", "Article":"a"}
+{"ActorClass":"ArtiBoostMana_Toby", "SoundToPlay":"hexen/actorsinviewport/ammo/krater", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/kraters", "Article":"a"}
+{"ActorClass":"ArtiBoostMana", "SoundToPlay":"hexen/actorsinviewport/ammo/krater", "SoundToPlayPlural":"hexen/actorsinviewport/ammo/kraters", "Article":"a"}
+{"ActorClass":"ArtiBoostArmor_Toby", "SoundToPlay":"hexen/actorsinviewport/armor/bracers", "SoundToPlayPlural":"hexen/actorsinviewport/armor/bracers", "Article":"a"}
+{"ActorClass":"ArtiBoostArmor", "SoundToPlay":"hexen/actorsinviewport/armor/bracers", "SoundToPlayPlural":"hexen/actorsinviewport/armor/bracers", "Article":"a"}
+{"ActorClass":"ArtiHealingRadius_Toby", "SoundToPlay":"hexen/actorsinviewport/health/ambit", "SoundToPlayPlural":"hexen/actorsinviewport/health/ambits", "Article":"a"}
+{"ActorClass":"ArtiHealingRadius", "SoundToPlay":"hexen/actorsinviewport/health/ambit", "SoundToPlayPlural":"hexen/actorsinviewport/health/ambits", "Article":"a"}
+
+//Keys
+{"ActorClass":"AxeKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/axekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/axekeys", "Article":"an"}
+{"ActorClass":"KeyAxe", "SoundToPlay":"hexen/actorsinviewport/keys/axekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/axekeys", "Article":"an"}
+{"ActorClass":"CastleKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/castlekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/castlekeys", "Article":"a"}
+{"ActorClass":"KeyCastle", "SoundToPlay":"hexen/actorsinviewport/keys/castlekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/castlekeys", "Article":"a"}
+{"ActorClass":"CaveKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/cavekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/cavekeys", "Article":"a"}
+{"ActorClass":"KeyCave", "SoundToPlay":"hexen/actorsinviewport/keys/cavekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/cavekeys", "Article":"a"}
+{"ActorClass":"DungeonKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/dungeonkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/dungeonkeys", "Article":"a"}
+{"ActorClass":"KeyDungeon", "SoundToPlay":"hexen/actorsinviewport/keys/dungeonkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/dungeonkeys", "Article":"a"}
+{"ActorClass":"EmeraldKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/emeraldkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/emeraldkeys", "Article":"an"}
+{"ActorClass":"KeyEmerald", "SoundToPlay":"hexen/actorsinviewport/keys/emeraldkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/emeraldkeys", "Article":"an"}
+{"ActorClass":"FireKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/firekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/firekeys", "Article":"a"}
+{"ActorClass":"KeyFire", "SoundToPlay":"hexen/actorsinviewport/keys/firekey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/firekeys", "Article":"a"}
+{"ActorClass":"HornKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/hornkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/hornkeys", "Article":"a"}
+{"ActorClass":"KeyHorn", "SoundToPlay":"hexen/actorsinviewport/keys/hornkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/hornkeys", "Article":"a"}
+{"ActorClass":"RustedKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/rustedkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/rustedkeys", "Article":"a"}
+{"ActorClass":"KeyRusted", "SoundToPlay":"hexen/actorsinviewport/keys/rustedkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/rustedkeys", "Article":"a"}
+{"ActorClass":"SilverKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/silverkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/silverkeys", "Article":"a"}
+{"ActorClass":"KeySilver", "SoundToPlay":"hexen/actorsinviewport/keys/silverkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/silverkeys", "Article":"a"}
+{"ActorClass":"SteelKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/steelkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/steelkeys", "Article":"a"}
+{"ActorClass":"KeySteel", "SoundToPlay":"hexen/actorsinviewport/keys/steelkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/steelkeys", "Article":"a"}
+{"ActorClass":"SwampKey_Toby", "SoundToPlay":"hexen/actorsinviewport/keys/swampkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/swampkeys", "Article":"a"}
+{"ActorClass":"KeySwamp", "SoundToPlay":"hexen/actorsinviewport/keys/swampkey", "SoundToPlayPlural":"hexen/actorsinviewport/keys/swampkeys", "Article":"a"}
+
+//Puzzle Items
+{"ActorClass":"PuzzSkull_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/yorickskull", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/yorickskulls", "Article":"a"}
+{"ActorClass":"PuzzSkull", "SoundToPlay":"hexen/actorsinviewport/puzzle/yorickskull", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/yorickskulls", "Article":"a"}
+{"ActorClass":"PuzzGemBig_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/dsparilheart", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/dsparilhearts", "Article":"a"}
+{"ActorClass":"PuzzGemBig", "SoundToPlay":"hexen/actorsinviewport/puzzle/dsparilheart", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/dsparilhearts", "Article":"a"}
+{"ActorClass":"PuzzGemRed_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/rubygem", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzGemRed", "SoundToPlay":"hexen/actorsinviewport/puzzle/rubygem", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzGemGreen1_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"an"}
+{"ActorClass":"PuzzGemGreen1", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"an"}
+{"ActorClass":"PuzzGemGreen2_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"an"}
+{"ActorClass":"PuzzGemGreen2", "SoundToPlay":"hexen/actorsinviewport/puzzle/greengem2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"an"}
+{"ActorClass":"PuzzGemBlue1_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzGemBlue1", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzGemBlue2_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzGemBlue2", "SoundToPlay":"hexen/actorsinviewport/puzzle/bluegem2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gems", "Article":"a"}
+{"ActorClass":"PuzzBook1_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/codex", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/codexes", "Article":"a"}
+{"ActorClass":"PuzzBook1", "SoundToPlay":"hexen/actorsinviewport/puzzle/codex", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/codexes", "Article":"a"}
+{"ActorClass":"PuzzBook2_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/ascura", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/ascuras", "Article":"a"}
+{"ActorClass":"PuzzBook2", "SoundToPlay":"hexen/actorsinviewport/puzzle/ascura", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/ascuras", "Article":"a"}
+{"ActorClass":"PuzzFlameMask_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/mask", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/masks", "Article":"a"}
+{"ActorClass":"PuzzFlameMask", "SoundToPlay":"hexen/actorsinviewport/puzzle/mask", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/masks", "Article":"a"}
+{"ActorClass":"PuzzFWeapon_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/glaiveseal", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/glaiveseals", "Article":"a"}
+{"ActorClass":"PuzzFWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/glaiveseal", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/glaiveseals", "Article":"a"}
+{"ActorClass":"PuzzCWeapon_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/holyrelic", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/holyrelics", "Article":"a"}
+{"ActorClass":"PuzzCWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/holyrelic", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/holyrelics", "Article":"a"}
+{"ActorClass":"PuzzMWeapon_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/sigil", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/sigils", "Article":"a"}
+{"ActorClass":"PuzzMWeapon", "SoundToPlay":"hexen/actorsinviewport/puzzle/sigil", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/sigils", "Article":"a"}
+{"ActorClass":"PuzzGear1_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear1", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear1", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear2_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear2", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear2", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear3_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear3", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear3", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear3", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear4_Toby", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear4", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+{"ActorClass":"PuzzGear4", "SoundToPlay":"hexen/actorsinviewport/puzzle/gear4", "SoundToPlayPlural":"hexen/actorsinviewport/puzzle/gears", "Article":"a"}
+
+//Monsters
+{"ActorClass":"FireDemon_Toby", "SoundToPlay":"hexen/monster/afrit", "SoundToPlayPlural":"hexen/monster/afrits", "Article":"an"}
+{"ActorClass":"FireDemon", "SoundToPlay":"hexen/monster/afrit", "SoundToPlayPlural":"hexen/monster/afrits", "Article":"an"}
+{"ActorClass":"Ettin_Toby", "SoundToPlay":"hexen/monster/ettin", "SoundToPlayPlural":"hexen/monster/ettins", "Article":"an"}
+{"ActorClass":"Ettin", "SoundToPlay":"hexen/monster/ettin", "SoundToPlayPlural":"hexen/monster/ettins", "Article":"an"}
+{"ActorClass":"Centaur_Toby", "SoundToPlay":"hexen/monster/centaur", "SoundToPlayPlural":"hexen/monster/centaurs", "Article":"a"}
+{"ActorClass":"Centaur", "SoundToPlay":"hexen/monster/centaur", "SoundToPlayPlural":"hexen/monster/centaurs", "Article":"a"}
+{"ActorClass":"CentaurLeader_Toby", "SoundToPlay":"hexen/monster/slaughtaur", "SoundToPlayPlural":"hexen/monster/slaughtaurs", "Article":"a"}
+{"ActorClass":"CentaurLeader", "SoundToPlay":"hexen/monster/slaughtaur", "SoundToPlayPlural":"hexen/monster/slaughtaurs", "Article":"a"}
+{"ActorClass":"Bishop_Toby", "SoundToPlay":"hexen/monster/bishop", "SoundToPlayPlural":"hexen/monster/bishops", "Article":"a"}
+{"ActorClass":"Bishop", "SoundToPlay":"hexen/monster/bishop", "SoundToPlayPlural":"hexen/monster/bishops", "Article":"a"}
+{"ActorClass":"Demon1_Toby", "SoundToPlay":"hexen/monster/greenserpent", "SoundToPlayPlural":"hexen/monster/greenserpents", "Article":"a"}
+{"ActorClass":"Demon1", "SoundToPlay":"hexen/monster/greenserpent", "SoundToPlayPlural":"hexen/monster/greenserpents", "Article":"a"}
+{"ActorClass":"Demon2_Toby", "SoundToPlay":"hexen/monster/brownserpent", "SoundToPlayPlural":"hexen/monster/brownserpents", "Article":"a"}
+{"ActorClass":"Demon2", "SoundToPlay":"hexen/monster/brownserpent", "SoundToPlayPlural":"hexen/monster/brownserpents", "Article":"a"}
+{"ActorClass":"IceGuy_Toby", "SoundToPlay":"hexen/monster/wendigo", "SoundToPlayPlural":"hexen/monster/wendigos", "Article":"a"}
+{"ActorClass":"IceGuy", "SoundToPlay":"hexen/monster/wendigo", "SoundToPlayPlural":"hexen/monster/wendigos", "Article":"a"}
+{"ActorClass":"Wraith_Toby", "SoundToPlay":"hexen/monster/reaver", "SoundToPlayPlural":"hexen/monster/reavers", "Article":"a"}
+{"ActorClass":"Wraith", "SoundToPlay":"hexen/monster/reaver", "SoundToPlayPlural":"hexen/monster/reavers", "Article":"a"}
+{"ActorClass":"WraithBuried", "SoundToPlay":"hexen/monster/reaver", "SoundToPlayPlural":"hexen/monster/reavers", "Article":"a"}
+{"ActorClass":"Serpent", "SoundToPlay":"hexen/monster/stalker", "SoundToPlayPlural":"hexen/monster/stalkers", "Article":"a"}
+{"ActorClass":"SerpentLeader", "SoundToPlay":"hexen/monster/stalker2", "SoundToPlayPlural":"hexen/monster/stalkers2", "Article":"a"}
+{"ActorClass":"Dragon", "SoundToPlay":"hexen/monster/dragon", "SoundToPlayPlural":"hexen/monster/dragons", "Article":"a"}
+{"ActorClass":"FighterBoss_Toby", "SoundToPlay":"hexen/monster/zedek", "SoundToPlayPlural":"hexen/monster/zedeks", "Article":"a"}
+{"ActorClass":"FighterBoss", "SoundToPlay":"hexen/monster/zedek", "SoundToPlayPlural":"hexen/monster/zedeks", "Article":"a"}
+{"ActorClass":"ClericBoss_Toby", "SoundToPlay":"hexen/monster/traductus", "SoundToPlayPlural":"hexen/monster/traductus2", "Article":"a"}
+{"ActorClass":"ClericBoss", "SoundToPlay":"hexen/monster/traductus", "SoundToPlayPlural":"hexen/monster/traductus2", "Article":"a"}
+{"ActorClass":"MageBoss_Toby", "SoundToPlay":"hexen/monster/menelkir", "SoundToPlayPlural":"hexen/monster/menelkirs", "Article":"a"}
+{"ActorClass":"MageBoss", "SoundToPlay":"hexen/monster/menelkir", "SoundToPlayPlural":"hexen/monster/menelkirs", "Article":"a"}
+{"ActorClass":"Heresiarch_Toby", "SoundToPlay":"hexen/monster/heresiarch", "SoundToPlayPlural":"hexen/monster/heresiarches", "Article":"a"}
+{"ActorClass":"Heresiarch", "SoundToPlay":"hexen/monster/heresiarch", "SoundToPlayPlural":"hexen/monster/heresiarches", "Article":"a"}
+{"ActorClass":"Korax", "SoundToPlay":"hexen/monster/korax", "SoundToPlayPlural":"hexen/monster/koraxes", "Article":"a"}
+{"ActorClass":"Pig", "SoundToPlay":"hexen/animal/pig", "SoundToPlayPlural":"hexen/animal/pigs", "Article":"a"}
+{"ActorClass":"PigPlayer", "SoundToPlay":"hexen/animal/pig", "SoundToPlayPlural":"hexen/animal/pigs", "Article":"a"}
+{"ActorClass":"Bat", "SoundToPlay":"hexen/animal/bat", "SoundToPlayPlural":"hexen/animal/bats", "Article":"a"}
+
+//Decorations - Here we go...
+//Lights
+{"ActorClass":"ZChandelier_Toby", "SoundToPlay":"hexen/deco/chandelier", "SoundToPlayPlural":"hexen/deco/chandeliers", "Article":"a"}
+{"ActorClass":"ZChandelier", "SoundToPlay":"hexen/deco/chandelier", "SoundToPlayPlural":"hexen/deco/chandeliers", "Article":"a"}
+{"ActorClass":"ZChandelierUnlit", "SoundToPlay":"hexen/deco/chandelier", "SoundToPlayPlural":"hexen/deco/chandeliers", "Article":"a"}
+{"ActorClass":"FireThing_Toby", "SoundToPlay":"hexen/deco/skulltorch", "SoundToPlayPlural":"hexen/deco/skulltorches", "Article":"a"}
+{"ActorClass":"FireThing", "SoundToPlay":"hexen/deco/skulltorch", "SoundToPlayPlural":"hexen/deco/skulltorches", "Article":"a"}
+{"ActorClass":"FlameSmall_Toby", "SoundToPlay":"hexen/deco/smallflame", "SoundToPlayPlural":"hexen/deco/smallflames", "Article":"a"}
+{"ActorClass":"FlameSmall", "SoundToPlay":"hexen/deco/smallflame", "SoundToPlayPlural":"hexen/deco/smallflames", "Article":"a"}
+{"ActorClass":"FlameSmall2_Toby", "SoundToPlay":"hexen/deco/smallflame", "SoundToPlayPlural":"hexen/deco/smallflames", "Article":"a"}
+{"ActorClass":"FlameSmall2", "SoundToPlay":"hexen/deco/smallflame", "SoundToPlayPlural":"hexen/deco/smallflames", "Article":"a"}
+{"ActorClass":"FlameLarge_Toby", "SoundToPlay":"hexen/deco/largeflame", "SoundToPlayPlural":"hexen/deco/largeflames", "Article":"a"}
+{"ActorClass":"FlameLarge", "SoundToPlay":"hexen/deco/largeflame", "SoundToPlayPlural":"hexen/deco/largeflames", "Article":"a"}
+{"ActorClass":"FlameLarge2_Toby", "SoundToPlay":"hexen/deco/largeflame", "SoundToPlayPlural":"hexen/deco/largeflames", "Article":"a"}
+{"ActorClass":"FlameLarge2", "SoundToPlay":"hexen/deco/largeflame", "SoundToPlayPlural":"hexen/deco/largeflames", "Article":"a"}
+{"ActorClass":"BrassTorch_Toby", "SoundToPlay":"hexen/deco/brasstorch", "SoundToPlayPlural":"hexen/deco/brasstorches", "Article":"a"}
+{"ActorClass":"BrassTorch", "SoundToPlay":"hexen/deco/brasstorch", "SoundToPlayPlural":"hexen/deco/brasstorches", "Article":"a"}
+{"ActorClass":"ZTwinedTorch_Toby", "SoundToPlay":"hexen/deco/twinedtorch", "SoundToPlayPlural":"hexen/deco/twinedtorches", "Article":"a"}
+{"ActorClass":"ZTwinedTorch", "SoundToPlay":"hexen/deco/twinedtorch", "SoundToPlayPlural":"hexen/deco/twinedtorches", "Article":"a"}
+{"ActorClass":"ZTwinedTorchUnlit_Toby", "SoundToPlay":"hexen/deco/twinedtorch", "SoundToPlayPlural":"hexen/deco/twinedtorches", "Article":"a"}
+{"ActorClass":"ZTwinedTorchUnlit", "SoundToPlay":"hexen/deco/twinedtorch", "SoundToPlayPlural":"hexen/deco/twinedtorches", "Article":"a"}
+{"ActorClass":"ZWallTorch_Toby", "SoundToPlay":"hexen/deco/walltorch", "SoundToPlayPlural":"hexen/deco/walltorches", "Article":"a"}
+{"ActorClass":"ZWallTorch", "SoundToPlay":"hexen/deco/walltorch", "SoundToPlayPlural":"hexen/deco/walltorches", "Article":"a"}
+{"ActorClass":"ZWallTorchUnlit_Toby", "SoundToPlay":"hexen/deco/walltorch", "SoundToPlayPlural":"hexen/deco/walltorches", "Article":"a"}
+{"ActorClass":"ZWallTorchUnlit", "SoundToPlay":"hexen/deco/walltorch", "SoundToPlayPlural":"hexen/deco/walltorches", "Article":"a"}
+{"ActorClass":"ZFireBull_Toby", "SoundToPlay":"hexen/deco/bull", "SoundToPlayPlural":"hexen/deco/bulls", "Article":"a"}
+{"ActorClass":"ZFireBull", "SoundToPlay":"hexen/deco/bull", "SoundToPlayPlural":"hexen/deco/bulls", "Article":"a"}
+{"ActorClass":"ZFireBullUnlit_Toby", "SoundToPlay":"hexen/deco/bull", "SoundToPlayPlural":"hexen/deco/bulls", "Article":"a"}
+{"ActorClass":"ZFireBullUnlit", "SoundToPlay":"hexen/deco/bull", "SoundToPlayPlural":"hexen/deco/bulls", "Article":"a"}
+{"ActorClass":"ZBlueCandle", "SoundToPlay":"hexen/deco/bluecandle", "SoundToPlayPlural":"hexen/deco/bluecandles", "Article":"a"}
+{"ActorClass":"ZCandle", "SoundToPlay":"hexen/deco/candles", "SoundToPlayPlural":"hexen/deco/candles", "Article":"a"}
+{"ActorClass":"TableShit3", "SoundToPlay":"hexen/deco/tallcandle", "SoundToPlayPlural":"hexen/deco/tallcandles", "Article":"a"}
+{"ActorClass":"TableShit4", "SoundToPlay":"hexen/deco/unlitcandle", "SoundToPlayPlural":"hexen/deco/unlitcandles", "Article":"an"}
+{"ActorClass":"TableShit5", "SoundToPlay":"hexen/deco/tallcandle", "SoundToPlayPlural":"hexen/deco/tallcandles", "Article":"a"}
+
+//Nature
+//Trees - Plants
+{"ActorClass":"TreeDestructible", "SoundToPlay":"hexen/deco/graytree", "SoundToPlayPlural":"hexen/deco/graytrees", "Article":"a"}
+{"ActorClass":"ZTree", "SoundToPlay":"hexen/deco/tree", "SoundToPlayPlural":"hexen/deco/trees", "Article":"a"}
+{"ActorClass":"ZTreeLarge1", "SoundToPlay":"hexen/deco/largetree", "SoundToPlayPlural":"hexen/deco/largetrees", "Article":"a"}
+{"ActorClass":"ZTreeLarge2", "SoundToPlay":"hexen/deco/largetree", "SoundToPlayPlural":"hexen/deco/largetrees", "Article":"a"}
+{"ActorClass":"ZTreeDead", "SoundToPlay":"hexen/deco/deadtree", "SoundToPlayPlural":"hexen/deco/deadtrees", "Article":"a"}
+{"ActorClass":"ZTreeGnarled1", "SoundToPlay":"hexen/deco/gnarledtree", "SoundToPlayPlural":"hexen/deco/gnarledtrees", "Article":"a"}
+{"ActorClass":"ZTreeGnarled2", "SoundToPlay":"hexen/deco/gnarledtree", "SoundToPlayPlural":"hexen/deco/gnarledtrees", "Article":"a"}
+{"ActorClass":"ZTreeSwamp120", "SoundToPlay":"hexen/deco/swamptree", "SoundToPlayPlural":"hexen/deco/swamptrees", "Article":"a"}
+{"ActorClass":"ZTreeSwamp150", "SoundToPlay":"hexen/deco/swamptree", "SoundToPlayPlural":"hexen/deco/swamptrees", "Article":"a"}
+{"ActorClass":"ZXmasTree", "SoundToPlay":"hexen/deco/xmastree", "SoundToPlayPlural":"hexen/deco/xmastrees", "Article":"a"}
+{"ActorClass":"ZLog", "SoundToPlay":"hexen/deco/log", "SoundToPlayPlural":"hexen/deco/logs", "Article":"a"}
+{"ActorClass":"ZStumpBare", "SoundToPlay":"hexen/deco/stump", "SoundToPlayPlural":"hexen/deco/stumps", "Article":"a"}
+{"ActorClass":"ZStumpBurned", "SoundToPlay":"hexen/deco/stump", "SoundToPlayPlural":"hexen/deco/stumps", "Article":"a"}
+{"ActorClass":"ZStumpSwamp1", "SoundToPlay":"hexen/deco/stump", "SoundToPlayPlural":"hexen/deco/stumps", "Article":"a"}
+{"ActorClass":"ZStumpSwamp2", "SoundToPlay":"hexen/deco/stump", "SoundToPlayPlural":"hexen/deco/stumps", "Article":"a"}
+{"ActorClass":"ZSwampVine", "SoundToPlay":"hexen/deco/swampvine", "SoundToPlayPlural":"hexen/deco/swampvines", "Article":"a"}
+{"ActorClass":"ZMossCeiling1", "SoundToPlay":"heretic/deco/moss", "SoundToPlayPlural":"heretic/deco/moss", "Article":"a"}
+{"ActorClass":"ZMossCeiling2", "SoundToPlay":"heretic/deco/moss", "SoundToPlayPlural":"heretic/deco/moss", "Article":"a"}
+{"ActorClass":"ZShrub1", "SoundToPlay":"hexen/deco/smallshrub", "SoundToPlayPlural":"hexen/deco/smallshrubs", "Article":"a"}
+{"ActorClass":"ZShrub2", "SoundToPlay":"hexen/deco/largeshrub", "SoundToPlayPlural":"hexen/deco/largeshrubs", "Article":"a"}
+
+//Mushrooms
+{"ActorClass":"ZPoisonShroom_Toby", "SoundToPlay":"hexen/deco/poisonshroom", "SoundToPlayPlural":"hexen/deco/poisonshrooms", "Article":"a"}
+{"ActorClass":"ZPoisonShroom", "SoundToPlay":"hexen/deco/poisonshroom", "SoundToPlayPlural":"hexen/deco/poisonshrooms", "Article":"a"}
+{"ActorClass":"ZShroomLarge1", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomLarge2", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomLarge3", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomSmall1", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomSmall2", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomSmall3", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomSmall4", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+{"ActorClass":"ZShroomSmall5", "SoundToPlay":"hexen/deco/mushroom", "SoundToPlayPlural":"hexen/deco/mushrooms", "Article":"a"}
+
+//Rocks
+{"ActorClass":"ZRock1", "SoundToPlay":"hexen/deco/rock", "SoundToPlayPlural":"hexen/deco/rocks", "Article":"a"}
+{"ActorClass":"ZRock2", "SoundToPlay":"hexen/deco/rock", "SoundToPlayPlural":"hexen/deco/rocks", "Article":"a"}
+{"ActorClass":"ZRock3", "SoundToPlay":"hexen/deco/rock", "SoundToPlayPlural":"hexen/deco/rocks", "Article":"a"}
+{"ActorClass":"ZRock4", "SoundToPlay":"hexen/deco/rock", "SoundToPlayPlural":"hexen/deco/rocks", "Article":"a"}
+{"ActorClass":"ZRockBlack", "SoundToPlay":"hexen/deco/grayrock", "SoundToPlayPlural":"hexen/deco/grayrocks", "Article":"a"}
+{"ActorClass":"ZRockBrown1", "SoundToPlay":"hexen/deco/largebrownrock", "SoundToPlayPlural":"hexen/deco/largebrownrocks", "Article":"a"}
+{"ActorClass":"ZRockBrown2", "SoundToPlay":"hexen/deco/medbrownrock", "SoundToPlayPlural":"hexen/deco/medbrownrocks", "Article":"a"}
+{"ActorClass":"ZRubble1", "SoundToPlay":"hexen/deco/medrubble", "SoundToPlayPlural":"hexen/deco/medrubble", "Article":"a"}
+{"ActorClass":"ZRubble2", "SoundToPlay":"hexen/deco/smallrubble", "SoundToPlayPlural":"hexen/deco/smallrubble", "Article":"a"}
+{"ActorClass":"ZRubble3", "SoundToPlay":"hexen/deco/smallrubble", "SoundToPlayPlural":"hexen/deco/smallrubble", "Article":"a"}
+{"ActorClass":"ZStalactiteIceLarge", "SoundToPlay":"hexen/deco/largeicicle", "SoundToPlayPlural":"hexen/deco/largeicicles", "Article":"a"}
+{"ActorClass":"ZStalactiteIceMedium", "SoundToPlay":"hexen/deco/medicicle", "SoundToPlayPlural":"hexen/deco/medicicles", "Article":"a"}
+{"ActorClass":"ZStalactiteIceSmall", "SoundToPlay":"hexen/deco/smallicicle", "SoundToPlayPlural":"hexen/deco/smallicicles", "Article":"a"}
+{"ActorClass":"ZStalactiteIceTiny", "SoundToPlay":"hexen/deco/tinyicicle", "SoundToPlayPlural":"hexen/deco/tinyicicles", "Article":"a"}
+{"ActorClass":"ZStalagmiteIceLarge", "SoundToPlay":"hexen/deco/largeicespike", "SoundToPlayPlural":"hexen/deco/largeicespikes", "Article":"a"}
+{"ActorClass":"ZStalagmiteIceMedium", "SoundToPlay":"hexen/deco/medicespike", "SoundToPlayPlural":"hexen/deco/medicespikes", "Article":"a"}
+{"ActorClass":"ZStalagmiteIceSmall", "SoundToPlay":"hexen/deco/smallicespike", "SoundToPlayPlural":"hexen/deco/smallicespikes", "Article":"a"}
+{"ActorClass":"ZStalagmiteIceTiny", "SoundToPlay":"hexen/deco/tinyicespike", "SoundToPlayPlural":"hexen/deco/tinyicespikes", "Article":"a"}
+{"ActorClass":"ZStalactiteLarge", "SoundToPlay":"hexen/deco/largestac", "SoundToPlayPlural":"hexen/deco/largestacs", "Article":"a"}
+{"ActorClass":"ZStalactiteMedium", "SoundToPlay":"hexen/deco/medstac", "SoundToPlayPlural":"hexen/deco/medstacs", "Article":"a"}
+{"ActorClass":"ZStalactiteSmall", "SoundToPlay":"hexen/deco/smallstac", "SoundToPlayPlural":"hexen/deco/smallstacs", "Article":"a"}
+{"ActorClass":"ZStalagmiteLarge", "SoundToPlay":"hexen/deco/largestag", "SoundToPlayPlural":"hexen/deco/largestags", "Article":"a"}
+{"ActorClass":"ZStalagmiteMedium", "SoundToPlay":"hexen/deco/medstag", "SoundToPlayPlural":"hexen/deco/medstags", "Article":"a"}
+{"ActorClass":"ZStalagmitePillar", "SoundToPlay":"hexen/deco/stagpillar", "SoundToPlayPlural":"hexen/deco/stagpillars", "Article":"a"}
+{"ActorClass":"ZStalagmiteSmall", "SoundToPlay":"hexen/deco/smallstag", "SoundToPlayPlural":"hexen/deco/smallstags", "Article":"a"}
+
+//Dungeon
+{"ActorClass":"ZChainBit32", "SoundToPlay":"hexen/deco/shortchain", "SoundToPlayPlural":"hexen/deco/shortchains", "Article":"a"}
+{"ActorClass":"ZChainBit64", "SoundToPlay":"hexen/deco/longchain", "SoundToPlayPlural":"hexen/deco/longchains", "Article":"a"}
+{"ActorClass":"ZChainEndHeart", "SoundToPlay":"hexen/deco/meathook", "SoundToPlayPlural":"hexen/deco/meathooks", "Article":"a"}
+{"ActorClass":"ZChainEndHook1", "SoundToPlay":"hexen/deco/largehook", "SoundToPlayPlural":"hexen/deco/largehooks", "Article":"a"}
+{"ActorClass":"ZChainEndHook2", "SoundToPlay":"hexen/deco/smallhook", "SoundToPlayPlural":"hexen/deco/smallhooks", "Article":"a"}
+{"ActorClass":"ZChainEndSkull", "SoundToPlay":"hexen/deco/skullhook", "SoundToPlayPlural":"hexen/deco/skullhooks", "Article":"a"}
+{"ActorClass":"ZChainEndSpike", "SoundToPlay":"hexen/deco/spikeball", "SoundToPlayPlural":"hexen/deco/spikeballs", "Article":"a"}
+{"ActorClass":"ZIronMaiden", "SoundToPlay":"hexen/deco/ironmaiden", "SoundToPlayPlural":"hexen/deco/ironmaidens", "Article":"an"}
+
+//Palace
+{"ActorClass":"ZBannerTattered", "SoundToPlay":"hexen/deco/banner", "SoundToPlayPlural":"hexen/deco/banners", "Article":"a"}
+{"ActorClass":"ZBarrel", "SoundToPlay":"hexen/deco/barrel", "SoundToPlayPlural":"hexen/deco/barrels", "Article":"a"}
+{"ActorClass":"ZBell", "SoundToPlay":"hexen/deco/bell", "SoundToPlayPlural":"hexen/deco/bells", "Article":"a"}
+{"ActorClass":"ZBucket", "SoundToPlay":"hexen/deco/bucket", "SoundToPlayPlural":"hexen/deco/buckets", "Article":"a"}
+{"ActorClass":"ZSuitOfArmor", "SoundToPlay":"hexen/deco/armorsuit", "SoundToPlayPlural":"hexen/deco/armorsuits", "Article":"a"}
+{"ActorClass":"ZVasePillar", "SoundToPlay":"hexen/deco/vase", "SoundToPlayPlural":"hexen/deco/vases", "Article":"a"}
+{"ActorClass":"ZGemPedestal", "SoundToPlay":"hexen/deco/pedestal", "SoundToPlayPlural":"hexen/deco/pedestals", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleBlueShort", "SoundToPlay":"hexen/deco/shorticegarg", "SoundToPlayPlural":"hexen/deco/shorticegargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleBlueTall", "SoundToPlay":"hexen/deco/tallicegarg", "SoundToPlayPlural":"hexen/deco/tallicegargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleDarkRedShort", "SoundToPlay":"hexen/deco/shortfsgarg", "SoundToPlayPlural":"hexen/deco/shortfsgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleDarkRedTall", "SoundToPlay":"hexen/deco/tallfsgarg", "SoundToPlayPlural":"hexen/deco/tallfsgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleGreenShort", "SoundToPlay":"hexen/deco/shortgarg", "SoundToPlayPlural":"hexen/deco/shortgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleGreenTall", "SoundToPlay":"hexen/deco/tallgarg", "SoundToPlayPlural":"hexen/deco/tallgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleRedShort", "SoundToPlay":"hexen/deco/shortfiregarg", "SoundToPlayPlural":"hexen/deco/shortfiregargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleRedTall", "SoundToPlay":"hexen/deco/tallfiregarg", "SoundToPlayPlural":"hexen/deco/tallfiregargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleRustShort", "SoundToPlay":"hexen/deco/shortmetalgarg", "SoundToPlayPlural":"hexen/deco/shortmetalgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleRustTall", "SoundToPlay":"hexen/deco/tallmetalgarg", "SoundToPlayPlural":"hexen/deco/tallmetalgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleStripeTall", "SoundToPlay":"hexen/deco/tallwsgarg", "SoundToPlayPlural":"hexen/deco/tallwsgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleTanShort", "SoundToPlay":"hexen/deco/shortwoodgarg", "SoundToPlayPlural":"hexen/deco/shortwoodgargs", "Article":"a"}
+{"ActorClass":"ZStatueGargoyleTanTall", "SoundToPlay":"hexen/deco/tallwoodgarg", "SoundToPlayPlural":"hexen/deco/tallwoodgargs", "Article":"a"}
+{"ActorClass":"ZWingedStatue", "SoundToPlay":"hexen/deco/demonskull", "SoundToPlayPlural":"hexen/deco/demonskulls", "Article":"a"}
+{"ActorClass":"ZWingedStatueNoSkull", "SoundToPlay":"hexen/deco/demonnoskull", "SoundToPlayPlural":"hexen/deco/demonnoskulls", "Article":"a"}
+
+//Kitchen
+{"ActorClass":"Pottery1", "SoundToPlay":"hexen/deco/tallpot", "SoundToPlayPlural":"hexen/deco/tallpots", "Article":"a"}
+{"ActorClass":"Pottery2", "SoundToPlay":"hexen/deco/medpot", "SoundToPlayPlural":"hexen/deco/medpots", "Article":"a"}
+{"ActorClass":"Pottery3", "SoundToPlay":"hexen/deco/shortpot", "SoundToPlayPlural":"hexen/deco/shortpots", "Article":"a"}
+{"ActorClass":"TableShit1", "SoundToPlay":"hexen/deco/largemug", "SoundToPlayPlural":"hexen/deco/largemugs", "Article":"a"}
+{"ActorClass":"TableShit2", "SoundToPlay":"hexen/deco/medmug", "SoundToPlayPlural":"hexen/deco/medmugs", "Article":"a"}
+{"ActorClass":"TableShit6", "SoundToPlay":"hexen/deco/spilledgob", "SoundToPlayPlural":"hexen/deco/spilledgobs", "Article":"a"}
+{"ActorClass":"TableShit7", "SoundToPlay":"hexen/deco/goblet", "SoundToPlayPlural":"hexen/deco/goblets", "Article":"a"}
+{"ActorClass":"TableShit8", "SoundToPlay":"hexen/deco/goblet", "SoundToPlayPlural":"hexen/deco/goblets", "Article":"a"}
+{"ActorClass":"TableShit9", "SoundToPlay":"hexen/deco/goblet", "SoundToPlayPlural":"hexen/deco/goblets", "Article":"a"}
+{"ActorClass":"TableShit10", "SoundToPlay":"hexen/deco/cleaver", "SoundToPlayPlural":"hexen/deco/cleavers", "Article":"a"}
+{"ActorClass":"ZCauldron", "SoundToPlay":"hexen/deco/cauldron", "SoundToPlayPlural":"hexen/deco/cauldrons", "Article":"a"}
+{"ActorClass":"ZCauldronUnlit", "SoundToPlay":"hexen/deco/cauldron", "SoundToPlayPlural":"hexen/deco/cauldrons", "Article":"a"}
+
+//Gore
+{"ActorClass":"ZCorpseHanging", "SoundToPlay":"hexen/deco/chaincorpse", "SoundToPlayPlural":"hexen/deco/chaincorpses", "Article":"a"}
+{"ActorClass":"ZCorpseKabob", "SoundToPlay":"hexen/deco/impaledcorpse", "SoundToPlayPlural":"hexen/deco/impaledcorpses", "Article":"a"}
+{"ActorClass":"ZCorpseLynched", "SoundToPlay":"heretic/deco/hangingcorpse", "SoundToPlayPlural":"heretic/deco/hangingcorpses", "Article":"a"}
+{"ActorClass":"ZCorpseLynchedNoHeart", "SoundToPlay":"hexen/deco/hangingcorpse", "SoundToPlayPlural":"hexen/deco/hangingcorpses", "Article":"a"}
+{"ActorClass":"ZCorpseSitting", "SoundToPlay":"hexen/deco/sittingcorpse", "SoundToPlayPlural":"hexen/deco/sittingcorpses", "Article":"a"}
+{"ActorClass":"ZCorpseSleeping", "SoundToPlay":"hexen/deco/sleepingcorpse", "SoundToPlayPlural":"hexen/deco/sleepingcorpses", "Article":"a"}
+
+//Graveyard
+{"ActorClass":"ZTombstoneBigCross", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneBrianP", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneBrianR", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneCrossCircle", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneRIP", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneShane", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+{"ActorClass":"ZTombstoneSmallCross", "SoundToPlay":"hexen/deco/tombstone", "SoundToPlayPlural":"hexen/deco/tombstones", "Article":"a"}
+
+//MISC
+{"ActorClass":"ThrustFloorDown", "SoundToPlay":"hexen/deco/spike", "SoundToPlayPlural":"hexen/deco/spikes", "Article":"a"}
+{"ActorClass":"ThrustFloorUp", "SoundToPlay":"hexen/deco/spike", "SoundToPlayPlural":"hexen/deco/spikes", "Article":"a"}
+
+{"ActorClass":"CustomBridge_Toby", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"CustomBridge", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"Bridge_Toby", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"Bridge", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"ZBridge", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"InvisibleBridge", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"InvisibleBridge32", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"InvisibleBridge16", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+{"ActorClass":"InvisibleBridge8", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}

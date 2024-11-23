@@ -20,6 +20,10 @@ class Toby_MenuOutputToConsole
                 menuName = currentState.menuClass;
             }
             Toby_Logger.ConsoleOutputModeMessage(menuName);
+            if (currentState.menuItemsCount == 0)
+            {
+                Toby_Logger.ConsoleOutputModeMessage('No menu items');
+            }
             return;
         }
         if (detectedChange == Toby_MenuState.OptionChanged)

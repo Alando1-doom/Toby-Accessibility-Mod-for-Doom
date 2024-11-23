@@ -14,6 +14,9 @@ console/open            "sounds/Menus/Console/ConsoleOpen.ogg"
 console/close           "sounds/Menus/Console/ConsoleClosed.ogg"
 console/error           "sounds/Menus/Console/ConsoleError.ogg"
 
+//No menu items
+menusnd/nomenuitems     "sounds/Menus/Generic/NoMenuItems.ogg"
+
 //Main Menu
 menusnd/mainmenu        "sounds/Menus/MainMenu/dsmenu.ogg"
 menusnd/new             "sounds/Menus/MainMenu/dsnewg.ogg"
@@ -29,7 +32,7 @@ menusnd/quitselect      "sounds/Menus/MainMenu/dsquit_s.ogg"
 menusnd/readme          "sounds/Menus/MainMenu/dsread.ogg"
 menusnd/readselect      "sounds/Menus/MainMenu/dsread_s.ogg"
 
-//Main Menu - Heretic
+//Main Menu - Heretic & Hexen
 heretic/menu/newgame				"sounds/Menus/MainMenu/Heretic/NewGame.ogg"
 heretic/menu/options					"sounds/Menus/MainMenu/Heretic/Options.ogg"
 heretic/menu/gamefiles				"sounds/Menus/MainMenu/Heretic/GameFiles.ogg"
@@ -38,6 +41,13 @@ heretic/menu/loadgame				"sounds/Menus/MainMenu/Heretic/LoadGame.ogg"
 heretic/menu/info							"sounds/Menus/MainMenu/Heretic/Info.ogg"
 heretic/menu/quitgame				"sounds/Menus/MainMenu/Heretic/QuitGame.ogg"
 heretic/menu/quitmsg				    "sounds/Menus/MainMenu/Heretic/QuitMessage.ogg"
+
+//Hexen Player Class Selection
+hexen/menu/choose					"sounds/Menus/PlayerClass/Menu_ChoosePlayer.ogg"
+hexen/menu/fighter						"sounds/Menus/PlayerClass/FighterPlayer.ogg"
+hexen/menu/cleric						"sounds/Menus/PlayerClass/ClericPlayer.ogg"
+hexen/menu/mage						"sounds/Menus/PlayerClass/MagePlayer.ogg"
+hexen/menu/random						"sounds/Menus/PlayerClass/Random.ogg"
 
 //That's what causing double sound on main menu and on save/load menu hotkey:
 //menu/activate         "sounds/Menus/MainMenu/dsmenu.ogg"
@@ -72,6 +82,11 @@ heretic/menu/tobyheretic		"sounds/Menus/EpisodeMenu/Heretic/TobyHeretic.ogg"
 heretic/menu/demomap		"sounds/Menus/EpisodeMenu/Heretic/DemoMap.ogg"
 
 
+//Episode Menu - Hexen
+hexen/menu/tobyhexen		"sounds/Menus/EpisodeMenu/Hexen/TobyHexen.ogg"
+hexen/menu/demomap		"sounds/Menus/EpisodeMenu/Hexen/DemoMap.ogg"
+
+
 //Skill Menu
 menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
 menusnd/easy            "sounds/Menus/SkillMenu/dseasy.ogg"
@@ -89,6 +104,29 @@ heretic/menu/skill/easy				"sounds/Menus/SkillMenu/Heretic/Easy.ogg"
 heretic/menu/skill/novice				"sounds/Menus/SkillMenu/Heretic/Novice.ogg"
 heretic/menu/skill/hard				"sounds/Menus/SkillMenu/Heretic/Hard.ogg"
 heretic/menu/skill/nightmare		"sounds/Menus/SkillMenu/Heretic/Nightmare.ogg"
+
+//Skill Menu - Hexen
+//Fighter
+hexen/menu/skill/fighter/squire			"sounds/Menus/SkillMenu/Hexen/Squire.ogg"
+hexen/menu/skill/fighter/knight			"sounds/Menus/SkillMenu/Hexen/Knight.ogg"
+hexen/menu/skill/fighter/warrior			"sounds/Menus/SkillMenu/Hexen/Warrior.ogg"
+hexen/menu/skill/fighter/berserker		"sounds/Menus/SkillMenu/Hexen/Berserker.ogg"
+hexen/menu/skill/fighter/titan				"sounds/Menus/SkillMenu/Hexen/Titan.ogg"
+
+//Cleric
+hexen/menu/skill/cleric/altarboy			"sounds/Menus/SkillMenu/Hexen/AltarBoy.ogg"
+hexen/menu/skill/cleric/acolyte			"sounds/Menus/SkillMenu/Hexen/Acolyte.ogg"
+hexen/menu/skill/cleric/priest				"sounds/Menus/SkillMenu/Hexen/Priest.ogg"
+hexen/menu/skill/cleric/cardinal			"sounds/Menus/SkillMenu/Hexen/Cardinal.ogg"
+hexen/menu/skill/cleric/pope				"sounds/Menus/SkillMenu/Hexen/Pope.ogg"
+
+//Mage
+hexen/menu/skill/mage/apprentice		"sounds/Menus/SkillMenu/Hexen/Apprentice.ogg"
+hexen/menu/skill/mage/enchanter		"sounds/Menus/SkillMenu/Hexen/Enchanter.ogg"
+hexen/menu/skill/mage/sorcerer			"sounds/Menus/SkillMenu/Hexen/Sorcerer.ogg"
+hexen/menu/skill/mage/warlock			"sounds/Menus/SkillMenu/Hexen/Warlock.ogg"
+hexen/menu/skill/mage/archmage		"sounds/Menus/SkillMenu/Hexen/Archmage.ogg"
+
 
 //Sound Options
 menusnd/soundopt                    "sounds/Menus/SoundOptions/dssndop.ogg"

@@ -1,5 +1,7 @@
 $rolloff amb/rdoor linear 96 208
 amb/rdoor				rdoor
+$rolloff amb/greendoor linear 96 208
+amb/greendoor				grndoor
 $rolloff amb/bdoor linear 96 208
 amb/bdoor				bdoor
 $rolloff amb/ydoor linear 96 208
@@ -19,6 +21,7 @@ amb/anydoor			anykdoor
 
 
 door/deniedred			dsredtry
+door/deniedgreen		dsgrntry
 door/deniedblue			dsblutry
 door/deniedyellow		dsyeltry
 door/deniedredskull		rskultry
@@ -29,5 +32,50 @@ door/denied6				ds6key
 door/deniedany			dsanykey
 door/granted				dsaccyes
 door/redgranted			dsredyes
+door/greengranted			dsgrnyes
 door/bluegranted			dsbluyes
 door/yellowgranted		dsyelyes
+
+
+//Hexen Key Checkers
+
+hexen/door/denied/axe			axelock
+hexen/door/denied/cave			cavelock
+hexen/door/denied/castle			cstllock
+hexen/door/denied/dungeon	dunglock
+hexen/door/denied/emerald		emrllock
+hexen/door/denied/fire				firelock
+hexen/door/denied/horn			hornlock
+hexen/door/denied/rusted		rustlock
+hexen/door/denied/silver			silvlock
+hexen/door/denied/steel			stellock
+hexen/door/denied/swamp		swmplock
+door/deniedall							alllock
+
+
+//Hexen Key Checker Door Beacons
+
+$rolloff hexen/door/axe linear 96 208
+hexen/door/axe				axedor
+$rolloff hexen/door/cave linear 96 208
+hexen/door/cave				cavedor
+$rolloff hexen/door/castle linear 96 208
+hexen/door/castle			cstldoor
+$rolloff hexen/door/dungeon linear 96 208
+hexen/door/dungeon		dungdoor
+$rolloff hexen/door/emerald linear 96 208
+hexen/door/emerald		emrldoor
+$rolloff hexen/door/fire linear 96 208
+hexen/door/fire				firedor
+$rolloff hexen/door/horn linear 96 208
+hexen/door/horn				horndor
+$rolloff hexen/door/rusted linear 96 208
+hexen/door/rusted				rustdoor
+$rolloff hexen/door/silver linear 96 208
+hexen/door/silver				silvdoor
+$rolloff hexen/door/steel linear 96 208
+hexen/door/steel				steldoor
+$rolloff hexen/door/swamp linear 96 208
+hexen/door/swamp			swmpdoor
+$rolloff amb/alldoor linear 96 208
+amb/alldoor			alldoor

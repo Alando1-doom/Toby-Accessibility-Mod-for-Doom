@@ -79,6 +79,7 @@ toby/actorsinviewport/monsters/icons    "sounds/ActorsInViewport/Monsters/IconsO
 toby/actorsinviewport/monsters/warlord     "sounds/ActorsInViewport/Monsters/Warlord.ogg"
 toby/actorsinviewport/monsters/warlords    "sounds/ActorsInViewport/Monsters/Warlords.ogg"
 
+
 //Heretic Monsters
 
 heretic/monster/chicken				"sounds/ActorsInViewport/Heretic/Monsters/Chicken.ogg"
@@ -131,3 +132,70 @@ heretic/monster/clinks					"sounds/ActorsInViewport/Heretic/Monsters/SabreClaws.
 
 heretic/monster/weredragon		"sounds/ActorsInViewport/Heretic/Monsters/Weredragon.ogg"
 heretic/monster/weredragons		"sounds/ActorsInViewport/Heretic/Monsters/Weredragons.ogg"
+
+
+//Hexen Monsters
+
+hexen/monster/afrit						"sounds/ActorsInViewport/Hexen/Monsters/Afrit.ogg"
+hexen/monster/afrits					"sounds/ActorsInViewport/Hexen/Monsters/Afrits.ogg"
+
+hexen/monster/bishop					"sounds/ActorsInViewport/Hexen/Monsters/Bishop.ogg"
+hexen/monster/bishops				"sounds/ActorsInViewport/Hexen/Monsters/Bishops.ogg"
+
+hexen/monster/brownserpent		"sounds/ActorsInViewport/Hexen/Monsters/BrownChaosSerp.ogg"
+hexen/monster/brownserpents	"sounds/ActorsInViewport/Hexen/Monsters/BrownChaosSerps.ogg"
+
+hexen/monster/centaur				"sounds/ActorsInViewport/Hexen/Monsters/Centaur.ogg"
+hexen/monster/centaurs				"sounds/ActorsInViewport/Hexen/Monsters/Centaurs.ogg"
+
+hexen/monster/ettin						"sounds/ActorsInViewport/Hexen/Monsters/Ettin.ogg"
+hexen/monster/ettins					"sounds/ActorsInViewport/Hexen/Monsters/Ettins.ogg"
+
+hexen/monster/greenserpent		"sounds/ActorsInViewport/Hexen/Monsters/GreenChaosSerp.ogg"
+hexen/monster/greenserpents	"sounds/ActorsInViewport/Hexen/Monsters/GreenChaosSerps.ogg"
+
+hexen/monster/reaver					"sounds/ActorsInViewport/Hexen/Monsters/Reaver.ogg"
+hexen/monster/reavers				"sounds/ActorsInViewport/Hexen/Monsters/Reavers.ogg"
+
+hexen/monster/slaughtaur			"sounds/ActorsInViewport/Hexen/Monsters/Slaughtaur.ogg"
+hexen/monster/slaughtaurs			"sounds/ActorsInViewport/Hexen/Monsters/Slaughtaurs.ogg"
+
+hexen/monster/stalker					"sounds/ActorsInViewport/Hexen/Monsters/Stalker.ogg"
+hexen/monster/stalkers				"sounds/ActorsInViewport/Hexen/Monsters/Stalkers.ogg"
+
+hexen/monster/stalker2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeader.ogg"
+hexen/monster/stalkers2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeaders.ogg"
+
+hexen/monster/wendigo				"sounds/ActorsInViewport/Hexen/Monsters/Wendigo.ogg"
+hexen/monster/wendigos			"sounds/ActorsInViewport/Hexen/Monsters/Wendigos.ogg"
+
+//Hexen Bosses
+
+hexen/monster/zedek					"sounds/ActorsInViewport/Hexen/Monsters/FighterBoss.ogg"
+hexen/monster/zedeks				"sounds/ActorsInViewport/Hexen/Monsters/FighterBosses.ogg"
+
+hexen/monster/traductus				"sounds/ActorsInViewport/Hexen/Monsters/ClericBoss.ogg"
+hexen/monster/traductus2			"sounds/ActorsInViewport/Hexen/Monsters/ClericBosses.ogg"
+
+hexen/monster/menelkir				"sounds/ActorsInViewport/Hexen/Monsters/MageBoss.ogg"
+hexen/monster/menelkirs			"sounds/ActorsInViewport/Hexen/Monsters/MageBosses.ogg"
+
+hexen/monster/dragon				"sounds/ActorsInViewport/Hexen/Monsters/Dragon.ogg"
+hexen/monster/dragons				"sounds/ActorsInViewport/Hexen/Monsters/Dragons.ogg"
+
+hexen/monster/heresiarch			"sounds/ActorsInViewport/Hexen/Monsters/Heresiarch.ogg"
+hexen/monster/heresiarches		"sounds/ActorsInViewport/Hexen/Monsters/Heresiarches.ogg"
+
+hexen/monster/korax					"sounds/ActorsInViewport/Hexen/Monsters/Korax.ogg"
+hexen/monster/koraxes				"sounds/ActorsInViewport/Hexen/Monsters/Koraxes.ogg"
+
+//Hexen Animals
+
+hexen/animal/pig							"sounds/ActorsInViewport/Hexen/Monsters/Pig.ogg"
+hexen/animal/pigs						"sounds/ActorsInViewport/Hexen/Monsters/Pigs.ogg"
+
+hexen/animal/bat							"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Bat.ogg"
+hexen/animal/bats						"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Bats.ogg"
+
+hexen/animal/fly							"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Fly.ogg"
+hexen/animal/flies						"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Flies.ogg"
