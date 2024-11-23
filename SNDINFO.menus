@@ -15,7 +15,7 @@ console/close           "sounds/Menus/Console/ConsoleClosed.ogg"
 console/error           "sounds/Menus/Console/ConsoleError.ogg"
 
 //No menu items
-menusnd/nomenuitems     "sounds/Menus/Generic/ono.ogg"
+menusnd/nomenuitems     "sounds/Menus/Generic/NoMenuItems.ogg"
 
 //Main Menu
 menusnd/mainmenu        "sounds/Menus/MainMenu/dsmenu.ogg"
@@ -47,6 +47,7 @@ hexen/menu/choose					"sounds/Menus/PlayerClass/Menu_ChoosePlayer.ogg"
 hexen/menu/fighter						"sounds/Menus/PlayerClass/FighterPlayer.ogg"
 hexen/menu/cleric						"sounds/Menus/PlayerClass/ClericPlayer.ogg"
 hexen/menu/mage						"sounds/Menus/PlayerClass/MagePlayer.ogg"
+hexen/menu/random						"sounds/Menus/PlayerClass/Random.ogg"
 
 //That's what causing double sound on main menu and on save/load menu hotkey:
 //menu/activate         "sounds/Menus/MainMenu/dsmenu.ogg"

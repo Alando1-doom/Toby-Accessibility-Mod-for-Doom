@@ -4,7 +4,7 @@ splash Water
 {
 	smallclass		WaterSplash
 	smallclip		12
-	smallsound		world/water
+	smallsound		step/water
 
 	baseclass		WaterSplashBase
 	chunkclass		WaterSplash
@@ -12,14 +12,14 @@ splash Water
 	chunkyvelshift	8
 	chunkzvelshift  8
 	chunkbasezvel	4
-	sound			world/water
+	sound			step/water
 }
 
 splash Blood
 {
 	smallclass		BloodSplash
 	smallclip		12
-	smallsound		world/blood
+	smallsound		step/blood
 
 	baseclass		BloodSplashBase
 	chunkclass		BloodSplash
@@ -27,14 +27,14 @@ splash Blood
 	chunkyvelshift	8
 	chunkzvelshift	8
 	chunkbasezvel	4
-	sound			world/blood
+	sound			step/blood
 }
 
 splash Lava
 {
 	smallclass		LavaSmoke
 	smallclip		12
-	smallsound		world/lava
+	smallsound		step/lava
 
 	baseclass		LavaSplash
 	chunkclass		LavaSmoke
@@ -42,14 +42,14 @@ splash Lava
 	chunkyvelshift	-1
 	chunkzvelshift	7
 	chunkbasezvel	1
-	sound			world/lava
+	sound			step/lava
 }
 
 splash Slime
 {
 	smallclass		SludgeChunk
 	smallclip		12
-	smallsound		world/slime
+	smallsound		step/slime
 
 	baseclass		SludgeSplash
 	chunkclass		SludgeChunk
@@ -57,28 +57,28 @@ splash Slime
 	chunkyvelshift	8
 	chunkzvelshift	8
 	chunkbasezvel	2
-	sound			world/slime
+	sound			step/slime
 }
 
 splash Nuke
 {
 	smallclass		SlimeSplash
 	smallclip		12
-	smallsound		world/slime
+	smallsound		step/slime
 
 	baseclass		SlimeSplash
 	chunkxvelshift	-1
 	chunkyvelshift	-1
 	chunkzvelshift	7
 	chunkbasezvel	1
-	sound			world/nuke
+	sound			step/nukage
 }
 
 splash Hot
 {
 	smallclass		LavaSmoke
 	smallclip		12
-	smallsound		world/lava
+	smallsound		step/hot
 
 	baseclass		SlimeChunk
 	chunkclass		LavaSmoke
@@ -86,7 +86,7 @@ splash Hot
 	chunkyvelshift	-1
 	chunkzvelshift	7
 	chunkbasezvel	1
-	sound			world/hot
+	sound			step/hot
 }
 
 // Terrain definitions

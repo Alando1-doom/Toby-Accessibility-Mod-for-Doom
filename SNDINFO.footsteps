@@ -1,0 +1,123 @@
+//DEFAULT STEPS
+step/default1 "sounds/Terrain/Hard/default1.ogg"
+step/default2 "sounds/Terrain/Hard/default2.ogg"
+step/default3 "sounds/Terrain/Hard/default3.ogg"
+step/default4 "sounds/Terrain/Hard/default4.ogg"
+$random step/default
+	{ step/default1 step/default2 step/default3 step/default4 }
+	
+step/step1 "sounds/Terrain/Hard/step1.wav"
+step/step2 "sounds/Terrain/Hard/step2.wav"
+step/step3 "sounds/Terrain/Hard/step3.wav"
+step/step4 "sounds/Terrain/Hard/step4.wav"
+$random step/defaultA
+	{ step/step1 step/step2 step/step3 step/step4 }
+
+
+//CARPET
+step/carpet1 "sounds/Terrain/Carpet/carpet1.wav"
+step/carpet2 "sounds/Terrain/Carpet/carpet2.wav"
+step/carpet3 "sounds/Terrain/Carpet/carpet3.wav"
+step/carpet4 "sounds/Terrain/Carpet/carpet4.wav"
+$random step/carpet
+	{ step/carpet1 step/carpet2 step/carpet3 step/carpet4 }
+
+
+//HARD SURFACES
+step/crete1 "sounds/Terrain/Hard/crete1.wav"
+step/crete2 "sounds/Terrain/Hard/crete2.wav"
+step/crete3 "sounds/Terrain/Hard/crete3.wav"
+step/crete4 "sounds/Terrain/Hard/crete4.wav"
+$random step/crete
+	{ step/crete1 step/crete2 step/crete3 step/crete4 }
+
+step/panel1 "sounds/Terrain/Hard/panel1.wav"
+step/panel2 "sounds/Terrain/Hard/panel2.wav"
+step/panel3 "sounds/Terrain/Hard/panel3.wav"
+step/panel4 "sounds/Terrain/Hard/panel4.wav"
+step/panel5 "sounds/Terrain/Hard/panel5.wav"
+$random step/panel
+	{ step/panel1 step/panel2 step/panel3 step/panel4 step/panel5 }
+$volume step/panel 0.6
+
+step/tile1 "sounds/Terrain/Hard/tile1.wav"
+step/tile2 "sounds/Terrain/Hard/tile2.wav"
+step/tile3 "sounds/Terrain/Hard/tile3.wav"
+step/tile4 "sounds/Terrain/Hard/tile4.wav"
+$random step/tile
+	{ step/tile1 step/tile2 step/tile3 step/tile4 }
+
+
+//OUTDOORS
+step/dirt1 "sounds/Terrain/Outdoor/dirt1.wav"
+step/dirt2 "sounds/Terrain/Outdoor/dirt2.wav"
+step/dirt3 "sounds/Terrain/Outdoor/dirt3.wav"
+step/dirt4 "sounds/Terrain/Outdoor/dirt4.wav"
+$random step/dirt
+	{ step/dirt1 step/dirt2 step/dirt3 step/dirt4 }
+	
+step/grass1 "sounds/Terrain/Outdoor/grass1.wav"
+step/grass2 "sounds/Terrain/Outdoor/grass2.wav"
+step/grass3 "sounds/Terrain/Outdoor/grass3.wav"
+step/grass4 "sounds/Terrain/Outdoor/grass4.wav"
+$random step/grass
+	{ step/grass1 step/grass2 step/grass3 step/grass4 }
+
+step/gravel1 "sounds/Terrain/Outdoor/gravel1.wav"
+step/gravel2 "sounds/Terrain/Outdoor/gravel2.wav"
+step/gravel3 "sounds/Terrain/Outdoor/gravel3.wav"
+step/gravel4 "sounds/Terrain/Outdoor/gravel4.wav"
+$random step/gravel
+	{ step/gravel1 step/gravel2 step/gravel3 step/gravel4 }
+
+
+//ORGANIC
+step/gross1 "sounds/Terrain/Organic/gross1.wav"
+step/gross2 "sounds/Terrain/Organic/gross2.wav"
+step/gross3 "sounds/Terrain/Organic/gross3.wav"
+step/gross4 "sounds/Terrain/Organic/gross4.wav"
+$random step/gross
+	{ step/gross1 step/gross2 step/gross3 step/gross4 }
+
+
+//METAL
+step/tin1 "sounds/Terrain/Metal/tin1.wav"
+step/tin2 "sounds/Terrain/Metal/tin2.wav"
+step/tin3 "sounds/Terrain/Metal/tin3.wav"
+step/tin4 "sounds/Terrain/Metal/tin4.wav"
+$random step/tin
+	{ step/tin1 step/tin2 step/tin3 step/tin4 }
+	
+step/metal1 "sounds/Terrain/Metal/metal1.wav"
+step/metal2 "sounds/Terrain/Metal/metal2.wav"
+step/metal3 "sounds/Terrain/Metal/metal3.wav"
+step/metal4 "sounds/Terrain/Metal/metal4.wav"
+$random step/metal
+	{ step/metal1 step/metal2 step/metal3 step/metal4 }
+
+
+//WOOD
+step/plank1 "sounds/Terrain/Wood/plank1.ogg"
+step/plank2 "sounds/Terrain/Wood/plank2.ogg"
+step/plank3 "sounds/Terrain/Wood/plank3.ogg"
+step/plank4 "sounds/Terrain/Wood/plank4.ogg"
+$random step/plank
+	{ step/plank1 step/plank2 step/plank3 step/plank4 }
+//$volume step/plank 0.8
+
+step/wood1 "sounds/Terrain/Wood/wood1.wav"
+step/wood2 "sounds/Terrain/Wood/wood2.wav"
+step/wood3 "sounds/Terrain/Wood/wood3.wav"
+step/wood4 "sounds/Terrain/Wood/wood4.wav"
+$random step/wood
+	{ step/wood1 step/wood2 step/wood3 step/wood4 }
+
+
+//LIQUIDS
+step/water 		"sounds/Terrain/Liquid/DSWATER.ogg"
+step/water2 		"sounds/Terrains/Liquid/DSWATER2.wav"
+step/nukage 	"sounds/Terrain/Liquid/DSNUKE.ogg"
+step/slime 		"sounds/Terrain/Liquid/DSSLIME.wav"
+step/blood 		"sounds/Terrain/Liquid/DSBLUD.wav"
+step/hot 			"sounds/Terrain/Liquid/DSHOT.ogg"
+step/lava 			"sounds/Terrain/Liquid/DSLAVA.ogg"
