@@ -355,6 +355,9 @@ hexen/deco/bulls							"sounds/ActorsInViewport/Hexen/Decorations/Lights/FireBul
 hexen/deco/largeflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlame.ogg"
 hexen/deco/largeflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlames.ogg"
 
+hexen/deco/skulltorch					"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorch.ogg"
+hexen/deco/skulltorches				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorches.ogg"
+
 hexen/deco/smallflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlame.ogg"
 hexen/deco/smallflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlames.ogg"
 

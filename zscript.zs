@@ -140,3 +140,6 @@ version "4.6"
 //Proximity Detector
 #include "zscript/ProximityDetector/Toby_ProximityDetector.zs"
 #include "zscript/ProximityDetector/Toby_ProximityDetectorHandler.zs"
+
+//Footsteps
+#include "zscript/StepEventHandler.zs"

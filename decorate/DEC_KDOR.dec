@@ -235,7 +235,7 @@ ACTOR GreenKeyChecker_V2 //Heretic
     	States
     	{
 	Spawn:
-	TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
+	TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
     TNT1 A 1 A_Look
 	TNT1 A 0 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
     Loop

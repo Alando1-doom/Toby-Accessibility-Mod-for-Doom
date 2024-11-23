@@ -163,6 +163,9 @@ hexen/monster/slaughtaurs			"sounds/ActorsInViewport/Hexen/Monsters/Slaughtaurs.
 hexen/monster/stalker					"sounds/ActorsInViewport/Hexen/Monsters/Stalker.ogg"
 hexen/monster/stalkers				"sounds/ActorsInViewport/Hexen/Monsters/Stalkers.ogg"
 
+hexen/monster/stalker2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeader.ogg"
+hexen/monster/stalkers2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeaders.ogg"
+
 hexen/monster/wendigo				"sounds/ActorsInViewport/Hexen/Monsters/Wendigo.ogg"
 hexen/monster/wendigos			"sounds/ActorsInViewport/Hexen/Monsters/Wendigos.ogg"
 
