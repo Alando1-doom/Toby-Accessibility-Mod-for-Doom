@@ -67,7 +67,7 @@ class Toby_Marker_1 : ZS_Marker_Base
         Spawn:
             MRK1 B 2 Bright;
             MRK1 BBBBBBBB 4 Bright;
-            MRK1 B 2 Bright A_StartSound("marker/beacon1", CHAN_5, 0, 1.0, ATTN_NORM);
+            MRK1 B 2 Bright A_SpawnItemEx("Marker1Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
             Loop;
     }
 }
@@ -79,7 +79,7 @@ class Toby_Marker_2 : ZS_Marker_Base
     Spawn:
         MRK2 B 2 Bright;
         MRK2 BBBBBBBB 4 Bright;
-        MRK2 B 2 Bright A_StartSound("marker/beacon2", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK2 B 2 Bright A_SpawnItemEx("Marker2Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -91,7 +91,7 @@ class Toby_Marker_3 : ZS_Marker_Base
     Spawn:
         MRK3 B 2 Bright;
         MRK3 BBBBBBBB 4 Bright;
-        MRK3 B 2 Bright A_StartSound("marker/beacon3", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK3 B 2 Bright A_SpawnItemEx("Marker3Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -103,7 +103,7 @@ class Toby_Marker_4 : ZS_Marker_Base
     Spawn:
         MRK4 B 2 Bright;
         MRK4 BBBBBBBB 4 Bright;
-        MRK4 B 2 Bright A_StartSound("marker/beacon4", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK4 B 2 Bright A_SpawnItemEx("Marker4Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -115,7 +115,7 @@ class Toby_Marker_5 : ZS_Marker_Base
     Spawn:
         MRK5 B 2 Bright;
         MRK5 BBBBBBBB 4 Bright;
-        MRK5 B 2 Bright A_StartSound("marker/beacon5", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK5 B 2 Bright A_SpawnItemEx("Marker5Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -127,7 +127,7 @@ class Toby_Marker_6 : ZS_Marker_Base
     Spawn:
         MRK6 B 2 Bright;
         MRK6 BBBBBBBB 4 Bright;
-        MRK6 B 2 Bright A_StartSound("marker/beacon6", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK6 B 2 Bright A_SpawnItemEx("Marker6Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -139,7 +139,7 @@ class Toby_Marker_7 : ZS_Marker_Base
     Spawn:
         MRK7 B 2 Bright;
         MRK7 BBBBBBBB 4 Bright;
-        MRK7 B 2 Bright A_StartSound("marker/beacon7", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK7 B 2 Bright A_SpawnItemEx("Marker7Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -151,7 +151,7 @@ class Toby_Marker_8 : ZS_Marker_Base
     Spawn:
         MRK8 B 2 Bright;
         MRK8 BBBBBBBB 4 Bright;
-        MRK8 B 2 Bright A_StartSound("marker/beacon8", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK8 B 2 Bright A_SpawnItemEx("Marker8Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -163,7 +163,7 @@ class Toby_Marker_9 : ZS_Marker_Base
     Spawn:
         MRK9 B 2 Bright;
         MRK9 BBBBBBBB 4 Bright;
-        MRK9 B 2 Bright A_StartSound("marker/beacon9", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK9 B 2 Bright A_SpawnItemEx("Marker9Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
@@ -175,7 +175,7 @@ class Toby_Marker_10 : ZS_Marker_Base
     Spawn:
         MRK0 B 2 Bright;
         MRK0 BBBBBBBB 4 Bright;
-        MRK0 B 2 Bright A_StartSound("marker/beacon10", CHAN_5, 0, 1.0, ATTN_NORM);
+        MRK0 B 2 Bright A_SpawnItemEx("Marker10Checker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
         Loop;
     }
 }
