@@ -80,25 +80,31 @@ class Toby_InSectorNodeBuilder
 
     void PlaceNodes(Sector s, Toby_PathfindingNodeContainer container)
     {
+        double extendedDistance = sqrt(2) * players[consoleplayer].mo.radius + 1;
+
         for (int i = 0; i < linePairArray.Size(); i++)
         {
             vector2 ba = linePairArray[i].vertex1.p - linePairArray[i].sharedVertex.p;
             vector2 bc = linePairArray[i].vertex2.p - linePairArray[i].sharedVertex.p;
-            vector2 bisector1 = (ba + bc).Unit();
+            vector2 bisector1 = (ba.Unit() + bc.Unit()).Unit();
             vector2 bisector2 = -1 * bisector1;
             vector2 bisectorPoint1 = linePairArray[i].sharedVertex.p + bisector1;
             vector2 bisectorPoint2 = linePairArray[i].sharedVertex.p + bisector2;
+
+            vector2 extendedBisectorPoint1 = linePairArray[i].sharedVertex.p + bisector1 * extendedDistance;
+            vector2 extendedBisectorPoint2 = linePairArray[i].sharedVertex.p + bisector2 * extendedDistance;
+
             vector2 bisectorPointInThisSector;
             bool bisectorPointFound = false;
-            if (level.PointInSector(bisectorPoint1) == s)
+            if (level.PointInSector(bisectorPoint1) == s && level.IsPointInLevel((bisectorPoint1, s.CenterFloor())))
             {
                 bisectorPointFound = true;
-                bisectorPointInThisSector = bisectorPoint1;
+                bisectorPointInThisSector = extendedBisectorPoint1;
             }
-            if (level.PointInSector(bisectorPoint2) == s)
+            if (level.PointInSector(bisectorPoint2) == s && level.IsPointInLevel((bisectorPoint2, s.CenterFloor())))
             {
                 bisectorPointFound = true;
-                bisectorPointInThisSector = bisectorPoint2;
+                bisectorPointInThisSector = extendedBisectorPoint2;
             }
             if (!bisectorPointFound) { continue; }
             container.AddNode((bisectorPointInThisSector, s.CenterFloor()), -4);
