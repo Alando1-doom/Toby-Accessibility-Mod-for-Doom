@@ -627,3 +627,28 @@
 {"Checksum":"2639c89b8b7052e2ce4cb9cfc63f4c53", "SoundToPlay":"hexen/map30"}
 //Dark Crucible
 {"Checksum":"2a6c4235b942467d25fd50d5b313e67a", "SoundToPlay":"hexen/map31"}
+
+
+//Toby Hexen Maps
+//The Dark Castle
+{"Checksum":"0159ac62f1c177236164611aa8394efb", "SoundToPlay":"toby/hexen/hex01"}
+//Valley of Chronos
+{"Checksum":"c4061c8a61ad46d84e365d43a70fd487", "SoundToPlay":"toby/hexen/hex02"}
+//Dungeon of Despair
+{"Checksum":"69c2d51a8f3bba8a592de282fa930f38", "SoundToPlay":"toby/hexen/hex03"}
+//The Outpost
+{"Checksum":"3248e33e2486099858af661fca43f80a", "SoundToPlay":"toby/hexen/hex04"}
+//The Temple
+{"Checksum":"2b45484ddfb0cf77933c95eb96117dad", "SoundToPlay":"toby/hexen/hex05"}
+//Unholy Cathedral
+{"Checksum":"8ad2136d9d93f80fd459fa987524eb41", "SoundToPlay":"toby/hexen/hex06"}
+//Fortress of Fire
+{"Checksum":"b2afe36f7b93c8bcfa313b39e19f1059", "SoundToPlay":"toby/hexen/hex07"}
+//What the Hex Goin' On? ...I don't know - you tell me...
+{"Checksum":"30b4d4224e5adaec3e11bd7acd166dd5", "SoundToPlay":"toby/hexen/hex08"}
+//The Citadel of the Doomed
+{"Checksum":"d0cf3bfe207b364b1bcb2785d3243ed7", "SoundToPlay":"toby/hexen/hex09"}
+//Korax
+{"Checksum":"fc1620d8e72dafbe85832849fd7a6846", "SoundToPlay":"toby/hexen/hex10"}
+//The Secret Tomb
+{"Checksum":"a5dd048f7d9f67d24bd7a3ac0e64f6fb", "SoundToPlay":"toby/hexen/hex11"}

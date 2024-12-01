@@ -1,0 +1,9 @@
+//Powerup Universal Wear-off Sounds
+
+suit/wearoff					dsenvout
+blur/wearoff					dsblurou
+artifact/shadow/wear	dsblurou
+invul/wearoff				dsinvout
+artifact/wings/wear		wingout
+artifact/tome/wear		tomeout
+artifact/boots/wear		bootoff
