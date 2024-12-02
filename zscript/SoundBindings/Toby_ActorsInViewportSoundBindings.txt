@@ -164,12 +164,12 @@
 
 {"ActorClass":"Chainsaw_TO", "SoundToPlay":"toby/actorsinviewport/pickups/chainsaw", "SoundToPlayPlural":"toby/actorsinviewport/pickups/chainsaws", "Article":"a"}
 {"ActorClass":"Pistol_TO", "SoundToPlay":"toby/actorsinviewport/pickups/pistol", "SoundToPlayPlural":"toby/actorsinviewport/pickups/pistols", "Article":"a"}
-{"ActorClass":"Shotgun_TO", "SoundToPlay":"toby/actorsinviewport/pickups/shotgun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/shotguns", "Article":"a"}
-{"ActorClass":"SuperShotgun_TO", "SoundToPlay":"toby/actorsinviewport/pickups/supershotgun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/supershotguns", "Article":"a"}
-{"ActorClass":"Chaingun_TO", "SoundToPlay":"toby/actorsinviewport/pickups/chaingun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/chainguns", "Article":"a"}
-{"ActorClass":"RocketLauncher_TO", "SoundToPlay":"toby/actorsinviewport/pickups/rocketlauncher", "SoundToPlayPlural":"toby/actorsinviewport/pickups/rocketlaunchers", "Article":"a"}
-{"ActorClass":"PlasmaRifle_TO", "SoundToPlay":"toby/actorsinviewport/pickups/plasmagun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/plasmaguns", "Article":"a"}
-{"ActorClass":"BFG9000_TO", "SoundToPlay":"toby/actorsinviewport/pickups/bfg9000", "SoundToPlayPlural":"toby/actorsinviewport/pickups/bfgs9000", "Article":"a"}
+{"ActorClass":"Shotgun_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/shotgun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/shotguns", "Article":"a"}
+{"ActorClass":"SSG_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/supershotgun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/supershotguns", "Article":"a"}
+{"ActorClass":"Chaingun_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/chaingun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/chainguns", "Article":"a"}
+{"ActorClass":"RocketLauncher_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/rocketlauncher", "SoundToPlayPlural":"toby/actorsinviewport/pickups/rocketlaunchers", "Article":"a"}
+{"ActorClass":"PlasmaRifle_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/plasmagun", "SoundToPlayPlural":"toby/actorsinviewport/pickups/plasmaguns", "Article":"a"}
+{"ActorClass":"BFG9000_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/bfg9000", "SoundToPlayPlural":"toby/actorsinviewport/pickups/bfgs9000", "Article":"a"}
 
 {"ActorClass":"ArmorBonus_TO", "SoundToPlay":"toby/actorsinviewport/pickups/armorbonus", "SoundToPlayPlural":"toby/actorsinviewport/pickups/armorbonuses", "Article":"an"}
 {"ActorClass":"GreenArmor_Pickup", "SoundToPlay":"toby/actorsinviewport/pickups/armor", "SoundToPlayPlural":"toby/actorsinviewport/pickups/armors", "Article":"an"}
@@ -187,7 +187,7 @@
 {"ActorClass":"Invisibility", "SoundToPlay":"toby/actorsinviewport/pickups/partialinvisibility", "SoundToPlayPlural":"toby/actorsinviewport/pickups/partialinvisibilities", "Article":"a"}
 {"ActorClass":"NightVisors", "SoundToPlay":"toby/actorsinviewport/pickups/nightvision", "SoundToPlayPlural":"toby/actorsinviewport/pickups/nightvisions", "Article":"a"}
 
-{"ActorClass":"Backpack_TO", "SoundToPlay":"toby/actorsinviewport/pickups/backpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/backpacks", "Article":"a"}
+{"ActorClass":"Backpack_Giver", "SoundToPlay":"toby/actorsinviewport/pickups/backpack", "SoundToPlayPlural":"toby/actorsinviewport/pickups/backpacks", "Article":"a"}
 {"ActorClass":"Clip_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/clip", "SoundToPlayPlural":"toby/actorsinviewport/pickups/clips", "Article":"a"}
 {"ActorClass":"Clip_Toby_Zombie", "SoundToPlay":"toby/actorsinviewport/pickups/clipdroppedbyformerhuman", "SoundToPlayPlural":"toby/actorsinviewport/pickups/clipsdroppedbyformerhumans", "Article":"a"}
 {"ActorClass":"ClipBox_Toby", "SoundToPlay":"toby/actorsinviewport/pickups/boxofammo", "SoundToPlayPlural":"toby/actorsinviewport/pickups/boxesofammo", "Article":"a"}
@@ -373,11 +373,11 @@
 
 {"ActorClass":"Gauntlets_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/gauntlets", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/gauntlets", "Article":"a"}
 {"ActorClass":"GoldWand_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/goldwand", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/goldwands", "Article":"a"}
-{"ActorClass":"Crossbow_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/crossbow", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/crossbows", "Article":"a"}
-{"ActorClass":"DragonClaw_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/dragonclaw", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/dragonclaws", "Article":"a"}
-{"ActorClass":"HellStaff_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/hellstaff", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/hellstaffs", "Article":"a"}
-{"ActorClass":"PhoenixRod_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/phoenixrod", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/phoenixrods", "Article":"a"}
-{"ActorClass":"FireMace_Toby", "SoundToPlay":"heretic/actorsinviewport/weapon/mace", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/maces", "Article":"a"}
+{"ActorClass":"Crossbow_Giver", "SoundToPlay":"heretic/actorsinviewport/weapon/crossbow", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/crossbows", "Article":"a"}
+{"ActorClass":"DragonClaw_Giver", "SoundToPlay":"heretic/actorsinviewport/weapon/dragonclaw", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/dragonclaws", "Article":"a"}
+{"ActorClass":"HellStaff_Giver", "SoundToPlay":"heretic/actorsinviewport/weapon/hellstaff", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/hellstaffs", "Article":"a"}
+{"ActorClass":"PhoenixRod_Giver", "SoundToPlay":"heretic/actorsinviewport/weapon/phoenixrod", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/phoenixrods", "Article":"a"}
+{"ActorClass":"FireMace_Giver", "SoundToPlay":"heretic/actorsinviewport/weapon/mace", "SoundToPlayPlural":"heretic/actorsinviewport/weapon/maces", "Article":"a"}
 
 {"ActorClass":"GoldWandAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/wandcrystal", "Article":"a"}
 {"ActorClass":"GoldWandAmmoDropped_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/wandcrystal", "Article":"a"}
@@ -395,7 +395,7 @@
 {"ActorClass":"PhoenixRodHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/infernoorb", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/infernoorbs", "Article":"an"}
 {"ActorClass":"MaceAmmo_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/macespheres", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macespheres", "Article":"a"}
 {"ActorClass":"MaceHefty_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/macepile", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/macepiles", "Article":"a"}
-{"ActorClass":"BagOfHolding_Toby", "SoundToPlay":"heretic/actorsinviewport/ammo/bagofholding", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/bagsofholding", "Article":"a"}
+{"ActorClass":"BagOfHolding_Giver", "SoundToPlay":"heretic/actorsinviewport/ammo/bagofholding", "SoundToPlayPlural":"heretic/actorsinviewport/ammo/bagsofholding", "Article":"a"}
 
 {"ActorClass":"SilverShield_Toby", "SoundToPlay":"heretic/actorsinviewport/armor/silvershield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/silvershields", "Article":"a"}
 {"ActorClass":"EnchantedShield_Toby", "SoundToPlay":"heretic/actorsinviewport/armor/enchantedshield", "SoundToPlayPlural":"heretic/actorsinviewport/armor/enchantedshields", "Article":"an"}
@@ -432,11 +432,11 @@
 
 //Weapons
 //Fighter
-{"ActorClass":"FWeapAxe_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/axe", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/axes", "Article":"an"}
+{"ActorClass":"FWeapAxe_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/axe", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/axes", "Article":"an"}
 {"ActorClass":"FWeapAxe", "SoundToPlay":"hexen/actorsinviewport/weapon/axe", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/axes", "Article":"an"}
-{"ActorClass":"FWeapHammer_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/hammers", "Article":"a"}
+{"ActorClass":"FWeapHammer_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/hammers", "Article":"a"}
 {"ActorClass":"FWeapHammer", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/hammers", "Article":"a"}
-{"ActorClass":"FWeapQuietus_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietus", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietus", "Article":"a"}
+{"ActorClass":"FWeapQuietus_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/quietus", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietus", "Article":"a"}
 {"ActorClass":"QuietusP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp1", "Article":"a"}
 {"ActorClass":"FWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp1", "Article":"a"}
 {"ActorClass":"QuietusP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp2", "Article":"a"}
@@ -445,11 +445,11 @@
 {"ActorClass":"FWeaponPiece3", "SoundToPlay":"hexen/actorsinviewport/weapon/quietusp3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/quietusp3", "Article":"a"}
 
 //Cleric
-{"ActorClass":"CWeapStaff_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/serpentstaffs", "Article":"a"}
+{"ActorClass":"CWeapStaff_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/serpentstaffs", "Article":"a"}
 {"ActorClass":"CWeapStaff", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/serpentstaffs", "Article":"a"}
-{"ActorClass":"CWeapFlame_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/firestorms", "Article":"a"}
+{"ActorClass":"CWeapFlame_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/firestorms", "Article":"a"}
 {"ActorClass":"CWeapFlame", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/firestorms", "Article":"a"}
-{"ActorClass":"CWeapWraithverge_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wraithverge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wraithverge", "Article":"a"}
+{"ActorClass":"CWeapWraithverge_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/wraithverge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wraithverge", "Article":"a"}
 {"ActorClass":"WraithVergeP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece1", "Article":"a"}
 {"ActorClass":"CWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece1", "Article":"a"}
 {"ActorClass":"WraithVergeP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece2", "Article":"a"}
@@ -458,11 +458,11 @@
 {"ActorClass":"CWeaponPiece3", "SoundToPlay":"hexen/actorsinviewport/weapon/wvpiece3", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/wvpiece3", "Article":"a"}
 
 //Mage
-{"ActorClass":"MWeapFrost_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/frostspells", "Article":"a"}
+{"ActorClass":"MWeapFrost_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/frostspells", "Article":"a"}
 {"ActorClass":"MWeapFrost", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/frostspells", "Article":"a"}
-{"ActorClass":"MWeapLightning_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/arc", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/arcs", "Article":"an"}
+{"ActorClass":"MWeapLightning_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/arc", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/arcs", "Article":"an"}
 {"ActorClass":"MWeapLightning", "SoundToPlay":"hexen/actorsinviewport/weapon/arc", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/arcs", "Article":"an"}
-{"ActorClass":"MWeapBloodscourge_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bloodscourge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bloodscourge", "Article":"a"}
+{"ActorClass":"MWeapBloodscourge_Giver", "SoundToPlay":"hexen/actorsinviewport/weapon/bloodscourge", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bloodscourge", "Article":"a"}
 {"ActorClass":"BloodscourgeP1_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece1", "Article":"a"}
 {"ActorClass":"MWeaponPiece1", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece1", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece1", "Article":"a"}
 {"ActorClass":"BloodscourgeP2_Toby", "SoundToPlay":"hexen/actorsinviewport/weapon/bspiece2", "SoundToPlayPlural":"hexen/actorsinviewport/weapon/bspiece2", "Article":"a"}

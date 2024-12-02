@@ -11,6 +11,7 @@ ShellBox_Toby
 Shell_Toby
 
 Backpack_TO
+Backpack_Giver
 
 BFG9000_TO
 Chaingun_TO
@@ -21,6 +22,13 @@ PlasmaRifle_TO
 RocketLauncher_TO
 Shotgun_TO
 SuperShotgun_TO
+
+BFG9000_Giver
+Chaingun_Giver
+PlasmaRifle_Giver
+RocketLauncher_Giver
+Shotgun_Giver
+SSG_Giver
 
 BlueArmor_Pickup
 GreenArmor_Pickup
@@ -80,6 +88,12 @@ PhoenixRodPowered_Toby
 FireMace_Toby
 FireMacePowered_Toby
 
+Crossbow_Giver
+DragonClaw_Giver
+HellStaff_Giver
+PhoenixRod_Giver
+FireMace_Giver
+
 BagOfHolding_Toby
 GoldWandAmmo_Toby
 GoldWandAmmoDropped_Toby
@@ -128,18 +142,27 @@ WraithVergeP1_Toby
 WraithVergeP2_Toby
 WraithVergeP3_Toby
 CWeapWraithverge_Toby
+CWeapStaff_Giver
+CWeapFlame_Giver
+CWeapWraithverge_Giver
 FWeapAxe_Toby
 FWeapHammer_Toby
 QuietusP1_Toby
 QuietusP2_Toby
 QuietusP3_Toby
 FWeapQuietus_Toby
+FWeapAxe_Giver
+FWeapHammer_Giver
+FWeapQuietus_Giver
 MWeapFrost_Toby
 MWeapLightning_Toby
 BloodscourgeP1_Toby
 BloodscourgeP2_Toby
 BloodscourgeP3_Toby
 MWeapBloodscourge_Toby
+MWeapFrost_Giver
+MWeapLightning_Giver
+MWeapBloodscourge_Giver
 Mana1_Toby
 Mana2_Toby
 Mana3_Toby
