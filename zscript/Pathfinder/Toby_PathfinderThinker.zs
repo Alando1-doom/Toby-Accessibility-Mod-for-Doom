@@ -13,9 +13,9 @@ class Toby_PathfinderThinker : Thinker
         return pfThinker;
     }
 
-    void FindPath(Vector3 start, Vector3 end)
+    void FindPath(Vector3 start, Vector3 end, Toby_PathfindingNodeContainer nodeContainer)
     {
-        pf.StartPathfinding(start, end);
+        pf.StartPathfinding(start, end, nodeContainer);
         pfFollower.StartFollowingPath();
     }
 
