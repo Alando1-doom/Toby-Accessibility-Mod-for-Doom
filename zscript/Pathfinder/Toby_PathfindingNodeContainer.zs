@@ -132,7 +132,7 @@ class Toby_PathfindingNodeContainer
 
     bool IsTooCloseToSectorLines(Toby_PathfindingNode node1, Toby_PathfindingNode node2, Actor explorer)
     {
-        int arbitraryNumberThatWored = 5;
+        int arbitraryNumberThatWored = 7;
         bool distanceCheck = (node1.pos - node2.pos).Length() < explorer.radius * arbitraryNumberThatWored;
         if (node1.lineId >= 0 && distanceCheck) { return false; }
         if (node2.lineId >= 0 && distanceCheck) { return false; }

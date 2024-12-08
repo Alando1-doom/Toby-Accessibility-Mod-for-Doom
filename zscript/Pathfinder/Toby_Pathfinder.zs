@@ -51,14 +51,13 @@ class Toby_Pathfinder
         pathfindingActive = false;
     }
 
-    void FindPath()
+    void FindPath(int maxCycles = 100)
     {
         if (!pathfindingActive) { return; }
         if (pathDoesNotExist || pathFinalized)
         {
             return;
         }
-        int maxCycles = 100;
         for (int i = 0; i < maxCycles; i++)
         {
             if (!pathFound)

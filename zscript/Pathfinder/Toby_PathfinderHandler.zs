@@ -9,10 +9,12 @@ class Toby_PathfinderHandler : EventHandler
     Toby_LineInteractionTracker lineInteractionTracker;
     Array<Toby_ExplorationTracker> explorationTrackers;
     Array<Toby_ExplorationPathfinder> explorationPathfinders;
+    Array<Toby_ExplorationPathfinder> explorationPathfindersForMenu;
 
     Array<Toby_PathfindingNodeContainer> nodeContainers;
     Array<Toby_PathfindingNodeBuilder> nodeBuilders;
     Array<Toby_Pathfinder> pathfinders;
+    Array<Toby_Pathfinder> pathfindersForMenu;
     Array<Toby_PathfinderFollower> pathfinderFollowers;
     Array<Toby_PathfinderThinker> pathfinderThinkers;
     int maxPlayers;
@@ -46,20 +48,22 @@ class Toby_PathfinderHandler : EventHandler
         {
             Actor playerActor = players[i].mo;
 
-
-
             Toby_PathfindingNodeContainer nodeContainer = Toby_PathfindingNodeContainer.Create();
             Toby_PathfindingNodeBuilder nodeBuilder = Toby_PathfindingNodeBuilder.Create(nodeContainer, playerActor);
             Toby_Pathfinder pathfinder = Toby_Pathfinder.Create(nodeContainer);
+            Toby_Pathfinder pathfinderForMenu = Toby_Pathfinder.Create(nodeContainer);
             Toby_PathfinderFollower pathfinderFollower = Toby_PathfinderFollower.Create(pathfinder);
             Toby_PathfinderThinker pathfinderThinker = Toby_PathfinderThinker.Create(pathfinder, pathfinderFollower, playerActor);
             Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
             Toby_ExplorationPathfinder explorationPathfinder = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker, inSectorNodeBuilder, nodeContainer);
+            Toby_ExplorationPathfinder explorationPathfinderForMenu = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker, inSectorNodeBuilder, nodeContainer);
             explorationTrackers.push(explorationTracker);
             explorationPathfinders.push(explorationPathfinder);
+            explorationPathfindersForMenu.push(explorationPathfinderForMenu);
             nodeContainers.push(nodeContainer);
             nodeBuilders.push(nodeBuilder);
             pathfinders.push(pathfinder);
+            pathfindersForMenu.push(pathfinderForMenu);
             pathfinderFollowers.push(pathfinderFollower);
             pathfinderThinkers.push(pathfinderThinker);
 
@@ -76,11 +80,6 @@ class Toby_PathfinderHandler : EventHandler
 
             pathfindingMarkers.push(Actor.Spawn("Toby_Marker_Pathfinding", (0, 0, 0)));
         }
-    }
-
-    void GenerateNodesInsideAllSectors()
-    {
-
     }
 
     override void WorldLineActivated(WorldEvent e)

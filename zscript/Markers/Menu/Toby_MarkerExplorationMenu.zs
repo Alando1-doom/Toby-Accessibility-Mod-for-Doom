@@ -23,6 +23,13 @@ class Toby_MarkerExplorationMenu : OptionMenu
     {
         Array<int> addedPointsX;
         Array<int> addedPointsY;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        console.printf("Pathfinders: "..handler.pathfindersForMenu.Size());
+        console.printf("Exploration Pathfinders: "..handler.explorationPathfindersForMenu.Size());
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
         for (uint i = 0; i < intSet.Size(); i++) {
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
@@ -45,6 +52,19 @@ class Toby_MarkerExplorationMenu : OptionMenu
             if (tooClose) { continue; }
             addedPointsX.Push(normal.x);
             addedPointsY.Push(normal.y);
+
+            if (!players[consoleplayer].mo) { continue; }
+            vector2 destinationFlat = (normal.x, normal.y);
+            vector3 destination = (destinationFlat, s.CenterFloor());
+            int destinationSector = level.PointInSector(destinationFlat).Index();
+            explorationPathfinder.FindPathFromDestinationToExploredSector(destinationSector);
+            pathfinder.StartPathfinding(players[consoleplayer].mo.pos, destination, explorationPathfinder.explorationNodes);
+            for (int j = 0; j < 5; j++)
+            {
+                if (pathfinder.pathFinalized) { break; }
+                pathfinder.FindPath();
+            }
+            if (!pathfinder.pathFinalized) { continue; }
 
             mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..coordinates));
         }
