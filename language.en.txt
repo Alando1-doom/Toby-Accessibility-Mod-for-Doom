@@ -89,7 +89,6 @@ TOBY_PROXIMITY_ATTENUATION = "Attenuation";
 TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 
 
-
 //FOOTSTEPS FLAT DEFINITIONS
 
 // f1_start
@@ -129,7 +128,7 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 	_STEP_CEIL4_3 = "step/tin";
 	_STEP_CEIL5_1 = "step/crete";
 	_STEP_CEIL5_2 = "step/defaultA";
-	_STEP_FLAT1 = "step/crete";
+	_STEP_FLAT1 = "step/defaultA";
 	_STEP_FLAT2 = "step/tile";
 	_STEP_FLAT5 = "step/defaultA";
 	_STEP_FLAT10 = "step/dirt";

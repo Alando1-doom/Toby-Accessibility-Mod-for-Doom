@@ -95,6 +95,7 @@ PhoenixRod_Giver
 FireMace_Giver
 
 BagOfHolding_Toby
+BagOfHolding_Giver
 GoldWandAmmo_Toby
 GoldWandAmmoDropped_Toby
 GoldWandHefty_Toby
