@@ -105,6 +105,8 @@ class Toby_ExplorationPathfinder
 
                 //Unnecessary?
                 if (!sectorClosedList.isInSet(otherIndex)) { continue; }
+                bool isReachable = Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer);
+                if (!isReachable) { continue; }
 
                 if (sectorWeights[otherIndex] < minWeight)
                 {
