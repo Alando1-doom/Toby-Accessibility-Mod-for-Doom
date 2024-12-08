@@ -13,24 +13,27 @@ class Toby_InSectorNodeBuilder
         return nodeBuilder;
     }
 
-    Toby_PathfindingNodeContainer GetNodesForSector(int sectorId)
+    Toby_PathfindingNodeContainer GetNodesForSector(int sectorId, Actor explorer)
     {
-        if (sectorNodes[sectorId])
-        {
-            return sectorNodes[sectorId];
-        }
-        sectorNodes[sectorId] = BuildNodesForSector(sectorId);
+        // Sorry, I think we need to skip on caching
+        // Or at least there should be a mechanism that would mark sectors as dirty
+        // So that they could be recalculated instead of recalculating every time -PR
+        // if (sectorNodes[sectorId])
+        // {
+        //     return sectorNodes[sectorId];
+        // }
+        sectorNodes[sectorId] = BuildNodesForSector(sectorId, explorer);
         return sectorNodes[sectorId];
     }
 
-    Toby_PathfindingNodeContainer BuildNodesForSector(int sectorId)
+    Toby_PathfindingNodeContainer BuildNodesForSector(int sectorId, Actor explorer)
     {
         Toby_PathfindingNodeContainer container = Toby_PathfindingNodeContainer.Create();
         Sector s = level.sectors[sectorId];
 
         FillLinePairArray(s);
         PlaceNodes(s, container);
-        container.LinkAllNodesInSectors();
+        container.LinkAllNodesInSectorsDistanceAware(explorer);
 
         return container;
     }
@@ -108,6 +111,7 @@ class Toby_InSectorNodeBuilder
 
             vector2 bisectorPointInThisSector;
             bool bisectorPointFound = false;
+            bool sectorOverride = false;
             if (level.PointInSector(bisectorPoint1) == s && level.IsPointInLevel((bisectorPoint1, s.CenterFloor())))
             {
                 bisectorPointFound = true;
@@ -118,8 +122,27 @@ class Toby_InSectorNodeBuilder
                 bisectorPointFound = true;
                 bisectorPointInThisSector = extendedBisectorPoint2;
             }
-            if (!bisectorPointFound) { continue; }
-            container.AddNode((bisectorPointInThisSector, s.CenterFloor()), -4);
+            if (!bisectorPointFound)
+            {
+                if (level.IsPointInLevel((bisectorPoint1, s.CenterFloor())))
+                {
+                    bisectorPointFound = true;
+                    sectorOverride = true;
+                    bisectorPointInThisSector = extendedBisectorPoint1;
+                }
+                if (level.IsPointInLevel((bisectorPoint2, s.CenterFloor())))
+                {
+                    bisectorPointFound = true;
+                    sectorOverride = true;
+                    bisectorPointInThisSector = extendedBisectorPoint2;
+                }
+                continue;
+            }
+            Toby_PathfindingNode newNode = container.AddNode((bisectorPointInThisSector, s.CenterFloor()), -4);
+            if (sectorOverride)
+            {
+                newNode.sectorIndexOverride = s.Index();
+            }
         }
     }
 }

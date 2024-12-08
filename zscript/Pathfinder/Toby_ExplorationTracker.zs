@@ -177,7 +177,7 @@ class Toby_ExplorationTracker
                 vector3 attemptPosition = (l.v1.p + l.delta.Unit() * stepSize * j, detectorZ);
                 //I've tried using SetXYZ becuse we're just pretending for a sight check
                 //But it failed in unexpected places
-                //SetOrigin it is then -P.
+                //SetOrigin it is then -PR
                 detector.SetOrigin(attemptPosition, false);
                 bool isExplorerVisible = detector.IsVisible(explorer, true);
                 if (!isExplorerVisible) { continue; }

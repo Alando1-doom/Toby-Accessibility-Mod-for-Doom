@@ -43,7 +43,7 @@ class Toby_PathfindingNodeContainer
         return node;
     }
 
-    //Am I creating memory leaks? I hope not! -P
+    //Am I creating memory leaks? I hope not! -PR
     void MergeOtherContainer(Toby_PathfindingNodeContainer other)
     {
         if (!other) { return; }
@@ -96,5 +96,102 @@ class Toby_PathfindingNodeContainer
                 node.AddEdge(newNode);
             }
         }
+    }
+
+    void RemoveUnlinkedNodes()
+    {
+        for (int i = nodes.Size() - 1; i >= 0; i--)
+        {
+            if ((nodes[i].edges.Size() == 0) && (nodes[i].backwardsEdges.Size() == 0))
+            {
+                nodes.Delete(i, 1);
+            }
+        }
+    }
+
+    void LinkAllNodesInSectorsDistanceAware(Actor explorer)
+    {
+        for (int i = 0; i < nodes.Size(); i++)
+        {
+            Toby_PathfindingNode node = nodes[i];
+            for (int j = 0; j < nodes.Size(); j++)
+            {
+                Toby_PathfindingNode newNode = nodes[j];
+                if (node == newNode) { continue; }
+                bool inSameSector = IsInSameSectorIncludingOverrides(node, newNode);
+                if (!inSameSector) { continue; }
+                bool intersectsAnyLine = IntersectsSectorBoundaryIncludingOverrides(newNode, node);
+                if (intersectsAnyLine) { continue; }
+                bool isTooCloseToExplorer = IsTooCloseToSectorLines(newNode, node, explorer);
+                console.printf("Node "..node.id.." Is too close to node "..newNode.id..": "..isTooCloseToExplorer);
+                if (isTooCloseToExplorer) { continue; }
+                newNode.AddEdge(node);
+                node.AddEdge(newNode);
+            }
+        }
+    }
+
+    bool IsTooCloseToSectorLines(Toby_PathfindingNode node1, Toby_PathfindingNode node2, Actor explorer)
+    {
+        int arbitraryNumberThatWored = 5;
+        bool distanceCheck = (node1.pos - node2.pos).Length() < explorer.radius * arbitraryNumberThatWored;
+        if (node1.lineId >= 0 && distanceCheck) { return false; }
+        if (node2.lineId >= 0 && distanceCheck) { return false; }
+
+        Sector s = Level.PointInSector(node1.pos.xy);
+        if (node1.sectorIndexOverride != -1)
+        {
+            s = level.sectors[node1.sectorIndexOverride];
+        }
+        for (int i = 0; i < s.lines.Size(); i++)
+        {
+            Line l = s.lines[i];
+            double distance = Toby_LineSegmentIntersectionUtil.GetMinimalDistance(l.v1.p, l.v2.p, node1.pos.xy, node2.pos.xy);
+            if (distance > explorer.radius)
+            {
+                continue;
+            }
+            bool isReachable = Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer, false);
+            if (isReachable)
+            {
+                continue;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    bool IsInSameSectorIncludingOverrides(Toby_PathfindingNode node1, Toby_PathfindingNode node2)
+    {
+        if (node1.sectorIndexOverride == -1 && node2.sectorIndexOverride == -1)
+        {
+            return Toby_SectorMathUtil.IsInSameSector(node1.pos, node2.pos);
+        }
+        if (node1.sectorIndexOverride == -1 && node2.sectorIndexOverride != -1)
+        {
+            return Level.PointInSector(node2.pos.xy).Index() == node1.sectorIndexOverride;
+        }
+        if (node1.sectorIndexOverride != -1 && node2.sectorIndexOverride == -1)
+        {
+            return Level.PointInSector(node1.pos.xy).Index() == node2.sectorIndexOverride;
+        }
+        return false;
+    }
+
+    bool IntersectsSectorBoundaryIncludingOverrides(Toby_PathfindingNode node1, Toby_PathfindingNode node2)
+    {
+        if (node1.sectorIndexOverride == -1 && node2.sectorIndexOverride == -1)
+        {
+            return Toby_SectorMathUtil.IntersectsSectorBoundary(node1.pos.xy, node2.pos.xy);
+        }
+        if (node1.sectorIndexOverride == -1 && node2.sectorIndexOverride != -1)
+        {
+            return false;
+        }
+        if (node1.sectorIndexOverride != -1 && node2.sectorIndexOverride == -1)
+        {
+            return false;
+        }
+        return true;
     }
 }

@@ -174,7 +174,7 @@ class Toby_ExplorationPathfinder
             return;
         }
 
-        explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(sectorPath[sectorPath.Size() - 1]));
+        explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(sectorPath[sectorPath.Size() - 1], explorer));
 
         for (int i = 0; i < sectorPath.Size() - 1; i++)
         {
@@ -188,13 +188,14 @@ class Toby_ExplorationPathfinder
                 if (!isValid) { continue; }
                 AddSectorConnectionNodes(l, source, destination);
                 // Pathfinding works better with this "break" commented
-                // Because it creates more nodes at traversable lines this way -P
+                // Because it creates more nodes at traversable lines this way -PR
                 // break;
             }
-            explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(source.Index()));
+            explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(source.Index(), explorer));
         }
         explorationNodes.MergeOtherContainer(mainContainer);
-        explorationNodes.LinkAllNodesInSectors();
+        explorationNodes.LinkAllNodesInSectorsDistanceAware(explorer);
+        explorationNodes.RemoveUnlinkedNodes();
     }
 
     void AddSectorConnectionNodes(Line l, Sector source, Sector destination)
