@@ -32,21 +32,51 @@ marker/Markers/undofail     "sounds/Markers/dsnoundo.ogg"
 
 $rolloff marker/beacon1     linear	96 640
 marker/beacon1              "sounds/Markers/dsmark1.wav"
+$rolloff marker/call1     linear	128 768
+marker/call1              "sounds/Markers/dsmark1.wav"
+
 $rolloff marker/beacon2     linear	96 640
 marker/beacon2              "sounds/Markers/dsmark2.ogg"
+$rolloff marker/call2     linear	128 768
+marker/call2              "sounds/Markers/dsmark2.wav"
+
 $rolloff marker/beacon3     linear	96 640
 marker/beacon3              "sounds/Markers/dsmark3.ogg"
+$rolloff marker/call3     linear	128 768
+marker/call3              "sounds/Markers/dsmark3.wav"
+
 $rolloff marker/beacon4     linear	96 640
 marker/beacon4              "sounds/Markers/dsmark4.ogg"
+$rolloff marker/call4     linear	128 768
+marker/call4              "sounds/Markers/dsmark4.wav"
+
 $rolloff marker/beacon5     linear	96 640
 marker/beacon5              "sounds/Markers/dsmark5.wav"
+$rolloff marker/call5     linear	128 768
+marker/call5              "sounds/Markers/dsmark5.wav"
+
 $rolloff marker/beacon6     linear	96 640
 marker/beacon6              "sounds/Markers/dsmark6.ogg"
+$rolloff marker/call6     linear	128 768
+marker/call6              "sounds/Markers/dsmark6.wav"
+
 $rolloff marker/beacon7     linear	96 640
 marker/beacon7              "sounds/Markers/dsmark7.wav"
+$rolloff marker/call7     linear	128 768
+marker/call7              "sounds/Markers/dsmark7.wav"
+
 $rolloff marker/beacon8     linear	96 640
 marker/beacon8              "sounds/Markers/dsmark8.ogg"
+$rolloff marker/call8     linear	128 768
+marker/call8              "sounds/Markers/dsmark8.wav"
+
 $rolloff marker/beacon9     linear	96 640
 marker/beacon9              "sounds/Markers/dsmark9.ogg"
+$rolloff marker/call9     linear	128 768
+marker/call9              "sounds/Markers/dsmark9.wav"
+
 $rolloff marker/beacon10    linear	96 640
 marker/beacon10             "sounds/Markers/dsmark10.ogg"
+$rolloff marker/call10     linear	128 768
+marker/call10              "sounds/Markers/dsmark10.wav"
+

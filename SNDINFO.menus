@@ -490,14 +490,19 @@ menu/controls/ammostat              "sounds/Menus/TobyOptions/mamstat.ogg"
 $volume menu/controls/ammostat      0.5
 menu/controls/armorstat              "sounds/Menus/TobyOptions/marmstat.ogg"
 $volume menu/controls/armorstat      0.5
+menu/controls/mapstat				"sounds/Menus/TobyOptions/MapStat.ogg"
+$volume menu/controls/mapstat      0.5
 
 menu/controls/coordinates              "sounds/Menus/TobyOptions/mchkpos.ogg"
 $volume menu/controls/coordinates      0.5
 menu/controls/checkitem              "sounds/Menus/TobyOptions/mchkitem.ogg"
 $volume menu/controls/checkitem      0.5
 
-menu/controls/snaptotarget		"sounds/Menus/TobyOptions/msnap.ogg"
+menu/controls/snaptotarget		"sounds/Menus/TobyOptions/Snap2Target.ogg"
 $volume menu/controls/snaptotarget      0.5
+
+menu/controls/proxydetector		"sounds/Menus/TobyOptions/Proxy.ogg"
+$volume menu/controls/proxydetector      0.5
 
 menu/controls/asgeneral					"sounds/Menus/TobyOptions/mascangn.ogg"
 $volume menu/controls/asgeneral    0.5
