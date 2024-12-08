@@ -245,6 +245,21 @@ map/toby/iconofsin              "sounds/Maps/doom2_tobymp/IconOfSin.ogg"
 
 
 
+//Toby's Death Arena
+
+map/toby/comstation				"sounds/Maps/doom2_tobydm/DM1_ComStation.ogg"
+map/toby/warehouse				"sounds/Maps/doom2_tobydm/DM2_Warehouse.ogg"
+map/toby/sector3						"sounds/Maps/doom2_tobydm/DM3_Sector3.ogg"
+map/toby/dungeon					"sounds/Maps/doom2_tobydm/DM4_Dungeon.ogg"
+map/toby/fortress					"sounds/Maps/doom2_tobydm/DM5_Fortress.ogg"
+map/toby/wfacility					"sounds/Maps/doom2_tobydm/DM6_WFacility.ogg"
+map/toby/phobos						"sounds/Maps/doom2_tobydm/DM7_PhobosBase.ogg"
+map/toby/hangar18					"sounds/Maps/doom2_tobydm/DM8_Hangar18.ogg"
+map/toby/garden						"sounds/Maps/doom2_tobydm/DM9_Garden.ogg"
+map/toby/outpost						"sounds/Maps/doom2_tobydm/DM10_Outpost.ogg"
+
+
+
 //Operation: MDK
 
 map/mdk/umsatlantia             "sounds/Maps/doom2_opmdk/UMSAtlantia.ogg"

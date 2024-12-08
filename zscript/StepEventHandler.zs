@@ -24,7 +24,7 @@ class StepEventHandler : EventHandler
 		Sound test = StringTable.localize("$_STEP_" .. flat).indexOf("_STEP_");
 		
 		if (test == "{ no sound }") {
-			return "step/crete";
+			return "step/defaultA";
 		}
 		
 		return StringTable.localize("$_STEP_" .. flat);
@@ -66,7 +66,7 @@ class StepEventHandler : EventHandler
 					{
 						if (wait[i] <= 0.0)
 						{
-							pl.A_PlaySound(getStepSound(pl), CHAN_AUTO,
+							pl.A_StartSound(getStepSound(pl), CHAN_AUTO,
 									clamp(speed / MAX_SPEED, 0.4, 1.0));
 							wait[i] = 7.0 * clamp(MAX_SPEED / speed, 1.0, 1.5);
 						}

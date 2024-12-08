@@ -444,6 +444,31 @@
 // MAP15 - The Gatekeeper
 {"Checksum":"0386cdb05624bba70d45d14fff694f63", "SoundToPlay":"map/mdk/thegatekeeper", "LevelStartPlaybackDelay":"270"}
 
+
+//Toby's Death Arena Maps
+//MAP01 - Com Station
+{"Checksum":"3af20ef1ac4de81d5140d3f371af526f", "SoundToPlay":"map/toby/comstation"}
+//MAP02 - Warehouse
+{"Checksum":"45a5041246a36b0593900a4b867be954", "SoundToPlay":"map/toby/warehouse"}
+//MAP03 - Sector 3
+{"Checksum":"f143173864055a6f1ccb2fea8f52553b", "SoundToPlay":"map/toby/sector3"}
+//MAP04 - Dungeon of Doom
+{"Checksum":"1b03cc1bfdc0c26cb8add9097962b76c", "SoundToPlay":"map/toby/dungeon"}
+//MAP05 - Ocean Fortress
+{"Checksum":"dec10958aefc628c5993a057e38136c3", "SoundToPlay":"map/toby/fortress"}
+//MAP06 - Water Treatment Facility
+{"Checksum":"b1a2d34687f76ea229f56e633f7c85b2", "SoundToPlay":"map/toby/wfacility"}
+//MAP07 - Phobos Base Site 4
+{"Checksum":"9fbd864b394baba8890d6772d0f96179", "SoundToPlay":"map/toby/phobos"}
+//MAP08 - Hangar 18
+{"Checksum":"ac111726eb3f39882ef9ebafb681b9d6", "SoundToPlay":"map/toby/hangar18"}
+//MAP09 - Garden of Demon
+{"Checksum":"ecad49461fd3b8139c1520b9f858f8c8", "SoundToPlay":"map/toby/garden"}
+//MAP10 - Outpost Delta
+{"Checksum":"9a3b69bfb590c3af1bb87ab6d9f8448c", "SoundToPlay":"map/toby/outpost"}
+
+
+
 //Toby Heretic Maps
 //E1M1 - The Docks
 {"Checksum":"59dcf5a7681613e96877570d91b68941", "SoundToPlay":"heretic/e1m1"}
