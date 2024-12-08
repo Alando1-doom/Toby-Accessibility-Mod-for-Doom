@@ -56,6 +56,29 @@ class Toby_ExplorationTracker
         }
 
         UpdateExploration();
+        //SectorExplorationDebug();
+    }
+
+    play void SectorExplorationDebug()
+    {
+        for (int i = 0; i < visitedSectors.Size(); i++)
+        {
+            if (visitedSectors[i])
+            {
+                Sector s = level.sectors[i];
+                s.SetColor("00FF00");
+            }
+        }
+        for (int i = unexploredSectors.Size() - 1; i >= 0; i--)
+        {
+            Sector s = level.sectors[unexploredSectors.values[i]];
+            s.SetColor("FF0000");
+        }
+        for (int i = exploredSectors.Size() - 1; i >= 0; i--)
+        {
+            Sector s = level.sectors[exploredSectors.values[i]];
+            s.SetColor("FF9900");
+        }
     }
 
     play void UpdateNonInteractedLines()
@@ -146,12 +169,16 @@ class Toby_ExplorationTracker
         for (int i = 0; i < unexploredLines.Size(); i++)
         {
             Line l = level.lines[unexploredLines.values[i]];
+            if (!l.frontsector || !l.backsector) { continue; }
             int detectorZ = Toby_SectorMathUtil.GetWindowFloor(l.frontsector, l.backsector) + explorer.height;
             double stepSize = l.delta.Length() / attemptsPerLine;
             for (int j = 0; j < attemptsPerLine; j++)
             {
                 vector3 attemptPosition = (l.v1.p + l.delta.Unit() * stepSize * j, detectorZ);
-                detector.SetXYZ(attemptPosition);
+                //I've tried using SetXYZ becuse we're just pretending for a sight check
+                //But it failed in unexpected places
+                //SetOrigin it is then -P.
+                detector.SetOrigin(attemptPosition, false);
                 bool isExplorerVisible = detector.IsVisible(explorer, true);
                 if (!isExplorerVisible) { continue; }
                 linesToRemove.push(unexploredLines.values[i]);
@@ -254,6 +281,7 @@ class Toby_ExplorationTracker
     Sector GetExploredOrVisitedSectorForLine(Line l)
     {
         Sector exploredSector = null;
+        if (!l.frontSector || !l.backSector) { return null; }
         if (IsExplored(l.frontSector.Index())
             || IsVisited(l.frontSector.Index())) {
             exploredSector = l.frontSector;
