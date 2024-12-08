@@ -225,7 +225,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
-            console.printf("Path construction failed on currentNode");
+            // console.printf("Path construction failed on currentNode");
             return;
         }
         for(int i = 0; i < currentNode.backwardsEdges.Size(); i++)

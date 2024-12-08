@@ -123,7 +123,6 @@ class Toby_PathfindingNodeContainer
                 bool intersectsAnyLine = IntersectsSectorBoundaryIncludingOverrides(newNode, node);
                 if (intersectsAnyLine) { continue; }
                 bool isTooCloseToExplorer = IsTooCloseToSectorLines(newNode, node, explorer);
-                console.printf("Node "..node.id.." Is too close to node "..newNode.id..": "..isTooCloseToExplorer);
                 if (isTooCloseToExplorer) { continue; }
                 newNode.AddEdge(node);
                 node.AddEdge(newNode);

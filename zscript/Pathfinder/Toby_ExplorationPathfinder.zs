@@ -73,7 +73,7 @@ class Toby_ExplorationPathfinder
 
         if (sourceSectorIndex == -1)
         {
-            console.printf("Exploration pathfinder: failed to find explored area");
+            // console.printf("Exploration pathfinder: failed to find explored area");
             return;
         }
         ConstructSectorPath(sourceSectorIndex, destinationSectorIndex);
@@ -117,7 +117,7 @@ class Toby_ExplorationPathfinder
 
             if (minWeightSectorIndex == -1)
             {
-                console.printf("Exploration pathfinder: failed to construct sector path");
+                // console.printf("Exploration pathfinder: failed to construct sector path");
                 break;
             }
             currentSectorIndex = minWeightSectorIndex;
@@ -170,7 +170,7 @@ class Toby_ExplorationPathfinder
     {
         if (sectorPath.Size() < 1)
         {
-            console.printf("Exploration pathfinder: Less than one sector path nodes");
+            // console.printf("Exploration pathfinder: Less than one sector path nodes");
             return;
         }
 
