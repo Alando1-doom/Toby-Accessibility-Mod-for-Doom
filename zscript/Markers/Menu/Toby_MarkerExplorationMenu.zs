@@ -25,8 +25,6 @@ class Toby_MarkerExplorationMenu : OptionMenu
         Array<int> addedPointsY;
 
         Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
-        console.printf("Pathfinders: "..handler.pathfindersForMenu.Size());
-        console.printf("Exploration Pathfinders: "..handler.explorationPathfindersForMenu.Size());
         Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
         Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
 
@@ -36,7 +34,6 @@ class Toby_MarkerExplorationMenu : OptionMenu
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
             vector2 normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
-            string description = descriptionPrefix..lineId;
             string coordinates = normal.x..":"..normal.y..":"..s.CenterFloor();
 
             bool tooClose = false;
@@ -65,6 +62,25 @@ class Toby_MarkerExplorationMenu : OptionMenu
                 pathfinder.FindPath();
             }
             if (!pathfinder.pathFinalized) { continue; }
+
+            Array<string> directions;
+            directions.push("North");
+            directions.push("North-East");
+            directions.push("East");
+            directions.push("South-East");
+            directions.push("South");
+            directions.push("South-West");
+            directions.push("West");
+            directions.push("North-West");
+
+            vector2 compassDirection = destinationFlat - players[consoleplayer].mo.pos.xy;
+            double angle = VectorAngle(compassDirection.y, compassDirection.x);
+            angle = (angle + 360) % 360;
+
+            int directionIndex = Round(angle / 45) % 8;
+            int distance = Round(compassDirection.Length());
+
+            string description = descriptionPrefix..directions[directionIndex].. " - "..distance;
 
             mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..coordinates));
         }
