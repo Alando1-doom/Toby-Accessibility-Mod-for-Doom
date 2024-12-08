@@ -110,7 +110,7 @@ heretic/monster/nitrogolem			"sounds/ActorsInViewport/Heretic/Monsters/NitroGole
 heretic/monster/nitrogolems		"sounds/ActorsInViewport/Heretic/Monsters/NitroGolems.ogg"
 
 heretic/monster/ghostnitro			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolem.ogg"
-heretic/monster/ghostnitro			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolems.ogg"
+heretic/monster/ghostnitros			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolems.ogg"
 
 heretic/monster/knight					"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarrior.ogg"
 heretic/monster/knights				"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarriors.ogg"

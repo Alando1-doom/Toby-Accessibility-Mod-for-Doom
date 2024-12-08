@@ -272,9 +272,12 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Armor Stats", "SoundToPlay":"menu/controls/armorstat"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check Coordinates", "SoundToPlay":"menu/controls/coordinates"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check current item", "SoundToPlay":"menu/controls/checkitem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Check level stats", "SoundToPlay":"menu/controls/mapstat"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle proximity detector", "SoundToPlay":"menu/controls/proxydetector"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle God Mode", "SoundToPlay":"menu/controls/togglegod"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Give All", "SoundToPlay":"menu/controls/idkfa"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Change to Next Level", "SoundToPlay":"menu/controls/levelwarp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_MENU", "SoundToPlay":"menu/controls/openmarkmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "SoundToPlay":"menu/controls/placemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET", "SoundToPlay":"menu/controls/snaptotarget"}
