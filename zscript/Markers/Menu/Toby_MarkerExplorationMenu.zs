@@ -41,7 +41,6 @@ class Toby_MarkerExplorationMenu : OptionMenu
             {
                 if (((addedPointsX[j], addedPointsY[j]) - (normal.x, normal.y)).Length() < ignoreDistance)
                 {
-                    console.printf("Ignored");
                     tooClose = true;
                     break;
                 };
