@@ -187,7 +187,9 @@ class Toby_ExplorationPathfinder
                 bool isValid = IsValidConnection(l, source, destination, explorer);
                 if (!isValid) { continue; }
                 AddSectorConnectionNodes(l, source, destination);
-                break;
+                // Pathfinding works better with this "break" commented
+                // Because it creates more nodes at traversable lines this way -P
+                // break;
             }
             explorationNodes.MergeOtherContainer(inSectorNodeBuilder.GetNodesForSector(source.Index()));
         }
