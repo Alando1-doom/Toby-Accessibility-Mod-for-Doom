@@ -35,10 +35,10 @@
 //HEXEN PLAYER CLASS MENU
 
 {"EventType":"MenuChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_CHOOSECLASS", "SoundToPlay":"hexen/menu/choose"}
-{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_FIGHTER", "SoundToPlay":"hexen/menu/fighter"}
-{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_CLERIC", "SoundToPlay":"hexen/menu/cleric"}
-{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_MAGE", "SoundToPlay":"hexen/menu/mage"}
-{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"MNU_RANDOM", "SoundToPlay":"hexen/menu/random"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_FIGHTER", "SoundToPlay":"hexen/menu/fighter"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_CLERIC", "SoundToPlay":"hexen/menu/cleric"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_MAGE", "SoundToPlay":"hexen/menu/mage"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PlayerclassMenu", "CurrentMenuItemListTextString":"$MNU_RANDOM", "SoundToPlay":"hexen/menu/random"}
 
 
 //EPISODE MENU
