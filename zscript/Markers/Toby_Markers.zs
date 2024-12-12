@@ -35,6 +35,19 @@ class Toby_Marker_ThreeKeyDoor : Toby_Marker_Silent {}
 class Toby_Marker_SixKeyDoorDoor : Toby_Marker_Silent {}
 class Toby_Marker_AnyKeyDoor : Toby_Marker_Silent {}
 
+class Toby_Marker_AxeKey : Toby_Marker_Silent {} //Hexen Keys
+class Toby_Marker_CastleKey : Toby_Marker_Silent {}
+class Toby_Marker_CaveKey : Toby_Marker_Silent {}
+class Toby_Marker_DungeonKey : Toby_Marker_Silent {}
+class Toby_Marker_EmeraldKey : Toby_Marker_Silent {}
+class Toby_Marker_FireKey : Toby_Marker_Silent {}
+class Toby_Marker_HornKey : Toby_Marker_Silent {}
+class Toby_Marker_RustedKey : Toby_Marker_Silent {}
+class Toby_Marker_SilverKey : Toby_Marker_Silent {}
+class Toby_Marker_SteelKey : Toby_Marker_Silent {}
+class Toby_Marker_SwampKey : Toby_Marker_Silent {}
+class Toby_Marker_AllKey : Toby_Marker_Silent {}
+
 class Toby_Marker_Exit : Toby_Marker_Silent {}
 class Toby_Marker_Secret_Exit : Toby_Marker_Silent {}
 

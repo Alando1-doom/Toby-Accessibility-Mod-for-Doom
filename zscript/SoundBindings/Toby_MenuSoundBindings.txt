@@ -637,6 +637,19 @@
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Six key door", "SoundToPlay":"pathfinder/6keydoor"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Any key door", "SoundToPlay":"pathfinder/anykeydoor"}
 
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Axe Door", "SoundToPlay":"pathfinder/axedoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Castle Door", "SoundToPlay":"pathfinder/castledoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Cave Door", "SoundToPlay":"pathfinder/cavedoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Dungeon Door", "SoundToPlay":"pathfinder/dungeondoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Emerald Door", "SoundToPlay":"pathfinder/emeralddoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Fire Door", "SoundToPlay":"pathfinder/firedoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Horn Door", "SoundToPlay":"pathfinder/horndoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Rusted Door", "SoundToPlay":"pathfinder/rusteddoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Silver Door", "SoundToPlay":"pathfinder/silverdoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Steel Door", "SoundToPlay":"pathfinder/steeldoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Swamp Door", "SoundToPlay":"pathfinder/swampdoor"}
+{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"All Key Door", "SoundToPlay":"pathfinder/alldoor"}
+
 
 
 //MENUS TO HOLD OFF (for now)
