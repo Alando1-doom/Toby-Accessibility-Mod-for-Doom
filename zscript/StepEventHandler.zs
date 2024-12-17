@@ -38,7 +38,7 @@ class StepEventHandler : EventHandler
 	{
 		for (int i = 0; i < players.size(); ++i) {			
 			wait.insert(i, 1.0);
-			Console.printf("%d", consolePlayer);
+			//Console.printf("%d", consolePlayer);
 		}
 		
 		super.worldLoaded(e);
