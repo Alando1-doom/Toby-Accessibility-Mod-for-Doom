@@ -92,6 +92,7 @@ class Toby_PathfinderDebugRender
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 3, "Backlinked to: "..backwardsEdges);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 4, "Line ID: "..node.lineId);
             Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 5, "Score (G + H = F): ".. node.gScore .. " + ".. node.hScore .." = "..node.fScore);
+            Screen.DrawText(smallfont, Font.CR_GOLD, screenPos.x, screenPos.y + 10 * 6, "Sector override: ".. node.sectorIndexOverride);
         }
     }
 
