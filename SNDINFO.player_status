@@ -1,7 +1,7 @@
 stats/general/health        "sounds/PlayerStats/Health/Health.ogg"
 stats/general/percent       "sounds/Menus/CustomizeControls/Keyboard/kpercent.ogg"
 
-stats/general/crouched      "sounds/PlayerStats/Crouch/CrouchDown.wav"
+stats/general/crouched      "sounds/PlayerStats/Crouch/CrouchDown.ogg"
 stats/general/uncrouched    "sounds/PlayerStats/Crouch/CrouchUp.ogg"
 
 stats/level/secrets         "sounds/PlayerStats/MapStats/Secrets.ogg"
