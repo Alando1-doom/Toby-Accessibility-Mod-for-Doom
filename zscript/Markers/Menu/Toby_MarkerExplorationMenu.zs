@@ -15,8 +15,8 @@ class Toby_MarkerExplorationMenu : OptionMenu
         Array<int> addedPointsY;
         int ignoreDistance = 16 * 10; //PlayerPawn.radius * 10;
 
-        AddMenuItemsFromSet("Unexplored line: ", tracker, tracker.unexploredLines, ignoreDistance);
-        AddMenuItemsFromSet("Non-interacted line: ", tracker, tracker.nonInteractedLines, ignoreDistance);
+        AddMenuItemsFromSet("Unexplored line - ", tracker, tracker.unexploredLines, ignoreDistance);
+        AddMenuItemsFromSet("Non-interacted line - ", tracker, tracker.nonInteractedLines, ignoreDistance);
     }
 
     void AddMenuItemsFromSet(string descriptionPrefix, Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance)
