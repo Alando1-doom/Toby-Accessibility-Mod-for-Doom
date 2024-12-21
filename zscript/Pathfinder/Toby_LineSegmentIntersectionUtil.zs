@@ -52,4 +52,35 @@ class Toby_LineSegmentIntersectionUtil
 
         return (!(l.flags & Line.ML_TWOSIDED) || l.flags & Line.ML_Blocking || l.flags & Line.ML_Railing || l.flags & Line.ML_3DMidTex);
     }
+
+    static Vector2 ClosestPointOnSegment(Vector2 p, Vector2 a, Vector2 b)
+    {
+        Vector2 ab = b - a;
+        Vector2 ap = p - a;
+        double projectionScalar = (ap dot ab) / (ab.Length() * ab.Length());
+        projectionScalar = Clamp(projectionScalar, 0, 1);
+        return a + projectionScalar * ab;
+    }
+
+    static double GetMinimalDistance(Vector2 p1, Vector2 q1, Vector2 p2, Vector2 q2)
+    {
+        if (DoIntersect(p1, q1, p2, q2))
+        {
+            return 0;
+        }
+
+        Vector2 closestPoint = ClosestPointOnSegment(p1, p2, q2);
+        double minDistance = (p1 - closestPoint).Length();
+
+        closestPoint = ClosestPointOnSegment(q1, p2, q2);
+        minDistance = Min(minDistance, (q1 - closestPoint).Length());
+
+        closestPoint = ClosestPointOnSegment(p2, p1, q1);
+        minDistance = Min(minDistance, (p2 - closestPoint).Length());
+
+        closestPoint = ClosestPointOnSegment(q2, p1, q1);
+        minDistance = Min(minDistance, (q2 - closestPoint).Length());
+
+        return minDistance;
+    }
 }

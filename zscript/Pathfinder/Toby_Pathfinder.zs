@@ -51,14 +51,13 @@ class Toby_Pathfinder
         pathfindingActive = false;
     }
 
-    void FindPath()
+    void FindPath(int maxCycles = 100)
     {
         if (!pathfindingActive) { return; }
         if (pathDoesNotExist || pathFinalized)
         {
             return;
         }
-        int maxCycles = 100;
         for (int i = 0; i < maxCycles; i++)
         {
             if (!pathFound)
@@ -97,9 +96,11 @@ class Toby_Pathfinder
         }
     }
 
-    void StartPathfinding(Vector3 start, Vector3 end)
+    void StartPathfinding(Vector3 start, Vector3 end, Toby_PathfindingNodeContainer nodeContainer)
     {
         if (pathfindingActive) { return; }
+        self.nodeContainer = nodeContainer;
+
         ResetPathfinder(start, end);
         if (!Toby_SectorMathUtil.IntersectsSectorBoundary(start.xy, end.xy))
         {
@@ -223,7 +224,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
-            console.printf("Path construction failed on currentNode");
+            // console.printf("Path construction failed on currentNode");
             return;
         }
         for(int i = 0; i < currentNode.backwardsEdges.Size(); i++)
@@ -245,7 +246,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
-            console.printf("Path construction failed on minScoreNode");
+            // console.printf("Path construction failed on minScoreNode");
             return;
         }
         path.Insert(0, minScoreNode);

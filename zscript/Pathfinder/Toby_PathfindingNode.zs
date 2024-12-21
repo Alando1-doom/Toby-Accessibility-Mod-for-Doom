@@ -6,6 +6,8 @@ class Toby_PathfindingNode
     double hScore;
     double fScore;
 
+    int sectorIndexOverride;
+
     //LineId is required to determine that similar node exists on the same line between sectors
     int lineId;
 
@@ -22,6 +24,7 @@ class Toby_PathfindingNode
         node.fScore = Int.Max;
         node.lineId = lineId;
         node.id = id;
+        node.sectorIndexOverride = -1;
         return node;
     }
 

@@ -3,9 +3,18 @@ class Toby_PathfinderHandler : EventHandler
     //I feel like I need to move visual debuggers to separate class
     Toby_ViewportProjector projector;
 
+    Toby_SectorMovementDetector sectorMovementDetector;
+    Toby_InSectorNodeBuilder inSectorNodeBuilder;
+
+    Toby_LineInteractionTracker lineInteractionTracker;
+    Array<Toby_ExplorationTracker> explorationTrackers;
+    Array<Toby_ExplorationPathfinder> explorationPathfinders;
+    Array<Toby_ExplorationPathfinder> explorationPathfindersForMenu;
+
     Array<Toby_PathfindingNodeContainer> nodeContainers;
     Array<Toby_PathfindingNodeBuilder> nodeBuilders;
     Array<Toby_Pathfinder> pathfinders;
+    Array<Toby_Pathfinder> pathfindersForMenu;
     Array<Toby_PathfinderFollower> pathfinderFollowers;
     Array<Toby_PathfinderThinker> pathfinderThinkers;
     int maxPlayers;
@@ -28,6 +37,9 @@ class Toby_PathfinderHandler : EventHandler
 
     override void WorldLoaded(WorldEvent e)
     {
+        lineInteractionTracker = Toby_LineInteractionTracker.Create();
+        inSectorNodeBuilder = Toby_InSectorNodeBuilder.Create();
+        sectorMovementDetector = Toby_SectorMovementDetector.Create();
         projector = Toby_ViewportProjector.Create();
 
         maxPlayers = 8;
@@ -39,11 +51,19 @@ class Toby_PathfinderHandler : EventHandler
             Toby_PathfindingNodeContainer nodeContainer = Toby_PathfindingNodeContainer.Create();
             Toby_PathfindingNodeBuilder nodeBuilder = Toby_PathfindingNodeBuilder.Create(nodeContainer, playerActor);
             Toby_Pathfinder pathfinder = Toby_Pathfinder.Create(nodeContainer);
+            Toby_Pathfinder pathfinderForMenu = Toby_Pathfinder.Create(nodeContainer);
             Toby_PathfinderFollower pathfinderFollower = Toby_PathfinderFollower.Create(pathfinder);
             Toby_PathfinderThinker pathfinderThinker = Toby_PathfinderThinker.Create(pathfinder, pathfinderFollower, playerActor);
+            Toby_ExplorationTracker explorationTracker = Toby_ExplorationTracker.Create(playerActor, sectorMovementDetector, lineInteractionTracker);
+            Toby_ExplorationPathfinder explorationPathfinder = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker, inSectorNodeBuilder, nodeContainer);
+            Toby_ExplorationPathfinder explorationPathfinderForMenu = Toby_ExplorationPathfinder.Create(playerActor, explorationTracker, inSectorNodeBuilder, nodeContainer);
+            explorationTrackers.push(explorationTracker);
+            explorationPathfinders.push(explorationPathfinder);
+            explorationPathfindersForMenu.push(explorationPathfinderForMenu);
             nodeContainers.push(nodeContainer);
             nodeBuilders.push(nodeBuilder);
             pathfinders.push(pathfinder);
+            pathfindersForMenu.push(pathfinderForMenu);
             pathfinderFollowers.push(pathfinderFollower);
             pathfinderThinkers.push(pathfinderThinker);
 
@@ -62,8 +82,14 @@ class Toby_PathfinderHandler : EventHandler
         }
     }
 
+    override void WorldLineActivated(WorldEvent e)
+    {
+        lineInteractionTracker.ActivateLine(e.ActivatedLine.Index());
+    }
+
     override void WorldTick()
     {
+        sectorMovementDetector.Update();
         for (int i = 0; i < maxPlayers; i++)
         {
 
@@ -71,6 +97,8 @@ class Toby_PathfinderHandler : EventHandler
             if (!player) { continue; }
             Actor playerActor = player.mo;
             if (!playerActor) { continue; }
+
+            explorationTrackers[i].Update();
 
             // I feel like this is not great -PR
             // pathfinderThinkers[i].SetReceivingActor(players[i].mo);
@@ -121,6 +149,7 @@ class Toby_PathfinderHandler : EventHandler
             currentNodePrevious[i] = currentNodeCurrent[i];
             currentNodeCurrent[i] = pathfinderFollowers[i].GetCurrentPathNode();
         }
+        lineInteractionTracker.Update();
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -140,12 +169,18 @@ class Toby_PathfinderHandler : EventHandler
             Toby_MarkerRecord record = markerHandler.recordContainers[e.Player].GetMarkerById(markerId);
             if (!record) { return; }
             Actor markerActor = record.markerActor;
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, markerActor.pos);
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, markerActor.pos, nodeContainers[e.Player]);
         }
 
-        if (e.Name == "Toby_FindPath")
+        if (eventAndArgument[0] == "Toby_FindPathExploration")
         {
-            pathfinderThinkers[e.Player].FindPath(playerActor.pos, nodeContainers[e.Player].nodes[0].pos);
+            vector2 destinationFlat = (eventAndArgument[1].ToDouble(), eventAndArgument[2].ToDouble());
+            vector3 destination = (destinationFlat, eventAndArgument[3].ToDouble());
+            console.printf("Destination: "..destination);
+            int destinationSector = level.PointInSector(destinationFlat).Index();
+            explorationPathfinders[e.Player].FindPathFromDestinationToExploredSector(destinationSector);
+            pathfinderThinkers[e.Player].FindPath(playerActor.pos, destination, explorationPathfinders[e.Player].explorationNodes);
+
             return;
         }
 
@@ -225,5 +260,15 @@ class Toby_PathfinderHandler : EventHandler
             // console.printf("Next node reached");
             S_StartSound("pathfinder/nodereached", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
+    }
+
+    ui static Toby_PathfinderHandler GetInstanceUi()
+    {
+        return Toby_PathfinderHandler(EventHandler.Find("Toby_PathfinderHandler"));
+    }
+
+    play static Toby_PathfinderHandler GetInstancePlay()
+    {
+        return Toby_PathfinderHandler(EventHandler.Find("Toby_PathfinderHandler"));
     }
 }

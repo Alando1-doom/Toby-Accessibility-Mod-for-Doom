@@ -34,6 +34,8 @@ version "4.6"
 
 //Marker menus
 #include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
+#include "zscript/Markers/Menu/Toby_MarkerExplorationMenu.zs"
+#include "zscript/Markers/Menu/Toby_MarkerExplorationMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerAddMenu.zs"
@@ -90,6 +92,7 @@ version "4.6"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
 #include "zscript/Utils/Toby_Enums.zs"
+#include "zscript/Utils/Toby_IntegerSet.zs"
 
 //libeye
 #include "zscript/libeye/Toby_projector gl.zs"
@@ -126,6 +129,10 @@ version "4.6"
 #include "zscript/linespawner.zs"
 
 //Pathfinder
+#include "zscript/Pathfinder/Toby_LineInteractionTracker.zs"
+#include "zscript/Pathfinder/Toby_ExplorationTracker.zs"
+#include "zscript/Pathfinder/Toby_ExplorationDetector.zs"
+#include "zscript/Pathfinder/Toby_SectorMovementDetector.zs"
 #include "zscript/Pathfinder/Toby_PathfinderHandler.zs"
 #include "zscript/Pathfinder/Toby_Pathfinder.zs"
 #include "zscript/Pathfinder/Toby_PathfinderDebugRender.zs"
@@ -133,7 +140,10 @@ version "4.6"
 #include "zscript/Pathfinder/Toby_PathfinderThinker.zs"
 #include "zscript/Pathfinder/Toby_PathfindingNode.zs"
 #include "zscript/Pathfinder/Toby_PathfindingNodeBuilder.zs"
+#include "zscript/Pathfinder/Toby_InSectorNodeBuilder.zs"
+#include "zscript/Pathfinder/Toby_LinePair.zs"
 #include "zscript/Pathfinder/Toby_PathfindingNodeContainer.zs"
+#include "zscript/Pathfinder/Toby_ExplorationPathfinder.zs"
 #include "zscript/Pathfinder/Toby_SectorMathUtil.zs"
 #include "zscript/Pathfinder/Toby_LineSegmentIntersectionUtil.zs"
 
