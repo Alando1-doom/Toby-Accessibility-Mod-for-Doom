@@ -1,12 +1,5 @@
 [en default]
 
-ZS_EM_MENU_OPTIONS = "Extended Markers Options";
-
-ZS_EM_OP_TITLE_OPTIONS = "Extended Markers Options";
-ZS_EM_OP_TITLE_EXTENDED_MARKERS = "Extended Markers";
-ZS_EM_OP_TITLE_PLACE_MARKERS = "Place Markers";
-ZS_EM_OP_TITLE_REMOVE_MARKERS = "Remove Markers";
-
 ZS_EM_KEYS_TITLE = "Extended Markers Keys";
 
 ZS_EM_PLACE_1 = "Place Marker  1";

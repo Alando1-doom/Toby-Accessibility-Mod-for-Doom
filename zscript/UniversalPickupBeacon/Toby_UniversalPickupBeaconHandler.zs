@@ -19,6 +19,11 @@ class Toby_UniversalPickupBeaconHandler: EventHandler
 
     override void NetworkProcess(ConsoleEvent e)
     {
+        PlayerInfo player = players[e.Player];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
+
         if (e.Name == "Toby_UniversalBeaconUseUniversalSoundsUpdate")
         {
             useUniversalSounds = Cvar.GetCvar("Toby_UniversalBeacon_UseUniversalSounds").GetBool();
@@ -28,6 +33,7 @@ class Toby_UniversalPickupBeaconHandler: EventHandler
             {
                 foundActor.UpdateUseUniversalSounds(useUniversalSounds);
             }
+            Toby_Logger.ConsoleOutputModeMessagePlay("Beacons updated", playerActor);
         }
     }
 }
