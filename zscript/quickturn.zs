@@ -23,7 +23,7 @@ class Toby_QuickTurnItem : Inventory
         {
             if (CVar.GetCVar("Toby_NarrationOutputType", owner.player).GetInt() == TNOT_CONSOLE)
             {
-                Toby_Logger.ConsoleOutputModeMessage("Quickturn");
+                Toby_Logger.ConsoleOutputModeMessagePlay("Quickturn", owner);
             }
             else
             {

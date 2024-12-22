@@ -48,7 +48,7 @@ class Toby_ProximityDetectorHandler: EventHandler
 
         if (e.Name == "Toby_ProximityUpdate")
         {
-            Toby_Logger.ConsoleOutputModeMessage("Proximity detector settings updated");
+            Toby_Logger.ConsoleOutputModeMessagePlay("Proximity detector settings updated", playerActor);
         }
     }
 }
