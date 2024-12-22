@@ -10,10 +10,10 @@ AddOptionMenu "OptionsMenu"
 
 OptionMenu "toby_mod_options"
 {
-    StaticText "$TOBY_SNAP_TO_TARGET_SECTION"
+    StaticText "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Control "$TOBY_SNAP_TO_TARGET", "+toby_snap_to_target_keybind"
     StaticText ""
-    StaticText "$TOBY_VIEWPORT_NARRATION_SECTION"
+    StaticText "$TOBY_VIEWPORT_NARRATION_SECTION", "Gold"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET0", "toby_actors_in_viewport_narration_preset_0_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET1", "toby_actors_in_viewport_narration_preset_1_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET2", "toby_actors_in_viewport_narration_preset_2_keybind"
@@ -23,18 +23,18 @@ OptionMenu "toby_mod_options"
 
     StaticText "$TOBY_UNIVERSAL_BEACONS_SECTION"
     Option "$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "Toby_UniversalBeacon_UseUniversalSounds", "toby_yes_no"
-    Command "$TOBY_UNIVERSAL_BEACONS_UPDATE", "netevent Toby_UniversalBeaconUseUniversalSoundsUpdate"
+    Command "$TOBY_UNIVERSAL_BEACONS_UPDATE", "netevent Toby_UniversalBeaconUseUniversalSoundsUpdate", 1
 
     StaticText  ""
-    StaticText  "$TOBY_PROXIMITY_DETECTOR_SECTION"
+    StaticText  "$TOBY_PROXIMITY_DETECTOR_SECTION", "Gold"
     Control     "$TOBY_PROXIMITY_DETECTOR_TOGGLE", "toby_proximity_toggle_keybind"
     Option      "$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "Toby_Proximity_EnabledByDefault", "toby_yes_no"
     Slider      "$TOBY_PROXIMITY_MAX_DISTANCE", "Toby_Proximity_MaxDistance" , 100, 1000, 50
     Slider      "$TOBY_PROXIMITY_ATTENUATION", "Toby_Proximity_Attenuation" , 0.5, 50.0, 0.5
-    Command     "$TOBY_PROXIMITY_APPLY_SETTINGS", "netevent Toby_ProximityUpdate"
+    Command     "$TOBY_PROXIMITY_APPLY_SETTINGS", "netevent Toby_ProximityUpdate", 1
 
     StaticText  ""
-    StaticText  "$TOBY_SNAP_TO_TARGET_SECTION"
+    StaticText  "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Option "$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
 }
 
