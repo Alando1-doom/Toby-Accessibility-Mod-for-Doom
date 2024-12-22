@@ -2,6 +2,7 @@ class Toby_SnapToTargetHandler : EventHandler
 {
     Toby_ClassIgnoreListLoaderStaticHandler classIgnoreListLoader;
     Array<bool> playerSnappingToTarget;
+    Array<int> snappingMode;
     int maxPlayers;
     float maxDistance;
 
@@ -18,6 +19,7 @@ class Toby_SnapToTargetHandler : EventHandler
         for (i = 0; i < maxPlayers; i++)
         {
             playerSnappingToTarget.push(false);
+            snappingMode.push(0);
         }
     }
 
@@ -29,7 +31,7 @@ class Toby_SnapToTargetHandler : EventHandler
             if (!playerSnappingToTarget[i]) { continue; }
             Actor playerActor = players[i].mo;
             if (!playerActor) { continue; }
-            SnapToNearestShootableActor(playerActor);
+            SnapToNearestShootableActor(playerActor, i);
         }
     }
 
@@ -38,6 +40,7 @@ class Toby_SnapToTargetHandler : EventHandler
         if (e.Name == "Toby_SnapToTarget_KeyDown")
         {
             playerSnappingToTarget[e.Player] = true;
+            snappingMode[e.Player] = CVar.GetCVar("Toby_SnapToTargetTargetingMode", players[e.Player]).GetInt();
         }
         if (e.Name == "Toby_SnapToTarget_KeyUp")
         {
@@ -45,10 +48,17 @@ class Toby_SnapToTargetHandler : EventHandler
         }
     }
 
-    private void SnapToNearestShootableActor(Actor playerActor)
+    private void SnapToNearestShootableActor(Actor playerActor, int playerNumber)
     {
         Array<Actor> foundActors;
-        FindVisibleShootableActors(playerActor, foundActors);
+        if (snappingMode[playerNumber] == TSTTTM_SHOOTABLE)
+        {
+            FindVisibleShootableActors(playerActor, foundActors);
+        }
+        if (snappingMode[playerNumber] == TSTTTM_MONSTER_COMBO)
+        {
+            FindMonsterComboActors(playerActor, foundActors);
+        }
         Actor closestActor = FindClosestShootableActor(playerActor, foundActors, maxDistance);
         if (!closestActor) { return; }
         double angleToTarget = playerActor.AngleTo(closestActor);
@@ -80,6 +90,29 @@ class Toby_SnapToTargetHandler : EventHandler
         {
             if (!foundActor) { continue; }
             if (!foundActor.bShootable) { continue; }
+            if (foundActor == playerActor) { continue; }
+            if (!playerActor.IsVisible(foundActor, false)) { continue; }
+            if (classIgnoreListLoader.IsInIgnoreList(foundActor, classIgnoreListLoader.snapToTargetIgnoreList)) { continue; }
+
+            foundActors.push(foundActor);
+        }
+    }
+
+    private void FindMonsterComboActors(Actor playerActor, Array<Actor> foundActors)
+    {
+        ThinkerIterator actorFinder = ThinkerIterator.Create("Actor");
+        Actor foundActor;
+        while (foundActor = Actor(actorFinder.Next()))
+        {
+            if (!foundActor) { continue; }
+            if (!foundActor.bSHOOTABLE) { continue; }
+            if (!foundActor.bCOUNTKILL) { continue; }
+            if (!foundActor.bSOLID) { continue; }
+            if (!foundActor.bCANPUSHWALLS) { continue; }
+            if (!foundActor.bCANUSEWALLS) { continue; }
+            if (!foundActor.bACTIVATEMCROSS) { continue; }
+            if (!foundActor.bCANPASS) { continue; }
+            if (!foundActor.bISMONSTER) { continue; }
             if (foundActor == playerActor) { continue; }
             if (!playerActor.IsVisible(foundActor, false)) { continue; }
             if (classIgnoreListLoader.IsInIgnoreList(foundActor, classIgnoreListLoader.snapToTargetIgnoreList)) { continue; }
