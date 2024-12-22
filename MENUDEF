@@ -1,10 +1,5 @@
 AddOptionMenu "OptionsMenu"
 {
-    Submenu "$ZS_EM_MENU_OPTIONS", "zs_em_markermenu_base"
-}
-
-AddOptionMenu "OptionsMenu"
-{
     Submenu "$TOBY_MOD_OPTIONS", "toby_mod_options"
 }
 

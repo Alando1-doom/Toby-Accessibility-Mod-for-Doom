@@ -1,12 +1,5 @@
 [en default]
 
-ZS_EM_MENU_OPTIONS = "Extended Markers Options";
-
-ZS_EM_OP_TITLE_OPTIONS = "Extended Markers Options";
-ZS_EM_OP_TITLE_EXTENDED_MARKERS = "Extended Markers";
-ZS_EM_OP_TITLE_PLACE_MARKERS = "Place Markers";
-ZS_EM_OP_TITLE_REMOVE_MARKERS = "Remove Markers";
-
 ZS_EM_KEYS_TITLE = "Extended Markers Keys";
 
 ZS_EM_PLACE_1 = "Place Marker  1";
@@ -339,8 +332,8 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 	_STEP_WSLIME03 = "step/slime";
 	_STEP_WLAVA01 = "step/lava";
 	_STEP_WWATER01 = "step/water";
-	
-	
+
+
 //Heretic Flats
 	_STEP_FLOOR08 = "step/metal";
 	_STEP_FLOOR10 = "step/plank";
@@ -364,7 +357,7 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 	_STEP_FLATHUH3 = "step/lava";
 	_STEP_FLATHUH4 = "step/lava";
 	_STEP_FLOOR28 = "step/tin";
-	
+
 
 //Hexen Flats
 	_STEP_F_001 = "step/dirt";
