@@ -88,6 +88,10 @@ TOBY_PROXIMITY_MAX_DISTANCE = "Max distance";
 TOBY_PROXIMITY_ATTENUATION = "Attenuation";
 TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 
+TOBY_SNAP_TO_TARGET_SECTION = "Snap-to-Target Options";
+TOBY_SNAP_TO_TARGET_TARGETING_MODE = "Targeting mode";
+TOBY_SNAP_TO_TARGET_TARGETING_MODE_EVERYTHING_SHOOTABLE = "Everything shootable";
+TOBY_SNAP_TO_TARGET_TARGETING_MODE_MONSTER_COMBO = "Monster combo";
 
 //FOOTSTEPS FLAT DEFINITIONS
 
@@ -339,8 +343,8 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 	_STEP_WSLIME03 = "step/slime";
 	_STEP_WLAVA01 = "step/lava";
 	_STEP_WWATER01 = "step/water";
-	
-	
+
+
 //Heretic Flats
 	_STEP_FLOOR08 = "step/metal";
 	_STEP_FLOOR10 = "step/plank";
@@ -364,7 +368,7 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 	_STEP_FLATHUH3 = "step/lava";
 	_STEP_FLATHUH4 = "step/lava";
 	_STEP_FLOOR28 = "step/tin";
-	
+
 
 //Hexen Flats
 	_STEP_F_001 = "step/dirt";
