@@ -599,6 +599,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Add marker", "SoundToPlay":"pathfinder/addmarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Remove marker", "SoundToPlay":"pathfinder/removemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Remove nearest marker", "SoundToPlay":"pathfinder/removenearest"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Exploration", "SoundToPlay":"pathfinder/exploration"}
 
 //Pathfinder - Pathfinding
 {"EventType":"MenuChanged",   "CurrentMenuName":"Toby_Marker_Pathfinding", "SoundToPlay":"pathfinder/pathfinding"}
