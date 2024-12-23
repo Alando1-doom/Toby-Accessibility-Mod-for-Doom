@@ -1,33 +1,35 @@
-//**************************************************************
-
-Actor BasicDoorBeacon	8110
+Actor TobyBeaconBase
 {
-//$Category Accesibility Objects
-  Radius 16
-  Height 56
-  +NOCLIP
-   States
-   {
-     Spawn:
-          TNT1 A 1 A_PlaySoundEx("amb/door", "Body", 1, 0)
-          Loop
-    }
+		Health 50000
+    	Radius 8
+    	Height 32
+        Scale 0.66
+    	Speed 0
+	    Mass 10000
+    	PainChance 0
+        DONTHURTSHOOTER
+    	MONSTER
+        +JUSTHIT
+        +DONTGIB
+    	+FLOORCLIP
+        +NOTARGET
+        -COUNTKILL
+        -SHOOTABLE
+        +NOBLOOD
+        +FASTER
+        +ALWAYSFAST
+		+NOCLIP
+		+GHOST
+		+LOOKALLAROUND
+		+SEEINVISIBLE
+		+NODAMAGE
+		+INVULNERABLE
+    	PainSound "null"
+        DeathSound "null"
+    	MeleeDamage 0
 }
 
-Actor BasicSwitchBeacon	8111
-{
-//$Category Accesibility Objects
-  Radius 16
-  Height 56
-  +NOCLIP
-   States
-   {
-     Spawn:
-          TNT1 A 1 A_PlaySoundEx("amb/switch", "Body", 0, 0)
-		  TNT1 AA 35
-          Loop
-    }
-}
+//*********************************************************************
 
 //This beacons switch based exits
 Actor ExitBeacon1	7113
@@ -78,34 +80,8 @@ Actor TeleporterBeacon_Toby	 7114
 
 //***************************************************************
 
-ACTOR BasicDoorChecker 7110
+ACTOR BasicDoorChecker : TobyBeaconBase
 {
-//$Category Accessibility Door
-    	Health 10000000000000000000000
-    	Radius 8
-    	Height 32
-    	Speed 0
-	Mass 2000000000000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER 
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+INVULNERABLE
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
     	States
     	{
 	Spawn: 
@@ -142,99 +118,10 @@ ACTOR BasicDoorChecker 7110
         }
 }
 
-ACTOR BasicDoorChecker_Small 7112
-{
-//$Category Accessibility Door
-    	Health 10000000000000000000000
-    	Radius 8
-    	Height 32
-    	Speed 0
-	Mass 2000000000000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER 
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+INVULNERABLE
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
-    	States
-    	{
-	Spawn: 
-        TNT1 A 1 A_Look 
-        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        Loop 
-    See: 
-        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        TNT1 A 1 A_Chase
-        Loop
-    Missile:
-        TNT1 A 1 A_FaceTarget
-        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        Goto Spawn
-    Melee:
-        TNT1 A 1 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        TNT1 A 0 A_FaceTarget
-        Goto Spawn
-    Pain: 
-        TNT1 A 1
-        TNT1 A 1 A_Pain 
-        Goto Spawn
-    Beacon:
-         TNT1 A 1 A_PlaySoundEx("amb/door2", "SoundSlot5", 0, 0)
-		 TNT1 A 20
-         Goto Spawn
-    Death: 
-        TNT1 A 5
-        Stop
-        }
-}
+//********************************************************************************
 
-
-ACTOR BasicSwitchChecker 7111
+ACTOR BasicSwitchChecker : TobyBeaconBase
 {
-//$Category Accessibility Switch
-    	Health 10000000000000000000000
-    	Radius 8
-    	Height 32
-    	Speed 0
-	Mass 2000000000000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER 
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+INVULNERABLE
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
     	States
     	{
 	Spawn: 
@@ -271,34 +158,12 @@ ACTOR BasicSwitchChecker 7111
         }
 }
 
-ACTOR BasicSwitchChecker_SingleUse 7117
+//********************************************************
+// UNUSED
+//********************************************************
+
+ACTOR BasicSwitchChecker_SingleUse : TobyBeaconBase
 {
-//$Category Accessibility Switch
-    	Health 10000000000000000000000
-    	Radius 8
-    	Height 32
-    	Speed 0
-	Mass 2000000000000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER 
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+INVULNERABLE
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
     	States
     	{
 	Spawn: 
@@ -341,34 +206,8 @@ ACTOR BasicSwitchChecker_SingleUse 7117
         }
 }
 
-ACTOR BasicDoorChecker_SingleUse 7118
+ACTOR BasicDoorChecker_SingleUse : TobyBeaconBase
 {
-//$Category Accessibility Switch
-    	Health 10000000000000000000000
-    	Radius 8
-    	Height 32
-    	Speed 0
-	Mass 2000000000000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER 
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+INVULNERABLE
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
     	States
     	{
 	Spawn: 
