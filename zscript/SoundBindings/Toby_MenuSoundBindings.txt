@@ -34,8 +34,7 @@
 
 //HEXEN PLAYER CLASS MENU
 
-{"EventType":"MenuChanged", "CurrentMenuName":"Playerclassmenu", "CurrentMenuItemListTextString":"$MNU_CHOOSECLASS", "SoundToPlay":"hexen/menu/choose"}
-{"EventType":"MenuChanged", "CurrentMenuName":"Playerclassmenu", "CurrentMenuItemListTextString":"Choose Class", "SoundToPlay":"hexen/menu/choose"}
+{"EventType":"MenuChanged", "CurrentMenuName":"Playerclassmenu", "SoundToPlay":"hexen/menu/choose"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Playerclassmenu", "CurrentMenuItemListTextString":"$MNU_FIGHTER", "SoundToPlay":"hexen/menu/fighter"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Playerclassmenu", "CurrentMenuItemListTextString":"Fighter", "SoundToPlay":"hexen/menu/fighter"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Playerclassmenu", "CurrentMenuItemListTextString":"$MNU_CLERIC", "SoundToPlay":"hexen/menu/cleric"}
