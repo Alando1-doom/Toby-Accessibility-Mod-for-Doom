@@ -672,7 +672,7 @@
 //What the Hex Goin' On? ...I don't know - you tell me...
 {"Checksum":"a49d07a3aa6c4edb86a665d97f493754", "SoundToPlay":"toby/hexen/hex08"}
 //The Citadel of the Doomed
-{"Checksum":"a326cac9dd87f2420a58fd07ccc93772", "SoundToPlay":"toby/hexen/hex09"}
+{"Checksum":"bd879ee19a3272c57d481993665577bb", "SoundToPlay":"toby/hexen/hex09"}
 //Korax
 {"Checksum":"2218f7a711377500d19cd422a3c6b386", "SoundToPlay":"toby/hexen/hex10"}
 //The Secret Tomb
