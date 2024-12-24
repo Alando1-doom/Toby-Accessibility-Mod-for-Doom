@@ -58,6 +58,7 @@ version "4.6"
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitter.zs"
 #include "zscript/DropoffDetector/Toby_DropoffSoundEmitterManagerItem.zs"
 #include "zscript/DropoffDetector/Toby_WallDetector.zs"
+#include "zscript/DropoffDetector/Toby_WallHit.zs"
 #include "zscript/DropoffDetector/Toby_DropoffDetectorHandler.zs"
 
 //Target detector

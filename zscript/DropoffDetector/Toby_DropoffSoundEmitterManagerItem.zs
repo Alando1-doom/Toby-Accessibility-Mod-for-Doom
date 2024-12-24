@@ -1,6 +1,7 @@
 class Toby_DropoffSoundEmitterManagerItem : Inventory
 {
     private Toby_WallDetector wallDetector;
+    private Toby_DropoffDetectorHandler handler;
 
     default
     {
@@ -25,6 +26,10 @@ class Toby_DropoffSoundEmitterManagerItem : Inventory
 
         if (!wallDetector) {
             wallDetector = Toby_WallDetector.Create(owner);
+        }
+        if (!wallDetector.handler)
+        {
+            wallDetector.SetHandlerReference(handler);
         }
 
         if(!frontEmitter)
@@ -79,5 +84,10 @@ class Toby_DropoffSoundEmitterManagerItem : Inventory
                     break;
             }
         }
+    }
+
+    void SetHandlerReference(Toby_DropoffDetectorHandler handler)
+    {
+        self.handler = handler;
     }
 }

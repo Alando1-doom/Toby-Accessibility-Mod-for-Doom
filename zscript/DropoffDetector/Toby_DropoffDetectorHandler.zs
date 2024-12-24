@@ -1,8 +1,18 @@
 class Toby_DropoffDetectorHandler : EventHandler
 {
-    override void PlayerSpawned (PlayerEvent e)
+    Toby_ClassIgnoreListLoaderStaticHandler wallHitIgnoreListLoader;
+
+    override void OnRegister()
     {
-        let player = players [e.PlayerNumber].mo;
-        player.GiveInventory ("Toby_DropoffSoundEmitterManagerItem", 1);
+        wallHitIgnoreListLoader = Toby_ClassIgnoreListLoaderStaticHandler.GetInstance();
+    }
+
+    override void PlayerSpawned(PlayerEvent e)
+    {
+        Actor playerActor = players[e.PlayerNumber].mo;
+        playerActor.GiveInventory("Toby_DropoffSoundEmitterManagerItem", 1);
+
+        Toby_DropoffSoundEmitterManagerItem manager = Toby_DropoffSoundEmitterManagerItem(playerActor.FindInventory("Toby_DropoffSoundEmitterManagerItem"));
+        manager.SetHandlerReference(self);
     }
 }
