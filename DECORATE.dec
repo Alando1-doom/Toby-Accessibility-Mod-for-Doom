@@ -5,4 +5,3 @@
 //Player
 #include decorate/Detectors/FloorChecker.dec
 //#include decorate/Detectors/WalkThing.dec
-#include decorate/Detectors/WallHit.dec
