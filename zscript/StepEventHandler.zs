@@ -17,6 +17,7 @@ class StepEventHandler : EventHandler
 	/*
 	*	functions
 	*/
+	private bool enabled;
 	
 	private String getStepSound(PlayerPawn pl)
 	{
@@ -36,6 +37,7 @@ class StepEventHandler : EventHandler
 	
 	override void worldLoaded(WorldEvent e)
 	{
+		enabled = Cvar.GetCvar("Toby_ZFootstepsEnabled").GetBool();
 		for (int i = 0; i < players.size(); ++i) {			
 			wait.insert(i, 1.0);
 			//Console.printf("%d", consolePlayer);
@@ -51,6 +53,7 @@ class StepEventHandler : EventHandler
 		
 		for (int i = 0; i < players.size(); ++i)
 		{
+			if (!enabled) { continue; }
 			if (players[i].mo)
 			{
 				pl = players[i].mo;
