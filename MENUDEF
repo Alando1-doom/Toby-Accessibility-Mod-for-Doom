@@ -31,6 +31,10 @@ OptionMenu "toby_mod_options"
     StaticText  ""
     StaticText  "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Option "$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
+
+    StaticText  ""
+    StaticText  "$TOBY_ARMOR_CHECKER_SECTION", "Gold"
+    Option "$TOBY_HEXEN_ARMOR_CHECKER_MODE", "Toby_HexenArmorCheckerMode", "Toby_HexenArmorCheckerModes"
 }
 
 OptionMenu "toby_developer"
@@ -42,6 +46,7 @@ OptionMenu "toby_developer"
     StaticText ""
     Option "Toby_NarrationOutputType", "Toby_NarrationOutputType", "Toby_NarrationOutputTypes"
     Option "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
+    Option "Toby_HexenArmorCheckerMode", "Toby_HexenArmorCheckerMode", "Toby_HexenArmorCheckerModes"
     StaticText ""
     Option "Toby_Developer_MenuEvents", "Toby_Developer_MenuEvents", "OnOff"
     Option "Toby_Developer_ControlType", "Toby_Developer_ControlType", "OnOff"
@@ -80,6 +85,12 @@ OptionValue "Toby_SnapToTargetTargetingModes"
 {
     0, "$TOBY_SNAP_TO_TARGET_TARGETING_MODE_EVERYTHING_SHOOTABLE"
     1, "$TOBY_SNAP_TO_TARGET_TARGETING_MODE_MONSTER_COMBO"
+}
+
+OptionValue "Toby_HexenArmorCheckerModes"
+{
+    0, "$TOBY_HEXEN_ARMOR_CHECKER_MODE_ONLY_SLOTS"
+    1, "$TOBY_HEXEN_ARMOR_CHECKER_MODE_DETAILED"
 }
 
 OptionMenu "toby_marker_main"
