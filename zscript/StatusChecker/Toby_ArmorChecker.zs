@@ -31,8 +31,17 @@ class Toby_ArmorChecker
 
         if (Toby_ArmorChecker.GetHexenTotalArmorValue(hexenArmor, false) != 0)
         {
-            Toby_ArmorChecker.CheckHexenArmorOnlySlots(hexenArmor);
-            return;
+            int mode = CVar.GetCVar("Toby_HexenArmorCheckerMode", player).GetInt();
+            if (mode == THACM_ONLY_SLOTS)
+            {
+                Toby_ArmorChecker.CheckHexenArmorOnlySlots(hexenArmor);
+                return;
+            }
+            if (mode == THACM_DETAILED)
+            {
+                Toby_ArmorChecker.CheckHexenArmorFull(hexenArmor);
+                return;
+            }
         }
 
         string soundToPlay = "";
@@ -69,8 +78,17 @@ class Toby_ArmorChecker
 
         if (Toby_ArmorChecker.GetHexenTotalArmorValue(hexenArmor, false) != 0)
         {
-            Toby_ArmorChecker.CheckHexenArmorOnlySlotsTextOnly(hexenArmor);
-            return;
+            int mode = CVar.GetCVar("Toby_HexenArmorCheckerMode", player).GetInt();
+            if (mode == THACM_ONLY_SLOTS)
+            {
+                Toby_ArmorChecker.CheckHexenArmorOnlySlotsTextOnly(hexenArmor);
+                return;
+            }
+            if (mode == THACM_DETAILED)
+            {
+                Toby_ArmorChecker.CheckHexenArmorFullTextOnly(hexenArmor);
+                return;
+            }
         }
 
         if (armor.Amount > 0)
