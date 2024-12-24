@@ -1,3 +1,4 @@
+#library "WEAROFF"
 #include "zcommon.acs"
 
 //Old attempts at a powerup timer; works but has 
