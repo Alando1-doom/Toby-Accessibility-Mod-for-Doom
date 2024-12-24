@@ -1,4 +1,4 @@
-ExplosiveBarrel_SFX
+ExplosiveBarrel_Toby
 ExplosiveBarrel
 Pod_Toby
 Pod
