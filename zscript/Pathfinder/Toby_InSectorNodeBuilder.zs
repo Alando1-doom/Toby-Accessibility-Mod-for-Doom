@@ -18,10 +18,19 @@ class Toby_InSectorNodeBuilder
         // Sorry, I think we need to skip on caching
         // Or at least there should be a mechanism that would mark sectors as dirty
         // So that they could be recalculated instead of recalculating every time -PR
-        // if (sectorNodes[sectorId])
-        // {
-        //     return sectorNodes[sectorId];
-        // }
+
+        // Actually, I can make it a little bit better -PR
+        if (sectorNodes[sectorId])
+        {
+            Sector s = level.sectors[sectorId];
+            if (sectorNodes[sectorId].nodes.Size() < 0) { return sectorNodes[sectorId]; }
+            if (sectorNodes[sectorId].nodes[0].pos.z == s.CenterFloor()) { return sectorNodes[sectorId]; }
+            for (int i = 0; i < sectorNodes[sectorId].nodes.Size(); i++)
+            {
+                sectorNodes[sectorId].nodes[i].pos.z = s.CenterFloor();
+            }
+            return sectorNodes[sectorId];
+        }
         sectorNodes[sectorId] = BuildNodesForSector(sectorId, explorer);
         return sectorNodes[sectorId];
     }

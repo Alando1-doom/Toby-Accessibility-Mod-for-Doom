@@ -56,6 +56,7 @@ class Toby_LineSegmentIntersectionUtil
     static Vector2 ClosestPointOnSegment(Vector2 p, Vector2 a, Vector2 b)
     {
         Vector2 ab = b - a;
+        if (ab.Length() == 0) { return a; }
         Vector2 ap = p - a;
         double projectionScalar = (ap dot ab) / (ab.Length() * ab.Length());
         projectionScalar = Clamp(projectionScalar, 0, 1);
