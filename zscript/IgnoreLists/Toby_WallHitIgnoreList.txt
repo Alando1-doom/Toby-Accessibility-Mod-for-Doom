@@ -25,3 +25,4 @@ SilverKeyChecker
 SteelKeyChecker
 SwampKeyChecker
 AllKeyChecker
+Sheeld
