@@ -674,6 +674,6 @@
 //The Citadel of the Doomed
 {"Checksum":"bd879ee19a3272c57d481993665577bb", "SoundToPlay":"toby/hexen/hex09"}
 //Korax
-{"Checksum":"2218f7a711377500d19cd422a3c6b386", "SoundToPlay":"toby/hexen/hex10"}
+{"Checksum":"60489b9d05a4be30c20dd9a202f7f90c", "SoundToPlay":"toby/hexen/hex10"}
 //The Secret Tomb
 {"Checksum":"1770d7ee834b49e58f2a4b06e12b2981", "SoundToPlay":"toby/hexen/hex11"}

@@ -2,7 +2,7 @@ Actor KeyCheckerBase
 {
 		Health 50000
     	Radius 8
-    	Height 32
+    	Height 16
         Scale 0.66
     	Speed 0
 	    Mass 10000
