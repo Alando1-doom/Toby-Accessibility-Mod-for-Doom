@@ -40,6 +40,11 @@ class Toby_MenuOutputToConsole
             {
                 optionName = currentState.mItemOptionNameLocalized;
             }
+            if (currentState.isControl)
+            {
+                Toby_Logger.ConsoleOutputModeMessage(optionName .. " - " .. currentState.menuItemKeybindDescription);
+                return;
+            }
             Toby_Logger.ConsoleOutputModeMessage(optionName);
             return;
         }

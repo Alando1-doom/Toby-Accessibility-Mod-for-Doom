@@ -21,6 +21,36 @@ class Toby_StringToSoundQueue
         return soundQueue;
     }
 
+    Toby_SoundQueue CreateQueueFromKeybind(string text)
+    {
+        Reset();
+        string keySoundName = GetKeySoundName(text);
+        if (keySoundName.Length() > 0)
+        {
+            soundQueue.AddSound(GetKeySoundName(text), -1);
+        }
+        //TODO: Remove this "else" after correct key sound is returned
+        else
+        {
+            ConvertAndAddToQueue(text);
+        }
+        return soundQueue;
+    }
+
+    private string GetKeySoundName(string text)
+    {
+        if (text.Length() == 1)
+        {
+            string character = text.MakeLower();
+            return GetCharSoundName(character);
+        }
+        else
+        {
+            return "";
+            //TODO: Get sounds for all keys and sound for "Key not assigned"
+        }
+    }
+
     private void ConvertAndAddToQueue(string text)
     {
         for (int i = 0; i < text.Length(); i++)
