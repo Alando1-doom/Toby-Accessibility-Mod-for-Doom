@@ -891,7 +891,7 @@ keyboard/closeparenthesis       "sounds/Menus/CustomizeControls/Keyboard/kclosep
 keyboard/underscore             "sounds/Menus/CustomizeControls/Keyboard/kundrscr.ogg"
 keyboard/plus                   "sounds/Menus/CustomizeControls/Keyboard/kplus.ogg"
 keyboard/minus                  "sounds/Menus/CustomizeControls/Keyboard/kminus.ogg"
-keyboard/equals                 "sounds/Menus/CustomizeControls/Keyboard/kequals.ogg"
+keyboard/equals                 "sounds/Menus/CustomizeControls/Keyboard/mequals.ogg"
 keyboard/backspace              "sounds/Menus/CustomizeControls/Keyboard/kbackspc.ogg"
 keyboard/tab                    "sounds/Menus/CustomizeControls/Keyboard/ktab.ogg"
 keyboard/capslock               "sounds/Menus/CustomizeControls/Keyboard/kcaplock.ogg"
