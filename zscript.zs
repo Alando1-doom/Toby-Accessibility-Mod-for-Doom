@@ -154,3 +154,6 @@ version "4.6"
 
 //Footsteps
 #include "zscript/StepEventHandler.zs"
+
+//Elevation tones
+#include "zscript/ElevationTones/Toby_ElevationTonesHandler.zs"
