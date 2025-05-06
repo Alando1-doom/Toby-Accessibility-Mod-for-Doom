@@ -120,6 +120,7 @@ class Toby_ElevationTonesHandler : EventHandler
         double clampedValue = Max(min, Min(max, value));
         double relativePosition = (clampedValue - min) / (max - min);
         int index = Floor(relativePosition * double(size));
+        if (index < 0) { index = 0; }
         return Min(index, size - 1);
     }
 
