@@ -16,20 +16,21 @@ class Toby_ElevationTonesHandler : EventHandler
         Toby_Logger.Message("Toby_ElevationTonesHandler registered!", "Toby_Developer");
     }
 
+    override void PlayerSpawned(PlayerEvent e)
+    {
+        PopulateArrays();
+        if (level.mapName == "TITLEMAP") { return; }
+        PlayerInfo player = players[e.PlayerNumber];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
+        bool enabledForPlayer = Cvar.GetCvar("Toby_ElevationTones_EnabledByDefault", player).GetBool();
+        enabled[e.PlayerNumber] = enabledForPlayer;
+    }
+
     override void WorldLoaded(WorldEvent e)
     {
-        maxPlayers = 8;
-        minHeight = int.Max;
-        maxHeight = int.Min;
-        int i = 0;
-        for (i = 0; i < maxPlayers; i++)
-        {
-            enabled.push(true);
-            previousFloorHeight.push(int.Min);
-            previousSector.push(0);
-            previousSectorHeight.push(0);
-        }
-
+        PopulateArrays();
         for (int i = 0; i < level.sectors.Size(); i++)
         {
             Sector s = level.sectors[i];
@@ -97,7 +98,21 @@ class Toby_ElevationTonesHandler : EventHandler
         Toby_SoundQueueStaticHandler.AddSound(soundsToPlay[previousSound], -1);
         Toby_SoundQueueStaticHandler.AddSound(soundsToPlay[currentSound], -1);
         Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
 
+    override void NetworkProcess(ConsoleEvent e)
+    {
+        PlayerInfo player = players[e.Player];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
+
+        if (e.Name == "Toby_ElevationToneToggle")
+        {
+            enabled[e.Player] = !enabled[e.Player];
+            if (enabled[e.Player]) { EventHandler.SendInterfaceEvent(e.Player, "Toby_ElevationTone:0:14"); }
+            if (!enabled[e.Player]) { EventHandler.SendInterfaceEvent(e.Player, "Toby_ElevationTone:14:0"); }
+        }
     }
 
     int GetIndex(double value, double min, double max, int size)
@@ -106,5 +121,21 @@ class Toby_ElevationTonesHandler : EventHandler
         double relativePosition = (clampedValue - min) / (max - min);
         int index = Floor(relativePosition * double(size));
         return Min(index, size - 1);
+    }
+
+    private void PopulateArrays()
+    {
+        maxPlayers = 8;
+        if (enabled.Size() >= maxPlayers) { return; }
+        minHeight = int.Max;
+        maxHeight = int.Min;
+
+        for (int i = 0; i < maxPlayers; i++)
+        {
+            enabled.push(false);
+            previousFloorHeight.push(int.Min);
+            previousSector.push(0);
+            previousSectorHeight.push(0);
+        }
     }
 }

@@ -29,6 +29,11 @@ OptionMenu "toby_mod_options"
     Command     "$TOBY_PROXIMITY_APPLY_SETTINGS", "netevent Toby_ProximityUpdate", 1
 
     StaticText  ""
+    StaticText  "$TOBY_ELEVATION_TONE_SECTION", "Gold"
+    Control     "$TOBY_ELEVATION_TONE_TOGGLE", "toby_elevation_toggle_keybind"
+    Option      "$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "Toby_ElevationTones_EnabledByDefault", "toby_yes_no"
+
+    StaticText  ""
     StaticText  "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Option "$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
 

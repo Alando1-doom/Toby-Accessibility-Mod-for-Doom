@@ -81,6 +81,10 @@ TOBY_PROXIMITY_MAX_DISTANCE = "Max distance";
 TOBY_PROXIMITY_ATTENUATION = "Attenuation";
 TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 
+TOBY_ELEVATION_TONE_SECTION = "Elevation Tone Options";
+TOBY_ELEVATION_TONE_TOGGLE = "Toggle Elevation Tone on/off";
+TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT = "Enabled by default";
+
 TOBY_SNAP_TO_TARGET_SECTION = "Snap-to-Target Options";
 TOBY_SNAP_TO_TARGET_TARGETING_MODE = "Targeting mode";
 TOBY_SNAP_TO_TARGET_TARGETING_MODE_EVERYTHING_SHOOTABLE = "Everything shootable";
