@@ -72,6 +72,7 @@ OptionMenu "toby_developer"
     StaticText "User accessible options", "Gold"
     Option "Toby_SelectionNarrationWeapons", "Toby_SelectionNarrationWeapons", "OnOff"
     Option "Toby_SelectionNarrationItems", "Toby_SelectionNarrationItems", "OnOff"
+    Option "Toby_NarratedCrouch", "Toby_NarratedCrouch", "OnOff"
 }
 
 OptionValue "Toby_NarrationOutputTypes"
