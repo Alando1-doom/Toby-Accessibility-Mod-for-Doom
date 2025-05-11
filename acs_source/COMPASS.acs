@@ -2,121 +2,219 @@
 #include "zcommon.acs"
 
 Script "CompassScript" (void){
-	int angle = GetActorAngle(0);
-	if(angle<0.0625||angle>=0.9375){
-		PlaySound(0,"compass/east");
-		Print(s:"Facing east");
-	}else if(angle>=0.0625&&angle<0.1875){
-		PlaySound(0,"compass/northeast");
-		Print(s:"Facing north-east");
-	}else if(angle>=0.1875&&angle<0.3125){
-		PlaySound(0,"compass/north");
-		Print(s:"Facing north");
-	}else if(angle>=0.3125&&angle<0.4375){
-		PlaySound(0,"compass/northwest");
-		Print(s:"Facing north-west");
-	}else if(angle>=0.4375&&angle<0.5625){
-		PlaySound(0,"compass/west");
-		Print(s:"Facing west");
-	}else if(angle>=0.5625&&angle<0.6875){
-		PlaySound(0,"compass/southwest");
-		Print(s:"Facing south-west");
-	}else if(angle>=0.6875&&angle<0.8125){
-		PlaySound(0,"compass/south");
-		Print(s:"Facing south");
-	}else if(angle>=0.8125&&angle<0.9375){
-		PlaySound(0,"compass/southeast");
-		Print(s:"Facing south-east");
-	}
+    int narrationType = GetCVar("Toby_NarrationOutputType");
+    int angle = GetActorAngle(0);
+
+    if (narrationType == 0) {
+        if (angle < 0.0625 || angle >= 0.9375) {
+            PlaySound(0, "compass/east");
+            Print(s:"Facing east");
+        } else if (angle >= 0.0625 && angle < 0.1875) {
+            PlaySound(0, "compass/northeast");
+            Print(s:"Facing north-east");
+        } else if (angle >= 0.1875 && angle < 0.3125) {
+            PlaySound(0, "compass/north");
+            Print(s:"Facing north");
+        } else if (angle >= 0.3125 && angle < 0.4375) {
+            PlaySound(0, "compass/northwest");
+            Print(s:"Facing north-west");
+        } else if (angle >= 0.4375 && angle < 0.5625) {
+            PlaySound(0, "compass/west");
+            Print(s:"Facing west");
+        } else if (angle >= 0.5625 && angle < 0.6875) {
+            PlaySound(0, "compass/southwest");
+            Print(s:"Facing south-west");
+        } else if (angle >= 0.6875 && angle < 0.8125) {
+            PlaySound(0, "compass/south");
+            Print(s:"Facing south");
+        } else if (angle >= 0.8125 && angle < 0.9375){
+            PlaySound(0, "compass/southeast");
+            Print(s:"Facing south-east");
+        }
+    } else {
+        if (angle < 0.0625 || angle >= 0.9375) {
+            Log(s:"[Toby Accessibility Mod] East");
+        } else if (angle >= 0.0625 && angle < 0.1875) {
+            Log(s:"[Toby Accessibility Mod] North-east");
+        } else if (angle >= 0.1875 && angle < 0.3125) {
+            Log(s:"[Toby Accessibility Mod] North");
+        } else if (angle >= 0.3125 && angle < 0.4375) {
+            Log(s:"[Toby Accessibility Mod] North-west");
+        } else if (angle >= 0.4375 && angle < 0.5625) {
+            Log(s:"[Toby Accessibility Mod] West");
+        } else if (angle >= 0.5625 && angle < 0.6875) {
+            Log(s:"[Toby Accessibility Mod] South-west");
+        } else if (angle >= 0.6875 && angle < 0.8125) {
+            Log(s:"[Toby Accessibility Mod] South");
+        } else if (angle >= 0.8125 && angle < 0.9375){
+            Log(s:"[Toby Accessibility Mod] South-east");
+        }
+    }
 }
 
-Script "FaceNorth" (void){
-	ChangeActorAngle(0,0.25,true);
-	PlaySound(0,"compass/north");
-	Print(s:"Facing north");
+Script "FaceNorth" (void) {
+    int narrationType = GetCVar("Toby_NarrationOutputType");
+
+    ChangeActorAngle(0, 0.25, true);
+    if (narrationType == 0) {
+        PlaySound(0, "compass/north");
+        Print(s:"Facing north");
+    } else {
+        Log(s:"[Toby Accessibility Mod] North");
+    }
 }
 
-Script "TurnCompass" (int dir){ //dir==1 is left, else is right
-	int angle = GetActorAngle(0);
-	if(angle<0.0625||angle>=0.9375){ //East
-		if(dir==1){
-			ChangeActorAngle(0,0.125,true);
-			PlaySound(0,"compass/northeast");
-			Print(s:"Facing north-east");
-		}else{
-			ChangeActorAngle(0,0.875,true);
-			PlaySound(0,"compass/southeast");
-			Print(s:"Facing south-east");
-		}
-	}else if(angle>=0.0625&&angle<0.1875){ //North-east
-		if(dir==1){
-			ChangeActorAngle(0,0.25,true);
-			PlaySound(0,"compass/north");
-			Print(s:"Facing north");
-		}else{
-			ChangeActorAngle(0,1.0,true);
-			PlaySound(0,"compass/east");
-			Print(s:"Facing east");
-		}
-	}else if(angle>=0.1875&&angle<0.3125){ //North
-		if(dir==1){
-			ChangeActorAngle(0,0.375,true);
-			PlaySound(0,"compass/northwest");
-			Print(s:"Facing north-west");
-		}else{
-			ChangeActorAngle(0,0.125,true);
-			PlaySound(0,"compass/northeast");
-			Print(s:"Facing north-east");
-		}
-	}else if(angle>=0.3125&&angle<0.4375){ //North-west
-		if(dir==1){
-			ChangeActorAngle(0,0.5,true);
-			PlaySound(0,"compass/west");
-			Print(s:"Facing west");
-		}else{
-			ChangeActorAngle(0,0.25,true);
-			PlaySound(0,"compass/north");
-			Print(s:"Facing north");
-		}
-	}else if(angle>=0.4375&&angle<0.5625){ //West
-		if(dir==1){
-			ChangeActorAngle(0,0.625,true);
-			PlaySound(0,"compass/southwest");
-			Print(s:"Facing south-west");
-		}else{
-			ChangeActorAngle(0,0.375,true);
-			PlaySound(0,"compass/northwest");
-			Print(s:"Facing north-west");
-		}
-	}else if(angle>=0.5625&&angle<0.6875){ //South-west
-		if(dir==1){
-			ChangeActorAngle(0,0.75,true);
-			PlaySound(0,"compass/south");
-			Print(s:"Facing south");
-		}else{
-			ChangeActorAngle(0,0.5,true);
-			PlaySound(0,"compass/west");
-			Print(s:"Facing west");
-		}
-	}else if(angle>=0.6875&&angle<0.8125){ //South
-		if(dir==1){
-			ChangeActorAngle(0,0.875,true);
-			PlaySound(0,"compass/southeast");
-			Print(s:"Facing south-east");
-		}else{
-			ChangeActorAngle(0,0.625,true);
-			PlaySound(0,"compass/southwest");
-			Print(s:"Facing south-west");
-		}
-	}else if(angle>=0.8125&&angle<0.9375){ //South-east
-		if(dir==1){
-			ChangeActorAngle(0,1.0,true);
-			PlaySound(0,"compass/east");
-			Print(s:"Facing east");
-		}else{
-			ChangeActorAngle(0,0.75,true);
-			PlaySound(0,"compass/south");
-			Print(s:"Facing south");
-		}
-	}
+Script "TurnCompass" (int dir) { //dir==1 is left, else is right
+    int narrationType = GetCVar("Toby_NarrationOutputType");
+    int angle = GetActorAngle(0);
+
+    if (narrationType == 0) {
+        if (angle < 0.0625 || angle >= 0.9375) { //East
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.125, true);
+                PlaySound(0, "compass/northeast");
+                Print(s:"Facing north-east");
+            } else {
+                ChangeActorAngle(0, 0.875, true);
+                PlaySound(0, "compass/southeast");
+                Print(s:"Facing south-east");
+            }
+        } else if (angle >= 0.0625 && angle < 0.1875) { //North-east
+            if (dir == 1) {
+                ChangeActorAngle (0, 0.25, true);
+                PlaySound(0, "compass/north");
+                Print(s:"Facing north");
+            }else{
+                ChangeActorAngle(0, 1.0, true);
+                PlaySound(0, "compass/east");
+                Print(s:"Facing east");
+            }
+        } else if (angle >= 0.1875 && angle < 0.3125) { //North
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.375, true);
+                PlaySound(0, "compass/northwest");
+                Print(s:"Facing north-west");
+            } else {
+                ChangeActorAngle(0, 0.125, true);
+                PlaySound(0, "compass/northeast");
+                Print(s:"Facing north-east");
+            }
+        } else if (angle >= 0.3125 && angle < 0.4375) { //North-west
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.5, true);
+                PlaySound(0, "compass/west");
+                Print(s:"Facing west");
+            } else {
+                ChangeActorAngle(0, 0.25, true);
+                PlaySound(0, "compass/north");
+                Print(s:"Facing north");
+            }
+        } else if (angle >= 0.4375 && angle < 0.5625) { //West
+            if (dir == 1){
+                ChangeActorAngle(0, 0.625, true);
+                PlaySound(0, "compass/southwest");
+                Print(s:"Facing south-west");
+            } else {
+                ChangeActorAngle(0, 0.375, true);
+                PlaySound(0, "compass/northwest");
+                Print(s:"Facing north-west");
+            }
+        } else if (angle >= 0.5625 && angle < 0.6875) { //South-west
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.75, true);
+                PlaySound(0, "compass/south");
+                Print(s:"Facing south");
+            } else {
+                ChangeActorAngle(0, 0.5, true);
+                PlaySound(0, "compass/west");
+                Print(s:"Facing west");
+            }
+        } else if(angle >= 0.6875 && angle < 0.8125) { //South
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.875, true);
+                PlaySound(0, "compass/southeast");
+                Print(s:"Facing south-east");
+            } else {
+                ChangeActorAngle(0, 0.625, true);
+                PlaySound(0, "compass/southwest");
+                Print(s:"Facing south-west");
+            }
+        } else if (angle >= 0.8125 && angle < 0.9375) { //South-east
+            if (dir == 1) {
+                ChangeActorAngle(0, 1.0, true);
+                PlaySound(0, "compass/east");
+                Print(s:"Facing east");
+            } else {
+                ChangeActorAngle(0, 0.75, true);
+                PlaySound(0, "compass/south");
+                Print(s:"Facing south");
+            }
+        }
+    } else {
+        if (angle < 0.0625 || angle >= 0.9375) { //East
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.125, true);
+                Log(s:"[Toby Accessibility Mod] North-east");
+            } else {
+                ChangeActorAngle(0, 0.875, true);
+                Log(s:"[Toby Accessibility Mod] South-east");
+            }
+        } else if (angle >= 0.0625 && angle < 0.1875) { //North-east
+            if (dir == 1) {
+                ChangeActorAngle (0, 0.25, true);
+                Log(s:"[Toby Accessibility Mod] North");
+            }else{
+                ChangeActorAngle(0, 1.0, true);
+                Log(s:"[Toby Accessibility Mod] East");
+            }
+        } else if (angle >= 0.1875 && angle < 0.3125) { //North
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.375, true);
+                Log(s:"[Toby Accessibility Mod] North-west");
+            } else {
+                ChangeActorAngle(0, 0.125, true);
+                Log(s:"[Toby Accessibility Mod] North-east");
+            }
+        } else if (angle >= 0.3125 && angle < 0.4375) { //North-west
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.5, true);
+                Log(s:"[Toby Accessibility Mod] West");
+            } else {
+                ChangeActorAngle(0, 0.25, true);
+                Log(s:"[Toby Accessibility Mod] North");
+            }
+        } else if (angle >= 0.4375 && angle < 0.5625) { //West
+            if (dir == 1){
+                ChangeActorAngle(0, 0.625, true);
+                Log(s:"[Toby Accessibility Mod] South-west");
+            } else {
+                ChangeActorAngle(0, 0.375, true);
+                Log(s:"[Toby Accessibility Mod] North-west");
+            }
+        } else if (angle >= 0.5625 && angle < 0.6875) { //South-west
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.75, true);
+                Log(s:"[Toby Accessibility Mod] South");
+            } else {
+                ChangeActorAngle(0, 0.5, true);
+                Log(s:"[Toby Accessibility Mod] West");
+            }
+        } else if(angle >= 0.6875 && angle < 0.8125) { //South
+            if (dir == 1) {
+                ChangeActorAngle(0, 0.875, true);
+                Log(s:"[Toby Accessibility Mod] South-east");
+            } else {
+                ChangeActorAngle(0, 0.625, true);
+                Log(s:"[Toby Accessibility Mod] South-west");
+            }
+        } else if (angle >= 0.8125 && angle < 0.9375) { //South-east
+            if (dir == 1) {
+                ChangeActorAngle(0, 1.0, true);
+                Log(s:"[Toby Accessibility Mod] East");
+            } else {
+                ChangeActorAngle(0, 0.75, true);
+                Log(s:"[Toby Accessibility Mod] South");
+            }
+        }
+    }
 }
