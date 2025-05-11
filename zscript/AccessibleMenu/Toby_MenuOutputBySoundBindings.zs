@@ -87,6 +87,11 @@ class Toby_MenuOutputBySoundBindings
                     Toby_SoundQueueStaticHandler.AddSound("alphabet/Space", -1);
                     Toby_SoundQueueStaticHandler.AddSound("menusnd/nomenuitems", -1);
                 }
+                if (currentState.isControl)
+                {
+                    Toby_SoundQueue keybindSoundQueue = GetKeybindSound(currentState);
+                    Toby_SoundQueueStaticHandler.AddQueue(keybindSoundQueue);
+                }
                 Toby_SoundQueueStaticHandler.PlayQueue(0);
                 break;
             }
@@ -353,5 +358,23 @@ class Toby_MenuOutputBySoundBindings
         Toby_NumberToSoundQueue numberQueueBuilder = Toby_NumberToSoundQueue.Create();
         Toby_SoundQueueStaticHandler.AddQueue(numberQueueBuilder.CreateQueueFromInt(pointOfInterest[2].ToInt()));
         Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui Toby_SoundQueue GetKeybindSound(Toby_MenuState currentState)
+    {
+        Toby_SoundQueue finalSoundQueue = Toby_SoundQueue.Create();
+        finalSoundQueue.AddSound("alphabet/Space", -1);
+        Array<String> keys;
+        currentState.menuItemKeybindDescription.split(keys, ", ", TOK_SKIPEMPTY);
+        for (int i = 0; i < keys.Size(); i++)
+        {
+            Toby_StringToSoundQueue stringQueueBuilder = Toby_StringToSoundQueue.Create();
+            finalSoundQueue.AddQueue(stringQueueBuilder.CreateQueueFromKeybind(keys[i]));
+            if (i != keys.Size() - 1)
+            {
+                finalSoundQueue.AddSound("alphabet/Space", -1);
+            }
+        }
+        return finalSoundQueue;
     }
 }

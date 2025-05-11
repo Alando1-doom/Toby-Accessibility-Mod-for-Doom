@@ -15,6 +15,8 @@ class Toby_MenuState
 
     ui int menuItemsCount;
 
+    ui string menuItemKeybindDescription;
+
     ui int lastKeyPressed;
     ui bool isSlider;
     ui bool isField;
@@ -52,6 +54,8 @@ class Toby_MenuState
         otherState.mItemOptionValueLocalized = mItemOptionValueLocalized;
 
         otherState.menuItemsCount = menuItemsCount;
+
+        otherState.menuItemKeybindDescription = menuItemKeybindDescription;
 
         otherState.lastKeyPressed = lastKeyPressed;
         otherState.isSlider = isSlider;
@@ -195,6 +199,8 @@ class Toby_MenuState
 
         menuItemsCount = -1;
 
+        menuItemKeybindDescription = "null";
+
         isSaveLoad = false;
         isNewSlot = false;
         isAutosave = false;
@@ -330,7 +336,23 @@ class Toby_MenuState
                 if (mItemOptionSlider) { isSlider = true; }
                 if (mItemOptionField) { isField = true; }
                 if (mItemOptionOption) { isOption = true; }
-                if (mItemOptionControl) { isControl = true; }
+                if (mItemOptionControl)
+                {
+                    isControl = true;
+                    String description;
+                    Array<int> keys;
+
+                    int classnum;
+                    Name seltype;
+                    [seltype, classnum] = mItemOptionControl.GetAction();
+
+                    mItemOptionControl.mBindings.GetAllKeysForCommand(keys, seltype);
+                    menuItemKeybindDescription = KeyBindings.NameAllKeys(keys, false);
+                    if (menuItemKeybindDescription.Length() == 0)
+                    {
+                        menuItemKeybindDescription = "No keybind";
+                    }
+                }
             }
         }
 
