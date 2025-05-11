@@ -22,4 +22,5 @@ GameInfo
     AddEventHandlers = "Toby_PathfinderHandler"
     AddEventHandlers = "Toby_ProximityDetectorHandler"
     AddEventHandlers = "Toby_StepEventHandler"
+    AddEventHandlers = "Toby_ElevationTonesHandler"
 }

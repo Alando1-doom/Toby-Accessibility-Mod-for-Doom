@@ -92,3 +92,9 @@ AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET5" toby_actors_in_viewport_narration_
 addkeysection "Proximity Detector System" ProximityDetector
 alias toby_proximity_toggle_keybind "netevent Toby_ProximityToggle";
 AddMenuKey "Toggle proximity detector" toby_proximity_toggle_keybind
+
+//Elevation Tone
+
+addkeysection "Elevation Tone System" ElevationTone
+alias toby_elevation_toggle_keybind "netevent Toby_ElevationToneToggle";
+AddMenuKey "Toggle elevation tone" toby_elevation_toggle_keybind
