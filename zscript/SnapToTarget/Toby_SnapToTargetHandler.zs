@@ -5,10 +5,12 @@ class Toby_SnapToTargetHandler : EventHandler
     Array<int> snappingMode;
     int maxPlayers;
     float maxDistance;
+    bool playerSnappingToZeroPitch;
 
     override void OnRegister()
     {
         classIgnoreListLoader = Toby_ClassIgnoreListLoaderStaticHandler.GetInstance();
+        playerSnappingToZeroPitch = CVar.GetCVar("Toby_SnapToZeroPitch", players[consoleplayer]).GetBool();
     }
 
     override void WorldLoaded(WorldEvent e)
@@ -32,7 +34,19 @@ class Toby_SnapToTargetHandler : EventHandler
             Actor playerActor = players[i].mo;
             if (!playerActor) { continue; }
             SnapToNearestShootableActor(playerActor, i);
+            playerSnappingToZeroPitch = true;
+
         }
+        if (playerSnappingToZeroPitch)
+        {
+            for (i = 0; i < maxPlayers; i++)
+            {
+                Actor playerActor = players[i].mo;
+                if (!playerActor) { continue; }
+                SnapToZeroPitch(playerActor);
+            }
+        }
+
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -63,6 +77,11 @@ class Toby_SnapToTargetHandler : EventHandler
         if (!closestActor) { return; }
         double angleToTarget = playerActor.AngleTo(closestActor);
         playerActor.A_SetAngle(angleToTarget, SPF_INTERPOLATE);
+    }
+
+    private void SnapToZeroPitch(Actor playerActor)
+    {
+        playerActor.A_SetPitch(0);
     }
 
     private Actor FindClosestShootableActor(Actor playerActor, Array<Actor> foundActors, float maxDistance)
