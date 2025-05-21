@@ -157,3 +157,6 @@ version "4.6"
 
 //Elevation tones
 #include "zscript/ElevationTones/Toby_ElevationTonesHandler.zs"
+
+//Cheats
+#include "zscript/Cheats/CheatGiverBase.zs"
