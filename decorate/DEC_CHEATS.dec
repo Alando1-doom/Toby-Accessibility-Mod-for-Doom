@@ -1,67 +1,75 @@
-Actor GodModeGiver : CustomInventory
+Actor GodModeGiver : CheatGiverBase
 {
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	Pickup:
-		TNT1 A 1 A_JumpIfInventory("GodToken", 1, "GodOff")
-		TNT1 A 1 A_GiveInventory("GodToken", 1)
-		TNT1 A 1 A_PlaySoundEx("cheat/godon", "Auto", 0, 0)
-		//TNT1 A 1 A_ChangeFlag("INVULNERABLE", 1)
-		TNT1 A 1 A_Print("God Mode Activated")
-		Fail
-	GodOff:
-		TNT1 A 1 A_TakeInventory("GodToken", 1)
-		TNT1 A 1 A_PlaySoundEx("cheat/godoff", "Auto", 0, 0)
-		//TNT1 A 1 A_ChangeFlag("INVULNERABLE", 0)
-		TNT1 A 1 A_Print("God Mode De-Activated")
-		Fail
-		}
+    States
+    {
+    Pickup:
+        TNT1 A 1 A_JumpIfInventory("GodToken", 1, "GodOff")
+        TNT1 A 1 A_GiveInventory("GodToken", 1)
+        TNT1 A 1 A_JumpIfCVARInt("PickupText", "Toby_NarrationOutputType", 2)
+    PickupVoice:
+        TNT1 A 1 A_PlaySoundEx("cheat/godon", "Auto", 0, 0)
+        //TNT1 A 1 A_ChangeFlag("INVULNERABLE", 1)
+        TNT1 A 1 A_Print("God Mode Activated")
+        Fail
+    PickupText:
+        TNT1 A 1 A_Log("[Toby Accessibility Mod] God Mode Activated")
+        Fail
+    GodOff:
+        TNT1 A 1 A_TakeInventory("GodToken", 1)
+        TNT1 A 1 A_JumpIfCVARInt("GodOffText", "Toby_NarrationOutputType", 2)
+    GodOffVoice:
+        TNT1 A 1 A_PlaySoundEx("cheat/godoff", "Auto", 0, 0)
+        //TNT1 A 1 A_ChangeFlag("INVULNERABLE", 0)
+        TNT1 A 1 A_Print("God Mode De-Activated")
+        Fail
+    GodOffText:
+        TNT1 A 1 A_Log("[Toby Accessibility Mod] God Mode De-Activated")
+        Fail
+    }
 }
 
-ACTOR GodToken : Inventory { Inventory.MaxAmount 1 }
+Actor GodToken : Inventory { Inventory.MaxAmount 1 }
 
 
-Actor IDKFAGiver : CustomInventory
+Actor IDKFAGiver : CheatGiverBase
 {
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	Pickup:
-		TNT1 A 1 A_PlaySoundEx("cheat/idkfa", "Auto", 0, 0)
-		TNT1 A 1 A_Print("All Weapons, Ammo, Keys, and Armor!")
-		Stop
-		}
+    States
+    {
+    Pickup:
+        TNT1 A 1 A_JumpIfCVARInt("PickupText", "Toby_NarrationOutputType", 2)
+    PickupVoice:
+        TNT1 A 1 A_PlaySoundEx("cheat/idkfa", "Auto", 0, 0)
+        TNT1 A 1 A_Print("All Weapons, Ammo, Keys, and Armor!")
+        Stop
+    PickupText:
+        TNT1 A 1 A_Log("[Toby Accessibility Mod] All Weapons, Ammo, Keys, and Armor!")
+        Stop
+    }
 }
 
 
-Actor MapWarpSound : CustomInventory
+Actor MapWarpSound : CheatGiverBase
 {
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	Pickup:
-		TNT1 A 1 A_PlaySoundEx("cheat/levelwarp", "Auto", 0, 0)
-		TNT1 A 1 A_Print("Changing Level...")
-		Stop
-		}
+    States
+    {
+    Pickup:
+        TNT1 A 1 A_JumpIfCVARInt("PickupText", "Toby_NarrationOutputType", 2)
+    PickupVoice:
+        TNT1 A 1 A_PlaySoundEx("cheat/levelwarp", "Auto", 0, 0)
+        TNT1 A 1 A_Print("Changing Level...")
+        Stop
+    PickupText:
+        TNT1 A 1 A_Log("[Toby Accessibility Mod] Changing Level...")
+        Stop
+    }
 }
 
-Actor 180Giver : CustomInventory
+Actor 180Giver : CheatGiverBase
 {
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	Pickup:
-		TNT1 A 1 A_PlaySoundEx("misc/quickturn", "Auto", 0, 0)
-		Stop
-		}
+    States
+    {
+    Pickup:
+        TNT1 A 1 A_PlaySoundEx("misc/quickturn", "Auto", 0, 0)
+        Stop
+    }
 }
