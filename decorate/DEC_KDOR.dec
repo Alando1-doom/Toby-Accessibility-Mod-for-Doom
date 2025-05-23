@@ -47,6 +47,7 @@ Actor DontCheckKeyBase : Inventory
 //Red Door - Red Key Card
 Actor RedKeyChecker_V2 : KeyCheckerBase
 {
+    Tag "Red Key Access Point"
     States
     {
     Spawn:
@@ -108,6 +109,7 @@ Actor NoNotice_Red : DontCheckKeyBase {}
 //Red Door - Red Skull
 Actor RedSkullChecker_V2 : KeyCheckerBase
 {
+    Tag "Red Skull Access Point"
     States
     {
     Spawn:
@@ -166,6 +168,7 @@ Actor NoNotice_RedSkull : DontCheckKeyBase {}
 //Green Door - Green Key
 Actor GreenKeyChecker_V2 : KeyCheckerBase //Heretic
 {
+    Tag "Green Key Access Point"
     States
     {
     Spawn:
@@ -221,6 +224,7 @@ Actor NoNotice_Green : DontCheckKeyBase {} // Heretic
 //Blue Door - Blue Key Card - Blue Heretic Key
 Actor BlueKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Blue Key
 {
+    Tag "Blue Key Access Point"
     States
     {
     Spawn:
@@ -289,6 +293,7 @@ Actor NoNotice_Blue : DontCheckKeyBase {}
 //Blue Door - Blue Skull
 Actor BlueSkullChecker_V2 : KeyCheckerBase
 {
+    Tag "Blue Skull Access Point"
     States
     {
     Spawn:
@@ -344,6 +349,7 @@ Actor NoNotice_BlueSkull : DontCheckKeyBase {}
 //Yellow Door - Yellow Key Card - Yellow Heretic Key
 Actor YellowKeyChecker_V2 : KeyCheckerBase //Will check for Heretic Yellow Key
 {
+    Tag "Yellow Key Access Point"
     States
     {
     Spawn:
@@ -412,6 +418,7 @@ Actor NoNotice_Yellow : DontCheckKeyBase {}
 //Yellow Door - Yellow Skull
 Actor YellowSkullChecker_V2 : KeyCheckerBase
 {
+    Tag "Yellow Skull Access Point"
     States
     {
     Spawn:
@@ -467,6 +474,7 @@ Actor NoNotice_YellowSkull : DontCheckKeyBase {}
 //Any-Key Door
 Actor AnyKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Keys
 {
+    Tag "Any Key Access Point"
     States
     {
     Spawn:
@@ -578,6 +586,7 @@ Actor NoNotice_Any : DontCheckKeyBase {}
 //3-Key Door
 Actor 3KeyChecker_V2 : KeyCheckerBase //Will look for Heretic Keys also
 {
+    Tag "Three Keys Access Point"
     States
     {
     Spawn:
@@ -688,6 +697,7 @@ Actor Has3Keys : DontCheckKeyBase
 //6-Key Door
 Actor 6KeyChecker_V2 : KeyCheckerBase //Not needed for Heretic - For Doom only
 {
+    Tag "Six Keys Access Point"
     States
     {
     Spawn:
@@ -773,19 +783,9 @@ Actor 6KeyChecker_V2 : KeyCheckerBase //Not needed for Heretic - For Doom only
 
 Actor NoNotice_6Key : DontCheckKeyBase {}
 
-Actor Has6Keys : Inventory
+Actor Has6Keys : DontCheckKeyBase
 {
-    inventory.pickupmessage " "
-    inventory.icon "TNT1A0"
-    inventory.amount 1
-    inventory.maxamount 6
-    inventory.InterHubAmount 0
-    States
-    {
-    Spawn:
-        TNT1 A 6
-        loop
-    }
+    Inventory.MaxAmount 6
 }
 
 Actor DontCheckRedCard : DontCheckKeyBase {}
@@ -805,6 +805,7 @@ Actor DontCheckYellowSkull : DontCheckKeyBase {}
 //Axe Key Checker
 Actor AxeKeyChecker : KeyCheckerBase
 {
+    Tag "Axe Key Access Point"
     States
     {
     Spawn:
@@ -859,6 +860,7 @@ Actor NoNotice_AxeKey : DontCheckKeyBase {}
 //Cave Key Checker
 Actor CaveKeyChecker : KeyCheckerBase
 {
+    Tag "Cave Key Access Point"
     States
     {
     Spawn:
@@ -914,6 +916,7 @@ Actor NoNotice_CaveKey : DontCheckKeyBase {}
 //Castle Key Checker
 Actor CastleKeyChecker : KeyCheckerBase
 {
+    Tag "Castle Key Access Point"
     States
     {
     Spawn:
@@ -968,6 +971,7 @@ Actor NoNotice_CastleKey : DontCheckKeyBase {}
 //Dungeon Key Checker
 Actor DungeonKeyChecker : KeyCheckerBase
 {
+    Tag "Dungeon Key Access Point"
     States
     {
     Spawn:
@@ -1022,6 +1026,7 @@ Actor NoNotice_DungeonKey : DontCheckKeyBase {}
 //Emerald Key Checker
 Actor EmeraldKeyChecker : KeyCheckerBase
 {
+    Tag "Emerald Key Access Point"
     States
     {
     Spawn:
@@ -1062,7 +1067,7 @@ Actor EmeraldKeyChecker : KeyCheckerBase
         TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
         Loop
-   ActiveOn2:
+    ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
         Goto Death
     Death:
@@ -1076,6 +1081,7 @@ Actor NoNotice_EmeraldKey : DontCheckKeyBase {}
 //Fire Key Checker
 Actor FireKeyChecker : KeyCheckerBase
 {
+    Tag "Fire Key Access Point"
     States
     {
     Spawn:
@@ -1130,6 +1136,7 @@ Actor NoNotice_FireKey : DontCheckKeyBase {}
 //Horn Key Checker
 Actor HornKeyChecker : KeyCheckerBase
 {
+    Tag "Horn Key Access Point"
     States
     {
     Spawn:
@@ -1184,6 +1191,7 @@ Actor NoNotice_HornKey : DontCheckKeyBase {}
 //Rusted Key Checker
 Actor RustedKeyChecker : KeyCheckerBase
 {
+    Tag "Rusted Key Access Point"
     States
     {
     Spawn:
@@ -1220,11 +1228,11 @@ Actor RustedKeyChecker : KeyCheckerBase
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_RustedKey", 1)
         Goto ActiveOn2
-   ActiveOn:
+    ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
         Loop
-   ActiveOn2:
+    ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
         Goto Death
     Death:
@@ -1238,6 +1246,7 @@ Actor NoNotice_RustedKey : DontCheckKeyBase {}
 //Silver Key Checker
 Actor SilverKeyChecker : KeyCheckerBase
 {
+    Tag "Silver Key Access Point"
     States
     {
     Spawn:
@@ -1293,6 +1302,7 @@ Actor NoNotice_SilverKey : DontCheckKeyBase {}
 //Steel Key Checker
 Actor SteelKeyChecker : KeyCheckerBase
 {
+    Tag "Steel Key Access Point"
     States
     {
     Spawn:
@@ -1347,6 +1357,7 @@ Actor NoNotice_SteelKey : DontCheckKeyBase {}
 //Swamp Key Checker
 Actor SwampKeyChecker : KeyCheckerBase
 {
+    Tag "Swamp Key Access Point"
     States
     {
     Spawn:
@@ -1402,6 +1413,7 @@ Actor NoNotice_SwampKey : DontCheckKeyBase {}
 //All Key Door
 Actor AllKeyChecker : KeyCheckerBase //For Hexen - This is a big one...
 {
+    Tag "All Keys Access Point"
     States
     {
     Spawn:
@@ -1517,19 +1529,9 @@ Actor AllKeyChecker : KeyCheckerBase //For Hexen - This is a big one...
 
 Actor NoNotice_AllKeys : DontCheckKeyBase {}
 
-Actor HasAllKeys : Inventory
+Actor HasAllKeys : DontCheckKeyBase
 {
-    inventory.pickupmessage " "
-    inventory.icon "TNT1A0"
-    inventory.amount 1
-    inventory.maxamount 11
-    inventory.InterHubAmount 0
-    States
-    {
-    Spawn:
-        TNT1 A 6
-        loop
-    }
+    inventory.MaxAmount 11
 }
 
 Actor DontCheckAxe : DontCheckKeyBase {}
