@@ -100,42 +100,7 @@ class Toby_PathfinderHandler : EventHandler
 
             explorationTrackers[i].Update();
 
-            // I feel like this is not great -PR
-            // pathfinderThinkers[i].SetReceivingActor(players[i].mo);
-            // nodeBuilders[i].SetPlayerActor(players[i].mo);
-
-            int minDistance = 150;
-
-            if (!pathfinderFollowers[i].destinationReached)
-            {
-                if (!pathfindingMarkers[i].InStateSequence(pathfindingMarkers[i].CurState, pathfindingMarkers[i].ResolveState("Enabled")))
-                {
-                    pathfindingMarkers[i].SetStateLabel("Enabled");
-                }
-
-                if (currentNodeCurrent[i])
-                {
-                    Vector3 nextNodeVector = currentNodeCurrent[i].pos - playerActor.pos;
-                    if (nextNodeVector.Length() >= minDistance)
-                    {
-                        Vector3 newPos = playerActor.pos + nextNodeVector.Unit() * minDistance;
-                        int zPos = Max(playerActor.GetZAt(newPos.x, newPos.y, 0, GZF_ABSOLUTEPOS), newPos.z);
-                        pathfindingMarkers[i].SetOrigin((newPos.xy, zPos), true);
-                    }
-                    else
-                    {
-                        pathfindingMarkers[i].SetOrigin(currentNodeCurrent[i].pos, true);
-                    }
-                }
-            }
-
-            if (pathfinderFollowers[i].destinationReached || pathfinders[i].pathDoesNotExist)
-            {
-                if (!pathfindingMarkers[i].InStateSequence(pathfindingMarkers[i].CurState, pathfindingMarkers[i].ResolveState("Spawn")))
-                {
-                    pathfindingMarkers[i].SetStateLabel("Spawn");
-                }
-            }
+            UpdatePathfindingMarker(i, playerActor);
 
             destinationReachedPrevious[i] = destinationReachedCurrent[i];
             destinationReachedCurrent[i] = pathfinderFollowers[i].destinationReached;
@@ -150,6 +115,61 @@ class Toby_PathfinderHandler : EventHandler
             currentNodeCurrent[i] = pathfinderFollowers[i].GetCurrentPathNode();
         }
         lineInteractionTracker.Update();
+    }
+
+    void UpdatePathfindingMarker(int playerNumber, Actor playerActor)
+    {
+        int minDistance = 150;
+        if (!pathfinderFollowers[playerNumber].destinationReached)
+        {
+            bool markerEnabled = pathfindingMarkers[playerNumber].InStateSequence(pathfindingMarkers[playerNumber].CurState, pathfindingMarkers[playerNumber].ResolveState("Enabled"));
+            if (!markerEnabled)
+            {
+                pathfindingMarkers[playerNumber].SetStateLabel("Enabled");
+            }
+
+            if (markerEnabled)
+            {
+                double angleToTarget = playerActor.AngleTo(pathfindingMarkers[playerNumber]) - playerActor.angle;
+                angleToTarget = (angleToTarget + 180) % 360;
+                if (angleToTarget < 0)
+                    angleToTarget += 360;
+                angleToTarget -= 180;
+
+                Toby_Marker_Pathfinding marker = Toby_Marker_Pathfinding(pathfindingMarkers[playerNumber]);
+                if (Abs(angleToTarget) <= 15)
+                {
+                    marker.SetMarkerSound("pathfinder/nodebeaconfast");
+                }
+                else
+                {
+                    marker.SetMarkerSound("pathfinder/nodebeacon");
+                }
+            }
+
+            if (currentNodeCurrent[playerNumber])
+            {
+                Vector3 nextNodeVector = currentNodeCurrent[playerNumber].pos - playerActor.pos;
+                if (nextNodeVector.Length() >= minDistance)
+                {
+                    Vector3 newPos = playerActor.pos + nextNodeVector.Unit() * minDistance;
+                    int zPos = Max(playerActor.GetZAt(newPos.x, newPos.y, 0, GZF_ABSOLUTEPOS), newPos.z);
+                    pathfindingMarkers[playerNumber].SetOrigin((newPos.xy, zPos), true);
+                }
+                else
+                {
+                    pathfindingMarkers[playerNumber].SetOrigin(currentNodeCurrent[playerNumber].pos, true);
+                }
+            }
+        }
+
+        if (pathfinderFollowers[playerNumber].destinationReached || pathfinders[playerNumber].pathDoesNotExist)
+        {
+            if (!pathfindingMarkers[playerNumber].InStateSequence(pathfindingMarkers[playerNumber].CurState, pathfindingMarkers[playerNumber].ResolveState("Spawn")))
+            {
+                pathfindingMarkers[playerNumber].SetStateLabel("Spawn");
+            }
+        }
     }
 
     override void NetworkProcess(ConsoleEvent e)

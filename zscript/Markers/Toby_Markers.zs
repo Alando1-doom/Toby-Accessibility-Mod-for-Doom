@@ -53,23 +53,36 @@ class Toby_Marker_Secret_Exit : Toby_Marker_Silent {}
 
 class Toby_Marker_Pathfinding : ZS_Marker_Base
 {
-    default
+    string soundName;
+
+    Default
     {
         Radius 16;
         Height 20;
+        Scale 0.5;
         -INVISIBLE
-		Scale 0.5;
     }
     States
     {
         Spawn:
-            TNT1 A 2 Bright;
+            TNT1 A 2 Bright
+            {
+                SetMarkerSound("pathfinder/nodebeacon");
+            }
             Loop;
         Enabled:
             NODE A 2 Bright;
             NODE BCDABCDABC 4 Bright;
-            NODE D 2 Bright A_StartSound("pathfinder/nodebeacon", CHAN_5, 0, 1.0, ATTN_NORM);
+            NODE D 2 Bright
+            {
+                A_StartSound(soundName, CHAN_5, 0, 1.0, ATTN_NORM);
+            }
             Loop;
+    }
+
+    void SetMarkerSound(string soundName)
+    {
+        self.soundName = soundName;
     }
 }
 
