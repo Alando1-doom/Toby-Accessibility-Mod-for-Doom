@@ -1,251 +1,258 @@
 Actor TobyBeaconBase
 {
-		Health 50000
-    	Radius 8
-    	Height 16
-        Scale 0.66
-    	Speed 0
-	    Mass 10000
-    	PainChance 0
-        DONTHURTSHOOTER
-    	MONSTER
-        +JUSTHIT
-        +DONTGIB
-    	+FLOORCLIP
-        +NOTARGET
-        -COUNTKILL
-        -SHOOTABLE
-        +NOBLOOD
-        +FASTER
-        +ALWAYSFAST
-		+NOCLIP
-		+GHOST
-		+LOOKALLAROUND
-		+SEEINVISIBLE
-		+NODAMAGE
-		+INVULNERABLE
-    	PainSound "null"
-        DeathSound "null"
-    	MeleeDamage 0
+    Health 50000
+    Radius 8
+    Height 16
+    Scale 0.66
+    Speed 0
+    Mass 10000
+    PainChance 0
+    DONTHURTSHOOTER
+    MONSTER
+    +JUSTHIT
+    +DONTGIB
+    +FLOORCLIP
+    +NOTARGET
+    +NOBLOOD
+    +FASTER
+    +ALWAYSFAST
+    +NOCLIP
+    +GHOST
+    +LOOKALLAROUND
+    +SEEINVISIBLE
+    +NODAMAGE
+    +INVULNERABLE
+    -COUNTKILL
+    -SHOOTABLE
+    PainSound "null"
+    DeathSound "null"
+    MeleeDamage 0
 }
 
 //*********************************************************************
 
 //This beacons switch based exits
-Actor ExitBeacon1	7113
+Actor ExitBeacon1 7113
 {
 //$Category Accesibility Objects
-  Radius 16
-  Height 56
-  +NOCLIP
-  +GHOST
-   States
-   {
-     Spawn:
-          TNT1 A 1 A_PlaySoundEx("amb/exit1", "SoundSlot6", 1, 0)
-          Loop
+    Tag "Exit"
+    Radius 16
+    Height 56
+    +NOCLIP
+    +GHOST
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_PlaySoundEx("amb/exit1", "SoundSlot6", 1, 0)
+        Loop
     }
 }
 
 Actor SecretExitBeacon
 {
 //$Category Accesibility Objects
-  Radius 16
-  Height 56
-  +NOCLIP
-  +GHOST
-   States
-   {
-     Spawn:
-          TNT1 A 1 A_PlaySoundEx("amb/secretexit", "SoundSlot6", 1, 0)
-          Loop
+    Tag "Exit"
+    Radius 16
+    Height 56
+    +NOCLIP
+    +GHOST
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_PlaySoundEx("amb/secretexit", "SoundSlot6", 1, 0)
+        Loop
     }
 }
 
 //This beacons teleporters
-Actor TeleporterBeacon_Toby	 7114
+Actor TeleporterBeacon_Toby 7114
 {
 //$Category Accesibility Objects
-  Radius 16
-  Height 56
-  +NOCLIP
-  +GHOST
-   States
-   {
-     Spawn:
-          TNT1 A 1 A_PlaySoundEx("amb/exit2", "Auto", 1, 0)
-          Loop
+    Tag "Teleporter"
+    Radius 16
+    Height 56
+    +NOCLIP
+    +GHOST
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_PlaySoundEx("amb/exit2", "Auto", 1, 0)
+        Loop
     }
 }
 
 //***************************************************************
 
-ACTOR BasicDoorChecker : TobyBeaconBase
+Actor BasicDoorChecker : TobyBeaconBase
 {
-    	States
-    	{
-	Spawn: 
-        TNT1 A 1 A_Look 
+    Tag "Door"
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_Look
         TNT1 A 0 A_JumpIfCloser(64, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(64, "Beacon")
-        Loop 
-    See: 
         TNT1 A 0 A_JumpIfCloser(64, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(64, "Beacon")
+        Loop
+    See:
+        TNT1 A 0 A_JumpIfCloser(64, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(64, "Beacon")
         TNT1 A 1 A_Chase
         Loop
     Missile:
         TNT1 A 1 A_FaceTarget
         TNT1 A 0 A_JumpIfCloser(64, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(64, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(64, "Beacon")
         Goto Spawn
     Melee:
         TNT1 A 1 A_JumpIfCloser(64, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(64, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(64, "Beacon")
         TNT1 A 0 A_FaceTarget
         Goto Spawn
-    Pain: 
+    Pain:
         TNT1 A 1
-        TNT1 A 1 A_Pain 
+        TNT1 A 1 A_Pain
         Goto Spawn
     Beacon:
-         TNT1 A 1 A_PlaySoundEx("amb/door2", "SoundSlot5", 0, 0)
-		 TNT1 A 20
-         Goto Spawn
-    Death: 
+        TNT1 A 1 A_PlaySoundEx("amb/door2", "SoundSlot5", 0, 0)
+        TNT1 A 20
+        Goto Spawn
+    Death:
         TNT1 A 5
         Stop
-        }
+    }
 }
 
 //********************************************************************************
 
-ACTOR BasicSwitchChecker : TobyBeaconBase
+Actor BasicSwitchChecker : TobyBeaconBase
 {
-    	States
-    	{
-	Spawn: 
-        TNT1 A 1 A_Look 
+    Tag "Switch"
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_Look
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        Loop 
-    See: 
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        Loop
+    See:
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         TNT1 A 1 A_Chase
         Loop
     Missile:
         TNT1 A 1 A_FaceTarget
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         Goto Spawn
     Melee:
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         TNT1 A 1 A_FaceTarget
         Goto Spawn
-    Pain: 
+    Pain:
         TNT1 A 1
-        TNT1 A 1 A_Pain 
+        TNT1 A 1 A_Pain
         Goto Spawn
     Beacon:
-         TNT1 A 1 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
-		 TNT1 A 20
-         Goto Spawn
-    Death: 
+        TNT1 A 1 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
+        TNT1 A 20
+        Goto Spawn
+    Death:
         TNT1 A 5
         Stop
-        }
+    }
 }
 
 //********************************************************
 // UNUSED
 //********************************************************
 
-ACTOR BasicSwitchChecker_SingleUse : TobyBeaconBase
+Actor BasicSwitchChecker_SingleUse : TobyBeaconBase
 {
-    	States
-    	{
-	Spawn: 
-        TNT1 A 1 A_Look 
+    Tag "Switch"
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_Look
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        Loop 
-    See: 
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        Loop
+    See:
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         TNT1 A 1 A_Chase
         Loop
     Missile:
         TNT1 A 1 A_FaceTarget
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         Goto Spawn
     Melee:
         TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
-	    TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
+        TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
         TNT1 A 1 A_FaceTarget
         Goto Spawn
-    Pain: 
+    Pain:
         TNT1 A 1
-        TNT1 A 1 A_Pain 
+        TNT1 A 1 A_Pain
         Goto Spawn
     Beacon:
-         TNT1 A 1 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
-		 TNT1 A 20
-         Goto Spawn
-	Beacon2:
-         TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
-		 TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
-		 TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
-		 TNT1 A 1
-         Goto Death
-    Death: 
+        TNT1 A 1 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
+        TNT1 A 20
+        Goto Spawn
+    Beacon2:
+        TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
+        TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
+        TNT1 A 35 A_PlaySoundEx("amb/switch", "SoundSlot7", 0, 0)
+        TNT1 A 1
+        Goto Death
+    Death:
         TNT1 A 5
         Stop
-        }
+    }
 }
 
-ACTOR BasicDoorChecker_SingleUse : TobyBeaconBase
+Actor BasicDoorChecker_SingleUse : TobyBeaconBase
 {
-    	States
-    	{
-	Spawn: 
-        TNT1 A 1 A_Look 
+    Tag "Door"
+    States
+    {
+    Spawn:
+        TNT1 A 1 A_Look
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-        Loop 
-    See: 
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        Loop
+    See:
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         TNT1 A 1 A_Chase
         Loop
     Missile:
         TNT1 A 1 A_FaceTarget
         TNT1 A 0 A_JumpIfCloser(48, "Beacon")
-	    TNT1 A 0 A_JumpIfCloser(48, "Beacon")
+        TNT1 A 0 A_JumpIfCloser(48, "Beacon")
         Goto Spawn
     Melee:
         TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
-	    TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
+        TNT1 A 0 A_JumpIfCloser(16, "Beacon2")
         TNT1 A 1 A_FaceTarget
         Goto Spawn
-    Pain: 
+    Pain:
         TNT1 A 1
-        TNT1 A 1 A_Pain 
+        TNT1 A 1 A_Pain
         Goto Spawn
     Beacon:
-         TNT1 A 1 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
-		 TNT1 A 20
-         Goto Spawn
-	Beacon2:
-         TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
-		 TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
-		 TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
-		 TNT1 A 1
-         Goto Death
-    Death: 
+        TNT1 A 1 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
+        TNT1 A 20
+        Goto Spawn
+    Beacon2:
+        TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
+        TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
+        TNT1 A 35 A_PlaySoundEx("amb/door2", "SoundSlot7", 0, 0)
+        TNT1 A 1
+        Goto Death
+    Death:
         TNT1 A 5
         Stop
-        }
+    }
 }

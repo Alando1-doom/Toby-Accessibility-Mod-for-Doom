@@ -1,6 +1,11 @@
 //Proydoha: All of it is super hardcoded and I don't like it
 //This is where I gave up :)
 
+//Edit:
+//The year is 2025.
+//I've made it so much worse.
+//                         -P
+
 class Toby_ActorsInViewportPresets
 {
     static ui void PlayGeneralOverview(Toby_ActorsInViewportStorage storage, Toby_SoundBindingsContainer bindings)
@@ -11,6 +16,22 @@ class Toby_ActorsInViewportPresets
         Toby_ActorCounterToSoundQueue actorCounterToSoundQueue = Toby_ActorCounterToSoundQueue.Create();
         Toby_ActorsInViewportActorCounter allRemains = Toby_ActorsInViewportActorCounter.Create(storage, "All_Remains", true);
         Toby_ActorsInViewportActorCounter allNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "All_NotRemains", false);
+
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+            string allNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(allNotRemains);
+            string allRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(allRemains);
+            string textToPrint = allNotRemainsString;
+            if (allNotRemainsString != "" && allRemainsString != "") { textToPrint = textToPrint .. ", "; }
+            textToPrint = textToPrint .. allRemainsString;
+            if (textToPrint == "")
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            Toby_Logger.ConsoleOutputModeMessage("General overview: " .. textToPrint);
+            return;
+        }
 
         Toby_SoundQueue allNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(allNotRemains, bindings);
         Toby_SoundQueue allRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(allRemains, bindings);
@@ -42,6 +63,58 @@ class Toby_ActorsInViewportPresets
 
         Toby_ActorsInViewportActorCounter rightRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Remains", true);
         Toby_ActorsInViewportActorCounter rightNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_NotRemains", false);
+
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+            string leftNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftNotRemains);
+            string leftRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftRemains);
+            string frontNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontNotRemains);
+            string frontRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontRemains);
+            string rightNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightNotRemains);
+            string rightRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightRemains);
+
+            if (leftNotRemainsString == ""
+                && leftRemainsString == ""
+                && frontNotRemainsString == ""
+                && frontRemainsString == ""
+                && rightNotRemainsString == ""
+                && rightRemainsString == ""
+            )
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            string textToPrint = "";
+            string subTextToPrint = "";
+            if (leftNotRemainsString != "" || leftRemainsString != "")
+            {
+                subTextToPrint = "On your left: ";
+                subTextToPrint = subTextToPrint .. leftNotRemainsString;
+                if (leftNotRemainsString != "" && leftRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (frontNotRemainsString != "" || frontRemainsString != "")
+            {
+                subTextToPrint = "In front of you: ";
+                subTextToPrint = subTextToPrint .. frontNotRemainsString;
+                if (frontNotRemainsString != "" && frontRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (rightNotRemainsString != "" || rightRemainsString != "")
+            {
+                subTextToPrint = "On your right: ";
+                subTextToPrint = subTextToPrint .. rightNotRemainsString;
+                if (rightNotRemainsString != "" && rightRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+            return;
+        }
 
         Toby_SoundQueue leftRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftRemains, bindings);
         Toby_SoundQueue leftNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftNotRemains, bindings);
@@ -87,6 +160,58 @@ class Toby_ActorsInViewportPresets
         Toby_ActorsInViewportActorCounter farRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Distance_Far_Remains", true);
         Toby_ActorsInViewportActorCounter farNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Distance_Far_NotRemains", false);
 
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+            string closeNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(closeNotRemains);
+            string closeRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(closeRemains);
+            string mediumNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(mediumNotRemains);
+            string mediumRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(mediumRemains);
+            string farNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(farNotRemains);
+            string farRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(farRemains);
+
+            if (closeNotRemainsString == ""
+                && closeRemainsString == ""
+                && mediumNotRemainsString == ""
+                && mediumRemainsString == ""
+                && farNotRemainsString == ""
+                && farRemainsString == ""
+            )
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            string textToPrint = "";
+            string subTextToPrint = "";
+            if (closeNotRemainsString != "" || closeRemainsString != "")
+            {
+                subTextToPrint = "Close: ";
+                subTextToPrint = subTextToPrint .. closeNotRemainsString;
+                if (closeNotRemainsString != "" && closeRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. closeRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (mediumNotRemainsString != "" || mediumRemainsString != "")
+            {
+                subTextToPrint = "Medium distance: ";
+                subTextToPrint = subTextToPrint .. mediumNotRemainsString;
+                if (mediumNotRemainsString != "" && mediumRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. mediumRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (farNotRemainsString != "" || farRemainsString != "")
+            {
+                subTextToPrint = "Far: ";
+                subTextToPrint = subTextToPrint .. farNotRemainsString;
+                if (farNotRemainsString != "" && farRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. farRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+            return;
+        }
+
         Toby_SoundQueue closeRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(closeRemains, bindings);
         Toby_SoundQueue closeNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(closeNotRemains, bindings);
 
@@ -130,6 +255,58 @@ class Toby_ActorsInViewportPresets
 
         Toby_ActorsInViewportActorCounter higherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Higher_Remains", true);
         Toby_ActorsInViewportActorCounter higherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Level_Higher_NotRemains", false);
+
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+            string lowerNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(lowerNotRemains);
+            string lowerRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(lowerRemains);
+            string aboutSameNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(aboutSameNotRemains);
+            string aboutSameRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(aboutSameRemains);
+            string higherNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(higherNotRemains);
+            string higherRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(higherRemains);
+
+            if (lowerNotRemainsString == ""
+                && lowerRemainsString == ""
+                && aboutSameNotRemainsString == ""
+                && aboutSameRemainsString == ""
+                && higherNotRemainsString == ""
+                && higherRemainsString == ""
+            )
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            string textToPrint = "";
+            string subTextToPrint = "";
+            if (lowerNotRemainsString != "" || lowerRemainsString != "")
+            {
+                subTextToPrint = "Lower than you: ";
+                subTextToPrint = subTextToPrint .. lowerNotRemainsString;
+                if (lowerNotRemainsString != "" && lowerRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. lowerRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (aboutSameNotRemainsString != "" || aboutSameRemainsString != "")
+            {
+                subTextToPrint = "About same level as you: ";
+                subTextToPrint = subTextToPrint .. aboutSameNotRemainsString;
+                if (aboutSameNotRemainsString != "" && aboutSameRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. aboutSameRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (higherNotRemainsString != "" || higherRemainsString != "")
+            {
+                subTextToPrint = "Higher than you: ";
+                subTextToPrint = subTextToPrint .. higherNotRemainsString;
+                if (higherNotRemainsString != "" && higherRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. higherRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+            return;
+        }
 
         Toby_SoundQueue lowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(lowerRemains, bindings);
         Toby_SoundQueue lowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(lowerNotRemains, bindings);
@@ -187,6 +364,149 @@ class Toby_ActorsInViewportPresets
         Toby_ActorsInViewportActorCounter rightMediumNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Distance_Medium_NotRemains", false);
         Toby_ActorsInViewportActorCounter rightFarRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Distance_Far_Remains", true);
         Toby_ActorsInViewportActorCounter rightFarNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Distance_Far_NotRemains", false);
+
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+
+            string leftCloseNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftCloseNotRemains);
+            string leftCloseRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftCloseRemains);
+            string leftMediumNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftMediumNotRemains);
+            string leftMediumRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftMediumRemains);
+            string leftFarNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftFarNotRemains);
+            string leftFarRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftFarRemains);
+
+
+            string frontCloseNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontCloseNotRemains);
+            string frontCloseRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontCloseRemains);
+            string frontMediumNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontMediumNotRemains);
+            string frontMediumRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontMediumRemains);
+            string frontFarNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontFarNotRemains);
+            string frontFarRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontFarRemains);
+
+            string rightCloseRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightCloseRemains);
+            string rightCloseNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightCloseNotRemains);
+            string rightMediumRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightMediumRemains);
+            string rightMediumNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightMediumNotRemains);
+            string rightFarRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightFarRemains);
+            string rightFarNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightFarNotRemains);
+
+            if (leftCloseNotRemainsString == ""
+                && leftCloseRemainsString == ""
+                && leftMediumNotRemainsString == ""
+                && leftMediumRemainsString == ""
+                && leftFarNotRemainsString == ""
+                && leftFarRemainsString == ""
+
+                && frontCloseNotRemainsString == ""
+                && frontCloseRemainsString == ""
+                && frontMediumNotRemainsString == ""
+                && frontMediumRemainsString == ""
+                && frontFarNotRemainsString == ""
+                && frontFarRemainsString == ""
+
+                && rightCloseRemainsString == ""
+                && rightCloseNotRemainsString == ""
+                && rightMediumRemainsString == ""
+                && rightMediumNotRemainsString == ""
+                && rightFarRemainsString == ""
+                && rightFarNotRemainsString == ""
+            )
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            string textToPrint = "";
+            string subTextToPrint = "";
+
+            //Left
+            if (leftCloseNotRemainsString != "" || leftCloseRemainsString != "")
+            {
+                subTextToPrint = "On your left, close: ";
+                subTextToPrint = subTextToPrint .. leftCloseNotRemainsString;
+                if (leftCloseNotRemainsString != "" && leftCloseRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftCloseRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (leftMediumNotRemainsString != "" || leftMediumRemainsString != "")
+            {
+                subTextToPrint = "On your left, medium distance: ";
+                subTextToPrint = subTextToPrint .. leftMediumNotRemainsString;
+                if (leftMediumNotRemainsString != "" && leftMediumRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftMediumRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (leftFarNotRemainsString != "" || leftFarRemainsString != "")
+            {
+                subTextToPrint = "On your left, far: ";
+                subTextToPrint = subTextToPrint .. leftFarNotRemainsString;
+                if (leftFarNotRemainsString != "" && leftFarRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftFarRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+
+            //Front
+            if (frontCloseNotRemainsString != "" || frontCloseRemainsString != "")
+            {
+                subTextToPrint = "In front of you, close: ";
+                subTextToPrint = subTextToPrint .. frontCloseNotRemainsString;
+                if (frontCloseNotRemainsString != "" && frontCloseRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontCloseRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (frontMediumNotRemainsString != "" || frontMediumRemainsString != "")
+            {
+                subTextToPrint = "In front of you, medium distance: ";
+                subTextToPrint = subTextToPrint .. frontMediumNotRemainsString;
+                if (frontMediumNotRemainsString != "" && frontMediumRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontMediumRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (frontFarNotRemainsString != "" || frontFarRemainsString != "")
+            {
+                subTextToPrint = "In front of you, far: ";
+                subTextToPrint = subTextToPrint .. frontFarNotRemainsString;
+                if (frontFarNotRemainsString != "" && frontFarRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontFarRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+
+            //Right
+            if (rightCloseNotRemainsString != "" || rightCloseRemainsString != "")
+            {
+                subTextToPrint = "On your right, close: ";
+                subTextToPrint = subTextToPrint .. rightCloseNotRemainsString;
+                if (rightCloseNotRemainsString != "" && rightCloseRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightCloseRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (rightMediumNotRemainsString != "" || rightMediumRemainsString != "")
+            {
+                subTextToPrint = "On your right, medium distance: ";
+                subTextToPrint = subTextToPrint .. rightMediumNotRemainsString;
+                if (rightMediumNotRemainsString != "" && rightMediumRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightMediumRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (rightFarNotRemainsString != "" || rightFarRemainsString != "")
+            {
+                subTextToPrint = "On your right, far: ";
+                subTextToPrint = subTextToPrint .. rightFarNotRemainsString;
+                if (rightFarNotRemainsString != "" && rightFarRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightFarRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+            return;
+        }
 
         Toby_SoundQueue leftCloseRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftCloseRemains, bindings);
         Toby_SoundQueue leftCloseNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftCloseNotRemains, bindings);
@@ -293,6 +613,150 @@ class Toby_ActorsInViewportPresets
         Toby_ActorsInViewportActorCounter rightAboutSameNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_AboutSame_NotRemains", false);
         Toby_ActorsInViewportActorCounter rightHigherRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Higher_Remains", true);
         Toby_ActorsInViewportActorCounter rightHigherNotRemains = Toby_ActorsInViewportActorCounter.Create(storage, "Screen_Right_Level_Higher_NotRemains", false);
+
+
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+
+            string leftLowerNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftLowerNotRemains);
+            string leftLowerRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftLowerRemains);
+            string leftAboutSameNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftAboutSameNotRemains);
+            string leftAboutSameRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftAboutSameRemains);
+            string leftHigherNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftHigherNotRemains);
+            string leftHigherRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(leftHigherRemains);
+
+            string frontLowerNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontLowerNotRemains);
+            string frontLowerRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontLowerRemains);
+            string frontAboutSameNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontAboutSameNotRemains);
+            string frontAboutSameRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontAboutSameRemains);
+            string frontHigherNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontHigherNotRemains);
+            string frontHigherRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(frontHigherRemains);
+
+            string rightLowerNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightLowerNotRemains);
+            string rightLowerRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightLowerRemains);
+            string rightAboutSameNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightAboutSameNotRemains);
+            string rightAboutSameRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightAboutSameRemains);
+            string rightHigherNotRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightHigherNotRemains);
+            string rightHigherRemainsString = actorCounterToSoundQueue.CreateStringFromActorCounter(rightHigherRemains);
+
+            if (leftLowerNotRemainsString == ""
+                && leftLowerRemainsString == ""
+                && leftAboutSameNotRemainsString == ""
+                && leftAboutSameRemainsString == ""
+                && leftHigherNotRemainsString == ""
+                && leftHigherRemainsString == ""
+
+                && frontLowerNotRemainsString == ""
+                && frontLowerRemainsString == ""
+                && frontAboutSameNotRemainsString == ""
+                && frontAboutSameRemainsString == ""
+                && frontHigherNotRemainsString == ""
+                && frontHigherRemainsString == ""
+
+                && rightLowerNotRemainsString == ""
+                && rightLowerRemainsString == ""
+                && rightAboutSameNotRemainsString == ""
+                && rightAboutSameRemainsString == ""
+                && rightHigherNotRemainsString == ""
+                && rightHigherRemainsString == ""
+            )
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No notable actors around");
+                return;
+            }
+            string textToPrint = "";
+            string subTextToPrint = "";
+
+            //Left
+            if (leftLowerNotRemainsString != "" || leftLowerRemainsString != "")
+            {
+                subTextToPrint = "On your left, lower than you: ";
+                subTextToPrint = subTextToPrint .. leftLowerNotRemainsString;
+                if (leftLowerNotRemainsString != "" && leftLowerRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftLowerRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (leftAboutSameNotRemainsString != "" || leftAboutSameRemainsString != "")
+            {
+                subTextToPrint = "On your left, about same height as you: ";
+                subTextToPrint = subTextToPrint .. leftAboutSameNotRemainsString;
+                if (leftAboutSameNotRemainsString != "" && leftAboutSameRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftAboutSameRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (leftHigherNotRemainsString != "" || leftHigherRemainsString != "")
+            {
+                subTextToPrint = "On your left, higher than you: ";
+                subTextToPrint = subTextToPrint .. leftHigherNotRemainsString;
+                if (leftHigherNotRemainsString != "" && leftHigherRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. leftHigherRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+
+            //Front
+            if (frontLowerNotRemainsString != "" || frontLowerRemainsString != "")
+            {
+                subTextToPrint = "In front of you, lower than you: ";
+                subTextToPrint = subTextToPrint .. frontLowerNotRemainsString;
+                if (frontLowerNotRemainsString != "" && frontLowerRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontLowerRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (frontAboutSameNotRemainsString != "" || frontAboutSameRemainsString != "")
+            {
+                subTextToPrint = "In front of you, about same height as you: ";
+                subTextToPrint = subTextToPrint .. frontAboutSameNotRemainsString;
+                if (frontAboutSameNotRemainsString != "" && frontAboutSameRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontAboutSameRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (frontHigherNotRemainsString != "" || frontHigherRemainsString != "")
+            {
+                subTextToPrint = "In front of you, higher than you: ";
+                subTextToPrint = subTextToPrint .. frontHigherNotRemainsString;
+                if (frontHigherNotRemainsString != "" && frontHigherRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. frontHigherRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+
+            //Right
+            if (rightLowerNotRemainsString != "" || rightLowerRemainsString != "")
+            {
+                subTextToPrint = "On your right, lower than you: ";
+                subTextToPrint = subTextToPrint .. rightLowerNotRemainsString;
+                if (rightLowerNotRemainsString != "" && rightLowerRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightLowerRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (rightAboutSameNotRemainsString != "" || rightAboutSameRemainsString != "")
+            {
+                subTextToPrint = "On your right, about same height as you: ";
+                subTextToPrint = subTextToPrint .. rightAboutSameNotRemainsString;
+                if (rightAboutSameNotRemainsString != "" && rightAboutSameRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightAboutSameRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+            if (rightHigherNotRemainsString != "" || rightHigherRemainsString != "")
+            {
+                subTextToPrint = "On your right, higher than you: ";
+                subTextToPrint = subTextToPrint .. rightHigherNotRemainsString;
+                if (rightHigherNotRemainsString != "" && rightHigherRemainsString != "") { subTextToPrint = subTextToPrint .. ", "; }
+                subTextToPrint = subTextToPrint .. rightHigherRemainsString .. "; ";
+            }
+            textToPrint = textToPrint .. subTextToPrint;
+            subTextToPrint = "";
+
+            Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+            return;
+        }
 
         Toby_SoundQueue leftLowerRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftLowerRemains, bindings);
         Toby_SoundQueue leftLowerNotRemainsQueue = actorCounterToSoundQueue.CreateQueueFromActorCounter(leftLowerNotRemains, bindings);
