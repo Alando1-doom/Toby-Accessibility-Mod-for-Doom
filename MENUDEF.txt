@@ -198,7 +198,7 @@ OptionMenu "PickupSounds"
 {
 	Title "Pickup Beacon Sounds"
 	Command "Health Bonus", "wait 15; playsound misc/health; wait 24; playsound misc/health; wait 24; playsound misc/health; wait 24; playsound misc/health"
-	Command "Stimpack Bonus", "wait 15; playsound misc/health/medium; wait 24; playsound misc/health/medium; wait 24; playsound misc/health/medium; wait 24; playsound misc/health/medium"
+	Command "Stimpack", "wait 15; playsound misc/health/medium; wait 24; playsound misc/health/medium; wait 24; playsound misc/health/medium; wait 24; playsound misc/health/medium"
 	Command "Medikit", "wait 15; playsound misc/health/large; wait 24; playsound misc/health/large; wait 24; playsound misc/health/large; wait 24; playsound misc/health/large"
 	Command "Armor Bonus", "wait 15; playsound misc/armor/small; wait 24; playsound misc/armor/small; wait 24; playsound misc/armor/small; wait 24; playsound misc/armor/small"
 	Command "Green Armor", "wait 15; playsound misc/armor; wait 24; playsound misc/armor; wait 24; playsound misc/armor; wait 24; playsound misc/armor"
