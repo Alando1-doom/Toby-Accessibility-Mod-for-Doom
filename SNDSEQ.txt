@@ -1,0 +1,3 @@
+:CeilingNormal
+	playrepeat	plats/crush
+end
