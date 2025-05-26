@@ -138,4 +138,28 @@ class Toby_ActorCounterToSoundQueue
         }
         return soundToPlay;
     }
+
+    ui string CreateStringFromActorCounter(Toby_ActorsInViewportActorCounter actorCounter)
+    {
+        string finalString = "";
+        Toby_ClassIgnoreListLoaderStaticHandler ignoreListHandler = Toby_ClassIgnoreListLoaderStaticHandler.GetInstanceUi();
+        bool firstAdded = false;
+        for (let i = 0; i < actorCounter.namesAndAmounts.Size(); i++)
+        {
+            class<Actor> actorClass = actorCounter.namesAndAmounts[i].name;
+            if (ignoreListHandler.IsInIgnoreListStringUi(actorCounter.namesAndAmounts[i].name, ignoreListHandler.areaScannerIgnoreList)) { continue; }
+            if (firstAdded)
+            {
+                finalString = finalString .. ", ";
+            }
+            string classTagOrName = GetDefaultByType(actorClass).GetTag();
+            if (actorCounter.isRemains)
+            {
+                classTagOrName = "remains of "..classTagOrName;
+            }
+            finalString = finalString .. classTagOrName .. " - " .. actorCounter.namesAndAmounts[i].amount;
+            firstAdded = true;
+        }
+        return finalString;
+    }
 }
