@@ -1197,3 +1197,38 @@ menu/skin/base                      "sounds/Menus/PlayerSetup/obase.ogg"
 $volume menu/skin/base              0.5
 menu/class/marine                   "sounds/Menus/PlayerSetup/omarine.ogg"
 $volume menu/class/marine           0.5
+
+//Toby Accessibility Options
+
+menu/tobyopt/main								"sounds/Menus/TobyOptions/TobyOptions.ogg"
+$volume menu/tobyopt/main      0.5
+
+menu/tobyopt/universalbeacon			"sounds/Menus/TobyOptions/UniversalBeacon.ogg"
+$volume menu/tobyopt/universalbeacon      0.5
+menu/tobyopt/updatebeacons				"sounds/Menus/TobyOptions/UpdateBeacons.ogg"
+$volume menu/tobyopt/updatebeacons      0.5
+
+menu/tobyopt/toggleproxy					"sounds/Menus/TobyOptions/ToggleProxy.ogg"
+$volume menu/tobyopt/toggleproxy      0.5
+menu/tobyopt/enabledefault				"sounds/Menus/TobyOptions/EnableDefault.ogg"
+$volume menu/tobyopt/enabledefault      0.5
+menu/tobyopt/maxdistance					"sounds/Menus/TobyOptions/MaxDistance.ogg"
+$volume menu/tobyopt/maxdistance      0.5
+menu/tobyopt/attenuation					"sounds/Menus/TobyOptions/Attenuation.ogg"
+$volume menu/tobyopt/attenuation      0.5
+menu/tobyopt/applyproxysettings		"sounds/Menus/TobyOptions/ApplyProxySettings.ogg"
+$volume menu/tobyopt/applyproxysettings      0.5
+
+menu/tobyopt/targetingmode				"sounds/Menus/TobyOptions/TargetingMode.ogg"
+$volume menu/tobyopt/targetingmode      0.5
+menu/tobyopt/everythingshootable		"sounds/Menus/TobyOptions/AllShootable.ogg"
+$volume menu/tobyopt/everythingshootable      0.5
+menu/tobyopt/monstercombo				"sounds/Menus/TobyOptions/MonsterCombo.ogg"
+$volume menu/tobyopt/monstercombo      0.5
+
+menu/tobyopt/hexenarmormode			"sounds/Menus/TobyOptions/HexenArmorMode.ogg"
+$volume menu/tobyopt/hexenarmormode      0.5
+menu/tobyopt/onlyslots						"sounds/Menus/TobyOptions/OnlySlots.ogg"
+$volume menu/tobyopt/onlyslots      0.5
+menu/tobyopt/detailed							"sounds/Menus/TobyOptions/Detailed.ogg"
+$volume menu/tobyopt/detailed	      0.5
