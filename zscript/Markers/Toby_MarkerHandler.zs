@@ -58,18 +58,18 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("6KeyChecker_V2", "Toby_Marker_SixKeyDoorDoor", "Six key door");
         autoMarkerDb.AddItem("AnyKeyChecker_V2", "Toby_Marker_AnyKeyDoor", "Any key door");
 
-		autoMarkerDb.AddItem("AxeKeyChecker", "Toby_Marker_AxeKey", "Axe Door");
-		autoMarkerDb.AddItem("CastleKeyChecker", "Toby_Marker_CastleKey", "Castle Door");
-		autoMarkerDb.AddItem("CaveKeyChecker", "Toby_Marker_CaveKey", "Cave Door");
-		autoMarkerDb.AddItem("DungeonKeyChecker", "Toby_Marker_DungeonKey", "Dungeon Door");
-		autoMarkerDb.AddItem("EmeraldKeyChecker", "Toby_Marker_EmeraldKey", "Emerald Door");
-		autoMarkerDb.AddItem("FireKeyChecker", "Toby_Marker_FireKey", "Fire Door");
-		autoMarkerDb.AddItem("HornKeyChecker", "Toby_Marker_HornKey", "Horn Door");
-		autoMarkerDb.AddItem("RustedKeyChecker", "Toby_Marker_RustedKey", "Rusted Door");
-		autoMarkerDb.AddItem("SilverKeyChecker", "Toby_Marker_SilverKey", "Silver Door");
-		autoMarkerDb.AddItem("SteelKeyChecker", "Toby_Marker_SteelKey", "Steel Door");
-		autoMarkerDb.AddItem("SwampKeyChecker", "Toby_Marker_SwampKey", "Swamp Door");
-		autoMarkerDb.AddItem("AllKeyChecker", "Toby_Marker_AllKey", "All Key Door");
+        autoMarkerDb.AddItem("AxeKeyChecker", "Toby_Marker_AxeKey", "Axe Door");
+        autoMarkerDb.AddItem("CastleKeyChecker", "Toby_Marker_CastleKey", "Castle Door");
+        autoMarkerDb.AddItem("CaveKeyChecker", "Toby_Marker_CaveKey", "Cave Door");
+        autoMarkerDb.AddItem("DungeonKeyChecker", "Toby_Marker_DungeonKey", "Dungeon Door");
+        autoMarkerDb.AddItem("EmeraldKeyChecker", "Toby_Marker_EmeraldKey", "Emerald Door");
+        autoMarkerDb.AddItem("FireKeyChecker", "Toby_Marker_FireKey", "Fire Door");
+        autoMarkerDb.AddItem("HornKeyChecker", "Toby_Marker_HornKey", "Horn Door");
+        autoMarkerDb.AddItem("RustedKeyChecker", "Toby_Marker_RustedKey", "Rusted Door");
+        autoMarkerDb.AddItem("SilverKeyChecker", "Toby_Marker_SilverKey", "Silver Door");
+        autoMarkerDb.AddItem("SteelKeyChecker", "Toby_Marker_SteelKey", "Steel Door");
+        autoMarkerDb.AddItem("SwampKeyChecker", "Toby_Marker_SwampKey", "Swamp Door");
+        autoMarkerDb.AddItem("AllKeyChecker", "Toby_Marker_AllKey", "All Key Door");
 
         autoMarkerDb.AddItem("ExitBeacon1", "Toby_Marker_Exit", "Exit");
         autoMarkerDb.AddItem("SecretExitBeacon", "Toby_Marker_Secret_Exit", "Secret Exit");
