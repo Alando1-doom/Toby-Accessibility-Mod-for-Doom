@@ -57,7 +57,7 @@ class Toby_MarkerHandler : EventHandler
         autoMarkerDb.AddItem("3KeyChecker_V2", "Toby_Marker_ThreeKeyDoor", "Three key door");
         autoMarkerDb.AddItem("6KeyChecker_V2", "Toby_Marker_SixKeyDoorDoor", "Six key door");
         autoMarkerDb.AddItem("AnyKeyChecker_V2", "Toby_Marker_AnyKeyDoor", "Any key door");
-		
+
 		autoMarkerDb.AddItem("AxeKeyChecker", "Toby_Marker_AxeKey", "Axe Door");
 		autoMarkerDb.AddItem("CastleKeyChecker", "Toby_Marker_CastleKey", "Castle Door");
 		autoMarkerDb.AddItem("CaveKeyChecker", "Toby_Marker_CaveKey", "Cave Door");
@@ -101,6 +101,18 @@ class Toby_MarkerHandler : EventHandler
         if (eventAndArgument[0] == "ZS_RemoveMarker")
         {
             recordContainers[e.Player].RemoveMarker(eventAndArgument[1].ToInt());
+        }
+    }
+
+    override void InterfaceProcess(ConsoleEvent e)
+    {
+        if (e.Name != "Toby_Interface_MarkerHandler_AutomarkerPlaced") { return; }
+        if (CVar.FindCvar("Toby_NarrationOutputType").GetInt() == TNOT_CONSOLE)
+        {
+            S_StartSound("marker/automarkerplacednonarration", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            Toby_Logger.ConsoleOutputModeMessage("Point of interest added");
+        } else {
+            S_StartSound("marker/automarkerplaced", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
         }
     }
 
@@ -176,6 +188,7 @@ class Toby_MarkerHandler : EventHandler
 
                     if (SimilarMarkerExists(recordContainers[i], j, foundActor, minPlacementDistance)) { continue; }
                     recordContainers[i].AddMarker(autoMarkerDb.items[j].markerActorName, playerActor.pos, autoMarkerDb.items[j].description);
+                    EventHandler.SendInterfaceEvent(i, "Toby_Interface_MarkerHandler_AutomarkerPlaced");
                 }
             }
         }

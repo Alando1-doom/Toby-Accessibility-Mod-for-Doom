@@ -37,6 +37,7 @@ HitMarkers utilizes sounds from the following games:
 - Titanfall 2 by Respawn Entertainment
 
 - Wind sound clip for proximity detector taken from "FilmCow Royalty Free Sound Effects Library - Volume 2", file "beach - far, waves.wav"
+- marker/automarkerplaced taken from "Sonniss.com - GDC 2015 - Game Audio Bundle" - TheLibrarybyMTC_UI_GlassTicks_25.wav
 
 Additional Credit & Thanks:
 
