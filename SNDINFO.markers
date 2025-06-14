@@ -23,6 +23,9 @@ marker/undo10       "sounds/Markers/dsm10rem.ogg"
 marker/maxed        "sounds/Markers/dsmmax.ogg"
 marker/cleared      "sounds/Markers/dsmclear.ogg"
 
+marker/automarkerplaced                 "sounds/Markers/AutoMarker_Placed.wav"
+marker/automarkerplacednonarration      "sounds/Markers/AutoMarker_Placed.wav"
+
 //Interface
 
 marker/Markers/maxout       "sounds/Markers/dsmaxout.ogg"
@@ -79,4 +82,3 @@ $rolloff marker/beacon10    linear	96 640
 marker/beacon10             "sounds/Markers/dsmark10.ogg"
 $rolloff marker/call10     linear	128 768
 marker/call10              "sounds/Markers/dsmark10.wav"
-
