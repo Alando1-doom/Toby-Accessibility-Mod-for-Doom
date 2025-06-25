@@ -23,7 +23,7 @@ marker/undo10       "sounds/Markers/dsm10rem.ogg"
 marker/maxed        "sounds/Markers/dsmmax.ogg"
 marker/cleared      "sounds/Markers/dsmclear.ogg"
 
-marker/automarkerplaced                 "sounds/Markers/AutoMarker_Placed.wav"
+marker/automarkerplaced                 "sounds/Markers/AutoMarker_Voiced.ogg"
 marker/automarkerplacednonarration      "sounds/Markers/AutoMarker_Placed.wav"
 
 //Interface

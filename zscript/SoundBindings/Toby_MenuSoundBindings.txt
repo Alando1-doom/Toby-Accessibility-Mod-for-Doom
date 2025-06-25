@@ -125,8 +125,10 @@
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"SimpleOptionsMenu", "SoundToPlay":"menusnd/option"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Sound Options", "SoundToPlay":"menusnd/soundopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Sound Cue Directory", "SoundToPlay":"menu/tobyopt/soundcue"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"GZDoom Options", "SoundToPlay":"menusnd/gzdopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Customize Controls", "SoundToPlay":"menu/option/controls"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"$TOBY_MOD_OPTIONS", "SoundToPlay":"menu/tobyopt/main"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Mouse Options", "SoundToPlay":"menu/option/mouse"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Player Setup", "SoundToPlay":"menu/option/player"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Gameplay Options", "SoundToPlay":"menu/option/gameplay"}
@@ -145,7 +147,7 @@
 
 //{"EventType":"MenuChanged",   "CurrentMenuName":"OptionsMenu", "SoundToPlay":"menusnd/option"}
 
-//CONTROLS MENU*
+//CONTROLS MENU
 {"EventType":"MenuChanged",   "CurrentMenuName":"CustomizeControls", "SoundToPlay":"menu/option/controls"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$OPTMNU_CONTROLS", "SoundToPlay":"menu/option/controls"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Customize Controls", "SoundToPlay":"menu/option/controls"}
@@ -291,6 +293,33 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET3", "SoundToPlay":"menu/controls/asdirdis"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET4", "SoundToPlay":"menu/controls/asheight"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle elevation tone", "SoundToPlay":"menu/tobyopt/elevationtone"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
+//Toby Acc Mod Options
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_mod_options", "SoundToPlay":"menu/tobyopt/main"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "SoundToPlay":"menu/tobyopt/universalbeacon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_UPDATE", "SoundToPlay":"menu/tobyopt/updatebeacons"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_TOGGLE", "SoundToPlay":"menu/controls/proxydetector"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/enabledefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_MAX_DISTANCE", "SoundToPlay":"menu/tobyopt/maxdistance"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_ATTENUATION", "SoundToPlay":"menu/tobyopt/attenuation"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_APPLY_SETTINGS", "SoundToPlay":"menu/tobyopt/applyproxysettings"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET", "SoundToPlay":"menu/controls/snaptotarget"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "SoundToPlay":"menu/tobyopt/targetingmode"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE_EVERYTHING_SHOOTABLE", "SoundToPlay":"menu/tobyopt/everythingshootable"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE_MONSTER_COMBO", "SoundToPlay":"menu/tobyopt/monstercombo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_HEXEN_ARMOR_CHECKER_MODE", "SoundToPlay":"menu/tobyopt/hexenarmormode"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_HEXEN_ARMOR_CHECKER_MODE_ONLY_SLOTS", "SoundToPlay":"menu/tobyopt/onlyslots"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_HEXEN_ARMOR_CHECKER_MODE_DETAILED", "SoundToPlay":"menu/tobyopt/detailed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET0", "SoundToPlay":"menu/controls/asgeneral"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET1", "SoundToPlay":"menu/controls/asdirection"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET2", "SoundToPlay":"menu/controls/asdistance"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET3", "SoundToPlay":"menu/controls/asdirdis"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET4", "SoundToPlay":"menu/controls/asheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
 
 
 //MOUSE MENU
@@ -655,6 +684,268 @@
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Swamp Door", "SoundToPlay":"pathfinder/swampdoor"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"All Key Door", "SoundToPlay":"pathfinder/alldoor"}
 
+
+//SOUND CUE DIRECTORY
+{"EventType":"MenuChanged",   "CurrentMenuName":"SoundDir", "SoundToPlay":"menu/tobyopt/soundcue"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Accessibility Sounds", "SoundToPlay":"menu/sounddir/accessibility"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Interactive Sounds", "SoundToPlay":"menu/sounddir/interactives"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Pickup Beacon Sounds", "SoundToPlay":"menu/sounddir/pickups"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Weapons & Ammo Beacon Sounds", "SoundToPlay":"menu/sounddir/guns"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Powerup Sounds", "SoundToPlay":"menu/sounddir/powerups"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Decoration Sounds", "SoundToPlay":"menu/sounddir/decorations"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Environmental Sounds", "SoundToPlay":"menu/sounddir/environment"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Liquid Sounds", "SoundToPlay":"menu/sounddir/liquids"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Monster Sounds", "SoundToPlay":"menu/sounddir/monsters"}
+
+//INDIVIDUAL MENUS
+//ACCESSIBILITY SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"AccSounds", "SoundToPlay":"menu/sounddir/accessibility"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Impact Detection", "SoundToPlay":"menu/sounddir/acc/impactdetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Drop-Off Detection", "SoundToPlay":"menu/sounddir/acc/dropoff"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Proximity Detection", "SoundToPlay":"menu/sounddir/acc/proxydetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Monster", "SoundToPlay":"menu/sounddir/acc/monsdetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Explosive Barrel", "SoundToPlay":"menu/sounddir/acc/barreldetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Player", "SoundToPlay":"menu/sounddir/acc/playerdetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Destructible Decoration", "SoundToPlay":"menu/sounddir/acc/decodetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Hit Marker - Target Hit", "SoundToPlay":"menu/sounddir/acc/hitmarkerhit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Hit Marker - Target Killed", "SoundToPlay":"menu/sounddir/acc/hitmarkerkill"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Health, Armor, Ammo Full", "SoundToPlay":"menu/sounddir/acc/full"}
+
+
+//INTERACTIVE SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"InteractiveSounds", "SoundToPlay":"menu/sounddir/interactives"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Door", "SoundToPlay":"toby/actorsinviewport/env/door"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Switch", "SoundToPlay":"toby/actorsinviewport/env/switch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Door", "SoundToPlay":"menu/sounddir/interact/lockeddoor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Tech Door", "SoundToPlay":"menu/sounddir/interact/techdoor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Demon Door", "SoundToPlay":"menu/sounddir/interact/demondoor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Multi-Key Door", "SoundToPlay":"menu/sounddir/interact/multikeydoor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Any Key Door", "SoundToPlay":"menu/sounddir/interact/anykeydoor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Teleporter", "SoundToPlay":"toby/actorsinviewport/env/teleport"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"toby/actorsinviewport/env/exit"}
+
+
+//PICKUP SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"PickupSounds", "SoundToPlay":"menu/sounddir/pickups"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Health Bonus", "SoundToPlay":"toby/actorsinviewport/pickups/healthbonus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Stimpack", "SoundToPlay":"toby/actorsinviewport/pickups/stimpack"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Medikit", "SoundToPlay":"toby/actorsinviewport/pickups/medikit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Armor Bonus", "SoundToPlay":"toby/actorsinviewport/pickups/armorbonus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Green Armor", "SoundToPlay":"toby/actorsinviewport/pickups/armor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Mega Armor", "SoundToPlay":"toby/actorsinviewport/pickups/megaarmor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Keys", "SoundToPlay":"menu/sounddir/pickups/keys"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Crystal Vial", "SoundToPlay":"heretic/actorsinviewport/health/vial"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Quartz Flask", "SoundToPlay":"heretic/actorsinviewport/health/flask"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Silver Shield", "SoundToPlay":"heretic/actorsinviewport/armor/silvershield"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Enchanted Shield", "SoundToPlay":"heretic/actorsinviewport/armor/enchantedshield"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Platinum Helm", "SoundToPlay":"hexen/actorsinviewport/armor/helmet"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Dragon Skin Bracers", "SoundToPlay":"hexen/actorsinviewport/armor/bracers"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Falcon Shield", "SoundToPlay":"hexen/actorsinviewport/armor/shield"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Amulet of Warding", "SoundToPlay":"hexen/actorsinviewport/armor/amulet"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Mesh Armor", "SoundToPlay":"hexen/actorsinviewport/armor/mesharmor"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PickupSounds", "CurrentMenuItemOptionName":"Puzzle Items", "SoundToPlay":"menu/sounddir/pickups/puzzle"}
+
+
+//GUNS & AMMO SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"WeaponSounds", "SoundToPlay":"menu/sounddir/guns"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Chainsaw", "SoundToPlay":"toby/actorsinviewport/pickups/chainsaw"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Shotgun", "SoundToPlay":"toby/actorsinviewport/pickups/shotgun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Super Shotgun", "SoundToPlay":"toby/actorsinviewport/pickups/supershotgun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Chaingun", "SoundToPlay":"toby/actorsinviewport/pickups/chaingun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Rocket Launcher", "SoundToPlay":"toby/actorsinviewport/pickups/rocketlauncher"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Plasmagun", "SoundToPlay":"toby/actorsinviewport/pickups/plasmagun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"BFG 9000", "SoundToPlay":"toby/actorsinviewport/pickups/bfg9000"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Shells", "SoundToPlay":"toby/actorsinviewport/pickups/shell"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Box of Shells", "SoundToPlay":"toby/actorsinviewport/pickups/boxofshells"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Clip", "SoundToPlay":"toby/actorsinviewport/pickups/clip"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Box of Ammo", "SoundToPlay":"toby/actorsinviewport/pickups/boxofammo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Rocket", "SoundToPlay":"toby/actorsinviewport/pickups/rocket"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Box of Rockets", "SoundToPlay":"toby/actorsinviewport/pickups/boxofrockets"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Small Cell Pack", "SoundToPlay":"toby/actorsinviewport/pickups/cellpack"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Bulk Cell Pack", "SoundToPlay":"toby/actorsinviewport/pickups/bulkcellpack"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Backpack", "SoundToPlay":"toby/actorsinviewport/pickups/backpack"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Gauntlets", "SoundToPlay":"heretic/actorsinviewport/weapon/gauntlets"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Ethereal Crossbow", "SoundToPlay":"heretic/actorsinviewport/weapon/crossbow"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Dragon Claw", "SoundToPlay":"heretic/actorsinviewport/weapon/dragonclaw"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Hell Staff", "SoundToPlay":"heretic/actorsinviewport/weapon/hellstaff"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Phoenix Rod", "SoundToPlay":"heretic/actorsinviewport/weapon/phoenixrod"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Fire Mace", "SoundToPlay":"heretic/actorsinviewport/weapon/mace"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Wand Crystal", "SoundToPlay":"heretic/actorsinviewport/ammo/wandcrystal"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Crystal Geode", "SoundToPlay":"heretic/actorsinviewport/ammo/geode"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Arrows", "SoundToPlay":"heretic/actorsinviewport/ammo/arrows"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Quiver of Arrows", "SoundToPlay":"heretic/actorsinviewport/ammo/quiver"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Claw Orb", "SoundToPlay":"heretic/actorsinviewport/ammo/claworb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Energy Orb", "SoundToPlay":"heretic/actorsinviewport/ammo/energyorb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Lesser Runes", "SoundToPlay":"heretic/actorsinviewport/ammo/lesserrunes"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Greater Runes", "SoundToPlay":"heretic/actorsinviewport/ammo/greaterrunes"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Flame Orb", "SoundToPlay":"heretic/actorsinviewport/ammo/flameorb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Inferno Orb", "SoundToPlay":"heretic/actorsinviewport/ammo/infernoorb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Mace Spheres", "SoundToPlay":"heretic/actorsinviewport/ammo/macespheres"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Pile of Mace Spheres", "SoundToPlay":"heretic/actorsinviewport/ammo/macepile"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Bag of Holding", "SoundToPlay":"heretic/actorsinviewport/ammo/bagofholding"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Timon's Axe", "SoundToPlay":"hexen/actorsinviewport/weapon/axe"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Hammer of Retribution", "SoundToPlay":"hexen/actorsinviewport/weapon/hammer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Quietus", "SoundToPlay":"hexen/actorsinviewport/weapon/quietus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Serpent Staff", "SoundToPlay":"hexen/actorsinviewport/weapon/serpentstaff"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Firestorm", "SoundToPlay":"hexen/actorsinviewport/weapon/firestorm"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Wraith Verge", "SoundToPlay":"hexen/actorsinviewport/weapon/wraithverge"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Freeze Spell", "SoundToPlay":"hexen/actorsinviewport/weapon/frostspell"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Arc of Death", "SoundToPlay":"hexen/actorsinviewport/weapon/arc"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Bloodscourge", "SoundToPlay":"hexen/actorsinviewport/weapon/bloodscourge"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Blue Mana", "SoundToPlay":"hexen/actorsinviewport/ammo/bluemana"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Green Mana", "SoundToPlay":"hexen/actorsinviewport/ammo/greenmana"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Combined Mana", "SoundToPlay":"hexen/actorsinviewport/ammo/combomana"}
+{"EventType":"OptionChanged", "CurrentMenuName":"WeaponSounds", "CurrentMenuItemOptionName":"Krater of Might", "SoundToPlay":"hexen/actorsinviewport/ammo/krater"}
+
+
+//POWERUP SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"PowSounds", "SoundToPlay":"menu/sounddir/powerups"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Berserk", "SoundToPlay":"toby/actorsinviewport/pickups/berserkpack"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Soul Sphere", "SoundToPlay":"toby/actorsinviewport/pickups/soulsphere"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Mega Sphere", "SoundToPlay":"toby/actorsinviewport/pickups/megasphere"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Blur Sphere", "SoundToPlay":"toby/actorsinviewport/pickups/partialinvisibility"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Blur Sphere - Wear-off", "SoundToPlay":"menu/sounddir/powerup/blurspherewear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Invulnerability Sphere", "SoundToPlay":"toby/actorsinviewport/pickups/invulnerability"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Invulnerability Sphere - Wear-off", "SoundToPlay":"menu/sounddir/powerup/invspherewear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Radiation Suit", "SoundToPlay":"toby/actorsinviewport/pickups/biosuit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Radiation Suit - Wear-off", "SoundToPlay":"menu/sounddir/powerup/radsuitwear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Computer Map", "SoundToPlay":"toby/actorsinviewport/pickups/computermap"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Night Visors", "SoundToPlay":"toby/actorsinviewport/pickups/nightvision"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Chaos Device", "SoundToPlay":"heretic/actorsinviewport/artifact/chaosdevice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Map Scroll", "SoundToPlay":"heretic/actorsinviewport/artifact/mapscroll"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Morph Ovum", "SoundToPlay":"heretic/actorsinviewport/artifact/morphovum"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Mystic Urn", "SoundToPlay":"heretic/actorsinviewport/health/urn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Ring of Invincibility", "SoundToPlay":"heretic/actorsinviewport/artifact/ring"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Ring - Wear-off", "SoundToPlay":"menu/sounddir/powerup/invringwear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Shadow Sphere", "SoundToPlay":"heretic/actorsinviewport/artifact/shadowsphere"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Shadow Sphere - Wear-off", "SoundToPlay":"menu/sounddir/powerup/shadowwear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Time Bomb", "SoundToPlay":"heretic/actorsinviewport/artifact/timebomb"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Time Bomb - Countdown", "SoundToPlay":"menu/sounddir/powerup/bombtic"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Tome of Power", "SoundToPlay":"heretic/actorsinviewport/artifact/tome"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Tome of Power - Wear-off", "SoundToPlay":"menu/sounddir/powerup/tomewear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Torch", "SoundToPlay":"heretic/actorsinviewport/artifact/torch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Wings of Wrath", "SoundToPlay":"heretic/actorsinviewport/artifact/wings"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Wings of Wrath - Wear-off", "SoundToPlay":"menu/sounddir/powerup/wingswear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Banishment Device", "SoundToPlay":"hexen/actorsinviewport/artifact/bandevice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Boots of Speed", "SoundToPlay":"hexen/actorsinviewport/artifact/boots"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Boots of Speed - Wear-off", "SoundToPlay":"menu/sounddir/powerup/speedwear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Dark Servant", "SoundToPlay":"hexen/actorsinviewport/artifact/servant"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Disc of Repulsion", "SoundToPlay":"hexen/actorsinviewport/artifact/repdisc"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Flechette", "SoundToPlay":"hexen/actorsinviewport/artifact/flechette"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Icon of the Defender", "SoundToPlay":"hexen/actorsinviewport/artifact/icon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Defender - Wear-off", "SoundToPlay":"menu/sounddir/powerup/defenderwear"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Mystic Ambit Incant", "SoundToPlay":"hexen/actorsinviewport/health/ambit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Porkalator", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator"}
+
+
+//DECORATION SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"DecSounds", "SoundToPlay":"menu/sounddir/decorations"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Explosive Barrel", "SoundToPlay":"toby/actorsinviewport/decorations/explosivebarrel"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Flaming Barrel", "SoundToPlay":"toby/actorsinviewport/decorations/burningbarrel"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Floor Lamp", "SoundToPlay":"toby/actorsinviewport/decorations/minitechlamp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Short Tech Lamp", "SoundToPlay":"toby/actorsinviewport/decorations/smalltechlamp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Tall Tech Lamp", "SoundToPlay":"toby/actorsinviewport/decorations/largetechlamp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Tech Pillar", "SoundToPlay":"toby/actorsinviewport/decorations/techpillar"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Short Torches", "SoundToPlay":"menu/sounddir/deco/shorttorches"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Tall Torches", "SoundToPlay":"menu/sounddir/deco/talltorches"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Floating Hell Rock", "SoundToPlay":"toby/actorsinviewport/decorations/floatingskull"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Evil Eye", "SoundToPlay":"toby/actorsinviewport/decorations/evileye"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Pillar with Beating Heart", "SoundToPlay":"toby/actorsinviewport/decorations/heartpillar"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Twitching Hanging Man", "SoundToPlay":"toby/actorsinviewport/decorations/twitchhangingman"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Hanging Victims", "SoundToPlay":"toby/actorsinviewport/decorations/hangingmen"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Impaled Zombieman", "SoundToPlay":"toby/actorsinviewport/decorations/twitchingimpaledguy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Explosive Pod", "SoundToPlay":"heretic/deco/pod"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Serpent Torch", "SoundToPlay":"heretic/deco/serpenttorch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Fire Brazier", "SoundToPlay":"heretic/deco/firebrazier"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Wall Torch", "SoundToPlay":"heretic/deco/walltorch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Key Door Marker", "SoundToPlay":"menu/sounddir/deco/keydoormarker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Poison Mushroom", "SoundToPlay":"hexen/deco/poisonshroom"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Poison Cloud", "SoundToPlay":"menu/sounddir/deco/poisoncloud"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Twined Torch", "SoundToPlay":"hexen/deco/twinedtorch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Brass Torch", "SoundToPlay":"hexen/deco/brasstorch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Skull Torch", "SoundToPlay":"hexen/deco/skulltorch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Brazier", "SoundToPlay":"heretic/deco/firebrazier"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Minotaur Statue Torch", "SoundToPlay":"hexen/deco/bull"}
+{"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Sparkle Bridge", "SoundToPlay":"hexen/deco/bridge"}
+
+
+//ENVIRONMENTAL SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"EnvSounds", "SoundToPlay":"menu/sounddir/environment"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Lifts & Moving Platforms", "SoundToPlay":"menu/sounddir/env/lifts"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Floors Raising or Lowering", "SoundToPlay":"menu/sounddir/env/floors"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Standard Crushers", "SoundToPlay":"menu/sounddir/env/crushers"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Silent Crushers", "SoundToPlay":"menu/sounddir/env/silentcrush"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Secret", "SoundToPlay":"menu/sounddir/env/secret"}
+{"EventType":"OptionChanged", "CurrentMenuName":"EnvSounds", "CurrentMenuItemOptionName":"Thrust Spike", "SoundToPlay":"hexen/deco/spike"}
+
+
+//LIQUID SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"LiquidSounds", "SoundToPlay":"menu/sounddir/liquids"}
+{"EventType":"OptionChanged", "CurrentMenuName":"LiquidSounds", "CurrentMenuItemOptionName":"Water", "SoundToPlay":"menu/sounddir/liquid/water"}
+{"EventType":"OptionChanged", "CurrentMenuName":"LiquidSounds", "CurrentMenuItemOptionName":"Nukage", "SoundToPlay":"menu/sounddir/liquid/nukage"}
+{"EventType":"OptionChanged", "CurrentMenuName":"LiquidSounds", "CurrentMenuItemOptionName":"Lava", "SoundToPlay":"menu/sounddir/liquid/lava"}
+{"EventType":"OptionChanged", "CurrentMenuName":"LiquidSounds", "CurrentMenuItemOptionName":"Blood", "SoundToPlay":"menu/sounddir/liquid/blood"}
+{"EventType":"OptionChanged", "CurrentMenuName":"LiquidSounds", "CurrentMenuItemOptionName":"Sludge", "SoundToPlay":"menu/sounddir/liquid/sludge"}
+
+
+//MONSTER SOUNDS
+{"EventType":"MenuChanged",   "CurrentMenuName":"MonsterSounds", "SoundToPlay":"menu/sounddir/monsters"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Zombieman", "SoundToPlay":"toby/actorsinviewport/monsters/formerhuman"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Shotgunner", "SoundToPlay":"toby/actorsinviewport/monsters/formersergeant"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Chaingunner", "SoundToPlay":"toby/actorsinviewport/monsters/formercommando"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Imp", "SoundToPlay":"toby/actorsinviewport/monsters/imp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Pinky Demon - Spectre", "SoundToPlay":"toby/actorsinviewport/monsters/pinkydemon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Lost Soul", "SoundToPlay":"toby/actorsinviewport/monsters/lostsoul"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Cacodemon", "SoundToPlay":"toby/actorsinviewport/monsters/cacodemon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Hell Knight", "SoundToPlay":"toby/actorsinviewport/monsters/hellknight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Baron of Hell", "SoundToPlay":"toby/actorsinviewport/monsters/baronofhell"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Revenant", "SoundToPlay":"toby/actorsinviewport/monsters/revenant"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Pain Elemental", "SoundToPlay":"toby/actorsinviewport/monsters/painelemental"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Arachnotron", "SoundToPlay":"toby/actorsinviewport/monsters/arachnotron"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Mancubus", "SoundToPlay":"toby/actorsinviewport/monsters/mancubus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Arch-Vile", "SoundToPlay":"toby/actorsinviewport/monsters/archvile"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Spider Mastermind", "SoundToPlay":"toby/actorsinviewport/monsters/spidermastermind"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Cyberdemon", "SoundToPlay":"toby/actorsinviewport/monsters/cyberdemon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Icon of Sin", "SoundToPlay":"toby/actorsinviewport/monsters/icon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Wolfenstein SS", "SoundToPlay":"toby/actorsinviewport/monsters/wolfensteinsoldier"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Commander Keen", "SoundToPlay":"toby/actorsinviewport/monsters/hangingcommanderkeen"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Cybruiser", "SoundToPlay":"toby/actorsinviewport/monsters/cybruiser"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Warlord", "SoundToPlay":"toby/actorsinviewport/monsters/warlord"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Chicken", "SoundToPlay":"heretic/monster/chicken"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Gargoyle", "SoundToPlay":"heretic/monster/gargoyle"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Gargoyle Leader", "SoundToPlay":"heretic/monster/gargleader"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Golem", "SoundToPlay":"heretic/monster/golem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Nitro Golem", "SoundToPlay":"heretic/monster/nitrogolem"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Nitro Golem Projectile", "SoundToPlay":"menu/sounddir/mons/golemskull"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior", "SoundToPlay":"heretic/monster/knight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior - Green Axe", "SoundToPlay":"menu/sounddir/mons/greenaxe"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior - Blood Axe", "SoundToPlay":"menu/sounddir/mons/bloodaxe"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Disciple of DSparil", "SoundToPlay":"heretic/monster/disciple"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Sabre Claw", "SoundToPlay":"heretic/monster/clink"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Weredragon", "SoundToPlay":"heretic/monster/weredragon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Ophidian", "SoundToPlay":"heretic/monster/ophidian"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Iron Lich", "SoundToPlay":"heretic/monster/ironlich"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Maulotaur", "SoundToPlay":"heretic/monster/minotaur"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"DSparil on Chaos Serpent", "SoundToPlay":"heretic/monster/dsparilmount"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"DSparil", "SoundToPlay":"heretic/monster/dsparil"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Pig", "SoundToPlay":"hexen/animal/pig"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Afrit", "SoundToPlay":"hexen/monster/afrit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Ettin", "SoundToPlay":"hexen/monster/ettin"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Centaur", "SoundToPlay":"hexen/monster/centaur"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Slaughtaur", "SoundToPlay":"hexen/monster/slaughtaur"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Bishop", "SoundToPlay":"hexen/monster/bishop"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Wendigo", "SoundToPlay":"hexen/monster/wendigo"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Stalker", "SoundToPlay":"hexen/monster/stalker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Green Chaos Serpent", "SoundToPlay":"hexen/monster/greenserpent"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Brown Chaos Serpent", "SoundToPlay":"hexen/monster/brownserpent"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Reaver", "SoundToPlay":"hexen/monster/reaver"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Death Wyvern", "SoundToPlay":"hexen/monster/dragon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Zedek", "SoundToPlay":"hexen/monster/zedek"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Traductus", "SoundToPlay":"hexen/monster/traductus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Menelkir", "SoundToPlay":"hexen/monster/menelkir"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Heresiarch", "SoundToPlay":"hexen/monster/heresiarch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Heresiarch - Invulnerable", "SoundToPlay":"menu/sounddir/mons/heresiarchinv"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Korax", "SoundToPlay":"hexen/monster/korax"}
 
 
 //MENUS TO HOLD OFF (for now)

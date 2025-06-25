@@ -1155,3 +1155,6 @@ $volume menu/tobyopt/detailed	      0.5
 
 menu/tobyopt/elevationtone				"sounds/Menus/TobyOptions/ToggleElevTone.ogg"
 $volume menu/tobyopt/elevationtone	      0.5
+
+menu/tobyopt/elevationdefault				"sounds/Menus/TobyOptions/ElevToneDefault.ogg"
+$volume menu/tobyopt/elevationdefault	      0.5

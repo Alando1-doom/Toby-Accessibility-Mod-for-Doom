@@ -25,17 +25,24 @@ menu/sounddir/acc/full					"sounds/Menus/SoundDirectory/AccMenu/InvFull.ogg"
 menu/sounddir/decorations			"sounds/Menus/SoundDirectory/DecoSounds.ogg"
 $volume menu/sounddir/decorations	      0.5
 
+menu/sounddir/deco/shorttorches	"sounds/Menus/SoundDirectory/DecMenu/ShortTorches.ogg"
+menu/sounddir/deco/talltorches		"sounds/Menus/SoundDirectory/DecMenu/TallTorches.ogg"
+menu/sounddir/deco/keydoormarker		"sounds/Menus/SoundDirectory/DecMenu/KeyDoorMarker.ogg"
+menu/sounddir/deco/poisoncloud	"sounds/Menus/SoundDirectory/DecMenu/PoisonCloud.ogg"
+
+
+
 
 
 //Environmental Sounds - Thrust Spike will be referenced using SNDINFO.decorations
 menu/sounddir/environment		"sounds/Menus/SoundDirectory/EnvSounds.ogg"
 $volume menu/sounddir/environment	      0.5
 
-menu/sounddir/env/	crushers		"sounds/Menus/SoundDirectory/EnvMenu/Crushers.ogg"
-menu/sounddir/env/	silentcrush	"sounds/Menus/SoundDirectory/EnvMenu/SilentCrush.ogg"
-menu/sounddir/env/	floors			"sounds/Menus/SoundDirectory/EnvMenu/Floors.ogg"
-menu/sounddir/env/	lifts				"sounds/Menus/SoundDirectory/EnvMenu/LiftsPlats.ogg"
-menu/sounddir/env/	secret			"sounds/Menus/SoundDirectory/EnvMenu/Secret.ogg"
+menu/sounddir/env/crushers		"sounds/Menus/SoundDirectory/EnvMenu/Crushers.ogg"
+menu/sounddir/env/silentcrush	"sounds/Menus/SoundDirectory/EnvMenu/SilentCrush.ogg"
+menu/sounddir/env/floors			"sounds/Menus/SoundDirectory/EnvMenu/Floors.ogg"
+menu/sounddir/env/lifts				"sounds/Menus/SoundDirectory/EnvMenu/LiftsPlats.ogg"
+menu/sounddir/env/secret			"sounds/Menus/SoundDirectory/EnvMenu/Secret.ogg"
 
 
 
@@ -43,6 +50,7 @@ menu/sounddir/env/	secret			"sounds/Menus/SoundDirectory/EnvMenu/Secret.ogg"
 menu/sounddir/interactives			"sounds/Menus/SoundDirectory/InteractSounds.ogg"
 $volume menu/sounddir/interactives	      0.5
 
+menu/sounddir/interact/lockeddoor		"sounds/Menus/SoundDirectory/InteractiveMenu/LockedDoor.ogg"
 menu/sounddir/interact/techdoor		"sounds/Menus/SoundDirectory/InteractiveMenu/TechDoor.ogg"
 menu/sounddir/interact/demondoor	"sounds/Menus/SoundDirectory/InteractiveMenu/DemonDoor.ogg"
 menu/sounddir/interact/multikeydoor	"sounds/Menus/SoundDirectory/InteractiveMenu/MultiKeyDoor.ogg"
@@ -67,6 +75,9 @@ menu/sounddir/monsters				"sounds/Menus/SoundDirectory/MonsSounds.ogg"
 $volume menu/sounddir/monsters	      0.5
 
 menu/sounddir/mons/heresiarchinv	"sounds/Menus/SoundDirectory/MonsterMenu/SorcInv.ogg"
+menu/sounddir/mons/golemskull		"sounds/Menus/SoundDirectory/MonsterMenu/GolemSkull.ogg"
+menu/sounddir/mons/greenaxe			"sounds/Menus/SoundDirectory/MonsterMenu/GreenAxe.ogg"
+menu/sounddir/mons/bloodaxe			"sounds/Menus/SoundDirectory/MonsterMenu/BloodAxe.ogg"
 
 
 
@@ -74,6 +85,7 @@ menu/sounddir/mons/heresiarchinv	"sounds/Menus/SoundDirectory/MonsterMenu/SorcIn
 menu/sounddir/pickups				"sounds/Menus/SoundDirectory/PickupBeacons.ogg"
 $volume menu/sounddir/pickups	      0.5
 
+menu/sounddir/pickups/keys	"sounds/Menus/SoundDirectory/PickupMenu/Keys.ogg"
 menu/sounddir/pickups/puzzle	"sounds/Menus/SoundDirectory/PickupMenu/PuzzleItems.ogg"
 
 
