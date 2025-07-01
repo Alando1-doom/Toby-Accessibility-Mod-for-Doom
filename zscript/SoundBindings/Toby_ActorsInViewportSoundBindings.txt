@@ -783,3 +783,6 @@
 {"ActorClass":"InvisibleBridge32", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
 {"ActorClass":"InvisibleBridge16", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
 {"ActorClass":"InvisibleBridge8", "SoundToPlay":"hexen/deco/bridge", "SoundToPlayPlural":"hexen/deco/bridges", "Article":"a"}
+
+//Tutorial Kiosks
+{"ActorClass":"KioskBeacon", "SoundToPlay":"toby/actorsinviewport/tutorial/kiosk", "SoundToPlayPlural":"toby/actorsinviewport/tutorial/kiosks", "Article":"a"}
