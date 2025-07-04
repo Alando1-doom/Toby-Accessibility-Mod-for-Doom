@@ -16,7 +16,8 @@ OptionMenu "toby_mod_options"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET4", "toby_actors_in_viewport_narration_preset_4_keybind"
     Control "$TOBY_VIEWPORT_NARRATION_PRESET5", "toby_actors_in_viewport_narration_preset_5_keybind"
 
-    StaticText "$TOBY_UNIVERSAL_BEACONS_SECTION"
+	StaticText ""
+    StaticText "$TOBY_UNIVERSAL_BEACONS_SECTION", "Gold"
     Option "$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "Toby_UniversalBeacon_UseUniversalSounds", "toby_yes_no"
     Command "$TOBY_UNIVERSAL_BEACONS_UPDATE", "netevent Toby_UniversalBeaconUseUniversalSoundsUpdate", 1
 

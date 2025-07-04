@@ -12,3 +12,6 @@ monster/bruwlk dsbruwlk
 
 superdemon/sight			dssdsee
 superdemon/active		dssdact
+
+toby/actorsinviewport/tutorial/kiosk				"sounds/ActorsInViewport/Tutorial/TutorialKiosk.ogg"
+toby/actorsinviewport/tutorial/kiosks			"sounds/ActorsInViewport/Tutorial/TutorialKiosks.ogg"
