@@ -138,6 +138,7 @@
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$OPTMNU_SOUND", "SoundToPlay":"menusnd/soundopt"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Optionsmenu", "CurrentMenuItemOptionName":"$TOBY_MOD_OPTIONS", "SoundToPlay":"menu/tobyopt/main"}
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Optionsmenu", "SoundToPlay":"menusnd/gzdopt"}
 
@@ -297,29 +298,29 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
 //Toby Acc Mod Options
-{"EventType":"MenuChanged",   "CurrentMenuName":"toby_mod_options", "SoundToPlay":"menu/tobyopt/main"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "SoundToPlay":"menu/tobyopt/universalbeacon"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_UPDATE", "SoundToPlay":"menu/tobyopt/updatebeacons"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_TOGGLE", "SoundToPlay":"menu/controls/proxydetector"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/enabledefault"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_MAX_DISTANCE", "SoundToPlay":"menu/tobyopt/maxdistance"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_ATTENUATION", "SoundToPlay":"menu/tobyopt/attenuation"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_APPLY_SETTINGS", "SoundToPlay":"menu/tobyopt/applyproxysettings"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET", "SoundToPlay":"menu/controls/snaptotarget"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "SoundToPlay":"menu/tobyopt/targetingmode"}
+{"EventType":"MenuChanged",   "CurrentMenuName":"TOBY_MOD_OPTIONS", "SoundToPlay":"menu/tobyopt/main"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "SoundToPlay":"menu/tobyopt/universalbeacon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_UPDATE", "SoundToPlay":"menu/tobyopt/updatebeacons"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_TOGGLE", "SoundToPlay":"menu/controls/proxydetector"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/enabledefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_MAX_DISTANCE", "SoundToPlay":"menu/tobyopt/maxdistance"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_ATTENUATION", "SoundToPlay":"menu/tobyopt/attenuation"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_APPLY_SETTINGS", "SoundToPlay":"menu/tobyopt/applyproxysettings"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET", "SoundToPlay":"menu/controls/snaptotarget"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "SoundToPlay":"menu/tobyopt/targetingmode"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE_EVERYTHING_SHOOTABLE", "SoundToPlay":"menu/tobyopt/everythingshootable"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_SNAP_TO_TARGET_TARGETING_MODE_MONSTER_COMBO", "SoundToPlay":"menu/tobyopt/monstercombo"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_HEXEN_ARMOR_CHECKER_MODE", "SoundToPlay":"menu/tobyopt/hexenarmormode"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_HEXEN_ARMOR_CHECKER_MODE", "SoundToPlay":"menu/tobyopt/hexenarmormode"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_HEXEN_ARMOR_CHECKER_MODE_ONLY_SLOTS", "SoundToPlay":"menu/tobyopt/onlyslots"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TOBY_HEXEN_ARMOR_CHECKER_MODE_DETAILED", "SoundToPlay":"menu/tobyopt/detailed"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET0", "SoundToPlay":"menu/controls/asgeneral"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET1", "SoundToPlay":"menu/controls/asdirection"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET2", "SoundToPlay":"menu/controls/asdistance"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET3", "SoundToPlay":"menu/controls/asdirdis"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET4", "SoundToPlay":"menu/controls/asheight"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
-{"EventType":"OptionChanged", "CurrentMenuName":"toby_mod_options", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET0", "SoundToPlay":"menu/controls/asgeneral"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET1", "SoundToPlay":"menu/controls/asdirection"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET2", "SoundToPlay":"menu/controls/asdistance"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET3", "SoundToPlay":"menu/controls/asdirdis"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET4", "SoundToPlay":"menu/controls/asheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
 
 
 //MOUSE MENU
