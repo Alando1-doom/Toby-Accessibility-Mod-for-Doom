@@ -949,6 +949,22 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Korax", "SoundToPlay":"hexen/monster/korax"}
 
 
+//BOT SPAWNER MENU
+{"EventType":"MenuChanged",   "CurrentMenuName":"BotSpawnerMenu", "SoundToPlay":"botmenu/main"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Arkon", "SoundToPlay":"botmenu/spawnarkon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Blake", "SoundToPlay":"botmenu/spawnblake"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Brock", "SoundToPlay":"botmenu/spawnbrock"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Doom", "SoundToPlay":"botmenu/spawndoom"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Fury", "SoundToPlay":"botmenu/spawnfury"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Harlin", "SoundToPlay":"botmenu/spawnharlin"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Johnson", "SoundToPlay":"botmenu/spawnjohnson"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Malcolm", "SoundToPlay":"botmenu/spawnmalcolm"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Riker", "SoundToPlay":"botmenu/spawnriker"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Spawn Slain", "SoundToPlay":"botmenu/spawnslain"}
+{"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Remove All Bots", "SoundToPlay":"botmenu/removebots"}
+
+
+
 //MENUS TO HOLD OFF (for now)
 
 //Joystick Menu - VOID - Will consider in later installments
