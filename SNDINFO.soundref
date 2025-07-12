@@ -1,7 +1,6 @@
 //Sound Directory Menu
 
 menu/tobyopt/soundcue				"sounds/Menus/TobyOptions/SoundDirMain.ogg"
-$volume menu/tobyopt/soundcue	      0.5
 
 
 //Accessibility Sounds
