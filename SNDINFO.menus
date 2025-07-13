@@ -1121,7 +1121,6 @@ $volume menu/class/marine           0.5
 //Toby Accessibility Options
 
 menu/tobyopt/main								"sounds/Menus/TobyOptions/TobyOptions.ogg"
-$volume menu/tobyopt/main      0.5
 
 menu/tobyopt/universalbeacon			"sounds/Menus/TobyOptions/UniversalBeacon.ogg"
 $volume menu/tobyopt/universalbeacon      0.5
