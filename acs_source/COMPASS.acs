@@ -35,19 +35,19 @@ Script "CompassScript" (void){
         if (angle < 0.0625 || angle >= 0.9375) {
             Log(s:"[Toby Accessibility Mod] East");
         } else if (angle >= 0.0625 && angle < 0.1875) {
-            Log(s:"[Toby Accessibility Mod] North-east");
+            Log(s:"[Toby Accessibility Mod] Northeast");
         } else if (angle >= 0.1875 && angle < 0.3125) {
             Log(s:"[Toby Accessibility Mod] North");
         } else if (angle >= 0.3125 && angle < 0.4375) {
-            Log(s:"[Toby Accessibility Mod] North-west");
+            Log(s:"[Toby Accessibility Mod] Northwest");
         } else if (angle >= 0.4375 && angle < 0.5625) {
             Log(s:"[Toby Accessibility Mod] West");
         } else if (angle >= 0.5625 && angle < 0.6875) {
-            Log(s:"[Toby Accessibility Mod] South-west");
+            Log(s:"[Toby Accessibility Mod] Southwest");
         } else if (angle >= 0.6875 && angle < 0.8125) {
             Log(s:"[Toby Accessibility Mod] South");
         } else if (angle >= 0.8125 && angle < 0.9375){
-            Log(s:"[Toby Accessibility Mod] South-east");
+            Log(s:"[Toby Accessibility Mod] Southeast");
         }
     }
 }
@@ -154,10 +154,10 @@ Script "TurnCompass" (int dir) { //dir==1 is left, else is right
         if (angle < 0.0625 || angle >= 0.9375) { //East
             if (dir == 1) {
                 ChangeActorAngle(0, 0.125, true);
-                Log(s:"[Toby Accessibility Mod] North-east");
+                Log(s:"[Toby Accessibility Mod] Northeast");
             } else {
                 ChangeActorAngle(0, 0.875, true);
-                Log(s:"[Toby Accessibility Mod] South-east");
+                Log(s:"[Toby Accessibility Mod] Southeast");
             }
         } else if (angle >= 0.0625 && angle < 0.1875) { //North-east
             if (dir == 1) {
@@ -170,10 +170,10 @@ Script "TurnCompass" (int dir) { //dir==1 is left, else is right
         } else if (angle >= 0.1875 && angle < 0.3125) { //North
             if (dir == 1) {
                 ChangeActorAngle(0, 0.375, true);
-                Log(s:"[Toby Accessibility Mod] North-west");
+                Log(s:"[Toby Accessibility Mod] Northwest");
             } else {
                 ChangeActorAngle(0, 0.125, true);
-                Log(s:"[Toby Accessibility Mod] North-east");
+                Log(s:"[Toby Accessibility Mod] Northeast");
             }
         } else if (angle >= 0.3125 && angle < 0.4375) { //North-west
             if (dir == 1) {
@@ -186,10 +186,10 @@ Script "TurnCompass" (int dir) { //dir==1 is left, else is right
         } else if (angle >= 0.4375 && angle < 0.5625) { //West
             if (dir == 1){
                 ChangeActorAngle(0, 0.625, true);
-                Log(s:"[Toby Accessibility Mod] South-west");
+                Log(s:"[Toby Accessibility Mod] Southwest");
             } else {
                 ChangeActorAngle(0, 0.375, true);
-                Log(s:"[Toby Accessibility Mod] North-west");
+                Log(s:"[Toby Accessibility Mod] Northwest");
             }
         } else if (angle >= 0.5625 && angle < 0.6875) { //South-west
             if (dir == 1) {
@@ -202,10 +202,10 @@ Script "TurnCompass" (int dir) { //dir==1 is left, else is right
         } else if(angle >= 0.6875 && angle < 0.8125) { //South
             if (dir == 1) {
                 ChangeActorAngle(0, 0.875, true);
-                Log(s:"[Toby Accessibility Mod] South-east");
+                Log(s:"[Toby Accessibility Mod] Southeast");
             } else {
                 ChangeActorAngle(0, 0.625, true);
-                Log(s:"[Toby Accessibility Mod] South-west");
+                Log(s:"[Toby Accessibility Mod] Southwest");
             }
         } else if (angle >= 0.8125 && angle < 0.9375) { //South-east
             if (dir == 1) {
