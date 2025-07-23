@@ -205,7 +205,7 @@
 {"ActorClass":"YellowCard_TO", "SoundToPlay":"toby/actorsinviewport/pickups/yellowkeycard", "SoundToPlayPlural":"toby/actorsinviewport/pickups/yellowkeycards", "Article":"a"}
 {"ActorClass":"YellowSkullKey_TO", "SoundToPlay":"toby/actorsinviewport/pickups/yellowskull", "SoundToPlayPlural":"toby/actorsinviewport/pickups/yellowskulls", "Article":"a"}
 
-{"ActorClass":"ExplosiveBarrel_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/explosivebarrel", "SoundToPlayPlural":"toby/actorsinviewport/decorations/explosivebarrels", "Article":"a"}
+{"ActorClass":"ExplosiveBarrel_Toby", "SoundToPlay":"toby/actorsinviewport/decorations/explosivebarrel", "SoundToPlayPlural":"toby/actorsinviewport/decorations/explosivebarrels", "Article":"a"}
 {"ActorClass":"BurningBarrel_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/burningbarrel", "SoundToPlayPlural":"toby/actorsinviewport/decorations/burningbarrels", "Article":"a"}
 
 {"ActorClass":"Column_SFX", "SoundToPlay":"toby/actorsinviewport/decorations/minitechlamp", "SoundToPlayPlural":"toby/actorsinviewport/decorations/minitechlamps", "Article":"a"}

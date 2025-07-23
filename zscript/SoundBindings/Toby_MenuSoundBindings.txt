@@ -57,6 +57,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_NOREST", "SoundToPlay":"menusnd/episode7"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 1", "SoundToPlay":"menusnd/tobye1"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 2", "SoundToPlay":"menusnd/tobye2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Tutorial", "SoundToPlay":"map/toby/tutorial"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Sandbox", "SoundToPlay":"map/toby/sandbox"}
 
 
 //HERETIC EPISODES
