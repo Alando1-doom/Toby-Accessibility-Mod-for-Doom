@@ -260,6 +260,13 @@ map/toby/outpost						"sounds/Maps/doom2_tobydm/DM10_Outpost.ogg"
 
 
 
+//Toby Tutorial Levels
+
+map/toby/tutorial						"sounds/Maps/doom2_tobytut/TutorialMap.ogg"
+map/toby/sandbox					"sounds/Maps/doom2_tobytut/Sandbox.ogg"
+
+
+
 //Operation: MDK
 
 map/mdk/umsatlantia             "sounds/Maps/doom2_opmdk/UMSAtlantia.ogg"
