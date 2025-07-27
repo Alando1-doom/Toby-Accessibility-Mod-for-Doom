@@ -26,9 +26,15 @@ class Toby_SoundBindingsContainer
 
                 //Replace sounds if exactly the same condition definition already exists:
                 Dictionary soundBinding = Dictionary.FromString(splitTokens[i]);
+                int newSoundBindingSize = Toby_SoundBindingsContainer.GetDictionarySize(soundBinding);
                 bool sameConditionFound = false;
                 for (int j = 0; j < container.soundBindings.Size(); j++)
                 {
+                    int existingBindingSize = Toby_SoundBindingsContainer.GetDictionarySize(container.soundBindings[j]);
+                    if (newSoundBindingSize != existingBindingSize)
+                    {
+                        continue;
+                    }
                     DictionaryIterator di = DictionaryIterator.Create(container.soundBindings[j]);
                     bool sameCondition = true;
                     while (di.Next())
@@ -60,5 +66,16 @@ class Toby_SoundBindingsContainer
             Toby_Logger.Message("Sound bindings added: "..container.soundBindings.Size(), "Toby_Developer");
         }
         return container;
+    }
+
+    static ui int GetDictionarySize(Dictionary d)
+    {
+        int size = 0;
+        DictionaryIterator di = DictionaryIterator.Create(d);
+        while (di.Next())
+        {
+            size++;
+        }
+        return size;
     }
 }
