@@ -658,7 +658,9 @@
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Marker 10", "SoundToPlay":"pathfinder/marker10"}
 
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Level start", "SoundToPlay":"pathfinder/levelstart"}
-{"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"pathfinder/exit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Toby_Marker_Pathfinding", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"pathfinder/exit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_remove", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"pathfinder/exit"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_remove_nearest", "CurrentMenuItemOptionName":"Exit", "SoundToPlay":"pathfinder/exit"}
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Secret Exit", "SoundToPlay":"pathfinder/secretexit"}
 
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"Red key door", "SoundToPlay":"pathfinder/reddoor"}
