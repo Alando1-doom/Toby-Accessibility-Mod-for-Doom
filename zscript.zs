@@ -24,6 +24,7 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_CurrentItemChecker.zs"
 #include "zscript/StatusChecker/Toby_LevelStatsChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
+#include "zscript/StatusChecker/Toby_ChessboardCoords.zs"
 
 //Player state change narration
 #include "zscript/PlayerStateChangeDetector/Toby_PlayerStateChangeHandler.zs"
@@ -94,6 +95,7 @@ version "4.6"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"
 #include "zscript/Utils/Toby_Enums.zs"
 #include "zscript/Utils/Toby_IntegerSet.zs"
+#include "zscript/Utils/Toby_Math.zs"
 
 //libeye
 #include "zscript/libeye/Toby_projector gl.zs"

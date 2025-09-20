@@ -151,11 +151,6 @@ class Toby_MarkerHandler : EventHandler
         Console.MidPrint(SmallFont, item.description.." Removed");
     }
 
-    int Modulo(int a, int b)
-    {
-        return int(((a % b) + b) % b);
-    }
-
     ui static Toby_MarkerHandler GetInstanceUi()
     {
         return Toby_MarkerHandler(EventHandler.Find("Toby_MarkerHandler"));
