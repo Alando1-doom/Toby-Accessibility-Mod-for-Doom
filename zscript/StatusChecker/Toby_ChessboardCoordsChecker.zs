@@ -9,6 +9,8 @@ class Toby_ChessboardCoordsChecker
     bool zoneUpdated;
     bool cellUpdated;
 
+    int narrationType;
+
     int cellSize;
     int zoneSize;
     int regionSize;
@@ -42,6 +44,7 @@ class Toby_ChessboardCoordsChecker
         checker.cellUpdated = false;
         checker.toggleTick = false;
         checker.playerNum = playerNum;
+        checker.narrationType = 0;
 
         checker.cellSize = 256; // 2^8 - 16 cells in a zone - A1 : H8
         checker.zoneSize = 2048; // 2^11 - 16 zones per region - A1 : H8
@@ -107,9 +110,16 @@ class Toby_ChessboardCoordsChecker
             toggleTick = false;
             return;
         }
+        if (level.MapTime <= 5) { return; } //Prevents from going off when map just started and is on by default
 
-        AnnounceUpdatesTextOnly();
-        AnnounceUpdatesVoiced();
+        if (narrationType == TNOT_CONSOLE)
+        {
+            AnnounceUpdatesTextOnly();
+        }
+        else
+        {
+            AnnounceUpdatesVoiced();
+        }
     }
 
     ui void AnnounceUpdatesVoiced()

@@ -22,7 +22,9 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
         bool enabledForPlayer = Cvar.GetCvar("Toby_ChessboardCoordinates_EnabledByDefault", player).GetBool();
+        int narrationType = Cvar.GetCvar("Toby_NarrationOutputType", player).GetInt();
         chessboardCoords[e.PlayerNumber].enabled = enabledForPlayer;
+        chessboardCoords[e.PlayerNumber].narrationType = narrationType;
     }
 
     override void WorldLoaded(WorldEvent e)
