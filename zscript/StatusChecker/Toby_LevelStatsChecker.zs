@@ -37,4 +37,16 @@ class Toby_LevelStatsChecker
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
 
     }
+
+    ui static void CheckLevelStatsByOutputType(int narrationOutputType)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            Toby_LevelStatsChecker.CheckLevelStatsTextOnly();
+        }
+        else
+        {
+            Toby_LevelStatsChecker.CheckLevelStats();
+        }
+    }
 }

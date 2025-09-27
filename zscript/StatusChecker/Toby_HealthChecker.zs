@@ -44,4 +44,23 @@ class Toby_HealthChecker
         string textToPrint = "Health " .. playerActor.health .. "%";
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
+
+    ui static void CheckHealthByOutputType(int narrationOutputType, PlayerInfo player)
+    {
+        if (CVar.FindCvar("Toby_UseLegacyHealthChecker").GetBool())
+        {
+            Toby_HealthChecker.CheckHealthLegacy(player);
+        }
+        else
+        {
+            if (narrationOutputType == TNOT_CONSOLE)
+            {
+                Toby_HealthChecker.CheckHealthTextOnly(player);
+            }
+            else
+            {
+                Toby_HealthChecker.CheckHealth(player);
+            }
+        }
+    }
 }

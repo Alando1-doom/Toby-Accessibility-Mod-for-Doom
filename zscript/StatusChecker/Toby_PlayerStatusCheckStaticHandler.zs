@@ -65,119 +65,39 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
 
         if (e.Name == "Toby_CheckCoordinatesInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                Toby_CoordinateChecker.CheckCoordinatesTextOnly(player);
-            }
-            else
-            {
-                Toby_CoordinateChecker.CheckCoordinates(player);
-            }
+            Toby_CoordinateChecker.CheckCoordinatesByOutputType(narrationOutputType, player);
         }
         if (e.Name == "Toby_CheckHealthInterface")
         {
-            if (CVar.FindCvar("Toby_UseLegacyHealthChecker").GetBool())
-            {
-                Toby_HealthChecker.CheckHealthLegacy(player);
-            }
-            else
-            {
-                if (narrationOutputType == TNOT_CONSOLE)
-                {
-                    Toby_HealthChecker.CheckHealthTextOnly(player);
-                }
-                else
-                {
-                    Toby_HealthChecker.CheckHealth(player);
-                }
-            }
+            Toby_HealthChecker.CheckHealthByOutputType(narrationOutputType, player);
         }
         if (e.Name == "Toby_CheckArmorInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                Toby_ArmorChecker.CheckArmorTextOnly(player);
-            }
-            else
-            {
-                Toby_ArmorChecker.CheckArmor(player, bindings.armorSoundBindingsContainer);
-            }
+            Toby_ArmorChecker.CheckArmorByOutputType(narrationOutputType, player, bindings.armorSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckAmmoInterface")
         {
-            if (CVar.FindCvar("Toby_UseLegacyAmmoChecker").GetBool())
-            {
-                Toby_AmmoChecker.CheckAmmoLegacy(player);
-            }
-            else
-            {
-                if (narrationOutputType == TNOT_CONSOLE)
-                {
-                    Toby_AmmoChecker.CheckAmmoTextOnly(player);
-                }
-                else
-                {
-                    Toby_AmmoChecker.CheckAmmo(player, bindings.weaponsSoundBindingsContainer, bindings.ammoSoundBindingsContainer);
-                }
-            }
+            Toby_AmmoChecker.CheckAmmoByOutputType(narrationOutputType, player, bindings.weaponsSoundBindingsContainer, bindings.ammoSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckKeysInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                Toby_KeyChecker.CheckKeysTextOnly(player);
-            }
-            else
-            {
-                Toby_KeyChecker.CheckKeys(player, bindings.keysSoundBindingsContainer);
-            }
+            Toby_KeyChecker.CheckKeysByOutputType(narrationOutputType, player, bindings.keysSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckCurrentItemInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                Toby_CurrentItemChecker.CheckCurrentItemTextOnly(player);
-            }
-            else
-            {
-                Toby_CurrentItemChecker.CheckCurrentItem(player, bindings.itemsSoundBindingsContainer);
-            }
+            Toby_CurrentItemChecker.CheckCurrentItemByOutputType(narrationOutputType, player, bindings.itemsSoundBindingsContainer);
         }
         if (e.Name == "Toby_CheckLevelStatsInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                Toby_LevelStatsChecker.CheckLevelStatsTextOnly();
-            }
-            else
-            {
-                Toby_LevelStatsChecker.CheckLevelStats();
-            }
+            Toby_LevelStatsChecker.CheckLevelStatsByOutputType(narrationOutputType);
         }
         if (e.Name == "Toby_ChessboardCoordinatesToggleInterface")
         {
-            if (narrationOutputType == TNOT_CONSOLE)
-            {
-                if (chessboardCoords[consoleplayer].enabled)
-                {
-                    Toby_Logger.ConsoleOutputModeMessage("Chessboard coordinates enabled");
-                }
-                else
-                {
-                    Toby_Logger.ConsoleOutputModeMessage("Chessboard coordinates disabled");
-                }
-            }
-            else
-            {
-                if (chessboardCoords[consoleplayer].enabled)
-                {
-                    // enabled
-                }
-                else
-                {
-                    // disabled
-                }
-            }
+            Toby_ChessboardCoordsChecker.ChessboardCoordsToggleByOutputType(narrationOutputType, chessboardCoords[consoleplayer].enabled);
+        }
+        if (e.Name == "Toby_CheckChessboardCoordinatesInterface")
+        {
+            chessboardCoords[consoleplayer].CheckChessboardCoordsByOutputType(narrationOutputType);
         }
     }
 
@@ -234,6 +154,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             if (!chessboardCoords[e.Player]) { return; }
             chessboardCoords[e.Player].enabled = !chessboardCoords[e.Player].enabled;
+            chessboardCoords[e.Player].toggleTick = true;
             EventHandler.SendInterfaceEvent(e.Player, "Toby_ChessboardCoordinatesToggleInterface");
         }
         if (event == "Toby_WarpToChessboard")
@@ -243,6 +164,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             vector3 chessboardCoords = chessboardCoords[e.Player].ChessboardToWorldCoordinates(args[0]);
             chessboardCoords.z = playerActor.pos.z;
             playerActor.SetOrigin(chessboardCoords, true);
+        }
+        if (event == "Toby_CheckChessboardCoordinates")
+        {
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckChessboardCoordinatesInterface");
         }
     }
 }
