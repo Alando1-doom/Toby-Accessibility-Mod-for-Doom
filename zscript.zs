@@ -85,6 +85,11 @@ version "4.6"
 #include "zscript/AccessibleMenu/Toby_TitleScreenHandler.zs"
 #include "zscript/AccessibleMenu/Toby_MenuState.zs"
 #include "zscript/AccessibleMenu/Toby_MenuEventProcessor.zs"
+#include "zscript/AccessibleMenu/Toby_WeaponsMenu.zs"
+#include "zscript/AccessibleMenu/Toby_ItemsMenu.zs"
+#include "zscript/AccessibleMenu/Toby_WeaponsMenuItem.zs"
+#include "zscript/AccessibleMenu/Toby_ItemsMenuItem.zs"
+#include "zscript/AccessibleMenu/Toby_WeaponAndItemMenuHandler.zs"
 
 //Utils
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
