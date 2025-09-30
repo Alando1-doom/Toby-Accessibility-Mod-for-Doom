@@ -42,15 +42,5 @@ class Toby_WeaponsMenu : OptionMenu
             string command = className;
             mDesc.mItems.Push(new("Toby_WeaponsMenuItem").Init(label, command));
         }
-        // for (Inventory item = playerActor.inv; item; item = item.inv)
-        // {
-        //     if (!(item is "Weapon")) { continue; }
-        //     string label = item.GetTag();
-        //     string command = "";
-        //     mDesc.mItems.Push(new("Toby_WeaponsMenuItem").Init(label, command));
-
-        //     // Consider going Gearbox route: https://github.com/mmaulwurff/gearbox/blob/master/zscript/gearbox/weapon_data_loader.zs#L26-L63
-        //     // For items check for bInvBar
-        // }
     }
 }
