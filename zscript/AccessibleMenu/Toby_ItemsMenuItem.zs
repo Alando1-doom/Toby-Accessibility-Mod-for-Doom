@@ -1,4 +1,4 @@
-class Toby_ItemsMenuItem : Toby_BaseMarkerOptionMenuItem
+class Toby_ItemsMenuItem : Toby_MenuItemWithSoundQueue
 {
     override bool Activate()
     {

@@ -38,6 +38,8 @@ class Toby_MenuState
     ui int gameStatus;
     ui int selectedMenuItemNumber;
 
+    ui Toby_SoundQueue soundQueue;
+
     ui void CopyValuesTo(Toby_MenuState otherState)
     {
         otherState.menuClass = menuClass;
@@ -76,6 +78,8 @@ class Toby_MenuState
         otherState.consoleStatus = consoleStatus;
         otherState.gameStatus = gameStatus;
         otherState.selectedMenuItemNumber = selectedMenuItemNumber;
+
+        otherState.soundQueue = soundQueue;
     }
 
     ui MenuStateChanges DetectChanges(Toby_MenuState otherState)
@@ -220,6 +224,8 @@ class Toby_MenuState
         isField = false;
         isOption = false;
         isControl = false;
+
+        soundQueue = null;
     }
 
     ui void UpdateMenuState(Menu m, int keyPressed)
@@ -352,6 +358,10 @@ class Toby_MenuState
                     {
                         menuItemKeybindDescription = "No keybind";
                     }
+                }
+                if (mItemOption is "Toby_MenuItemWithSoundQueue")
+                {
+                    soundQueue = (Toby_MenuItemWithSoundQueue)(mItemOption).GetSoundQueue();
                 }
             }
         }

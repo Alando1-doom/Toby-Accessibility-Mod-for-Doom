@@ -30,21 +30,29 @@ class Toby_SelectionNarrator
     {
         Toby_SoundQueueStaticHandler.Clear();
 
+        Toby_SoundQueue itemSoundQueue = GetItemSoundQueue(itemName, amount, itemsSoundBindings);
+        Toby_SoundQueueStaticHandler.AddQueue(itemSoundQueue);
+
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui static Toby_SoundQueue GetItemSoundQueue(string itemName, int amount, Toby_SoundBindingsContainer itemsSoundBindings)
+    {
+        Toby_SoundQueue queue = Toby_SoundQueue.Create();
         for (int i = 0; i < itemsSoundBindings.soundBindings.Size(); i++)
         {
             string className = itemsSoundBindings.soundBindings[i].At("ActorClass");
             if (itemName == className)
             {
                 string soundName = itemsSoundBindings.soundBindings[i].At("SoundToPlay");
-                Toby_SoundQueueStaticHandler.AddSound(soundName, -1);
+                queue.AddSound(soundName, -1);
                 break;
             }
         }
 
         Toby_NumberToSoundQueue numberToSoundQueue = Toby_NumberToSoundQueue.Create();
-        Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(amount));
-
-        Toby_SoundQueueStaticHandler.PlayQueue(0);
+        queue.AddQueue(numberToSoundQueue.CreateQueueFromInt(amount));
+        return queue;
     }
 
     ui static void NarrateItemNameTextOnly(string itemName, int amount)
