@@ -36,10 +36,12 @@ class Toby_WeaponsMenu : OptionMenu
         for (int i = 0; i < playerWeaponClasses.Size(); i++)
         {
             string className = playerWeaponClasses[i].GetClassName();
-            Inventory w = player.mo.findInventory(className);
-            if (!w) { continue; }
-            string label = w.GetTag();
+            Weapon playerWeapon = (Weapon)(playerActor.findInventory(className));
+            if (!playerWeapon) { continue; }
+
+            string label = Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
             string command = className;
+
             mDesc.mItems.Push(new("Toby_WeaponsMenuItem").Init(label, command));
         }
     }

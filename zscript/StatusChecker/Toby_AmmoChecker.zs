@@ -50,12 +50,23 @@ class Toby_AmmoChecker
         if (!player.mo) { return; }
         Actor playerActor = player.mo;
 
-        Class<Ammo> currentWeaponPrimaryAmmoClass = player.ReadyWeapon.AmmoType1;
-        Class<Ammo> currentWeaponSecondaryAmmoClass = player.ReadyWeapon.AmmoType2;
-        Inventory ammoPrimary = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
-        Inventory ammoSecondary = playerActor.FindInventory(currentWeaponSecondaryAmmoClass);
+        string textToPrint = GetWeaponAndAmmoInfoString(playerActor, player.ReadyWeapon);
 
-        string textToPrint = player.ReadyWeapon.GetTag();
+        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+    }
+
+    ui static string GetWeaponAndAmmoInfoString(Actor playerActor, Weapon playerWeapon)
+    {
+        string textToPrint = "";
+        if (!playerActor) { return textToPrint; }
+        if (!playerWeapon) { return textToPrint; }
+
+        class<Ammo> primaryAmmoClass = playerWeapon.AmmoType1;
+        class<Ammo> secondaryAmmoClass = playerWeapon.AmmoType2;
+        Inventory ammoPrimary = playerActor.FindInventory(primaryAmmoClass);
+        Inventory ammoSecondary = playerActor.FindInventory(secondaryAmmoClass);
+
+        textToPrint = textToPrint .. playerWeapon.GetTag();
         if (ammoPrimary)
         {
             textToPrint = textToPrint .. " " .. ammoPrimary.amount .. " " .. ammoPrimary.GetTag();
@@ -68,7 +79,7 @@ class Toby_AmmoChecker
         {
             textToPrint = textToPrint .. " " .. ammoSecondary.amount .. " " .. ammoSecondary.GetTag();
         }
-        Toby_Logger.ConsoleOutputModeMessage(textToPrint);
+        return textToPrint;
     }
 
     ui static string GetAmmoSoundName(Toby_SoundBindingsContainer ammoSoundBindings, string classNameToFind, int amount)

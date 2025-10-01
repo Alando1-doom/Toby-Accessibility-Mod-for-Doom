@@ -14,7 +14,7 @@ class Toby_ItemsMenu : OptionMenu
         {
             if (!item) { continue; }
             if (!item.bInvBar) { continue; }
-            string label = item.GetTag();
+            string label = Toby_CurrentItemChecker.GetInventoryItemInfoString(item);
             string command = item.GetClassName();
             mDesc.mItems.Push(new("Toby_ItemsMenuItem").Init(label, command));
         }
