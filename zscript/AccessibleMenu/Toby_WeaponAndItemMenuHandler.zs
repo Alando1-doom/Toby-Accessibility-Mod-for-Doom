@@ -9,7 +9,7 @@ class Toby_WeaponAndItemMenuHandler : EventHandler
     {
         PlayerInfo player = players[e.Player];
         if (!player) { return; }
-        Actor playerActor = player.mo;
+        PlayerPawn playerActor = (PlayerPawn)(player.mo);
         if (!playerActor) { return; }
 
         Array<string> eventAndArguments;
@@ -46,8 +46,7 @@ class Toby_WeaponAndItemMenuHandler : EventHandler
             if (args.Size() < 1) { return; }
             Inventory item = playerActor.FindInventory(args[0]);
             if (!item) { return; }
-
-            item.Use(false);
+            playerActor.useInventory(item);
         }
     }
 }
