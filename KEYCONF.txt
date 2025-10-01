@@ -54,6 +54,8 @@ defaultbind KP9 "levelwarp"
 AddKeySection "$ZS_EM_KEYS_TITLE" ExtendedMarkers
 
 AddMenuKey "$ZS_EM_KEY_LABEL_OPEN_MENU" "openmenu toby_marker_main"
+AddMenuKey "$TOBY_WEAPONS_OPEN_MENU" "openmenu toby_weapons_menu"
+AddMenuKey "$TOBY_ITEMS_OPEN_MENU" "openmenu toby_items_menu"
 
 //AddMenuKey "$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER" zs_em_place_next_marker_keybind
 //AddMenuKey "$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER" zs_em_remove_last_marker_keybind
