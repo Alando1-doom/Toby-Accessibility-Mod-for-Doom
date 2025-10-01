@@ -28,6 +28,16 @@ class Toby_SoundQueue
         queue.Append(otherQueue.queue);
     }
 
+    Toby_SoundQueue Clone()
+    {
+        Toby_SoundQueue soundQueue = new("Toby_SoundQueue");
+        for (int i = 0; i < queue.Size(); i++)
+        {
+            soundQueue.AddSound(queue[i].sound, queue[i].pause);
+        }
+        return soundQueue;
+    }
+
     void UnshiftQueue(Toby_SoundQueue otherQueue)
     {
         Array<Toby_QueuedSound> tempQueue;

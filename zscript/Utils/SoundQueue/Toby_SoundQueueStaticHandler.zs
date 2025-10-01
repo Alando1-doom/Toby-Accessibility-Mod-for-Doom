@@ -18,6 +18,11 @@ class Toby_SoundQueueStaticHandler : StaticEventHandler
             }
             else
             {
+                if (!queue[0])
+                {
+                    playing = false;
+                    return;
+                }
                 S_StartSound(queue[0].sound, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
                 waitTime = queue[0].pause;
                 queue[0].Destroy();
@@ -35,6 +40,7 @@ class Toby_SoundQueueStaticHandler : StaticEventHandler
         Toby_SoundQueueStaticHandler handler = Toby_SoundQueueStaticHandler(StaticEventHandler.Find("Toby_SoundQueueStaticHandler"));
         for (int i = 0; i < handler.queue.Size(); i++)
         {
+            if (!handler.queue[i]) { continue; }
             handler.queue[i].Destroy();
         }
         handler.queue.Clear();
