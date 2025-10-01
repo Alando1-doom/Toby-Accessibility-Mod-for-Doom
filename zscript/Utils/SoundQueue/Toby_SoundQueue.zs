@@ -33,7 +33,7 @@ class Toby_SoundQueue
         Toby_SoundQueue soundQueue = new("Toby_SoundQueue");
         for (int i = 0; i < queue.Size(); i++)
         {
-            soundQueue.AddSound(queue[i].sound, queue[i].pause);
+            soundQueue.AddSound(queue[i].sound, -1);
         }
         return soundQueue;
     }

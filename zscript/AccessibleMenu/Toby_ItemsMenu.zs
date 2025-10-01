@@ -19,11 +19,11 @@ class Toby_ItemsMenu : OptionMenu
             Toby_ItemsMenuItem menuItem = (Toby_ItemsMenuItem)(new("Toby_ItemsMenuItem").Init(label, command));
 
             Toby_SoundBindingsLoaderStaticHandler bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
-            Toby_SoundQueue queue = Toby_SelectionNarrator.GetItemSoundQueue(command, item.amount, bindings.itemsSoundBindingsContainer);
-            for (int i = 0; i < queue.queue.Size(); i++)
-            {
-                console.printf(queue.queue[i].sound);
-            }
+            Toby_SoundQueue queue = Toby_SelectionNarrator.GetItemSoundQueue(
+                command,
+                item.amount,
+                bindings.itemsSoundBindingsContainer
+            );
             menuItem.SetSoundQueue(queue);
             mDesc.mItems.Push(menuItem);
         }

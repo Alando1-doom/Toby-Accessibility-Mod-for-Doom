@@ -11,19 +11,34 @@ class Toby_AmmoChecker
 
         Toby_SoundQueueStaticHandler.Clear();
 
-        Class<Ammo> currentWeaponPrimaryAmmoClass = player.ReadyWeapon.AmmoType1;
-        Class<Ammo> currentWeaponSecondaryAmmoClass = player.ReadyWeapon.AmmoType2;
-        Inventory ammoPrimary = playerActor.FindInventory(currentWeaponPrimaryAmmoClass);
-        Inventory ammoSecondary = playerActor.FindInventory(currentWeaponSecondaryAmmoClass);
+        Toby_SoundQueue queue = GetWeaponAndAmmoSoundQueue(playerActor, player.ReadyWeapon, weaponsSoundBindings, ammoSoundBindings);
+        Toby_SoundQueueStaticHandler.AddQueue(queue);
+
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
+    ui static Toby_SoundQueue GetWeaponAndAmmoSoundQueue(
+        Actor playerActor,
+        Weapon playerWeapon,
+        Toby_SoundBindingsContainer weaponsSoundBindings,
+        Toby_SoundBindingsContainer ammoSoundBindings
+    )
+    {
+        Toby_SoundQueue queue = Toby_SoundQueue.Create();
+
+        class<Ammo> primaryAmmoClass = playerWeapon.AmmoType1;
+        class<Ammo> secondaryAmmoClass = playerWeapon.AmmoType2;
+        Inventory ammoPrimary = playerActor.FindInventory(primaryAmmoClass);
+        Inventory ammoSecondary = playerActor.FindInventory(secondaryAmmoClass);
 
         //Weapon name
         for (int i = 0; i < weaponsSoundBindings.soundBindings.Size(); i++)
         {
             string className = weaponsSoundBindings.soundBindings[i].At("ActorClass");
-            if (player.ReadyWeapon.GetClassName() == className)
+            if (playerWeapon.GetClassName() == className)
             {
                 string soundName = weaponsSoundBindings.soundBindings[i].At("SoundToPlay");
-                Toby_SoundQueueStaticHandler.AddSound(soundName, -1);
+                queue.AddSound(soundName, -1);
                 break;
             }
         }
@@ -31,17 +46,17 @@ class Toby_AmmoChecker
         Toby_NumberToSoundQueue numberToSoundQueue = Toby_NumberToSoundQueue.Create();
         if (ammoPrimary) {
             string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoPrimary.GetClassName(), ammoPrimary.amount);
-            Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(ammoPrimary.amount));
-            Toby_SoundQueueStaticHandler.AddSound(soundToPlay, -1);
+            queue.AddQueue(numberToSoundQueue.CreateQueueFromInt(ammoPrimary.amount));
+            queue.AddSound(soundToPlay, -1);
         }
 
         if (ammoSecondary) {
             string soundToPlay = GetAmmoSoundName(ammoSoundBindings, ammoSecondary.GetClassName(), ammoSecondary.amount);
-            Toby_SoundQueueStaticHandler.AddQueue(numberToSoundQueue.CreateQueueFromInt(ammoSecondary.amount));
-            Toby_SoundQueueStaticHandler.AddSound(soundToPlay, -1);
+            queue.AddQueue(numberToSoundQueue.CreateQueueFromInt(ammoSecondary.amount));
+            queue.AddSound(soundToPlay, -1);
         }
 
-        Toby_SoundQueueStaticHandler.PlayQueue(0);
+        return queue;
     }
 
     ui static void CheckAmmoTextOnly(PlayerInfo player)

@@ -42,7 +42,18 @@ class Toby_WeaponsMenu : OptionMenu
             string label = Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
             string command = className;
 
-            mDesc.mItems.Push(new("Toby_WeaponsMenuItem").Init(label, command));
+            Toby_WeaponsMenuItem menuItem = (Toby_WeaponsMenuItem)(new("Toby_WeaponsMenuItem").Init(label, command));
+
+            Toby_SoundBindingsLoaderStaticHandler bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
+            Toby_SoundQueue queue = Toby_AmmoChecker.GetWeaponAndAmmoSoundQueue(
+                playerActor,
+                playerWeapon,
+                bindings.weaponsSoundBindingsContainer,
+                bindings.ammoSoundBindingsContainer
+            );
+            menuItem.SetSoundQueue(queue);
+
+            mDesc.mItems.Push(menuItem);
         }
     }
 }

@@ -196,7 +196,7 @@ class Toby_PathfinderHandler : EventHandler
         {
             vector2 destinationFlat = (eventAndArgument[1].ToDouble(), eventAndArgument[2].ToDouble());
             vector3 destination = (destinationFlat, eventAndArgument[3].ToDouble());
-            console.printf("Destination: "..destination);
+            // console.printf("Destination: "..destination);
             int destinationSector = level.PointInSector(destinationFlat).Index();
             explorationPathfinders[e.Player].FindPathFromDestinationToExploredSector(destinationSector);
             pathfinderThinkers[e.Player].FindPath(playerActor.pos, destination, explorationPathfinders[e.Player].explorationNodes);
