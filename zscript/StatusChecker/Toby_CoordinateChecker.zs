@@ -26,4 +26,16 @@ class Toby_CoordinateChecker
         string textToPrint = "X " .. int(playerActor.pos.x) .. " Y " .. int(playerActor.pos.y) .. " Z " .. int(playerActor.pos.z);
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
+
+    ui static void CheckCoordinatesByOutputType(int narrationOutputType, PlayerInfo player)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            Toby_CoordinateChecker.CheckCoordinatesTextOnly(player);
+        }
+        else
+        {
+            Toby_CoordinateChecker.CheckCoordinates(player);
+        }
+    }
 }

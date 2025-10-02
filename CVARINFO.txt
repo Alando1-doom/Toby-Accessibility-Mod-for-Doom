@@ -38,6 +38,7 @@ user float  Toby_Proximity_Attenuation = 8.0;
 user bool   Toby_Proximity_EnabledByDefault = false;
 
 user bool   Toby_ElevationTones_EnabledByDefault = false;
+user bool   Toby_ChessboardCoordinates_EnabledByDefault = false;
 
 //Hit Marker CVAR
 
