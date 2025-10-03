@@ -35,6 +35,12 @@ OptionMenu "toby_mod_options"
     Option      "$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "Toby_ElevationTones_EnabledByDefault", "toby_yes_no"
 
     StaticText  ""
+    StaticText  "$TOBY_CHESSOBOARD_COORDINATES_SECTION", "Gold"
+    Control     "$TOBY_CHESSOBOARD_COORDINATES_TOGGLE", "toby_chessboard_toggle_keybind"
+    Control     "$TOBY_CHESSOBOARD_COORDINATES_CHECK", "toby_chessboard_check_keybind"
+    Option      "$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "Toby_ChessboardCoordinates_EnabledByDefault", "toby_yes_no"
+
+    StaticText  ""
     StaticText  "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Option "$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
 

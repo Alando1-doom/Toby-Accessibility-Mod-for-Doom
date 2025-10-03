@@ -27,6 +27,18 @@ class Toby_CurrentItemChecker
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 
+    ui static void CheckCurrentItemByOutputType(int narrationOutputType, PlayerInfo player, Toby_SoundBindingsContainer itemSoundBindings)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            Toby_CurrentItemChecker.CheckCurrentItemTextOnly(player);
+        }
+        else
+        {
+            Toby_CurrentItemChecker.CheckCurrentItem(player, itemSoundBindings);
+        }
+    }
+
     ui static string GetInventoryItemInfoString(Inventory item)
     {
         string textToPrint = "";

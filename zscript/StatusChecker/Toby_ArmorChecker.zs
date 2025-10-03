@@ -217,4 +217,16 @@ class Toby_ArmorChecker
         if (slot == 4) { return ""; }
         return armorPieceName;
     }
+
+    ui static void CheckArmorByOutputType(int narrationOutputType, PlayerInfo player, Toby_SoundBindingsContainer armorSoundBindings)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            Toby_ArmorChecker.CheckArmorTextOnly(player);
+        }
+        else
+        {
+            Toby_ArmorChecker.CheckArmor(player, armorSoundBindings);
+        }
+    }
 }

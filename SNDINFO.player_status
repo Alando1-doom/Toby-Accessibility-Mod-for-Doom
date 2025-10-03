@@ -3,8 +3,14 @@ stats/general/percent       "sounds/Menus/CustomizeControls/Keyboard/kpercent.og
 
 stats/general/crouched      "sounds/PlayerStats/Crouch/CrouchDown.ogg"
 stats/general/uncrouched    "sounds/PlayerStats/Crouch/CrouchUp.ogg"
-stats/general/crouchednonarration      "sounds/PlayerStats/Crouch/CrouchDownNoNarration.wav"
-stats/general/uncrouchednonarration    "sounds/PlayerStats/Crouch/CrouchUpNoNarration.ogg"
+stats/general/crouchednonarration       "sounds/PlayerStats/Crouch/CrouchDownNoNarration.wav"
+stats/general/uncrouchednonarration     "sounds/PlayerStats/Crouch/CrouchUpNoNarration.ogg"
+
+stats/chessboardcoords/enabled          "sounds/PlayerStats/Crouch/CrouchUpNoNarration.ogg"
+stats/chessboardcoords/disabled         "sounds/PlayerStats/Crouch/CrouchDownNoNarration.wav"
+stats/chessboardcoords/region           "sounds/PlayerStats/Crouch/CrouchUpNoNarration.ogg"
+stats/chessboardcoords/zone             "sounds/PlayerStats/Crouch/CrouchDownNoNarration.wav"
+stats/chessboardcoords/cell             "sounds/PlayerStats/Crouch/CrouchUpNoNarration.ogg"
 
 stats/level/secrets         "sounds/PlayerStats/MapStats/Secrets.ogg"
 stats/level/monsters        "sounds/PlayerStats/MapStats/Monsters.ogg"
@@ -72,38 +78,38 @@ heretic/armor/enchantedshield   "sounds/PlayerStats/HereticArmor/EnchantedShield
 
 //Hexen Stats
 
-hexen/weapon/snout					"sounds/PlayerStats/HexenWeapons/Snout.ogg"
+hexen/weapon/snout      "sounds/PlayerStats/HexenWeapons/Snout.ogg"
 
 //Fighter
 
-hexen/weapon/fists						"sounds/PlayerStats/HexenWeapons/Fist.ogg"
-hexen/weapon/axe						"sounds/PlayerStats/HexenWeapons/Axe.ogg"
-hexen/weapon/hammer				"sounds/PlayerStats/HexenWeapons/Hammer.ogg"
-hexen/weapon/quietus				"sounds/PlayerStats/HexenWeapons/Quietus.ogg"
+hexen/weapon/fists      "sounds/PlayerStats/HexenWeapons/Fist.ogg"
+hexen/weapon/axe        "sounds/PlayerStats/HexenWeapons/Axe.ogg"
+hexen/weapon/hammer     "sounds/PlayerStats/HexenWeapons/Hammer.ogg"
+hexen/weapon/quietus    "sounds/PlayerStats/HexenWeapons/Quietus.ogg"
 
 //Cleric
 
-hexen/weapon/mace					"sounds/PlayerStats/HexenWeapons/Mace.ogg"
-hexen/weapon/serpentstaff			"sounds/PlayerStats/HexenWeapons/SerpentStaff.ogg"
-hexen/weapon/firestorm				"sounds/PlayerStats/HexenWeapons/FireStorm.ogg"
-hexen/weapon/wraithverge			"sounds/PlayerStats/HexenWeapons/WraithVerge.ogg"
+hexen/weapon/mace           "sounds/PlayerStats/HexenWeapons/Mace.ogg"
+hexen/weapon/serpentstaff   "sounds/PlayerStats/HexenWeapons/SerpentStaff.ogg"
+hexen/weapon/firestorm      "sounds/PlayerStats/HexenWeapons/FireStorm.ogg"
+hexen/weapon/wraithverge    "sounds/PlayerStats/HexenWeapons/WraithVerge.ogg"
 
 //Mage
 
-hexen/weapon/wand					"sounds/PlayerStats/HexenWeapons/SaphireWand.ogg"
-hexen/weapon/frostspell				"sounds/PlayerStats/HexenWeapons/FrostSpell.ogg"
-hexen/weapon/arc						"sounds/PlayerStats/HexenWeapons/Arc.ogg"
-hexen/weapon/bloodscourge		"sounds/PlayerStats/HexenWeapons/BloodScourge.ogg"
+hexen/weapon/wand           "sounds/PlayerStats/HexenWeapons/SaphireWand.ogg"
+hexen/weapon/frostspell     "sounds/PlayerStats/HexenWeapons/FrostSpell.ogg"
+hexen/weapon/arc            "sounds/PlayerStats/HexenWeapons/Arc.ogg"
+hexen/weapon/bloodscourge   "sounds/PlayerStats/HexenWeapons/BloodScourge.ogg"
 
 //Ammo
 
-hexen/ammo/bluemana				"sounds/ActorsInViewport/Hexen/Pickups/Ammo/BlueMana.ogg"
-hexen/ammo/greenmana			"sounds/ActorsInViewport/Hexen/Pickups/Ammo/GreenMana.ogg"
+hexen/ammo/bluemana         "sounds/ActorsInViewport/Hexen/Pickups/Ammo/BlueMana.ogg"
+hexen/ammo/greenmana        "sounds/ActorsInViewport/Hexen/Pickups/Ammo/GreenMana.ogg"
 
 //Armor
 
-hexen/armor/amulet					"sounds/PlayerStats/HexenArmor/Amulet.ogg"
-hexen/armor/bracers					"sounds/PlayerStats/HexenArmor/Bracers.ogg"
-hexen/armor/shield						"sounds/PlayerStats/HexenArmor/FalconShield.ogg"
-hexen/armor/helmet					"sounds/PlayerStats/HexenArmor/Helmet.ogg"
-hexen/armor/mesharmor				"sounds/PlayerStats/HexenArmor/MeshArmor.ogg"
+hexen/armor/amulet          "sounds/PlayerStats/HexenArmor/Amulet.ogg"
+hexen/armor/bracers         "sounds/PlayerStats/HexenArmor/Bracers.ogg"
+hexen/armor/shield          "sounds/PlayerStats/HexenArmor/FalconShield.ogg"
+hexen/armor/helmet          "sounds/PlayerStats/HexenArmor/Helmet.ogg"
+hexen/armor/mesharmor       "sounds/PlayerStats/HexenArmor/MeshArmor.ogg"

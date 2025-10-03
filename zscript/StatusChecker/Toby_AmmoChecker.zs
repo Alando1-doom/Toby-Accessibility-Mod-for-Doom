@@ -164,4 +164,28 @@ class Toby_AmmoChecker
             }
         }
     }
+
+    ui static void CheckAmmoByOutputType(
+        int narrationOutputType,
+        PlayerInfo player,
+        Toby_SoundBindingsContainer weaponsSoundBindings,
+        Toby_SoundBindingsContainer ammoSoundBindings
+    )
+    {
+        if (CVar.FindCvar("Toby_UseLegacyAmmoChecker").GetBool())
+        {
+            Toby_AmmoChecker.CheckAmmoLegacy(player);
+        }
+        else
+        {
+            if (narrationOutputType == TNOT_CONSOLE)
+            {
+                Toby_AmmoChecker.CheckAmmoTextOnly(player);
+            }
+            else
+            {
+                Toby_AmmoChecker.CheckAmmo(player, weaponsSoundBindings, ammoSoundBindings);
+            }
+        }
+    }
 }

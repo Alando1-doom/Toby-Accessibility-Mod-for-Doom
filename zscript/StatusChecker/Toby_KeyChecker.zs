@@ -44,4 +44,16 @@ class Toby_KeyChecker
         }
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
+
+    ui static void CheckKeysByOutputType(int narrationOutputType, PlayerInfo player, Toby_SoundBindingsContainer keySoundBindings)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            Toby_KeyChecker.CheckKeysTextOnly(player);
+        }
+        else
+        {
+            Toby_KeyChecker.CheckKeys(player, keySoundBindings);
+        }
+    }
 }

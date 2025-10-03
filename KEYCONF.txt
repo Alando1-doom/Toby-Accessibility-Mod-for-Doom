@@ -100,3 +100,11 @@ AddMenuKey "Toggle proximity detector" toby_proximity_toggle_keybind
 addkeysection "Elevation Tone System" ElevationTone
 alias toby_elevation_toggle_keybind "netevent Toby_ElevationToneToggle";
 AddMenuKey "Toggle elevation tone" toby_elevation_toggle_keybind
+
+//Chessboard coordinates
+
+addkeysection "Chessboard Coordinates System" ChessboardCoordinates
+alias toby_chessboard_toggle_keybind "netevent Toby_ChessboardCoordinatesToggle";
+alias toby_chessboard_check_keybind "netevent Toby_CheckChessboardCoordinates";
+AddMenuKey "Toggle chessboard coordinates" toby_chessboard_toggle_keybind
+AddMenuKey "Check chessboard coordinates" toby_chessboard_check_keybind
