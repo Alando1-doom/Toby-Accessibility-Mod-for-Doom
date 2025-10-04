@@ -1157,3 +1157,12 @@ $volume menu/tobyopt/elevationtone	      0.5
 
 menu/tobyopt/elevationdefault				"sounds/Menus/TobyOptions/ElevToneDefault.ogg"
 $volume menu/tobyopt/elevationdefault	      0.5
+
+menu/tobyopt/togglechess						"sounds/Menus/TobyOptions/ToggleChessboard.ogg"
+$volume menu/tobyopt/togglechess	      0.5
+menu/tobyopt/checkchess						"sounds/Menus/TobyOptions/CheckChessboard.ogg"
+$volume menu/tobyopt/checkchess	      0.5
+menu/tobyopt/chessmain						"sounds/Menus/TobyOptions/ChessboardOptions.ogg"
+$volume menu/tobyopt/chessmain	      0.5
+menu/tobyopt/chessdefault						"sounds/Menus/TobyOptions/ChessboardDefault.ogg"
+$volume menu/tobyopt/chessdefault	      0.5

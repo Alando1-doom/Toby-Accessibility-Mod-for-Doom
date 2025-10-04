@@ -299,6 +299,11 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle elevation tone", "SoundToPlay":"menu/tobyopt/elevationtone"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_TOGGLE", "SoundToPlay":"menu/tobyopt/togglechess"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_CHECK", "SoundToPlay":"menu/tobyopt/checkchess"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
+
+
 //Toby Acc Mod Options
 {"EventType":"MenuChanged",   "CurrentMenuName":"TOBY_MOD_OPTIONS", "SoundToPlay":"menu/tobyopt/main"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_USE_UNIVERSAL_SOUNDS", "SoundToPlay":"menu/tobyopt/universalbeacon"}
@@ -323,6 +328,9 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_VIEWPORT_NARRATION_PRESET5", "SoundToPlay":"menu/controls/asdirheight"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_TOGGLE", "SoundToPlay":"menu/tobyopt/elevationtone"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/elevationdefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_TOGGLE", "SoundToPlay":"menu/tobyopt/togglechess"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_CHECK", "SoundToPlay":"menu/tobyopt/checkchess"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
 
 
 //MOUSE MENU
