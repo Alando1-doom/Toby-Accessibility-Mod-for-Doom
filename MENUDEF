@@ -146,6 +146,18 @@ OptionMenu "toby_marker_remove_nearest"
   Title "Remove nearest marker"
 }
 
+OptionMenu "toby_weapons_menu"
+{
+  class Toby_WeaponsMenu
+  Title "Weapons menu"
+}
+
+OptionMenu "toby_items_menu"
+{
+  class Toby_ItemsMenu
+  Title "Items menu"
+}
+
 OptionValue "toby_yes_no"
 {
     0, "No"

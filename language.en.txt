@@ -40,6 +40,8 @@ ZS_EM_REMOVE_LAST = "Remove Last Placed Marker";
 ZS_EM_REMOVE_ALL = "Remove All Markers";
 
 ZS_EM_KEY_LABEL_OPEN_MENU = "Open Marker Menu";
+TOBY_WEAPONS_OPEN_MENU = "Open Weapons Menu";
+TOBY_ITEMS_OPEN_MENU = "Open Items Menu";
 ZS_EM_KEY_LABEL_OPEN_PLACE_MENU = "Open Place Markers Menu";
 ZS_EM_KEY_LABEL_OPEN_REMOVE_MENU = "Open Remove Markers Menu";
 ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER = "Place next marker";

@@ -16,17 +16,14 @@ class Toby_CurrentItemChecker
     ui static void CheckCurrentItemTextOnly(PlayerInfo player)
     {
         if (!player) { return; }
-        if (!player.mo) { return; }
-        Actor playerActor = player.mo;
+        PlayerPawn playerActor = (PlayerPawn)(player.mo);
+        if (!playerActor) { return; }
 
-        string currentItem = "";
-        int amount = 0;
-        if (!player.mo.InvSel) { return; }
-        Inventory inv = player.mo.InvSel;
-        currentItem = inv.GetTag();
-        amount = inv.amount;
-        if (amount == 0) { return; }
-        string textToPrint = "" .. currentItem .. " " .. inv.amount;
+        Inventory item = playerActor.InvSel;
+        if (!item) { return; }
+        if (item.amount == 0) { return; }
+
+        string textToPrint = GetInventoryItemInfoString(item);
         Toby_Logger.ConsoleOutputModeMessage(textToPrint);
     }
 
@@ -40,5 +37,15 @@ class Toby_CurrentItemChecker
         {
             Toby_CurrentItemChecker.CheckCurrentItem(player, itemSoundBindings);
         }
+    }
+
+    ui static string GetInventoryItemInfoString(Inventory item)
+    {
+        string textToPrint = "";
+        if (!item) { return textToPrint; }
+        if (item.amount == 0) { return textToPrint; }
+        textToPrint = item.GetTag() .. " " .. item.amount;
+
+        return textToPrint;
     }
 }

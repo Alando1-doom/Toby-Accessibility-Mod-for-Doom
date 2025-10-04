@@ -15,6 +15,15 @@ class Toby_MenuOutputBySoundBindings
     {
         if (detectedChange == Toby_MenuState.NoChanges) { return; }
 
+        if ((currentState.menuClass == "Toby_ItemsMenu" || currentState.menuClass == "Toby_WeaponsMenu")
+            && (previousState.menuClass == "Toby_ItemsMenu" || previousState.menuClass == "Toby_WeaponsMenu")
+            && detectedChange == Toby_MenuState.OptionChanged
+        )
+        {
+            HandleMenuItemWithQueue(currentState);
+            return;
+        }
+
         if (currentState.menuClass == "Toby_MarkerExplorationMenu"
             && previousState.menuClass == "Toby_MarkerExplorationMenu"
             && detectedChange == Toby_MenuState.OptionChanged
@@ -301,6 +310,14 @@ class Toby_MenuOutputBySoundBindings
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 
+    ui void HandleMenuItemWithQueue(Toby_MenuState currentState)
+    {
+        if (!currentState.soundQueue) { return; }
+        Toby_SoundQueueStaticHandler.Clear();
+        Toby_SoundQueueStaticHandler.AddQueue(currentState.soundQueue.Clone());
+        Toby_SoundQueueStaticHandler.PlayQueue(0);
+    }
+
     ui void HandleMarkerExplorationMenu(Toby_MenuState currentState)
     {
         Toby_SoundQueueStaticHandler.Clear();
@@ -312,7 +329,7 @@ class Toby_MenuOutputBySoundBindings
         }
         Array<String> pointOfInterest;
         currentState.mItemOptionNameLocalized.split(pointOfInterest, " - ", TOK_KEEPEMPTY);
-        console.printf(""..currentState.mItemOptionNameLocalized);
+        // console.printf(""..currentState.mItemOptionNameLocalized);
 
         if (pointOfInterest[0] == "Unexplored line")
         {
