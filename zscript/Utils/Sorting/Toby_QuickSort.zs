@@ -14,6 +14,17 @@ class Toby_QuickSort
                 Object tmp = container.GetObject(i);
                 container.SetObject(i, container.GetObject(j));
                 container.SetObject(j, tmp);
+
+                if (i == pivotPos)
+                {
+                    pivotPos = j;
+                }
+
+                else if (j == pivotPos)
+                {
+                    pivotPos = i;
+                }
+
                 i++;
                 j--;
             }
