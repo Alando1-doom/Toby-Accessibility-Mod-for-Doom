@@ -24,6 +24,11 @@ class Toby_WeaponsMenu : OptionMenu
             int priority;
             [located, slot, priority] = player.weapons.LocateWeapon(type);
 
+            if (slot == 0)
+            {
+                slot = 10;
+            }
+
             if (!located) { continue; };
 
             weaponCollection.AddItem(slot, priority, type);
