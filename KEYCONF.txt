@@ -106,5 +106,5 @@ AddMenuKey "Toggle elevation tone" toby_elevation_toggle_keybind
 addkeysection "Chessboard Coordinates System" ChessboardCoordinates
 alias toby_chessboard_toggle_keybind "netevent Toby_ChessboardCoordinatesToggle";
 alias toby_chessboard_check_keybind "netevent Toby_CheckChessboardCoordinates";
-AddMenuKey "Toggle chessboard coordinates" toby_chessboard_toggle_keybind
-AddMenuKey "Check chessboard coordinates" toby_chessboard_check_keybind
+AddMenuKey "$TOBY_CHESSOBOARD_COORDINATES_TOGGLE" toby_chessboard_toggle_keybind
+AddMenuKey "$TOBY_CHESSOBOARD_COORDINATES_CHECK" toby_chessboard_check_keybind
