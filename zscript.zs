@@ -93,6 +93,8 @@ version "4.6"
 #include "zscript/AccessibleMenu/Toby_WeaponsMenuItem.zs"
 #include "zscript/AccessibleMenu/Toby_ItemsMenuItem.zs"
 #include "zscript/AccessibleMenu/Toby_WeaponAndItemMenuHandler.zs"
+#include "zscript/AccessibleMenu/WeaponsMenu/Toby_WeaponSlotItem.zs"
+#include "zscript/AccessibleMenu/WeaponsMenu/Toby_WeaponSlotItemCollection.zs"
 
 //Utils
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
@@ -103,6 +105,8 @@ version "4.6"
 #include "zscript/Utils/Toby_Enums.zs"
 #include "zscript/Utils/Toby_IntegerSet.zs"
 #include "zscript/Utils/Toby_Math.zs"
+#include "zscript/Utils/Sorting/Toby_SortableCollection.zs"
+#include "zscript/Utils/Sorting/Toby_QuickSort.zs"
 
 //libeye
 #include "zscript/libeye/Toby_projector gl.zs"

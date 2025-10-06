@@ -10,7 +10,7 @@ class Toby_WeaponsMenu : OptionMenu
         Actor playerActor = player.mo;
         if (!playerActor) { return; }
 
-        Array<class<Weapon> > playerWeaponClasses;
+        Toby_WeaponSlotItemCollection weaponCollection = Toby_WeaponSlotItemCollection.Create();
 
         // This piece lifted directly from m8f's Gearbox
         for (int i = 0; i < AllActorClasses.Size(); ++i)
@@ -24,34 +24,42 @@ class Toby_WeaponsMenu : OptionMenu
             int priority;
             [located, slot, priority] = player.weapons.LocateWeapon(type);
 
+            if (slot == 0)
+            {
+                slot = 10;
+            }
+
             if (!located) { continue; };
 
-            readonly<Weapon> def = GetDefaultByType(type);
-            // Can't run from UI context :|
-            // if (!def.CanPickup(player.mo)) { continue; };
-
-            playerWeaponClasses.push(type);
+            weaponCollection.AddItem(slot, priority, type);
         }
 
-        for (int i = 0; i < playerWeaponClasses.Size(); i++)
+        Toby_QuickSort.QuickSort(weaponCollection, 0, weaponCollection.Size() - 1);
+
+        for (int i = 0; i < weaponCollection.Size(); i++)
         {
-            string className = playerWeaponClasses[i].GetClassName();
+            Toby_WeaponSlotItem item = (Toby_WeaponSlotItem)(weaponCollection.GetObject(i));
+            string className = item.type.GetClassName();
             Weapon playerWeapon = (Weapon)(playerActor.findInventory(className));
             if (!playerWeapon) { continue; }
 
-            string label = Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
+            string label = item.slot .. ". " .. Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
             string command = className;
 
             Toby_WeaponsMenuItem menuItem = (Toby_WeaponsMenuItem)(new("Toby_WeaponsMenuItem").Init(label, command));
 
             Toby_SoundBindingsLoaderStaticHandler bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
-            Toby_SoundQueue queue = Toby_AmmoChecker.GetWeaponAndAmmoSoundQueue(
+            Toby_SoundQueue weaponAndAmmoQueue = Toby_AmmoChecker.GetWeaponAndAmmoSoundQueue(
                 playerActor,
                 playerWeapon,
                 bindings.weaponsSoundBindingsContainer,
                 bindings.ammoSoundBindingsContainer
             );
-            menuItem.SetSoundQueue(queue);
+            Toby_NumberToSoundQueue slotNumberQueue = Toby_NumberToSoundQueue.Create();
+            Toby_SoundQueue finalQueue = Toby_SoundQueue.Create();
+            finalQueue.AddQueue(slotNumberQueue.CreateQueueFromInt(item.slot));
+            finalQueue.AddQueue(weaponAndAmmoQueue);
+            menuItem.SetSoundQueue(finalQueue);
 
             mDesc.mItems.Push(menuItem);
         }
