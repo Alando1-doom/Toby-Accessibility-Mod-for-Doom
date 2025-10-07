@@ -43,7 +43,13 @@ class Toby_WeaponsMenu : OptionMenu
             Weapon playerWeapon = (Weapon)(playerActor.findInventory(className));
             if (!playerWeapon) { continue; }
 
-            string label = item.slot .. ". " .. Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
+            int weaponSlot = item.slot;
+            if (weaponSlot == 10)
+            {
+                weaponSlot = 0;
+            }
+
+            string label = weaponSlot .. ". " .. Toby_AmmoChecker.GetWeaponAndAmmoInfoString(playerActor, playerWeapon);
             string command = className;
 
             Toby_WeaponsMenuItem menuItem = (Toby_WeaponsMenuItem)(new("Toby_WeaponsMenuItem").Init(label, command));
@@ -57,7 +63,7 @@ class Toby_WeaponsMenu : OptionMenu
             );
             Toby_NumberToSoundQueue slotNumberQueue = Toby_NumberToSoundQueue.Create();
             Toby_SoundQueue finalQueue = Toby_SoundQueue.Create();
-            finalQueue.AddQueue(slotNumberQueue.CreateQueueFromInt(item.slot));
+            finalQueue.AddQueue(slotNumberQueue.CreateQueueFromInt(weaponSlot));
             finalQueue.AddQueue(weaponAndAmmoQueue);
             menuItem.SetSoundQueue(finalQueue);
 
