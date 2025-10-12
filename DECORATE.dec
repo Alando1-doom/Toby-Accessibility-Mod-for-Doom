@@ -1,7 +1,9 @@
 #include decorate/DEC_BEAC.dec
 #include decorate/DEC_CHEATS.dec
+#include decorate/DEC_IDKFA.dec
 #include decorate/DEC_KDOR.dec
 #include decorate/MarkerChecker.dec
+#include decorate/DEC_PUFF.dec
 //Player
 #include decorate/Detectors/FloorChecker.dec
 //#include decorate/Detectors/WalkThing.dec

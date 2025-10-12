@@ -286,6 +286,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle God Mode", "SoundToPlay":"menu/controls/togglegod"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Give All", "SoundToPlay":"menu/controls/idkfa"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Change to Next Level", "SoundToPlay":"menu/controls/levelwarp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"Toggle Rad Suit", "SoundToPlay":"menu/controls/toggleradsuit"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_OPEN_MENU", "SoundToPlay":"menu/controls/openmarkmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_PLACE_NEXT_MARKER", "SoundToPlay":"menu/controls/placemarker"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$ZS_EM_KEY_LABEL_REMOVE_LAST_MARKER", "SoundToPlay":"menu/controls/removemarker"}
@@ -302,6 +303,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_TOGGLE", "SoundToPlay":"menu/tobyopt/togglechess"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_CHECK", "SoundToPlay":"menu/tobyopt/checkchess"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_WEAPONS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openweapmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ITEMS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openitemsmenu"}
 
 
 //Toby Acc Mod Options
@@ -331,6 +334,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_TOGGLE", "SoundToPlay":"menu/tobyopt/togglechess"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_CHECK", "SoundToPlay":"menu/tobyopt/checkchess"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_WEAPONS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openweapmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ITEMS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openitemsmenu"}
 
 
 //MOUSE MENU
@@ -698,6 +703,14 @@
 {"EventType":"OptionChanged", "CurrentMenuItemOptionName":"All Key Door", "SoundToPlay":"pathfinder/alldoor"}
 
 
+//Weapons Main menu
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_weapons_menu", "SoundToPlay":"menu/tobyopt/weapmenu"}
+
+
+//Items Main menu
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_items_menu", "SoundToPlay":"menu/tobyopt/itemsmenu"}
+
+
 //SOUND CUE DIRECTORY
 {"EventType":"MenuChanged",   "CurrentMenuName":"SoundDir", "SoundToPlay":"menu/tobyopt/soundcue"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Accessibility Sounds", "SoundToPlay":"menu/sounddir/accessibility"}
@@ -729,6 +742,7 @@
 {"EventType":"MenuChanged",   "CurrentMenuName":"InteractiveSounds", "SoundToPlay":"menu/sounddir/interactives"}
 {"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Door", "SoundToPlay":"toby/actorsinviewport/env/door"}
 {"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Switch", "SoundToPlay":"toby/actorsinviewport/env/switch"}
+{"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Shootable Switch", "SoundToPlay":"toby/actorsinviewport/env/gunswitch"}
 {"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Door", "SoundToPlay":"menu/sounddir/interact/lockeddoor"}
 {"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Tech Door", "SoundToPlay":"menu/sounddir/interact/techdoor"}
 {"EventType":"OptionChanged", "CurrentMenuName":"InteractiveSounds", "CurrentMenuItemOptionName":"Locked Demon Door", "SoundToPlay":"menu/sounddir/interact/demondoor"}

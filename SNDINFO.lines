@@ -2,6 +2,8 @@ $rolloff amb/door2 linear 48 160
 amb/door2				dsbdrsnd
 $rolloff amb/switch linear 48 160
 amb/switch				dsswsnd
+$rolloff amb/switch2 linear 64 256
+amb/switch2				dsswgun
 
 $rolloff amb/exit1	linear  64 144
 $rolloff amb/secretexit	linear  64 144

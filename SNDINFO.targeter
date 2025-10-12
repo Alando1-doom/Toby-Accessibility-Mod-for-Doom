@@ -10,3 +10,7 @@ weapons/playerlock			dstrgply
 
 //For shootable decorations
 weapons/decolock			dstrgdec
+
+
+//For shootable Switches
+weapons/switchlock			dstrgsw

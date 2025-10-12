@@ -4,7 +4,7 @@ Impact Detection System, Weapon Targeting System, Pickup Beacons, Sound Defs for
 
 Compass, Key Checker, Stat Checker, Line Beacon Spawner -- Jarewill
 
-Drop-off Detector, Accessible Menu, Map Markers, Updated Targeting System, Snap-To-Target System, Area Scanner, Updated Stat Checkers -- Proydoha
+Drop-off Detector, Accessible Menu, Map Markers, Updated Targeting System, Snap-To-Target System, Area Scanner, Updated Stat Checkers, Proximity Detection, Pathfinder, Exploration, Chessboard Coordinates, Weapon & Item Menus -- Proydoha
 
 Map Markers -- ZikShadow
 
@@ -43,6 +43,7 @@ Additional Credit & Thanks:
 
 Toby Ott
 Berk Icel (dansg08)
+IllegallySighted
 Karl Grantham
 Janus3003
 Alchestbreach
@@ -51,4 +52,7 @@ m8f
 Enjay
 MWTab
 stormdragon2976
+t_doom-shroom-5440
+piano777wzy
+Daniil Gusev
 TheDOOMMan (For Doomguy in the title picture)

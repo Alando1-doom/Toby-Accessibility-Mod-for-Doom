@@ -34,3 +34,7 @@
 { "ClassName":"Pottery1", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
 { "ClassName":"Pottery2", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
 { "ClassName":"Pottery3", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+
+//Shootable Switch
+
+{ "ClassName":"ShootableSwitchChecker", "SoundToPlay":"weapons/switchlock", "Cooldown":"12" }

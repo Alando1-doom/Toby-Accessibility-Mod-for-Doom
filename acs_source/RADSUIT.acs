@@ -1,0 +1,39 @@
+#library "radsuit"
+#include "zcommon.acs"
+
+// Rad Suit Toggle Cheat
+Script "RadSuitToggle" (void)
+{
+	int narrationType = GetCVar("Toby_NarrationOutputType");
+	if (GetActorProperty(0, APROP_HEALTH))
+	{
+		TakeInventory("PowerIronFeet", 1);
+
+		if (CheckInventory("RadSuitCheat"))
+		{
+			TakeInventory("RadSuitCheat", 1);
+			if (narrationType == 0)
+				{
+					Print(s:"Rad Suit Deactivated");
+					PlaySound(0, "cheat/radsuitoff", 1);
+				}
+			else
+				{
+					Log(s:"[Toby Accessibility Mod] Rad Suit Deactivated");
+				}
+		}
+		else
+		{
+			GiveInventory("RadSuitCheat", 1);
+				if (narrationType == 0)
+				{
+					Print(s:"Rad Suit Activated");
+					PlaySound(0, "cheat/radsuiton", 1);
+				}
+				else
+				{
+					Log(s:"[Toby Accessibility Mod] Rad Suit Activated");
+				}
+		}
+	}
+}

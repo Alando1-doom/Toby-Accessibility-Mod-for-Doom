@@ -1,0 +1,4 @@
+ACTOR BulletPuff_Toby : BulletPuff replaces BulletPuff
+{
++THRUGHOST
+}

@@ -1,0 +1,61 @@
+//This will be overridden depending on the game/weapon mod being used. 
+//i.e.: Toby Doom, Toby Heretic, & Toby Hexen.
+//The classic games will be the default.
+
+Actor IDKFA_ChooseGame : CheatGiverBase
+{
+	States
+	{
+	Pickup:
+		TNT1 A 1 A_JumpIfInventory("Fist", 1, "DoomStuff")
+		TNT1 A 1 A_JumpIfInventory("Staff", 1, "HereticStuff")
+		TNT1 A 1 A_JumpIfInventory("FWeapFist", 1, "HexenStuff")
+		TNT1 A 1 A_JumpIfInventory("CWeapMace", 1, "HexenStuff")
+		TNT1 A 1 A_JumpIfInventory("MWeapWand", 1, "HexenStuff")
+		Stop
+	DoomStuff:
+		TNT1 A 1 A_GiveInventory("BlueArmor")
+		TNT1 A 1 A_GiveInventory("Backpack")
+		TNT1 A 1 A_GiveInventory("Chainsaw")
+		TNT1 A 1 A_GiveInventory("BFG9000")
+		TNT1 A 1 A_GiveInventory("PlasmaRifle")
+		TNT1 A 1 A_GiveInventory("RocketLauncher")
+		TNT1 A 1 A_GiveInventory("Chaingun")
+		TNT1 A 1 A_GiveInventory("SuperShotgun")
+		TNT1 A 1 A_GiveInventory("Shotgun")
+		Stop
+	HereticStuff:
+		TNT1 A 1 A_GiveInventory("EnchantedShield")
+		TNT1 A 1 A_GiveInventory("BagOfHolding")
+		TNT1 A 1 A_GiveInventory("Gauntlets")
+		TNT1 A 1 A_GiveInventory("Mace")
+		TNT1 A 1 A_GiveInventory("PhoenixRod")
+		TNT1 A 1 A_GiveInventory("SkullRod")
+		TNT1 A 1 A_GiveInventory("Blaster")
+		TNT1 A 1 A_GiveInventory("Crossbow")
+		Stop
+	HexenStuff:
+		TNT1 A 1 A_JumpIfInventory("FWeapFist", 1, "GiveFighter")
+		TNT1 A 1 A_JumpIfInventory("CWeapMace", 1, "GiveCleric")
+		TNT1 A 1 A_JumpIfInventory("MWeapWand", 1, "GiveMage")
+		Stop
+	GiveFighter:
+		TNT1 A 1 A_GiveInventory("MeshArmor")
+		TNT1 A 1 A_GiveInventory("FWeapAxe")
+		TNT1 A 1 A_GiveInventory("FWeapHammer")
+		TNT1 A 1 A_GiveInventory("FWeapQuietus")
+		Stop
+	GiveCleric:
+		TNT1 A 1 A_GiveInventory("FalconShield")
+		TNT1 A 1 A_GiveInventory("CWeapStaff")
+		TNT1 A 1 A_GiveInventory("CWeapFlame")
+		TNT1 A 1 A_GiveInventory("CWeapWraithverge")
+		Stop
+	GiveMage:
+		TNT1 A 1 A_GiveInventory("AmuletOfWarding")
+		TNT1 A 1 A_GiveInventory("MWeapFrost")
+		TNT1 A 1 A_GiveInventory("MWeapLightning")
+		TNT1 A 1 A_GiveInventory("MWeapBloodscourge")
+		Stop
+	}
+}
