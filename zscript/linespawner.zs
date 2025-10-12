@@ -306,7 +306,7 @@ Class TobyEventHandler : EventHandler
 			//This check can now be for switches that need to be shot so you can have different sound applies to it
 			Else If(level.lines[l].special!=0 && level.lines[l].activation&SPAC_Impact)
 			{
-				Actor.Spawn("BasicSwitchChecker",(pos.x,pos.y,0));
+				Actor.Spawn("ShootableSwitchChecker",(pos.x,pos.y,0));
 			}
 			Else If(level.lines[l].special==70 || level.lines[l].special==71 || level.lines[l].special==76 || level.lines[l].special==77 || level.lines[l].special==78 || level.lines[l].special==97)
             {

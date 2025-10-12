@@ -40,13 +40,17 @@ alias godmode "iddqd; give GodModeGiver"
 addmenukey "Toggle God Mode" "godmode"
 defaultbind KP5 "godmode"
 //IDKFA Hotkey
-alias allstuff "give weapons; give keys; give IDKFA_ChooseGame; give ammo; give IDKFAGiver"
+alias allstuff "give keys; give IDKFA_ChooseGame; give ammo; give IDKFAGiver"
 addmenukey "Give All" "allstuff"
 defaultbind KP7 "allstuff"
 //Level Warp Hotkey
 alias levelwarp "give MapWarpSound; wait 52; changemap +"
 addmenukey "Change to Next Level" "levelwarp"
 defaultbind KP9 "levelwarp"
+//Toggle Rad Suit
+alias ToggleRadSuit "pukename RadSuitToggle"
+addmenukey "Toggle Rad Suit" ToggleRadSuit
+defaultbind KP8 "ToggleRadSuit"
 
 
 //Map Markers Section

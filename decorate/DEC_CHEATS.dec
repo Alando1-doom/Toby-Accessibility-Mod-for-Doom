@@ -48,54 +48,6 @@ Actor IDKFAGiver : CheatGiverBase
 }
 
 
-Actor IDKFA_ChooseGame : CheatGiverBase
-{
-	States
-	{
-	Pickup:
-		TNT1 A 1 A_JumpIfInventory("Fist_TO", 1, "DoomStuff")
-		TNT1 A 1 A_JumpIfInventory("Fist", 1, "DoomStuff")
-		TNT1 A 1 A_JumpIfInventory("Staff_Toby", 1, "HereticStuff")
-		TNT1 A 1 A_JumpIfInventory("Staff", 1, "HereticStuff")
-		TNT1 A 1 A_JumpIfInventory("FWeapFist_Toby", 1, "HexenStuff")
-		TNT1 A 1 A_JumpIfInventory("FWeapFist", 1, "HexenStuff")
-		TNT1 A 1 A_JumpIfInventory("CWeapMace_Toby", 1, "HexenStuff")
-		TNT1 A 1 A_JumpIfInventory("CWeapMace", 1, "HexenStuff")
-		TNT1 A 1 A_JumpIfInventory("MWeapWand_Toby", 1, "HexenStuff")
-		TNT1 A 1 A_JumpIfInventory("MWeapWand", 1, "HexenStuff")
-		Stop
-	DoomStuff:
-		TNT1 A 1 A_GiveInventory("BlueArmor_TO")
-		TNT1 A 1 A_GiveInventory("BlueArmor")
-		TNT1 A 1 A_GiveInventory("Backpack_TO")
-		TNT1 A 1 A_GiveInventory("Backpack")
-		Stop
-	HereticStuff:
-		TNT1 A 1 A_GiveInventory("EnchantedShield")
-		TNT1 A 1 A_GiveInventory("BagOfHolding_Toby")
-		TNT1 A 1 A_GiveInventory("BagOfHolding")
-		Stop
-	HexenStuff:
-		TNT1 A 1 A_JumpIfInventory("FWeapFist_Toby", 1, "GiveFighter")
-		TNT1 A 1 A_JumpIfInventory("FWeapFist", 1, "GiveFighter")
-		TNT1 A 1 A_JumpIfInventory("CWeapMace_Toby", 1, "GiveCleric")
-		TNT1 A 1 A_JumpIfInventory("CWeapMace", 1, "GiveCleric")
-		TNT1 A 1 A_JumpIfInventory("MWeapWand_Toby", 1, "GiveMage")
-		TNT1 A 1 A_JumpIfInventory("MWeapWand", 1, "GiveMage")
-		Stop
-	GiveFighter:
-		TNT1 A 1 A_GiveInventory("MeshArmor")
-		Stop
-	GiverCleric:
-		TNT1 A 1 A_GiveInventory("FalconShield")
-		Stop
-	GiveMage:
-		TNT1 A 1 A_GiveInventory("AmuletOfWarding")
-		Stop
-	}
-}
-
-
 Actor MapWarpSound : CheatGiverBase
 {
     States
@@ -120,4 +72,11 @@ Actor 180Giver : CheatGiverBase
         TNT1 A 1 A_PlaySoundEx("misc/quickturn", "Auto", 0, 0)
         Stop
     }
+}
+
+
+ACTOR RadSuitCheat : PowerIronFeet
+{
+  Powerup.Duration 0x7FFFFFFD
+  +INVENTORY.PERSISTENTPOWER
 }

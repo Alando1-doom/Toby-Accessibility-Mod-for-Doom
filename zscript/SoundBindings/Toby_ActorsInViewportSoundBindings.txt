@@ -234,6 +234,7 @@
 //Toby Environmental Objects
 {"ActorClass":"BasicDoorChecker", "SoundToPlay":"toby/actorsinviewport/env/door", "SoundToPlayPlural":"toby/actorsinviewport/env/doors", "Article":"a"}
 {"ActorClass":"BasicSwitchChecker", "SoundToPlay":"toby/actorsinviewport/env/switch", "SoundToPlayPlural":"toby/actorsinviewport/env/switches", "Article":"a"}
+{"ActorClass":"ShootableSwitchChecker", "SoundToPlay":"toby/actorsinviewport/env/gunswitch", "SoundToPlayPlural":"toby/actorsinviewport/env/gunswitches", "Article":"a"}
 {"ActorClass":"ExitBeacon1", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
 {"ActorClass":"SecretExitBeacon", "SoundToPlay":"toby/actorsinviewport/env/exit", "SoundToPlayPlural":"toby/actorsinviewport/env/exits", "Article":"a"}
 {"ActorClass":"TeleporterBeacon_Toby", "SoundToPlay":"toby/actorsinviewport/env/teleport", "SoundToPlayPlural":"toby/actorsinviewport/env/teleports", "Article":"a"}
