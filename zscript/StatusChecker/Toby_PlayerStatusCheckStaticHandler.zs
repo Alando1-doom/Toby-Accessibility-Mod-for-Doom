@@ -24,7 +24,6 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
 
     override void WorldLoaded(WorldEvent e)
     {
-        console.printf("World loaded");
         maxPlayers = 8;
         for (int i = 0; i < maxPlayers; i++)
         {
