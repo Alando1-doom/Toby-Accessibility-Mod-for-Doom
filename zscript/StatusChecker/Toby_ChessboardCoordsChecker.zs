@@ -9,6 +9,8 @@ class Toby_ChessboardCoordsChecker
     bool zoneUpdated;
     bool cellUpdated;
 
+    bool initialized;
+
     int narrationType;
 
     int cellSize;
@@ -43,6 +45,7 @@ class Toby_ChessboardCoordsChecker
         checker.zoneUpdated = false;
         checker.cellUpdated = false;
         checker.toggleTick = false;
+        checker.initialized = false;
         checker.playerNum = playerNum;
         checker.narrationType = 0;
 
@@ -53,6 +56,17 @@ class Toby_ChessboardCoordsChecker
         checker.charOffset = 65; // English alphabet in ASCII starts at 65
 
         return checker;
+    }
+
+    void Init(int playerNumber)
+    {
+        PlayerInfo player = players[playerNumber];
+        if (!player) { return; }
+        if (!player.mo) { return; }
+        bool enabledForPlayer = Cvar.GetCvar("Toby_ChessboardCoordinates_EnabledByDefault", player).GetBool();
+        narrationType = Cvar.GetCvar("Toby_NarrationOutputType", player).GetInt();
+        enabled = enabledForPlayer;
+        initialized = true;
     }
 
     void Update()
@@ -125,6 +139,7 @@ class Toby_ChessboardCoordsChecker
     ui void AnnounceUpdatesVoiced()
     {
         if (!(regionUpdated || zoneUpdated || cellUpdated)) { return; }
+        Toby_SoundQueueStaticHandler.Clear();
         Toby_StringToSoundQueue stringQueueBuilder = Toby_StringToSoundQueue.Create();
         if (regionUpdated)
         {
@@ -178,6 +193,7 @@ class Toby_ChessboardCoordsChecker
 
     ui void AnnounceCurrent()
     {
+        Toby_SoundQueueStaticHandler.Clear();
         Toby_StringToSoundQueue stringQueueBuilder = Toby_StringToSoundQueue.Create();
         stringQueueBuilder.Reset();
         Toby_SoundQueueStaticHandler.AddSound("stats/chessboardcoords/region", -1);

@@ -17,14 +17,9 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
     override void PlayerSpawned(PlayerEvent e)
     {
         if (level.mapName == "TITLEMAP") { return; }
-        PlayerInfo player = players[e.PlayerNumber];
-        if (!player) { return; }
-        Actor playerActor = player.mo;
-        if (!playerActor) { return; }
-        bool enabledForPlayer = Cvar.GetCvar("Toby_ChessboardCoordinates_EnabledByDefault", player).GetBool();
-        int narrationType = Cvar.GetCvar("Toby_NarrationOutputType", player).GetInt();
-        chessboardCoords[e.PlayerNumber].enabled = enabledForPlayer;
-        chessboardCoords[e.PlayerNumber].narrationType = narrationType;
+
+        if (chessboardCoords.Size() < maxPlayers) { return; }
+        chessboardCoords[e.PlayerNumber].Init(e.PlayerNumber);
     }
 
     override void WorldLoaded(WorldEvent e)
@@ -33,6 +28,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         for (int i = 0; i < maxPlayers; i++)
         {
             chessboardCoords.push(Toby_ChessboardCoordsChecker.Create(i));
+            chessboardCoords[i].Init(i);
         }
     }
 
