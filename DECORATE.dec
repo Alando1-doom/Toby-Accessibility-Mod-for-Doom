@@ -3,7 +3,7 @@
 #include decorate/DEC_IDKFA.dec
 #include decorate/DEC_KDOR.dec
 #include decorate/MarkerChecker.dec
-#include decorate/DEC_PUFF.dec
+//#include decorate/DEC_PUFF.dec
 //Player
 #include decorate/Detectors/FloorChecker.dec
 //#include decorate/Detectors/WalkThing.dec
