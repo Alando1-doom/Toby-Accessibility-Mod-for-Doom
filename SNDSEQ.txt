@@ -1,3 +1,5 @@
 :CeilingNormal
+	playtime	plats/crushstop 6
 	playrepeat	plats/crush
+	stopsound	plats/crushstop
 end
