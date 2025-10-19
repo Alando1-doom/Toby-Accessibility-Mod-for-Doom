@@ -1,1 +1,15 @@
 toby/proximitydetector/wind     "sounds/ProximityDetector/ProxyDet.ogg"
+
+// Downloaded from: https://deadsounds.com/geiger-counter-high-intensity-radiation-sound
+// It says "Free sound effects", idk
+toby/hurtfloordetector/rad1     "sounds/ProximityDetector/radiation_01.wav"
+toby/hurtfloordetector/rad2     "sounds/ProximityDetector/radiation_02.wav"
+toby/hurtfloordetector/rad3     "sounds/ProximityDetector/radiation_03.wav"
+toby/hurtfloordetector/rad4     "sounds/ProximityDetector/radiation_04.wav"
+toby/hurtfloordetector/rad5     "sounds/ProximityDetector/radiation_05.wav"
+
+$random toby/hurtfloordetector/rad
+    { toby/hurtfloordetector/rad1 toby/hurtfloordetector/rad2 toby/hurtfloordetector/rad3 toby/hurtfloordetector/rad4 toby/hurtfloordetector/rad5 }
+
+toby/hurtfloordetector/enabled          "sounds/PlayerStats/Chessboard/ChessboardEnabled.ogg"
+toby/hurtfloordetector/disabled         "sounds/PlayerStats/Chessboard/ChessboardDisabled.ogg"

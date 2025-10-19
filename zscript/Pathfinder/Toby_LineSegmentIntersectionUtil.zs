@@ -84,4 +84,29 @@ class Toby_LineSegmentIntersectionUtil
 
         return minDistance;
     }
+
+    static bool, Vector2 RayIntersectsSegment(Vector2 rayOrigin, Vector2 rayDir, Vector2 segStart, Vector2 segEnd)
+    {
+        Vector2 v1 = rayOrigin - segStart;
+        Vector2 v2 = segEnd - segStart;
+        double crossProduct = CrossProduct2d(rayDir, v2);
+        if (Abs(crossProduct) < 0.00000001)
+        {
+            return false, (0, 0); // Ray and segment are parallel enough - no intersections
+        }
+
+        double t1 = CrossProduct2d(v2, v1) / crossProduct;
+        double t2 = CrossProduct2d(rayDir, v1) / crossProduct;
+
+        if (t1 >= 0 && t2 >= 0 && t2 <= 1)
+        {
+            return true, (rayOrigin + rayDir * t1);
+        }
+        return false, (0, 0); // Not on a segment - no intersections
+    }
+
+    static double CrossProduct2d(Vector2 v1, Vector2 v2) //Apparently cross product in GZD only supported for Vector3d? What?
+    {
+        return v1.x * v2.y - v1.y * v2.x;
+    }
 }

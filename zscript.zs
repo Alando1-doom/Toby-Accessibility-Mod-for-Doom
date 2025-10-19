@@ -164,6 +164,10 @@ version "4.6"
 //Proximity Detector
 #include "zscript/ProximityDetector/Toby_ProximityDetector.zs"
 #include "zscript/ProximityDetector/Toby_ProximityDetectorHandler.zs"
+#include "zscript/ProximityDetector/Toby_HurtfloorDetector.zs"
+#include "zscript/ProximityDetector/Toby_VectorPair.zs"
+#include "zscript/ProximityDetector/Toby_Vector2dWrapper.zs"
+#include "zscript/ProximityDetector/Toby_HurtfloorSoundEmitter.zs"
 
 //Footsteps
 #include "zscript/StepEventHandler.zs"
