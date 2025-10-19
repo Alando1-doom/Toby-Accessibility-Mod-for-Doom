@@ -30,6 +30,10 @@ OptionMenu "toby_mod_options"
     Command     "$TOBY_PROXIMITY_APPLY_SETTINGS", "netevent Toby_ProximityUpdate", 1
 
     StaticText  ""
+    StaticText  "$TOBY_HURTFLOOR_DETECTOR_SECTION", "Gold"
+    Control     "$TOBY_HURTFLOOR_DETECTOR_TOGGLE", "toby_hurtfloor_detector_toggle_keybind"
+
+    StaticText  ""
     StaticText  "$TOBY_ELEVATION_TONE_SECTION", "Gold"
     Control     "$TOBY_ELEVATION_TONE_TOGGLE", "toby_elevation_toggle_keybind"
     Option      "$TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT", "Toby_ElevationTones_EnabledByDefault", "toby_yes_no"

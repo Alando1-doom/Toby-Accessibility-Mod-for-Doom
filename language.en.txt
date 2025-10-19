@@ -83,6 +83,9 @@ TOBY_PROXIMITY_MAX_DISTANCE = "Max distance";
 TOBY_PROXIMITY_ATTENUATION = "Attenuation";
 TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 
+TOBY_HURTFLOOR_DETECTOR_SECTION = "Hurtfloor Detector Options";
+TOBY_HURTFLOOR_DETECTOR_TOGGLE = "Toggle Hurtfloor Detector";
+
 TOBY_ELEVATION_TONE_SECTION = "Elevation Tone Options";
 TOBY_ELEVATION_TONE_TOGGLE = "Toggle Elevation Tone on/off";
 TOBY_ELEVATION_TONE_ENABLED_BY_DEFAULT = "Enabled by default";

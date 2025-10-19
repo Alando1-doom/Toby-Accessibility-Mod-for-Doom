@@ -1,4 +1,4 @@
-// Sorry, this is incredibly messy, I've just been so tired lately - PR
+// Sorry, this is so incredibly messy, I've just been so tired lately - PR
 // TODO:
 //     Loop over directions instead of copying and pasting code 4 times
 //     Update method is doing too much, needs to be broken into sub-methods
@@ -12,7 +12,7 @@ class Toby_HurtfloorDetector
     private bool enabled;
     private bool initialized;
 
-    play void Init(int playerNumber)
+    play void Init(int playerNumber, bool enabledByDefault = false)
     {
         PlayerInfo player = players[PlayerNumber];
         if (!player) { return; }
@@ -34,7 +34,7 @@ class Toby_HurtfloorDetector
 
         referenceActor = playerActor;
         initialized = true;
-        enabled = true;
+        enabled = enabledByDefault;
     }
 
     play void Update()
