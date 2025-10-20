@@ -9,7 +9,7 @@ GameInfo
     AddEventHandlers = "Toby_SelectionNarrationHandler"
     AddEventHandlers = "Toby_PlayerStateChangeHandler"
     AddEventHandlers = "Toby_TitleScreenHandler"
-    AddEventHandlers = "hitmarkershandler"
+    AddEventHandlers = "Toby_HitmarkersHandler"
     AddEventHandlers = "Toby_SnapToTargetHandler"
     AddEventHandlers = "Toby_DropoffDetectorHandler"
     AddEventHandlers = "Toby_TargetDetectorStaticHandler"

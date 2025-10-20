@@ -74,7 +74,7 @@ version "4.6"
 #include "zscript/MapAnnouncements/Toby_MapAnnouncementStaticHandler.zs"
 
 //Hitmarkers
-#include "zscript/hitmarkers.zsc"
+#include "zscript/HitMarkers/Toby_Hitmarkers.zsc"
 
 //Snap to target
 #include "zscript/SnapToTarget/Toby_SnapToTargetHandler.zs"
