@@ -139,9 +139,8 @@ class Toby_ExplorationTracker
                 bool isExploredOrVisited =
                     exploredSectors.isInSet(frontIndex)
                     || exploredSectors.isInSet(backIndex)
-                    || visitedSectors[frontIndex]
-                    || visitedSectors[backIndex];
-                if (!isExploredOrVisited) { continue; }
+                    || (visitedSectors[frontIndex] && visitedSectors[backIndex]); //Only count it as explored if BOTH sides of a line were visited
+                if (isExploredOrVisited) { continue; } //If explored or visited - DON'T add it to the list
                 int lineIndex = l.Index();
                 if (!Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer)) { continue; }
                 unexploredLines.Add(lineIndex);
