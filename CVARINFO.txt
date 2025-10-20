@@ -40,6 +40,8 @@ user bool   Toby_Proximity_EnabledByDefault = false;
 user bool   Toby_ElevationTones_EnabledByDefault = false;
 user bool   Toby_ChessboardCoordinates_EnabledByDefault = false;
 
+user bool   Toby_HurtfloorDetector_EnabledByDefault = true;
+
 //Hit Marker CVAR
 
 user bool hm_enabled = true;

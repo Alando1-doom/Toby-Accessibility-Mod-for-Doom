@@ -88,9 +88,3 @@ class Toby_ProximityDetector : Actor
         self.enabled = !self.enabled;
     }
 }
-
-
-class ActorStorage
-{
-    Array<Actor> storage;
-}

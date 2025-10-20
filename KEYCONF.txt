@@ -99,6 +99,11 @@ addkeysection "Proximity Detector System" ProximityDetector
 alias toby_proximity_toggle_keybind "netevent Toby_ProximityToggle";
 AddMenuKey "Toggle proximity detector" toby_proximity_toggle_keybind
 
+//Hurtfloor Detector
+addkeysection "Hurtfloor Detector System" HurtfloorDetector
+alias toby_hurtfloor_detector_toggle_keybind "netevent Toby_HurtfloorDetectorToggle";
+AddMenuKey "$TOBY_HURTFLOOR_DETECTOR_TOGGLE" toby_hurtfloor_detector_toggle_keybind
+
 //Elevation Tone
 
 addkeysection "Elevation Tone System" ElevationTone

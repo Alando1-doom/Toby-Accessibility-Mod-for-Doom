@@ -1,5 +1,7 @@
 class Toby_ProximityDetectorHandler: EventHandler
 {
+    Array<Toby_HurtfloorDetector> hurtfloorDetectors;
+
     override void PlayerSpawned(PlayerEvent e)
     {
         if (level.mapName == "TITLEMAP") { return; }
@@ -10,6 +12,7 @@ class Toby_ProximityDetectorHandler: EventHandler
         int traceDistance = Cvar.GetCvar("Toby_Proximity_MaxDistance", player).GetInt();
         double attenuation = Cvar.GetCvar("Toby_Proximity_Attenuation", player).GetFloat();
         bool enabled = Cvar.GetCvar("Toby_Proximity_EnabledByDefault", player).GetBool();
+        bool hurtfloorDetectorEnabled = Cvar.GetCvar("Toby_HurtfloorDetector_EnabledByDefault", player).GetBool();
 
         Toby_ProximityDetector beaconLeft = Toby_ProximityDetector(Actor.Spawn("Toby_ProximityDetector", playerActor.pos));
         beaconLeft.SetReferenceActor(playerActor, 90, traceDistance, attenuation, enabled);
@@ -19,6 +22,48 @@ class Toby_ProximityDetectorHandler: EventHandler
         beaconFront.SetReferenceActor(playerActor, 0, traceDistance, attenuation, enabled);
         Toby_ProximityDetector beaconBack = Toby_ProximityDetector(Actor.Spawn("Toby_ProximityDetector", playerActor.pos));
         beaconBack.SetReferenceActor(playerActor, 180, traceDistance, attenuation, enabled);
+
+        if (hurtfloorDetectors.Size() < maxPlayers) { return; }
+        hurtfloorDetectors[e.PlayerNumber].Init(e.PlayerNumber, hurtfloorDetectorEnabled);
+    }
+
+    override void WorldLoaded(WorldEvent e)
+    {
+        int maxPlayers = 8;
+        for (int i = 0; i < maxPlayers; i++)
+        {
+            hurtfloorDetectors.push(new("Toby_HurtfloorDetector"));
+            PlayerInfo player = players[i];
+            bool hurtfloorDetectorEnabled = false;
+            if (player && player.mo)
+            {
+                hurtfloorDetectorEnabled = Cvar.GetCvar("Toby_HurtfloorDetector_EnabledByDefault", player).GetBool();
+            }
+
+            hurtfloorDetectors[i].Init(i, hurtfloorDetectorEnabled);
+        }
+    }
+
+    override void WorldTick()
+    {
+        for (int i = 0; i < maxPlayers; i++)
+        {
+            hurtfloorDetectors[i].Update();
+        }
+    }
+
+    override void InterfaceProcess(ConsoleEvent e)
+    {
+        PlayerInfo player = players[consoleplayer];
+        if (!player) { return; }
+        if (!player.mo) { return; }
+
+        int narrationOutputType = CVar.FindCvar("Toby_NarrationOutputType").GetInt();
+
+        if (e.Name == "Toby_HurtfloorDetectorToggleInterface")
+        {
+            HurtfloorDetectorToggleByOutputType(narrationOutputType, hurtfloorDetectors[consoleplayer].GetEnabled());
+        }
     }
 
     override void NetworkProcess(ConsoleEvent e)
@@ -49,6 +94,39 @@ class Toby_ProximityDetectorHandler: EventHandler
         if (e.Name == "Toby_ProximityUpdate")
         {
             Toby_Logger.ConsoleOutputModeMessagePlay("Proximity detector settings updated", playerActor);
+        }
+
+        if (e.Name == "Toby_HurtfloorDetectorToggle")
+        {
+            hurtfloorDetectors[e.Player].ToggleEnabled();
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_HurtfloorDetectorToggleInterface");
+        }
+    }
+
+    ui static void HurtfloorDetectorToggleByOutputType(int narrationOutputType, bool enabled)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            if (enabled)
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Hurtfloor detector enabled");
+            }
+            else
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Hurtfloor detector disabled");
+            }
+        }
+        else
+        {
+            if (enabled)
+            {
+                Toby_SoundQueueStaticHandler.AddSound("toby/hurtfloordetector/enabled", -1);
+            }
+            else
+            {
+                Toby_SoundQueueStaticHandler.AddSound("toby/hurtfloordetector/disabled", -1);
+            }
+            Toby_SoundQueueStaticHandler.PlayQueue(0);
         }
     }
 }
