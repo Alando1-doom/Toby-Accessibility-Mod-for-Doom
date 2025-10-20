@@ -167,8 +167,12 @@ Actor BasicSwitchChecker : TobyBeaconBase
 
 Actor ShootableSwitchChecker : TobyBeaconBase
 {
+	Radius 8
+    Height 56
+	PainChance 255
     Tag "Shootable Switch"
 	+SHOOTABLE
+	+ALLOWPAIN
     States
     {
     Spawn:
@@ -190,8 +194,16 @@ Actor ShootableSwitchChecker : TobyBeaconBase
         TNT1 A 1 A_FaceTarget
         Goto Beacon
     Pain:
-        TNT1 A 1
-        TNT1 A 1 A_Pain
+        TNT1 A 2 A_UnsetShootable
+        TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 0, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 45, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 90, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 135, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 180, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 225, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 A 0 A_SpawnProjectile("ShootableSwitchActivator", 32, 0, 270, CMF_AIMDIRECTION | CMF_ABSOLUTEANGLE, 0, AAPTR_TARGET)
+		TNT1 AA 35
+		TNT1 A 2 A_SetShootable
         Goto Spawn
 	NoSight:
 		TNT1 A 1
@@ -205,6 +217,26 @@ Actor ShootableSwitchChecker : TobyBeaconBase
         TNT1 A 5
         Stop
     }
+}
+
+
+ACTOR ShootableSwitchActivator //Projectile Released by Shootable Switch Beacon
+{
+	Radius 2
+	Height 2
+	Speed 10
+	Damage 0
+	Projectile
+	States
+	{
+	Spawn:
+		TNT1 A 10
+		Goto Death
+	Death:
+		TNT1 A 1
+		TNT1 A 35
+		Stop
+	}
 }
 
 //********************************************************
