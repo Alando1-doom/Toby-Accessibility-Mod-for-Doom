@@ -122,9 +122,9 @@ class Toby_ExplorationTracker
             int sectorIndex = sectorMovementDetector.sectorsJustStopped.values[i];
             Sector s = level.sectors[sectorIndex];
 
-            for (int i = 0; i < s.lines.Size(); i++)
+            for (int j = 0; j < s.lines.Size(); j++)
             {
-                Line l = s.lines[i];
+                Line l = s.lines[j];
 
                 bool isTwoSided = (l.flags & Line.ML_TWOSIDED) == Line.ML_TWOSIDED;
                 bool isBlocking = (l.flags & Line.ML_BLOCKING) == Line.ML_BLOCKING;
@@ -145,8 +145,8 @@ class Toby_ExplorationTracker
                 if (!Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer)) { continue; }
                 unexploredLines.Add(lineIndex);
             }
-            UpdateNonInteractedLines();
         }
+        UpdateNonInteractedLines();
     }
 
     play void UpdateSectorExploration()
