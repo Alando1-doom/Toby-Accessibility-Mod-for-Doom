@@ -122,9 +122,9 @@ class Toby_ExplorationTracker
             int sectorIndex = sectorMovementDetector.sectorsJustStopped.values[i];
             Sector s = level.sectors[sectorIndex];
 
-            for (int i = 0; i < s.lines.Size(); i++)
+            for (int j = 0; j < s.lines.Size(); j++)
             {
-                Line l = s.lines[i];
+                Line l = s.lines[j];
 
                 bool isTwoSided = (l.flags & Line.ML_TWOSIDED) == Line.ML_TWOSIDED;
                 bool isBlocking = (l.flags & Line.ML_BLOCKING) == Line.ML_BLOCKING;
@@ -137,17 +137,15 @@ class Toby_ExplorationTracker
                 int frontIndex = l.frontSector.Index();
                 int backIndex = l.backSector.Index();
                 bool isExploredOrVisited =
-                    exploredSectors.isInSet(frontIndex)
-                    || exploredSectors.isInSet(backIndex)
-                    || visitedSectors[frontIndex]
-                    || visitedSectors[backIndex];
-                if (!isExploredOrVisited) { continue; }
+                    (exploredSectors.isInSet(backIndex) && exploredSectors.isInSet(frontIndex))
+                    || (visitedSectors[frontIndex] && visitedSectors[backIndex]); //Only count it as explored if BOTH sides of a line were visited
+                if (isExploredOrVisited) { continue; } //If explored or visited - DON'T add it to the list
                 int lineIndex = l.Index();
                 if (!Toby_SectorMathUtil.IsSectorReachableByActor(s, l, explorer)) { continue; }
                 unexploredLines.Add(lineIndex);
             }
-            UpdateNonInteractedLines();
         }
+        UpdateNonInteractedLines();
     }
 
     play void UpdateSectorExploration()
