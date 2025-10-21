@@ -310,24 +310,14 @@ class Toby_HurtfloorDetector
 
     bool IsHurt3DFloor(Sector s)
     {
-        Array<F3DFloor> f3dFloors;
-        bool duplicateFound;
         for (int i = 0; i < s.Get3DFloorCount(); i++)
         {
             F3DFloor current3dFloor = s.Get3DFloor(i);
-            duplicateFound = false;
-            for (int j = 0; j < f3dFloors.Size(); j++)
+            Sector modelSector = current3dFloor.model;
+            if (IsHurtFloor(modelSector))
             {
-                if (f3dFloors[j].target.Index() == current3dFloor.target.Index()
-                    && f3dFloors[j].model.Index() == current3dFloor.model.Index())
-                {
-                    duplicateFound = true;
-                    break;
-                }
+                return true;
             }
-            if (duplicateFound) { continue; }
-            Sector modelSector = F3DFloors[i].model;
-            return isHurtFloor(modelSector);
         }
         return false;
     }
