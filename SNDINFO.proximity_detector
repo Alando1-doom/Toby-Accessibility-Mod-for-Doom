@@ -11,5 +11,7 @@ toby/hurtfloordetector/rad5     "sounds/ProximityDetector/radiation_05.wav"
 $random toby/hurtfloordetector/rad
     { toby/hurtfloordetector/rad1 toby/hurtfloordetector/rad2 toby/hurtfloordetector/rad3 toby/hurtfloordetector/rad4 toby/hurtfloordetector/rad5 }
 
-toby/hurtfloordetector/enabled          "sounds/PlayerStats/Chessboard/ChessboardEnabled.ogg"
-toby/hurtfloordetector/disabled         "sounds/PlayerStats/Chessboard/ChessboardDisabled.ogg"
+$rolloff toby/hurtfloordetector/rad     linear	64 256
+
+toby/hurtfloordetector/enabled          "sounds/ProximityDetector/HurtfloorEnabled.ogg"
+toby/hurtfloordetector/disabled         "sounds/ProximityDetector/HurtfloorDisabled.ogg"
