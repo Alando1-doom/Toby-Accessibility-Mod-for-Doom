@@ -1178,3 +1178,6 @@ menu/tobyopt/itemsmenu						"sounds/Menus/TobyOptions/ItemsMenu.ogg"
 $volume menu/tobyopt/itemsmenu	      0.5
 menu/tobyopt/openitemsmenu				"sounds/Menus/TobyOptions/OpenItemsMenu.ogg"
 $volume menu/tobyopt/openitemsmenu	      0.5
+
+menu/tobyopt/hurtfloor						"sounds/Menus/TobyOptions/ToggleHurtfloor.ogg"
+$volume menu/tobyopt/hurtfloor	      0.5

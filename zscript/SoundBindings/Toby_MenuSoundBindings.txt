@@ -305,6 +305,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_WEAPONS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openweapmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_ITEMS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openitemsmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CustomizeControls", "CurrentMenuItemOptionName":"$TOBY_HURTFLOOR_DETECTOR_TOGGLE", "SoundToPlay":"menu/tobyopt/hurtfloor"}
 
 
 //Toby Acc Mod Options
@@ -336,6 +337,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/chessdefault"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_WEAPONS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openweapmenu"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_ITEMS_OPEN_MENU", "SoundToPlay":"menu/tobyopt/openitemsmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_HURTFLOOR_DETECTOR_TOGGLE", "SoundToPlay":"menu/tobyopt/hurtfloor"}
 
 
 //MOUSE MENU
@@ -729,6 +731,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Impact Detection", "SoundToPlay":"menu/sounddir/acc/impactdetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Drop-Off Detection", "SoundToPlay":"menu/sounddir/acc/dropoff"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Proximity Detection", "SoundToPlay":"menu/sounddir/acc/proxydetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Hurtfloor Detection", "SoundToPlay":"menu/sounddir/acc/hurtfloor"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Monster", "SoundToPlay":"menu/sounddir/acc/monsdetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Explosive Barrel", "SoundToPlay":"menu/sounddir/acc/barreldetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Player", "SoundToPlay":"menu/sounddir/acc/playerdetect"}
