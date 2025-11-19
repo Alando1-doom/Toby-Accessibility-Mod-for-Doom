@@ -39,6 +39,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             isNotFirstRun = true;
             bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
         }
+        if (chessboardCoords.Size() < maxPlayers) { return; }
         if (chessboardCoords[consoleplayer])
         {
             chessboardCoords[consoleplayer].AnnounceUpdates();
