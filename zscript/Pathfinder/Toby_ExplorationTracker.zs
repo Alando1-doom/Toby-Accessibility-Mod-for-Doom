@@ -56,7 +56,7 @@ class Toby_ExplorationTracker
         }
 
         UpdateExploration();
-        //SectorExplorationDebug();
+        SectorExplorationDebug();
     }
 
     play void SectorExplorationDebug()
@@ -84,10 +84,11 @@ class Toby_ExplorationTracker
     play void UpdateNonInteractedLines()
     {
         nonInteractedLines.Clear();
-        for (int i = 0; i < visitedSectors.Size(); i++)
+        for (int i = 0; i < exploredSectors.Size(); i++)
         {
-            if (!(visitedSectors[i] || exploredSectors.IsInSet(i))) { continue; }
-            Sector s = level.sectors[i];
+            int sectorIndex = exploredSectors.values[i];
+            if (!(visitedSectors[i] || exploredSectors.IsInSet(sectorIndex))) { continue; }
+            Sector s = level.sectors[sectorIndex];
             for (int j = 0; j < s.lines.Size(); j++)
             {
                 Line l = s.lines[j];
@@ -278,16 +279,22 @@ class Toby_ExplorationTracker
 
     Sector GetExploredOrVisitedSectorForLine(Line l)
     {
-        Sector exploredSector = null;
-        if (!l.frontSector || !l.backSector) { return null; }
-        if (IsExplored(l.frontSector.Index())
-            || IsVisited(l.frontSector.Index())) {
-            exploredSector = l.frontSector;
+        if (l.frontSector)
+        {
+            if (IsExplored(l.frontSector.Index())
+                || IsVisited(l.frontSector.Index()))
+            {
+                return l.frontSector;
+            }
         }
-        if (IsExplored(l.backSector.Index())
-            || IsVisited(l.backSector.Index())) {
-            exploredSector = l.frontSector;
+        if (l.backSector)
+        {
+            if (IsExplored(l.backSector.Index())
+                || IsVisited(l.backSector.Index()))
+            {
+                return l.backSector;
+            }
         }
-        return exploredSector;
+        return null;
     }
 }
