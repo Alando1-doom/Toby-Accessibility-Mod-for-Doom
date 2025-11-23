@@ -85,15 +85,16 @@ class Toby_SectorMathUtil
         return false;
     }
 
-    static vector2 GetMidlineNormalToSector(Sector targetSector, Line l)
+    static vector2 GetMidlineNormalToSector(Sector targetSector, Line l, double normalLength = 1.0)
     {
         vector2 deltaUnit = l.delta.Unit();
         vector2 normal1 = (-deltaUnit.y, deltaUnit.x);
         vector2 normal2 = (deltaUnit.y, -deltaUnit.x);
         vector2 lineMidpoint = l.v1.p + (l.delta * 0.5);
-        vector2 normalPoint1 = lineMidpoint + normal1;
-        vector2 normalPoint2 = lineMidpoint + normal2;
-        if (level.PointInSector(normalPoint1) == targetSector)
+        vector2 normalPointSingleUnit = lineMidpoint + normal1;
+        vector2 normalPoint1 = lineMidpoint + normal1 * normalLength;
+        vector2 normalPoint2 = lineMidpoint + normal2 * normalLength;
+        if (level.IsPointInLevel((normalPointSingleUnit, targetSector.CenterFloor())) && level.PointInSector(normalPointSingleUnit) == targetSector)
         {
             return normalPoint1;
         }
