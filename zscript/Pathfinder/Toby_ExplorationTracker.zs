@@ -56,7 +56,7 @@ class Toby_ExplorationTracker
         }
 
         UpdateExploration();
-        SectorExplorationDebug();
+        //SectorExplorationDebug();
     }
 
     play void SectorExplorationDebug()
