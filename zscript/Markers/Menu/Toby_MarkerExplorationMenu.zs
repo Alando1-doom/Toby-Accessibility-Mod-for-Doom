@@ -16,10 +16,10 @@ class Toby_MarkerExplorationMenu : OptionMenu
         int ignoreDistance = 16 * 10; //PlayerPawn.radius * 10;
 
         AddMenuItemsFromSet("Unexplored line - ", tracker, tracker.unexploredLines, ignoreDistance);
-        AddMenuItemsFromSet("Non-interacted line - ", tracker, tracker.nonInteractedLines, ignoreDistance);
+        AddMenuItemsFromSet("Non-interacted line - ", tracker, tracker.nonInteractedLines, ignoreDistance, false);
     }
 
-    void AddMenuItemsFromSet(string descriptionPrefix, Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance)
+    void AddMenuItemsFromSet(string descriptionPrefix, Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance, bool oneUnitToTarget = true)
     {
         Array<int> addedPointsX;
         Array<int> addedPointsY;
@@ -33,23 +33,51 @@ class Toby_MarkerExplorationMenu : OptionMenu
             Line l = level.lines[lineId];
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
-            vector2 normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+
+            if (!players[consoleplayer].mo) { continue; }
+            PlayerPawn playerActor = players[consoleplayer].mo;
+
+            vector2 normal;
+            if (oneUnitToTarget)
+            {
+                normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+            }
+            else
+            {
+                // I can't use line trace in UI scope so I'm going to just try few times to get point in map bounds -PR
+                int normalPointPlacingAttemptCount = 4;
+                bool isInMapBounds = false;
+                Sector normalSector;
+                for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
+                {
+                    double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
+                    normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
+                    normalSector = level.PointInSector(normal);
+                    if (!normalSector) { continue; }
+                    isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
+                    if (isInMapBounds) { break; }
+                }
+                if (!isInMapBounds)
+                {
+                    normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+                }
+            }
+
             string coordinates = normal.x..":"..normal.y..":"..s.CenterFloor();
 
+            // Deduplication of sorts - if two possible destination points are two close - discard one of them -PR
             bool tooClose = false;
             for (uint j = 0; j < addedPointsX.Size(); j++)
             {
-                if (((addedPointsX[j], addedPointsY[j]) - (normal.x, normal.y)).Length() < ignoreDistance)
+                double distanceToPoint = ((addedPointsX[j], addedPointsY[j]) - (normal.x, normal.y)).Length();
+                if (distanceToPoint < ignoreDistance)
                 {
                     tooClose = true;
                     break;
                 };
             }
             if (tooClose) { continue; }
-            addedPointsX.Push(normal.x);
-            addedPointsY.Push(normal.y);
 
-            if (!players[consoleplayer].mo) { continue; }
             vector2 destinationFlat = (normal.x, normal.y);
             vector3 destination = (destinationFlat, s.CenterFloor());
             int destinationSector = level.PointInSector(destinationFlat).Index();
@@ -61,6 +89,9 @@ class Toby_MarkerExplorationMenu : OptionMenu
                 pathfinder.FindPath();
             }
             if (!pathfinder.pathFinalized) { continue; }
+
+            addedPointsX.Push(normal.x);
+            addedPointsY.Push(normal.y);
 
             Array<string> directions;
             directions.push("North");

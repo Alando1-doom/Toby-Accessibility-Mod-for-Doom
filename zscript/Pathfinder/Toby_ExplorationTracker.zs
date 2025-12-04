@@ -84,10 +84,31 @@ class Toby_ExplorationTracker
     play void UpdateNonInteractedLines()
     {
         nonInteractedLines.Clear();
+        for (int i = 0; i < exploredSectors.Size(); i++)
+        {
+            int sectorIndex = exploredSectors.values[i];
+            if (!(visitedSectors[i] || exploredSectors.IsInSet(sectorIndex))) { continue; }
+            Sector s = level.sectors[sectorIndex];
+            for (int j = 0; j < s.lines.Size(); j++)
+            {
+                Line l = s.lines[j];
+                if (l.activation != SPAC_Use) { continue; }
+                int lineIndex = l.Index();
+                if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
+
+                //If floor and ceiling are flush -> ignore
+                if (isLineFlushWithCeiling(l) && isLineFlushWithFloor(l)) { continue; }
+                //If floor is flush and ceiling is 4 map units difference -> most likely opened bars / door -> ignore
+                if (isLineCeilingDoorLip(l) && isLineFlushWithFloor(l)) { continue; }
+                nonInteractedLines.Add(lineIndex);
+            }
+        }
         for (int i = 0; i < visitedSectors.Size(); i++)
         {
+            if (!visitedSectors[i]) { continue; }
+            int sectorIndex = i;
             if (!(visitedSectors[i] || exploredSectors.IsInSet(i))) { continue; }
-            Sector s = level.sectors[i];
+            Sector s = level.sectors[sectorIndex];
             for (int j = 0; j < s.lines.Size(); j++)
             {
                 Line l = s.lines[j];
@@ -278,16 +299,22 @@ class Toby_ExplorationTracker
 
     Sector GetExploredOrVisitedSectorForLine(Line l)
     {
-        Sector exploredSector = null;
-        if (!l.frontSector || !l.backSector) { return null; }
-        if (IsExplored(l.frontSector.Index())
-            || IsVisited(l.frontSector.Index())) {
-            exploredSector = l.frontSector;
+        if (l.frontSector)
+        {
+            if (IsExplored(l.frontSector.Index())
+                || IsVisited(l.frontSector.Index()))
+            {
+                return l.frontSector;
+            }
         }
-        if (IsExplored(l.backSector.Index())
-            || IsVisited(l.backSector.Index())) {
-            exploredSector = l.frontSector;
+        if (l.backSector)
+        {
+            if (IsExplored(l.backSector.Index())
+                || IsVisited(l.backSector.Index()))
+            {
+                return l.backSector;
+            }
         }
-        return exploredSector;
+        return null;
     }
 }
