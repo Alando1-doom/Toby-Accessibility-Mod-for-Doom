@@ -48,12 +48,16 @@ class Toby_MarkerExplorationMenu : OptionMenu
                 int normalPointPlacingAttemptCount = 4;
                 bool isInMapBounds = false;
                 Sector normalSector;
-                for (uint j = normalPointPlacingAttemptCount; j >= 1; j--)
+                for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
                 {
                     double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
                     normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
                     normalSector = level.PointInSector(normal);
                     if (!normalSector) { continue; }
+                    if (l.frontSector)
+                    {
+                        if (l.frontSector.Index() != normalSector.Index()) { continue; }
+                    }
                     isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
                     if (isInMapBounds) { break; }
                 }
