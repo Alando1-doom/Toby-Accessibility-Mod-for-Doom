@@ -48,7 +48,7 @@ class Toby_MarkerExplorationMenu : OptionMenu
                 int normalPointPlacingAttemptCount = 4;
                 bool isInMapBounds = false;
                 Sector normalSector;
-                for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
+                for (uint j = normalPointPlacingAttemptCount; j >= 1; j--)
                 {
                     double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
                     normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
