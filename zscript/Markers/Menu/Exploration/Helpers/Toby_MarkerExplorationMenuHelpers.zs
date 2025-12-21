@@ -61,10 +61,15 @@ class Toby_MarkerExplorationMenuHelpers
         {
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
+
             // Deduplication
-            // Skipping this check for now. Realistically should only check for items of same class
-            // bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
-            // if (tooClose) { continue; }
+            bool tooClose = Toby_MarkerExplorationMenuHelpers.IsSameClassNameTooClose(
+                collection,
+                foundActor.pos.xy,
+                ignoreDistance,
+                foundActor
+            );
+            if (tooClose) { continue; }
 
             // Check if destination can be reached
             Vector3 destination = foundActor.pos;
@@ -103,10 +108,15 @@ class Toby_MarkerExplorationMenuHelpers
             if (foundActor.owner) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
+
             // Deduplication
-            // Skipping this check for now. Realistically should only check for items of same class
-            // bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
-            // if (tooClose) { continue; }
+            bool tooClose = Toby_MarkerExplorationMenuHelpers.IsSameClassNameTooClose(
+                collection,
+                foundActor.pos.xy,
+                ignoreDistance,
+                foundActor
+            );
+            if (tooClose) { continue; }
 
             // Check if destination can be reached
             Vector3 destination = foundActor.pos;
@@ -147,6 +157,25 @@ class Toby_MarkerExplorationMenuHelpers
         {
             Toby_MarkerDestinationItem item = (Toby_MarkerDestinationItem)(collection.GetObject(j));
             if (!item) { continue; }
+            double distanceToPoint = ((item.coordinates.x, item.coordinates.y) - coordinates2d).Length();
+            if (distanceToPoint < ignoreDistance)
+            {
+                tooClose = true;
+                break;
+            };
+        }
+        return tooClose;
+    }
+
+    ui static bool IsSameClassNameTooClose(Toby_MarkerDestinationCollection collection, Vector2 coordinates2d, int ignoreDistance, Actor otherActor)
+    {
+        bool tooClose = false;
+        for (uint j = 0; j < collection.Size(); j++)
+        {
+            Toby_MarkerDestinationItem item = (Toby_MarkerDestinationItem)(collection.GetObject(j));
+            if (!item) { continue; }
+            if (!item.destinationActor) { continue; }
+            if (item.destinationActor.GetClassName() != otherActor.GetClassName()) { continue; }
             double distanceToPoint = ((item.coordinates.x, item.coordinates.y) - coordinates2d).Length();
             if (distanceToPoint < ignoreDistance)
             {
