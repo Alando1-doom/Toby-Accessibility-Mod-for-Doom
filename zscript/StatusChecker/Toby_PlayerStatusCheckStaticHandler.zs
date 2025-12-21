@@ -94,6 +94,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             Toby_ChessboardCoordsChecker.ChessboardCoordsToggleByOutputType(narrationOutputType, chessboardCoords[consoleplayer].enabled);
         }
+        if (e.Name == "Toby_NoRadiusDmgToggleInterface")
+        {
+            NoRadiusDmgToggleByOutputType(narrationOutputType, player.mo.bNORADIUSDMG);
+        }
         if (e.Name == "Toby_CheckChessboardCoordinatesInterface")
         {
             chessboardCoords[consoleplayer].CheckChessboardCoordsByOutputType(narrationOutputType);
@@ -156,6 +160,11 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             chessboardCoords[e.Player].toggleTick = true;
             EventHandler.SendInterfaceEvent(e.Player, "Toby_ChessboardCoordinatesToggleInterface");
         }
+        if (event == "Toby_NoRadiusDmgToggle")
+        {
+            playerActor.bNORADIUSDMG = !playerActor.bNORADIUSDMG;
+            EventHandler.SendInterfaceEvent(e.Player, "Toby_NoRadiusDmgToggleInterface");
+        }
         if (event == "Toby_WarpToChessboard")
         {
             if (!chessboardCoords[e.Player]) { return; }
@@ -167,6 +176,33 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         if (event == "Toby_CheckChessboardCoordinates")
         {
             EventHandler.SendInterfaceEvent(e.Player, "Toby_CheckChessboardCoordinatesInterface");
+        }
+    }
+
+        ui void NoRadiusDmgToggleByOutputType(int narrationOutputType, bool enabled)
+    {
+        if (narrationOutputType == TNOT_CONSOLE)
+        {
+            if (enabled)
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No Radius Damage enabled");
+            }
+            else
+            {
+                Toby_Logger.ConsoleOutputModeMessage("No Radius Damage disabled");
+            }
+        }
+        else
+        {
+            if (enabled)
+            {
+                Toby_SoundQueueStaticHandler.AddSound("stats/noradiusdamage/enabled", -1);
+            }
+            else
+            {
+                Toby_SoundQueueStaticHandler.AddSound("stats/noradiusdamage/disabled", -1);
+            }
+            Toby_SoundQueueStaticHandler.PlayQueue(0);
         }
     }
 }
