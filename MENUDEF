@@ -117,7 +117,7 @@ OptionMenu "toby_marker_main"
     Submenu "Add marker", "toby_marker_add"
     Submenu "Remove marker", "toby_marker_remove"
     Submenu "Remove nearest marker", "toby_marker_remove_nearest"
-    Submenu "Exploration", "toby_marker_exploration_legacy"
+    Submenu "Exploration", "toby_marker_exploration"
 }
 
 OptionMenu "toby_marker_pathfinding"
@@ -130,6 +130,46 @@ OptionMenu "toby_marker_exploration_legacy"
 {
   class Toby_MarkerExplorationMenuLegacy
   Title "Exploration"
+}
+
+OptionMenu "toby_marker_exploration_unexplored"
+{
+  class Toby_MarkerExplorationUnexploredMenu
+  Title "Exploration - Unexplored"
+}
+
+OptionMenu "toby_marker_exploration_noninteracted"
+{
+  class Toby_MarkerExplorationNonInteractedMenu
+  Title "Exploration - Non-interacted"
+}
+
+OptionMenu "toby_marker_exploration_keys"
+{
+  class Toby_MarkerExplorationUnexploredMenu
+  Title "Exploration - Keys"
+}
+
+OptionMenu "toby_marker_exploration_pickups"
+{
+  class Toby_MarkerExplorationUnexploredMenu
+  Title "Exploration - Pickups"
+}
+
+OptionMenu "toby_marker_exploration_teleporters"
+{
+  class Toby_MarkerExplorationUnexploredMenu
+  Title "Exploration - Teleporters"
+}
+
+OptionMenu "toby_marker_exploration"
+{
+  Title "Exploration"
+  Submenu "Unexplored", "toby_marker_exploration_unexplored"
+  Submenu "Non-interacted", "toby_marker_exploration_noninteracted"
+  Submenu "Keys", "toby_marker_exploration_keys"
+  Submenu "Pickups", "toby_marker_exploration_pickups"
+  Submenu "Teleporters", "toby_marker_exploration_teleporters"
 }
 
 OptionMenu "toby_marker_add"
