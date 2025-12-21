@@ -16,3 +16,10 @@ enum Toby_HexenArmorCheckerMode
     THACM_ONLY_SLOTS = 0,
     THACM_DETAILED = 1
 }
+
+enum Toby_NoRadiusDmgEnabledByDefault
+{
+    TNRDEBD_IGNORE = 0,
+    TNRDEBD_DISABLED = 1,
+    TNRDEBD_ENABLED = 2,
+}
