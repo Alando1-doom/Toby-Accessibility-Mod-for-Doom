@@ -1,4 +1,4 @@
-class Toby_MarkerExplorationMenu : OptionMenu
+class Toby_MarkerExplorationMenuLegacy : OptionMenu
 {
     override void Init(Menu parent, OptionMenuDescriptor desc)
     {

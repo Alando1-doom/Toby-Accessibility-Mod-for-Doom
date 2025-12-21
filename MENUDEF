@@ -117,7 +117,7 @@ OptionMenu "toby_marker_main"
     Submenu "Add marker", "toby_marker_add"
     Submenu "Remove marker", "toby_marker_remove"
     Submenu "Remove nearest marker", "toby_marker_remove_nearest"
-    Submenu "Exploration", "toby_marker_exploration"
+    Submenu "Exploration", "toby_marker_exploration_legacy"
 }
 
 OptionMenu "toby_marker_pathfinding"
@@ -126,9 +126,9 @@ OptionMenu "toby_marker_pathfinding"
   Title "Pathfinding"
 }
 
-OptionMenu "toby_marker_exploration"
+OptionMenu "toby_marker_exploration_legacy"
 {
-  class Toby_MarkerExplorationMenu
+  class Toby_MarkerExplorationMenuLegacy
   Title "Exploration"
 }
 

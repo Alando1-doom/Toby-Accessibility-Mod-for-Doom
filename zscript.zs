@@ -35,7 +35,7 @@ version "4.6"
 
 //Marker menus
 #include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
-#include "zscript/Markers/Menu/Toby_MarkerExplorationMenu.zs"
+
 #include "zscript/Markers/Menu/Toby_MarkerExplorationMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
@@ -44,6 +44,7 @@ version "4.6"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerRemoveNearestMenu.zs"
+#include "zscript/Markers/Menu/Legacy/Toby_MarkerExplorationMenuLegacy.zs"
 
 //Markers
 #include "zscript/Markers/Toby_AutoMarkerDatabase.zs"
