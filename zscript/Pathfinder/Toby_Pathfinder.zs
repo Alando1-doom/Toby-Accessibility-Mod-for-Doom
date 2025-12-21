@@ -75,6 +75,17 @@ class Toby_Pathfinder
         }
     }
 
+    double GetPathLength()
+    {
+        double length = 0;
+        if (path.Size() <= 1) { return length; }
+        for (int i = 0; i < path.Size() - 1; i++)
+        {
+            length += (path[i].pos - path[i + 1].pos).Length();
+        }
+        return length;
+    }
+
     void ResetPathfinder(Vector3 start, Vector3 end)
     {
         pathfindingActive = true;

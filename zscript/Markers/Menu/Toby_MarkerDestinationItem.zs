@@ -2,9 +2,10 @@ class Toby_MarkerDestinationItem
 {
     Vector3 coordinates;
     double distance;
+    double pathLength;
     string direction;
 
-    static Toby_MarkerDestinationItem Create(Vector3 coordinates, Actor playerActor)
+    static Toby_MarkerDestinationItem Create(Vector3 coordinates, Actor playerActor, double pathLength)
     {
         Toby_MarkerDestinationItem item = new("Toby_MarkerDestinationItem");
 
@@ -27,6 +28,7 @@ class Toby_MarkerDestinationItem
 
         item.coordinates = coordinates;
         item.distance = distance;
+        item.pathLength = pathLength;
         item.direction = directions[directionIndex];
         return item;
     }

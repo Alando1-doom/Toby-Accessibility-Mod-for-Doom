@@ -21,10 +21,15 @@ class Toby_MarkerExplorationUnexploredMenu : OptionMenu
         );
         Toby_QuickSort.QuickSort(collection, 0, collection.Size() - 1);
 
+        bool useDirectDistance = CVar.FindCvar("Toby_UseLegacyExplorationDistance").GetBool();
         for (int i = 0; i < collection.Size(); i++)
         {
             Toby_MarkerDestinationItem item = (Toby_MarkerDestinationItem)(collection.GetObject(i));
-            int distance = Round(item.distance);
+            int distance = Round(item.pathLength);
+            if (useDirectDistance)
+            {
+                distance = Round(item.distance);
+            }
             string description = item.direction.. " - "..distance;
             string coordinates = item.coordinates.x..":"..item.coordinates.y..":"..item.coordinates.z;
             mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, coordinates));

@@ -38,9 +38,10 @@ class Toby_MarkerExplorationMenuHelpers
                 pathfinder.FindPath();
             }
             if (!pathfinder.pathFinalized) { continue; }
+            double pathLength = pathfinder.GetPathLength();
 
             // Add to collection
-            collection.AddItem(destination, playerActor);
+            collection.AddItem(destination, playerActor, pathLength);
         }
 
         return collection;
