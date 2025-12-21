@@ -55,11 +55,52 @@ class Toby_MarkerExplorationMenuHelpers
         Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
         Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
 
-        console.printf("0");
         ThinkerIterator actorFinder = ThinkerIterator.Create("Key");
         Key foundActor;
         while (foundActor = (Key)(actorFinder.Next()))
         {
+            int sectorIndex = foundActor.curSector.Index();
+            if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
+            // Deduplication
+            // Skipping this check for now. Realistically should only check for items of same class
+            // bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
+            // if (tooClose) { continue; }
+
+            // Check if destination can be reached
+            Vector3 destination = foundActor.pos;
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
+            if (!isReachable) { continue; }
+            double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
+            collection.AddItem(destination, playerActor, pathLength, foundActor);
+        }
+
+        // Add to collection
+        return collection;
+    }
+
+    ui static Toby_MarkerDestinationCollection CreateDestinationCollectionPickups(Toby_ExplorationTracker tracker, int ignoreDistance)
+    {
+        Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
+
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
+        ThinkerIterator actorFinder = ThinkerIterator.Create("Inventory");
+        Inventory foundActor;
+        while (foundActor = (Inventory)(actorFinder.Next()))
+        {
+            if (foundActor is "Key") { continue; }
+            if (foundActor.owner) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
             // Deduplication

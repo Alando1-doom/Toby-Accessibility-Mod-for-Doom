@@ -1,4 +1,4 @@
-class Toby_MarkerExplorationKeysMenu : OptionMenu
+class Toby_MarkerExplorationPickupsMenu : OptionMenu
 {
     override void Init(Menu parent, OptionMenuDescriptor desc)
     {
@@ -14,7 +14,7 @@ class Toby_MarkerExplorationKeysMenu : OptionMenu
         // if two possible destination points are too close - discard one of them -PR
         int ignoreDistance = 16 * 10; //PlayerPawn.radius * 10;
 
-        Toby_MarkerDestinationCollection collection = Toby_MarkerExplorationMenuHelpers.CreateDestinationCollectionKeys(
+        Toby_MarkerDestinationCollection collection = Toby_MarkerExplorationMenuHelpers.CreateDestinationCollectionPickups(
             tracker,
             ignoreDistance
         );
