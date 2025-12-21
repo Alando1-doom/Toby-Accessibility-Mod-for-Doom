@@ -5,6 +5,9 @@ class Toby_MarkerExplorationMenuHelpers
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
 
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
         Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
         Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
         Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
@@ -16,9 +19,6 @@ class Toby_MarkerExplorationMenuHelpers
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
 
-            if (!players[consoleplayer].mo) { continue; }
-            PlayerPawn playerActor = players[consoleplayer].mo;
-
             // 'normal' here is destination point
             vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
 
@@ -27,24 +27,76 @@ class Toby_MarkerExplorationMenuHelpers
             if (tooClose) { continue; }
 
             // Check if destination can be reached
-            vector3 destination = (normal, s.CenterFloor());
-            int attemptCount = 5;
-            int destinationSector = level.PointInSector(normal).Index();
-            explorationPathfinder.FindPathFromDestinationToExploredSector(destinationSector);
-            pathfinder.StartPathfinding(playerActor.pos, destination, explorationPathfinder.explorationNodes);
-            for (int j = 0; j < attemptCount; j++)
-            {
-                if (pathfinder.pathFinalized) { break; }
-                pathfinder.FindPath();
-            }
-            if (!pathfinder.pathFinalized) { continue; }
+            Vector3 destination = (normal, s.CenterFloor());
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
             double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
 
             // Add to collection
             collection.AddItem(destination, playerActor, pathLength);
         }
 
         return collection;
+    }
+
+    ui static Toby_MarkerDestinationCollection CreateDestinationCollectionKeys(Toby_ExplorationTracker tracker, int ignoreDistance)
+    {
+        Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
+
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
+        console.printf("0");
+        ThinkerIterator actorFinder = ThinkerIterator.Create("Key");
+        Key foundActor;
+        while (foundActor = (Key)(actorFinder.Next()))
+        {
+            int sectorIndex = foundActor.curSector.Index();
+            if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
+            // Deduplication
+            // Skipping this check for now. Realistically should only check for items of same class
+            // bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
+            // if (tooClose) { continue; }
+
+            // Check if destination can be reached
+            Vector3 destination = foundActor.pos;
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
+            if (!isReachable) { continue; }
+            double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
+            collection.AddItem(destination, playerActor, pathLength, foundActor);
+        }
+
+        // Add to collection
+        return collection;
+    }
+
+    ui static bool IsReachableByPathfinder(Toby_Pathfinder pathfinder, Toby_ExplorationPathfinder explorationPathfinder, Vector3 destination, PlayerPawn playerActor)
+    {
+        int attemptCount = 5;
+        int destinationSector = level.PointInSector(destination.xy).Index();
+        explorationPathfinder.FindPathFromDestinationToExploredSector(destinationSector);
+        pathfinder.StartPathfinding(playerActor.pos, destination, explorationPathfinder.explorationNodes);
+        for (int j = 0; j < attemptCount; j++)
+        {
+            if (pathfinder.pathFinalized) { break; }
+            pathfinder.FindPath();
+        }
+        return pathfinder.pathFinalized;
     }
 
     ui static bool IsTooClose(Toby_MarkerDestinationCollection collection, Vector2 coordinates2d, int ignoreDistance)

@@ -146,7 +146,7 @@ OptionMenu "toby_marker_exploration_noninteracted"
 
 OptionMenu "toby_marker_exploration_keys"
 {
-  class Toby_MarkerExplorationUnexploredMenu
+  class Toby_MarkerExplorationKeysMenu
   Title "Exploration - Keys"
 }
 

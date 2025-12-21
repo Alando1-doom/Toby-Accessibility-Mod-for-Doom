@@ -12,9 +12,9 @@ class Toby_MarkerDestinationCollection : Toby_SortableCollection
         return collection.Size();
     }
 
-    void AddItem(Vector3 coordinates, Actor playerActor, double pathLength)
+    void AddItem(Vector3 coordinates, Actor playerActor, double pathLength, Actor destinationActor = null)
     {
-        collection.push(Toby_MarkerDestinationItem.Create(coordinates, playerActor, pathLength));
+        collection.push(Toby_MarkerDestinationItem.Create(coordinates, playerActor, pathLength, destinationActor));
     }
 
     override Object GetObject(int arrayPos)
