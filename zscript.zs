@@ -39,6 +39,7 @@ version "4.6"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationNonInteractedMenu.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationKeysMenu.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationPickupsMenu.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationTeleportersMenu.zs"
 
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationMenuItem.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerDestinationCollection.zs"

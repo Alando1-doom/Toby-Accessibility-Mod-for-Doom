@@ -163,7 +163,7 @@ OptionMenu "toby_marker_exploration_pickups"
 
 OptionMenu "toby_marker_exploration_teleporters"
 {
-  class Toby_MarkerExplorationUnexploredMenu
+  class Toby_MarkerExplorationTeleportersMenu
   Title "Exploration - Teleporters"
 }
 

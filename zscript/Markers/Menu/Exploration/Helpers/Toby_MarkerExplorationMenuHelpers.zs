@@ -1,6 +1,5 @@
 class Toby_MarkerExplorationMenuHelpers
 {
-
     ui static Toby_MarkerDestinationCollection CreateDestinationCollection(Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance, bool oneUnitToTarget = true)
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
@@ -16,6 +15,51 @@ class Toby_MarkerExplorationMenuHelpers
         {
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
+            Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
+            if (!s) { continue; }
+
+            // 'normal' here is destination point
+            vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
+
+            // Deduplication
+            bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
+            if (tooClose) { continue; }
+
+            // Check if destination can be reached
+            Vector3 destination = (normal, s.CenterFloor());
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
+            double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
+
+            // Add to collection
+            collection.AddItem(destination, playerActor, pathLength);
+        }
+
+        return collection;
+    }
+
+    ui static Toby_MarkerDestinationCollection CreateDestinationCollectionTeleportLines(Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance, bool oneUnitToTarget = true)
+    {
+        Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
+
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
+        for (uint i = 0; i < intSet.Size(); i++)
+        {
+            int lineId = intSet.values[i];
+            Line l = level.lines[lineId];
+            bool isTeleportLine = Toby_SectorMathUtil.IsTeleportLine(l);
+            if (!isTeleportLine) { continue; }
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
 
