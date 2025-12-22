@@ -25,6 +25,7 @@ version "4.6"
 #include "zscript/StatusChecker/Toby_LevelStatsChecker.zs"
 #include "zscript/StatusChecker/Toby_PlayerStatusCheckStaticHandler.zs"
 #include "zscript/StatusChecker/Toby_ChessboardCoordsChecker.zs"
+#include "zscript/StatusChecker/Toby_NoRadiusDmg.zs"
 
 //Player state change narration
 #include "zscript/PlayerStateChangeDetector/Toby_PlayerStateChangeHandler.zs"

@@ -54,6 +54,10 @@ class Toby_MarkerExplorationMenuLegacy : OptionMenu
                     normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
                     normalSector = level.PointInSector(normal);
                     if (!normalSector) { continue; }
+                    if (l.frontSector)
+                    {
+                        if (l.frontSector.Index() != normalSector.Index()) { continue; }
+                    }
                     isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
                     if (isInMapBounds) { break; }
                 }

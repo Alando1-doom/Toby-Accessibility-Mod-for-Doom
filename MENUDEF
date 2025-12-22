@@ -45,6 +45,11 @@ OptionMenu "toby_mod_options"
     Option      "$TOBY_CHESSOBOARD_COORDINATES_ENABLED_BY_DEFAULT", "Toby_ChessboardCoordinates_EnabledByDefault", "toby_yes_no"
 
     StaticText  ""
+    StaticText  "$TOBY_NO_RADIUS_DAMAGE_SECTION", "Gold"
+    Control     "$TOBY_NO_RADIUS_DAMAGE_TOGGLE", "toby_no_radius_damage_toggle_keybind"
+    Option      "$TOBY_NO_RADIUS_DAMAGE_ENABLED_BY_DEFAULT", "Toby_NoRadiusDmg_EnabledByDefault", "toby_no_radius_damage"
+
+    StaticText  ""
     StaticText  "$TOBY_SNAP_TO_TARGET_SECTION", "Gold"
     Option "$TOBY_SNAP_TO_TARGET_TARGETING_MODE", "Toby_SnapToTargetTargetingMode", "Toby_SnapToTargetTargetingModes"
 
@@ -206,4 +211,11 @@ OptionValue "toby_yes_no"
 {
     0, "No"
     1, "Yes"
+}
+
+OptionValue "toby_no_radius_damage"
+{
+    0, "Ignore"
+    1, "Disabled"
+    2, "Enabled"
 }

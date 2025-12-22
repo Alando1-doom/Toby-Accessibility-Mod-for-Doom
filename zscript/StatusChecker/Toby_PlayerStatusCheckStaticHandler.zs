@@ -29,6 +29,7 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             chessboardCoords.push(Toby_ChessboardCoordsChecker.Create(i));
             chessboardCoords[i].Init(i);
+            Toby_NoRadiusDmg.NoRadiusDmgInit(i);
         }
     }
 
@@ -94,6 +95,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
         {
             Toby_ChessboardCoordsChecker.ChessboardCoordsToggleByOutputType(narrationOutputType, chessboardCoords[consoleplayer].enabled);
         }
+        if (e.Name == "Toby_NoRadiusDmgToggleInterface")
+        {
+            Toby_NoRadiusDmg.NoRadiusDmgToggleByOutputType(narrationOutputType, player.mo.bNORADIUSDMG);
+        }
         if (e.Name == "Toby_CheckChessboardCoordinatesInterface")
         {
             chessboardCoords[consoleplayer].CheckChessboardCoordsByOutputType(narrationOutputType);
@@ -155,6 +160,10 @@ class Toby_PlayerStatusCheckStaticHandler: StaticEventHandler
             chessboardCoords[e.Player].enabled = !chessboardCoords[e.Player].enabled;
             chessboardCoords[e.Player].toggleTick = true;
             EventHandler.SendInterfaceEvent(e.Player, "Toby_ChessboardCoordinatesToggleInterface");
+        }
+        if (event == "Toby_NoRadiusDmgToggle")
+        {
+            Toby_NoRadiusDmg.Toggle(e.Player);
         }
         if (event == "Toby_WarpToChessboard")
         {
