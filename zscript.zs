@@ -47,6 +47,7 @@ version "4.6"
 
 #include "zscript/Markers/Menu/Exploration/Helpers/Toby_MarkerExplorationMenuHelpers.zs"
 #include "zscript/Markers/Menu/Exploration/Legacy/Toby_MarkerExplorationMenuLegacy.zs"
+#include "zscript/Markers/Menu/Exploration/Legacy/Toby_MarkerExplorationMenuItemLegacy.zs"
 //Marker menus - everything else
 #include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"

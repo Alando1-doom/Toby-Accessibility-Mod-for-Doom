@@ -116,7 +116,7 @@ class Toby_MarkerExplorationMenuLegacy : OptionMenu
 
             string description = descriptionPrefix..directions[directionIndex].. " - "..distance;
 
-            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, ""..coordinates));
+            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItemLegacy").Init(description, ""..coordinates));
         }
 
         addedPointsX.Clear();

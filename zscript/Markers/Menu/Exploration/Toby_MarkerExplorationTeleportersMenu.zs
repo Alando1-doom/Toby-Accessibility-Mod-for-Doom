@@ -30,9 +30,22 @@ class Toby_MarkerExplorationTeleportersMenu : OptionMenu
             {
                 distance = Round(item.distance);
             }
-            string description = item.direction.." - "..distance;
+            string chessboardCoords = Toby_ChessboardCoordsChecker.WorldToChessboardCoords(item.coordinates);
+            string description = item.direction.." - "..distance.." - "..chessboardCoords;
             string coordinates = item.coordinates.x..":"..item.coordinates.y..":"..item.coordinates.z;
-            mDesc.mItems.Push(new("Toby_MarkerExplorationMenuItem").Init(description, coordinates));
+
+            string className = "";
+            if (item.destinationActor)
+            {
+                className = item.destinationActor.GetClassName();
+            }
+            Toby_MarkerExplorationMenuItem menuItem = Toby_MarkerExplorationMenuItem.Create(
+                distance,
+                item.direction,
+                className,
+                chessboardCoords
+            );
+            mDesc.mItems.Push(menuItem.Init(description, coordinates));
         }
     }
 

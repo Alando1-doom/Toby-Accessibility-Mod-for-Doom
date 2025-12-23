@@ -245,6 +245,37 @@ class Toby_ChessboardCoordsChecker
         return (globalX, globalY, 0);
     }
 
+
+    static string WorldToChessboardCoords(vector3 worldPos)
+    {
+        int cellSize   = 256;   // 2^8 - 16 cells in a zone - A1 : H8
+        int zoneSize   = 2048;  // 2^11 - 16 zones per region - A1 : H8
+        int regionSize = 16384; // 2^14 - gives us 4 big regions A1 : D4
+        int offset     = 32768; // 2^15 - Half of a map. Doom maps are 2^16 = 65536
+        int charOffset = 65;    // English alphabet in ASCII starts at 65
+
+        double offsetPosX = worldPos.x + offset;
+        double offsetPosY = worldPos.y + offset;
+
+        // Region
+        int regionX = (int)(offsetPosX / regionSize);
+        int regionY = (int)(offsetPosY / regionSize) + 1;
+
+        // Zone
+        int zoneX = (int)(Toby_Math.Modulo(offsetPosX, regionSize) / zoneSize);
+        int zoneY = (int)(Toby_Math.Modulo(offsetPosY, regionSize) / zoneSize) + 1;
+
+        // Cell
+        int cellX = (int)(Toby_Math.Modulo(offsetPosX, zoneSize) / cellSize);
+        int cellY = (int)(Toby_Math.Modulo(offsetPosY, zoneSize) / cellSize) + 1;
+
+        string regionStr = String.format("%c", regionX + charOffset) .. regionY;
+        string zoneStr   = String.format("%c", zoneX   + charOffset) .. zoneY;
+        string cellStr   = String.format("%c", cellX   + charOffset) .. cellY;
+
+        return regionStr .. " " .. zoneStr .. " " .. cellStr;
+    }
+
     ui static void ChessboardCoordsToggleByOutputType(int narrationOutputType, bool enabled)
     {
         if (narrationOutputType == TNOT_CONSOLE)
