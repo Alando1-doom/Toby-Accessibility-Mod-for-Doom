@@ -24,12 +24,30 @@ class Toby_MenuOutputBySoundBindings
             return;
         }
 
-        if (currentState.menuClass == "Toby_MarkerExplorationMenu"
-            && previousState.menuClass == "Toby_MarkerExplorationMenu"
+        if (
+            ((currentState.menuClass == "Toby_MarkerExplorationUnexploredMenu")
+            || (currentState.menuClass == "Toby_MarkerExplorationNonInteractedMenu")
+            || (currentState.menuClass == "Toby_MarkerExplorationKeysMenu")
+            || (currentState.menuClass == "Toby_MarkerExplorationPickupsMenu")
+            || (currentState.menuClass == "Toby_MarkerExplorationTeleportersMenu"))
+            &&
+            ((previousState.menuClass == "Toby_MarkerExplorationUnexploredMenu")
+            || (previousState.menuClass == "Toby_MarkerExplorationNonInteractedMenu")
+            || (previousState.menuClass == "Toby_MarkerExplorationKeysMenu")
+            || (previousState.menuClass == "Toby_MarkerExplorationPickupsMenu")
+            || (previousState.menuClass == "Toby_MarkerExplorationTeleportersMenu"))
             && detectedChange == Toby_MenuState.OptionChanged
         )
         {
-            HandleMarkerExplorationMenu(currentState);
+            HandleMarkerExplorationMenus(currentState);
+            return;
+        }
+        if (currentState.menuClass == "Toby_MarkerExplorationMenuLegacy"
+            && previousState.menuClass == "Toby_MarkerExplorationMenuLegacy"
+            && detectedChange == Toby_MenuState.OptionChanged
+        )
+        {
+            HandleMarkerExplorationMenuLegacy(currentState);
             return;
         }
 
@@ -318,7 +336,17 @@ class Toby_MenuOutputBySoundBindings
         Toby_SoundQueueStaticHandler.PlayQueue(0);
     }
 
-    ui void HandleMarkerExplorationMenu(Toby_MenuState currentState)
+    ui void HandleMarkerExplorationMenus(Toby_MenuState currentState)
+    {
+        if (currentState.mItemOptionNameLocalized == "Stop pathfinding")
+        {
+            Toby_SoundQueueStaticHandler.AddSound("pathfinder/stoppath", -1);
+            Toby_SoundQueueStaticHandler.PlayQueue(0);
+            return;
+        }
+        HandleMenuItemWithQueue(currentState);
+    }
+    ui void HandleMarkerExplorationMenuLegacy(Toby_MenuState currentState)
     {
         Toby_SoundQueueStaticHandler.Clear();
         if (currentState.mItemOptionNameLocalized == "Stop pathfinding")
@@ -340,38 +368,10 @@ class Toby_MenuOutputBySoundBindings
             Toby_SoundQueueStaticHandler.AddSound("pathfinder/noninteracted", -1);
         }
 
-        if (pointOfInterest[1] == "North")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/north", -1);
-        }
-        else if (pointOfInterest[1] == "North-East")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/northeast", -1);
-        }
-        else if (pointOfInterest[1] == "East")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/east", -1);
-        }
-        else if (pointOfInterest[1] == "South-East")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/southeast", -1);
-        }
-        else if (pointOfInterest[1] == "South")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/south", -1);
-        }
-        else if (pointOfInterest[1] == "South-West")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/southwest", -1);
-        }
-        else if (pointOfInterest[1] == "West")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/west", -1);
-        }
-        else if (pointOfInterest[1] == "North-West")
-        {
-            Toby_SoundQueueStaticHandler.AddSound("compass/northwest", -1);
-        }
+        Toby_StringToSoundQueue stringSoundQueue = Toby_StringToSoundQueue.Create();
+        Toby_SoundQueue directionSoundQueue = stringSoundQueue.CreateQueueFromDirection(pointOfInterest[1]);
+        Toby_SoundQueueStaticHandler.AddQueue(directionSoundQueue);
+
         Toby_NumberToSoundQueue numberQueueBuilder = Toby_NumberToSoundQueue.Create();
         Toby_SoundQueueStaticHandler.AddQueue(numberQueueBuilder.CreateQueueFromInt(pointOfInterest[2].ToInt()));
         Toby_SoundQueueStaticHandler.PlayQueue(0);

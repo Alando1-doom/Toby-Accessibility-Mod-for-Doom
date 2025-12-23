@@ -292,6 +292,13 @@ class Toby_StringToSoundQueue
         return soundQueue;
     }
 
+    Toby_SoundQueue CreateQueueFromDirection(string direction)
+    {
+        Reset();
+        soundQueue.AddSound(GetDirectionSoundName(direction), -1);
+        return soundQueue;
+    }
+
     private string GetKeySoundName(string text)
     {
         string soundName = "";
@@ -305,6 +312,43 @@ class Toby_StringToSoundQueue
             soundName = GetNonAlphabetKeySoundName(text);
         }
         return soundName;
+    }
+
+    private string GetDirectionSoundName(string direction)
+    {
+        if (direction == "North")
+        {
+            return "compass/north";
+        }
+        else if (direction == "North-East")
+        {
+            return "compass/northeast";
+        }
+        else if (direction == "East")
+        {
+            return "compass/east";
+        }
+        else if (direction == "South-East")
+        {
+            return "compass/southeast";
+        }
+        else if (direction == "South")
+        {
+            return "compass/south";
+        }
+        else if (direction == "South-West")
+        {
+            return "compass/southwest";
+        }
+        else if (direction == "West")
+        {
+            return "compass/west";
+        }
+        else if (direction == "North-West")
+        {
+            return "compass/northwest";
+        }
+        return "";
     }
 
     private void ConvertAndAddToQueue(string text)

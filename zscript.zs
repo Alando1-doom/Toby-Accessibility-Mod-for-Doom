@@ -34,10 +34,22 @@ version "4.6"
 #include "zscript/SelectionNarration/Toby_SelectionNarrationHandler.zs"
 #include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
 
-//Marker menus
+//Marker menus - Exploration
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationUnexploredMenu.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationNonInteractedMenu.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationKeysMenu.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationPickupsMenu.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationTeleportersMenu.zs"
+
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationMenuItem.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerDestinationCollection.zs"
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerDestinationItem.zs"
+
+#include "zscript/Markers/Menu/Exploration/Helpers/Toby_MarkerExplorationMenuHelpers.zs"
+#include "zscript/Markers/Menu/Exploration/Legacy/Toby_MarkerExplorationMenuLegacy.zs"
+#include "zscript/Markers/Menu/Exploration/Legacy/Toby_MarkerExplorationMenuItemLegacy.zs"
+//Marker menus - everything else
 #include "zscript/Markers/Menu/Toby_BaseMarkerOptionMenuItem.zs"
-#include "zscript/Markers/Menu/Toby_MarkerExplorationMenu.zs"
-#include "zscript/Markers/Menu/Toby_MarkerExplorationMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingMenu.zs"
 #include "zscript/Markers/Menu/Toby_MarkerPathfindingOptionMenuItem.zs"
 #include "zscript/Markers/Menu/Toby_MarkerAddMenu.zs"

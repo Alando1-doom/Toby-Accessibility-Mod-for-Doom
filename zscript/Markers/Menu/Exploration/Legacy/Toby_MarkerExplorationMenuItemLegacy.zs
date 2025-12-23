@@ -1,4 +1,4 @@
-class Toby_MarkerExplorationMenuItem : Toby_BaseMarkerOptionMenuItem
+class Toby_MarkerExplorationMenuItemLegacy : Toby_BaseMarkerOptionMenuItem
 {
     override bool Activate()
     {

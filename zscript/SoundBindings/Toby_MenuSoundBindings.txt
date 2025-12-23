@@ -647,6 +647,14 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Remove nearest marker", "SoundToPlay":"pathfinder/removenearest"}
 {"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_main", "CurrentMenuItemOptionName":"Exploration", "SoundToPlay":"pathfinder/exploration"}
 
+//Exploration menu
+{"EventType":"MenuChanged",   "CurrentMenuName":"toby_marker_exploration", "SoundToPlay":"pathfinder/exploration"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_exploration", "CurrentMenuItemOptionName":"Unexplored", "SoundToPlay":"pathfinder/unexplored"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_exploration", "CurrentMenuItemOptionName":"Non-interacted", "SoundToPlay":"pathfinder/noninteracted"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_exploration", "CurrentMenuItemOptionName":"Keys", "SoundToPlay":"heretic/actorsinviewport/key/greenkeys"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_exploration", "CurrentMenuItemOptionName":"Pickups", "SoundToPlay":"toby/actorsinviewport/pickups/backpacks"}
+{"EventType":"OptionChanged", "CurrentMenuName":"toby_marker_exploration", "CurrentMenuItemOptionName":"Teleporters", "SoundToPlay":"toby/actorsinviewport/env/teleports"}
+
 //Pathfinder - Pathfinding
 {"EventType":"MenuChanged",   "CurrentMenuName":"Toby_Marker_Pathfinding", "SoundToPlay":"pathfinder/pathfinding"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Toby_Marker_Pathfinding", "CurrentMenuItemOptionName":"Stop pathfinding", "SoundToPlay":"pathfinder/stoppath"}
