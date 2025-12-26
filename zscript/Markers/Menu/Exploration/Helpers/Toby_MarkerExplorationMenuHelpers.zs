@@ -88,6 +88,36 @@ class Toby_MarkerExplorationMenuHelpers
         return collection;
     }
 
+    // Awful -PR
+    ui static bool IsKeyOrTobyKey(Inventory a)
+    {
+        if (a is "Key") { return true; }
+
+        if (a.GetClassName() == "BlueCard_TO") { return true; }
+        if (a.GetClassName() == "BlueSkullKey_TO") { return true; }
+        if (a.GetClassName() == "RedCard_TO") { return true; }
+        if (a.GetClassName() == "RedSkullKey_TO") { return true; }
+        if (a.GetClassName() == "YellowCard_TO") { return true; }
+        if (a.GetClassName() == "YellowSkullKey_TO") { return true; }
+
+        if (a.GetClassName() == "GreenKey_Toby") { return true; }
+        if (a.GetClassName() == "BlueKey_Toby") { return true; }
+        if (a.GetClassName() == "YellowKey_Toby") { return true; }
+
+        if (a.GetClassName() == "SteelKey_Toby") { return true; }
+        if (a.GetClassName() == "CaveKey_Toby") { return true; }
+        if (a.GetClassName() == "AxeKey_Toby") { return true; }
+        if (a.GetClassName() == "FireKey_Toby") { return true; }
+        if (a.GetClassName() == "EmeraldKey_Toby") { return true; }
+        if (a.GetClassName() == "DungeonKey_Toby") { return true; }
+        if (a.GetClassName() == "SilverKey_Toby") { return true; }
+        if (a.GetClassName() == "RustedKey_Toby") { return true; }
+        if (a.GetClassName() == "HornKey_Toby") { return true; }
+        if (a.GetClassName() == "SwampKey_Toby") { return true; }
+        if (a.GetClassName() == "CastleKey_Toby") { return true; }
+        return false;
+    }
+
     ui static Toby_MarkerDestinationCollection CreateDestinationCollectionKeys(Toby_ExplorationTracker tracker, int ignoreDistance)
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
@@ -99,10 +129,11 @@ class Toby_MarkerExplorationMenuHelpers
         Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
         Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
 
-        ThinkerIterator actorFinder = ThinkerIterator.Create("Key");
-        Key foundActor;
-        while (foundActor = (Key)(actorFinder.Next()))
+        ThinkerIterator actorFinder = ThinkerIterator.Create("Inventory");
+        Inventory foundActor;
+        while (foundActor = (Inventory)(actorFinder.Next()))
         {
+            if (!Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
 
@@ -148,7 +179,7 @@ class Toby_MarkerExplorationMenuHelpers
         Inventory foundActor;
         while (foundActor = (Inventory)(actorFinder.Next()))
         {
-            if (foundActor is "Key") { continue; }
+            if (Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
             if (foundActor.owner) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
