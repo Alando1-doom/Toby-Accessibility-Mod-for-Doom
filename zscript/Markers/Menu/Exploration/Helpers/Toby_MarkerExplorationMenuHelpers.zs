@@ -58,7 +58,7 @@ class Toby_MarkerExplorationMenuHelpers
         {
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
-            bool isTeleportLine = Toby_SectorMathUtil.IsTeleportLine(l);
+            bool isTeleportLine = Toby_LineUtil.IsTeleportLine(l);
             if (!isTeleportLine) { continue; }
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }

@@ -11,13 +11,14 @@ class TobyEventHandler : EventHandler
         for(int l = 0; l < level.lines.size(); l++)
         {
             Vector2 pos = level.lines[l].v1.p + (level.lines[l].delta / 2.0);
-            if(level.lines[l].special==243||level.lines[l].special==75)
+            Vector3 beaconSpawnPos = (pos.x, pos.y, 0);
+            if(Toby_LineUtil.IsExit(level.lines[l]) || Toby_LineUtil.IsEndGame(level.lines[l]))
             {
-                Actor.Spawn("ExitBeacon1",(pos.x,pos.y,0));
+                Actor.Spawn("ExitBeacon1", beaconSpawnPos);
             }
-            else if(level.lines[l].special==244)
+            else if(Toby_LineUtil.IsSecretExit(level.lines[l]))
             {
-                Actor.Spawn("SecretExitBeacon",(pos.x,pos.y,0));
+                Actor.Spawn("SecretExitBeacon", beaconSpawnPos);
             }
             //Figuring this out caused me a massive headache
             //Why does the Doom format and UDMF have different door locking?
@@ -28,267 +29,267 @@ class TobyEventHandler : EventHandler
             {
                 //This is awful -Proydoha; Oh it gets worse -Jarewill
                 if (GameInfo.GameType & GAME_Hexen) {
-                    Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("SteelKeyChecker", beaconSpawnPos);
                 } else if (GameInfo.GameType & GAME_Heretic) {
-                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("GreenKeyChecker_V2", beaconSpawnPos);
                 } else {
-                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedKeyChecker_V2", beaconSpawnPos);
                 }
             }
-            Else If(level.lines[l].special==13 && (level.lines[l].args[3]==1 || level.lines[l].args[3]==129 || level.lines[l].args[3]==132))
+            else if(level.lines[l].special==13 && (level.lines[l].args[3]==1 || level.lines[l].args[3]==129 || level.lines[l].args[3]==132))
             {
                 //This is awful -Proydoha
                 if (GameInfo.GameType & GAME_Hexen) {
-                    Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("SteelKeyChecker", beaconSpawnPos);
                 } else if (GameInfo.GameType & GAME_Heretic) {
-                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("GreenKeyChecker_V2", beaconSpawnPos);
                 } else {
-                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedKeyChecker_V2", beaconSpawnPos);
                 }
             }
-            Else If(level.lines[l].special==202 && (level.lines[l].args[4]==1 || level.lines[l].args[4]==129 || level.lines[l].args[4]==132))
+            else if(level.lines[l].special==202 && (level.lines[l].args[4]==1 || level.lines[l].args[4]==129 || level.lines[l].args[4]==132))
             {
                 //This is awful -Proydoha
                 if (GameInfo.GameType & GAME_Hexen) {
-                    Actor.Spawn("SteelKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("SteelKeyChecker", beaconSpawnPos);
                 } else if (GameInfo.GameType & GAME_Heretic) {
-                    Actor.Spawn("GreenKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("GreenKeyChecker_V2", beaconSpawnPos);
                 } else {
-                    Actor.Spawn("RedKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedKeyChecker_V2", beaconSpawnPos);
                 }
             }
             //Blue Key
-            Else If(level.lines[l].locknumber==2 || level.lines[l].locknumber==130 || level.lines[l].locknumber==133)
+            else if(level.lines[l].locknumber==2 || level.lines[l].locknumber==130 || level.lines[l].locknumber==133)
             {
-                If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
-                }Else{
-                    Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+                if(GameInfo.GameType & GAME_Hexen){
+                    Actor.Spawn("CaveKeyChecker", beaconSpawnPos);
+                }else{
+                    Actor.Spawn("BlueKeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && (level.lines[l].args[3]==2 || level.lines[l].args[3]==130 || level.lines[l].args[3]==133))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("CaveKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("BlueKeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && (level.lines[l].args[4]==2 || level.lines[l].args[4]==130 || level.lines[l].args[4]==133))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("CaveKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("CaveKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("BlueKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("BlueKeyChecker_V2", beaconSpawnPos);
                 }
             }
             //Yellow Key
             Else If(level.lines[l].locknumber==3 || level.lines[l].locknumber==131 || level.lines[l].locknumber==134)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AxeKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowKeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && (level.lines[l].args[3]==3 || level.lines[l].args[3]==131 || level.lines[l].args[3]==134))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AxeKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowKeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && (level.lines[l].args[4]==3 || level.lines[l].args[4]==131 || level.lines[l].args[4]==134))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AxeKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AxeKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowKeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowKeyChecker_V2", beaconSpawnPos);
                 }
             }
             //Red Skull Key
             Else If(level.lines[l].locknumber==4)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("FireKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && level.lines[l].args[3]==4)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("FireKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && level.lines[l].args[4]==4)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("FireKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("FireKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("RedSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("RedSkullChecker_V2", beaconSpawnPos);
                 }
             }
             //Blue Skull Key
             Else If(level.lines[l].locknumber==5)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("EmeraldKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("BlueSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && level.lines[l].args[3]==5)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("EmeraldKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("BlueSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && level.lines[l].args[4]==5)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("EmeraldKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("EmeraldKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("BlueSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("BlueSkullChecker_V2", beaconSpawnPos);
                 }
             }
             //Yellow Skull Key
             Else If(level.lines[l].locknumber==6)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("DungeonKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && level.lines[l].args[3]==6)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("DungeonKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && level.lines[l].args[4]==6)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("DungeonKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("DungeonKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("YellowSkullChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("YellowSkullChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==7){
-                Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SilverKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==7){
-                Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SilverKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==7){
-                Actor.Spawn("SilverKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SilverKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==8){
-                Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("RustedKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==8){
-                Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("RustedKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==8){
-                Actor.Spawn("RustedKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("RustedKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==9){
-                Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("HornKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==9){
-                Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("HornKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==9){
-                Actor.Spawn("HornKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("HornKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==10){
-                Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SwampKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==10){
-                Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SwampKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==10){
-                Actor.Spawn("SwampKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("SwampKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].locknumber==11){
-                Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("CastleKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==13 && level.lines[l].args[3]==11){
-                Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("CastleKeyChecker", beaconSpawnPos);
             }
             Else If(GameInfo.GameType & GAME_HEXEN && level.lines[l].special==202 && level.lines[l].args[4]==11){
-                Actor.Spawn("CastleKeyChecker",(pos.x,pos.y,0));
+                Actor.Spawn("CastleKeyChecker", beaconSpawnPos);
             }
             //3 Key Checker
             Else If(level.lines[l].locknumber==229)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("3KeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && (level.lines[l].args[3]==229))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("3KeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && (level.lines[l].args[4]==229))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("3KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("3KeyChecker_V2", beaconSpawnPos);
                 }
             }
             //6 Key Checker
             Else If(level.lines[l].locknumber==101)
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("6KeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==13 && (level.lines[l].args[3]==101))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("6KeyChecker_V2", beaconSpawnPos);
                 }
             }
             Else If(level.lines[l].special==202 && (level.lines[l].args[4]==101))
             {
                 If(GameInfo.GameType & GAME_Hexen){
-                    Actor.Spawn("AllKeyChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("AllKeyChecker", beaconSpawnPos);
                 }Else{
-                    Actor.Spawn("6KeyChecker_V2",(pos.x,pos.y,0));
+                    Actor.Spawn("6KeyChecker_V2", beaconSpawnPos);
                 }
             }
             //Any Key Checker
             Else If(level.lines[l].locknumber==100 || level.lines[l].locknumber==228)
             {
-                Actor.Spawn("AnyKeyChecker_V2",(pos.x,pos.y,0));
+                Actor.Spawn("AnyKeyChecker_V2", beaconSpawnPos);
             }
             Else If(level.lines[l].special==13 && (level.lines[l].args[3]==100 || level.lines[l].args[3]==228))
             {
-                Actor.Spawn("AnyKeyChecker_V2",(pos.x,pos.y,0));
+                Actor.Spawn("AnyKeyChecker_V2", beaconSpawnPos);
             }
             Else If(level.lines[l].special==202 && (level.lines[l].args[4]==100 || level.lines[l].args[4]==228))
             {
-                Actor.Spawn("AnyKeyChecker_V2",(pos.x,pos.y,0));
+                Actor.Spawn("AnyKeyChecker_V2", beaconSpawnPos);
             }
             //This check was altered for the switch/door differentiation
             Else If(level.lines[l].special!=0 && level.lines[l].activation&SPAC_Use)
@@ -296,21 +297,21 @@ class TobyEventHandler : EventHandler
                 int spec = level.lines[l].special;
                 If(((spec>=10 && spec<=14) || (spec>=105 && spec<=106) || spec==202 || spec==249 || spec==274) && level.lines[l].args[0]==0)
                 {
-                    Actor.Spawn("BasicDoorChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("BasicDoorChecker", beaconSpawnPos);
                 }
                 Else
                 {
-                    Actor.Spawn("BasicSwitchChecker",(pos.x,pos.y,0));
+                    Actor.Spawn("BasicSwitchChecker", beaconSpawnPos);
                 }
             }
             //This check can now be for switches that need to be shot so you can have different sound applies to it
             Else If(level.lines[l].special!=0 && level.lines[l].activation&SPAC_Impact)
             {
-                Actor.Spawn("ShootableSwitchChecker",(pos.x,pos.y,0));
+                Actor.Spawn("ShootableSwitchChecker", beaconSpawnPos);
             }
-            else if(Toby_SectorMathUtil.IsTeleportLine(level.lines[l]))
+            else if(Toby_LineUtil.IsTeleportLine(level.lines[l]))
             {
-                Actor.Spawn("TeleporterBeacon_Toby",(pos.x,pos.y,0));
+                Actor.Spawn("TeleporterBeacon_Toby", beaconSpawnPos);
             }
         }
     }
