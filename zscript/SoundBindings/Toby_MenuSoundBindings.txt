@@ -314,6 +314,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_UNIVERSAL_BEACONS_UPDATE", "SoundToPlay":"menu/tobyopt/updatebeacons"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_TOGGLE", "SoundToPlay":"menu/controls/proxydetector"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_DETECTOR_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/enabledefault"}
+{"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_HURTFLOOR_DETECTOR_ENABLED_BY_DEFAULT", "SoundToPlay":"menu/tobyopt/enabledefault"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_MAX_DISTANCE", "SoundToPlay":"menu/tobyopt/maxdistance"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_ATTENUATION", "SoundToPlay":"menu/tobyopt/attenuation"}
 {"EventType":"OptionChanged", "CurrentMenuName":"TOBY_MOD_OPTIONS", "CurrentMenuItemOptionName":"$TOBY_PROXIMITY_APPLY_SETTINGS", "SoundToPlay":"menu/tobyopt/applyproxysettings"}
@@ -371,6 +372,8 @@
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTSTR_SYSTEMCURSOR", "SoundToPlay":"menu/cursor/system"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TXT_NO", "SoundToPlay":"menusnd/no"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$TXT_YES", "SoundToPlay":"menusnd/yes"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"No", "SoundToPlay":"menusnd/no"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"Yes", "SoundToPlay":"menusnd/yes"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_TOUCHSCREENLIKE", "SoundToPlay":"menu/mouse/touchscreen"}
 
 
