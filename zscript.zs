@@ -112,6 +112,7 @@ version "4.6"
 //Utils
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
 #include "zscript/Utils/Toby_ClassIgnoreListContainer.zs"
+#include "zscript/Utils/Toby_LineUtil.zs"
 #include "zscript/Utils/Toby_WadsUtils.zs"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"

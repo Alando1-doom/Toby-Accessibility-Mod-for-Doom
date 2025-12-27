@@ -85,6 +85,7 @@ TOBY_PROXIMITY_APPLY_SETTINGS = "Apply proximity detector settings";
 
 TOBY_HURTFLOOR_DETECTOR_SECTION = "Hurtfloor Detector Options";
 TOBY_HURTFLOOR_DETECTOR_TOGGLE = "Toggle Hurtfloor Detector";
+TOBY_HURTFLOOR_DETECTOR_ENABLED_BY_DEFAULT = "Enabled by default";
 
 TOBY_ELEVATION_TONE_SECTION = "Elevation Tone Options";
 TOBY_ELEVATION_TONE_TOGGLE = "Toggle Elevation Tone on/off";

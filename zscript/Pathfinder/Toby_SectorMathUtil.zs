@@ -103,18 +103,4 @@ class Toby_SectorMathUtil
             return normalPoint2;
         }
     }
-
-    static bool IsTeleportLine(Line l)
-    {
-        return (
-            l.special == TOBY_AS_TELEPORT_ZOMBIE_CHANGER
-            || l.special == TOBY_AS_TELEPORT
-            || l.special == TOBY_AS_TELEPORT_NO_FOG
-            || l.special == TOBY_AS_TELEPORT_OTHER
-            || l.special == TOBY_AS_TELEPORT_GROUP
-            || l.special == TOBY_AS_TELEPORT_IN_SECTOR
-            || l.special == TOBY_AS_TELEPORT_NO_STOP
-            || l.special == TOBY_AS_TELEPORT_LINE
-        );
-    }
 }

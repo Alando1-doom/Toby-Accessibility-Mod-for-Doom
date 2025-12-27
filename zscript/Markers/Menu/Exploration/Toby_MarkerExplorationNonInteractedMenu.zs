@@ -32,12 +32,17 @@ class Toby_MarkerExplorationNonInteractedMenu : OptionMenu
             }
             string chessboardCoords = Toby_ChessboardCoordsChecker.WorldToChessboardCoords(item.coordinates);
             string description = item.direction.." - "..distance.." - "..chessboardCoords;
+            if (item.destinationActor != "")
+            {
+                class<Actor> actorClass = item.destinationActor;
+                description = GetDefaultByType(actorClass).GetTag().." - "..description;
+            }
             string coordinates = item.coordinates.x..":"..item.coordinates.y..":"..item.coordinates.z;
 
             string className = "";
-            if (item.destinationActor)
+            if (item.destinationActor != "")
             {
-                className = item.destinationActor.GetClassName();
+                className = item.destinationActor;
             }
             Toby_MarkerExplorationMenuItem menuItem = Toby_MarkerExplorationMenuItem.Create(
                 distance,

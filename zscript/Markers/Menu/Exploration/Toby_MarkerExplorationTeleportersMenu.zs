@@ -35,9 +35,9 @@ class Toby_MarkerExplorationTeleportersMenu : OptionMenu
             string coordinates = item.coordinates.x..":"..item.coordinates.y..":"..item.coordinates.z;
 
             string className = "";
-            if (item.destinationActor)
+            if (item.destinationActor != "")
             {
-                className = item.destinationActor.GetClassName();
+                className = item.destinationActor;
             }
             Toby_MarkerExplorationMenuItem menuItem = Toby_MarkerExplorationMenuItem.Create(
                 distance,

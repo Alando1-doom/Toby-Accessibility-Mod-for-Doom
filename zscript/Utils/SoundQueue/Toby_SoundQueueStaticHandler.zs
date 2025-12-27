@@ -73,4 +73,21 @@ class Toby_SoundQueueStaticHandler : StaticEventHandler
         handler.waitTime = initialPause * 1000 / GameTicRate;
         handler.playing = true;
     }
+
+    override void InterfaceProcess(ConsoleEvent e)
+    {
+        PlayerInfo player = players[consoleplayer];
+        if (!player) { return; }
+        Actor playerActor = player.mo;
+        if (!playerActor) { return; }
+        if (e.Name == "Toby_ClearSoundQueueInterface")
+        {
+            Toby_SoundQueueStaticHandler.Clear();
+        }
+        if (e.Name == "Toby_ClearSoundQueueAndStopCurrentlyPlayingSoundsInterface")
+        {
+            Toby_SoundQueueStaticHandler.Clear();
+            System.StopAllSounds();
+        }
+    }
 }
