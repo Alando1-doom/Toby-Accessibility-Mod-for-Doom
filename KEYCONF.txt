@@ -92,6 +92,12 @@ AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET3" toby_actors_in_viewport_narration_
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET4" toby_actors_in_viewport_narration_preset_4_keybind
 AddMenuKey "$TOBY_VIEWPORT_NARRATION_PRESET5" toby_actors_in_viewport_narration_preset_5_keybind
 
+//Stop sounds
+addkeysection "Stop Sounds" StopSounds
+alias toby_clear_sound_queue_keybind "interfaceevent Toby_ClearSoundQueueInterface"
+alias toby_clear_sound_queue_and_stop_playing_sounds_keybind "interfaceevent Toby_ClearSoundQueueAndStopCurrentlyPlayingSoundsInterface"
+AddMenuKey "Clear Sound Queue" toby_clear_sound_queue_keybind
+AddMenuKey "Clear Sound Queue and Stop Sounds" toby_clear_sound_queue_and_stop_playing_sounds_keybind
 
 //Proximity Detector
 
