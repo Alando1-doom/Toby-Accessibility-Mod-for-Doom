@@ -159,16 +159,16 @@ class Toby_LineUtil
     static bool IsWikiDoorSpecial(int specialNumber)
     {
         return (
-            spec == TOBY_AS_DOOR_CLOSE
-            || spec == TOBY_AS_DOOR_OPEN
-            || spec == TOBY_AS_DOOR_RAISE
-            || spec == TOBY_AS_DOOR_LOCKED_RAISE
-            || spec == TOBY_AS_DOOR_ANIMATED
-            || spec == TOBY_AS_DDOR_WAIT_RAISE
-            || spec == TOBY_AS_DDOR_WAIT_CLOSE
-            || spec == TOBY_AS_GENERIC_DOOR
-            || spec == TOBY_AS_DOOR_CLOSE_WAIT_OPEN
-            || spec == TOBY_AS_DOOR_ANIMATED_CLOSE
+            specialNumber == TOBY_AS_DOOR_CLOSE
+            || specialNumber == TOBY_AS_DOOR_OPEN
+            || specialNumber == TOBY_AS_DOOR_RAISE
+            || specialNumber == TOBY_AS_DOOR_LOCKED_RAISE
+            || specialNumber == TOBY_AS_DOOR_ANIMATED
+            || specialNumber == TOBY_AS_DDOR_WAIT_RAISE
+            || specialNumber == TOBY_AS_DDOR_WAIT_CLOSE
+            || specialNumber == TOBY_AS_GENERIC_DOOR
+            || specialNumber == TOBY_AS_DOOR_CLOSE_WAIT_OPEN
+            || specialNumber == TOBY_AS_DOOR_ANIMATED_CLOSE
         );
     }
 }
