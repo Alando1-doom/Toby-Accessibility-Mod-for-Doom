@@ -1,10 +1,14 @@
 class Toby_MarkerDestinationCollection : Toby_SortableCollection
 {
     Array<Toby_MarkerDestinationItem> collection;
+    bool useDirectDistance;
 
     static Toby_MarkerDestinationCollection Create()
     {
-        return new("Toby_MarkerDestinationCollection");
+        Toby_MarkerDestinationCollection collection = new("Toby_MarkerDestinationCollection");
+        // What a terrible place to have a CVAR -PR
+        collection.useDirectDistance = CVar.FindCvar("Toby_UseLegacyExplorationDistance").GetBool();
+        return collection;
     }
 
     int Size()
@@ -12,7 +16,7 @@ class Toby_MarkerDestinationCollection : Toby_SortableCollection
         return collection.Size();
     }
 
-    void AddItem(Vector3 coordinates, Actor playerActor, double pathLength, Actor destinationActor = null)
+    void AddItem(Vector3 coordinates, Actor playerActor, double pathLength, string destinationActor = "")
     {
         collection.push(Toby_MarkerDestinationItem.Create(coordinates, playerActor, pathLength, destinationActor));
     }
@@ -38,11 +42,23 @@ class Toby_MarkerDestinationCollection : Toby_SortableCollection
         if (collection[arrayPos] == null) { return 0; }
         if (collection[pivotPos] == null) { return 0; }
 
-        if (collection[arrayPos].distance < collection[pivotPos].distance)
+        if (useDirectDistance)
+        {
+            if (collection[arrayPos].distance < collection[pivotPos].distance)
+            {
+                return -1;
+            }
+            if (collection[arrayPos].distance > collection[pivotPos].distance)
+            {
+                return 1;
+            }
+            return 0;
+        }
+        if (collection[arrayPos].pathLength < collection[pivotPos].pathLength)
         {
             return -1;
         }
-        if (collection[arrayPos].distance > collection[pivotPos].distance)
+        if (collection[arrayPos].pathLength > collection[pivotPos].pathLength)
         {
             return 1;
         }

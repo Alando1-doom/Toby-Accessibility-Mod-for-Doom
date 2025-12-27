@@ -37,7 +37,15 @@ class Toby_MarkerExplorationMenuHelpers
             if (pathLength == 0) { continue; }
 
             // Add to collection
-            collection.AddItem(destination, playerActor, pathLength);
+            if (oneUnitToTarget)
+            {
+                collection.AddItem(destination, playerActor, pathLength);
+            }
+            else
+            {
+                string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+                collection.AddItem(destination, playerActor, pathLength, actorClass);
+            }
         }
 
         return collection;
@@ -157,7 +165,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!isReachable) { continue; }
             double pathLength = pathfinder.GetPathLength();
             if (pathLength == 0) { continue; }
-            collection.AddItem(destination, playerActor, pathLength, foundActor);
+            collection.AddItem(destination, playerActor, pathLength, foundActor.GetClassName());
         }
 
         // Add to collection
@@ -204,7 +212,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!isReachable) { continue; }
             double pathLength = pathfinder.GetPathLength();
             if (pathLength == 0) { continue; }
-            collection.AddItem(destination, playerActor, pathLength, foundActor);
+            collection.AddItem(destination, playerActor, pathLength, foundActor.GetClassName());
         }
 
         // Add to collection
@@ -249,8 +257,8 @@ class Toby_MarkerExplorationMenuHelpers
         {
             Toby_MarkerDestinationItem item = (Toby_MarkerDestinationItem)(collection.GetObject(j));
             if (!item) { continue; }
-            if (!item.destinationActor) { continue; }
-            if (item.destinationActor.GetClassName() != otherActor.GetClassName()) { continue; }
+            if (item.destinationActor == "") { continue; }
+            if (item.destinationActor != otherActor.GetClassName()) { continue; }
             double distanceToPoint = ((item.coordinates.x, item.coordinates.y) - coordinates2d).Length();
             if (distanceToPoint < ignoreDistance)
             {

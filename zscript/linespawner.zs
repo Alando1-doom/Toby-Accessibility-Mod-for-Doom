@@ -9,13 +9,18 @@ class TobyEventHandler : EventHandler
             Vector2 pos = l.v1.p + (l.delta / 2.0);
             Vector3 beaconSpawnPos = (pos.x, pos.y, 0);
 
-            string beaconClass = GetBeaconClassForLine(l);
+            string beaconClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
             if (beaconClass == "") { continue; }
             Actor.Spawn(beaconClass, beaconSpawnPos);
         }
     }
+}
 
-    string GetBeaconClassForLine(Line l)
+// Separate class because if I declare it as a method on handler it gets play scope (apparently!)
+// I can't declare data scope explicitely and it must be data or else I won't be able to reuse it in ui
+class Toby_LineSpawnerHelper
+{
+    static string GetBeaconClassForLine(Line l)
     {
         if (Toby_LineUtil.IsExit(l) || Toby_LineUtil.IsEndGame(l)) { return "ExitBeacon1"; }
         if (Toby_LineUtil.IsSecretExit(l)) { return "SecretExitBeacon"; }
