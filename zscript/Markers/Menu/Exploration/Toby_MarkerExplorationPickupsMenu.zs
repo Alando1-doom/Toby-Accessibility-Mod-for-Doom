@@ -8,8 +8,4 @@ class Toby_MarkerExplorationPickupsMenu : Toby_MarkerExplorationBaseMenu
         );
         return collection;
     }
-
-    override bool MenuEvent(int key, bool fromController) {
-        return Super.MenuEvent(key, fromController);
-    }
 }

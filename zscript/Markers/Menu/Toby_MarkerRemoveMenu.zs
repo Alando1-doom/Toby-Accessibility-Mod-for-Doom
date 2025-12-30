@@ -13,8 +13,4 @@ class Toby_MarkerRemoveMenu : OptionMenu
             mDesc.mItems.Push(new("Toby_MarkerRemoveMenuItem").Init(description, ""..markerId));
         }
     }
-
-    override bool MenuEvent(int key, bool fromController) {
-        return super.MenuEvent(key, fromController);
-    }
 }

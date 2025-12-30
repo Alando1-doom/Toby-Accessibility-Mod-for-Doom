@@ -15,8 +15,4 @@ class Toby_MarkerPathfindingMenu : OptionMenu
             mDesc.mItems.Push(new("Toby_MarkerPathfindingOptionMenuItem").Init(description, ""..markerId));
         }
     }
-
-    override bool MenuEvent(int key, bool fromController) {
-        return super.MenuEvent(key, fromController);
-    }
 }

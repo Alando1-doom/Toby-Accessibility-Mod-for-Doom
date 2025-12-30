@@ -66,8 +66,4 @@ class Toby_MarkerExplorationBaseMenu : OptionMenu
         );
         mDesc.mItems.Push(menuItem.Init(description, coordinates));
     }
-
-    override bool MenuEvent(int key, bool fromController) {
-        return Super.MenuEvent(key, fromController);
-    }
 }
