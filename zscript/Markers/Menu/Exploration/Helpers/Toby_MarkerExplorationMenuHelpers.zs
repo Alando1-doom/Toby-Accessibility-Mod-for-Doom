@@ -141,6 +141,7 @@ class Toby_MarkerExplorationMenuHelpers
         Inventory foundActor;
         while (foundActor = (Inventory)(actorFinder.Next()))
         {
+            if (foundActor.owner) { continue; }
             if (!Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
