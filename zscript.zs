@@ -35,6 +35,7 @@ version "4.6"
 #include "zscript/SelectionNarration/Toby_SelectionNarrator.zs"
 
 //Marker menus - Exploration
+#include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationBaseMenu.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationUnexploredMenu.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationNonInteractedMenu.zs"
 #include "zscript/Markers/Menu/Exploration/Toby_MarkerExplorationKeysMenu.zs"
@@ -112,6 +113,7 @@ version "4.6"
 //Utils
 #include "zscript/Utils/Toby_SoundBindingsContainer.zs"
 #include "zscript/Utils/Toby_ClassIgnoreListContainer.zs"
+#include "zscript/Utils/Toby_LineUtil.zs"
 #include "zscript/Utils/Toby_WadsUtils.zs"
 #include "zscript/Utils/Toby_Logger.zs"
 #include "zscript/Utils/Toby_SaveGameUtils.zs"

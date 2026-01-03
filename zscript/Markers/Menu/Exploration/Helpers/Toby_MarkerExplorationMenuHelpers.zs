@@ -37,7 +37,15 @@ class Toby_MarkerExplorationMenuHelpers
             if (pathLength == 0) { continue; }
 
             // Add to collection
-            collection.AddItem(destination, playerActor, pathLength);
+            if (oneUnitToTarget)
+            {
+                collection.AddItem(destination, playerActor, pathLength);
+            }
+            else
+            {
+                string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+                collection.AddItem(destination, playerActor, pathLength, actorClass);
+            }
         }
 
         return collection;
@@ -58,7 +66,7 @@ class Toby_MarkerExplorationMenuHelpers
         {
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
-            bool isTeleportLine = Toby_SectorMathUtil.IsTeleportLine(l);
+            bool isTeleportLine = Toby_LineUtil.IsTeleportLine(l);
             if (!isTeleportLine) { continue; }
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
@@ -88,6 +96,36 @@ class Toby_MarkerExplorationMenuHelpers
         return collection;
     }
 
+    // Awful -PR
+    ui static bool IsKeyOrTobyKey(Inventory a)
+    {
+        if (a is "Key") { return true; }
+
+        if (a.GetClassName() == "BlueCard_TO") { return true; }
+        if (a.GetClassName() == "BlueSkullKey_TO") { return true; }
+        if (a.GetClassName() == "RedCard_TO") { return true; }
+        if (a.GetClassName() == "RedSkullKey_TO") { return true; }
+        if (a.GetClassName() == "YellowCard_TO") { return true; }
+        if (a.GetClassName() == "YellowSkullKey_TO") { return true; }
+
+        if (a.GetClassName() == "GreenKey_Toby") { return true; }
+        if (a.GetClassName() == "BlueKey_Toby") { return true; }
+        if (a.GetClassName() == "YellowKey_Toby") { return true; }
+
+        if (a.GetClassName() == "SteelKey_Toby") { return true; }
+        if (a.GetClassName() == "CaveKey_Toby") { return true; }
+        if (a.GetClassName() == "AxeKey_Toby") { return true; }
+        if (a.GetClassName() == "FireKey_Toby") { return true; }
+        if (a.GetClassName() == "EmeraldKey_Toby") { return true; }
+        if (a.GetClassName() == "DungeonKey_Toby") { return true; }
+        if (a.GetClassName() == "SilverKey_Toby") { return true; }
+        if (a.GetClassName() == "RustedKey_Toby") { return true; }
+        if (a.GetClassName() == "HornKey_Toby") { return true; }
+        if (a.GetClassName() == "SwampKey_Toby") { return true; }
+        if (a.GetClassName() == "CastleKey_Toby") { return true; }
+        return false;
+    }
+
     ui static Toby_MarkerDestinationCollection CreateDestinationCollectionKeys(Toby_ExplorationTracker tracker, int ignoreDistance)
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
@@ -99,10 +137,12 @@ class Toby_MarkerExplorationMenuHelpers
         Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
         Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
 
-        ThinkerIterator actorFinder = ThinkerIterator.Create("Key");
-        Key foundActor;
-        while (foundActor = (Key)(actorFinder.Next()))
+        ThinkerIterator actorFinder = ThinkerIterator.Create("Inventory");
+        Inventory foundActor;
+        while (foundActor = (Inventory)(actorFinder.Next()))
         {
+            if (foundActor.owner) { continue; }
+            if (!Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
 
@@ -126,7 +166,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!isReachable) { continue; }
             double pathLength = pathfinder.GetPathLength();
             if (pathLength == 0) { continue; }
-            collection.AddItem(destination, playerActor, pathLength, foundActor);
+            collection.AddItem(destination, playerActor, pathLength, foundActor.GetClassName());
         }
 
         // Add to collection
@@ -148,7 +188,7 @@ class Toby_MarkerExplorationMenuHelpers
         Inventory foundActor;
         while (foundActor = (Inventory)(actorFinder.Next()))
         {
-            if (foundActor is "Key") { continue; }
+            if (Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
             if (foundActor.owner) { continue; }
             int sectorIndex = foundActor.curSector.Index();
             if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
@@ -173,7 +213,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!isReachable) { continue; }
             double pathLength = pathfinder.GetPathLength();
             if (pathLength == 0) { continue; }
-            collection.AddItem(destination, playerActor, pathLength, foundActor);
+            collection.AddItem(destination, playerActor, pathLength, foundActor.GetClassName());
         }
 
         // Add to collection
@@ -218,8 +258,8 @@ class Toby_MarkerExplorationMenuHelpers
         {
             Toby_MarkerDestinationItem item = (Toby_MarkerDestinationItem)(collection.GetObject(j));
             if (!item) { continue; }
-            if (!item.destinationActor) { continue; }
-            if (item.destinationActor.GetClassName() != otherActor.GetClassName()) { continue; }
+            if (item.destinationActor == "") { continue; }
+            if (item.destinationActor != otherActor.GetClassName()) { continue; }
             double distanceToPoint = ((item.coordinates.x, item.coordinates.y) - coordinates2d).Length();
             if (distanceToPoint < ignoreDistance)
             {

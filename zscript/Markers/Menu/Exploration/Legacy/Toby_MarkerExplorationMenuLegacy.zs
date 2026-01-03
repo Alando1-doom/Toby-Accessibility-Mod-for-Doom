@@ -122,8 +122,4 @@ class Toby_MarkerExplorationMenuLegacy : OptionMenu
         addedPointsX.Clear();
         addedPointsY.Clear();
     }
-
-    override bool MenuEvent(int key, bool fromController) {
-        return super.MenuEvent(key, fromController);
-    }
 }
