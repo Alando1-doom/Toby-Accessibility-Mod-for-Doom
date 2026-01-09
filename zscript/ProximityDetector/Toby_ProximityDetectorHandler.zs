@@ -46,6 +46,7 @@ class Toby_ProximityDetectorHandler: EventHandler
 
     override void WorldTick()
     {
+        if (hurtfloorDetectors.Size() < maxPlayers) { return; }
         for (int i = 0; i < maxPlayers; i++)
         {
             hurtfloorDetectors[i].Update();
