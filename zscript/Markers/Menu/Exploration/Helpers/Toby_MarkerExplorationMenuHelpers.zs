@@ -16,10 +16,13 @@ class Toby_MarkerExplorationMenuHelpers
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
-            if (!s) { continue; }
+            if (!s)
+            {
+                s = l.frontSector; // A little bit dodgy assumption but I hope isReachable will fail if this assumption is bad -PR
+            }
 
             // 'normal' here is destination point
-            vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
 
             // Deduplication
             bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
@@ -72,7 +75,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!s) { continue; }
 
             // 'normal' here is destination point
-            vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
 
             // Deduplication
             bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
@@ -264,34 +267,5 @@ class Toby_MarkerExplorationMenuHelpers
             };
         }
         return tooClose;
-    }
-
-    ui static Vector2 GetNormal(Sector s, Line l, PlayerPawn playerActor, bool oneUnitToTarget)
-    {
-        vector2 normal;
-        if (oneUnitToTarget)
-        {
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
-            return normal;
-        }
-        // I can't use line trace in UI scope so I'm going to just try few times to get point in map bounds -PR
-        int normalPointPlacingAttemptCount = 4;
-        bool isInMapBounds = false;
-        Sector normalSector;
-        for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
-        {
-            double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
-            normalSector = level.PointInSector(normal);
-            if (!normalSector) { continue; }
-            if (Toby_SectorMathUtil.IsPointOnSectorLine(normal, normalSector)) { continue; }
-            isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
-            if (isInMapBounds) { break; }
-        }
-        if (!isInMapBounds)
-        {
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
-        }
-        return normal;
     }
 }

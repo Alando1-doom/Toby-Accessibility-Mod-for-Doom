@@ -97,6 +97,25 @@ class Toby_ExplorationTracker
             if (!(visitedSectors[i] || exploredSectors.IsInSet(i))) { continue; }
             AddNonInteractedLinesForSector(sectorIndex, lineInteractionTracker, nonInteractedLines);
         }
+
+        // The idea behind this one is that sometimes interaction point sits inside the inset or behind the blocking line
+        // But still can be interacted with
+        for (int i = 0; i < level.lines.Size(); i++)
+        {
+            Line l = level.lines[i];
+            if (l.activation != SPAC_Use) { continue; }
+            int lineIndex = l.Index();
+            if (nonInteractedLines.IsInSet(lineIndex)) { continue; }
+            if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
+            if (!l.frontSector) { continue; }
+            if (l.frontSector.CenterFloor() == l.frontSector.CenterCeiling()) { continue; } //Most likely switch is "closed"
+            if (!(explorer is "PlayerPawn")) { continue; }
+            Vector2 normal = Toby_SectorMathUtil.GetNormal(l.frontSector, l, (PlayerPawn)(explorer), false);
+            Sector normalSector = level.PointInSector(normal);
+            int sectorIndex = normalSector.Index();
+            if (!(visitedSectors[sectorIndex] || exploredSectors.IsInSet(sectorIndex))) { continue; }
+            nonInteractedLines.Add(lineIndex);
+        }
     }
 
     play void AddNonInteractedLinesForSector(

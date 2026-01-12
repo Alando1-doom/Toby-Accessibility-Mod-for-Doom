@@ -137,4 +137,37 @@ class Toby_SectorMathUtil
         }
         return isPointOnSectorLine;
     }
+
+    // Its kind of a terrible name, just like GetMidlineNormalToSector.
+    // This is not a normal. Its a point that sits somewhere along the normal from line towards sector
+    // but the actual vector starts at (0, 0) of a map
+    // If that makes any sense.
+    static Vector2 GetNormal(Sector s, Line l, PlayerPawn playerActor, bool oneUnitToTarget)
+    {
+        vector2 normal;
+        if (oneUnitToTarget)
+        {
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+            return normal;
+        }
+        // I can't use line trace in UI scope so I'm going to just try few times to get point in map bounds -PR
+        int normalPointPlacingAttemptCount = 4;
+        bool isInMapBounds = false;
+        Sector normalSector;
+        for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
+        {
+            double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
+            normalSector = level.PointInSector(normal);
+            if (!normalSector) { continue; }
+            if (Toby_SectorMathUtil.IsPointOnSectorLine(normal, normalSector)) { continue; }
+            isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
+            if (isInMapBounds) { break; }
+        }
+        if (!isInMapBounds)
+        {
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+        }
+        return normal;
+    }
 }
