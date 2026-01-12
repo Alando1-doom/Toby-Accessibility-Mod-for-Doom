@@ -222,15 +222,11 @@ class Toby_MarkerExplorationMenuHelpers
 
     ui static bool IsReachableByPathfinder(Toby_Pathfinder pathfinder, Toby_ExplorationPathfinder explorationPathfinder, Vector3 destination, PlayerPawn playerActor)
     {
-        int attemptCount = 5;
+        int attemptCount = 5 * 100; // 100 is the default for FindPath
         int destinationSector = level.PointInSector(destination.xy).Index();
         explorationPathfinder.FindPathFromDestinationToExploredSector(destinationSector);
         pathfinder.StartPathfinding(playerActor.pos, destination, explorationPathfinder.explorationNodes);
-        for (int j = 0; j < attemptCount; j++)
-        {
-            if (pathfinder.pathFinalized) { break; }
-            pathfinder.FindPath();
-        }
+        pathfinder.FindPath(attemptCount);
         return pathfinder.pathFinalized;
     }
 
@@ -288,6 +284,7 @@ class Toby_MarkerExplorationMenuHelpers
             normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
             normalSector = level.PointInSector(normal);
             if (!normalSector) { continue; }
+            if (Toby_SectorMathUtil.IsPointOnSectorLine(normal, normalSector)) { continue; }
             isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
             if (isInMapBounds) { break; }
         }

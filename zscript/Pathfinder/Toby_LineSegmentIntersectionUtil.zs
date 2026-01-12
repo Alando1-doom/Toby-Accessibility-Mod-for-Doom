@@ -109,4 +109,14 @@ class Toby_LineSegmentIntersectionUtil
     {
         return v1.x * v2.y - v1.y * v2.x;
     }
+
+    static bool IsPointOnLine(Vector2 point, Line l)
+    {
+        double epsilon = 0.00000001;
+
+        Vector2 closestPoint = ClosestPointOnSegment(point, l.v1.p, l.v2.p);
+        double distance = (point - closestPoint).Length();
+        if (distance < epsilon) { return true; }
+        return false;
+    }
 }

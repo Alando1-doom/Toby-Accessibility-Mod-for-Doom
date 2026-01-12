@@ -88,40 +88,36 @@ class Toby_ExplorationTracker
         {
             int sectorIndex = exploredSectors.values[i];
             if (!(visitedSectors[i] || exploredSectors.IsInSet(sectorIndex))) { continue; }
-            Sector s = level.sectors[sectorIndex];
-            for (int j = 0; j < s.lines.Size(); j++)
-            {
-                Line l = s.lines[j];
-                if (l.activation != SPAC_Use) { continue; }
-                int lineIndex = l.Index();
-                if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
-
-                //If floor and ceiling are flush -> ignore
-                if (isLineFlushWithCeiling(l) && isLineFlushWithFloor(l)) { continue; }
-                //If floor is flush and ceiling is 4 map units difference -> most likely opened bars / door -> ignore
-                if (isLineCeilingDoorLip(l) && isLineFlushWithFloor(l)) { continue; }
-                nonInteractedLines.Add(lineIndex);
-            }
+            AddNonInteractedLinesForSector(sectorIndex, lineInteractionTracker, nonInteractedLines);
         }
         for (int i = 0; i < visitedSectors.Size(); i++)
         {
             if (!visitedSectors[i]) { continue; }
             int sectorIndex = i;
             if (!(visitedSectors[i] || exploredSectors.IsInSet(i))) { continue; }
-            Sector s = level.sectors[sectorIndex];
-            for (int j = 0; j < s.lines.Size(); j++)
-            {
-                Line l = s.lines[j];
-                if (l.activation != SPAC_Use) { continue; }
-                int lineIndex = l.Index();
-                if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
+            AddNonInteractedLinesForSector(sectorIndex, lineInteractionTracker, nonInteractedLines);
+        }
+    }
 
-                //If floor and ceiling are flush -> ignore
-                if (isLineFlushWithCeiling(l) && isLineFlushWithFloor(l)) { continue; }
-                //If floor is flush and ceiling is 4 map units difference -> most likely opened bars / door -> ignore
-                if (isLineCeilingDoorLip(l) && isLineFlushWithFloor(l)) { continue; }
-                nonInteractedLines.Add(lineIndex);
-            }
+    play void AddNonInteractedLinesForSector(
+        int sectorIndex,
+        Toby_LineInteractionTracker lineInteractionTracker,
+        Toby_IntegerSet nonInteractedLines
+    )
+    {
+        Sector s = level.sectors[sectorIndex];
+        for (int j = 0; j < s.lines.Size(); j++)
+        {
+            Line l = s.lines[j];
+            if (l.activation != SPAC_Use) { continue; }
+            int lineIndex = l.Index();
+            if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
+
+            //If floor and ceiling are flush -> ignore
+            if (isLineFlushWithCeiling(l) && isLineFlushWithFloor(l)) { continue; }
+            //If floor is flush and ceiling is 4 map units difference -> most likely opened bars / door -> ignore
+            if (isLineCeilingDoorLip(l) && isLineFlushWithFloor(l)) { continue; }
+            nonInteractedLines.Add(lineIndex);
         }
     }
 
