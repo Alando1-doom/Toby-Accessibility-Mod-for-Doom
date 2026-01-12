@@ -112,6 +112,7 @@ class Toby_ExplorationTracker
             if (!(explorer is "PlayerPawn")) { continue; }
             Vector2 normal = Toby_SectorMathUtil.GetNormal(l.frontSector, l, (PlayerPawn)(explorer), false);
             Sector normalSector = level.PointInSector(normal);
+            if (Abs(normalSector.CenterFloor() - l.frontSector.CenterFloor()) > explorer.height) { continue; }
             int sectorIndex = normalSector.Index();
             if (!(visitedSectors[sectorIndex] || exploredSectors.IsInSet(sectorIndex))) { continue; }
             nonInteractedLines.Add(lineIndex);
