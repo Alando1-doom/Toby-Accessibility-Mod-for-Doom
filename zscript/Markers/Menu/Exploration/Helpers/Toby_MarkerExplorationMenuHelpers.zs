@@ -54,6 +54,65 @@ class Toby_MarkerExplorationMenuHelpers
         return collection;
     }
 
+    ui static Toby_MarkerDestinationCollection CreateDestinationCollectionRepeatableSwitches(Toby_ExplorationTracker tracker, int ignoreDistance, bool oneUnitToTarget = true)
+    {
+        Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
+
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
+        for (uint i = 0; i < level.lines.Size(); i++)
+        {
+            Line l = level.lines[i];
+            int lineId = l.Index();
+            if (!Toby_LineUtil.IsRepeatable(l)) { continue; }
+            if (!Toby_LineUtil.IsUseActivated(l)) { continue; }
+            bool isNonInteracted = tracker.nonInteractedLines.IsInSet(lineId);
+            bool isInteracted = tracker.lineInteractionTracker.interactedLines[lineId];
+            if (!(isNonInteracted || isInteracted)) { continue; }
+            Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
+            if (!s)
+            {
+                s = l.frontSector; // A little bit dodgy assumption but I hope isReachable will fail if this assumption is bad -PR
+            }
+
+            // 'normal' here is destination point
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
+
+            // Deduplication
+            bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
+            if (tooClose) { continue; }
+
+            // Check if destination can be reached
+            Vector3 destination = (normal, s.CenterFloor());
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
+            double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
+
+            // Add to collection
+            if (oneUnitToTarget)
+            {
+                collection.AddItem(destination, playerActor, pathLength);
+            }
+            else
+            {
+                string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+                collection.AddItem(destination, playerActor, pathLength, actorClass);
+            }
+        }
+
+        return collection;
+    }
+
     ui static Toby_MarkerDestinationCollection CreateDestinationCollectionTeleportLines(Toby_ExplorationTracker tracker, Toby_IntegerSet intSet, int ignoreDistance, bool oneUnitToTarget = true)
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
