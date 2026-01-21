@@ -134,6 +134,16 @@ class Toby_LineUtil
         );
     }
 
+    static bool IsRepeatable(Line l)
+    {
+        return (l.flags & Line.ML_REPEAT_SPECIAL);
+    }
+
+    static bool IsUseActivated(Line l)
+    {
+        return (l.activation & SPAC_Use);
+    }
+
     static bool IsExit(Line l)
     {
         return (

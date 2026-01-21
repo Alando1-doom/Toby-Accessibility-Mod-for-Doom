@@ -2,9 +2,8 @@ class Toby_SectorMathUtil
 {
     static bool IntersectsSectorBoundary(vector2 pos1, vector2 pos2)
     {
+        if (!Toby_SectorMathUtil.IsInSameSectorVector2(pos1, pos2)) { return true; }
         Sector pos1Sector = level.PointInSector(pos1);
-        Sector pos2Sector = level.PointInSector(pos2);
-        if (pos1Sector.Index() != pos1Sector.Index()) { return true; }
         for (int i = 0; i < pos1Sector.lines.Size(); i++)
         {
             Line l = pos1Sector.lines[i];
@@ -15,7 +14,7 @@ class Toby_SectorMathUtil
                 pos2);
             if (linesIntersect)
             {
-                if (pos1Sector == pos2Sector && l.frontSector == l.backSector && (!Toby_LineSegmentIntersectionUtil.IsBlocking(l)))
+                if (Toby_SectorMathUtil.IntersectsSameSectorNonBlockingLine(pos1, pos2, l))
                 {
                     continue;
                 }
@@ -25,9 +24,29 @@ class Toby_SectorMathUtil
         return false;
     }
 
+    static bool IntersectsSameSectorNonBlockingLine(vector2 pos1, vector2 pos2, Line l)
+    {
+        Sector pos1Sector = level.PointInSector(pos1);
+        Sector pos2Sector = level.PointInSector(pos2);
+        bool isSameSector = pos1Sector.Index() == pos2Sector.Index();
+        if (!l.frontSector) { return false; }
+        if (!l.backSector) { return false; }
+        bool isSameFrontAndBack = l.frontSector.Index() == l.backSector.Index();
+        return isSameSector && isSameFrontAndBack && (!Toby_LineSegmentIntersectionUtil.IsBlocking(l));
+    }
+
     static bool IsInSameSector(Vector3 pos1, Vector3 pos2)
     {
-        return Level.PointInSector(pos1.xy).Index() == Level.PointInSector(pos2.xy).Index();
+        Sector pos1Sector = level.PointInSector(pos1.xy);
+        Sector pos2Sector = level.PointInSector(pos2.xy);
+        return pos1Sector.Index() == pos2Sector.Index();
+    }
+
+    static bool IsInSameSectorVector2(Vector2 pos1, Vector2 pos2)
+    {
+        Sector pos1Sector = level.PointInSector(pos1);
+        Sector pos2Sector = level.PointInSector(pos2);
+        return pos1Sector.Index() == pos2Sector.Index();
     }
 
     static int GetWindowFloor(Sector sectorA, Sector sectorB)
@@ -102,5 +121,53 @@ class Toby_SectorMathUtil
         {
             return normalPoint2;
         }
+    }
+
+    static bool IsPointOnSectorLine(Vector2 point, Sector s)
+    {
+        bool isPointOnSectorLine = false;
+        for (int i = 0; i < s.lines.Size(); i++)
+        {
+            Line l = s.lines[i];
+            isPointOnSectorLine = Toby_LineSegmentIntersectionUtil.IsPointOnLine(point, l);
+            if (isPointOnSectorLine)
+            {
+                break;
+            }
+        }
+        return isPointOnSectorLine;
+    }
+
+    // Its kind of a terrible name, just like GetMidlineNormalToSector.
+    // This is not a normal. Its a point that sits somewhere along the normal from line towards sector
+    // but the actual vector starts at (0, 0) of a map
+    // If that makes any sense.
+    static Vector2 GetNormal(Sector s, Line l, PlayerPawn playerActor, bool oneUnitToTarget)
+    {
+        vector2 normal;
+        if (oneUnitToTarget)
+        {
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+            return normal;
+        }
+        // I can't use line trace in UI scope so I'm going to just try few times to get point in map bounds -PR
+        int normalPointPlacingAttemptCount = 4;
+        bool isInMapBounds = false;
+        Sector normalSector;
+        for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
+        {
+            double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
+            normalSector = level.PointInSector(normal);
+            if (!normalSector) { continue; }
+            if (Toby_SectorMathUtil.IsPointOnSectorLine(normal, normalSector)) { continue; }
+            isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
+            if (isInMapBounds) { break; }
+        }
+        if (!isInMapBounds)
+        {
+            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
+        }
+        return normal;
     }
 }

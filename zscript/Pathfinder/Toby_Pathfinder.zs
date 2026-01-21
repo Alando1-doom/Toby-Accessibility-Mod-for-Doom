@@ -12,6 +12,8 @@ class Toby_Pathfinder
     bool pathConstructed;
     bool pathFinalized;
 
+    string failReason;
+
     Toby_PathfindingNode pathStart;
     Toby_PathfindingNode pathEnd;
     Toby_PathfindingNode startNode;
@@ -39,6 +41,7 @@ class Toby_Pathfinder
         pathfinder.projectionNodeEnd = null;
         pathfinder.startNode = null;
         pathfinder.endNode = null;
+        pathfinder.failReason = "None";
 
         return pathfinder;
     }
@@ -93,6 +96,8 @@ class Toby_Pathfinder
         pathDoesNotExist = false;
         pathConstructed = false;
         pathFinalized = false;
+        failReason = "None";
+
         openList.Clear();
         closedList.Clear();
         path.Clear();
@@ -128,12 +133,16 @@ class Toby_Pathfinder
         if (!startNode)
         {
             pathfindingActive = false;
+            pathDoesNotExist = true;
+            failReason = "Start node does not exist";
             return;
         }
         endNode = GetNearestNode(end);
         if (!endNode)
         {
             pathfindingActive = false;
+            pathDoesNotExist = true;
+            failReason = "End node does not exist";
             return;
         }
         startNode.SetScore(0, CalculateScore(startNode, endNode));
@@ -152,6 +161,7 @@ class Toby_Pathfinder
         {
             pathDoesNotExist = true;
             pathfindingActive = false;
+            failReason = "Path can not be found - open list is empty and destination wasn't reached";
             // console.printf("Path can not be found");
             return;
         }
@@ -235,6 +245,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
+            failReason = "Path construction failed on currentNode";
             // console.printf("Path construction failed on currentNode");
             return;
         }
@@ -257,6 +268,7 @@ class Toby_Pathfinder
             pathFound = false;
             pathfindingActive = false;
             pathConstructed = false;
+            failReason = "Path construction failed on minScoreNode";
             // console.printf("Path construction failed on minScoreNode");
             return;
         }

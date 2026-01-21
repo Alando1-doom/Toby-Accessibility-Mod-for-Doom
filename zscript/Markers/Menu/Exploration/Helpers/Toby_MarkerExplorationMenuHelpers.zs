@@ -16,10 +16,72 @@ class Toby_MarkerExplorationMenuHelpers
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
-            if (!s) { continue; }
+            if (!s)
+            {
+                s = l.frontSector; // A little bit dodgy assumption but I hope isReachable will fail if this assumption is bad -PR
+            }
 
             // 'normal' here is destination point
-            vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
+
+            // Deduplication
+            bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
+            if (tooClose) { continue; }
+
+            // Check if destination can be reached
+            Vector3 destination = (normal, s.CenterFloor());
+            bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
+                pathfinder,
+                explorationPathfinder,
+                destination,
+                playerActor
+            );
+            double pathLength = pathfinder.GetPathLength();
+            if (pathLength == 0) { continue; }
+
+            // Add to collection
+            if (oneUnitToTarget)
+            {
+                collection.AddItem(destination, playerActor, pathLength);
+            }
+            else
+            {
+                string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+                collection.AddItem(destination, playerActor, pathLength, actorClass);
+            }
+        }
+
+        return collection;
+    }
+
+    ui static Toby_MarkerDestinationCollection CreateDestinationCollectionRepeatableSwitches(Toby_ExplorationTracker tracker, int ignoreDistance, bool oneUnitToTarget = true)
+    {
+        Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
+
+        if (!players[consoleplayer].mo) { return collection; }
+        PlayerPawn playerActor = players[consoleplayer].mo;
+
+        Toby_PathfinderHandler handler = Toby_PathfinderHandler.GetInstanceUi();
+        Toby_Pathfinder pathfinder = handler.pathfindersForMenu[consoleplayer];
+        Toby_ExplorationPathfinder explorationPathfinder = handler.explorationPathfindersForMenu[consoleplayer];
+
+        for (uint i = 0; i < level.lines.Size(); i++)
+        {
+            Line l = level.lines[i];
+            int lineId = l.Index();
+            if (!Toby_LineUtil.IsRepeatable(l)) { continue; }
+            if (!Toby_LineUtil.IsUseActivated(l)) { continue; }
+            bool isNonInteracted = tracker.nonInteractedLines.IsInSet(lineId);
+            bool isInteracted = tracker.lineInteractionTracker.interactedLines[lineId];
+            if (!(isNonInteracted || isInteracted)) { continue; }
+            Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
+            if (!s)
+            {
+                s = l.frontSector; // A little bit dodgy assumption but I hope isReachable will fail if this assumption is bad -PR
+            }
+
+            // 'normal' here is destination point
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
 
             // Deduplication
             bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
@@ -72,7 +134,7 @@ class Toby_MarkerExplorationMenuHelpers
             if (!s) { continue; }
 
             // 'normal' here is destination point
-            vector2 normal = Toby_MarkerExplorationMenuHelpers.GetNormal(s, l, playerActor, oneUnitToTarget);
+            vector2 normal = Toby_SectorMathUtil.GetNormal(s, l, playerActor, oneUnitToTarget);
 
             // Deduplication
             bool tooClose = Toby_MarkerExplorationMenuHelpers.IsTooClose(collection, normal, ignoreDistance);
@@ -222,15 +284,11 @@ class Toby_MarkerExplorationMenuHelpers
 
     ui static bool IsReachableByPathfinder(Toby_Pathfinder pathfinder, Toby_ExplorationPathfinder explorationPathfinder, Vector3 destination, PlayerPawn playerActor)
     {
-        int attemptCount = 5;
+        int attemptCount = 5 * 100; // 100 is the default for FindPath
         int destinationSector = level.PointInSector(destination.xy).Index();
         explorationPathfinder.FindPathFromDestinationToExploredSector(destinationSector);
         pathfinder.StartPathfinding(playerActor.pos, destination, explorationPathfinder.explorationNodes);
-        for (int j = 0; j < attemptCount; j++)
-        {
-            if (pathfinder.pathFinalized) { break; }
-            pathfinder.FindPath();
-        }
+        pathfinder.FindPath(attemptCount);
         return pathfinder.pathFinalized;
     }
 
@@ -268,33 +326,5 @@ class Toby_MarkerExplorationMenuHelpers
             };
         }
         return tooClose;
-    }
-
-    ui static Vector2 GetNormal(Sector s, Line l, PlayerPawn playerActor, bool oneUnitToTarget)
-    {
-        vector2 normal;
-        if (oneUnitToTarget)
-        {
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
-            return normal;
-        }
-        // I can't use line trace in UI scope so I'm going to just try few times to get point in map bounds -PR
-        int normalPointPlacingAttemptCount = 4;
-        bool isInMapBounds = false;
-        Sector normalSector;
-        for (uint j = 1; j <= normalPointPlacingAttemptCount; j++)
-        {
-            double shortenedInteractionRange = double(playerActor.UseRange) / double(j);
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l, shortenedInteractionRange);
-            normalSector = level.PointInSector(normal);
-            if (!normalSector) { continue; }
-            isInMapBounds = level.IsPointInLevel((normal, normalSector.CenterFloor()));
-            if (isInMapBounds) { break; }
-        }
-        if (!isInMapBounds)
-        {
-            normal = Toby_SectorMathUtil.GetMidlineNormalToSector(s, l);
-        }
-        return normal;
     }
 }

@@ -29,13 +29,15 @@ class Toby_MenuOutputBySoundBindings
             || (currentState.menuClass == "Toby_MarkerExplorationNonInteractedMenu")
             || (currentState.menuClass == "Toby_MarkerExplorationKeysMenu")
             || (currentState.menuClass == "Toby_MarkerExplorationPickupsMenu")
-            || (currentState.menuClass == "Toby_MarkerExplorationTeleportersMenu"))
+            || (currentState.menuClass == "Toby_MarkerExplorationTeleportersMenu")
+            || (currentState.menuClass == "Toby_MarkerExplorationRepeatableSwitchesMenu"))
             &&
             ((previousState.menuClass == "Toby_MarkerExplorationUnexploredMenu")
             || (previousState.menuClass == "Toby_MarkerExplorationNonInteractedMenu")
             || (previousState.menuClass == "Toby_MarkerExplorationKeysMenu")
             || (previousState.menuClass == "Toby_MarkerExplorationPickupsMenu")
-            || (previousState.menuClass == "Toby_MarkerExplorationTeleportersMenu"))
+            || (previousState.menuClass == "Toby_MarkerExplorationTeleportersMenu")
+            || (previousState.menuClass == "Toby_MarkerExplorationRepeatableSwitchesMenu"))
             && detectedChange == Toby_MenuState.OptionChanged
         )
         {
