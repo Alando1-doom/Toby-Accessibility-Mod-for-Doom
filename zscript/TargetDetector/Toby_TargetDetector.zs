@@ -10,6 +10,7 @@ class Toby_TargetDetector
     private int lastUpdate;
     private int targetResetTime;
     private string previousTarget;
+    private int narrationType;
     private Toby_SoundBindingsLoaderStaticHandler bindings;
 
     ui static Toby_TargetDetector Create(Toby_SoundBindingsLoaderStaticHandler bindings)
@@ -27,6 +28,7 @@ class Toby_TargetDetector
         targetDetector.bindings = bindings;
         targetDetector.CreateDatabase(bindings.targetDetectorBindingsContainer);
         targetDetector.emptyEntry = Toby_TargetDetectorEntry.Create("", "weapons/lock", targetDetector.defaultCooldown);
+        targetDetector.narrationType = Cvar.GetCvar("Toby_NarrationOutputType", players[consoleplayer]).GetInt();
         return targetDetector;
     }
 
@@ -50,13 +52,27 @@ class Toby_TargetDetector
     ui void ToggleTargetAnnouncement()
     {
         targetAnnouncementEnabled = !targetAnnouncementEnabled;
-        if (targetAnnouncementEnabled)
+        if (narrationType == TNOT_CONSOLE)
         {
-            S_StartSound("stats/targetannouncement/enabled", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            if (targetAnnouncementEnabled)
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Target Announcement Enabled");
+            }
+            else
+            {
+                Toby_Logger.ConsoleOutputModeMessage("Target Announcement Disabled");
+            }
         }
         else
         {
-            S_StartSound("stats/targetannouncement/disabled", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            if (targetAnnouncementEnabled)
+            {
+                S_StartSound("stats/targetannouncement/enabled", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
+            else
+            {
+                S_StartSound("stats/targetannouncement/disabled", CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+            }
         }
     }
 
@@ -86,8 +102,27 @@ class Toby_TargetDetector
         if (paused) { return; }
         if (consoleState == c_down) { return; }
         if (menuactive) { return; }
+        if (narrationType == TNOT_CONSOLE)
+        {
+            AnnounceTargetChangeTextOnly(className);
+        }
+        else
+        {
+            AnnounceTargetChangeVoiced(className);
+        }
+    }
+
+    private ui void AnnounceTargetChangeVoiced(string className)
+    {
         string soundToPlay = Toby_SoundBindingsLoaderStaticHandler.GetActorSoundName(bindings.actorsInViewportSoundBindings, className);
         S_StartSound(soundToPlay, CHAN_VOICE, CHANF_UI|CHANF_NOPAUSE);
+    }
+
+    private ui void AnnounceTargetChangeTextOnly(string className)
+    {
+        class<Actor> actorClass = className;
+        string classTagOrName = GetDefaultByType(actorClass).GetTag();
+        Toby_Logger.ConsoleOutputModeMessage(classTagOrName);
     }
 
     private ui Toby_TargetDetectorEntry FindEntryByClassName(string className)
