@@ -1,5 +1,5 @@
 //Doom
-{"ActorClass":"ZombieMan", "SoundToPlay":"toby/actorsinviewport/monsters/formerhuman", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formerhumans", "Article":"a"}
+{"ActorClass":"Zombieman", "SoundToPlay":"toby/actorsinviewport/monsters/formerhuman", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formerhumans", "Article":"a"}
 {"ActorClass":"DoomImp", "SoundToPlay":"toby/actorsinviewport/monsters/imp", "SoundToPlayPlural":"toby/actorsinviewport/monsters/imps", "Article":"an"}
 {"ActorClass":"ShotgunGuy", "SoundToPlay":"toby/actorsinviewport/monsters/formersergeant", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formersergeants", "Article":"a"}
 {"ActorClass":"ChaingunGuy", "SoundToPlay":"toby/actorsinviewport/monsters/formercommando", "SoundToPlayPlural":"toby/actorsinviewport/monsters/formercommandos", "Article":"a"}
