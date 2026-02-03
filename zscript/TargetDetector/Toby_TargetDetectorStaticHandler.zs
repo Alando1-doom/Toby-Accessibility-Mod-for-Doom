@@ -16,7 +16,15 @@ class Toby_TargetDetectorStaticHandler : StaticEventHandler
         {
             isNotFirstRun = true;
             bindings = Toby_SoundBindingsLoaderStaticHandler.GetInstance();
-            targetDetector = Toby_TargetDetector.Create(bindings.targetDetectorBindingsContainer);
+            targetDetector = Toby_TargetDetector.Create(bindings);
+        }
+    }
+
+    override void InterfaceProcess(ConsoleEvent e)
+    {
+        if (e.Name == "Toby_TargetDetectorToggleTargetAnnouncement")
+        {
+            targetDetector.ToggleTargetAnnouncement();
         }
     }
 

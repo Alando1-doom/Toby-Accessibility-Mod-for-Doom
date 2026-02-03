@@ -38,4 +38,18 @@ class Toby_SoundBindingsLoaderStaticHandler : StaticEventHandler
             menuSoundBindingsContainer = Toby_SoundBindingsContainer.Create("Toby_MenuSoundBindings");
         }
     }
+
+    static ui string GetActorSoundName(Toby_SoundBindingsContainer bindings, string classNameToFind)
+    {
+        string soundToPlay = "";
+        for (int i = 0; i < bindings.soundBindings.Size(); i++)
+        {
+            string className = bindings.soundBindings[i].At("ActorClass");
+            if (classNameToFind == className)
+            {
+                soundToPlay = bindings.soundBindings[i].At("SoundToPlay");
+            }
+        }
+        return soundToPlay;
+    }
 }

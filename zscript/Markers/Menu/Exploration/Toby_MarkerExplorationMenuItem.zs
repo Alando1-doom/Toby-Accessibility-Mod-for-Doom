@@ -30,7 +30,7 @@ class Toby_MarkerExplorationMenuItem : Toby_MenuItemWithSoundQueue
 
         if (className != "")
         {
-            finalQueue.AddSound(GetActorSoundName(bindings.actorsInViewportSoundBindings, className), -1);
+            finalQueue.AddSound(Toby_SoundBindingsLoaderStaticHandler.GetActorSoundName(bindings.actorsInViewportSoundBindings, className), -1);
         }
         finalQueue.AddQueue(directionSoundQueue);
         finalQueue.AddQueue(distanceQueue);
@@ -39,20 +39,6 @@ class Toby_MarkerExplorationMenuItem : Toby_MenuItemWithSoundQueue
         menuItem.SetSoundQueue(finalQueue);
 
         return menuItem;
-    }
-
-    private static string GetActorSoundName(Toby_SoundBindingsContainer bindings, string classNameToFind)
-    {
-        string soundToPlay = "";
-        for (int i = 0; i < bindings.soundBindings.Size(); i++)
-        {
-            string className = bindings.soundBindings[i].At("ActorClass");
-            if (classNameToFind == className)
-            {
-                soundToPlay = bindings.soundBindings[i].At("SoundToPlay");
-            }
-        }
-        return soundToPlay;
     }
 
     override bool Activate()
