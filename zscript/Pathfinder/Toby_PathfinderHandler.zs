@@ -84,6 +84,10 @@ class Toby_PathfinderHandler : EventHandler
 
     override void WorldLineActivated(WorldEvent e)
     {
+        if (Toby_LineUtil.IsRepeatable(e.ActivatedLine))
+        {
+            if (!(e.thing is "PlayerPawn")) { return; }
+        }
         lineInteractionTracker.ActivateLine(e.ActivatedLine.Index());
     }
 
