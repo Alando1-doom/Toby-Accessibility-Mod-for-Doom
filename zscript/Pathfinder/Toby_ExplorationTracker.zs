@@ -103,7 +103,7 @@ class Toby_ExplorationTracker
         for (int i = 0; i < level.lines.Size(); i++)
         {
             Line l = level.lines[i];
-            if (l.activation != SPAC_Use) { continue; }
+            if (!Toby_LineUtil.IsUseActivated(l)) { continue; }
             int lineIndex = l.Index();
             if (nonInteractedLines.IsInSet(lineIndex)) { continue; }
             if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
@@ -129,7 +129,7 @@ class Toby_ExplorationTracker
         for (int j = 0; j < s.lines.Size(); j++)
         {
             Line l = s.lines[j];
-            if (l.activation != SPAC_Use) { continue; }
+            if (!Toby_LineUtil.IsUseActivated(l)) { continue; }
             int lineIndex = l.Index();
             if (lineInteractionTracker.interactedLines[lineIndex]) { continue; }
 

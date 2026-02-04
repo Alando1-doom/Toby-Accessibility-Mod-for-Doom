@@ -129,7 +129,9 @@ class Toby_MarkerExplorationMenuHelpers
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
             bool isTeleportLine = Toby_LineUtil.IsTeleportLine(l);
-            if (!isTeleportLine) { continue; }
+            bool isWalkOverExit = (Toby_LineUtil.IsExit(l) || Toby_LineUtil.IsSecretExit(l) || Toby_LineUtil.IsEndGame(l)) && Toby_LineUtil.IsCrossActivated(l);
+            bool teleportOrExit = isWalkOverExit || isTeleportLine;
+            if (!teleportOrExit) { continue; }
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
 
@@ -152,7 +154,8 @@ class Toby_MarkerExplorationMenuHelpers
             if (pathLength == 0) { continue; }
 
             // Add to collection
-            collection.AddItem(destination, playerActor, pathLength);
+            string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+            collection.AddItem(destination, playerActor, pathLength, actorClass);
         }
 
         return collection;

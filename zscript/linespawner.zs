@@ -62,7 +62,7 @@ class Toby_LineSpawnerHelper
         if (Toby_LineUtil.IsAnyKeyDoor(lockNumber)) { return "AnyKeyChecker_V2"; }
 
         //This check was altered for the switch/door differentiation
-        if (l.special != 0 && l.activation & SPAC_Use)
+        if (l.special != 0 && Toby_LineUtil.IsUseActivated(l))
         {
             if (Toby_LineUtil.IsWikiDoorSpecial(l.special) && l.args[0] == 0) { return "BasicDoorChecker"; }
             else { return "BasicSwitchChecker"; }
