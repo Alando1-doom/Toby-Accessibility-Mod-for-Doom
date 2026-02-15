@@ -144,6 +144,11 @@ class Toby_LineUtil
         return (l.activation & SPAC_Use);
     }
 
+    static bool IsCrossActivated(Line l)
+    {
+        return (l.activation & SPAC_Cross);
+    }
+
     static bool IsExit(Line l)
     {
         return (

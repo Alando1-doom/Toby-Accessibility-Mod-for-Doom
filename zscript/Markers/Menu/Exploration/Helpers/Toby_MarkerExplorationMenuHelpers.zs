@@ -129,7 +129,9 @@ class Toby_MarkerExplorationMenuHelpers
             int lineId = intSet.values[i];
             Line l = level.lines[lineId];
             bool isTeleportLine = Toby_LineUtil.IsTeleportLine(l);
-            if (!isTeleportLine) { continue; }
+            bool isWalkOverExit = (Toby_LineUtil.IsExit(l) || Toby_LineUtil.IsSecretExit(l) || Toby_LineUtil.IsEndGame(l)) && Toby_LineUtil.IsCrossActivated(l);
+            bool teleportOrExit = isWalkOverExit || isTeleportLine;
+            if (!teleportOrExit) { continue; }
             Sector s = tracker.GetExploredOrVisitedSectorForLine(l);
             if (!s) { continue; }
 
@@ -152,7 +154,8 @@ class Toby_MarkerExplorationMenuHelpers
             if (pathLength == 0) { continue; }
 
             // Add to collection
-            collection.AddItem(destination, playerActor, pathLength);
+            string actorClass = Toby_LineSpawnerHelper.GetBeaconClassForLine(l);
+            collection.AddItem(destination, playerActor, pathLength, actorClass);
         }
 
         return collection;
@@ -188,6 +191,15 @@ class Toby_MarkerExplorationMenuHelpers
         return false;
     }
 
+    ui static bool IsAdjacentToExploredOrVisited(Actor foundActor, Actor playerActor, Toby_ExplorationTracker tracker, Vector2 offsetPos)
+    {
+            Sector s = level.PointInSector(offsetPos);
+            bool inBounds = level.IsPointInLevel((offsetPos, foundActor.pos.z));
+            bool visitedOrExplored = tracker.IsVisited(s.Index()) || tracker.isExplored(s.Index());
+            bool isNotTooHigh = Abs(s.CenterFloor() - foundActor.pos.z) < playerActor.height;
+            return inBounds && visitedOrExplored && isNotTooHigh;
+    }
+
     ui static Toby_MarkerDestinationCollection CreateDestinationCollectionKeys(Toby_ExplorationTracker tracker, int ignoreDistance)
     {
         Toby_MarkerDestinationCollection collection = Toby_MarkerDestinationCollection.Create();
@@ -205,8 +217,24 @@ class Toby_MarkerExplorationMenuHelpers
         {
             if (foundActor.owner) { continue; }
             if (!Toby_MarkerExplorationMenuHelpers.IsKeyOrTobyKey(foundActor)) { continue; }
+
+            double overlap = playerActor.radius + foundActor.radius - 1;
+
+            // This is kind of terrible. But it works sometimes - PR
+            Vector2 top = foundActor.pos.xy + (0, -overlap);
+            Vector2 bottom = foundActor.pos.xy + (0, overlap);
+            Vector2 left = foundActor.pos.xy + (-overlap, 0);
+            Vector2 right = foundActor.pos.xy + (overlap, 0);
+
+            bool isVisitedAdjacentTop = Toby_MarkerExplorationMenuHelpers.IsAdjacentToExploredOrVisited(foundActor, playerActor, tracker, top);
+            bool isVisitedAdjacentBottom = Toby_MarkerExplorationMenuHelpers.IsAdjacentToExploredOrVisited(foundActor, playerActor, tracker, bottom);
+            bool isVisitedAdjacentLeft = Toby_MarkerExplorationMenuHelpers.IsAdjacentToExploredOrVisited(foundActor, playerActor, tracker, left);
+            bool isVisitedAdjacentRight = Toby_MarkerExplorationMenuHelpers.IsAdjacentToExploredOrVisited(foundActor, playerActor, tracker, right);
+
             int sectorIndex = foundActor.curSector.Index();
-            if (!(tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex))) { continue; }
+            bool itemPosVisitedOrExplored = tracker.IsVisited(sectorIndex) || tracker.isExplored(sectorIndex);
+
+            if (!(itemPosVisitedOrExplored || isVisitedAdjacentTop || isVisitedAdjacentBottom || isVisitedAdjacentLeft || isVisitedAdjacentRight)) { continue; }
 
             // Deduplication
             bool tooClose = Toby_MarkerExplorationMenuHelpers.IsSameClassNameTooClose(
@@ -218,7 +246,17 @@ class Toby_MarkerExplorationMenuHelpers
             if (tooClose) { continue; }
 
             // Check if destination can be reached
-            Vector3 destination = foundActor.pos;
+            Vector3 destination;
+            bool destinationSet = false;
+            if (itemPosVisitedOrExplored) { destination = foundActor.pos; destinationSet = true; }
+
+            // This is kind of terrible. But it works sometimes - PR
+            if (isVisitedAdjacentTop && !destinationSet) { destination = (top, foundActor.pos.z); destinationSet = true; }
+            if (isVisitedAdjacentBottom && !destinationSet) { destination = (bottom, foundActor.pos.z); destinationSet = true; }
+            if (isVisitedAdjacentLeft && !destinationSet) { destination = (left, foundActor.pos.z); destinationSet = true; }
+            if (isVisitedAdjacentRight && !destinationSet) { destination = (right, foundActor.pos.z); destinationSet = true; }
+            if (!destinationSet) { continue; }
+
             bool isReachable = Toby_MarkerExplorationMenuHelpers.IsReachableByPathfinder(
                 pathfinder,
                 explorationPathfinder,
