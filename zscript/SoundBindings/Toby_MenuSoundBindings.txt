@@ -748,6 +748,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Explosive Barrel", "SoundToPlay":"menu/sounddir/acc/barreldetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Player", "SoundToPlay":"menu/sounddir/acc/playerdetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Destructible Decoration", "SoundToPlay":"menu/sounddir/acc/decodetect"}
+{"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Targeter Detection - Shootable Switch", "SoundToPlay":"menu/sounddir/acc/switchdetect"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Hit Marker - Target Hit", "SoundToPlay":"menu/sounddir/acc/hitmarkerhit"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Hit Marker - Target Killed", "SoundToPlay":"menu/sounddir/acc/hitmarkerkill"}
 {"EventType":"OptionChanged", "CurrentMenuName":"AccSounds", "CurrentMenuItemOptionName":"Health, Armor, Ammo Full", "SoundToPlay":"menu/sounddir/acc/full"}
