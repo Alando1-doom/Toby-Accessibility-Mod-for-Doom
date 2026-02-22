@@ -29,6 +29,8 @@ Actor KeyCheckerBase
     MeleeDamage 0
 }
 
+
+//Inventory item given to player that tells any other checker of the specific key color/type to not say "Access Granted"
 Actor DontCheckKeyBase : Inventory
 {
     Inventory.PickupMessage " "
@@ -43,6 +45,11 @@ Actor DontCheckKeyBase : Inventory
         Loop
     }
 }
+
+
+//Inventory item for Checkers to only spawn 1 Door Beacon Thing
+Actor SpawnedBeacon : DontCheckKeyBase {}
+
 
 //Red Door - Red Key Card
 Actor RedKeyChecker_V2 : KeyCheckerBase
@@ -71,7 +78,7 @@ Actor RedKeyChecker_V2 : KeyCheckerBase
         TNT1 A 1 A_JumpIfInventory("RedCard", 1, "ActiveOn")
         TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Red", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Red", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("RedCard", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("RedSkull", 1, "Activation")
         TNT1 A 0 A_Print("Red Key is required")
@@ -84,12 +91,11 @@ Actor RedKeyChecker_V2 : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/redgranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("RedCard", 1)
         TNT1 A 1 A_GiveInventory("RedSkull", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_Red", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
    ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("RedCard", 1, "ActiveOn")
@@ -98,6 +104,11 @@ Actor RedKeyChecker_V2 : KeyCheckerBase
    ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/rdoor", "SoundSlot7", 1, 0)
         Stop
@@ -129,7 +140,7 @@ Actor RedSkullChecker_V2 : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_RedSkull", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_RedSkull", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("RedSkull", 1, "Activation")
         TNT1 A 0 A_Print("Red Skull Key is required")
         TNT1 A 1 A_PlaySoundEx("door/deniedredskull", "Voice", 0, 2)
@@ -141,11 +152,10 @@ Actor RedSkullChecker_V2 : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/redgranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("RedSkull", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_RedSkull", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
    ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/rskulldoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("RedSkull", 1, "ActiveOn")
@@ -153,6 +163,11 @@ Actor RedSkullChecker_V2 : KeyCheckerBase
    ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/rskulldoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/rskulldoor", "SoundSlot7", 1, 0)
         Stop
@@ -188,7 +203,7 @@ Actor GreenKeyChecker_V2 : KeyCheckerBase //Heretic
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Green", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Green", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyGreen", 1, "Activation")
         TNT1 A 0 A_Print("Green Key is required")
         TNT1 A 1 A_PlaySoundEx("door/deniedgreen", "Voice", 0, 2)
@@ -200,11 +215,10 @@ Actor GreenKeyChecker_V2 : KeyCheckerBase //Heretic
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/greengranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyGreen", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_Green", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
    ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyGreen", 1, "ActiveOn")
@@ -212,6 +226,11 @@ Actor GreenKeyChecker_V2 : KeyCheckerBase //Heretic
    ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/greendoor", "SoundSlot7", 1, 0)
         Stop
@@ -252,7 +271,7 @@ Actor BlueKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Blue Key
         TNT1 A 1 A_JumpIfInventory("BlueSkull", 1, "ActiveOn")
         TNT1 A 0 A_JumpIfInventory("KeyBlue", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Blue", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Blue", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("BlueCard", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("BlueSkull", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyBlue", 1, "Activation")
@@ -266,13 +285,12 @@ Actor BlueKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Blue Key
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/bluegranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("BlueCard", 1)
         TNT1 A 1 A_GiveInventory("BlueSkull", 1)
         TNT1 A 1 A_GiveInventory("KeyBlue", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_Blue", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/bdoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("BlueCard", 1, "ActiveOn")
@@ -282,6 +300,11 @@ Actor BlueKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Blue Key
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/bdoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/bdoor", "SoundSlot7", 1, 0)
         Stop
@@ -313,7 +336,7 @@ Actor BlueSkullChecker_V2 : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("BlueSkull", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_BlueSkull", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_BlueSkull", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("BlueSkull", 1, "Activation")
         TNT1 A 0 A_Print("Blue Skull Key is required")
         TNT1 A 1 A_PlaySoundEx("door/deniedblueskull", "Voice", 0, 2)
@@ -325,11 +348,10 @@ Actor BlueSkullChecker_V2 : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/bluegranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("BlueSkull", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_BlueSkull", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/bskulldoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("BlueSkull", 1, "ActiveOn")
@@ -337,6 +359,11 @@ Actor BlueSkullChecker_V2 : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/bskulldoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/bskulldoor", "SoundSlot7", 1, 0)
         Stop
@@ -377,7 +404,7 @@ Actor YellowKeyChecker_V2 : KeyCheckerBase //Will check for Heretic Yellow Key
         TNT1 A 1 A_JumpIfInventory("YellowSkull", 1, "ActiveOn")
         TNT1 A 1 A_JumpIfInventory("KeyYellow", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Yellow", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Yellow", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("YellowCard", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("YellowSkull", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyYellow", 1, "Activation")
@@ -391,13 +418,12 @@ Actor YellowKeyChecker_V2 : KeyCheckerBase //Will check for Heretic Yellow Key
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/yellowgranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("YellowCard", 1)
         TNT1 A 1 A_GiveInventory("YellowSkull", 1)
         TNT1 A 1 A_GiveInventory("KeyYellow", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_Yellow", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/ydoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("YellowCard", 1, "ActiveOn")
@@ -407,6 +433,11 @@ Actor YellowKeyChecker_V2 : KeyCheckerBase //Will check for Heretic Yellow Key
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/ydoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/ydoor", "SoundSlot7", 1, 0)
         Stop
@@ -438,7 +469,7 @@ Actor YellowSkullChecker_V2 : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("YellowSkull", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_YellowSkull", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_YellowSkull", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("YellowSkull", 1, "Activation")
         TNT1 A 0 A_Print("Yellow Skull Key is required")
         TNT1 A 1 A_PlaySoundEx("door/deniedyellowskull", "Voice", 0, 2)
@@ -450,11 +481,10 @@ Actor YellowSkullChecker_V2 : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/yellowgranted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("YellowSkull", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_YellowSkull", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/yskulldoor", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("YellowSkull", 1, "ActiveOn")
@@ -462,6 +492,11 @@ Actor YellowSkullChecker_V2 : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/yskulldoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/yskulldoor", "SoundSlot7", 1, 0)
         Stop
@@ -526,7 +561,7 @@ Actor AnyKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Keys
         TNT1 A 0 A_JumpIfInventory("YellowSkull", 1, "ActiveOn")
         TNT1 A 0 A_JumpIfInventory("KeyYellow", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Any", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_Any", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("RedCard", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("RedSkull", 1, "Activation")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyGreen", 1, "Activation")
@@ -546,7 +581,6 @@ Actor AnyKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Keys
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("RedCard", 1)
         TNT1 A 1 A_GiveInventory("RedSkull", 1)
         TNT1 A 1 A_GiveInventory("KeyGreen", 1)
@@ -558,7 +592,7 @@ Actor AnyKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Keys
         TNT1 A 1 A_GiveInventory("KeyYellow", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_Any", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/anydoor", "SoundSlot7", 1, 0)
         TNT1 A 0 A_JumpIfInventory("RedCard", 1, "ActiveOn")
@@ -574,6 +608,11 @@ Actor AnyKeyChecker_V2 : KeyCheckerBase //Will accept Heretic Keys
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/anydoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("amb/anydoor", "SoundSlot7", 1, 0)
         Stop
@@ -601,7 +640,7 @@ Actor 3KeyChecker_V2 : KeyCheckerBase //Will look for Heretic Keys also
         TNT1 A 1 A_FaceTarget
         Goto CheckMyKeys
     Melee:
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_3Key", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_3Key", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInventory("Has3Keys", 3, "Activation")
         TNT1 A 0 A_FaceTarget
         TNT1 A 0 A_Print("One of Each Key is required (3 Keys)")
@@ -614,10 +653,9 @@ Actor 3KeyChecker_V2 : KeyCheckerBase //Will look for Heretic Keys also
         Goto Melee
     Activation:
          TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
          TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
          TNT1 A 1 A_GiveToTarget("NoNotice_3Key", 1)
-         Goto ActiveOn2
+         Goto SpawnDoorBeacon
     ActiveOn:
          TNT1 A 1 A_PlaySoundEx("amb/3door", "SoundSlot7", 1, 0)
          TNT1 A 1 A_JumpIfInventory("Has3Keys", 3, "ActiveOn")
@@ -625,6 +663,11 @@ Actor 3KeyChecker_V2 : KeyCheckerBase //Will look for Heretic Keys also
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/3door", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     CheckMyKeys:
         TNT1 A 1 A_JumpIfInventory("HasRedKey", 1, 2)
         TNT1 A 0 A_JumpIfInTargetInventory("RedCard", 1, "GotRedKey")
@@ -712,7 +755,7 @@ Actor 6KeyChecker_V2 : KeyCheckerBase //Not needed for Heretic - For Doom only
         TNT1 A 1 A_FaceTarget
         Goto CheckMyKeys
     Melee:
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_6Key", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_6Key", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInventory("Has6Keys", 6, "Activation")
         TNT1 A 0 A_FaceTarget
         TNT1 A 0 A_Print("All 6 Keys are required")
@@ -725,10 +768,9 @@ Actor 6KeyChecker_V2 : KeyCheckerBase //Not needed for Heretic - For Doom only
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_6Key", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("amb/6door", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("Has6Keys", 6, "ActiveOn")
@@ -736,6 +778,11 @@ Actor 6KeyChecker_V2 : KeyCheckerBase //Not needed for Heretic - For Doom only
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/6door", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     CheckMyKeys:
         TNT1 A 1 A_JumpIfInventory("DontCheckRedCard", 1, 2)
         TNT1 A 0 A_JumpIfInTargetInventory("RedCard", 1, "GotRedKey")
@@ -825,7 +872,7 @@ Actor AxeKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AxeKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AxeKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyAxe", 1, "Activation")
         TNT1 A 0 A_Print("Axe Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/axe", "Voice", 0, 2)
@@ -837,11 +884,10 @@ Actor AxeKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyAxe", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_AxeKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyAxe", 1, "ActiveOn")
@@ -849,6 +895,11 @@ Actor AxeKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/axe", "SoundSlot7", 1, 0)
         Stop
@@ -880,7 +931,7 @@ Actor CaveKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CaveKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CaveKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyCave", 1, "Activation")
         TNT1 A 0 A_Print("Cave Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/cave", "Voice", 0, 2)
@@ -892,11 +943,10 @@ Actor CaveKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyCave", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_CaveKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyCave", 1, "ActiveOn")
@@ -904,6 +954,11 @@ Actor CaveKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/cave", "SoundSlot7", 1, 0)
         Stop
@@ -936,7 +991,7 @@ Actor CastleKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CastleKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_CastleKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyCastle", 1, "Activation")
         TNT1 A 0 A_Print("Castle Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/castle", "Voice", 0, 2)
@@ -948,11 +1003,10 @@ Actor CastleKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyCastle", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_CastleKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyCastle", 1, "ActiveOn")
@@ -960,6 +1014,11 @@ Actor CastleKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/castle", "SoundSlot7", 1, 0)
         Stop
@@ -991,7 +1050,7 @@ Actor DungeonKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_DungeonKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_DungeonKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyDungeon", 1, "Activation")
         TNT1 A 0 A_Print("Dungeon Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/dungeon", "Voice", 0, 2)
@@ -1003,11 +1062,10 @@ Actor DungeonKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyDungeon", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_DungeonKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyDungeon", 1, "ActiveOn")
@@ -1015,6 +1073,11 @@ Actor DungeonKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/dungeon", "SoundSlot7", 1, 0)
         Stop
@@ -1046,7 +1109,7 @@ Actor EmeraldKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_EmeraldKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_EmeraldKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyEmerald", 1, "Activation")
         TNT1 A 0 A_Print("Emerald Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/emerald", "Voice", 0, 2)
@@ -1058,11 +1121,10 @@ Actor EmeraldKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyEmerald", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_EmeraldKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyEmerald", 1, "ActiveOn")
@@ -1070,6 +1132,11 @@ Actor EmeraldKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/emerald", "SoundSlot7", 1, 0)
         Stop
@@ -1101,7 +1168,7 @@ Actor FireKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_FireKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_FireKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyFire", 1, "Activation")
         TNT1 A 0 A_Print("Fire Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/fire", "Voice", 0, 2)
@@ -1113,11 +1180,10 @@ Actor FireKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyFire", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_FireKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyFire", 1, "ActiveOn")
@@ -1125,6 +1191,11 @@ Actor FireKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/fire", "SoundSlot7", 1, 0)
         Stop
@@ -1156,7 +1227,7 @@ Actor HornKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_HornKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_HornKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyHorn", 1, "Activation")
         TNT1 A 0 A_Print("Horn Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/horn", "Voice", 0, 2)
@@ -1168,11 +1239,10 @@ Actor HornKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyHorn", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_HornKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyHorn", 1, "ActiveOn")
@@ -1180,6 +1250,11 @@ Actor HornKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/horn", "SoundSlot7", 1, 0)
         Stop
@@ -1211,7 +1286,7 @@ Actor RustedKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_RustedKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_RustedKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeyRusted", 1, "Activation")
         TNT1 A 0 A_Print("Rusted Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/rusted", "Voice", 0, 2)
@@ -1223,11 +1298,10 @@ Actor RustedKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeyRusted", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_RustedKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeyRusted", 1, "ActiveOn")
@@ -1235,6 +1309,11 @@ Actor RustedKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/rusted", "SoundSlot7", 1, 0)
         Stop
@@ -1266,7 +1345,7 @@ Actor SilverKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SilverKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SilverKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeySilver", 1, "Activation")
         TNT1 A 0 A_Print("Silver Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/silver", "Voice", 0, 2)
@@ -1278,11 +1357,10 @@ Actor SilverKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeySilver", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_SilverKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeySilver", 1, "ActiveOn")
@@ -1290,6 +1368,11 @@ Actor SilverKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/silver", "SoundSlot7", 1, 0)
         Stop
@@ -1322,7 +1405,7 @@ Actor SteelKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SteelKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SteelKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeySteel", 1, "Activation")
         TNT1 A 0 A_Print("Steel Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/steel", "Voice", 0, 2)
@@ -1334,11 +1417,10 @@ Actor SteelKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeySteel", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_SteelKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeySteel", 1, "ActiveOn")
@@ -1346,6 +1428,11 @@ Actor SteelKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/steel", "SoundSlot7", 1, 0)
         Stop
@@ -1377,7 +1464,7 @@ Actor SwampKeyChecker : KeyCheckerBase
     Melee:
         TNT1 A 1 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
         TNT1 A 0 A_FaceTarget
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SwampKey", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_SwampKey", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInTargetInventory("KeySwamp", 1, "Activation")
         TNT1 A 0 A_Print("Swamp Key is required")
         TNT1 A 1 A_PlaySoundEx("hexen/door/denied/swamp", "Voice", 0, 2)
@@ -1389,11 +1476,10 @@ Actor SwampKeyChecker : KeyCheckerBase
         Goto Melee
     Activation:
         TNT1 A 1 A_PlaySoundEx("door/granted", "Voice", 0, 2)
-        TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_GiveInventory("KeySwamp", 1)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_SwampKey", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
         TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
         TNT1 A 1 A_JumpIfInventory("KeySwamp", 1, "ActiveOn")
@@ -1401,6 +1487,11 @@ Actor SwampKeyChecker : KeyCheckerBase
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     Death:
         TNT1 A -1 A_PlaySoundEx("hexen/door/swamp", "SoundSlot7", 1, 0)
         Stop
@@ -1428,7 +1519,7 @@ Actor AllKeyChecker : KeyCheckerBase //For Hexen - This is a big one...
         TNT1 A 1 A_FaceTarget
         Goto CheckMyKeys
     Melee:
-        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AllKeys", 1, "ActiveOn2")
+        TNT1 A 0 A_JumpIfInTargetInventory("NoNotice_AllKeys", 1, "SpawnDoorBeacon")
         TNT1 A 0 A_JumpIfInventory("HasAllKeys", 11, "Activation")
         TNT1 A 0 A_FaceTarget
         TNT1 A 0 A_Print("All 11 Keys are required")
@@ -1444,7 +1535,7 @@ Actor AllKeyChecker : KeyCheckerBase //For Hexen - This is a big one...
         TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
         TNT1 A 1 A_ChangeFlag("SHOOTABLE", 0)
         TNT1 A 1 A_GiveToTarget("NoNotice_AllKeys", 1)
-        Goto ActiveOn2
+        Goto SpawnDoorBeacon
     ActiveOn:
          TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
          TNT1 A 1 A_JumpIfInventory("HasAllKeys", 11, "ActiveOn")
@@ -1452,6 +1543,11 @@ Actor AllKeyChecker : KeyCheckerBase //For Hexen - This is a big one...
     ActiveOn2:
         TNT1 A 1 A_PlaySoundEx("amb/alldoor", "SoundSlot7", 1, 0)
         Goto Death
+	SpawnDoorBeacon:
+		TNT1 A 1 A_JumpIfInventory("SpawnedBeacon", 1, "ActiveOn2")
+		TNT1 A 1 A_SpawnItemEx("BasicDoorChecker", 0, 0, 32, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		TNT1 A 1 A_GiveInventory("SpawnedBeacon", 1)
+		Goto ActiveOn2
     CheckMyKeys:
         TNT1 A 1 A_JumpIfInventory("DontCheckAxe", 1, 2)
         TNT1 A 0 A_JumpIfInTargetInventory("KeyAxe", 1, "GotAxeKey")

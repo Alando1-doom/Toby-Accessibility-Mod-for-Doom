@@ -1,47 +1,47 @@
 //Hit Marker Sound Defs
 
 // Call of Duty: Black Ops 4
-blackops4hit		HMBO4H
-blackops4kill		HMBO4K
+blackops4hit		"sounds/HitMarker/HMBO4H.wav"
+blackops4kill		"sounds/HitMarker/HMBO4K.wav"
 
 // Call of Duty: Black Ops Cold War
-blackopscoldwarhit	HMBOCWH
-blackopscoldwarkill	HMBOCWK
+blackopscoldwarhit	"sounds/HitMarker/HMBOCWH.wav"
+blackopscoldwarkill	"sounds/HitMarker/HMBOCWK.wav"
 
 // Call of Duty 4
-callofduty4hit		HMCOD4H
+callofduty4hit		"sounds/HitMarker/HMCOD4H.wav"
 
 // Default
-defaulthit			HMDEFH
-defaulthithigh		HMDEFHH
-defaulthitmedium	HMDEFHM
-defaultkill			HMDEFK
+defaulthit				"sounds/HitMarker/HMDEFH.wav"
+defaulthithigh		"sounds/HitMarker/HMDEFHH.wav"
+defaulthitmedium	"sounds/HitMarker/HMDEFHM.wav"
+defaultkill				"sounds/HitMarker/HMDEFK.wav"
 
 // Doom (2016)
 $random doomhit		{ doomhit1 doomhit2 doomhit3 doomhit4 }
-doomhit1			HMDH1
-doomhit2			HMDH2
-doomhit3			HMDH3
-doomhit4			HMDH4
+doomhit1			"sounds/HitMarker/HMDH1.wav"
+doomhit2			"sounds/HitMarker/HMDH2.wav"
+doomhit3			"sounds/HitMarker/HMDH3.wav"
+doomhit4			"sounds/HitMarker/HMDH4.wav"
 
 // Call of Duty: Modern Warfare
-modernwarfarehit	HMMWH
-modernwarfarekill	HMMWK
+modernwarfarehit	"sounds/HitMarker/HMMWH.wav"
+modernwarfarekill	"sounds/HitMarker/HMMWK.wav"
 
 // Overwatch
-overwatchhit		HMOWH
-overwatchkill		HMOWK
+overwatchhit		"sounds/HitMarker/HMOWH.wav"
+overwatchkill		"sounds/HitMarker/HMOWK.wav"
 
 // Quake
-quakehit			HMQH
-quakehithigh		HMQHH
-quakehitmedium		HMQHM
-quakechampionskill	HMQCK
-quakelivekill		HMQLK
+quakehit					"sounds/HitMarker/HMQH.wav"
+quakehithigh			"sounds/HitMarker/HMQHH.wav"
+quakehitmedium		"sounds/HitMarker/HMQHM.wav"
+quakechampionskill	"sounds/HitMarker/HMQCK.wav"
+quakelivekill				"sounds/HitMarker/HMQLK.wav"
 
 // Team Fortress 2
-teamfortress2hit	HMTF2H
-teamfortress2kill	HMTF2K
+teamfortress2hit	"sounds/HitMarker/HMTF2H.wav"
+teamfortress2kill	"sounds/HitMarker/HMTF2K.wav"
 
 // Titanfall 2
-titanfall2kill		HMT2K
+titanfall2kill		"sounds/HitMarker/HMT2K.wav"
