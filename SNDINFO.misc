@@ -1,20 +1,20 @@
-cheat/godon			dsgodon
-cheat/godoff			dsgodoff
+cheat/godon			"sounds/QuickCheats/DSGODON.ogg"
+cheat/godoff			"sounds/QuickCheats/DSGODOFF.ogg"
 
-cheat/idkfa				giveall
+cheat/idkfa				"sounds/QuickCheats/GIVEALL.ogg"
 
-cheat/levelwarp		chngmap
+cheat/levelwarp		"sounds/QuickCheats/CHNGMAP.ogg"
 
-cheat/radsuiton		radston
-cheat/radsuitoff		radstoff
+cheat/radsuiton		"sounds/QuickCheats/RADSTON.ogg"
+cheat/radsuitoff		"sounds/QuickCheats/RADSTOFF.ogg"
 
 misc/quickturn			quckturn
 
-monster/brusit dsbrusit
-monster/bruwlk dsbruwlk
+monster/brusit 		"sounds/NewDemons/DSBRUSIT.ogg"
+monster/bruwlk 		"sounds/NewDemons/DSBRUWLK.ogg"
 
-superdemon/sight			dssdsee
-superdemon/active		dssdact
+superdemon/sight		"sounds/NewDemons/DSSDSEE.wav"
+superdemon/active		"sounds/NewDemons/DSSDACT.wav"
 
 toby/actorsinviewport/tutorial/kiosk				"sounds/ActorsInViewport/Tutorial/TutorialKiosk.ogg"
 toby/actorsinviewport/tutorial/kiosks			"sounds/ActorsInViewport/Tutorial/TutorialKiosks.ogg"

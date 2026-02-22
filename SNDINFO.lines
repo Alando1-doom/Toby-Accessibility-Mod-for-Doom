@@ -1,13 +1,25 @@
-$rolloff amb/door2 linear 48 160
-amb/door2				dsbdrsnd
-$rolloff amb/switch linear 48 160
-amb/switch				dsswsnd
-$rolloff amb/switch2 linear 64 256
-amb/switch2				dsswgun
+//DOOR BEACON
+amb/door2				"sounds/DoorSwitches/Beacons/DSBDRSND.wav"
 
+
+//SWITCH BEACONS
+amb/switch				"sounds/DoorSwitches/Beacons/DSSWSND.wav"
+amb/switch2			"sounds/DoorSwitches/Beacons/DSSWGUN.wav"
+
+
+//TELEPORTER BEACON
+amb/exit2					"sounds/DoorSwitches/Beacons/DSTELEBC.wav"
+
+
+//EXIT BEACONS
+amb/exit1					"sounds/DoorSwitches/Beacons/DSEXIT1.wav"
+amb/secretexit			"sounds/DoorSwitches/Beacons/DSEXIT2.ogg"
+
+
+//ROLLOFFS
+$rolloff amb/door2 linear 48 160
+$rolloff amb/switch linear 48 160
+$rolloff amb/switch2 linear 64 256
 $rolloff amb/exit1	linear  64 144
 $rolloff amb/secretexit	linear  64 144
 $rolloff amb/exit2	linear	96 144
-amb/exit1		dsexit1
-amb/secretexit		dsexit2
-amb/exit2		dstelebc

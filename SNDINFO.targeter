@@ -1,16 +1,16 @@
 //Targeting System
 //For enemies
-weapons/lock			dswlock
+weapons/lock			"sounds/Targeter/DSWLOCK.ogg"
 
 //For explosive barrels and other explosive decorations alike
-weapons/barrellock			dstrgbar
+weapons/barrellock			"sounds/Targeter/DSTRGBAR.ogg"
 
 //For identifying players
-weapons/playerlock			dstrgply
+weapons/playerlock			"sounds/Targeter/DSTRGPLY.ogg"
 
 //For shootable decorations
-weapons/decolock			dstrgdec
+weapons/decolock			"sounds/Targeter/DSTRGDEC.ogg"
 
 
 //For shootable Switches
-weapons/switchlock			dstrgsw
+weapons/switchlock			"sounds/Targeter/DSTRGSW.wav"
