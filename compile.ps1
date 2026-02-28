@@ -1,5 +1,10 @@
-$archiveName = "TobyAccessibilityMod.zip"
-$pk3Name = "TobyAccessibilityMod.pk3"
+$currentFolder = Get-Item -LiteralPath ".\"
+$folderName = $currentFolder.Name
+
+$timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+
+$archiveName = "$folderName`_$timestamp.zip"
+$pk3Name     = "$folderName`_$timestamp.pk3"
 $compiledFolderName = "compiled-pk3"
 
 $currentFolder = Get-Item -LiteralPath ".\"
@@ -38,6 +43,3 @@ Write-Host "Done!`n"
 
 Write-Host ".pk3 file created at: "
 Write-Host "$pk3SavePath`n"
-
-Write-Host "Press any key to close this powershell window..."
-$key = [System.Console]::ReadKey()
