@@ -88,6 +88,11 @@ class Toby_Marker_Pathfinding : ZS_Marker_Base
 
 class Toby_Marker_1 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
         Spawn:
@@ -100,6 +105,11 @@ class Toby_Marker_1 : ZS_Marker_Base
 
 class Toby_Marker_2 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -112,6 +122,11 @@ class Toby_Marker_2 : ZS_Marker_Base
 
 class Toby_Marker_3 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -124,6 +139,11 @@ class Toby_Marker_3 : ZS_Marker_Base
 
 class Toby_Marker_4 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -136,6 +156,11 @@ class Toby_Marker_4 : ZS_Marker_Base
 
 class Toby_Marker_5 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -148,6 +173,11 @@ class Toby_Marker_5 : ZS_Marker_Base
 
 class Toby_Marker_6 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -160,6 +190,11 @@ class Toby_Marker_6 : ZS_Marker_Base
 
 class Toby_Marker_7 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -172,6 +207,11 @@ class Toby_Marker_7 : ZS_Marker_Base
 
 class Toby_Marker_8 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -184,6 +224,11 @@ class Toby_Marker_8 : ZS_Marker_Base
 
 class Toby_Marker_9 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
@@ -196,6 +241,11 @@ class Toby_Marker_9 : ZS_Marker_Base
 
 class Toby_Marker_10 : ZS_Marker_Base
 {
+	Default
+    {
+		Scale 1.0;
+        +FLOATBOB
+    }
     States
     {
     Spawn:
