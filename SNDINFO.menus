@@ -506,6 +506,19 @@ $volume menu/controls/snaptotarget      0.5
 menu/controls/proxydetector		"sounds/Menus/TobyOptions/Proxy.ogg"
 $volume menu/controls/proxydetector      0.5
 
+menu/controls/toggletarget			"sounds/Menus/TobyOptions/ToggleTargetAnn.ogg"
+$volume menu/controls/toggletarget      0.5
+
+menu/controls/noraddmg			"sounds/Menus/TobyOptions/ToggleNoRadDmg.ogg"
+$volume menu/controls/noraddmg      0.5
+menu/controls/raddmgdefault		"sounds/Menus/TobyOptions/NoRadDmgDefault.ogg"
+$volume menu/controls/raddmgdefault      0.5
+
+menu/controls/clearsound			"sounds/Menus/TobyOptions/ClearSoundQueue.ogg"
+$volume menu/controls/clearsound      0.5
+menu/controls/clearsoundandstop			"sounds/Menus/TobyOptions/ClearQueueStopSounds.ogg"
+$volume menu/controls/clearsoundandstop      0.5
+
 menu/controls/asgeneral					"sounds/Menus/TobyOptions/mascangn.ogg"
 $volume menu/controls/asgeneral    0.5
 menu/controls/asdirection				"sounds/Menus/TobyOptions/mascandr.ogg"
@@ -1181,3 +1194,5 @@ $volume menu/tobyopt/openitemsmenu	      0.5
 
 menu/tobyopt/hurtfloor						"sounds/Menus/TobyOptions/ToggleHurtfloor.ogg"
 $volume menu/tobyopt/hurtfloor	      0.5
+menu/tobyopt/hurtfloorenabled			"sounds/Menus/TobyOptions/HurtfloorEnabled.ogg"
+$volume menu/tobyopt/hurtfloorenabled	      0.5
