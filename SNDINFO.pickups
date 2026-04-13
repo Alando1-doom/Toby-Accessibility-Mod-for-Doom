@@ -124,6 +124,21 @@ toby/actorsinviewport/pickups/blueskulls        "sounds/ActorsInViewport/Pickups
 toby/actorsinviewport/pickups/yellowskull       "sounds/ActorsInViewport/Pickups/YellowSkull.ogg"
 toby/actorsinviewport/pickups/yellowskulls      "sounds/ActorsInViewport/Pickups/YellowSkulls.ogg"
 
+
+//Legacy of Rust - Weapons & Ammo
+
+toby/actorsinviewport/lor/pickups/calamityblade			"sounds/ActorsInViewport/LegacyOfRust/Weapons/CalamityBlade.ogg"
+toby/actorsinviewport/lor/pickups/calamityblades		"sounds/ActorsInViewport/LegacyOfRust/Weapons/CalamityBlades.ogg"
+
+toby/actorsinviewport/lor/pickups/incinerator				"sounds/ActorsInViewport/LegacyOfRust/Weapons/Incinerator.ogg"
+toby/actorsinviewport/lor/pickups/incinerators			"sounds/ActorsInViewport/LegacyOfRust/Weapons/Incinerators.ogg"
+
+toby/actorsinviewport/lor/pickups/fuelcan					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelCan.ogg"
+toby/actorsinviewport/lor/pickups/fuelcans					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelCans.ogg"
+
+toby/actorsinviewport/lor/pickups/fueltank					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelTank.ogg"
+toby/actorsinviewport/lor/pickups/fueltanks					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelTanks.ogg"
+
 //*****************************************************************************************************************
 
 //Heretic - Weapons

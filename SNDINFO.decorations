@@ -165,6 +165,89 @@ toby/actorsinviewport/decorations/tallredpillar         "sounds/ActorsInViewport
 toby/actorsinviewport/decorations/tallredpillars        "sounds/ActorsInViewport/Decorations/Hell/TallRedPillars.ogg"
 
 
+//Legacy of Rust - Decorations
+//Gore
+toby/actorsinviewport/lor/decorations/corpsepile			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePile.ogg"
+toby/actorsinviewport/lor/decorations/corpsepiles			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePiles.ogg"
+
+toby/actorsinviewport/lor/decorations/flamecorpse			"sounds/ActorsInViewport/LegacyOfRust/Decorations/FlameCorpse.ogg"
+toby/actorsinviewport/lor/decorations/flamecorpses		"sounds/ActorsInViewport/LegacyOfRust/Decorations/FlameCorpses.ogg"
+
+toby/actorsinviewport/lor/decorations/crucifiedcorpse	"sounds/ActorsInViewport/LegacyOfRust/Decorations/CrucifiedCorpse.ogg"
+toby/actorsinviewport/lor/decorations/crucifiedcorpses	"sounds/ActorsInViewport/LegacyOfRust/Decorations/CrucifiedCorpses.ogg"
+
+toby/actorsinviewport/lor/decorations/hangingbody		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBody.ogg"
+toby/actorsinviewport/lor/decorations/hangingbodies		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBodies.ogg"
+
+toby/actorsinviewport/lor/decorations/bodyarmsbound		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BodyArmsBound.ogg"
+toby/actorsinviewport/lor/decorations/bodiesarmsbound	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BodiesArmsBound.ogg"
+
+toby/actorsinviewport/lor/decorations/chainedbody		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedBody.ogg"
+toby/actorsinviewport/lor/decorations/chainedbodies		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedBodies.ogg"
+
+toby/actorsinviewport/lor/decorations/chainedtorso		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedTorso.ogg"
+toby/actorsinviewport/lor/decorations/chainedtorsos		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedTorsos.ogg"
+
+toby/actorsinviewport/lor/decorations/hangingbaron		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBaron.ogg"
+toby/actorsinviewport/lor/decorations/hangingbarons		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBarons.ogg"
+
+toby/actorsinviewport/lor/decorations/trioskullpike			"sounds/ActorsInViewport/LegacyOfRust/Decorations/TrioOfSkulls.ogg"
+toby/actorsinviewport/lor/decorations/trioskullpikes		"sounds/ActorsInViewport/LegacyOfRust/Decorations/TriosOfSkulls.ogg"
+
+toby/actorsinviewport/lor/decorations/brokenskull			"sounds/ActorsInViewport/LegacyOfRust/Decorations/BrokenSkull.ogg"
+toby/actorsinviewport/lor/decorations/brokenskulls			"sounds/ActorsInViewport/LegacyOfRust/Decorations/BrokenSkulls.ogg"
+
+//Environment
+toby/actorsinviewport/lor/decorations/graystalagmite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/GrayStalagmite.ogg"
+toby/actorsinviewport/lor/decorations/graystalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/GrayStalagmites.ogg"
+
+toby/actorsinviewport/lor/decorations/smallbush			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBush.ogg"
+toby/actorsinviewport/lor/decorations/smallbushes			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBushes.ogg"
+
+toby/actorsinviewport/lor/decorations/burntsmallbush		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntSmallBush.ogg"
+toby/actorsinviewport/lor/decorations/burntsmallbushes	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntSmallBushes.ogg"
+
+toby/actorsinviewport/lor/decorations/tallbush				"sounds/ActorsInViewport/LegacyOfRust/Decorations/TallBush.ogg"
+toby/actorsinviewport/lor/decorations/tallbushes			"sounds/ActorsInViewport/LegacyOfRust/Decorations/TallBushes.ogg"
+
+toby/actorsinviewport/lor/decorations/burnttallbush		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntTallBush.ogg"
+toby/actorsinviewport/lor/decorations/burnttallbushes	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntTallBush.ogg"
+
+toby/actorsinviewport/lor/decorations/cavecolumn			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CaveRockColumn.ogg"
+toby/actorsinviewport/lor/decorations/cavecolumns		"sounds/ActorsInViewport/LegacyOfRust/Decorations/CaveRockColumns.ogg"
+
+toby/actorsinviewport/lor/decorations/largestalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalagmite.ogg"
+toby/actorsinviewport/lor/decorations/largestalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalagmites.ogg"
+
+toby/actorsinviewport/lor/decorations/mediumstalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalagmite.ogg"
+toby/actorsinviewport/lor/decorations/mediumstalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalagmites.ogg"
+
+toby/actorsinviewport/lor/decorations/smallstalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalagmite.ogg"
+toby/actorsinviewport/lor/decorations/smallstalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalagmites.ogg"
+
+toby/actorsinviewport/lor/decorations/largestalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalactite.ogg"
+toby/actorsinviewport/lor/decorations/largestalactites		"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalactites.ogg"
+
+toby/actorsinviewport/lor/decorations/mediumstalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalactite.ogg"
+toby/actorsinviewport/lor/decorations/mediumstalactites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalactites.ogg"
+
+toby/actorsinviewport/lor/decorations/smallstalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalactite.ogg"
+toby/actorsinviewport/lor/decorations/smallstalactites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalactites.ogg"
+
+//Objects
+toby/actorsinviewport/lor/decorations/chair						"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeChair.ogg"
+toby/actorsinviewport/lor/decorations/chairs					"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeChairs.ogg"
+
+toby/actorsinviewport/lor/decorations/desklamp				"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamp.ogg"
+toby/actorsinviewport/lor/decorations/desklamps			"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamps.ogg"
+
+toby/actorsinviewport/lor/decorations/ceilinglamp			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CeilingLamp.ogg"
+toby/actorsinviewport/lor/decorations/ceilinglamps			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CeilingLamps.ogg"
+
+toby/actorsinviewport/lor/decorations/shortabra				"sounds/ActorsInViewport/LegacyOfRust/Decorations/ShortCandelabra.ogg"
+toby/actorsinviewport/lor/decorations/shortabras			"sounds/ActorsInViewport/LegacyOfRust/Decorations/ShortCandelabras.ogg"
+
+
 //Heretic
 
 heretic/deco/barrel						"sounds/ActorsInViewport/Heretic/Decorations/Barrel.ogg"
