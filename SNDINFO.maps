@@ -68,6 +68,20 @@ map/doom1/realmofiblis              "sounds/Maps/doom1_sigil/RealmOfIblis.ogg"
 
 
 
+//Doom 1 Episode 6: Sigil 2
+
+map/doom1/curseddarkness           						"sounds/Maps/doom1_sigil2/CursedDarkness.ogg"
+map/doom1/violenthatred                     					"sounds/Maps/doom1_sigil2/ViolentHatred.ogg"
+map/doom1/twilightdesolution          						"sounds/Maps/doom1_sigil2/TwilightDesolution.ogg"
+map/doom1/fragmentsofsanity       							"sounds/Maps/doom1_sigil2/FragmentsOfSanity.ogg"
+map/doom1/wrathfulreckoning             		 			"sounds/Maps/doom1_sigil2/WrathfulReckoning.ogg"
+map/doom1/vengeanceunleashed   						"sounds/Maps/doom1_sigil2/VengeanceUnleashed.ogg"
+map/doom1/descentintoterror      	 						"sounds/Maps/doom1_sigil2/DescentIntoTerror.ogg"
+map/doom1/abyssofdespair         		 					"sounds/Maps/doom1_sigil2/AbyssOfDespair.ogg"
+map/doom1/shatteredhomecoming              			"sounds/Maps/doom1_sigil2/ShatteredHome.ogg"
+
+
+
 //Doom 2: Hell On Earth
 
 map/doom2/entryway              "sounds/Maps/doom2_main/Entryway.ogg"
@@ -243,6 +257,17 @@ map/toby/spiritworld            "sounds/Maps/doom2_tobymp/SpiritWorld.ogg"
 map/toby/thegateway             "sounds/Maps/doom2_tobymp/TheGateway.ogg"
 map/toby/iconofsin              "sounds/Maps/doom2_tobymp/IconOfSin.ogg"
 
+
+//Bring Back the 90s
+map/90s/starship						"sounds/Maps/doom_bbt90s/1_Starship.ogg"
+map/90s/deltabase					"sounds/Maps/doom_bbt90s/2_DeltaBase.ogg"
+map/90s/toxinref						"sounds/Maps/doom_bbt90s/3_ToxinRefinery.ogg"
+map/90s/command					"sounds/Maps/doom_bbt90s/4_CommandCenter.ogg"
+map/90s/lab								"sounds/Maps/doom_bbt90s/5_Laboratory.ogg"
+map/90s/powerstation				"sounds/Maps/doom_bbt90s/6_PowerStation.ogg"
+map/90s/research					"sounds/Maps/doom_bbt90s/7_ResearchComplex.ogg"
+map/90s/gateway					"sounds/Maps/doom_bbt90s/8_TheGateway.ogg"
+map/90s/cavern						"sounds/Maps/doom_bbt90s/9_TheCavern.ogg"
 
 
 //Toby's Death Arena

@@ -1,5 +1,5 @@
 //Doom 1 Version 1.9ud - MD5: c4fe9fd920207691a9f493668e0a2083
-
+//EPISODE 1
 //E1M1 - Hangar
 {"Checksum":"b49f7a6c519757d390d52667db7d8793", "SoundToPlay":"map/doom1/hangar"}
 //E1M2 - Nuclear Plant
@@ -19,6 +19,7 @@
 //E1M9 - Military Base
 {"Checksum":"1dbf91738492fb0e29836a2d66406cf1", "SoundToPlay":"map/doom1/militarybase"}
 
+//EPISODE 2
 //E2M1 - Deimos Anomaly
 {"Checksum":"65455ac523799f8dce19f3d1968776a2", "SoundToPlay":"map/doom1/deimosanomaly"}
 //E2M2 - Containment Area
@@ -38,6 +39,7 @@
 //E2M9 - Fortress of Mystery
 {"Checksum":"8a6399faaa2e68649d4e4b16642074be", "SoundToPlay":"map/doom1/fortressofmystery"}
 
+//EPISODE 3
 //E3M1 - Hell Keep
 {"Checksum":"c4a89a481a32bfeddeb82e818f2bdec5", "SoundToPlay":"map/doom1/hellkeep"}
 //E3M2 - Slough of Despair
@@ -57,6 +59,7 @@
 //E3M9 - Warrens
 {"Checksum":"fe97dcb9e6235fb3c52ae7c143160d73", "SoundToPlay":"map/doom1/warrens"}
 
+//EPISODE 4
 //E4M1 - Hell Beneath
 {"Checksum":"da0c8281ac70eec31127c228bcd7fe2c", "SoundToPlay":"map/doom1/hellbeneath"}
 //E4M2 - Perfect Hatred
@@ -75,6 +78,7 @@
 {"Checksum":"2dc939e508ab8eb68af79d5b60568711", "SoundToPlay":"map/doom1/untothecruel"}
 //E4M9 - Fear
 {"Checksum":"78556d238ffec8058cacc48b847e1fab", "SoundToPlay":"map/doom1/fear"}
+
 
 //SIGIL_v1_21.wad - MD5: c4fe9fd920207691a9f493668e0a2083
 //E5M1 - Baphomet's Demesne
@@ -95,6 +99,28 @@
 {"Checksum":"6ead80da1f30b4b3546fa294eef9f87c", "SoundToPlay":"map/doom1/hallsofperdition"}
 //E5M9 - Realm of Iblis
 {"Checksum":"2a6b4d277f526bfb3adb122609feead7", "SoundToPlay":"map/doom1/realmofiblis"}
+
+
+//SIGIL 2 V1.0
+//E6M1 - Cursed Darkness
+{"Checksum":"42d1c15691efe8664edc0f611242131a", "SoundToPlay":"map/doom1/curseddarkness"}
+//E6M2 - Violent Hatred
+{"Checksum":"d5e7640beb3346650095787bba0c2984", "SoundToPlay":"map/doom1/violenthatred"}
+//E6M3 - Twilight Desolution
+{"Checksum":"2d08ad5caa92ac69a805b46385ecf9b4", "SoundToPlay":"map/doom1/twilightdesolution"}
+//E6M4 - Fragments of Sanity
+{"Checksum":"f00298fa653c0d10303db09ca89e68e0", "SoundToPlay":"map/doom1/fragmentsofsanity"}
+//E6M5 - Wrathful Reckoning
+{"Checksum":"a2d5fffde75cdc907f45e5193a5b9dab", "SoundToPlay":"map/doom1/wrathfulreckoning"}
+//E6M6 - Vengeance Unleashed
+{"Checksum":"217f956c4f5b0f872c5f9013c9b23cd1", "SoundToPlay":"map/doom1/vengeanceunleashed"}
+//E6M7 - Descent Into Terror
+{"Checksum":"e70ba6cd12a90f793ffd4f941140a630", "SoundToPlay":"map/doom1/descentintoterror"}
+//E6M8 - Abyss of Despair
+{"Checksum":"5ba3d00f6b64f6268e11c6851d47ecbf", "SoundToPlay":"map/doom1/abyssofdespair"}
+//E6M9 - Shattered Homecoming
+{"Checksum":"7d6698b2dd1904908144a3aec4bd53fa", "SoundToPlay":"map/doom1/shatteredhomecoming"}
+
 
 //Doom 2 version 1.9 - MD5: 25e1459ca71d321525f84628f45ca8cd
 //Map01 - Entryway
@@ -162,6 +188,7 @@
 //Map32 - Grosse
 {"Checksum":"aa4ca3fc891d13821accabd836e29eb5", "SoundToPlay":"map/doom2/grosse"}
 
+
 //Doom 2: BFG Edition - MD5: c3bea40570c23e511a7ed3ebcd9865f7
 //Map02 - Underhalls
 {"Checksum":"1ec0af1e3985650f0c9000319c599d0c", "SoundToPlay":"map/doom2/underhalls"}
@@ -171,6 +198,7 @@
 {"Checksum":"9aa7780b46ec4471f630572798943d71", "SoundToPlay":"map/doom2bfg/keen"}
 //Map33 - Betray
 {"Checksum":"915409a89746d6bfd92c7956be6a0a2d", "SoundToPlay":"map/doom2bfg/betray"}
+
 
 //TNT Version 1.9 - MD5: 4e158d9953c79ccf97bd0663244cc6b6
 //MAP01 - System Control
@@ -238,6 +266,7 @@
 //MAP32 - Caribbean
 {"Checksum":"d99ad22ff21a41b4eecdb3a7c803d75e", "SoundToPlay":"map/tnt/carribean"}
 
+
 //Plutonia - MD5: 75c8cf89566741fa9d22447604053bd7
 //MAP01 - Congo
 {"Checksum":"acf8b3fa7f972ff969127ab920c6c12d", "SoundToPlay":"map/plutonia/congo"}
@@ -304,6 +333,7 @@
 //MAP32 - Go 2 It
 {"Checksum":"d5f64e02679a81b82006af34a6a8eac3", "SoundToPlay":"map/plutonia/go2it"}
 
+
 //No Rest For The Living - MD5: 967d5ae23daf45196212ae1b605da3b0
 //LEVEL01 - The Earth Base
 {"Checksum":"3843b06a279eb9cedc18c30cf32074c2", "SoundToPlay":"map/norest/theearthbase"}
@@ -324,6 +354,7 @@
 //LEVEL09 - March of The Demons
 {"Checksum":"fde03d8f2d3d8e37483fc4589b3d54e9", "SoundToPlay":"map/norest/marchofthedemons"}
 
+
 //Toby Doom Mega Deluxe Map Pack - MD5: c1bdcb0a94319e3a96aff78d55f90154
 //MAP01 - Hangar
 {"Checksum":"06a0b36235ca342b77bd79a29c4852f5", "SoundToPlay":"map/toby/hangar"}
@@ -339,7 +370,6 @@
 {"Checksum":"5278ea277a21d9ee98c0a225cc844bba", "SoundToPlay":"map/toby/computerstation"}
 //MAP07 - The Anomaly
 {"Checksum":"ed9e1c97700a4fef6769fa1c937bac31", "SoundToPlay":"map/toby/theanomaly"}
-
 //MAP08 - Deimos Anomaly
 {"Checksum":"f0cc0ca35db78cbfe0c76fad755bbef7", "SoundToPlay":"map/toby/deimosanomaly"}
 //MAP09 - Containment Area
@@ -354,7 +384,6 @@
 {"Checksum":"6ae5582a6a70de7307e4e32eb72a8dad", "SoundToPlay":"map/toby/spawningvats"}
 //MAP14 - Tower of Babel
 {"Checksum":"f5abdf94dd9334dcd6db9050b163a591", "SoundToPlay":"map/toby/towerofbabel"}
-
 //MAP15 - Hell's Keep
 {"Checksum":"67474f1623e294fedc503f7ef062966e", "SoundToPlay":"map/toby/hellskeep"}
 //MAP16 - Slough of Despair
@@ -382,7 +411,6 @@
 {"Checksum":"6b94c14d101cecebc6473fb595d42feb", "SoundToPlay":"map/toby/thecrusher"}
 // MAP27 - Simply Dead
 {"Checksum":"670d6d2cb8319705532520d6f207b62b", "SoundToPlay":"map/toby/simplydead"}
-
 // MAP28 - Tricks N' Traps
 {"Checksum":"a9a4b8667dea5ef590a75f89cd0c900f", "SoundToPlay":"map/toby/tricksandtraps"}
 // MAP29 - Processing Plant
@@ -393,7 +421,6 @@
 {"Checksum":"88df69f18dc497e90c1cc694367c7d9f", "SoundToPlay":"map/toby/circleofdeath"}
 // MAP32 - Baphomet's Citadel
 {"Checksum":"2e16e91764974887a2a8b4f50a3476e7", "SoundToPlay":"map/toby/baphometscitadel"}
-
 // MAP33 - City of Doom
 {"Checksum":"49c2e6d662c8fda422648f8d794146d9", "SoundToPlay":"map/toby/cityofdoom"}
 // MAP34 - Sewer Side
@@ -411,6 +438,7 @@
 // MAP40 - Icon of Sin
 {"Checksum":"6dae1264c486574be17a4152ec4875a1", "SoundToPlay":"map/toby/iconofsin"}
 
+
 //OperationMDK-Beta1_95 - MD5: 6e50792b4e89e91a087a0b059e0be8a3
 // MAP01 - UMS Atlantia
 {"Checksum":"d792136e3debbbbe0e494a1558433a1c", "SoundToPlay":"map/mdk/umsatlantia", "LevelStartPlaybackDelay":"350" }
@@ -418,6 +446,7 @@
 {"Checksum":"8b7bb9a5ae4ace131894bd1d6a44629a", "SoundToPlay":"map/mdk/dockingbay", "LevelStartPlaybackDelay":"250"}
 // MAP03 - Lab 03
 {"Checksum":"2befbb0ac2db3665c3b221c65b82438e", "SoundToPlay":"map/mdk/lab03"}
+{"Checksum":"90c13d72cb02b38f454da70bbdadd5ab", "SoundToPlay":"map/mdk/lab03"}
 // MAP04 - Personnel
 {"Checksum":"6e16b769bfb1c4631ec7166bf2dcf3a6", "SoundToPlay":"map/mdk/personnel"}
 // MAP05 - Mining Complex
@@ -434,16 +463,40 @@
 {"Checksum":"d49b3a18811532ebff4e74135b842b46", "SoundToPlay":"map/mdk/specimenstorage"}
 // MAP10 - Computer Station
 {"Checksum":"1993eaee825aac13e7d6fe132039a92f", "SoundToPlay":"map/mdk/computerstation"}
+{"Checksum":"59f26fbedd17ea95df9e15601e373ff2", "SoundToPlay":"map/mdk/computerstation"}
 // MAP11 - The Gates of Hell
 {"Checksum":"5d29f60c3399ec6f1794d3076dda4686", "SoundToPlay":"map/mdk/thegatesofhell"}
 // MAP12 - Fortress of the Doomed
 {"Checksum":"ac833d4f55f1c4992f3da1e3ba0aa17b", "SoundToPlay":"map/mdk/fortressofthedoomed", "LevelStartPlaybackDelay":"270"}
 // MAP13 - Citadel of the Damned
 {"Checksum":"9566a224c977374ddb009b98aef128f0", "SoundToPlay":"map/mdk/citadelofthedamned"}
+{"Checksum":"53251623b49bded0548943de278a7878", "SoundToPlay":"map/mdk/citadelofthedamned"}
 // MAP14 - The Warlord's Domain
 {"Checksum":"0c097085121f1f77ebac5e72fc447ccb", "SoundToPlay":"map/mdk/thewarlordsdomain", "LevelStartPlaybackDelay":"270"}
+{"Checksum":"1d07280ef8656ded16bb2fbb706e508e", "SoundToPlay":"map/mdk/thewarlordsdomain", "LevelStartPlaybackDelay":"270"}
 // MAP15 - The Gatekeeper
 {"Checksum":"0386cdb05624bba70d45d14fff694f63", "SoundToPlay":"map/mdk/thegatekeeper", "LevelStartPlaybackDelay":"270"}
+
+
+//Bring Back the 90s
+//E1M1 - Starship
+{"Checksum":"2305eb8e05c0ac11c9557164ec7cfd91", "SoundToPlay":"map/90s/starship"}
+//E1M2 - Delta Base
+{"Checksum":"3a95a960a4cdc71dc33da3506c3c21a4", "SoundToPlay":"map/90s/deltabase"}
+//E1M3 - Toxin Refinery
+{"Checksum":"381b025aa403d135c0b083b7c4d0d0e6", "SoundToPlay":"map/90s/toxinref"}
+//E1M4 - Command Center
+{"Checksum":"6c340f5c89eeeb2207d6bcb2c87ab29e", "SoundToPlay":"map/90s/command"}
+//E1M5 - Laboratory
+{"Checksum":"98582e8da7b98c1805f0c171a4380063", "SoundToPlay":"map/90s/lab"}
+//E1M6 - Power Station
+{"Checksum":"94ce1e880b09c01263614492dd5a0c59", "SoundToPlay":"map/90s/powerstation"}
+//E1M7 - Research Complex
+{"Checksum":"ec9597c38cf23184a079c30bf91c22f7", "SoundToPlay":"map/90s/research"}
+//E1M8 - The Gateway
+{"Checksum":"b6fbb64cb28288e97862905b7e451ea8", "SoundToPlay":"map/90s/gateway"}
+//E1M9 - The Cavern
+{"Checksum":"0a8c47e6346452db88d2e334f7a058ad", "SoundToPlay":"map/90s/cavern"}
 
 
 //Toby's Death Arena Maps
@@ -662,8 +715,9 @@
 {"Checksum":"16ace0b1bd4e459d479fbedc303a6503", "SoundToPlay":"toby/hexen/hex02"}
 //Dungeon of Despair
 {"Checksum":"fa5257ff451bbd5f55fce6c39abaa96b", "SoundToPlay":"toby/hexen/hex03"}
-//The Outpost
+//The Outpost - Updated Map for V10.0
 {"Checksum":"36757188640b6a68812a65302934466e", "SoundToPlay":"toby/hexen/hex04"}
+{"Checksum":"43a4315c709becaa5a9f728260d67277", "SoundToPlay":"toby/hexen/hex04"}
 //The Temple
 {"Checksum":"df0ace15e63be34e0b3c2c7ba1ca45c1", "SoundToPlay":"toby/hexen/hex05"}
 //Unholy Cathedral
@@ -672,8 +726,9 @@
 {"Checksum":"c227fcff1997b4d66c33244f26470353", "SoundToPlay":"toby/hexen/hex07"}
 //What the Hex Goin' On? ...I don't know - you tell me...
 {"Checksum":"a49d07a3aa6c4edb86a665d97f493754", "SoundToPlay":"toby/hexen/hex08"}
-//The Citadel of the Doomed
+//The Citadel of the Doomed - Updated for V10.0
 {"Checksum":"bd879ee19a3272c57d481993665577bb", "SoundToPlay":"toby/hexen/hex09"}
+{"Checksum":"2340ec4b4089a526a429e0376212d83e", "SoundToPlay":"toby/hexen/hex09"}
 //Korax
 {"Checksum":"60489b9d05a4be30c20dd9a202f7f90c", "SoundToPlay":"toby/hexen/hex10"}
 //The Secret Tomb

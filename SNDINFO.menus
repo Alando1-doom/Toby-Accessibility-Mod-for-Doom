@@ -69,6 +69,7 @@ menusnd/episode2        "sounds/Menus/EpisodeMenu/dsep2.ogg"
 menusnd/episode3        "sounds/Menus/EpisodeMenu/dsep3.ogg"
 menusnd/episode4        "sounds/Menus/EpisodeMenu/dsep4.ogg"
 menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
+menusnd/ep6sigil2        "sounds/Menus/EpisodeMenu/dsep6.ogg"
 menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
 menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
 
@@ -92,6 +93,7 @@ menusnd/skillmenu       "sounds/Menus/SkillMenu/dscskill.ogg"
 menusnd/easy            "sounds/Menus/SkillMenu/dseasy.ogg"
 menusnd/normal          "sounds/Menus/SkillMenu/dsnormal.ogg"
 menusnd/hard            "sounds/Menus/SkillMenu/dshard.ogg"
+menusnd/insane   		"sounds/Menus/SkillMenu/dsinsane.ogg"
 menusnd/skill1          "sounds/Menus/SkillMenu/dsskill1.ogg"
 menusnd/skill2          "sounds/Menus/SkillMenu/dsskill2.ogg"
 menusnd/skill3          "sounds/Menus/SkillMenu/dsskill3.ogg"
@@ -155,7 +157,7 @@ menu/srate/44100                    "sounds/Menus/SoundOptions/o44100.ogg"
 $volume menu/srate/44100            0.5
 menu/srate/48000                    "sounds/Menus/SoundOptions/o48000.ogg"
 $volume menu/srate/48000            0.5
-menu/sound/hrft                     "sounds/Menus/SoundOptions/mhrft.ogg"
+menu/sound/hrft                     "sounds/Menus/SoundOptions/mhrtf.ogg"
 $volume menu/sound/hrft             0.5
 menu/hrft/auto                      "sounds/Menus/SoundOptions/oauto.ogg"
 $volume menu/hrft/auto              0.5

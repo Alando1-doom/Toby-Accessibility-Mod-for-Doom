@@ -76,9 +76,6 @@ menu/sounddir/monsters				"sounds/Menus/SoundDirectory/MonsSounds.ogg"
 $volume menu/sounddir/monsters	      0.5
 
 menu/sounddir/mons/heresiarchinv	"sounds/Menus/SoundDirectory/MonsterMenu/SorcInv.ogg"
-menu/sounddir/mons/golemskull		"sounds/Menus/SoundDirectory/MonsterMenu/GolemSkull.ogg"
-menu/sounddir/mons/greenaxe			"sounds/Menus/SoundDirectory/MonsterMenu/GreenAxe.ogg"
-menu/sounddir/mons/bloodaxe			"sounds/Menus/SoundDirectory/MonsterMenu/BloodAxe.ogg"
 
 
 
@@ -113,3 +110,64 @@ menu/sounddir/powerup/speedwear			"sounds/Menus/SoundDirectory/PowerupMenu/Hexen
 //Weapon & Ammo Sounds - Announced weapon and ammo names will be referenced using SNDINFO.pickups
 menu/sounddir/guns					"sounds/Menus/SoundDirectory/WeapAmmoBeacons.ogg"
 $volume menu/sounddir/guns	      0.5
+
+
+//Map Marker Sounds - Includes Pathfinder Guide - Map Marker names will be referenced using SNDINFO.markers
+menu/sounddir/mapmarkers					"sounds/Menus/SoundDirectory/MapMarkerSounds.ogg"
+menu/sounddir/marker/pathfinder			"sounds/Menus/SoundDirectory/MapMarkersMenu/PathfinderGuide.ogg"
+menu/sounddir/marker/checkpoint			"sounds/Menus/SoundDirectory/MapMarkersMenu/NodeCheckpoint.ogg"
+
+
+//Projectile Sounds - Main Menu Label
+menu/sounddir/projectiles						"sounds/Menus/SoundDirectory/ProjectileSounds.ogg"
+//Projectile Sounds - DOOM
+menu/sounddir/proj/doom/rocket			"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/Rocket.ogg"
+menu/sounddir/proj/doom/plasmaball		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/PlasmaBall.ogg"
+menu/sounddir/proj/doom/bfgball			"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/BFGBall.ogg"
+menu/sounddir/proj/doom/impfireball		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/ImpFireball.ogg"
+menu/sounddir/proj/doom/cacoball			"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/CacodemonBall.ogg"
+menu/sounddir/proj/doom/hkfireball		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/HKFireball.ogg"
+menu/sounddir/proj/doom/baronball		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/BaronFireball.ogg"
+menu/sounddir/proj/doom/fatboyball		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/FatsoFireball.ogg"
+menu/sounddir/proj/doom/revenant1		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/RevenantMissile.ogg"
+menu/sounddir/proj/doom/revenant2		"sounds/Menus/SoundDirectory/ProjectileMenu/Doom/RevenantTracer.ogg"
+
+//Projectile Sounds - Heretic
+menu/sounddir/proj/heretic/wandball			"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/PowUpWandBall.ogg"
+menu/sounddir/proj/heretic/etherealarrow	"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/EtherealArrow.ogg"
+menu/sounddir/proj/heretic/hstaffball1		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/HellStaffBall1.ogg"
+menu/sounddir/proj/heretic/hstaffball2		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/HellStaffBall2.ogg"
+menu/sounddir/proj/heretic/phoenixshot		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/PhoenixRodShot.ogg"
+menu/sounddir/proj/heretic/gargoyleball		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/GargoyleFireball.ogg"
+menu/sounddir/mons/golemskull				"sounds/Menus/SoundDirectory/MonsterMenu/GolemSkull.ogg"
+menu/sounddir/mons/greenaxe					"sounds/Menus/SoundDirectory/MonsterMenu/GreenAxe.ogg"
+menu/sounddir/mons/bloodaxe					"sounds/Menus/SoundDirectory/MonsterMenu/BloodAxe.ogg"
+menu/sounddir/proj/heretic/discipleball		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/DiscipleBall.ogg"
+menu/sounddir/proj/heretic/weredragonball	"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/WeredragonFireball.ogg"
+menu/sounddir/proj/heretic/snakeice			"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/OphidianIceBall.ogg"
+menu/sounddir/proj/heretic/snakefire			"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/OphidianFireball.ogg"
+menu/sounddir/proj/heretic/lichice				"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/LichIceBall.ogg"
+menu/sounddir/proj/heretic/lichfire				"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/LichFireball.ogg"
+menu/sounddir/proj/heretic/lichwind			"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/LichWhirlwind.ogg"
+menu/sounddir/proj/heretic/minoball			"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/MinotaurFireball.ogg"
+menu/sounddir/proj/heretic/minowave		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/MinotaurShockwave.ogg"
+menu/sounddir/proj/heretic/serpfireball		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/ChaosSerpFireball.ogg"
+menu/sounddir/proj/heretic/dsparilball		"sounds/Menus/SoundDirectory/ProjectileMenu/Heretic/DsparilBall.ogg"
+
+//Projectile Sounds - Hexen
+menu/sounddir/proj/hexen/hammer			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/HammerShot.ogg"
+menu/sounddir/proj/hexen/quietus				"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/QuietusFlame.ogg"
+menu/sounddir/proj/hexen/iceshard			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/IceShard.ogg"
+menu/sounddir/proj/hexen/lightning			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/LightningShot.ogg"
+menu/sounddir/proj/hexen/serpstaff			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/SerpentStaffBall.ogg"
+menu/sounddir/proj/hexen/bloodscourge	"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/BloodscourgeShot.ogg"
+menu/sounddir/proj/hexen/afritball				"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/AfritFireball.ogg"
+menu/sounddir/proj/hexen/slaughtaur			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/SlaughtaurBall.ogg"
+menu/sounddir/proj/hexen/bishopball			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/BishopBall.ogg"
+menu/sounddir/proj/hexen/greenserpball	"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/GreenSerpFireball.ogg"
+menu/sounddir/proj/hexen/brownserpball	"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/BrownSerpFireball.ogg"
+menu/sounddir/proj/hexen/stalkeracid		"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/StalkerAcidBall.ogg"
+menu/sounddir/proj/hexen/wendigoice		"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/WendigoIceBall.ogg"
+menu/sounddir/proj/hexen/reaverball			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/WreaverFireball.ogg"
+menu/sounddir/proj/hexen/dragonball			"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/DragonFireball.ogg"
+menu/sounddir/proj/hexen/heresiarchball	"sounds/Menus/SoundDirectory/ProjectileMenu/Hexen/HeresiarchBall.ogg"

@@ -53,6 +53,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI3", "SoundToPlay":"menusnd/episode3"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI4", "SoundToPlay":"menusnd/episode4"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI5", "SoundToPlay":"menusnd/episode5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_EPI6", "SoundToPlay":"menusnd/ep6sigil2"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_HELL", "SoundToPlay":"menusnd/episode6"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListPatchString":"M_NOREST", "SoundToPlay":"menusnd/episode7"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 1", "SoundToPlay":"menusnd/tobye1"}
@@ -89,6 +90,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"EASY", "SoundToPlay":"menusnd/easy"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"NORMAL", "SoundToPlay":"menusnd/normal"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"HARD", "SoundToPlay":"menusnd/hard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Skillmenu", "CurrentMenuItemListTextString":"TOTAL INSANITY!", "SoundToPlay":"menusnd/insane"}
 
 
 //HERETIC SKILLS
@@ -740,10 +742,12 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Pickup Beacon Sounds", "SoundToPlay":"menu/sounddir/pickups"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Weapons & Ammo Beacon Sounds", "SoundToPlay":"menu/sounddir/guns"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Powerup Sounds", "SoundToPlay":"menu/sounddir/powerups"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Map Marker Sounds", "SoundToPlay":"menu/sounddir/mapmarkers"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Decoration Sounds", "SoundToPlay":"menu/sounddir/decorations"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Environmental Sounds", "SoundToPlay":"menu/sounddir/environment"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Liquid Sounds", "SoundToPlay":"menu/sounddir/liquids"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Monster Sounds", "SoundToPlay":"menu/sounddir/monsters"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundDir", "CurrentMenuItemOptionName":"Projectile Sounds", "SoundToPlay":"menu/sounddir/projectiles"}
 
 //INDIVIDUAL MENUS
 //ACCESSIBILITY SOUNDS
@@ -889,6 +893,21 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"PowSounds", "CurrentMenuItemOptionName":"Porkalator", "SoundToPlay":"hexen/actorsinviewport/artifact/porkalator"}
 
 
+//MAP MARKER SOUNDS
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 1", "SoundToPlay":"pathfinder/marker1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 2", "SoundToPlay":"pathfinder/marker2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 3", "SoundToPlay":"pathfinder/marker3"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 4", "SoundToPlay":"pathfinder/marker4"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 5", "SoundToPlay":"pathfinder/marker5"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 6", "SoundToPlay":"pathfinder/marker6"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 7", "SoundToPlay":"pathfinder/marker7"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 8", "SoundToPlay":"pathfinder/marker8"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 9", "SoundToPlay":"pathfinder/marker9"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Map Marker 10", "SoundToPlay":"pathfinder/marker10"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Pathfinder Guide", "SoundToPlay":"menu/sounddir/marker/pathfinder"}
+{"EventType":"OptionChanged", "CurrentMenuName":"MapMarkerSounds", "CurrentMenuItemOptionName":"Pathfinder Node Checkpoint", "SoundToPlay":"menu/sounddir/marker/checkpoint"}
+
+
 //DECORATION SOUNDS
 {"EventType":"MenuChanged",   "CurrentMenuName":"DecSounds", "SoundToPlay":"menu/sounddir/decorations"}
 {"EventType":"OptionChanged", "CurrentMenuName":"DecSounds", "CurrentMenuItemOptionName":"Explosive Barrel", "SoundToPlay":"toby/actorsinviewport/decorations/explosivebarrel"}
@@ -962,15 +981,13 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Commander Keen", "SoundToPlay":"toby/actorsinviewport/monsters/hangingcommanderkeen"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Cybruiser", "SoundToPlay":"toby/actorsinviewport/monsters/cybruiser"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Warlord", "SoundToPlay":"toby/actorsinviewport/monsters/warlord"}
+//HERETIC
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Chicken", "SoundToPlay":"heretic/monster/chicken"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Gargoyle", "SoundToPlay":"heretic/monster/gargoyle"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Gargoyle Leader", "SoundToPlay":"heretic/monster/gargleader"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Golem", "SoundToPlay":"heretic/monster/golem"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Nitro Golem", "SoundToPlay":"heretic/monster/nitrogolem"}
-{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Nitro Golem Projectile", "SoundToPlay":"menu/sounddir/mons/golemskull"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior", "SoundToPlay":"heretic/monster/knight"}
-{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior - Green Axe", "SoundToPlay":"menu/sounddir/mons/greenaxe"}
-{"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Undead Warrior - Blood Axe", "SoundToPlay":"menu/sounddir/mons/bloodaxe"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Disciple of DSparil", "SoundToPlay":"heretic/monster/disciple"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Sabre Claw", "SoundToPlay":"heretic/monster/clink"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Weredragon", "SoundToPlay":"heretic/monster/weredragon"}
@@ -979,6 +996,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Maulotaur", "SoundToPlay":"heretic/monster/minotaur"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"DSparil on Chaos Serpent", "SoundToPlay":"heretic/monster/dsparilmount"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"DSparil", "SoundToPlay":"heretic/monster/dsparil"}
+//HEXEN
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Pig", "SoundToPlay":"hexen/animal/pig"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Afrit", "SoundToPlay":"hexen/monster/afrit"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Ettin", "SoundToPlay":"hexen/monster/ettin"}
@@ -997,6 +1015,58 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Heresiarch", "SoundToPlay":"hexen/monster/heresiarch"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Heresiarch - Invulnerable", "SoundToPlay":"menu/sounddir/mons/heresiarchinv"}
 {"EventType":"OptionChanged", "CurrentMenuName":"MonsterSounds", "CurrentMenuItemOptionName":"Korax", "SoundToPlay":"hexen/monster/korax"}
+
+
+//PROJECTILE SOUNDS
+//DOOM
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Rocket", "SoundToPlay":"menu/sounddir/proj/doom/rocket"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Plasma Ball", "SoundToPlay":"menu/sounddir/proj/doom/plasmaball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"BFG Ball", "SoundToPlay":"menu/sounddir/proj/doom/bfgball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Imp Fireball", "SoundToPlay":"menu/sounddir/proj/doom/impfireball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Cacodemon Lightning Ball", "SoundToPlay":"menu/sounddir/proj/doom/cacoball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Hell Knight Fireball", "SoundToPlay":"menu/sounddir/proj/doom/hkfireball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Baron Fireball", "SoundToPlay":"menu/sounddir/proj/doom/baronball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Mancubus Fireball", "SoundToPlay":"menu/sounddir/proj/doom/fatboyball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Revenant Missile", "SoundToPlay":"menu/sounddir/proj/doom/revenant1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Revenant Tracer", "SoundToPlay":"menu/sounddir/proj/doom/revenant2"}
+//HERETIC
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Powered Up Wand Ball", "SoundToPlay":"menu/sounddir/proj/heretic/wandball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Ethereal Arrow", "SoundToPlay":"menu/sounddir/proj/heretic/etherealarrow"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Hell Staff Energy Ball", "SoundToPlay":"menu/sounddir/proj/heretic/hstaffball1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Powered Up Hell Staff Energy Ball", "SoundToPlay":"menu/sounddir/proj/heretic/hstaffball2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Phoenix Rod Shot", "SoundToPlay":"menu/sounddir/proj/heretic/phoenixshot"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Gargoyle Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/gargoyleball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Nitro Golem Projectile", "SoundToPlay":"menu/sounddir/mons/golemskull"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Undead Warrior - Green Axe", "SoundToPlay":"menu/sounddir/mons/greenaxe"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Undead Warrior - Blood Axe", "SoundToPlay":"menu/sounddir/mons/bloodaxe"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Disciple Energy Ball", "SoundToPlay":"menu/sounddir/proj/heretic/discipleball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Weredragon Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/weredragonball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Ophidian Ice Ball", "SoundToPlay":"menu/sounddir/proj/heretic/snakeice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Ophidian Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/snakefire"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Iron Lich Ice Ball", "SoundToPlay":"menu/sounddir/proj/heretic/lichice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Iron Lich Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/lichfire"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Iron Lich Whirlwind", "SoundToPlay":"menu/sounddir/proj/heretic/lichwind"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Maulotaur Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/minoball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Maulotaur Flame Shockwave", "SoundToPlay":"menu/sounddir/proj/heretic/minowave"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"D'sparil's Chaos Serpent's Fireball", "SoundToPlay":"menu/sounddir/proj/heretic/serpfireball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"D'sparil's Energy Ball", "SoundToPlay":"menu/sounddir/proj/heretic/dsparilball"}
+//HEXEN
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Hammer Projectile", "SoundToPlay":"menu/sounddir/proj/hexen/hammer"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Quietus Flame Shot", "SoundToPlay":"menu/sounddir/proj/hexen/quietus"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Frost Spell Ice Shard", "SoundToPlay":"menu/sounddir/proj/hexen/iceshard"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Lightning Shot", "SoundToPlay":"menu/sounddir/proj/hexen/lightning"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Serpent Staff Projectile", "SoundToPlay":"menu/sounddir/proj/hexen/serpstaff"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Bloodscourge Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/bloodscourge"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Afrit Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/afritball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Slaughtaur Energy Ball", "SoundToPlay":"menu/sounddir/proj/hexen/slaughtaur"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Dark Bishop Seeker", "SoundToPlay":"menu/sounddir/proj/hexen/bishopball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Green Chaos Serpent Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/greenserpball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Brown Chaos Serpent Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/brownserpball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Stalker Acid Ball", "SoundToPlay":"menu/sounddir/proj/hexen/stalkeracid"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Wendigo Ice Ball", "SoundToPlay":"menu/sounddir/proj/hexen/wendigoice"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Reaver Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/reaverball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Death Wyvern Fireball", "SoundToPlay":"menu/sounddir/proj/hexen/dragonball"}
+{"EventType":"OptionChanged", "CurrentMenuName":"ProjectileSounds", "CurrentMenuItemOptionName":"Heresiarch Energy Ball", "SoundToPlay":"menu/sounddir/proj/hexen/heresiarchball"}
 
 
 //BOT SPAWNER MENU

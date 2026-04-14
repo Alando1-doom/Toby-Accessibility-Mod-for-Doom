@@ -80,6 +80,27 @@ toby/actorsinviewport/monsters/warlord     "sounds/ActorsInViewport/Monsters/War
 toby/actorsinviewport/monsters/warlords    "sounds/ActorsInViewport/Monsters/Warlords.ogg"
 
 
+//Legacy of Rust Monsters
+
+toby/actorsinviewport/lor/monsters/banshee			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Banshee.ogg"
+toby/actorsinviewport/lor/monsters/banshees			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Banshees.ogg"
+
+toby/actorsinviewport/lor/monsters/ghoul				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Ghoul.ogg"
+toby/actorsinviewport/lor/monsters/ghouls				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Ghouls.ogg"
+
+toby/actorsinviewport/lor/monsters/mindweaver		"sounds/ActorsInViewport/LegacyOfRust/Monsters/MindWeaver.ogg"
+toby/actorsinviewport/lor/monsters/mindweavers	"sounds/ActorsInViewport/LegacyOfRust/Monsters/MindWeavers.ogg"
+
+toby/actorsinviewport/lor/monsters/shocktrooper	"sounds/ActorsInViewport/LegacyOfRust/Monsters/ShockTrooper.ogg"
+toby/actorsinviewport/lor/monsters/shocktroopers	"sounds/ActorsInViewport/LegacyOfRust/Monsters/ShockTroopers.ogg"
+
+toby/actorsinviewport/lor/monsters/tyrant				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Tyrant.ogg"
+toby/actorsinviewport/lor/monsters/tyrants				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Tyrants.ogg"
+
+toby/actorsinviewport/lor/monsters/vassago			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Vassago.ogg"
+toby/actorsinviewport/lor/monsters/vassagos			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Vassagos.ogg"
+
+
 //Heretic Monsters
 
 heretic/monster/chicken				"sounds/ActorsInViewport/Heretic/Monsters/Chicken.ogg"
