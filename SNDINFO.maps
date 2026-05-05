@@ -121,6 +121,8 @@ map/doom2bfg/idkfa              "sounds/Maps/doom2_bfg/IDKFA.ogg"
 map/doom2bfg/keen               "sounds/Maps/doom2_bfg/Keen.ogg"
 map/doom2bfg/betray             "sounds/Maps/doom2_bfg/Betray.ogg"
 
+
+
 //TNT: Evilution
 
 map/tnt/systemcontrol           "sounds/Maps/doom2_tnt/SystemControl.ogg"
@@ -209,6 +211,26 @@ map/norest/marchofthedemons     "sounds/Maps/doom2_norest/MarchOfTheDemons.ogg"
 
 
 
+//Legacy of Rust
+
+map/lor/scargate					"sounds/Maps/doom_legacyofrust/1_ScarGate.ogg"
+map/lor/sanguine					"sounds/Maps/doom_legacyofrust/2_SanguineWastes.ogg"
+map/lor/ashmill					"sounds/Maps/doom_legacyofrust/3_AshMill.ogg"
+map/lor/inferno					"sounds/Maps/doom_legacyofrust/4_DescendingInferno.ogg"
+map/lor/creepinghate			"sounds/Maps/doom_legacyofrust/5_CreepingHate.ogg"
+map/lor/coiledcity				"sounds/Maps/doom_legacyofrust/6_TheCoiledCity.ogg"
+map/lor/forfeited					"sounds/Maps/doom_legacyofrust/7_ForfeitedSalvation.ogg"
+map/lor/secondcoming		"sounds/Maps/doom_legacyofrust/8_SecondComing.ogg"
+map/lor/falsehood				"sounds/Maps/doom_legacyofrust/9_Falsehood.ogg"
+map/lor/disunion					"sounds/Maps/doom_legacyofrust/10_DisUnion.ogg"
+map/lor/echoes					"sounds/Maps/doom_legacyofrust/11_EchoesOfPain.ogg"
+map/lor/therack					"sounds/Maps/doom_legacyofrust/12_TheRack.ogg"
+map/lor/soulsilo					"sounds/Maps/doom_legacyofrust/13_SoulSilo.ogg"
+map/lor/brink						"sounds/Maps/doom_legacyofrust/14_Brink.ogg"
+map/lor/panopticon				"sounds/Maps/doom_legacyofrust/15_Panopticon.ogg"
+
+
+
 //Toby Doom Mega Deluxe Map Pack
 
 map/toby/hangar                 "sounds/Maps/doom2_tobymp/Hangar.ogg"
@@ -258,6 +280,7 @@ map/toby/thegateway             "sounds/Maps/doom2_tobymp/TheGateway.ogg"
 map/toby/iconofsin              "sounds/Maps/doom2_tobymp/IconOfSin.ogg"
 
 
+
 //Bring Back the 90s
 map/90s/starship						"sounds/Maps/doom_bbt90s/1_Starship.ogg"
 map/90s/deltabase					"sounds/Maps/doom_bbt90s/2_DeltaBase.ogg"
@@ -268,6 +291,7 @@ map/90s/powerstation				"sounds/Maps/doom_bbt90s/6_PowerStation.ogg"
 map/90s/research					"sounds/Maps/doom_bbt90s/7_ResearchComplex.ogg"
 map/90s/gateway					"sounds/Maps/doom_bbt90s/8_TheGateway.ogg"
 map/90s/cavern						"sounds/Maps/doom_bbt90s/9_TheCavern.ogg"
+
 
 
 //Toby's Death Arena
@@ -326,6 +350,7 @@ heretic/e1m8		"sounds/Maps/heretic_e1/HellsMaw.ogg"
 heretic/e1m9		"sounds/Maps/heretic_e1/TheGraveyard.ogg"
 
 
+
 //Heretic - Episode 2
 
 heretic/e2m1		"sounds/Maps/heretic_e2/TheCrater.ogg"
@@ -337,6 +362,7 @@ heretic/e2m6		"sounds/Maps/heretic_e2/TheLabyrinth.ogg"
 heretic/e2m7		"sounds/Maps/heretic_e2/TheGreatHall.ogg"
 heretic/e2m8		"sounds/Maps/heretic_e2/PortalsOfChaos.ogg"
 heretic/e2m9		"sounds/Maps/heretic_e2/TheGlacier.ogg"
+
 
 
 //Heretic - Episode 3
@@ -352,6 +378,7 @@ heretic/e3m8		"sounds/Maps/heretic_e3/DsparilsKeep.ogg"
 heretic/e3m9		"sounds/Maps/heretic_e3/TheAquafier.ogg"
 
 
+
 //Heretic - Episode 4
 
 heretic/e4m1		"sounds/Maps/heretic_e4/Catafalque.ogg"
@@ -363,6 +390,7 @@ heretic/e4m6		"sounds/Maps/heretic_e4/HallsOfTheApostate.ogg"
 heretic/e4m7		"sounds/Maps/heretic_e4/RampartsOfPerdition.ogg"
 heretic/e4m8		"sounds/Maps/heretic_e4/ShatteredBridge.ogg"
 heretic/e4m9		"sounds/Maps/heretic_e4/Mausoleum.ogg"
+
 
 
 //Heretic - Episode 5
@@ -379,6 +407,20 @@ heretic/e5m9		"sounds/Maps/heretic_e5/SkeinOfDsparil.ogg"
 
 
 
+//Heretic - Faith Renewed
+
+heretic/faith/e1m1	"sounds/Maps/heretic_faith/1_ThePlaza.ogg"
+heretic/faith/e1m2	"sounds/Maps/heretic_faith/2_StaithTown.ogg"
+heretic/faith/e1m3	"sounds/Maps/heretic_faith/3_CrimsonPalace.ogg"
+heretic/faith/e1m4	"sounds/Maps/heretic_faith/4_Watergate.ogg"
+heretic/faith/e1m5	"sounds/Maps/heretic_faith/5_CorrectionalTemple.ogg"
+heretic/faith/e1m6	"sounds/Maps/heretic_faith/6_Foundry.ogg"
+heretic/faith/e1m7	"sounds/Maps/heretic_faith/7_EyeOfDsparil.ogg"
+heretic/faith/e1m8	"sounds/Maps/heretic_faith/8_TheGrandChapel.ogg"
+heretic/faith/e1m9	"sounds/Maps/heretic_faith/9_PocketPlane.ogg"
+
+
+
 //Toby Hexen Levels
 
 toby/hexen/hex01		"sounds/Maps/hexen_toby/DarkCastle.ogg"
@@ -392,6 +434,7 @@ toby/hexen/hex08		"sounds/Maps/hexen_toby/WhatTheHex.ogg"
 toby/hexen/hex09		"sounds/Maps/hexen_toby/CitadelOfTheDoomed.ogg"
 toby/hexen/hex10		"sounds/Maps/hexen_toby/Korax.ogg"
 toby/hexen/hex11		"sounds/Maps/hexen_toby/TheSecretTomb.ogg"
+
 
 
 //Hexen - Main
@@ -427,3 +470,58 @@ hexen/map28				"sounds/Maps/hexen/MenelkirsTomb.ogg"
 hexen/map29				"sounds/Maps/hexen/TraductusTomb.ogg"
 hexen/map30				"sounds/Maps/hexen/Vivarium.ogg"
 hexen/map31				"sounds/Maps/hexen/DarkCrucible.ogg"
+
+
+
+//Hexen Unused/Demo Maps
+
+hexen/unused/unnamed		"sounds/Maps/hexen_unused/Unnamed.ogg"
+hexen/unused/bgokey			"sounds/Maps/hexen_unused/Bgokey.ogg"
+hexen/unused/email			"sounds/Maps/hexen_unused/EmailName.ogg"
+hexen/unused/eric				"sounds/Maps/hexen_unused/EricWhirlwind.ogg"
+hexen/unused/hypostyle		"sounds/Maps/hexen_unused/HypostyleHall.ogg"
+hexen/unused/maya			"sounds/Maps/hexen_unused/Maya.ogg"
+hexen/unused/paul1			"sounds/Maps/hexen_unused/PaulMap.ogg"
+hexen/unused/paul2			"sounds/Maps/hexen_unused/PaulMap2.ogg"
+hexen/unused/program		"sounds/Maps/hexen_unused/ProgrammerMap.ogg"
+hexen/unused/sounddev		"sounds/Maps/hexen_unused/SoundDevMap.ogg"
+hexen/unused/badlands		"sounds/Maps/hexen_unused/TheBadlands.ogg"
+
+
+
+//Hexen: Death Kings of the Dark Citadel
+
+hexen/dk/map41			"sounds/Maps/hexen_deathkings/1_RuinedVillage.ogg"
+hexen/dk/map42			"sounds/Maps/hexen_deathkings/2_Blight.ogg"
+hexen/dk/map43			"sounds/Maps/hexen_deathkings/3_Sump.ogg"
+hexen/dk/map44			"sounds/Maps/hexen_deathkings/4_Catacomb.ogg"
+hexen/dk/map45			"sounds/Maps/hexen_deathkings/5_Badlands.ogg"
+hexen/dk/map46			"sounds/Maps/hexen_deathkings/6_Brackenwood.ogg"
+hexen/dk/map47			"sounds/Maps/hexen_deathkings/7_Pyre.ogg"
+hexen/dk/map48			"sounds/Maps/hexen_deathkings/8_ConstablesGatr.ogg"
+hexen/dk/map49			"sounds/Maps/hexen_deathkings/9_Treasury.ogg"
+hexen/dk/map50			"sounds/Maps/hexen_deathkings/10_MarketPlace.ogg"
+hexen/dk/map51			"sounds/Maps/hexen_deathkings/11_LocusReq.ogg"
+hexen/dk/map52			"sounds/Maps/hexen_deathkings/12_Ordeal.ogg"
+hexen/dk/map53			"sounds/Maps/hexen_deathkings/13_Armory.ogg"
+hexen/dk/map54			"sounds/Maps/hexen_deathkings/14_Nave.ogg"
+hexen/dk/map55			"sounds/Maps/hexen_deathkings/15_Chantry.ogg"
+hexen/dk/map56			"sounds/Maps/hexen_deathkings/16_Abattoir.ogg"
+hexen/dk/map57			"sounds/Maps/hexen_deathkings/17_DarkWatch.ogg"
+hexen/dk/map58			"sounds/Maps/hexen_deathkings/18_Cloaca.ogg"
+hexen/dk/map59			"sounds/Maps/hexen_deathkings/19_IceHold.ogg"
+hexen/dk/map60			"sounds/Maps/hexen_deathkings/20_DarkCitadel.ogg"
+
+
+
+//Hexen: Vestiges of Grandure
+
+hexen/vog/map01		"sounds/Maps/hexen_vog/1_TempleOutskirts.ogg"
+hexen/vog/map02		"sounds/Maps/hexen_vog/2_SerpentTemple.ogg"
+hexen/vog/map03		"sounds/Maps/hexen_vog/3_SwampOfTheForgotten.ogg"
+hexen/vog/map04		"sounds/Maps/hexen_vog/4_GladeOfTheFallen.ogg"
+hexen/vog/map05		"sounds/Maps/hexen_vog/5_VolcanoChapel.ogg"
+hexen/vog/map06		"sounds/Maps/hexen_vog/6_FrozenSanctum.ogg"
+hexen/vog/map07		"sounds/Maps/hexen_vog/7_ElementalTemple.ogg"
+hexen/vog/map08		"sounds/Maps/hexen_vog/8_KoraxDomain.ogg"
+hexen/vog/map09		"sounds/Maps/hexen_vog/9_GardenOfMedea.ogg"
