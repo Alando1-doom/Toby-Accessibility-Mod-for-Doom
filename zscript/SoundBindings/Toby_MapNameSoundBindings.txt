@@ -1,4 +1,5 @@
 //Doom 1 Version 1.9ud - MD5: c4fe9fd920207691a9f493668e0a2083
+
 //EPISODE 1
 //E1M1 - Hangar
 {"Checksum":"b49f7a6c519757d390d52667db7d8793", "SoundToPlay":"map/doom1/hangar"}
@@ -18,6 +19,7 @@
 {"Checksum":"058fb092ea1b70da1e3cbf501c4a91a1", "SoundToPlay":"map/doom1/phobosanomaly"}
 //E1M9 - Military Base
 {"Checksum":"1dbf91738492fb0e29836a2d66406cf1", "SoundToPlay":"map/doom1/militarybase"}
+
 
 //EPISODE 2
 //E2M1 - Deimos Anomaly
@@ -39,6 +41,7 @@
 //E2M9 - Fortress of Mystery
 {"Checksum":"8a6399faaa2e68649d4e4b16642074be", "SoundToPlay":"map/doom1/fortressofmystery"}
 
+
 //EPISODE 3
 //E3M1 - Hell Keep
 {"Checksum":"c4a89a481a32bfeddeb82e818f2bdec5", "SoundToPlay":"map/doom1/hellkeep"}
@@ -59,6 +62,7 @@
 //E3M9 - Warrens
 {"Checksum":"fe97dcb9e6235fb3c52ae7c143160d73", "SoundToPlay":"map/doom1/warrens"}
 
+
 //EPISODE 4
 //E4M1 - Hell Beneath
 {"Checksum":"da0c8281ac70eec31127c228bcd7fe2c", "SoundToPlay":"map/doom1/hellbeneath"}
@@ -78,6 +82,7 @@
 {"Checksum":"2dc939e508ab8eb68af79d5b60568711", "SoundToPlay":"map/doom1/untothecruel"}
 //E4M9 - Fear
 {"Checksum":"78556d238ffec8058cacc48b847e1fab", "SoundToPlay":"map/doom1/fear"}
+
 
 
 //SIGIL_v1_21.wad - MD5: c4fe9fd920207691a9f493668e0a2083
@@ -101,6 +106,7 @@
 {"Checksum":"2a6b4d277f526bfb3adb122609feead7", "SoundToPlay":"map/doom1/realmofiblis"}
 
 
+
 //SIGIL 2 V1.0
 //E6M1 - Cursed Darkness
 {"Checksum":"42d1c15691efe8664edc0f611242131a", "SoundToPlay":"map/doom1/curseddarkness"}
@@ -120,6 +126,7 @@
 {"Checksum":"5ba3d00f6b64f6268e11c6851d47ecbf", "SoundToPlay":"map/doom1/abyssofdespair"}
 //E6M9 - Shattered Homecoming
 {"Checksum":"7d6698b2dd1904908144a3aec4bd53fa", "SoundToPlay":"map/doom1/shatteredhomecoming"}
+
 
 
 //Doom 2 version 1.9 - MD5: 25e1459ca71d321525f84628f45ca8cd
@@ -189,6 +196,7 @@
 {"Checksum":"aa4ca3fc891d13821accabd836e29eb5", "SoundToPlay":"map/doom2/grosse"}
 
 
+
 //Doom 2: BFG Edition - MD5: c3bea40570c23e511a7ed3ebcd9865f7
 //Map02 - Underhalls
 {"Checksum":"1ec0af1e3985650f0c9000319c599d0c", "SoundToPlay":"map/doom2/underhalls"}
@@ -198,6 +206,7 @@
 {"Checksum":"9aa7780b46ec4471f630572798943d71", "SoundToPlay":"map/doom2bfg/keen"}
 //Map33 - Betray
 {"Checksum":"915409a89746d6bfd92c7956be6a0a2d", "SoundToPlay":"map/doom2bfg/betray"}
+
 
 
 //TNT Version 1.9 - MD5: 4e158d9953c79ccf97bd0663244cc6b6
@@ -267,6 +276,7 @@
 {"Checksum":"d99ad22ff21a41b4eecdb3a7c803d75e", "SoundToPlay":"map/tnt/carribean"}
 
 
+
 //Plutonia - MD5: 75c8cf89566741fa9d22447604053bd7
 //MAP01 - Congo
 {"Checksum":"acf8b3fa7f972ff969127ab920c6c12d", "SoundToPlay":"map/plutonia/congo"}
@@ -334,6 +344,7 @@
 {"Checksum":"d5f64e02679a81b82006af34a6a8eac3", "SoundToPlay":"map/plutonia/go2it"}
 
 
+
 //No Rest For The Living - MD5: 967d5ae23daf45196212ae1b605da3b0
 //LEVEL01 - The Earth Base
 {"Checksum":"3843b06a279eb9cedc18c30cf32074c2", "SoundToPlay":"map/norest/theearthbase"}
@@ -355,7 +366,28 @@
 {"Checksum":"fde03d8f2d3d8e37483fc4589b3d54e9", "SoundToPlay":"map/norest/marchofthedemons"}
 
 
+
+//Legacy of Rust
+//MAP01 - Scar Gate
+//MAP02 - Sanguine Wastes
+//MAP03 - Ash Mill
+//MAP04 - Descending Inferno
+//MAP05 - Creeping Hate
+//MAP06 - The Coiled City
+//MAP07 - Forfeited Salvation
+//MAP08 - Second Coming
+//MAP09 - Falsehood
+//MAP10 - Dis Union
+//MAP11 - Echoes of Pain
+//MAP12 - The Rack
+//MAP13 - Soul Silo
+//MAP14 - Brink
+//MAP15 - Panopticon
+
+
+
 //Toby Doom Mega Deluxe Map Pack - MD5: c1bdcb0a94319e3a96aff78d55f90154
+//TOBY DOOM1 MAPS
 //MAP01 - Hangar
 {"Checksum":"06a0b36235ca342b77bd79a29c4852f5", "SoundToPlay":"map/toby/hangar"}
 //MAP02 - Command Center
@@ -397,6 +429,7 @@
 //MAP20 - City of Dis
 {"Checksum":"2e9ba38a2d81f5877f251d689f0ffe79", "SoundToPlay":"map/toby/cityofdis"}
 
+//TOBY DOOM 2 MAPS
 // MAP21 - Entryway
 {"Checksum":"588d8568c81681867b840711da872978", "SoundToPlay":"map/toby/entryway"}
 // MAP22 - Underhalls
@@ -439,6 +472,7 @@
 {"Checksum":"6dae1264c486574be17a4152ec4875a1", "SoundToPlay":"map/toby/iconofsin"}
 
 
+
 //OperationMDK-Beta1_95 - MD5: 6e50792b4e89e91a087a0b059e0be8a3
 // MAP01 - UMS Atlantia
 {"Checksum":"d792136e3debbbbe0e494a1558433a1c", "SoundToPlay":"map/mdk/umsatlantia", "LevelStartPlaybackDelay":"350" }
@@ -478,6 +512,7 @@
 {"Checksum":"0386cdb05624bba70d45d14fff694f63", "SoundToPlay":"map/mdk/thegatekeeper", "LevelStartPlaybackDelay":"270"}
 
 
+
 //Bring Back the 90s
 //E1M1 - Starship
 {"Checksum":"2305eb8e05c0ac11c9557164ec7cfd91", "SoundToPlay":"map/90s/starship"}
@@ -497,6 +532,7 @@
 {"Checksum":"b6fbb64cb28288e97862905b7e451ea8", "SoundToPlay":"map/90s/gateway"}
 //E1M9 - The Cavern
 {"Checksum":"0a8c47e6346452db88d2e334f7a058ad", "SoundToPlay":"map/90s/cavern"}
+
 
 
 //Toby's Death Arena Maps
@@ -523,25 +559,8 @@
 
 
 
-//Toby Heretic Maps
-//E1M1 - The Docks
-{"Checksum":"59dcf5a7681613e96877570d91b68941", "SoundToPlay":"heretic/e1m1"}
-//E1M2 - The Dungeons
-{"Checksum":"8a2e9eef05ba563adf0375baf6bea84c", "SoundToPlay":"heretic/e1m2"}
-//E1M3 - The Gatehouse
-{"Checksum":"fbbb5e3b9e77e4ad11fcec05d87b0064", "SoundToPlay":"heretic/e1m3"}
-//E1M4 - The Guard Tower
-{"Checksum":"422fc6d0ac8b535afdf919d228d6db40", "SoundToPlay":"heretic/e1m4"}
-//E1M5 - The Citadel
-{"Checksum":"b7f15dcf9c23ab110ab90ab3a9151cff", "SoundToPlay":"heretic/e1m5"}
-//E1M6 - The Cathedral
-{"Checksum":"11e9e475b21630f165cf266e8d26abe9", "SoundToPlay":"heretic/e1m6"}
-//E1M7 - The Crypt
-{"Checksum":"53e1515a22a1c9d0767a0c8716754445", "SoundToPlay":"heretic/e1m7"}
-//E1M8 - Hell's Maw
-{"Checksum":"456735a26815746d13b57577b074e4fc", "SoundToPlay":"heretic/e1m8"}
-
 //Classic Heretic Maps
+
 //Episode 1
 //E1M1 - The Docks
 {"Checksum":"006deab129c225f3ed4bf70f67a122f9", "SoundToPlay":"heretic/e1m1"}
@@ -561,6 +580,7 @@
 {"Checksum":"27639d04f8090d57a47d354992435893", "SoundToPlay":"heretic/e1m8"}
 //E1M9 - The Graveyard
 {"Checksum":"9dbc65690993f7988baac71d35f2ac4f", "SoundToPlay":"heretic/e1m9"}
+
 
 //Episode 2
 //E2M1 - The Crater
@@ -582,6 +602,7 @@
 //E2M9 - The Glacier
 {"Checksum":"7285877bb9726c7b934c28f7e733c28b", "SoundToPlay":"heretic/e2m9"}
 
+
 //Episode 3
 //E3M1 - The Storehouse
 {"Checksum":"84ec63f1412348f3275075489713478c", "SoundToPlay":"heretic/e3m1"}
@@ -601,6 +622,7 @@
 {"Checksum":"4719c2c71ef28f52310b889dd5a9778b", "SoundToPlay":"heretic/e3m8"}
 //E3M9 - The Aquafier
 {"Checksum":"9299ac9604195379f01ba27d43468464", "SoundToPlay":"heretic/e3m9"}
+
 
 //Episode 4
 //E4M1 - Catafalque
@@ -622,6 +644,7 @@
 //E4M9 - Mausoleum
 {"Checksum":"41c5437160f07d607af413c7742de70c", "SoundToPlay":"heretic/e4m9"}
 
+
 //Episode 5
 //E5M1 - Ochre Cliffs
 {"Checksum":"cab396cf990de6b4ff5cf3c60fb2babf", "SoundToPlay":"heretic/e5m1"}
@@ -641,6 +664,157 @@
 {"Checksum":"85ac7d20d18f9bc49b9696cc2e67f029", "SoundToPlay":"heretic/e5m8"}
 //E5M9 - Skein of D'sparil
 {"Checksum":"b7fdab05b21af564bc9552676f695213", "SoundToPlay":"heretic/e5m9"}
+
+
+
+//Heretic Updated Maps (Heretic+Hexen)
+
+//Episode 1 - EX
+//E1M1 - The Docks
+{"Checksum":"f2a91413a942109c69da53b487ff1fcf", "SoundToPlay":"heretic/e1m1"}
+//E1M2 - The Dungeons
+{"Checksum":"8ac274396a877ff547d0747c0d59c364", "SoundToPlay":"heretic/e1m2"}
+//E1M3 - The Gatehouse
+{"Checksum":"51e128c5a2128353e02feaad5449300e", "SoundToPlay":"heretic/e1m3"}
+//E1M4 - The Guard Tower
+{"Checksum":"5dd9600f90b02078d1ee29403adadfdc", "SoundToPlay":"heretic/e1m4"}
+//E1M5 - The Citadel
+{"Checksum":"12646c9db882499d92ebd950c8755f72", "SoundToPlay":"heretic/e1m5"}
+//E1M6 - The Cathedral
+{"Checksum":"0fc0d6358e58b95a80972b7966e2a016", "SoundToPlay":"heretic/e1m6"}
+//E1M7 - The Crypts
+{"Checksum":"ec079c95ea885cc8220e851de1ed516d", "SoundToPlay":"heretic/e1m7"}
+//E1M8 - Hell's Maw
+{"Checksum":"a22b5208322f9a9b006bfea4162b5fa8", "SoundToPlay":"heretic/e1m8"}
+//E1M9 - The Graveyard
+{"Checksum":"15767102817c076215cea2912289748a", "SoundToPlay":"heretic/e1m9"}
+
+
+//Episode 2 - EX
+//E2M1 - The Crater
+{"Checksum":"62b3b4da897ed81da73c11c9b7b5bd92", "SoundToPlay":"heretic/e2m1"}
+//E2M2 - The Lava Pits
+{"Checksum":"955e11486e2366f1cb48143411417361", "SoundToPlay":"heretic/e2m2"}
+//E2M3 - The River Of Fire
+{"Checksum":"18723a33a565b029b045e443c30f6f47", "SoundToPlay":"heretic/e2m3"}
+//E2M4 - The Ice Grotto
+{"Checksum":"0c78970217845ee5a8f74cdcda0b916f", "SoundToPlay":"heretic/e2m4"}
+//E2M5 - The Catacombs
+{"Checksum":"f8c0057c619102331efd537d23d8961c", "SoundToPlay":"heretic/e2m5"}
+//E2M6 - The Labyrinth
+{"Checksum":"d271dc83ff90016c71e084f7d8380479", "SoundToPlay":"heretic/e2m6"}
+//E2M7 - The Great Hall
+{"Checksum":"1b465d904c39fea82bda9fddc8f94296", "SoundToPlay":"heretic/e2m7"}
+//E2M8 - The Portals Of Chaos
+{"Checksum":"1e802f7427aa3419344a53bf20b88eee", "SoundToPlay":"heretic/e2m8"}
+//E2M9 - The Glacier
+{"Checksum":"bed0362792253b2c8193e122f3c47aac", "SoundToPlay":"heretic/e2m9"}
+
+
+//Episode 3 - EX
+//E3M1 - The Storehouse
+{"Checksum":"66aa1d0a6f003fec6b733a45a10e96df", "SoundToPlay":"heretic/e3m1"}
+//E3M2 - The Cesspool
+{"Checksum":"d3f94d315a72af4153809d494fc3ee9b", "SoundToPlay":"heretic/e3m2"}
+//E3M3 - The Confluence
+{"Checksum":"8c33f7f86be12e61fe850057c61850ec", "SoundToPlay":"heretic/e3m3"}
+//E3M4 - The Azure Fortress
+{"Checksum":"061dba068c7de8137109ed2f698b4e3a", "SoundToPlay":"heretic/e3m4"}
+//E3M5 - The Ophidian Lair
+{"Checksum":"493b2f36afb146048fdcdd13b40be60f", "SoundToPlay":"heretic/e3m5"}
+//E3M6 - The Halls Of Fear
+{"Checksum":"ec69a6fb9963aa323521ced27a4e1f4e", "SoundToPlay":"heretic/e3m6"}
+//E3M7 - The Chasm
+{"Checksum":"6108bd75b2de222a305fb539d444f023", "SoundToPlay":"heretic/e3m7"}
+//E3M8 - D'Sparil's Keep
+{"Checksum":"f3a5621af1cf03e4244fc657cc6fc8f0", "SoundToPlay":"heretic/e3m8"}
+//E3M9 - The Aquafer
+{"Checksum":"180c6579e203572b1e61dba00f2daf0e", "SoundToPlay":"heretic/e3m9"}
+
+
+//Episode 4 - EX
+//E4M1 - Catafalque
+{"Checksum":"635b8a068024d7513ad2d00f929d1f18", "SoundToPlay":"heretic/e4m1"}
+//E4M2 - Blockhouse
+{"Checksum":"c052c895069d97b46b1b8fecd5eb04c9", "SoundToPlay":"heretic/e4m2"}
+//E4M3 - Ambulatory
+{"Checksum":"320b6845a366a3ec9276cfcdf37247d1", "SoundToPlay":"heretic/e4m3"}
+//E4M4 - Sepulcher
+{"Checksum":"96b57faa16ced6b3a4f8b002014dc528", "SoundToPlay":"heretic/e4m4"}
+//E4M5 - Great Stair
+{"Checksum":"a89621897922eead438a129da81b193f", "SoundToPlay":"heretic/e4m5"}
+//E4M6 - Halls of the Apostate
+{"Checksum":"c7080ece9a2b8b1ab1a77d44a67a0bd7", "SoundToPlay":"heretic/e4m6"}
+//E4M7 - Ramparts of Perdition
+{"Checksum":"91d7a172acbef01406fd05b028d1c2fb", "SoundToPlay":"heretic/e4m7"}
+//E4M8 - Shattered Bridge
+{"Checksum":"88f2ef4e6b2c9273a0e5491c2a982008", "SoundToPlay":"heretic/e4m8"}
+//E4M9 - Mausoleum
+{"Checksum":"b84273cfafc648e02136ff5deb7ca725", "SoundToPlay":"heretic/e4m9"}
+
+
+//Episode 5 - EX
+//E5M1 - Ochre Cliffs
+{"Checksum":"cbf3eea89877aa37222e5bcd8dfee40c", "SoundToPlay":"heretic/e5m1"}
+//E5M2 - Rapids
+{"Checksum":"bd476007d026cb7d8af2599ba14589ed", "SoundToPlay":"heretic/e5m2"}
+//E5M3 - Quay
+{"Checksum":"a10a2caa91adb4dfc4a61495a91f9cff", "SoundToPlay":"heretic/e5m3"}
+//E5M4 - Courtyard
+{"Checksum":"3816b7a9be3eb59a8145527c71644ba3", "SoundToPlay":"heretic/e5m4"}
+//E5M5 - Hydratyr
+{"Checksum":"12a202721dc39f67b5f66edc329397b5", "SoundToPlay":"heretic/e5m5"}
+//E5M6 - Colonnade
+{"Checksum":"84691723b43a409c4cf1ce7abc8da41f", "SoundToPlay":"heretic/e5m6"}
+//E5M7 - Foetid Manse
+{"Checksum":"e7f6423a69e9822f13485c7d1d21467b", "SoundToPlay":"heretic/e5m7"}
+//E5M8 - Field of Judgement
+{"Checksum":"b1fab54424e35458f76495b034f561fa", "SoundToPlay":"heretic/e5m8"}
+//E5M9 - Skein of D'sparil
+{"Checksum":"c226fcf123d5fcbff22e8c7200be38dd", "SoundToPlay":"heretic/e5m9"}
+
+
+
+//Toby Heretic Maps
+//E1M1 - The Docks
+{"Checksum":"59dcf5a7681613e96877570d91b68941", "SoundToPlay":"heretic/e1m1"}
+//E1M2 - The Dungeons
+{"Checksum":"8a2e9eef05ba563adf0375baf6bea84c", "SoundToPlay":"heretic/e1m2"}
+//E1M3 - The Gatehouse
+{"Checksum":"fbbb5e3b9e77e4ad11fcec05d87b0064", "SoundToPlay":"heretic/e1m3"}
+//E1M4 - The Guard Tower
+{"Checksum":"422fc6d0ac8b535afdf919d228d6db40", "SoundToPlay":"heretic/e1m4"}
+//E1M5 - The Citadel
+{"Checksum":"b7f15dcf9c23ab110ab90ab3a9151cff", "SoundToPlay":"heretic/e1m5"}
+//E1M6 - The Cathedral
+{"Checksum":"11e9e475b21630f165cf266e8d26abe9", "SoundToPlay":"heretic/e1m6"}
+//E1M7 - The Crypt
+{"Checksum":"53e1515a22a1c9d0767a0c8716754445", "SoundToPlay":"heretic/e1m7"}
+//E1M8 - Hell's Maw
+{"Checksum":"456735a26815746d13b57577b074e4fc", "SoundToPlay":"heretic/e1m8"}
+
+
+
+//Heretic: Faith Renewed
+//E1M1 - The Plaza
+{"Checksum":"7337b17e366f4ec1e88d93c6388b2852", "SoundToPlay":"heretic/faith/e1m1"}
+//E1M2 - Staith Town
+{"Checksum":"e4cb9d6dc267a6703b9bd96ebd451bbc", "SoundToPlay":"heretic/faith/e1m2"}
+//E1M3 - Crimson Palace
+{"Checksum":"124a23d21379ff7bf44428d83c829b83", "SoundToPlay":"heretic/faith/e1m3"}
+//E1M4 - Watergate
+{"Checksum":"895fca9aa8bc3e4b644b5c97187f5ca7", "SoundToPlay":"heretic/faith/e1m4"}
+//E1M5 - Correctional Temple
+{"Checksum":"2cc061a4bac11e795af6ebd5fd7bd904", "SoundToPlay":"heretic/faith/e1m5"}
+//E1M6 - Foundry
+{"Checksum":"8c93daa4b2ba925520fa4f419602545a", "SoundToPlay":"heretic/faith/e1m6"}
+//E1M7 - Eye of D'Sparil
+{"Checksum":"fc0d993f808c41ca60a18883f7f6c277", "SoundToPlay":"heretic/faith/e1m7"}
+//E1M8 - The Grand Chapel
+{"Checksum":"8773c67939b94fbd13199341f0fb9ecd", "SoundToPlay":"heretic/faith/e1m8"}
+//E1M9 - Pocket Plane
+{"Checksum":"531e1207352bfb3e9579d2ac27885fa7", "SoundToPlay":"heretic/faith/e1m9"}
+
 
 
 //Classic Hexen Maps
@@ -708,6 +882,191 @@
 {"Checksum":"2a6c4235b942467d25fd50d5b313e67a", "SoundToPlay":"hexen/map31"}
 
 
+
+//Hexen Updated Maps (Heretic+Hexen)
+//Winnowing Hall
+{"Checksum":"c9203e6a98bc3b28b3946981ec6193ef", "SoundToPlay":"hexen/map01"}
+//Seven Portals
+{"Checksum":"a70541e945397fcc8a0b6e05f4a07169", "SoundToPlay":"hexen/map02"}
+//Guardian of Ice
+{"Checksum":"4ae928b8a102bd32af40a1c07b4337ec", "SoundToPlay":"hexen/map03"}
+//Guardian of Fire
+{"Checksum":"cd7f6d11956f412353ccf21d9057fb13", "SoundToPlay":"hexen/map04"}
+//Guardian of Steel
+{"Checksum":"f34d2af0644a817c3b812bd00a904784", "SoundToPlay":"hexen/map05"}
+//Bright Crucible
+{"Checksum":"b635c79356556ee7678ae9d70d7021a8", "SoundToPlay":"hexen/map06"}
+//Shadow Wood - it's really MAP13
+{"Checksum":"ac8fb36f9eb42152d8c589a30f4bdc48", "SoundToPlay":"hexen/map07"}
+//Darkmere
+{"Checksum":"6f519ac9cc9e81efbb52dc207f48e30a", "SoundToPlay":"hexen/map08"}
+//Caves of Circe
+{"Checksum":"1d9d38a4f522fbebbeb8b8234d2d5e96", "SoundToPlay":"hexen/map09"}
+//Wastelands
+{"Checksum":"6cca80256fb643e1c91f6f8dbaf962e5", "SoundToPlay":"hexen/map10"}
+//Sacred Grove
+{"Checksum":"bfb177b61387aec97c960a7b246ffeaf", "SoundToPlay":"hexen/map11"}
+//Hypostyle
+{"Checksum":"9a9439c2d89a14d379b24ad495e03058", "SoundToPlay":"hexen/map12"}
+//Heresiarch's Seminary - it's really MAP27
+{"Checksum":"f95a13683700d4c5cdcbbf2b8ad11a77", "SoundToPlay":"hexen/map13"}
+//Dragon Chapel - it's really MAP28
+{"Checksum":"d4929f3e4fb9851a2e16b393419620ca", "SoundToPlay":"hexen/map14"}
+//Griffin Chapel - it's really MAP30
+{"Checksum":"8f021753e745a29c41b2281788972820", "SoundToPlay":"hexen/map15"}
+//Deathwind Chapel - it's really MAP31
+{"Checksum":"0e259121dee085df2a64d88465454f82", "SoundToPlay":"hexen/map16"}
+//Orchard of Lamentations - it's really MAP32
+{"Checksum":"896b9edac8aff2066464326ac38a3059", "SoundToPlay":"hexen/map17"}
+//Silent Refectory - it's really MAP33
+{"Checksum":"46ab509b32923145292c28e128be1c20", "SoundToPlay":"hexen/map18"}
+//Wolf Chapel - it's really MAP34
+{"Checksum":"c64d54adc8bf136024417b2e762f63a7", "SoundToPlay":"hexen/map19"}
+//Forsaken Outpost
+{"Checksum":"ab7a622ddcc0fd527b7d02e57701cc20", "SoundToPlay":"hexen/map20"}
+//Castle of Grief
+{"Checksum":"908cb8c3d768284dccd2f2ddb4b71101", "SoundToPlay":"hexen/map21"}
+//Gibbet
+{"Checksum":"3eda2d8357920ad17758823b5772f130", "SoundToPlay":"hexen/map22"}
+//Effluvium
+{"Checksum":"46345682cb4d6ebfd7662280ea03d0a6", "SoundToPlay":"hexen/map23"}
+//Dungeons
+{"Checksum":"2dc7eb6080722aabf45103b682b473f4", "SoundToPlay":"hexen/map24"}
+//Desolate Garden
+{"Checksum":"908dbba979d70d989f1b76f07293d778", "SoundToPlay":"hexen/map25"}
+//Necropolis
+{"Checksum":"c39dae89fa0f5ee3f2d2664c774e1d92", "SoundToPlay":"hexen/map26"}
+//Zedek's Tomb
+{"Checksum":"2d6ef4c3379cf73a6caba9749c49cd2c", "SoundToPlay":"hexen/map27"}
+//Menelkir's Tomb
+{"Checksum":"c5053ec1de6c548f19699cfc7c587462", "SoundToPlay":"hexen/map28"}
+//Traductus' Tomb
+{"Checksum":"0b63b4e39e9e55600109374bf1815e32", "SoundToPlay":"hexen/map29"}
+//Vivarium
+{"Checksum":"8477c8060aca2019b15eacc3f0acb081", "SoundToPlay":"hexen/map30"}
+//Dark Crucible
+{"Checksum":"f220e1832a2b81ad1f28c49c74956285", "SoundToPlay":"hexen/map31"}
+
+
+
+//Hexen Unused Maps
+//MAP41 - Unnamed
+{"Checksum":"ace533627de4de4d2418e225d680203c", "SoundToPlay":"hexen/unused/unnamed"}
+//MAP42 - Eric's Whirlwind O' Death
+{"Checksum":"22902c614157c699cce21ee896c9c8fd", "SoundToPlay":"hexen/unused/eric"}
+//MAP43 - Maya
+{"Checksum":"1a0986336f0b7c5487cf7984735792b0", "SoundToPlay":"hexen/unused/maya"}
+//MAP50 - The Badlands
+{"Checksum":"bbd442c513670e241442baefca47bdd3", "SoundToPlay":"hexen/unused/badlands"}
+//MAP53 - The Hypostyle Hall
+{"Checksum":"57c8d145a13819d301b29cb1bca5e282", "SoundToPlay":"hexen/unused/hypostyle"}
+//MAP60 - Programmer Map
+{"Checksum":"dcb2e28bae69c714b3cb2ec1a0fafd6c", "SoundToPlay":"hexen/unused/program"}
+//MAP88 - Unnamed
+{"Checksum":"9ce82ceb28a3d2b13357ab733aa2ea97", "SoundToPlay":"hexen/unused/unnamed"}
+//MAP90 - Bgokey
+{"Checksum":"6fb60c55f153c3201c9dfa79fa5a3390", "SoundToPlay":"hexen/unused/bgokey"}
+//MAP91 - Unnamed
+{"Checksum":"dcb2e28bae69c714b3cb2ec1a0fafd6c", "SoundToPlay":"hexen/unused/unnamed"}
+//MAP92 - Paul Map
+{"Checksum":"ff8058ce5f559d843c4cba787e91d45f", "SoundToPlay":"hexen/unused/paul1"}
+//MAP93 - Paul Map 2
+{"Checksum":"4fe3a2a17a9b203ee1d668db2745c1c3", "SoundToPlay":"hexen/unused/paul2"}
+//MAP95 - cjr@ravensoft.com
+{"Checksum":"baa483a535e1c33e91000511535a9b21", "SoundToPlay":"hexen/unused/email"}
+//MAP96 - Sound Development Map
+{"Checksum":"5d0aca5261a4151c218b5f600a47734c", "SoundToPlay":"hexen/unused/sounddev"}
+
+
+
+//Hexen: Death Kings of the Dark Citadel - Classic
+//MAP41 - Ruined Village
+{"Checksum":"6c886a3e37410c6fc83ed87bb6e9864f", "SoundToPlay":"hexen/dk/map41"}
+//MAP42 - Blight
+{"Checksum":"e3efb0156a20adf2df00915a0ea85df5", "SoundToPlay":"hexen/dk/map42"}
+//MAP43 - Sump
+{"Checksum":"a5f820cb016de3d9a402c0173e7f9998", "SoundToPlay":"hexen/dk/map43"}
+//MAP44 - Catacomb
+{"Checksum":"b295a2fbb187a1dc8aefde825dfb084a", "SoundToPlay":"hexen/dk/map44"}
+//MAP45 - Badlands
+{"Checksum":"c35f7cb2e9f93bb331ffceb6622abd64", "SoundToPlay":"hexen/dk/map45"}
+//MAP46 - Brackenwood
+{"Checksum":"cb0334184147ff565f6ef437f316b3eb", "SoundToPlay":"hexen/dk/map46"}
+//MAP47 - Pyre
+{"Checksum":"7dc65d5029dd834481cd716b3d71388a", "SoundToPlay":"hexen/dk/map47"}
+//MAP48 - Constable's Gate
+{"Checksum":"15fc0991d975325556eff71f241a4458", "SoundToPlay":"hexen/dk/map48"}
+//MAP49 - Treasury
+{"Checksum":"2945edc2a9d7222ae54f0c68e1ea79fc", "SoundToPlay":"hexen/dk/map49"}
+//MAP50 - Market Place
+{"Checksum":"6faffeaae301fd341169a3cc63cbe183", "SoundToPlay":"hexen/dk/map50"}
+//MAP51 - Locus Requiescat
+{"Checksum":"7721b620ea970df48ff4a18489822f6c", "SoundToPlay":"hexen/dk/map51"}
+//MAP52 - Ordeal
+{"Checksum":"90b4951f996ba30096f2d4238eec39ca", "SoundToPlay":"hexen/dk/map52"}
+//MAP53 - Armory
+{"Checksum":"7c28fd1ed662667fc54cda123cf0614a", "SoundToPlay":"hexen/dk/map53"}
+//MAP54 - Nave
+{"Checksum":"e2b5d1400279335811c1c1c0b437d9c8", "SoundToPlay":"hexen/dk/map54"}
+//MAP55 - Chantry
+{"Checksum":"2fad54b58487884f06eafa507b553921", "SoundToPlay":"hexen/dk/map55"}
+//MAP56 - Abattoir
+{"Checksum":"b77d810c972976c54a694c62361fff9d", "SoundToPlay":"hexen/dk/map56"}
+//MAP57 - Dark Watch
+{"Checksum":"ca7825f84bc08e76c6c85a41aefe4370", "SoundToPlay":"hexen/dk/map57"}
+//MAP58 - Cloaca
+{"Checksum":"0487193ffc57884edb053f3e9148c534", "SoundToPlay":"hexen/dk/map58"}
+//MAP59 - Ice Hold
+{"Checksum":"11a83aae9f747e1ba649f52d6c2ddb3a", "SoundToPlay":"hexen/dk/map59"}
+//MAP60 - Dark Citadel
+{"Checksum":"b0addb295a3acce43978aac91fb8c58a", "SoundToPlay":"hexen/dk/map60"}
+
+
+
+//Hexen: Death Kings of the Dark Citadel Updated Maps (Heretic+Hexen)
+//MAP41 - Ruined Village
+{"Checksum":"64c211d09f2dae01811d87938c1a2f54", "SoundToPlay":"hexen/dk/map41"}
+//MAP42 - Blight
+{"Checksum":"8937bba3f3cb68d8cd9307c55397dad0", "SoundToPlay":"hexen/dk/map42"}
+//MAP43 - Sump
+{"Checksum":"b74bfa07b545567feb2534223a08ba02", "SoundToPlay":"hexen/dk/map43"}
+//MAP44 - Catacomb
+{"Checksum":"c43eff7345b3f07ab00ebcd2b05d759d", "SoundToPlay":"hexen/dk/map44"}
+//MAP45 - Badlands
+{"Checksum":"002583855ab03538d394ade1c871570a", "SoundToPlay":"hexen/dk/map45"}
+//MAP46 - Brackenwood
+{"Checksum":"59481d4d007ab316aedb74ec0d4b9e6b", "SoundToPlay":"hexen/dk/map46"}
+//MAP47 - Pyre
+{"Checksum":"aea0c0c810af8a936b9df5ac50cf4393", "SoundToPlay":"hexen/dk/map47"}
+//MAP48 - Constable's Gate
+{"Checksum":"9ddcb53c10babb2df5d20621c96589ff", "SoundToPlay":"hexen/dk/map48"}
+//MAP49 - Treasury
+{"Checksum":"46e40ba0c63a789c424edc38ce2d7f4f", "SoundToPlay":"hexen/dk/map49"}
+//MAP50 - Market Place
+{"Checksum":"a0e031c867cedcae7a6f26f580d6eac1", "SoundToPlay":"hexen/dk/map50"}
+//MAP51 - Locus Requiescat
+{"Checksum":"bd90e66e10d4c1cc80cb63451cc248aa", "SoundToPlay":"hexen/dk/map51"}
+//MAP52 - Ordeal
+{"Checksum":"eee142666b8d76a40b4392545d849e0f", "SoundToPlay":"hexen/dk/map52"}
+//MAP53 - Armory
+{"Checksum":"bf8f23d129c3641ee60b28e127368f6d", "SoundToPlay":"hexen/dk/map53"}
+//MAP54 - Nave
+{"Checksum":"483d381b638a6b4cd77456951fa970ae", "SoundToPlay":"hexen/dk/map54"}
+//MAP55 - Chantry
+{"Checksum":"4ab270087ce447e045d975ad5d276406", "SoundToPlay":"hexen/dk/map55"}
+//MAP56 - Abattoir
+{"Checksum":"aea19236d4cf4e0bdcbf69af5ce5ba51", "SoundToPlay":"hexen/dk/map56"}
+//MAP57 - Dark Watch
+{"Checksum":"f4c0a8b30316d239f67c8d7b09fe4488", "SoundToPlay":"hexen/dk/map57"}
+//MAP58 - Cloaca
+{"Checksum":"4e7646dfcb9dd52cf9a1cc2a5875a312", "SoundToPlay":"hexen/dk/map58"}
+//MAP59 - Ice Hold
+{"Checksum":"e1aff3278811b785ca7b957ed9b6547f", "SoundToPlay":"hexen/dk/map59"}
+//MAP60 - Dark Citadel
+{"Checksum":"13c43032885b1bcb458774cb985f4ee2", "SoundToPlay":"hexen/dk/map60"}
+
+
+
 //Toby Hexen Maps
 //The Dark Castle
 {"Checksum":"0159ac62f1c177236164611aa8394efb", "SoundToPlay":"toby/hexen/hex01"}
@@ -733,3 +1092,25 @@
 {"Checksum":"60489b9d05a4be30c20dd9a202f7f90c", "SoundToPlay":"toby/hexen/hex10"}
 //The Secret Tomb
 {"Checksum":"1770d7ee834b49e58f2a4b06e12b2981", "SoundToPlay":"toby/hexen/hex11"}
+
+
+
+//Hexen: Vestiges of Grandure
+//MAP01 - Temple Outskirts
+{"Checksum":"79cd2ceca004ff53fa9baa500ed1b508", "SoundToPlay":"hexen/vog/map01"}
+//MAP02 - Serpent Temple
+{"Checksum":"717919a742ba052be48616e2b0ae6256", "SoundToPlay":"hexen/vog/map02"}
+//MAP03 - Swamp of the Forgotten
+{"Checksum":"cf18fb032c237422e509a67157cbede9", "SoundToPlay":"hexen/vog/map03"}
+//MAP04 - Glade of the Fallen
+{"Checksum":"7a5eca1226592d878b15339d075f9866", "SoundToPlay":"hexen/vog/map04"}
+//MAP05 - Volcano Chapel
+{"Checksum":"31fc35366400453ebc5644f542dd832d", "SoundToPlay":"hexen/vog/map05"}
+//MAP06 - Frozen Sanctum
+{"Checksum":"727027e4504b93b329cbc7c90ce82700", "SoundToPlay":"hexen/vog/map06"}
+//MAP07 - Elemental Temple
+{"Checksum":"fbfa17f7827dec93c08c94243643e9b5", "SoundToPlay":"hexen/vog/map07"}
+//MAP08 - Korax's Domain
+{"Checksum":"f84fb9ba123bd79cf7a037e3db3cb63f", "SoundToPlay":"hexen/vog/map08"}
+//MAP09 - Garden of Madea
+{"Checksum":"5dc632319407378d11b1d90e79f5a44c", "SoundToPlay":"hexen/vog/map09"}
