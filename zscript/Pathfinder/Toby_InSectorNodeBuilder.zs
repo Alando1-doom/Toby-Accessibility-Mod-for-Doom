@@ -23,7 +23,7 @@ class Toby_InSectorNodeBuilder
         if (sectorNodes[sectorId])
         {
             Sector s = level.sectors[sectorId];
-            if (sectorNodes[sectorId].nodes.Size() < 0) { return sectorNodes[sectorId]; }
+            if (sectorNodes[sectorId].nodes.Size() <= 0) { return sectorNodes[sectorId]; }
             if (sectorNodes[sectorId].nodes[0].pos.z == s.CenterFloor()) { return sectorNodes[sectorId]; }
             for (int i = 0; i < sectorNodes[sectorId].nodes.Size(); i++)
             {
