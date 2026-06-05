@@ -1,10 +1,25 @@
 //COMPASS
 
 compass/north				"sounds/Compass/cmpnorth.ogg"
+$volume compass/north    0.75
+
 compass/northeast		"sounds/Compass/cmpneast.ogg"
+$volume compass/northeast    0.75
+
 compass/northwest		"sounds/Compass/cmpnwest.ogg"
+$volume compass/northwest    0.75
+
 compass/south			"sounds/Compass/cmpsouth.ogg"
+$volume compass/south    0.75
+
 compass/southeast		"sounds/Compass/cmpseast.ogg"
+$volume compass/southeast    0.75
+
 compass/southwest		"sounds/Compass/cmpswest.ogg"
+$volume compass/southwest    0.75
+
 compass/east				"sounds/Compass/cmpeast.ogg"
+$volume compass/east    0.75
+
 compass/west				"sounds/Compass/cmpwest.ogg"
+$volume compass/west    0.75

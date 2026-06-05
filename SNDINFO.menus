@@ -13,6 +13,9 @@ $volume menusnd/no      0.5
 console/open            "sounds/Menus/Console/ConsoleOpen.ogg"
 console/close           "sounds/Menus/Console/ConsoleClosed.ogg"
 console/error           "sounds/Menus/Console/ConsoleError.ogg"
+$volume console/open      0.5
+$volume console/close      0.5
+$volume console/error      0.5
 
 //No menu items
 menusnd/nomenuitems     "sounds/Menus/Generic/NoMenuItems.ogg"
@@ -94,6 +97,7 @@ menusnd/easy            "sounds/Menus/SkillMenu/dseasy.ogg"
 menusnd/normal          "sounds/Menus/SkillMenu/dsnormal.ogg"
 menusnd/hard            "sounds/Menus/SkillMenu/dshard.ogg"
 menusnd/insane   		"sounds/Menus/SkillMenu/dsinsane.ogg"
+$volume menusnd/insane  0.75
 menusnd/skill1          "sounds/Menus/SkillMenu/dsskill1.ogg"
 menusnd/skill2          "sounds/Menus/SkillMenu/dsskill2.ogg"
 menusnd/skill3          "sounds/Menus/SkillMenu/dsskill3.ogg"
@@ -138,6 +142,7 @@ menusnd/musicvol                    "sounds/Menus/SoundOptions/dsmusv.ogg"
 menusnd/mastervol                   "sounds/Menus/SoundOptions/dsmastrv.ogg"
 menusnd/pitch                       "sounds/Menus/SoundOptions/dspitch.ogg"
 menusnd/soundvol                    "sounds/Menus/SoundOptions/dssndv.ogg"
+menusnd/footstepvol				"sounds/Menus/SoundOptions/FootstepVolume.ogg"
 menusnd/reverb                      "sounds/Menus/SoundOptions/dswtrrvb.ogg"
 menu/sound/title/advanced           "sounds/Menus/SoundOptions/mmadvopt.ogg"
 $volume menu/sound/title/advanced   0.5
@@ -287,6 +292,7 @@ menu/compat/minoflames              "sounds/Menus/CompatibilityOptions/ActorBeha
 $volume menu/compat/minoflames      0.5
 menu/compat/itemdrops               "sounds/Menus/CompatibilityOptions/ActorBehavior/mitmdrop.ogg"
 $volume menu/compat/itemdrops       0.5
+menu/compat/zombies               "sounds/Menus/CompatibilityOptions/ActorBehavior/CreateZombPlayers.ogg"
 
 
 //DEH Behavior Menu
@@ -329,6 +335,8 @@ menu/compat/buggyswitch             "sounds/Menus/CompatibilityOptions/MapAction
 $volume menu/compat/buggyswitch     0.5
 menu/compat/buggystrife             "sounds/Menus/CompatibilityOptions/MapActionBehavior/mbugstrf.ogg"
 $volume menu/compat/buggystrife     0.5
+menu/compat/ignorefloorz             "sounds/Menus/CompatibilityOptions/MapActionBehavior/IgnoreFloorZTele.ogg"
+menu/compat/disablembf21             "sounds/Menus/CompatibilityOptions/MapActionBehavior/DisableMBF21.ogg"
 
 
 //Physics Behavior Menu
@@ -814,6 +822,8 @@ menu/gameplay/multiplayobj          "sounds/Menus/GameplayOptions/malwmpob.ogg"
 $volume menu/gameplay/multiplayobj  0.5
 menu/gameplay/vertbulletspread          "sounds/Menus/GameplayOptions/malwvbul.ogg"
 $volume menu/gameplay/vertbulletspread  0.5
+menu/gameplay/pistolstart          "sounds/Menus/GameplayOptions/PistolStart.ogg"
+menu/gameplay/nmarereflex          "sounds/Menus/GameplayOptions/NightmareReflexes.ogg"
 
 
 //Deathmatch Settings Menu
@@ -875,6 +885,13 @@ menu/gameplay/losehalfammo          "sounds/Menus/GameplayOptions/CoopSettings/m
 $volume menu/gameplay/losehalfammo  0.5
 menu/gameplay/deathspot             "sounds/Menus/GameplayOptions/CoopSettings/mspwndie.ogg"
 $volume menu/gameplay/deathspot     0.5
+menu/gameplay/disableclientpickup             "sounds/Menus/GameplayOptions/CoopSettings/DisableClientSidePickups.ogg"
+menu/gameplay/rememberlastweapon             "sounds/Menus/GameplayOptions/CoopSettings/RememberLastWeap.ogg"
+menu/gameplay/playeritemcopy             "sounds/Menus/GameplayOptions/CoopSettings/PlayerOwnCopy.ogg"
+menu/gameplay/cooponlythings             "sounds/Menus/GameplayOptions/CoopSettings/SpawnCoopThings.ogg"
+menu/gameplay/cooponlyitems             "sounds/Menus/GameplayOptions/CoopSettings/SpawnCoopItems.ogg"
+menu/gameplay/sharekeys             "sounds/Menus/GameplayOptions/CoopSettings/ShareKeys.ogg"
+menu/gameplay/clipplayers             "sounds/Menus/GameplayOptions/CoopSettings/MoveShootThruPlayers.ogg"
 
 
 

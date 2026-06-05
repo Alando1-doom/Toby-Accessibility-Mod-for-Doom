@@ -78,6 +78,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Hexen", "SoundToPlay":"hexen/menu/tobyhexen"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Demo Map", "SoundToPlay":"hexen/menu/demomap"}
 
+
 //DIFFICULTY MENU
 
 {"EventType":"MenuChanged",   "CurrentMenuName":"Skillmenu", "SoundToPlay":"menusnd/skillmenu"}
@@ -468,6 +469,13 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_KEEPAMMO", "SoundToPlay":"menu/gameplay/keepammo"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOSEHALFAMMO", "SoundToPlay":"menu/gameplay/losehalfammo"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SPAWNWHEREDIED", "SoundToPlay":"menu/gameplay/deathspot"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOLOCALDROP", "SoundToPlay":"menu/gameplay/disableclientpickup"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_REMEMBERWEAP", "SoundToPlay":"menu/gameplay/rememberlastweapon"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_LOCALITEMS", "SoundToPlay":"menu/gameplay/playeritemcopy"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_COOPTHINGS", "SoundToPlay":"menu/gameplay/cooponlythings"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_COOPITEMS", "SoundToPlay":"menu/gameplay/cooponlyitems"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_SHAREKEYS", "SoundToPlay":"menu/gameplay/sharekeys"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CoopOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOPLAYERCLIP", "SoundToPlay":"menu/gameplay/clipplayers"}
 //main
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_TEAMPLAY", "SoundToPlay":"menu/gameplay/teamplay"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_TEAMDAMAGE", "SoundToPlay":"menu/gameplay/teamdmg"}
@@ -502,6 +510,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOCOUNTENDMONSTER", "SoundToPlay":"menu/gameplay/endsector"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_ALWAYSSPAWNMULTI", "SoundToPlay":"menu/gameplay/multiplayobj"}
 {"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_NOVERTSPREAD", "SoundToPlay":"menu/gameplay/vertbulletspread"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_PISTOLSTART", "SoundToPlay":"menu/gameplay/pistolstart"}
+{"EventType":"OptionChanged", "CurrentMenuName":"GameplayOptions", "CurrentMenuItemOptionName":"$GMPLYMNU_INSTANTREACTION", "SoundToPlay":"menu/gameplay/nmarereflex"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NEVERFRIENDS", "SoundToPlay":"menu/smartaim/nofriends"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ONLYMONSTERS", "SoundToPlay":"menu/smartaim/onlymons"}
 
@@ -533,6 +543,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_INVISIBILITY", "SoundToPlay":"menu/compat/seeinvisible"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MINOTAUR", "SoundToPlay":"menu/compat/minoflames"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOTOSSDROPS", "SoundToPlay":"menu/compat/itemdrops"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatActorMenu", "CurrentMenuItemOptionName":"$CMPTMNU_VOODOOZOMBIES", "SoundToPlay":"menu/compat/zombies"}
 //compat-DEH
 {"EventType":"MenuChanged",   "CurrentMenuName":"CompatDehackedMenu", "SoundToPlay":"menu/compat/title/deh"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_DEHACKEDBEHAVIOR", "SoundToPlay":"menu/compat/title/deh"}
@@ -554,6 +565,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_PUSHWINDOW", "SoundToPlay":"menu/compat/nonblock"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_CHECKSWITCHRANGE", "SoundToPlay":"menu/compat/buggyswitch"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_RAILINGHACK", "SoundToPlay":"menu/compat/buggystrife"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_FDTELEPORT", "SoundToPlay":"menu/compat/ignorefloorz"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOMBF21", "SoundToPlay":"menu/compat/disablembf21"}
 //comapt-physics
 {"EventType":"MenuChanged",   "CurrentMenuName":"CompatPhysicsMenu", "SoundToPlay":"menu/compat/title/physics"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_PHYSICSBEHAVIOR", "SoundToPlay":"menu/compat/title/physics"}
@@ -607,6 +620,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_SFXVOLUME", "SoundToPlay":"menusnd/soundvol"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MUSICVOLUME", "SoundToPlay":"menusnd/musicvol"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MENUVOLUME", "SoundToPlay":"menusnd/menuvol"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_FOOTSTEPVOLUME", "SoundToPlay":"menusnd/footstepvol"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_MIDIDEVICE", "SoundToPlay":"menusnd/midi"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_UNDERWATERREVERB", "SoundToPlay":"menusnd/reverb"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SoundOptions", "CurrentMenuItemOptionName":"$SNDMNU_RANDOMIZEPITCHES", "SoundToPlay":"menusnd/pitch"}

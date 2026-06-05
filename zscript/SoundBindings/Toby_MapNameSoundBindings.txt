@@ -788,10 +788,13 @@
 {"Checksum":"b7f15dcf9c23ab110ab90ab3a9151cff", "SoundToPlay":"heretic/e1m5"}
 //E1M6 - The Cathedral
 {"Checksum":"11e9e475b21630f165cf266e8d26abe9", "SoundToPlay":"heretic/e1m6"}
+{"Checksum":"1ba19642cb45331436ce39eebf7f367e", "SoundToPlay":"heretic/e1m6"}
 //E1M7 - The Crypt
 {"Checksum":"53e1515a22a1c9d0767a0c8716754445", "SoundToPlay":"heretic/e1m7"}
 //E1M8 - Hell's Maw
 {"Checksum":"456735a26815746d13b57577b074e4fc", "SoundToPlay":"heretic/e1m8"}
+//E1M9 - The Graveyard
+{"Checksum":"171fc1f93aaa0784d337b661f6659ed5", "SoundToPlay":"heretic/e1m9"}
 
 
 

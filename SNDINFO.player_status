@@ -13,14 +13,14 @@ stats/chessboardcoords/zone             "sounds/PlayerStats/Chessboard/Zone.ogg"
 stats/chessboardcoords/cell             "sounds/PlayerStats/Chessboard/Cell.ogg"
 
 stats/noradiusdamage/enabled			"sounds/Menus/TobyOptions/NoRadDmgOn.ogg"
-$volume stats/noradiusdamage/enabled      0.5
+$volume stats/noradiusdamage/enabled      0.75
 stats/noradiusdamage/disabled			"sounds/Menus/TobyOptions/NoRadDmgOff.ogg"
-$volume stats/noradiusdamage/disabled      0.5
+$volume stats/noradiusdamage/disabled      0.75
 
 stats/targetannouncement/enabled			"sounds/Menus/TobyOptions/TargetAnnEnabled.ogg"
-$volume stats/targetannouncement/enabled      0.5
+$volume stats/targetannouncement/enabled      0.75
 stats/targetannouncement/disabled			"sounds/Menus/TobyOptions/TargetAnnDisabled.ogg"
-$volume stats/targetannouncement/disabled      0.5
+$volume stats/targetannouncement/disabled      0.75
 
 stats/level/secrets         "sounds/PlayerStats/MapStats/Secrets.ogg"
 stats/level/monsters        "sounds/PlayerStats/MapStats/Monsters.ogg"

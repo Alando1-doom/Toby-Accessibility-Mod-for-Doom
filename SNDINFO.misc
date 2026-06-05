@@ -9,6 +9,7 @@ cheat/radsuiton		"sounds/QuickCheats/RADSTON.ogg"
 cheat/radsuitoff		"sounds/QuickCheats/RADSTOFF.ogg"
 
 misc/quickturn			quckturn
+$volume misc/quickturn    0.5
 
 monster/brusit 		"sounds/NewDemons/DSBRUSIT.ogg"
 monster/bruwlk 		"sounds/NewDemons/DSBRUWLK.ogg"
@@ -18,3 +19,5 @@ superdemon/active		"sounds/NewDemons/DSSDACT.wav"
 
 toby/actorsinviewport/tutorial/kiosk				"sounds/ActorsInViewport/Tutorial/TutorialKiosk.ogg"
 toby/actorsinviewport/tutorial/kiosks			"sounds/ActorsInViewport/Tutorial/TutorialKiosks.ogg"
+$volume toby/actorsinviewport/tutorial/kiosk    0.75
+$volume toby/actorsinviewport/tutorial/kiosks    0.75

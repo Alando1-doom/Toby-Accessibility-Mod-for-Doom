@@ -1,108 +1,311 @@
 numbers/000        "sounds/Numbers/num0.ogg"
+$volume numbers/000     0.5
+
 numbers/001        "sounds/Numbers/num1.ogg"
+$volume numbers/001     0.5
+
 numbers/002        "sounds/Numbers/num2.ogg"
+$volume numbers/002     0.5
+
 numbers/003        "sounds/Numbers/num3.ogg"
+$volume numbers/003     0.5
+
 numbers/004        "sounds/Numbers/num4.ogg"
+$volume numbers/004     0.5
+
 numbers/005        "sounds/Numbers/num5.ogg"
+$volume numbers/005     0.5
+
 numbers/006        "sounds/Numbers/num6.ogg"
+$volume numbers/006     0.5
+
 numbers/007        "sounds/Numbers/num7.ogg"
+$volume numbers/007     0.5
+
 numbers/008        "sounds/Numbers/num8.ogg"
+$volume numbers/008     0.5
+
 numbers/009        "sounds/Numbers/num9.ogg"
+$volume numbers/009     0.5
+
 numbers/010        "sounds/Numbers/num10.ogg"
+$volume numbers/010     0.5
+
 numbers/011        "sounds/Numbers/num11.ogg"
+$volume numbers/011     0.5
+
 numbers/012        "sounds/Numbers/num12.ogg"
+$volume numbers/012     0.5
+
 numbers/013        "sounds/Numbers/num13.ogg"
+$volume numbers/013     0.5
+
 numbers/014        "sounds/Numbers/num14.ogg"
+$volume numbers/014     0.5
+
 numbers/015        "sounds/Numbers/num15.ogg"
+$volume numbers/015     0.5
+
 numbers/016        "sounds/Numbers/num16.ogg"
+$volume numbers/016     0.5
+
 numbers/017        "sounds/Numbers/num17.ogg"
+$volume numbers/017     0.5
+
 numbers/018        "sounds/Numbers/num18.ogg"
+$volume numbers/018     0.5
+
 numbers/019        "sounds/Numbers/num19.ogg"
+$volume numbers/019     0.5
+
 numbers/020        "sounds/Numbers/num20.ogg"
+$volume numbers/020     0.5
+
 numbers/030        "sounds/Numbers/num30.ogg"
+$volume numbers/030     0.5
+
 numbers/040        "sounds/Numbers/num40.ogg"
+$volume numbers/040     0.5
+
 numbers/050        "sounds/Numbers/num50.ogg"
+$volume numbers/050     0.5
+
 numbers/060        "sounds/Numbers/num60.ogg"
+$volume numbers/060     0.5
+
 numbers/070        "sounds/Numbers/num70.ogg"
+$volume numbers/070     0.5
+
 numbers/080        "sounds/Numbers/num80.ogg"
+$volume numbers/080     0.5
+
 numbers/090        "sounds/Numbers/num90.ogg"
+$volume numbers/090     0.5
+
 numbers/100        "sounds/Numbers/num100.ogg"
+$volume numbers/100     0.5
+
 numbers/thousand   "sounds/Numbers/num1000.ogg"
+$volume numbers/thousand     0.5
+
 numbers/million    "sounds/Numbers/million.ogg"
+$volume numbers/million     0.5
+
 numbers/billion    "sounds/Numbers/billion.ogg"
+$volume numbers/billion     0.5
+
 numbers/trillion   "sounds/Numbers/trillion.ogg"
+$volume numbers/trillion     0.5
+
 numbers/dot        "sounds/Numbers/point.ogg"
+$volume numbers/dot     0.5
+
 numbers/minus      "sounds/Numbers/minus.ogg"
+$volume numbers/minus     0.5
+
 numbers/and        "sounds/Numbers/and.ogg"
+$volume numbers/and     0.5
+
 
 numbers/0th     "sounds/Numbers/0th.ogg"
+$volume numbers/0th     0.5
+
 numbers/1st     "sounds/Numbers/1st.ogg"
+$volume numbers/1st     0.5
+
 numbers/2nd     "sounds/Numbers/2nd.ogg"
+$volume numbers/2nd     0.5
+
 numbers/3rd     "sounds/Numbers/3rd.ogg"
+$volume numbers/3rd     0.5
+
 numbers/4th     "sounds/Numbers/4th.ogg"
+$volume numbers/4th     0.5
+
 numbers/5th     "sounds/Numbers/5th.ogg"
+$volume numbers/5th     0.5
+
 numbers/6th     "sounds/Numbers/6th.ogg"
+$volume numbers/6th     0.5
+
 numbers/7th     "sounds/Numbers/7th.ogg"
+$volume numbers/7th     0.5
+
 numbers/8th     "sounds/Numbers/8th.ogg"
+$volume numbers/8th     0.5
+
 numbers/9th     "sounds/Numbers/9th.ogg"
+$volume numbers/9th     0.5
 
 numbers/10th     "sounds/Numbers/10th.ogg"
+$volume numbers/10th     0.5
+
 numbers/11th     "sounds/Numbers/11th.ogg"
+$volume numbers/11th     0.5
+
 numbers/12th     "sounds/Numbers/12th.ogg"
+$volume numbers/12th     0.5
+
 numbers/13th     "sounds/Numbers/13th.ogg"
+$volume numbers/13th     0.5
+
 numbers/14th     "sounds/Numbers/14th.ogg"
+$volume numbers/14th     0.5
+
 numbers/15th     "sounds/Numbers/15th.ogg"
+$volume numbers/15th     0.5
+
 numbers/16th     "sounds/Numbers/16th.ogg"
+$volume numbers/16th     0.5
+
 numbers/17th     "sounds/Numbers/17th.ogg"
+$volume numbers/17th     0.5
+
 numbers/18th     "sounds/Numbers/18th.ogg"
+$volume numbers/18th     0.5
+
 numbers/19th     "sounds/Numbers/19th.ogg"
+$volume numbers/19th     0.5
 
 numbers/20th     "sounds/Numbers/20th.ogg"
+$volume numbers/20th     0.5
+
 numbers/30th     "sounds/Numbers/30th.ogg"
+$volume numbers/30th     0.5
+
 numbers/40th     "sounds/Numbers/40th.ogg"
+$volume numbers/40th     0.5
+
 numbers/50th     "sounds/Numbers/50th.ogg"
+$volume numbers/50th     0.5
+
 numbers/60th     "sounds/Numbers/60th.ogg"
+$volume numbers/60th     0.5
+
 numbers/70th     "sounds/Numbers/70th.ogg"
+$volume numbers/70th     0.5
+
 numbers/80th     "sounds/Numbers/80th.ogg"
+$volume numbers/80th     0.5
+
 numbers/90th     "sounds/Numbers/90th.ogg"
+$volume numbers/90th     0.5
+
 
 month/january   "sounds/Months/01_january.ogg"
+$volume month/january     0.5
+
 month/february  "sounds/Months/02_february.ogg"
+$volume month/february     0.5
+
 month/march     "sounds/Months/03_march.ogg"
+$volume month/march     0.5
+
 month/april     "sounds/Months/04_april.ogg"
+$volume month/april     0.5
+
 month/may       "sounds/Months/05_may.ogg"
+$volume month/may     0.5
+
 month/june      "sounds/Months/06_june.ogg"
+$volume month/june     0.5
+
 month/july      "sounds/Months/07_july.ogg"
+$volume month/july     0.5
+
 month/august    "sounds/Months/08_august.ogg"
+$volume month/august     0.5
+
 month/september "sounds/Months/09_september.ogg"
+$volume month/september     0.5
+
 month/october   "sounds/Months/10_october.ogg"
+$volume month/october     0.5
+
 month/november  "sounds/Months/11_november.ogg"
+$volume month/november     0.5
+
 month/december  "sounds/Months/12_december.ogg"
+$volume month/december    0.5
+
 
 alphabet/A       "sounds/Alphabet/A.ogg"
+$volume alphabet/A    0.5
+
 alphabet/B       "sounds/Alphabet/B.ogg"
+$volume alphabet/B    0.5
+
 alphabet/C       "sounds/Alphabet/C.ogg"
+$volume alphabet/C    0.5
+
 alphabet/D       "sounds/Alphabet/D.ogg"
+$volume alphabet/D    0.5
+
 alphabet/E       "sounds/Alphabet/E.ogg"
+$volume alphabet/E    0.5
+
 alphabet/F       "sounds/Alphabet/F.ogg"
+$volume alphabet/F   0.5
+
 alphabet/G       "sounds/Alphabet/G.ogg"
+$volume alphabet/G    0.5
+
 alphabet/H       "sounds/Alphabet/H.ogg"
+$volume alphabet/H    0.5
+
 alphabet/I       "sounds/Alphabet/I.ogg"
+$volume alphabet/I    0.5
+
 alphabet/J       "sounds/Alphabet/J.ogg"
+$volume alphabet/J    0.5
+
 alphabet/K       "sounds/Alphabet/K.ogg"
+$volume alphabet/K    0.5
+
 alphabet/L       "sounds/Alphabet/L.ogg"
+$volume alphabet/L    0.5
+
 alphabet/M       "sounds/Alphabet/M.ogg"
+$volume alphabet/M    0.5
+
 alphabet/N       "sounds/Alphabet/N.ogg"
+$volume alphabet/N   0.5
+
 alphabet/O       "sounds/Alphabet/O.ogg"
+$volume alphabet/O    0.5
+
 alphabet/P       "sounds/Alphabet/P.ogg"
+$volume alphabet/P   0.5
+
 alphabet/Q       "sounds/Alphabet/Q.ogg"
+$volume alphabet/Q    0.5
+
 alphabet/R       "sounds/Alphabet/R.ogg"
+$volume alphabet/R    0.5
+
 alphabet/S       "sounds/Alphabet/S.ogg"
+$volume alphabet/S    0.5
+
 alphabet/T       "sounds/Alphabet/T.ogg"
+$volume alphabet/T    0.5
+
 alphabet/U       "sounds/Alphabet/U.ogg"
+$volume alphabet/U    0.5
+
 alphabet/V       "sounds/Alphabet/V.ogg"
+$volume alphabet/V   0.5
+
 alphabet/W       "sounds/Alphabet/W.ogg"
+$volume alphabet/W    0.5
+
 alphabet/X       "sounds/Alphabet/X.ogg"
+$volume alphabet/X    0.5
+
 alphabet/Y       "sounds/Alphabet/Y.ogg"
+$volume alphabet/Y    0.5
+
 alphabet/Z       "sounds/Alphabet/Z.ogg"
+$volume alphabet/Z    0.5
+
 alphabet/Space   "sounds/Alphabet/_.wav"
+$volume alphabet/Space    0.5
