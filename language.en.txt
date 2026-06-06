@@ -113,6 +113,10 @@ TOBY_HEXEN_ARMOR_CHECKER_MODE = "Hexen armor checker mode";
 TOBY_HEXEN_ARMOR_CHECKER_MODE_ONLY_SLOTS = "Only slots";
 TOBY_HEXEN_ARMOR_CHECKER_MODE_DETAILED = "Detailed";
 
+//MISSING GZDOOM/UZDOOM MENU NAMES (Issue currently in GZDoom Version 4.14.2 and UZDoom Version 4.14.3)
+SNDMNU_FOOTSTEPVOLUME = "Footstep Volume";
+GMPLYMNU_REMEMBERWEAP = "Remember Last Weapon";
+
 //FOOTSTEPS FLAT DEFINITIONS
 
 // f1_start

@@ -2,268 +2,426 @@
 
 toby/actorsinviewport/pickups/chainsaw          "sounds/ActorsInViewport/Pickups/Chainsaw.ogg"
 toby/actorsinviewport/pickups/chainsaws         "sounds/ActorsInViewport/Pickups/Chainsaws.ogg"
+$volume toby/actorsinviewport/pickups/chainsaw     0.5
+$volume toby/actorsinviewport/pickups/chainsaws     0.5
 
 toby/actorsinviewport/pickups/pistol            "sounds/PlayerStats/DoomWeapons/Pistol.ogg"
 toby/actorsinviewport/pickups/pistols           "sounds/ActorsInViewport/Pickups/Pistols.ogg"
+$volume toby/actorsinviewport/pickups/pistol     0.5
+$volume toby/actorsinviewport/pickups/pistols     0.5
 
 toby/actorsinviewport/pickups/shotgun           "sounds/ActorsInViewport/Pickups/Shotgun.ogg"
 toby/actorsinviewport/pickups/shotguns          "sounds/ActorsInViewport/Pickups/Shotguns.ogg"
+$volume toby/actorsinviewport/pickups/shotgun     0.5
+$volume toby/actorsinviewport/pickups/shotguns     0.5
 
 toby/actorsinviewport/pickups/supershotgun      "sounds/ActorsInViewport/Pickups/SuperShotgun.ogg"
 toby/actorsinviewport/pickups/supershotguns     "sounds/ActorsInViewport/Pickups/SuperShotguns.ogg"
+$volume toby/actorsinviewport/pickups/supershotgun     0.5
+$volume toby/actorsinviewport/pickups/supershotguns     0.5
 
 toby/actorsinviewport/pickups/chaingun          "sounds/ActorsInViewport/Pickups/Chaingun.ogg"
 toby/actorsinviewport/pickups/chainguns         "sounds/ActorsInViewport/Pickups/Chainguns.ogg"
+$volume toby/actorsinviewport/pickups/chaingun     0.5
+$volume toby/actorsinviewport/pickups/chainguns     0.5
 
 toby/actorsinviewport/pickups/rocketlauncher    "sounds/ActorsInViewport/Pickups/RocketLauncher.ogg"
 toby/actorsinviewport/pickups/rocketlaunchers   "sounds/ActorsInViewport/Pickups/RocketLaunchers.ogg"
+$volume toby/actorsinviewport/pickups/rocketlauncher     0.5
+$volume toby/actorsinviewport/pickups/rocketlaunchers     0.5
 
 toby/actorsinviewport/pickups/plasmagun         "sounds/ActorsInViewport/Pickups/PlasmaGun.ogg"
 toby/actorsinviewport/pickups/plasmaguns        "sounds/ActorsInViewport/Pickups/PlasmaGuns.ogg"
+$volume toby/actorsinviewport/pickups/plasmagun     0.5
+$volume toby/actorsinviewport/pickups/plasmaguns     0.5
 
 toby/actorsinviewport/pickups/bfg9000           "sounds/ActorsInViewport/Pickups/BFG9000.ogg"
 toby/actorsinviewport/pickups/bfgs9000          "sounds/ActorsInViewport/Pickups/BFGs9000.ogg"
+$volume toby/actorsinviewport/pickups/bfg9000     0.5
+$volume toby/actorsinviewport/pickups/bfgs9000     0.5
 
 //Doom - Armor
 
 toby/actorsinviewport/pickups/armorbonus        "sounds/ActorsInViewport/Pickups/ArmorBonus.ogg"
 toby/actorsinviewport/pickups/armorbonuses      "sounds/ActorsInViewport/Pickups/ArmorBonuses.ogg"
+$volume toby/actorsinviewport/pickups/armorbonus     0.5
+$volume toby/actorsinviewport/pickups/armorbonuses     0.5
 
 toby/actorsinviewport/pickups/armor             "sounds/ActorsInViewport/Pickups/Armor.ogg"
 toby/actorsinviewport/pickups/armors            "sounds/ActorsInViewport/Pickups/Armors.ogg"
+$volume toby/actorsinviewport/pickups/armor     0.5
+$volume toby/actorsinviewport/pickups/armors     0.5
 
 toby/actorsinviewport/pickups/megaarmor         "sounds/ActorsInViewport/Pickups/MegaArmor.ogg"
 toby/actorsinviewport/pickups/megaarmors        "sounds/ActorsInViewport/Pickups/MegaArmors.ogg"
+$volume toby/actorsinviewport/pickups/megaarmor     0.5
+$volume toby/actorsinviewport/pickups/megaarmors     0.5
 
 //Doom - Health
 
 toby/actorsinviewport/pickups/healthbonus       "sounds/ActorsInViewport/Pickups/HealthBonus.ogg"
 toby/actorsinviewport/pickups/healthbonuses     "sounds/ActorsInViewport/Pickups/HealthBonuses.ogg"
+$volume toby/actorsinviewport/pickups/healthbonus     0.5
+$volume toby/actorsinviewport/pickups/healthbonuses     0.5
 
 toby/actorsinviewport/pickups/stimpack          "sounds/ActorsInViewport/Pickups/Stimpack.ogg"
 toby/actorsinviewport/pickups/stimpacks         "sounds/ActorsInViewport/Pickups/Stimpacks.ogg"
+$volume toby/actorsinviewport/pickups/stimpack     0.5
+$volume toby/actorsinviewport/pickups/stimpacks     0.5
 
 toby/actorsinviewport/pickups/medikit           "sounds/ActorsInViewport/Pickups/MediKit.ogg"
 toby/actorsinviewport/pickups/medikits          "sounds/ActorsInViewport/Pickups/MediKits.ogg"
+$volume toby/actorsinviewport/pickups/medikit     0.5
+$volume toby/actorsinviewport/pickups/medikits     0.5
 
 //Doom - Powerups
 
 toby/actorsinviewport/pickups/computermap       "sounds/ActorsInViewport/Pickups/ComputerMap.ogg"
 toby/actorsinviewport/pickups/computermaps      "sounds/ActorsInViewport/Pickups/ComputerMaps.ogg"
+$volume toby/actorsinviewport/pickups/computermap     0.5
+$volume toby/actorsinviewport/pickups/computermaps     0.5
 
 toby/actorsinviewport/pickups/biosuit           "sounds/ActorsInViewport/Pickups/BioSuit.ogg"
 toby/actorsinviewport/pickups/biosuits         "sounds/ActorsInViewport/Pickups/BioSuits.ogg"
+$volume toby/actorsinviewport/pickups/biosuit     0.5
+$volume toby/actorsinviewport/pickups/biosuits     0.5
 
 toby/actorsinviewport/pickups/megasphere        "sounds/ActorsInViewport/Pickups/Megasphere.ogg"
 toby/actorsinviewport/pickups/megaspheres       "sounds/ActorsInViewport/Pickups/Megaspheres.ogg"
+$volume toby/actorsinviewport/pickups/megasphere     0.5
+$volume toby/actorsinviewport/pickups/megaspheres     0.5
 
 toby/actorsinviewport/pickups/soulsphere        "sounds/ActorsInViewport/Pickups/Soulsphere.ogg"
 toby/actorsinviewport/pickups/soulspheres       "sounds/ActorsInViewport/Pickups/Soulspheres.ogg"
+$volume toby/actorsinviewport/pickups/soulsphere     0.5
+$volume toby/actorsinviewport/pickups/soulspheres     0.5
 
 toby/actorsinviewport/pickups/berserkpack       "sounds/ActorsInViewport/Pickups/BerserkPack.ogg"
 toby/actorsinviewport/pickups/berserkpacks      "sounds/ActorsInViewport/Pickups/BerserkPacks.ogg"
+$volume toby/actorsinviewport/pickups/berserkpack     0.5
+$volume toby/actorsinviewport/pickups/berserkpacks     0.5
 
 toby/actorsinviewport/pickups/nightvision       "sounds/ActorsInViewport/Pickups/LightAmp.ogg"
 toby/actorsinviewport/pickups/nightvisions      "sounds/ActorsInViewport/Pickups/LightAmps.ogg"
+$volume toby/actorsinviewport/pickups/nightvision     0.5
+$volume toby/actorsinviewport/pickups/nightvisions     0.5
 
 toby/actorsinviewport/pickups/invulnerability       "sounds/ActorsInViewport/Pickups/Invulnerability.ogg"
 toby/actorsinviewport/pickups/invulnerabilities     "sounds/ActorsInViewport/Pickups/Invulnerabilities.ogg"
+$volume toby/actorsinviewport/pickups/invulnerability     0.5
+$volume toby/actorsinviewport/pickups/invulnerabilities     0.5
 
 toby/actorsinviewport/pickups/partialinvisibility   "sounds/ActorsInViewport/Pickups/PartialInvisibility.ogg"
 toby/actorsinviewport/pickups/partialinvisibilities "sounds/ActorsInViewport/Pickups/PartialInvisibilities.ogg"
+$volume toby/actorsinviewport/pickups/partialinvisibility     0.5
+$volume toby/actorsinviewport/pickups/partialinvisibilities     0.5
 
 //Doom - Ammo
 
 toby/actorsinviewport/pickups/backpack          "sounds/ActorsInViewport/Pickups/Backpack.ogg"
 toby/actorsinviewport/pickups/backpacks         "sounds/ActorsInViewport/Pickups/Backpacks.ogg"
+$volume toby/actorsinviewport/pickups/backpack     0.5
+$volume toby/actorsinviewport/pickups/backpacks     0.5
 
 toby/actorsinviewport/pickups/clip              "sounds/ActorsInViewport/Pickups/Clip.ogg"
 toby/actorsinviewport/pickups/clips             "sounds/ActorsInViewport/Pickups/Clips.ogg"
+$volume toby/actorsinviewport/pickups/clip     0.5
+$volume toby/actorsinviewport/pickups/clips     0.5
 
 toby/actorsinviewport/pickups/clipdroppedbyformerhuman      "sounds/ActorsInViewport/Pickups/ClipDroppedByFormerHuman.ogg"
 toby/actorsinviewport/pickups/clipsdroppedbyformerhumans    "sounds/ActorsInViewport/Pickups/ClipsDroppedByFormerHumans.ogg"
+$volume toby/actorsinviewport/pickups/clipdroppedbyformerhuman     0.5
+$volume toby/actorsinviewport/pickups/clipsdroppedbyformerhumans     0.5
 
 toby/actorsinviewport/pickups/boxofammo         "sounds/ActorsInViewport/Pickups/BoxOfAmmo.ogg"
 toby/actorsinviewport/pickups/boxesofammo       "sounds/ActorsInViewport/Pickups/BoxesOfAmmo.ogg"
+$volume toby/actorsinviewport/pickups/boxofammo     0.5
+$volume toby/actorsinviewport/pickups/boxesofammo     0.5
 
 toby/actorsinviewport/pickups/shell             "sounds/ActorsInViewport/Pickups/PackOf4Shells.ogg"
 toby/actorsinviewport/pickups/shells            "sounds/ActorsInViewport/Pickups/PacksOf4Shells.ogg"
+$volume toby/actorsinviewport/pickups/shell     0.5
+$volume toby/actorsinviewport/pickups/shells     0.5
 
 toby/actorsinviewport/pickups/boxofshells       "sounds/ActorsInViewport/Pickups/BoxOfShells.ogg"
 toby/actorsinviewport/pickups/boxesofshells     "sounds/ActorsInViewport/Pickups/BoxesOfShells.ogg"
+$volume toby/actorsinviewport/pickups/boxofshells     0.5
+$volume toby/actorsinviewport/pickups/boxesofshells     0.5
 
 toby/actorsinviewport/pickups/rocket            "sounds/ActorsInViewport/Pickups/Rocket.ogg"
 toby/actorsinviewport/pickups/rockets           "sounds/ActorsInViewport/Pickups/Rockets.ogg"
+$volume toby/actorsinviewport/pickups/rocket     0.5
+$volume toby/actorsinviewport/pickups/rockets     0.5
 
 toby/actorsinviewport/pickups/boxofrockets      "sounds/ActorsInViewport/Pickups/BoxOfRockets.ogg"
 toby/actorsinviewport/pickups/boxesofrockets    "sounds/ActorsInViewport/Pickups/BoxesOfRockets.ogg"
+$volume toby/actorsinviewport/pickups/boxofrockets     0.5
+$volume toby/actorsinviewport/pickups/boxesofrockets     0.5
 
 toby/actorsinviewport/pickups/cellpack          "sounds/ActorsInViewport/Pickups/Cellpack.ogg"
 toby/actorsinviewport/pickups/cellpacks         "sounds/ActorsInViewport/Pickups/Cellpacks.ogg"
+$volume toby/actorsinviewport/pickups/cellpack     0.5
+$volume toby/actorsinviewport/pickups/cellpacks     0.5
 
 toby/actorsinviewport/pickups/bulkcellpack      "sounds/ActorsInViewport/Pickups/BulkCellpack.ogg"
 toby/actorsinviewport/pickups/bulkcellpacks     "sounds/ActorsInViewport/Pickups/BulkCellpacks.ogg"
+$volume toby/actorsinviewport/pickups/bulkcellpack     0.5
+$volume toby/actorsinviewport/pickups/bulkcellpacks     0.5
 
 //Doom - Keys
 
 toby/actorsinviewport/pickups/redkeycard        "sounds/ActorsInViewport/Pickups/RedKeyCard.ogg"
 toby/actorsinviewport/pickups/redkeycards       "sounds/ActorsInViewport/Pickups/RedKeyCards.ogg"
+$volume toby/actorsinviewport/pickups/redkeycard     0.5
+$volume toby/actorsinviewport/pickups/redkeycards     0.5
 
 toby/actorsinviewport/pickups/bluekeycard       "sounds/ActorsInViewport/Pickups/BlueKeyCard.ogg"
 toby/actorsinviewport/pickups/bluekeycards      "sounds/ActorsInViewport/Pickups/BlueKeyCards.ogg"
+$volume toby/actorsinviewport/pickups/bluekeycard     0.5
+$volume toby/actorsinviewport/pickups/bluekeycards     0.5
 
 toby/actorsinviewport/pickups/yellowkeycard     "sounds/ActorsInViewport/Pickups/YellowKeyCard.ogg"
 toby/actorsinviewport/pickups/yellowkeycards    "sounds/ActorsInViewport/Pickups/YellowKeyCards.ogg"
+$volume toby/actorsinviewport/pickups/yellowkeycard     0.5
+$volume toby/actorsinviewport/pickups/yellowkeycards     0.5
 
 toby/actorsinviewport/pickups/redskull          "sounds/ActorsInViewport/Pickups/RedSkull.ogg"
 toby/actorsinviewport/pickups/redskulls         "sounds/ActorsInViewport/Pickups/RedSkulls.ogg"
+$volume toby/actorsinviewport/pickups/redskull     0.5
+$volume toby/actorsinviewport/pickups/redskulls     0.5
 
 toby/actorsinviewport/pickups/blueskull         "sounds/ActorsInViewport/Pickups/BlueSkull.ogg"
 toby/actorsinviewport/pickups/blueskulls        "sounds/ActorsInViewport/Pickups/BlueSkulls.ogg"
+$volume toby/actorsinviewport/pickups/blueskull     0.5
+$volume toby/actorsinviewport/pickups/blueskulls     0.5
 
 toby/actorsinviewport/pickups/yellowskull       "sounds/ActorsInViewport/Pickups/YellowSkull.ogg"
 toby/actorsinviewport/pickups/yellowskulls      "sounds/ActorsInViewport/Pickups/YellowSkulls.ogg"
+$volume toby/actorsinviewport/pickups/yellowskull     0.5
+$volume toby/actorsinviewport/pickups/yellowskulls     0.5
 
 
 //Legacy of Rust - Weapons & Ammo
 
 toby/actorsinviewport/lor/pickups/calamityblade			"sounds/ActorsInViewport/LegacyOfRust/Weapons/CalamityBlade.ogg"
 toby/actorsinviewport/lor/pickups/calamityblades		"sounds/ActorsInViewport/LegacyOfRust/Weapons/CalamityBlades.ogg"
+$volume toby/actorsinviewport/lor/pickups/calamityblade     0.75
+$volume toby/actorsinviewport/lor/pickups/calamityblades     0.75
 
 toby/actorsinviewport/lor/pickups/incinerator				"sounds/ActorsInViewport/LegacyOfRust/Weapons/Incinerator.ogg"
 toby/actorsinviewport/lor/pickups/incinerators			"sounds/ActorsInViewport/LegacyOfRust/Weapons/Incinerators.ogg"
+$volume toby/actorsinviewport/lor/pickups/incinerator     0.75
+$volume toby/actorsinviewport/lor/pickups/incinerators     0.75
 
 toby/actorsinviewport/lor/pickups/fuelcan					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelCan.ogg"
 toby/actorsinviewport/lor/pickups/fuelcans					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelCans.ogg"
+$volume toby/actorsinviewport/lor/pickups/fuelcan     0.75
+$volume toby/actorsinviewport/lor/pickups/fuelcans     0.75
 
 toby/actorsinviewport/lor/pickups/fueltank					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelTank.ogg"
 toby/actorsinviewport/lor/pickups/fueltanks					"sounds/ActorsInViewport/LegacyOfRust/Weapons/FuelTanks.ogg"
+$volume toby/actorsinviewport/lor/pickups/fueltank     0.75
+$volume toby/actorsinviewport/lor/pickups/fueltanks     0.75
 
 //*****************************************************************************************************************
 
 //Heretic - Weapons
 
 heretic/actorsinviewport/weapon/staff					"sounds/ActorsInViewport/Heretic/Pickups/STAFF.ogg"
+$volume heretic/actorsinviewport/weapon/staff     0.75
 
 heretic/actorsinviewport/weapon/beak					"sounds/ActorsInViewport/Heretic/Pickups/BEAK.ogg"
+$volume heretic/actorsinviewport/weapon/beak     0.75
 
 heretic/actorsinviewport/weapon/gauntlets			"sounds/ActorsInViewport/Heretic/Pickups/Gauntlets.ogg"
+$volume heretic/actorsinviewport/weapon/gauntlets     0.75
 
 heretic/actorsinviewport/weapon/goldwand			"sounds/ActorsInViewport/Heretic/Pickups/GoldWand.ogg"
 heretic/actorsinviewport/weapon/goldwands			"sounds/ActorsInViewport/Heretic/Pickups/GoldWands.ogg"
+$volume heretic/actorsinviewport/weapon/goldwand     0.75
+$volume heretic/actorsinviewport/weapon/goldwands     0.75
 
 heretic/actorsinviewport/weapon/crossbow			"sounds/ActorsInViewport/Heretic/Pickups/ECrossbow.ogg"
 heretic/actorsinviewport/weapon/crossbows			"sounds/ActorsInViewport/Heretic/Pickups/ECrossbows.ogg"
+$volume heretic/actorsinviewport/weapon/crossbow     0.75
+$volume heretic/actorsinviewport/weapon/crossbows     0.75
 
 heretic/actorsinviewport/weapon/dragonclaw		"sounds/ActorsInViewport/Heretic/Pickups/DragonClaw.ogg"
 heretic/actorsinviewport/weapon/dragonclaws		"sounds/ActorsInViewport/Heretic/Pickups/DragonClaws.ogg"
+$volume heretic/actorsinviewport/weapon/dragonclaw     0.75
+$volume heretic/actorsinviewport/weapon/dragonclaws     0.75
 
 heretic/actorsinviewport/weapon/hellstaff				"sounds/ActorsInViewport/Heretic/Pickups/HellStaff.ogg"
 heretic/actorsinviewport/weapon/hellstaffs				"sounds/ActorsInViewport/Heretic/Pickups/HellStaffs.ogg"
+$volume heretic/actorsinviewport/weapon/hellstaff     0.75
+$volume heretic/actorsinviewport/weapon/hellstaffs     0.75
 
 heretic/actorsinviewport/weapon/phoenixrod			"sounds/ActorsInViewport/Heretic/Pickups/PhoenixRod.ogg"
 heretic/actorsinviewport/weapon/phoenixrods		"sounds/ActorsInViewport/Heretic/Pickups/PhoenixRods.ogg"
+$volume heretic/actorsinviewport/weapon/phoenixrod     0.75
+$volume heretic/actorsinviewport/weapon/phoenixrods     0.75
 
 heretic/actorsinviewport/weapon/mace					"sounds/ActorsInViewport/Heretic/Pickups/FireMace.ogg"
 heretic/actorsinviewport/weapon/maces				"sounds/ActorsInViewport/Heretic/Pickups/FireMaces.ogg"
+$volume heretic/actorsinviewport/weapon/mace     0.75
+$volume heretic/actorsinviewport/weapon/maces     0.75
 
 //Heretic - Ammo
 
 heretic/actorsinviewport/ammo/wandcrystal			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystal.ogg"
 heretic/actorsinviewport/ammo/wandcrystals			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystals.ogg"
+$volume heretic/actorsinviewport/ammo/wandcrystal     0.75
+$volume heretic/actorsinviewport/ammo/wandcrystals     0.75
 
 heretic/actorsinviewport/ammo/geode					"sounds/ActorsInViewport/Heretic/Pickups/Geode.ogg"
 heretic/actorsinviewport/ammo/geodes					"sounds/ActorsInViewport/Heretic/Pickups/Geodes.ogg"
+$volume heretic/actorsinviewport/ammo/geode     0.75
+$volume heretic/actorsinviewport/ammo/geodes     0.75
 
 heretic/actorsinviewport/ammo/arrow					"sounds/ActorsInViewport/Heretic/Pickups/Arrow.ogg"
 heretic/actorsinviewport/ammo/arrows					"sounds/ActorsInViewport/Heretic/Pickups/Arrows.ogg"
+$volume heretic/actorsinviewport/ammo/arrow     0.75
+$volume heretic/actorsinviewport/ammo/arrows     0.75
 
 heretic/actorsinviewport/ammo/packofarrows		"sounds/ActorsInViewport/Heretic/Pickups/PackOf5Arrows.ogg"
 heretic/actorsinviewport/ammo/packsofarrows		"sounds/ActorsInViewport/Heretic/Pickups/PacksOf5Arrows.ogg"
+$volume heretic/actorsinviewport/ammo/packofarrows     0.75
+$volume heretic/actorsinviewport/ammo/packsofarrows     0.75
 
 heretic/actorsinviewport/ammo/quiver					"sounds/ActorsInViewport/Heretic/Pickups/Quiver.ogg"
 heretic/actorsinviewport/ammo/quivers					"sounds/ActorsInViewport/Heretic/Pickups/Quivers.ogg"
+$volume heretic/actorsinviewport/ammo/quiver     0.75
+$volume heretic/actorsinviewport/ammo/quivers     0.75
 
 heretic/actorsinviewport/ammo/claworb					"sounds/ActorsInViewport/Heretic/Pickups/ClawOrb.ogg"
 heretic/actorsinviewport/ammo/claworbs				"sounds/ActorsInViewport/Heretic/Pickups/ClawOrbs.ogg"
+$volume heretic/actorsinviewport/ammo/claworb     0.75
+$volume heretic/actorsinviewport/ammo/claworbs     0.75
 
 heretic/actorsinviewport/ammo/energyorb				"sounds/ActorsInViewport/Heretic/Pickups/EnergyOrb.ogg"
 heretic/actorsinviewport/ammo/energyorbs			"sounds/ActorsInViewport/Heretic/Pickups/EnergyOrbs.ogg"
+$volume heretic/actorsinviewport/ammo/energyorb     0.75
+$volume heretic/actorsinviewport/ammo/energyorbs     0.75
 
 heretic/actorsinviewport/ammo/lesserrunes			"sounds/ActorsInViewport/Heretic/Pickups/LesserRunes.ogg"
 heretic/actorsinviewport/ammo/greaterrunes			"sounds/ActorsInViewport/Heretic/Pickups/GreaterRunes.ogg"
+$volume heretic/actorsinviewport/ammo/lesserrunes     0.75
+$volume heretic/actorsinviewport/ammo/greaterrunes     0.75
 
 heretic/actorsinviewport/ammo/flameorb				"sounds/ActorsInViewport/Heretic/Pickups/FlameOrb.ogg"
 heretic/actorsinviewport/ammo/flameorbs				"sounds/ActorsInViewport/Heretic/Pickups/FlameOrbs.ogg"
+$volume heretic/actorsinviewport/ammo/flameorb     0.75
+$volume heretic/actorsinviewport/ammo/flameorbs     0.75
 
 heretic/actorsinviewport/ammo/infernoorb				"sounds/ActorsInViewport/Heretic/Pickups/InfernoOrb.ogg"
 heretic/actorsinviewport/ammo/infernoorbs			"sounds/ActorsInViewport/Heretic/Pickups/InfernoOrbs.ogg"
+$volume heretic/actorsinviewport/ammo/infernoorb     0.75
+$volume heretic/actorsinviewport/ammo/infernoorbs     0.75
 
 heretic/actorsinviewport/ammo/macespheres		"sounds/ActorsInViewport/Heretic/Pickups/MaceSpheres.ogg"
+$volume heretic/actorsinviewport/ammo/macespheres     0.75
+
 heretic/actorsinviewport/ammo/macepile				"sounds/ActorsInViewport/Heretic/Pickups/MaceSpherePile.ogg"
+$volume heretic/actorsinviewport/ammo/macepile     0.75
 
 heretic/actorsinviewport/ammo/macepiles				"sounds/ActorsInViewport/Heretic/Pickups/MaceSpherePiles.ogg"
+$volume heretic/actorsinviewport/ammo/macepiles     0.75
 
 heretic/actorsinviewport/ammo/bagofholding			"sounds/ActorsInViewport/Heretic/Pickups/BagOfHolding.ogg"
 heretic/actorsinviewport/ammo/bagsofholding		"sounds/ActorsInViewport/Heretic/Pickups/BagsOfHolding.ogg"
+$volume heretic/actorsinviewport/ammo/bagofholding     0.75
+$volume heretic/actorsinviewport/ammo/bagsofholding     0.75
 
 //Heretic - Health
 
 heretic/actorsinviewport/health/vial						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVial.ogg"
 heretic/actorsinviewport/health/vials						"sounds/ActorsInViewport/Heretic/Pickups/CrystalVials.ogg"
+$volume heretic/actorsinviewport/health/vial     0.75
+$volume heretic/actorsinviewport/health/vials     0.75
 
 heretic/actorsinviewport/health/flask						"sounds/ActorsInViewport/Heretic/Pickups/QuartzFlask.ogg"
 heretic/actorsinviewport/health/flasks					"sounds/ActorsInViewport/Heretic/Pickups/QuartzFlasks.ogg"
+$volume heretic/actorsinviewport/health/flask     0.75
+$volume heretic/actorsinviewport/health/flasks     0.75
 
 heretic/actorsinviewport/health/urn						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrn.ogg"
 heretic/actorsinviewport/health/urns						"sounds/ActorsInViewport/Heretic/Pickups/MysticUrns.ogg"
+$volume heretic/actorsinviewport/health/urn     0.75
+$volume heretic/actorsinviewport/health/urns     0.75
 
 //Heretic - Armor
 
 heretic/actorsinviewport/armor/silvershield			"sounds/ActorsInViewport/Heretic/Pickups/SilverShield.ogg"
 heretic/actorsinviewport/armor/silvershields			"sounds/ActorsInViewport/Heretic/Pickups/SilverShields.ogg"
+$volume heretic/actorsinviewport/armor/silvershield     0.75
+$volume heretic/actorsinviewport/armor/silvershields     0.75
 
 heretic/actorsinviewport/armor/enchantedshield	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShield.ogg"
 heretic/actorsinviewport/armor/enchantedshields	"sounds/ActorsInViewport/Heretic/Pickups/EnchantedShields.ogg"
+$volume heretic/actorsinviewport/armor/enchantedshield     0.75
+$volume heretic/actorsinviewport/armor/enchantedshields     0.75
 
 //Heretic - Keys
 
 heretic/actorsinviewport/key/bluekey						"sounds/ActorsInViewport/Heretic/Pickups/BlueKey.ogg"
 heretic/actorsinviewport/key/bluekeys					"sounds/ActorsInViewport/Heretic/Pickups/BlueKeys.ogg"
+$volume heretic/actorsinviewport/key/bluekey     0.75
+$volume heretic/actorsinviewport/key/bluekeys     0.75
 
 heretic/actorsinviewport/key/greenkey					"sounds/ActorsInViewport/Heretic/Pickups/GreenKey.ogg"
 heretic/actorsinviewport/key/greenkeys					"sounds/ActorsInViewport/Heretic/Pickups/GreenKeys.ogg"
+$volume heretic/actorsinviewport/key/greenkey     0.75
+$volume heretic/actorsinviewport/key/greenkeys     0.75
 
 heretic/actorsinviewport/key/yellowkey					"sounds/ActorsInViewport/Heretic/Pickups/YellowKey.ogg"
 heretic/actorsinviewport/key/yellowkeys				"sounds/ActorsInViewport/Heretic/Pickups/YellowKeys.ogg"
+$volume heretic/actorsinviewport/key/yellowkey     0.75
+$volume heretic/actorsinviewport/key/yellowkeys     0.75
 
 //Heretic - Powerups
 
 heretic/actorsinviewport/artifact/chaosdevice			"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevice.ogg"
 heretic/actorsinviewport/artifact/chaosdevices		"sounds/ActorsInViewport/Heretic/Pickups/ChaosDevices.ogg"
+$volume heretic/actorsinviewport/artifact/chaosdevice     0.75
+$volume heretic/actorsinviewport/artifact/chaosdevices     0.75
 
 heretic/actorsinviewport/artifact/morphovum			"sounds/ActorsInViewport/Heretic/Pickups/MorphOvum.ogg"
 heretic/actorsinviewport/artifact/morphovums		"sounds/ActorsInViewport/Heretic/Pickups/MorphOvums.ogg"
+$volume heretic/actorsinviewport/artifact/morphovum     0.75
+$volume heretic/actorsinviewport/artifact/morphovums     0.75
 
 heretic/actorsinviewport/artifact/mapscroll				"sounds/ActorsInViewport/Heretic/Pickups/MapScroll.ogg"
 heretic/actorsinviewport/artifact/mapscrolls			"sounds/ActorsInViewport/Heretic/Pickups/MapScrolls.ogg"
+$volume heretic/actorsinviewport/artifact/mapscroll     0.75
+$volume heretic/actorsinviewport/artifact/mapscrolls     0.75
 
 heretic/actorsinviewport/artifact/shadowsphere		"sounds/ActorsInViewport/Heretic/Pickups/ShadowSphere.ogg"
 heretic/actorsinviewport/artifact/shadowspheres	"sounds/ActorsInViewport/Heretic/Pickups/ShadowSpheres.ogg"
+$volume heretic/actorsinviewport/artifact/shadowsphere     0.75
+$volume heretic/actorsinviewport/artifact/shadowspheres     0.75
 
 heretic/actorsinviewport/artifact/ring						"sounds/ActorsInViewport/Heretic/Pickups/Ring.ogg"
 heretic/actorsinviewport/artifact/rings						"sounds/ActorsInViewport/Heretic/Pickups/Rings.ogg"
+$volume heretic/actorsinviewport/artifact/ring     0.75
+$volume heretic/actorsinviewport/artifact/rings     0.75
 
 heretic/actorsinviewport/artifact/torch						"sounds/ActorsInViewport/Heretic/Pickups/TorchPowerup.ogg"
 heretic/actorsinviewport/artifact/torches					"sounds/ActorsInViewport/Heretic/Pickups/TorchPowerups.ogg"
+$volume heretic/actorsinviewport/artifact/torch     0.75
+$volume heretic/actorsinviewport/artifact/torches     0.75
 
 heretic/actorsinviewport/artifact/tome						"sounds/ActorsInViewport/Heretic/Pickups/Tome.ogg"
 heretic/actorsinviewport/artifact/tomes					"sounds/ActorsInViewport/Heretic/Pickups/Tomes.ogg"
+$volume heretic/actorsinviewport/artifact/tome     0.75
+$volume heretic/actorsinviewport/artifact/tomes     0.75
 
 heretic/actorsinviewport/artifact/timebomb				"sounds/ActorsInViewport/Heretic/Pickups/TimeBomb.ogg"
 heretic/actorsinviewport/artifact/timebombs			"sounds/ActorsInViewport/Heretic/Pickups/TimeBombs.ogg"
+$volume heretic/actorsinviewport/artifact/timebomb     0.75
+$volume heretic/actorsinviewport/artifact/timebombs     0.75
 
 heretic/actorsinviewport/artifact/wings					"sounds/ActorsInViewport/Heretic/Pickups/Wings.ogg"
+$volume heretic/actorsinviewport/artifact/wings     0.75
 
 //*****************************************************************************************************************************
 
@@ -271,178 +429,294 @@ heretic/actorsinviewport/artifact/wings					"sounds/ActorsInViewport/Heretic/Pic
 
 hexen/actorsinviewport/weapon/arc						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Arc.ogg"
 hexen/actorsinviewport/weapon/arcs						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Arcs.ogg"
+$volume hexen/actorsinviewport/weapon/arc     0.75
+$volume hexen/actorsinviewport/weapon/arcs     0.75
 
 hexen/actorsinviewport/weapon/axe						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Axe.ogg"
 hexen/actorsinviewport/weapon/axes						"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Axes.ogg"
+$volume hexen/actorsinviewport/weapon/axe     0.75
+$volume hexen/actorsinviewport/weapon/axes     0.75
 
 hexen/actorsinviewport/weapon/bloodscourge		"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge.ogg"
 hexen/actorsinviewport/weapon/bspiece1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P1.ogg"
 hexen/actorsinviewport/weapon/bspiece2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P2.ogg"
 hexen/actorsinviewport/weapon/bspiece3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/BloodScourge-P3.ogg"
+$volume hexen/actorsinviewport/weapon/bloodscourge     0.75
+$volume hexen/actorsinviewport/weapon/bspiece1     0.75
+$volume hexen/actorsinviewport/weapon/bspiece2     0.75
+$volume hexen/actorsinviewport/weapon/bspiece3     0.75
 
 hexen/actorsinviewport/weapon/firestorm				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FireStorm.ogg"
 hexen/actorsinviewport/weapon/firestorms				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FireStorms.ogg"
+$volume hexen/actorsinviewport/weapon/firestorm     0.75
+$volume hexen/actorsinviewport/weapon/firestorms     0.75
 
 hexen/actorsinviewport/weapon/frostspell				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FrostSpell.ogg"
 hexen/actorsinviewport/weapon/frostspells			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/FrostSpells.ogg"
+$volume hexen/actorsinviewport/weapon/frostspell     0.75
+$volume hexen/actorsinviewport/weapon/frostspells     0.75
 
 hexen/actorsinviewport/weapon/hammer				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Hammer.ogg"
 hexen/actorsinviewport/weapon/hammers				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Hammers.ogg"
+$volume hexen/actorsinviewport/weapon/hammer     0.75
+$volume hexen/actorsinviewport/weapon/hammers     0.75
 
 hexen/actorsinviewport/weapon/quietus					"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus.ogg"
 hexen/actorsinviewport/weapon/quietusp1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P1.ogg"
 hexen/actorsinviewport/weapon/quietusp2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P2.ogg"
 hexen/actorsinviewport/weapon/quietusp3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/Quietus-P3.ogg"
+$volume hexen/actorsinviewport/weapon/quietus     0.75
+$volume hexen/actorsinviewport/weapon/quietusp1     0.75
+$volume hexen/actorsinviewport/weapon/quietusp2     0.75
+$volume hexen/actorsinviewport/weapon/quietusp3     0.75
 
 hexen/actorsinviewport/weapon/serpentstaff			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/SerpentStaff.ogg"
 hexen/actorsinviewport/weapon/serpentstaffs		"sounds/ActorsInViewport/Hexen/Pickups/Weapons/SerpentStaffs.ogg"
+$volume hexen/actorsinviewport/weapon/serpentstaff     0.75
+$volume hexen/actorsinviewport/weapon/serpentstaffs     0.75
 
 hexen/actorsinviewport/weapon/wraithverge			"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge.ogg"
 hexen/actorsinviewport/weapon/wvpiece1				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P1.ogg"
 hexen/actorsinviewport/weapon/wvpiece2				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P2.ogg"
 hexen/actorsinviewport/weapon/wvpiece3				"sounds/ActorsInViewport/Hexen/Pickups/Weapons/WraithVerge-P3.ogg"
+$volume hexen/actorsinviewport/weapon/wraithverge     0.75
+$volume hexen/actorsinviewport/weapon/wvpiece1     0.75
+$volume hexen/actorsinviewport/weapon/wvpiece2     0.75
+$volume hexen/actorsinviewport/weapon/wvpiece3     0.75
 
 //Hexen - Ammo
 
 hexen/actorsinviewport/ammo/bluemana				"sounds/ActorsInViewport/Hexen/Pickups/Ammo/BlueMana.ogg"
+$volume hexen/actorsinviewport/ammo/bluemana     0.75
 
 hexen/actorsinviewport/ammo/greenmana				"sounds/ActorsInViewport/Hexen/Pickups/Ammo/GreenMana.ogg"
+$volume hexen/actorsinviewport/ammo/greenmana     0.75
 
 hexen/actorsinviewport/ammo/combomana			"sounds/ActorsInViewport/Hexen/Pickups/Ammo/ComboMana.ogg"
+$volume hexen/actorsinviewport/ammo/combomana     0.75
 
 hexen/actorsinviewport/ammo/krater						"sounds/ActorsInViewport/Hexen/Pickups/Ammo/Krater.ogg"
 hexen/actorsinviewport/ammo/kraters					"sounds/ActorsInViewport/Hexen/Pickups/Ammo/Kraters.ogg"
+$volume hexen/actorsinviewport/ammo/krater     0.75
+$volume hexen/actorsinviewport/ammo/kraters     0.75
 
 //Hexen - Health 
 
 hexen/actorsinviewport/health/vial							"sounds/ActorsInViewport/Hexen/Pickups/Health/CrystalVial.ogg"
 hexen/actorsinviewport/health/vials						"sounds/ActorsInViewport/Hexen/Pickups/Health/CrystalVials.ogg"
+$volume hexen/actorsinviewport/health/vial     0.75
+$volume hexen/actorsinviewport/health/vials     0.75
 
 hexen/actorsinviewport/health/flask						"sounds/ActorsInViewport/Hexen/Pickups/Health/QuartzFlask.ogg"
 hexen/actorsinviewport/health/flasks						"sounds/ActorsInViewport/Hexen/Pickups/Health/QuartzFlasks.ogg"
+$volume hexen/actorsinviewport/health/flask     0.75
+$volume hexen/actorsinviewport/health/flasks     0.75
 
 hexen/actorsinviewport/health/urn							"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticUrn.ogg"
 hexen/actorsinviewport/health/urns						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticUrns.ogg"
+$volume hexen/actorsinviewport/health/urn     0.75
+$volume hexen/actorsinviewport/health/urns     0.75
 
 hexen/actorsinviewport/health/ambit						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticAmbit.ogg"
 hexen/actorsinviewport/health/ambits						"sounds/ActorsInViewport/Hexen/Pickups/Health/MysticAmbits.ogg"
+$volume hexen/actorsinviewport/health/ambit     0.75
+$volume hexen/actorsinviewport/health/ambits     0.75
 
 //Hexen - Armor
 
 hexen/actorsinviewport/armor/amulet						"sounds/ActorsInViewport/Hexen/Pickups/Armor/Amulet.ogg"
 hexen/actorsinviewport/armor/amulets					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Amulets.ogg"
+$volume hexen/actorsinviewport/armor/amulet     0.75
+$volume hexen/actorsinviewport/armor/amulets     0.75
 
 hexen/actorsinviewport/armor/bracers					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Bracers.ogg"
+$volume hexen/actorsinviewport/armor/bracers     0.75
 
 hexen/actorsinviewport/armor/shield						"sounds/ActorsInViewport/Hexen/Pickups/Armor/FalconShield.ogg"
 hexen/actorsinviewport/armor/shields						"sounds/ActorsInViewport/Hexen/Pickups/Armor/FalconShields.ogg"
+$volume hexen/actorsinviewport/armor/shield     0.75
+$volume hexen/actorsinviewport/armor/shields     0.75
 
 hexen/actorsinviewport/armor/helmet						"sounds/ActorsInViewport/Hexen/Pickups/Armor/Helmet.ogg"
 hexen/actorsinviewport/armor/helmets					"sounds/ActorsInViewport/Hexen/Pickups/Armor/Helmets.ogg"
+$volume hexen/actorsinviewport/armor/helmet     0.75
+$volume hexen/actorsinviewport/armor/helmets     0.75
 
 hexen/actorsinviewport/armor/mesharmor				"sounds/ActorsInViewport/Hexen/Pickups/Armor/MeshArmor.ogg"
 hexen/actorsinviewport/armor/mesharmors			"sounds/ActorsInViewport/Hexen/Pickups/Armor/MeshArmors.ogg"
+$volume hexen/actorsinviewport/armor/mesharmor     0.75
+$volume hexen/actorsinviewport/armor/mesharmors     0.75
 
 //Hexen - Powerups
 
 hexen/actorsinviewport/artifact/bandevice				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/BanishDevice.ogg"
 hexen/actorsinviewport/artifact/bandevices			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/BanishDevices.ogg"
+$volume hexen/actorsinviewport/artifact/bandevice     0.75
+$volume hexen/actorsinviewport/artifact/bandevices     0.75
 
 hexen/actorsinviewport/artifact/chaosdevice			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/ChaosDevice.ogg"
 hexen/actorsinviewport/artifact/chaosdevices			"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/ChaosDevices.ogg"
+$volume hexen/actorsinviewport/artifact/chaosdevice     0.75
+$volume hexen/actorsinviewport/artifact/chaosdevices     0.75
 
 hexen/actorsinviewport/artifact/servant					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DarkServant.ogg"
 hexen/actorsinviewport/artifact/servants					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DarkServants.ogg"
+$volume hexen/actorsinviewport/artifact/servant     0.75
+$volume hexen/actorsinviewport/artifact/servants     0.75
 
 hexen/actorsinviewport/artifact/icon						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DefenderIcon.ogg"
 hexen/actorsinviewport/artifact/icons						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/DefenderIcons.ogg"
+$volume hexen/actorsinviewport/artifact/icon     0.75
+$volume hexen/actorsinviewport/artifact/icons     0.75
 
 hexen/actorsinviewport/artifact/flechette					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Flechette.ogg"
 hexen/actorsinviewport/artifact/flechettes				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Flechettes.ogg"
+$volume hexen/actorsinviewport/artifact/flechette     0.75
+$volume hexen/actorsinviewport/artifact/flechettes     0.75
 
 hexen/actorsinviewport/artifact/porkalator				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Porkalator.ogg"
 hexen/actorsinviewport/artifact/porkalators				"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Porkalators.ogg"
+$volume hexen/actorsinviewport/artifact/porkalator     0.75
+$volume hexen/actorsinviewport/artifact/porkalators     0.75
 
 hexen/actorsinviewport/artifact/repdisc					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/RepDisc.ogg"
 hexen/actorsinviewport/artifact/repdiscs					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/RepDiscs.ogg"
+$volume hexen/actorsinviewport/artifact/repdisc     0.75
+$volume hexen/actorsinviewport/artifact/repdiscs     0.75
 
 hexen/actorsinviewport/artifact/boots						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/SpeedBoots.ogg"
+$volume hexen/actorsinviewport/artifact/boots     0.75
 
 hexen/actorsinviewport/artifact/torch						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/TorchPowerup.ogg"
 hexen/actorsinviewport/artifact/torches					"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/TorchPowerups.ogg"
+$volume hexen/actorsinviewport/artifact/torch     0.75
+$volume hexen/actorsinviewport/artifact/torches     0.75
 
 hexen/actorsinviewport/artifact/wings						"sounds/ActorsInViewport/Hexen/Pickups/Artifacts/Wings.ogg"
+$volume hexen/actorsinviewport/artifact/wings     0.75
 
 //Hexen - Keys
 
 hexen/actorsinviewport/keys/axekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/AxeKey.ogg"
 hexen/actorsinviewport/keys/axekeys						"sounds/ActorsInViewport/Hexen/Pickups/Keys/AxeKeys.ogg"
+$volume hexen/actorsinviewport/keys/axekey     0.75
+$volume hexen/actorsinviewport/keys/axekeys     0.75
 
 hexen/actorsinviewport/keys/castlekey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CastleKey.ogg"
 hexen/actorsinviewport/keys/castlekeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CastleKeys.ogg"
+$volume hexen/actorsinviewport/keys/castlekey     0.75
+$volume hexen/actorsinviewport/keys/castlekeys     0.75
 
 hexen/actorsinviewport/keys/cavekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/CaveKey.ogg"
 hexen/actorsinviewport/keys/cavekeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/CaveKeys.ogg"
+$volume hexen/actorsinviewport/keys/cavekey     0.75
+$volume hexen/actorsinviewport/keys/cavekeys     0.75
 
 hexen/actorsinviewport/keys/dungeonkey				"sounds/ActorsInViewport/Hexen/Pickups/Keys/DungeonKey.ogg"
 hexen/actorsinviewport/keys/dungeonkeys			"sounds/ActorsInViewport/Hexen/Pickups/Keys/DungeonKeys.ogg"
+$volume hexen/actorsinviewport/keys/dungeonkey     0.75
+$volume hexen/actorsinviewport/keys/dungeonkeys     0.75
 
 hexen/actorsinviewport/keys/emeraldkey				"sounds/ActorsInViewport/Hexen/Pickups/Keys/EmeraldKey.ogg"
 hexen/actorsinviewport/keys/emeraldkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/EmeraldKeys.ogg"
+$volume hexen/actorsinviewport/keys/emeraldkey     0.75
+$volume hexen/actorsinviewport/keys/emeraldkeys     0.75
 
 hexen/actorsinviewport/keys/firekey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/FireKey.ogg"
 hexen/actorsinviewport/keys/firekeys						"sounds/ActorsInViewport/Hexen/Pickups/Keys/FireKeys.ogg"
+$volume hexen/actorsinviewport/keys/firekey     0.75
+$volume hexen/actorsinviewport/keys/firekeys     0.75
 
 hexen/actorsinviewport/keys/hornkey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/HornKey.ogg"
 hexen/actorsinviewport/keys/hornkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/HornKeys.ogg"
+$volume hexen/actorsinviewport/keys/hornkey     0.75
+$volume hexen/actorsinviewport/keys/hornkeys     0.75
 
 hexen/actorsinviewport/keys/rustedkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/RustedKey.ogg"
 hexen/actorsinviewport/keys/rustedkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/RustedKeys.ogg"
+$volume hexen/actorsinviewport/keys/rustedkey     0.75
+$volume hexen/actorsinviewport/keys/rustedkeys     0.75
 
 hexen/actorsinviewport/keys/silverkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SilverKey.ogg"
 hexen/actorsinviewport/keys/silverkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SilverKeys.ogg"
+$volume hexen/actorsinviewport/keys/silverkey     0.75
+$volume hexen/actorsinviewport/keys/silverkeys     0.75
 
 hexen/actorsinviewport/keys/steelkey						"sounds/ActorsInViewport/Hexen/Pickups/Keys/SteelKey.ogg"
 hexen/actorsinviewport/keys/steelkeys					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SteelKeys.ogg"
+$volume hexen/actorsinviewport/keys/steelkey     0.75
+$volume hexen/actorsinviewport/keys/steelkeys     0.75
 
 hexen/actorsinviewport/keys/swampkey					"sounds/ActorsInViewport/Hexen/Pickups/Keys/SwampKey.ogg"
 hexen/actorsinviewport/keys/swampkeys				"sounds/ActorsInViewport/Hexen/Pickups/Keys/SwampKeys.ogg"
+$volume hexen/actorsinviewport/keys/swampkey     0.75
+$volume hexen/actorsinviewport/keys/swampkeys     0.75
 
 //Hexen - Puzzle Items
 
 hexen/actorsinviewport/puzzle/bluegem1				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/BlueGem1.ogg"
 hexen/actorsinviewport/puzzle/bluegem2				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/BlueGem2.ogg"
+$volume hexen/actorsinviewport/puzzle/bluegem1     0.75
+$volume hexen/actorsinviewport/puzzle/bluegem2     0.75
+
 hexen/actorsinviewport/puzzle/greengem1				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GreenGem1.ogg"
 hexen/actorsinviewport/puzzle/greengem2				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GreenGem2.ogg"
+$volume hexen/actorsinviewport/puzzle/greengem1     0.75
+$volume hexen/actorsinviewport/puzzle/greengem2     0.75
+
 hexen/actorsinviewport/puzzle/rubygem					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/RubyGem.ogg"
+$volume hexen/actorsinviewport/puzzle/rubygem1     0.75
+
 hexen/actorsinviewport/puzzle/gems						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gems.ogg"
+$volume hexen/actorsinviewport/puzzle/gems     0.75
 
 hexen/actorsinviewport/puzzle/codex						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Codex.ogg"
 hexen/actorsinviewport/puzzle/codexes					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Codexes.ogg"
+$volume hexen/actorsinviewport/puzzle/codex     0.75
+$volume hexen/actorsinviewport/puzzle/codexes     0.75
 
 hexen/actorsinviewport/puzzle/mask						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/FlameMask.ogg"
 hexen/actorsinviewport/puzzle/masks					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/FlameMasks.ogg"
+$volume hexen/actorsinviewport/puzzle/mask     0.75
+$volume hexen/actorsinviewport/puzzle/masks     0.75
 
 hexen/actorsinviewport/puzzle/gear1						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear1.ogg"
 hexen/actorsinviewport/puzzle/gear2						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear2.ogg"
 hexen/actorsinviewport/puzzle/gear3						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear3.ogg"
 hexen/actorsinviewport/puzzle/gear4						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gear4.ogg"
 hexen/actorsinviewport/puzzle/gears						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/Gears.ogg"
+$volume hexen/actorsinviewport/puzzle/gear1     0.75
+$volume hexen/actorsinviewport/puzzle/gear2     0.75
+$volume hexen/actorsinviewport/puzzle/gear3     0.75
+$volume hexen/actorsinviewport/puzzle/gear4     0.75
+$volume hexen/actorsinviewport/puzzle/gears     0.75
 
 hexen/actorsinviewport/puzzle/glaiveseal				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GlaiveSeal.ogg"
 hexen/actorsinviewport/puzzle/glaiveseals				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/GlaiveSeals.ogg"
+$volume hexen/actorsinviewport/puzzle/glaiveseal     0.75
+$volume hexen/actorsinviewport/puzzle/glaiveseals     0.75
 
 hexen/actorsinviewport/puzzle/dsparilheart			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HeartOfDSparil.ogg"
 hexen/actorsinviewport/puzzle/dsparilhearts			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HeartsOfDSparil.ogg"
+$volume hexen/actorsinviewport/puzzle/dsparilheart     0.75
+$volume hexen/actorsinviewport/puzzle/dsparilhearts     0.75
 
 hexen/actorsinviewport/puzzle/holyrelic					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HolyRelic.ogg"
 hexen/actorsinviewport/puzzle/holyrelics				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/HolyRelics.ogg"
+$volume hexen/actorsinviewport/puzzle/holyrelic     0.75
+$volume hexen/actorsinviewport/puzzle/holyrelics     0.75
 
 hexen/actorsinviewport/puzzle/ascura					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/LibreAscura.ogg"
 hexen/actorsinviewport/puzzle/ascuras					"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/LibreAscuras.ogg"
+$volume hexen/actorsinviewport/puzzle/ascura     0.75
+$volume hexen/actorsinviewport/puzzle/ascuras     0.75
 
 hexen/actorsinviewport/puzzle/sigil							"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/SigilMagus.ogg"
 hexen/actorsinviewport/puzzle/sigils						"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/SigilsMagus.ogg"
+$volume hexen/actorsinviewport/puzzle/sigil     0.75
+$volume hexen/actorsinviewport/puzzle/sigils     0.75
 
 hexen/actorsinviewport/puzzle/yorickskull				"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/YorickSkull.ogg"
 hexen/actorsinviewport/puzzle/yorickskulls			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/YorickSkulls.ogg"
+$volume hexen/actorsinviewport/puzzle/yorickskull     0.75
+$volume hexen/actorsinviewport/puzzle/yorickskulls     0.75
