@@ -13,14 +13,14 @@ stats/chessboardcoords/zone             "sounds/PlayerStats/Chessboard/Zone.ogg"
 stats/chessboardcoords/cell             "sounds/PlayerStats/Chessboard/Cell.ogg"
 
 stats/noradiusdamage/enabled			"sounds/Menus/TobyOptions/NoRadDmgOn.ogg"
-$volume stats/noradiusdamage/enabled      0.75
+$volume stats/noradiusdamage/enabled      0.85
 stats/noradiusdamage/disabled			"sounds/Menus/TobyOptions/NoRadDmgOff.ogg"
-$volume stats/noradiusdamage/disabled      0.75
+$volume stats/noradiusdamage/disabled      0.85
 
 stats/targetannouncement/enabled			"sounds/Menus/TobyOptions/TargetAnnEnabled.ogg"
-$volume stats/targetannouncement/enabled      0.75
+$volume stats/targetannouncement/enabled      0.85
 stats/targetannouncement/disabled			"sounds/Menus/TobyOptions/TargetAnnDisabled.ogg"
-$volume stats/targetannouncement/disabled      0.75
+$volume stats/targetannouncement/disabled      0.85
 
 stats/level/secrets         "sounds/PlayerStats/MapStats/Secrets.ogg"
 stats/level/monsters        "sounds/PlayerStats/MapStats/Monsters.ogg"
@@ -115,6 +115,7 @@ hexen/weapon/bloodscourge   "sounds/PlayerStats/HexenWeapons/BloodScourge.ogg"
 
 hexen/ammo/bluemana         "sounds/ActorsInViewport/Hexen/Pickups/Ammo/BlueMana.ogg"
 hexen/ammo/greenmana        "sounds/ActorsInViewport/Hexen/Pickups/Ammo/GreenMana.ogg"
+$volume hexen/ammo/greenmana	      0.85
 
 //Armor
 

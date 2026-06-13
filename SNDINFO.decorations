@@ -1,530 +1,530 @@
 //Tech
 toby/actorsinviewport/decorations/explosivebarrel       "sounds/ActorsInViewport/Decorations/Tech/ExplosiveBarrel.ogg"
 toby/actorsinviewport/decorations/explosivebarrels      "sounds/ActorsInViewport/Decorations/Tech/ExplosiveBarrels.ogg"
-$volume toby/actorsinviewport/decorations/explosivebarrel    0.33
-$volume toby/actorsinviewport/decorations/explosivebarrels    0.33
+$volume toby/actorsinviewport/decorations/explosivebarrel    0.5
+$volume toby/actorsinviewport/decorations/explosivebarrels    0.5
 
 toby/actorsinviewport/decorations/burningbarrel         "sounds/ActorsInViewport/Decorations/Tech/BurningBarrel.ogg"
 toby/actorsinviewport/decorations/burningbarrels        "sounds/ActorsInViewport/Decorations/Tech/BurningBarrels.ogg"
-$volume toby/actorsinviewport/decorations/burningbarrel    0.33
-$volume toby/actorsinviewport/decorations/burningbarrels    0.33
+$volume toby/actorsinviewport/decorations/burningbarrel    0.5
+$volume toby/actorsinviewport/decorations/burningbarrels    0.5
 
 toby/actorsinviewport/decorations/minitechlamp         "sounds/ActorsInViewport/Decorations/Tech/MiniTechLamp.ogg"
 toby/actorsinviewport/decorations/minitechlamps        "sounds/ActorsInViewport/Decorations/Tech/MiniTechLamps.ogg"
-$volume toby/actorsinviewport/decorations/minitechlamp    0.5
-$volume toby/actorsinviewport/decorations/minitechlamps    0.5
+$volume toby/actorsinviewport/decorations/minitechlamp    0.66
+$volume toby/actorsinviewport/decorations/minitechlamps    0.66
 
 toby/actorsinviewport/decorations/smalltechlamp         "sounds/ActorsInViewport/Decorations/Tech/SmallTechLamp.ogg"
 toby/actorsinviewport/decorations/smalltechlamps        "sounds/ActorsInViewport/Decorations/Tech/SmallTechLamps.ogg"
-$volume toby/actorsinviewport/decorations/smalltechlamp    0.5
-$volume toby/actorsinviewport/decorations/smalltechlamps    0.5
+$volume toby/actorsinviewport/decorations/smalltechlamp    0.66
+$volume toby/actorsinviewport/decorations/smalltechlamps    0.66
 
 toby/actorsinviewport/decorations/largetechlamp         "sounds/ActorsInViewport/Decorations/Tech/LargeTechLamp.ogg"
 toby/actorsinviewport/decorations/largetechlamps        "sounds/ActorsInViewport/Decorations/Tech/LargeTechLamps.ogg"
-$volume toby/actorsinviewport/decorations/largetechlamp    0.5
-$volume toby/actorsinviewport/decorations/largetechlamps    0.5
+$volume toby/actorsinviewport/decorations/largetechlamp    0.66
+$volume toby/actorsinviewport/decorations/largetechlamps    0.66
 
 toby/actorsinviewport/decorations/techpillar            "sounds/ActorsInViewport/Decorations/Tech/TechPillar.ogg"
 toby/actorsinviewport/decorations/techpillars           "sounds/ActorsInViewport/Decorations/Tech/TechPillars.ogg"
-$volume toby/actorsinviewport/decorations/techpillar    0.5
-$volume toby/actorsinviewport/decorations/techpillars    0.5
+$volume toby/actorsinviewport/decorations/techpillar    0.75
+$volume toby/actorsinviewport/decorations/techpillars    0.75
 
 
 //Corpses
 toby/actorsinviewport/decorations/cacodemoncorpse       "sounds/ActorsInViewport/Decorations/Gore/CacodemonCorpse.ogg"
 toby/actorsinviewport/decorations/cacodemoncorpses      "sounds/ActorsInViewport/Decorations/Gore/CacodemonCorpses.ogg"
-$volume toby/actorsinviewport/decorations/cacodemoncorpse    0.5
-$volume toby/actorsinviewport/decorations/cacodemoncorpses    0.5
+$volume toby/actorsinviewport/decorations/cacodemoncorpse    0.75
+$volume toby/actorsinviewport/decorations/cacodemoncorpses    0.75
 
 toby/actorsinviewport/decorations/pinkycorpse           "sounds/ActorsInViewport/Decorations/Gore/PinkyCorpse.ogg"
 toby/actorsinviewport/decorations/pinkycorpses          "sounds/ActorsInViewport/Decorations/Gore/PinkyCorpses.ogg"
-$volume toby/actorsinviewport/decorations/pinkycorpse    0.5
-$volume toby/actorsinviewport/decorations/pinkycorpses    0.5
+$volume toby/actorsinviewport/decorations/pinkycorpse    0.75
+$volume toby/actorsinviewport/decorations/pinkycorpses    0.75
 
 toby/actorsinviewport/decorations/impcorpse             "sounds/ActorsInViewport/Decorations/Gore/ImpCorpse.ogg"
 toby/actorsinviewport/decorations/impcorpses            "sounds/ActorsInViewport/Decorations/Gore/ImpCorpses.ogg"
-$volume toby/actorsinviewport/decorations/impcorpse    0.5
-$volume toby/actorsinviewport/decorations/impcorpses    0.5
+$volume toby/actorsinviewport/decorations/impcorpse    0.75
+$volume toby/actorsinviewport/decorations/impcorpses    0.75
 
 toby/actorsinviewport/decorations/marinecorpse          "sounds/ActorsInViewport/Decorations/Gore/MarineCorpse.ogg"
 toby/actorsinviewport/decorations/marinecorpses         "sounds/ActorsInViewport/Decorations/Gore/MarineCorpses.ogg"
-$volume toby/actorsinviewport/decorations/marinecorpse    0.5
-$volume toby/actorsinviewport/decorations/marinecorpses    0.5
+$volume toby/actorsinviewport/decorations/marinecorpse    0.75
+$volume toby/actorsinviewport/decorations/marinecorpses    0.75
 
 toby/actorsinviewport/decorations/shotgunnercorpse      "sounds/ActorsInViewport/Decorations/Gore/ShotgunnerCorpse.ogg"
 toby/actorsinviewport/decorations/shotgunnercorpses     "sounds/ActorsInViewport/Decorations/Gore/ShotgunnerCorpses.ogg"
-$volume toby/actorsinviewport/decorations/shotgunnercorpse    0.5
-$volume toby/actorsinviewport/decorations/shotgunnercorpses    0.5
+$volume toby/actorsinviewport/decorations/shotgunnercorpse    0.75
+$volume toby/actorsinviewport/decorations/shotgunnercorpses    0.75
 
 toby/actorsinviewport/decorations/zombiemancorpse       "sounds/ActorsInViewport/Decorations/Gore/ZombiemanCorpse.ogg"
 toby/actorsinviewport/decorations/zombiemancorpses      "sounds/ActorsInViewport/Decorations/Gore/ZombiemanCorpses.ogg"
-$volume toby/actorsinviewport/decorations/zombiemancorpse    0.5
-$volume toby/actorsinviewport/decorations/zombiemancorpses    0.5
+$volume toby/actorsinviewport/decorations/zombiemancorpse    0.75
+$volume toby/actorsinviewport/decorations/zombiemancorpses    0.75
 
 toby/actorsinviewport/decorations/crushedcorpse         "sounds/ActorsInViewport/Decorations/Gore/CrushedCorpse.ogg"
 toby/actorsinviewport/decorations/crushedcorpses        "sounds/ActorsInViewport/Decorations/Gore/CrushedCorpses.ogg"
-$volume toby/actorsinviewport/decorations/crushedcorpse    0.5
-$volume toby/actorsinviewport/decorations/crushedcorpses    0.5
+$volume toby/actorsinviewport/decorations/crushedcorpse    0.75
+$volume toby/actorsinviewport/decorations/crushedcorpses    0.75
 
 toby/actorsinviewport/decorations/gibbedcorpse          "sounds/ActorsInViewport/Decorations/Gore/GibbedCorpse.ogg"
 toby/actorsinviewport/decorations/gibbedcorpses         "sounds/ActorsInViewport/Decorations/Gore/GibbedCorpses.ogg"
-$volume toby/actorsinviewport/decorations/gibbedcorpse    0.5
-$volume toby/actorsinviewport/decorations/gibbedcorpses    0.5
+$volume toby/actorsinviewport/decorations/gibbedcorpse    0.75
+$volume toby/actorsinviewport/decorations/gibbedcorpses    0.75
 
 
 //Gore
 toby/actorsinviewport/decorations/impaledguy            "sounds/ActorsInViewport/Decorations/Gore/ImpaledGuy.ogg"
 toby/actorsinviewport/decorations/impaledguys           "sounds/ActorsInViewport/Decorations/Gore/ImpaledGuys.ogg"
-$volume toby/actorsinviewport/decorations/impaledguy    0.5
-$volume toby/actorsinviewport/decorations/impaledguys    0.5
+$volume toby/actorsinviewport/decorations/impaledguy    0.75
+$volume toby/actorsinviewport/decorations/impaledguys    0.75
 
 toby/actorsinviewport/decorations/twitchingimpaledguy   "sounds/ActorsInViewport/Decorations/Gore/TwitchingImpaledGuy.ogg"
 toby/actorsinviewport/decorations/twitchingimpaledguys  "sounds/ActorsInViewport/Decorations/Gore/TwitchingImpaledGuys.ogg"
-$volume toby/actorsinviewport/decorations/twitchingimpaledguy    0.5
-$volume toby/actorsinviewport/decorations/twitchingimpaledguys    0.5
+$volume toby/actorsinviewport/decorations/twitchingimpaledguy    0.75
+$volume toby/actorsinviewport/decorations/twitchingimpaledguys    0.75
 
 toby/actorsinviewport/decorations/twitchhangingman      "sounds/ActorsInViewport/Decorations/Gore/TwitchHangingMan.ogg"
 toby/actorsinviewport/decorations/twitchhangingmen      "sounds/ActorsInViewport/Decorations/Gore/TwitchHangingMen.ogg"
-$volume toby/actorsinviewport/decorations/twitchhangingman    0.5
-$volume toby/actorsinviewport/decorations/twitchhangingmen    0.5
+$volume toby/actorsinviewport/decorations/twitchhangingman    0.75
+$volume toby/actorsinviewport/decorations/twitchhangingmen    0.75
 
 toby/actorsinviewport/decorations/brain                 "sounds/ActorsInViewport/Decorations/Gore/Brain.ogg"
 toby/actorsinviewport/decorations/brains                "sounds/ActorsInViewport/Decorations/Gore/Brains.ogg"
-$volume toby/actorsinviewport/decorations/brain    0.5
-$volume toby/actorsinviewport/decorations/brains    0.5
+$volume toby/actorsinviewport/decorations/brain    0.75
+$volume toby/actorsinviewport/decorations/brains    0.75
 
 toby/actorsinviewport/decorations/pileofflesh           "sounds/ActorsInViewport/Decorations/Gore/PileOfFlesh.ogg"
 toby/actorsinviewport/decorations/pilesofflesh          "sounds/ActorsInViewport/Decorations/Gore/PilesOfFlesh.ogg"
-$volume toby/actorsinviewport/decorations/pileofflesh    0.5
-$volume toby/actorsinviewport/decorations/pilesofflesh    0.5
+$volume toby/actorsinviewport/decorations/pileofflesh    0.75
+$volume toby/actorsinviewport/decorations/pilesofflesh    0.75
 
 //Crushed gibs?
 
 toby/actorsinviewport/decorations/hangmannobrain        "sounds/ActorsInViewport/Decorations/Gore/HangManNoBrain.ogg"
 toby/actorsinviewport/decorations/hangmennobrain        "sounds/ActorsInViewport/Decorations/Gore/HangMenNoBrain.ogg"
-$volume toby/actorsinviewport/decorations/hangmannobrain    0.5
-$volume toby/actorsinviewport/decorations/hangmennobrain    0.5
+$volume toby/actorsinviewport/decorations/hangmannobrain    0.75
+$volume toby/actorsinviewport/decorations/hangmennobrain    0.75
 
 toby/actorsinviewport/decorations/hangmannoguts         "sounds/ActorsInViewport/Decorations/Gore/HangManNoGuts.ogg"
 toby/actorsinviewport/decorations/hangmennoguts         "sounds/ActorsInViewport/Decorations/Gore/HangMenNoGuts.ogg"
-$volume toby/actorsinviewport/decorations/hangmannoguts    0.5
-$volume toby/actorsinviewport/decorations/hangmennoguts    0.5
+$volume toby/actorsinviewport/decorations/hangmannoguts    0.75
+$volume toby/actorsinviewport/decorations/hangmennoguts    0.75
 
 toby/actorsinviewport/decorations/torsolookdown         "sounds/ActorsInViewport/Decorations/Gore/TorsoLookDown.ogg"
 toby/actorsinviewport/decorations/torsoslookdown        "sounds/ActorsInViewport/Decorations/Gore/TorsosLookDown.ogg"
-$volume toby/actorsinviewport/decorations/torsolookdown    0.5
-$volume toby/actorsinviewport/decorations/torsoslookdown    0.5
+$volume toby/actorsinviewport/decorations/torsolookdown    0.75
+$volume toby/actorsinviewport/decorations/torsoslookdown    0.75
 
 toby/actorsinviewport/decorations/torsolookup           "sounds/ActorsInViewport/Decorations/Gore/TorsoLookUp.ogg"
 toby/actorsinviewport/decorations/torsoslookup          "sounds/ActorsInViewport/Decorations/Gore/TorsosLookUp.ogg"
-$volume toby/actorsinviewport/decorations/torsolookup    0.5
-$volume toby/actorsinviewport/decorations/torsoslookup    0.5
+$volume toby/actorsinviewport/decorations/torsolookup    0.75
+$volume toby/actorsinviewport/decorations/torsoslookup    0.75
 
 toby/actorsinviewport/decorations/torsonobrain          "sounds/ActorsInViewport/Decorations/Gore/TorsoNoBrain.ogg"
 toby/actorsinviewport/decorations/torsosnobrain         "sounds/ActorsInViewport/Decorations/Gore/TorsosNoBrain.ogg"
-$volume toby/actorsinviewport/decorations/torsonobrain    0.5
-$volume toby/actorsinviewport/decorations/torsosnobrain    0.5
+$volume toby/actorsinviewport/decorations/torsonobrain    0.75
+$volume toby/actorsinviewport/decorations/torsosnobrain    0.75
 
 toby/actorsinviewport/decorations/torsoexposedbrain     "sounds/ActorsInViewport/Decorations/Gore/TorsoExposedBrain.ogg"
 toby/actorsinviewport/decorations/torsosexposedbrain    "sounds/ActorsInViewport/Decorations/Gore/TorsosExposedBrain.ogg"
-$volume toby/actorsinviewport/decorations/torsoexposedbrain    0.5
-$volume toby/actorsinviewport/decorations/torsosexposedbrain    0.5
+$volume toby/actorsinviewport/decorations/torsoexposedbrain    0.75
+$volume toby/actorsinviewport/decorations/torsosexposedbrain    0.75
 
 toby/actorsinviewport/decorations/hangingleg            "sounds/ActorsInViewport/Decorations/Gore/HangingLeg.ogg"
 toby/actorsinviewport/decorations/hanginglegs           "sounds/ActorsInViewport/Decorations/Gore/HangingLegs.ogg"
-$volume toby/actorsinviewport/decorations/hangingleg    0.5
-$volume toby/actorsinviewport/decorations/hanginglegs    0.5
+$volume toby/actorsinviewport/decorations/hangingleg    0.75
+$volume toby/actorsinviewport/decorations/hanginglegs    0.75
 
 toby/actorsinviewport/decorations/hangingman1leg        "sounds/ActorsInViewport/Decorations/Gore/HangingMan1Leg.ogg"
 toby/actorsinviewport/decorations/hangingmen1leg        "sounds/ActorsInViewport/Decorations/Gore/HangingMen1Leg.ogg"
-$volume toby/actorsinviewport/decorations/hangingman1leg    0.5
-$volume toby/actorsinviewport/decorations/hangingmen1leg    0.5
+$volume toby/actorsinviewport/decorations/hangingman1leg    0.75
+$volume toby/actorsinviewport/decorations/hangingmen1leg    0.75
 
 toby/actorsinviewport/decorations/hangingman            "sounds/ActorsInViewport/Decorations/Gore/HangingMan.ogg"
 toby/actorsinviewport/decorations/hangingmen            "sounds/ActorsInViewport/Decorations/Gore/HangingMen.ogg"
-$volume toby/actorsinviewport/decorations/hangingman    0.5
-$volume toby/actorsinviewport/decorations/hangingmen    0.5
+$volume toby/actorsinviewport/decorations/hangingman    0.75
+$volume toby/actorsinviewport/decorations/hangingmen    0.75
 
 toby/actorsinviewport/decorations/hangingpairoflegs     "sounds/ActorsInViewport/Decorations/Gore/HangingPairOfLegs.ogg"
 toby/actorsinviewport/decorations/hangingpairsoflegs    "sounds/ActorsInViewport/Decorations/Gore/HangingPairsOfLegs.ogg"
-$volume toby/actorsinviewport/decorations/hangingpairoflegs    0.5
-$volume toby/actorsinviewport/decorations/hangingpairsoflegs    0.5
+$volume toby/actorsinviewport/decorations/hangingpairoflegs    0.75
+$volume toby/actorsinviewport/decorations/hangingpairsoflegs    0.75
 
 toby/actorsinviewport/decorations/headpike              "sounds/ActorsInViewport/Decorations/Gore/HeadPike.ogg"
 toby/actorsinviewport/decorations/headpikes             "sounds/ActorsInViewport/Decorations/Gore/HeadPikes.ogg"
-$volume toby/actorsinviewport/decorations/headpike    0.5
-$volume toby/actorsinviewport/decorations/headpikes    0.5
+$volume toby/actorsinviewport/decorations/headpike    0.75
+$volume toby/actorsinviewport/decorations/headpikes    0.75
 
 toby/actorsinviewport/decorations/multiheadpike         "sounds/ActorsInViewport/Decorations/Gore/MultiHeadPike.ogg"
 toby/actorsinviewport/decorations/multiheadpikes        "sounds/ActorsInViewport/Decorations/Gore/MultiHeadPikes.ogg"
-$volume toby/actorsinviewport/decorations/multiheadpike    0.5
-$volume toby/actorsinviewport/decorations/multiheadpikes    0.5
+$volume toby/actorsinviewport/decorations/multiheadpike    0.75
+$volume toby/actorsinviewport/decorations/multiheadpikes    0.75
 
 toby/actorsinviewport/decorations/poolofblood           "sounds/ActorsInViewport/Decorations/Gore/PoolOfBlood.ogg"
 toby/actorsinviewport/decorations/poolsofblood          "sounds/ActorsInViewport/Decorations/Gore/PoolsOfBlood.ogg"
-$volume toby/actorsinviewport/decorations/poolofblood    0.5
-$volume toby/actorsinviewport/decorations/poolsofblood    0.5
+$volume toby/actorsinviewport/decorations/poolofblood    0.75
+$volume toby/actorsinviewport/decorations/poolsofblood    0.75
 
 
 //Hell
 toby/actorsinviewport/decorations/largehelltree         "sounds/ActorsInViewport/Decorations/Hell/LargeHellTree.ogg"
 toby/actorsinviewport/decorations/largehelltrees        "sounds/ActorsInViewport/Decorations/Hell/LargeHellTrees.ogg"
-$volume toby/actorsinviewport/decorations/largehelltree    0.5
-$volume toby/actorsinviewport/decorations/largehelltrees    0.5
+$volume toby/actorsinviewport/decorations/largehelltree    0.75
+$volume toby/actorsinviewport/decorations/largehelltrees    0.75
 
 toby/actorsinviewport/decorations/shorthelltree         "sounds/ActorsInViewport/Decorations/Hell/ShortHellTree.ogg"
 toby/actorsinviewport/decorations/shorthelltrees        "sounds/ActorsInViewport/Decorations/Hell/ShortHellTrees.ogg"
-$volume toby/actorsinviewport/decorations/shorthelltree    0.5
-$volume toby/actorsinviewport/decorations/shorthelltrees    0.5
+$volume toby/actorsinviewport/decorations/shorthelltree    0.75
+$volume toby/actorsinviewport/decorations/shorthelltrees    0.75
 
 toby/actorsinviewport/decorations/candelabra            "sounds/ActorsInViewport/Decorations/Hell/Candelabra.ogg"
 toby/actorsinviewport/decorations/candelabras           "sounds/ActorsInViewport/Decorations/Hell/Candelabras.ogg"
-$volume toby/actorsinviewport/decorations/candelabra    0.5
-$volume toby/actorsinviewport/decorations/candelabras    0.5
+$volume toby/actorsinviewport/decorations/candelabra    0.75
+$volume toby/actorsinviewport/decorations/candelabras    0.75
 
 toby/actorsinviewport/decorations/candle                "sounds/ActorsInViewport/Decorations/Hell/Candle.ogg"
 toby/actorsinviewport/decorations/candles               "sounds/ActorsInViewport/Decorations/Hell/Candles.ogg"
-$volume toby/actorsinviewport/decorations/candle    0.5
-$volume toby/actorsinviewport/decorations/candles    0.5
+$volume toby/actorsinviewport/decorations/candle    0.75
+$volume toby/actorsinviewport/decorations/candles    0.75
 
 toby/actorsinviewport/decorations/candleskullpile       "sounds/ActorsInViewport/Decorations/Hell/CandleSkullPile.ogg"
 toby/actorsinviewport/decorations/candleskullpiles      "sounds/ActorsInViewport/Decorations/Hell/CandleSkullPiles.ogg"
-$volume toby/actorsinviewport/decorations/candleskullpile    0.5
-$volume toby/actorsinviewport/decorations/candleskullpiles    0.5
+$volume toby/actorsinviewport/decorations/candleskullpile    0.75
+$volume toby/actorsinviewport/decorations/candleskullpiles    0.75
 
 toby/actorsinviewport/decorations/evileye               "sounds/ActorsInViewport/Decorations/Hell/EvilEye.ogg"
 toby/actorsinviewport/decorations/evileyes              "sounds/ActorsInViewport/Decorations/Hell/EvilEyes.ogg"
-$volume toby/actorsinviewport/decorations/evileye    0.5
-$volume toby/actorsinviewport/decorations/evileyes    0.5
+$volume toby/actorsinviewport/decorations/evileye    0.75
+$volume toby/actorsinviewport/decorations/evileyes    0.75
 
 toby/actorsinviewport/decorations/floatingskull         "sounds/ActorsInViewport/Decorations/Hell/FloatingSkull.ogg"
 toby/actorsinviewport/decorations/floatingskulls        "sounds/ActorsInViewport/Decorations/Hell/FloatingSkulls.ogg"
-$volume toby/actorsinviewport/decorations/floatingskull    0.5
-$volume toby/actorsinviewport/decorations/floatingskulls    0.5
+$volume toby/actorsinviewport/decorations/floatingskull    0.75
+$volume toby/actorsinviewport/decorations/floatingskulls    0.75
 
 toby/actorsinviewport/decorations/heartpillar           "sounds/ActorsInViewport/Decorations/Hell/HeartPillar.ogg"
 toby/actorsinviewport/decorations/heartpillars          "sounds/ActorsInViewport/Decorations/Hell/HeartPillars.ogg"
-$volume toby/actorsinviewport/decorations/heartpillar    0.5
-$volume toby/actorsinviewport/decorations/heartpillars    0.5
+$volume toby/actorsinviewport/decorations/heartpillar    0.75
+$volume toby/actorsinviewport/decorations/heartpillars    0.75
 
 toby/actorsinviewport/decorations/redskullpillar        "sounds/ActorsInViewport/Decorations/Hell/RedSkullPillar.ogg"
 toby/actorsinviewport/decorations/redskullpillars       "sounds/ActorsInViewport/Decorations/Hell/RedSkullPillars.ogg"
-$volume toby/actorsinviewport/decorations/redskullpillar    0.5
-$volume toby/actorsinviewport/decorations/redskullpillars    0.5
+$volume toby/actorsinviewport/decorations/redskullpillar    0.75
+$volume toby/actorsinviewport/decorations/redskullpillars    0.75
 
 toby/actorsinviewport/decorations/stalagmite            "sounds/ActorsInViewport/Decorations/Hell/Stalagmite.ogg"
 toby/actorsinviewport/decorations/stalagmites           "sounds/ActorsInViewport/Decorations/Hell/Stalagmites.ogg"
-$volume toby/actorsinviewport/decorations/stalagmite    0.5
-$volume toby/actorsinviewport/decorations/stalagmites    0.5
+$volume toby/actorsinviewport/decorations/stalagmite    0.75
+$volume toby/actorsinviewport/decorations/stalagmites    0.75
 
 toby/actorsinviewport/decorations/shortbluetorch        "sounds/ActorsInViewport/Decorations/Hell/ShortBlueTorch.ogg"
 toby/actorsinviewport/decorations/shortbluetorches      "sounds/ActorsInViewport/Decorations/Hell/ShortBlueTorches.ogg"
-$volume toby/actorsinviewport/decorations/shortbluetorch    0.5
-$volume toby/actorsinviewport/decorations/shortbluetorches    0.5
+$volume toby/actorsinviewport/decorations/shortbluetorch    0.75
+$volume toby/actorsinviewport/decorations/shortbluetorches    0.75
 
 toby/actorsinviewport/decorations/shortgreentorch      "sounds/ActorsInViewport/Decorations/Hell/ShortGreenTorch.ogg"
 toby/actorsinviewport/decorations/shortgreentorches     "sounds/ActorsInViewport/Decorations/Hell/ShortGreenTorches.ogg"
-$volume toby/actorsinviewport/decorations/shortgreentorch    0.5
-$volume toby/actorsinviewport/decorations/shortgreentorches    0.5
+$volume toby/actorsinviewport/decorations/shortgreentorch    0.75
+$volume toby/actorsinviewport/decorations/shortgreentorches    0.75
 
 toby/actorsinviewport/decorations/shortredtorch         "sounds/ActorsInViewport/Decorations/Hell/ShortRedTorch.ogg"
 toby/actorsinviewport/decorations/shortredtorches       "sounds/ActorsInViewport/Decorations/Hell/ShortRedTorches.ogg"
-$volume toby/actorsinviewport/decorations/shortredtorch    0.5
-$volume toby/actorsinviewport/decorations/shortredtorches    0.5
+$volume toby/actorsinviewport/decorations/shortredtorch    0.75
+$volume toby/actorsinviewport/decorations/shortredtorches    0.75
 
 toby/actorsinviewport/decorations/tallbluetorch         "sounds/ActorsInViewport/Decorations/Hell/TallBlueTorch.ogg"
 toby/actorsinviewport/decorations/tallbluetorches       "sounds/ActorsInViewport/Decorations/Hell/TallBlueTorches.ogg"
-$volume toby/actorsinviewport/decorations/tallbluetorch    0.5
-$volume toby/actorsinviewport/decorations/tallbluetorches    0.5
+$volume toby/actorsinviewport/decorations/tallbluetorch    0.75
+$volume toby/actorsinviewport/decorations/tallbluetorches    0.75
 
 toby/actorsinviewport/decorations/tallgreentorch        "sounds/ActorsInViewport/Decorations/Hell/TallGreenTorch.ogg"
 toby/actorsinviewport/decorations/tallgreentorches      "sounds/ActorsInViewport/Decorations/Hell/TallGreenTorches.ogg"
-$volume toby/actorsinviewport/decorations/tallgreentorch    0.5
-$volume toby/actorsinviewport/decorations/tallgreentorches    0.5
+$volume toby/actorsinviewport/decorations/tallgreentorch    0.75
+$volume toby/actorsinviewport/decorations/tallgreentorches    0.75
 
 toby/actorsinviewport/decorations/tallredtorch          "sounds/ActorsInViewport/Decorations/Hell/TallRedTorch.ogg"
 toby/actorsinviewport/decorations/tallredtorches        "sounds/ActorsInViewport/Decorations/Hell/TallRedTorches.ogg"
-$volume toby/actorsinviewport/decorations/tallredtorch    0.5
-$volume toby/actorsinviewport/decorations/tallredtorches    0.5
+$volume toby/actorsinviewport/decorations/tallredtorch    0.75
+$volume toby/actorsinviewport/decorations/tallredtorches    0.75
 
 toby/actorsinviewport/decorations/shortgreenpillar      "sounds/ActorsInViewport/Decorations/Hell/ShortGreenPillar.ogg"
 toby/actorsinviewport/decorations/shortgreenpillars     "sounds/ActorsInViewport/Decorations/Hell/ShortGreenPillars.ogg"
-$volume toby/actorsinviewport/decorations/shortgreenpillar    0.5
-$volume toby/actorsinviewport/decorations/shortgreenpillars    0.5
+$volume toby/actorsinviewport/decorations/shortgreenpillar    0.75
+$volume toby/actorsinviewport/decorations/shortgreenpillars    0.75
 
 toby/actorsinviewport/decorations/shortredpillar        "sounds/ActorsInViewport/Decorations/Hell/ShortRedPillar.ogg"
 toby/actorsinviewport/decorations/shortredpillars       "sounds/ActorsInViewport/Decorations/Hell/ShortRedPillars.ogg"
-$volume toby/actorsinviewport/decorations/shortredpillar    0.5
-$volume toby/actorsinviewport/decorations/shortredpillars    0.5
+$volume toby/actorsinviewport/decorations/shortredpillar    0.75
+$volume toby/actorsinviewport/decorations/shortredpillars    0.75
 
 toby/actorsinviewport/decorations/tallgreenpillar       "sounds/ActorsInViewport/Decorations/Hell/TallGreenPillar.ogg"
 toby/actorsinviewport/decorations/tallgreenpillars      "sounds/ActorsInViewport/Decorations/Hell/TallGreenPillars.ogg"
-$volume toby/actorsinviewport/decorations/tallgreenpillar    0.5
-$volume toby/actorsinviewport/decorations/tallgreenpillars    0.5
+$volume toby/actorsinviewport/decorations/tallgreenpillar    0.75
+$volume toby/actorsinviewport/decorations/tallgreenpillars    0.75
 
 toby/actorsinviewport/decorations/tallredpillar         "sounds/ActorsInViewport/Decorations/Hell/TallRedPillar.ogg"
 toby/actorsinviewport/decorations/tallredpillars        "sounds/ActorsInViewport/Decorations/Hell/TallRedPillars.ogg"
-$volume toby/actorsinviewport/decorations/tallredpillar    0.5
-$volume toby/actorsinviewport/decorations/tallredpillars    0.5
+$volume toby/actorsinviewport/decorations/tallredpillar    0.75
+$volume toby/actorsinviewport/decorations/tallredpillars    0.75
 
 
 //Legacy of Rust - Decorations
 //Gore
 toby/actorsinviewport/lor/decorations/corpsepile			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePile.ogg"
 toby/actorsinviewport/lor/decorations/corpsepiles			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePiles.ogg"
-$volume toby/actorsinviewport/lor/decorations/corpsepile    0.75
-$volume toby/actorsinviewport/lor/decorations/corpsepiles    0.75
+$volume toby/actorsinviewport/lor/decorations/corpsepile    0.85
+$volume toby/actorsinviewport/lor/decorations/corpsepiles    0.85
 
 toby/actorsinviewport/lor/decorations/flamecorpse			"sounds/ActorsInViewport/LegacyOfRust/Decorations/FlameCorpse.ogg"
 toby/actorsinviewport/lor/decorations/flamecorpses		"sounds/ActorsInViewport/LegacyOfRust/Decorations/FlameCorpses.ogg"
-$volume toby/actorsinviewport/lor/decorations/flamecorpse    0.75
-$volume toby/actorsinviewport/lor/decorations/flamecorpses    0.75
+$volume toby/actorsinviewport/lor/decorations/flamecorpse    0.85
+$volume toby/actorsinviewport/lor/decorations/flamecorpses    0.85
 
 toby/actorsinviewport/lor/decorations/crucifiedcorpse	"sounds/ActorsInViewport/LegacyOfRust/Decorations/CrucifiedCorpse.ogg"
 toby/actorsinviewport/lor/decorations/crucifiedcorpses	"sounds/ActorsInViewport/LegacyOfRust/Decorations/CrucifiedCorpses.ogg"
-$volume toby/actorsinviewport/lor/decorations/crucifiedcorpse    0.75
-$volume toby/actorsinviewport/lor/decorations/crucifiedcorpses    0.75
+$volume toby/actorsinviewport/lor/decorations/crucifiedcorpse    0.85
+$volume toby/actorsinviewport/lor/decorations/crucifiedcorpses    0.85
 
 toby/actorsinviewport/lor/decorations/hangingbody		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBody.ogg"
 toby/actorsinviewport/lor/decorations/hangingbodies		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBodies.ogg"
-$volume toby/actorsinviewport/lor/decorations/hangingbody    0.75
-$volume toby/actorsinviewport/lor/decorations/hangingbodies    0.75
+$volume toby/actorsinviewport/lor/decorations/hangingbody    0.85
+$volume toby/actorsinviewport/lor/decorations/hangingbodies    0.85
 
 toby/actorsinviewport/lor/decorations/bodyarmsbound		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BodyArmsBound.ogg"
 toby/actorsinviewport/lor/decorations/bodiesarmsbound	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BodiesArmsBound.ogg"
-$volume toby/actorsinviewport/lor/decorations/bodyarmsbound    0.75
-$volume toby/actorsinviewport/lor/decorations/bodiesarmsbound    0.75
+$volume toby/actorsinviewport/lor/decorations/bodyarmsbound    0.85
+$volume toby/actorsinviewport/lor/decorations/bodiesarmsbound    0.85
 
 toby/actorsinviewport/lor/decorations/chainedbody		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedBody.ogg"
 toby/actorsinviewport/lor/decorations/chainedbodies		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedBodies.ogg"
-$volume toby/actorsinviewport/lor/decorations/chainedbody    0.75
-$volume toby/actorsinviewport/lor/decorations/chainedbodies    0.75
+$volume toby/actorsinviewport/lor/decorations/chainedbody    0.85
+$volume toby/actorsinviewport/lor/decorations/chainedbodies    0.85
 
 toby/actorsinviewport/lor/decorations/chainedtorso		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedTorso.ogg"
 toby/actorsinviewport/lor/decorations/chainedtorsos		"sounds/ActorsInViewport/LegacyOfRust/Decorations/ChainedTorsos.ogg"
-$volume toby/actorsinviewport/lor/decorations/chainedtorso    0.75
-$volume toby/actorsinviewport/lor/decorations/chainedtorsos    0.75
+$volume toby/actorsinviewport/lor/decorations/chainedtorso    0.85
+$volume toby/actorsinviewport/lor/decorations/chainedtorsos    0.85
 
 toby/actorsinviewport/lor/decorations/hangingbaron		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBaron.ogg"
 toby/actorsinviewport/lor/decorations/hangingbarons		"sounds/ActorsInViewport/LegacyOfRust/Decorations/HangingBarons.ogg"
-$volume toby/actorsinviewport/lor/decorations/hangingbaron    0.75
-$volume toby/actorsinviewport/lor/decorations/hangingbarons    0.75
+$volume toby/actorsinviewport/lor/decorations/hangingbaron    0.85
+$volume toby/actorsinviewport/lor/decorations/hangingbarons    0.85
 
 toby/actorsinviewport/lor/decorations/trioskullpike			"sounds/ActorsInViewport/LegacyOfRust/Decorations/TrioOfSkulls.ogg"
 toby/actorsinviewport/lor/decorations/trioskullpikes		"sounds/ActorsInViewport/LegacyOfRust/Decorations/TriosOfSkulls.ogg"
-$volume toby/actorsinviewport/lor/decorations/trioskullpike    0.75
-$volume toby/actorsinviewport/lor/decorations/trioskullpikes    0.75
+$volume toby/actorsinviewport/lor/decorations/trioskullpike    0.85
+$volume toby/actorsinviewport/lor/decorations/trioskullpikes    0.85
 
 toby/actorsinviewport/lor/decorations/brokenskull			"sounds/ActorsInViewport/LegacyOfRust/Decorations/BrokenSkull.ogg"
 toby/actorsinviewport/lor/decorations/brokenskulls			"sounds/ActorsInViewport/LegacyOfRust/Decorations/BrokenSkulls.ogg"
-$volume toby/actorsinviewport/lor/decorations/brokenskull    0.75
-$volume toby/actorsinviewport/lor/decorations/brokenskulls    0.75
+$volume toby/actorsinviewport/lor/decorations/brokenskull    0.85
+$volume toby/actorsinviewport/lor/decorations/brokenskulls    0.85
 
 //Environment
 toby/actorsinviewport/lor/decorations/graystalagmite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/GrayStalagmite.ogg"
 toby/actorsinviewport/lor/decorations/graystalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/GrayStalagmites.ogg"
-$volume toby/actorsinviewport/lor/decorations/graystalagmite    0.75
-$volume toby/actorsinviewport/lor/decorations/graystalagmites    0.75
+$volume toby/actorsinviewport/lor/decorations/graystalagmite    0.85
+$volume toby/actorsinviewport/lor/decorations/graystalagmites    0.85
 
 toby/actorsinviewport/lor/decorations/smallbush			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBush.ogg"
 toby/actorsinviewport/lor/decorations/smallbushes			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBushes.ogg"
-$volume toby/actorsinviewport/lor/decorations/smallbush    0.75
-$volume toby/actorsinviewport/lor/decorations/smallbushes    0.75
+$volume toby/actorsinviewport/lor/decorations/smallbush    0.85
+$volume toby/actorsinviewport/lor/decorations/smallbushes    0.85
 
 toby/actorsinviewport/lor/decorations/burntsmallbush		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntSmallBush.ogg"
 toby/actorsinviewport/lor/decorations/burntsmallbushes	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntSmallBushes.ogg"
-$volume toby/actorsinviewport/lor/decorations/burntsmallbush    0.75
-$volume toby/actorsinviewport/lor/decorations/burntsmallbushes    0.75
+$volume toby/actorsinviewport/lor/decorations/burntsmallbush    0.85
+$volume toby/actorsinviewport/lor/decorations/burntsmallbushes    0.85
 
 toby/actorsinviewport/lor/decorations/tallbush				"sounds/ActorsInViewport/LegacyOfRust/Decorations/TallBush.ogg"
 toby/actorsinviewport/lor/decorations/tallbushes			"sounds/ActorsInViewport/LegacyOfRust/Decorations/TallBushes.ogg"
-$volume toby/actorsinviewport/lor/decorations/tallbush    0.75
-$volume toby/actorsinviewport/lor/decorations/tallbushes    0.75
+$volume toby/actorsinviewport/lor/decorations/tallbush    0.85
+$volume toby/actorsinviewport/lor/decorations/tallbushes    0.85
 
 toby/actorsinviewport/lor/decorations/burnttallbush		"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntTallBush.ogg"
 toby/actorsinviewport/lor/decorations/burnttallbushes	"sounds/ActorsInViewport/LegacyOfRust/Decorations/BurntTallBush.ogg"
-$volume toby/actorsinviewport/lor/decorations/burnttallbush    0.75
-$volume toby/actorsinviewport/lor/decorations/burnttallbushes    0.75
+$volume toby/actorsinviewport/lor/decorations/burnttallbush    0.85
+$volume toby/actorsinviewport/lor/decorations/burnttallbushes    0.85
 
 toby/actorsinviewport/lor/decorations/cavecolumn			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CaveRockColumn.ogg"
 toby/actorsinviewport/lor/decorations/cavecolumns		"sounds/ActorsInViewport/LegacyOfRust/Decorations/CaveRockColumns.ogg"
-$volume toby/actorsinviewport/lor/decorations/cavecolumn    0.75
-$volume toby/actorsinviewport/lor/decorations/cavecolumns    0.75
+$volume toby/actorsinviewport/lor/decorations/cavecolumn    0.85
+$volume toby/actorsinviewport/lor/decorations/cavecolumns    0.85
 
 toby/actorsinviewport/lor/decorations/largestalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalagmite.ogg"
 toby/actorsinviewport/lor/decorations/largestalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalagmites.ogg"
-$volume toby/actorsinviewport/lor/decorations/largestalagmite    0.75
-$volume toby/actorsinviewport/lor/decorations/largestalagmites    0.75
+$volume toby/actorsinviewport/lor/decorations/largestalagmite    0.85
+$volume toby/actorsinviewport/lor/decorations/largestalagmites    0.85
 
 toby/actorsinviewport/lor/decorations/mediumstalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalagmite.ogg"
 toby/actorsinviewport/lor/decorations/mediumstalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalagmites.ogg"
-$volume toby/actorsinviewport/lor/decorations/mediumstalagmite    0.75
-$volume toby/actorsinviewport/lor/decorations/mediumstalagmites    0.75
+$volume toby/actorsinviewport/lor/decorations/mediumstalagmite    0.85
+$volume toby/actorsinviewport/lor/decorations/mediumstalagmites    0.85
 
 toby/actorsinviewport/lor/decorations/smallstalagmite	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalagmite.ogg"
 toby/actorsinviewport/lor/decorations/smallstalagmites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalagmites.ogg"
-$volume toby/actorsinviewport/lor/decorations/smallstalagmite    0.75
-$volume toby/actorsinviewport/lor/decorations/smallstalagmites    0.75
+$volume toby/actorsinviewport/lor/decorations/smallstalagmite    0.85
+$volume toby/actorsinviewport/lor/decorations/smallstalagmites    0.85
 
 toby/actorsinviewport/lor/decorations/largestalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalactite.ogg"
 toby/actorsinviewport/lor/decorations/largestalactites		"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeStalactites.ogg"
-$volume toby/actorsinviewport/lor/decorations/largestalactite    0.75
-$volume toby/actorsinviewport/lor/decorations/largestalactites    0.75
+$volume toby/actorsinviewport/lor/decorations/largestalactite    0.85
+$volume toby/actorsinviewport/lor/decorations/largestalactites    0.85
 
 toby/actorsinviewport/lor/decorations/mediumstalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalactite.ogg"
 toby/actorsinviewport/lor/decorations/mediumstalactites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/MediumStalactites.ogg"
-$volume toby/actorsinviewport/lor/decorations/mediumstalactite    0.75
-$volume toby/actorsinviewport/lor/decorations/mediumstalactites    0.75
+$volume toby/actorsinviewport/lor/decorations/mediumstalactite    0.85
+$volume toby/actorsinviewport/lor/decorations/mediumstalactites    0.85
 
 toby/actorsinviewport/lor/decorations/smallstalactite		"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalactite.ogg"
 toby/actorsinviewport/lor/decorations/smallstalactites	"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallStalactites.ogg"
-$volume toby/actorsinviewport/lor/decorations/smallstalactite    0.75
-$volume toby/actorsinviewport/lor/decorations/smallstalactites    0.75
+$volume toby/actorsinviewport/lor/decorations/smallstalactite    0.85
+$volume toby/actorsinviewport/lor/decorations/smallstalactites    0.85
 
 //Objects
 toby/actorsinviewport/lor/decorations/chair						"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeChair.ogg"
 toby/actorsinviewport/lor/decorations/chairs					"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeChairs.ogg"
-$volume toby/actorsinviewport/lor/decorations/chair    0.75
-$volume toby/actorsinviewport/lor/decorations/chairs    0.75
+$volume toby/actorsinviewport/lor/decorations/chair    0.85
+$volume toby/actorsinviewport/lor/decorations/chairs    0.85
 
 toby/actorsinviewport/lor/decorations/desklamp				"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamp.ogg"
 toby/actorsinviewport/lor/decorations/desklamps			"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamps.ogg"
-$volume toby/actorsinviewport/lor/decorations/desklamp    0.75
-$volume toby/actorsinviewport/lor/decorations/desklamps    0.75
+$volume toby/actorsinviewport/lor/decorations/desklamp    0.85
+$volume toby/actorsinviewport/lor/decorations/desklamps    0.85
 
 toby/actorsinviewport/lor/decorations/ceilinglamp			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CeilingLamp.ogg"
 toby/actorsinviewport/lor/decorations/ceilinglamps			"sounds/ActorsInViewport/LegacyOfRust/Decorations/CeilingLamps.ogg"
-$volume toby/actorsinviewport/lor/decorations/ceilinglamp    0.75
-$volume toby/actorsinviewport/lor/decorations/ceilinglamps    0.75
+$volume toby/actorsinviewport/lor/decorations/ceilinglamp    0.85
+$volume toby/actorsinviewport/lor/decorations/ceilinglamps    0.85
 
 toby/actorsinviewport/lor/decorations/shortabra				"sounds/ActorsInViewport/LegacyOfRust/Decorations/ShortCandelabra.ogg"
 toby/actorsinviewport/lor/decorations/shortabras			"sounds/ActorsInViewport/LegacyOfRust/Decorations/ShortCandelabras.ogg"
-$volume toby/actorsinviewport/lor/decorations/shortabra    0.75
-$volume toby/actorsinviewport/lor/decorations/shortabras    0.75
+$volume toby/actorsinviewport/lor/decorations/shortabra    0.85
+$volume toby/actorsinviewport/lor/decorations/shortabras    0.85
 
 
 //Heretic
 
 heretic/deco/barrel						"sounds/ActorsInViewport/Heretic/Decorations/Barrel.ogg"
 heretic/deco/barrels						"sounds/ActorsInViewport/Heretic/Decorations/Barrels.ogg"
-$volume heretic/deco/barrel    0.75
-$volume heretic/deco/barrels    0.75
+$volume heretic/deco/barrel    0.85
+$volume heretic/deco/barrels    0.85
 
 heretic/deco/bluemarker				"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/BlueMarker.ogg"
 heretic/deco/bluemarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/BlueMarkers.ogg"
-$volume heretic/deco/bluemarker    0.75
-$volume heretic/deco/bluemarkers    0.75
+$volume heretic/deco/bluemarker    0.85
+$volume heretic/deco/bluemarkers    0.85
 
 heretic/deco/brownpillar				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/BrownPillar.ogg"
 heretic/deco/brownpillars			"sounds/ActorsInViewport/Heretic/Decorations/Pillars/BrownPillars.ogg"
-$volume heretic/deco/brownpillar    0.75
-$volume heretic/deco/brownpillars    0.75
+$volume heretic/deco/brownpillar    0.85
+$volume heretic/deco/brownpillars    0.85
 
 heretic/deco/chandelier				"sounds/ActorsInViewport/Heretic/Decorations/Lights/Chandelier.ogg"
 heretic/deco/chandeliers				"sounds/ActorsInViewport/Heretic/Decorations/Lights/Chandeliers.ogg"
-$volume heretic/deco/chandelier    0.75
-$volume heretic/deco/chandeliers    0.75
+$volume heretic/deco/chandelier    0.85
+$volume heretic/deco/chandeliers    0.85
 
 heretic/deco/firebrazier				"sounds/ActorsInViewport/Heretic/Decorations/Lights/FireBrazier.ogg"
 heretic/deco/firebraziers				"sounds/ActorsInViewport/Heretic/Decorations/Lights/FireBraziers.ogg"
-$volume heretic/deco/firebrazier    0.75
-$volume heretic/deco/firebraziers    0.75
+$volume heretic/deco/firebrazier    0.85
+$volume heretic/deco/firebraziers    0.85
 
 heretic/deco/greenmarker			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/GreenMarker.ogg"
 heretic/deco/greenmarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/GreenMarkers.ogg"
-$volume heretic/deco/greenmarker    0.75
-$volume heretic/deco/greenmarkers    0.75
+$volume heretic/deco/greenmarker    0.85
+$volume heretic/deco/greenmarkers    0.85
 
 heretic/deco/hangingcorpse		"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingCorpse.ogg"
 heretic/deco/hangingcorpses		"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingCorpses.ogg"
-$volume heretic/deco/hangingcorpse    0.75
-$volume heretic/deco/hangingcorpses    0.75
+$volume heretic/deco/hangingcorpse    0.85
+$volume heretic/deco/hangingcorpses    0.85
 
 heretic/deco/hangingskull			"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingSkull.ogg"
 heretic/deco/hangingskulls			"sounds/ActorsInViewport/Heretic/Decorations/Gore/HangingSkulls.ogg"
-$volume heretic/deco/hangingskull    0.75
-$volume heretic/deco/hangingskulls    0.75
+$volume heretic/deco/hangingskull    0.85
+$volume heretic/deco/hangingskulls    0.85
 
 heretic/deco/largestc					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalactite.ogg"
 heretic/deco/largestcs					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalactites.ogg"
-$volume heretic/deco/largestc    0.75
-$volume heretic/deco/largestcs    0.75
+$volume heretic/deco/largestc    0.85
+$volume heretic/deco/largestcs    0.85
 
 heretic/deco/largestm					"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalagmite.ogg"
 heretic/deco/largestms				"sounds/ActorsInViewport/Heretic/Decorations/Environment/LargeStalagmites.ogg"
-$volume heretic/deco/largestm    0.75
-$volume heretic/deco/largestms    0.75
+$volume heretic/deco/largestm    0.85
+$volume heretic/deco/largestms    0.85
 
 heretic/deco/moss						"sounds/ActorsInViewport/Heretic/Decorations/Environment/Moss.ogg"
-$volume heretic/deco/moss    0.75
+$volume heretic/deco/moss    0.85
 
 heretic/deco/pod							"sounds/ActorsInViewport/Heretic/Decorations/Pod.ogg"
 heretic/deco/pods						"sounds/ActorsInViewport/Heretic/Decorations/Pods.ogg"
-//$volume heretic/deco/pod    0.75
-//$volume heretic/deco/pods    0.75
+//$volume heretic/deco/pod    0.85
+//$volume heretic/deco/pods    0.85
 
 heretic/deco/serpenttorch			"sounds/ActorsInViewport/Heretic/Decorations/Lights/SerpentTorch.ogg"
 heretic/deco/serpenttorches		"sounds/ActorsInViewport/Heretic/Decorations/Lights/SerpentTorches.ogg"
-$volume heretic/deco/serpenttorch    0.75
-$volume heretic/deco/serpenttorches    0.75
+$volume heretic/deco/serpenttorch    0.85
+$volume heretic/deco/serpenttorches    0.85
 
 heretic/deco/smallpillar				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/SmallPillar.ogg"
 heretic/deco/smallpillars				"sounds/ActorsInViewport/Heretic/Decorations/Pillars/SmallPillars.ogg"
-$volume heretic/deco/smallpillar    0.75
-$volume heretic/deco/smallpillars    0.75
+$volume heretic/deco/smallpillar    0.85
+$volume heretic/deco/smallpillars    0.85
 
 heretic/deco/smallstc					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalactite.ogg"
 heretic/deco/smallstcs					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalactites.ogg"
-$volume heretic/deco/smallstc    0.75
-$volume heretic/deco/smallstcs    0.75
+$volume heretic/deco/smallstc    0.85
+$volume heretic/deco/smallstcs    0.85
 
 heretic/deco/smallstm					"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalagmite.ogg"
 heretic/deco/smallstms				"sounds/ActorsInViewport/Heretic/Decorations/Environment/SmallStalagmites.ogg"
-$volume heretic/deco/smallstm    0.75
-$volume heretic/deco/smallstms    0.75
+$volume heretic/deco/smallstm    0.85
+$volume heretic/deco/smallstms    0.85
 
 heretic/deco/volcano					"sounds/ActorsInViewport/Heretic/Decorations/Environment/Volcano.ogg"
 heretic/deco/volcanoes				"sounds/ActorsInViewport/Heretic/Decorations/Environment/Volcanoes.ogg"
-$volume heretic/deco/volcano    0.75
-$volume heretic/deco/volcanoes    0.75
+$volume heretic/deco/volcano    0.85
+$volume heretic/deco/volcanoes    0.85
 
 heretic/deco/walltorch					"sounds/ActorsInViewport/Heretic/Decorations/Lights/WallTorch.ogg"
 heretic/deco/walltorches				"sounds/ActorsInViewport/Heretic/Decorations/Lights/WallTorches.ogg"
-$volume heretic/deco/walltorch    0.75
-$volume heretic/deco/walltorches    0.75
+$volume heretic/deco/walltorch    0.85
+$volume heretic/deco/walltorches    0.85
 
 heretic/deco/yellowmarker			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarker.ogg"
 heretic/deco/yellowmarkers			"sounds/ActorsInViewport/Heretic/Decorations/DoorMarker/YellowMarkers.ogg"
-$volume heretic/deco/yellowmarker    0.75
-$volume heretic/deco/yellowmarkers    0.75
+$volume heretic/deco/yellowmarker    0.85
+$volume heretic/deco/yellowmarkers    0.85
 
 
 //Hexen - Get ready for one hell of a list...
 
 hexen/deco/barrel						"sounds/ActorsInViewport/Hexen/Decorations/Barrel.ogg"
 hexen/deco/barrels						"sounds/ActorsInViewport/Hexen/Decorations/Barrels.ogg"
-$volume hexen/deco/barrel    0.75
-$volume hexen/deco/barrels    0.75
+$volume hexen/deco/barrel    0.85
+$volume hexen/deco/barrels    0.85
 
 hexen/deco/bucket						"sounds/ActorsInViewport/Hexen/Decorations/Bucket.ogg"
 hexen/deco/buckets					"sounds/ActorsInViewport/Hexen/Decorations/Buckets.ogg"
-$volume hexen/deco/bucket    0.75
-$volume hexen/deco/buckets    0.75
+$volume hexen/deco/bucket    0.85
+$volume hexen/deco/buckets    0.85
 
 hexen/deco/spike						"sounds/ActorsInViewport/Hexen/Decorations/Spike.ogg"
 hexen/deco/spikes						"sounds/ActorsInViewport/Hexen/Decorations/Spikes.ogg"
-$volume hexen/deco/spike    0.75
-$volume hexen/deco/spikes    0.75
+$volume hexen/deco/spike    0.85
+$volume hexen/deco/spikes    0.85
 
 hexen/deco/banner						"sounds/ActorsInViewport/Hexen/Decorations/TatteredBanner.ogg"
 hexen/deco/banners					"sounds/ActorsInViewport/Hexen/Decorations/TatteredBanners.ogg"
-$volume hexen/deco/banner    0.75
-$volume hexen/deco/banners    0.75
+$volume hexen/deco/banner    0.85
+$volume hexen/deco/banners    0.85
 
 hexen/deco/bridge						"sounds/ActorsInViewport/Hexen/Decorations/BridgeThing.ogg"
 hexen/deco/bridges						"sounds/ActorsInViewport/Hexen/Decorations/BridgeThings.ogg"
-$volume hexen/deco/bridge    0.75
-$volume hexen/deco/bridges    0.75
+$volume hexen/deco/bridge    0.85
+$volume hexen/deco/bridges    0.85
 
 //Hexen - Castle Decorations
 
@@ -534,284 +534,284 @@ $volume hexen/deco/bridges    0.75
 
 hexen/deco/armorsuit					"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorSuit.ogg"
 hexen/deco/armorsuits				"sounds/ActorsInViewport/Hexen/Decorations/Castle/ArmorSuits.ogg"
-$volume hexen/deco/armorsuit    0.75
-$volume hexen/deco/armorsuits    0.75
+$volume hexen/deco/armorsuit    0.85
+$volume hexen/deco/armorsuits    0.85
 
 hexen/deco/pedestal					"sounds/ActorsInViewport/Hexen/Decorations/Castle/Pedestal.ogg"
 hexen/deco/pedestals					"sounds/ActorsInViewport/Hexen/Decorations/Castle/Pedestals.ogg"
-$volume hexen/deco/pedestal    0.75
-$volume hexen/deco/pedestals    0.75
+$volume hexen/deco/pedestal    0.85
+$volume hexen/deco/pedestals    0.85
 
 hexen/deco/vase							"sounds/ActorsInViewport/Hexen/Decorations/Castle/VasePedestal.ogg"
 hexen/deco/vases						"sounds/ActorsInViewport/Hexen/Decorations/Castle/VasePedestals.ogg"
-$volume hexen/deco/vase    0.75
-$volume hexen/deco/vases    0.75
+$volume hexen/deco/vase    0.85
+$volume hexen/deco/vases    0.85
 
 hexen/deco/bell							"sounds/ActorsInViewport/Hexen/Decorations/Castle/Bell.ogg"
 hexen/deco/bells							"sounds/ActorsInViewport/Hexen/Decorations/Castle/Bell.ogg"
-$volume hexen/deco/bell    0.75
-$volume hexen/deco/bells    0.75
+$volume hexen/deco/bell    0.85
+$volume hexen/deco/bells    0.85
 
 //Hexen - Dungeon Decorations
 
 hexen/deco/ironmaiden				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/IronMaiden.ogg"
 hexen/deco/ironmaidens				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/IronMaidens.ogg"
-$volume hexen/deco/ironmaiden    0.75
-$volume hexen/deco/ironmaidens    0.75
+$volume hexen/deco/ironmaiden    0.85
+$volume hexen/deco/ironmaidens    0.85
 
 hexen/deco/largehook					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LargeHook.ogg"
 hexen/deco/largehooks				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LargeHooks.ogg"
-$volume hexen/deco/largehook    0.75
-$volume hexen/deco/largehooks    0.75
+$volume hexen/deco/largehook    0.85
+$volume hexen/deco/largehooks    0.85
 
 hexen/deco/longchain					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LongChain.ogg"
 hexen/deco/longchains				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/LongChains.ogg"
-$volume hexen/deco/longchain    0.75
-$volume hexen/deco/longchains    0.75
+$volume hexen/deco/longchain    0.85
+$volume hexen/deco/longchains    0.85
 
 hexen/deco/shortchain				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/ShortChain.ogg"
 hexen/deco/shortchains				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/ShortChains.ogg"
-$volume hexen/deco/shortchain    0.75
-$volume hexen/deco/shortchains    0.75
+$volume hexen/deco/shortchain    0.85
+$volume hexen/deco/shortchains    0.85
 
 hexen/deco/smallhook				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SmallHook.ogg"
 hexen/deco/smallhooks				"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SmallHooks.ogg"
-$volume hexen/deco/smallhook    0.75
-$volume hexen/deco/smallhooks    0.75
+$volume hexen/deco/smallhook    0.85
+$volume hexen/deco/smallhooks    0.85
 
 hexen/deco/spikeball					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SpikeBall.ogg"
 hexen/deco/spikeballs					"sounds/ActorsInViewport/Hexen/Decorations/Dungeon/SpikeBalls.ogg"
-$volume hexen/deco/spikeball    0.75
-$volume hexen/deco/spikeballs    0.75
+$volume hexen/deco/spikeball    0.85
+$volume hexen/deco/spikeballs    0.85
 
 //Hexen - Gore
 
 hexen/deco/chaincorpse				"sounds/ActorsInViewport/Hexen/Decorations/Gore/ChainCorpse.ogg"
 hexen/deco/chaincorpses			"sounds/ActorsInViewport/Hexen/Decorations/Gore/ChainCorpses.ogg"
-$volume hexen/deco/chaincorpse    0.75
-$volume hexen/deco/chaincorpses    0.75
+$volume hexen/deco/chaincorpse    0.85
+$volume hexen/deco/chaincorpses    0.85
 
 hexen/deco/hangingcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/HangingCorpseHeart.ogg"
 hexen/deco/hangingcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/HangingCorpseHearts.ogg"
-$volume hexen/deco/hangingcorpse    0.75
-$volume hexen/deco/hangingcorpses    0.75
+$volume hexen/deco/hangingcorpse    0.85
+$volume hexen/deco/hangingcorpses    0.85
 
 hexen/deco/impaledcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/ImpaledCorpse.ogg"
 hexen/deco/impaledcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/ImpaledCorpses.ogg"
-$volume hexen/deco/impaledcorpse    0.75
-$volume hexen/deco/impaledcorpses    0.75
+$volume hexen/deco/impaledcorpse    0.85
+$volume hexen/deco/impaledcorpses    0.85
 
 hexen/deco/meathook					"sounds/ActorsInViewport/Hexen/Decorations/Gore/MeatHook.ogg"
 hexen/deco/meathooks				"sounds/ActorsInViewport/Hexen/Decorations/Gore/MeatHooks.ogg"
-$volume hexen/deco/meathook    0.75
-$volume hexen/deco/meathooks    0.75
+$volume hexen/deco/meathook    0.85
+$volume hexen/deco/meathooks    0.85
 
 hexen/deco/sittingcorpse			"sounds/ActorsInViewport/Hexen/Decorations/Gore/SittingCorpse.ogg"
 hexen/deco/sittingcorpses			"sounds/ActorsInViewport/Hexen/Decorations/Gore/SittingCorpses.ogg"
-$volume hexen/deco/sittingcorpse    0.75
-$volume hexen/deco/sittingcorpses    0.75
+$volume hexen/deco/sittingcorpse    0.85
+$volume hexen/deco/sittingcorpses    0.85
 
 hexen/deco/skullhook					"sounds/ActorsInViewport/Hexen/Decorations/Gore/SkullHook.ogg"
 hexen/deco/skullhooks				"sounds/ActorsInViewport/Hexen/Decorations/Gore/SkullHooks.ogg"
-$volume hexen/deco/skullhook    0.75
-$volume hexen/deco/skullhooks    0.75
+$volume hexen/deco/skullhook    0.85
+$volume hexen/deco/skullhooks    0.85
 
 hexen/deco/sleepingcorpse		"sounds/ActorsInViewport/Hexen/Decorations/Gore/SleepingCorpse.ogg"
 hexen/deco/sleepingcorpses		"sounds/ActorsInViewport/Hexen/Decorations/Gore/SleepingCorpses.ogg"
-$volume hexen/deco/sleepingcorpse    0.75
-$volume hexen/deco/sleepingcorpses    0.75
+$volume hexen/deco/sleepingcorpse    0.85
+$volume hexen/deco/sleepingcorpses    0.85
 
 //Hexen - Graveyard Decorations
 
 hexen/deco/tombstone				"sounds/ActorsInViewport/Hexen/Decorations/Graveyard/TombStone.ogg"
 hexen/deco/tombstones				"sounds/ActorsInViewport/Hexen/Decorations/Graveyard/TombStones.ogg"
-$volume hexen/deco/tombstone    0.75
-$volume hexen/deco/tombstones    0.75
+$volume hexen/deco/tombstone    0.85
+$volume hexen/deco/tombstones    0.85
 
 //Hexen - Kitchen, Tableware, Pottery, etc.
 
 hexen/deco/cauldron						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cauldron.ogg"
 hexen/deco/cauldrons					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cauldrons.ogg"
-$volume hexen/deco/cauldron    0.75
-$volume hexen/deco/cauldrons    0.75
+$volume hexen/deco/cauldron    0.85
+$volume hexen/deco/cauldrons    0.85
 
 hexen/deco/cleaver						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cleaver.ogg"
 hexen/deco/cleavers					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Cleavers.ogg"
-$volume hexen/deco/cleaver    0.75
-$volume hexen/deco/cleavers    0.75
+$volume hexen/deco/cleaver    0.85
+$volume hexen/deco/cleavers    0.85
 
 hexen/deco/goblet						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Goblet.ogg"
 hexen/deco/goblets						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/Goblets.ogg"
-$volume hexen/deco/goblet    0.75
-$volume hexen/deco/goblets    0.75
+$volume hexen/deco/goblet    0.85
+$volume hexen/deco/goblets    0.85
 
 hexen/deco/largemug					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/LargeMug.ogg"
 hexen/deco/largemugs				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/LargeMugs.ogg"
-$volume hexen/deco/largemug    0.75
-$volume hexen/deco/largemugs    0.75
+$volume hexen/deco/largemug    0.85
+$volume hexen/deco/largemugs    0.85
 
 hexen/deco/medmug					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumMug.ogg"
 hexen/deco/medmugs					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumMugs.ogg"
-$volume hexen/deco/medmug    0.75
-$volume hexen/deco/medmugs    0.75
+$volume hexen/deco/medmug    0.85
+$volume hexen/deco/medmugs    0.85
 
 hexen/deco/medpot					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumPot.ogg"
 hexen/deco/medpots					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/MediumPots.ogg"
-$volume hexen/deco/medpot    0.75
-$volume hexen/deco/medpots    0.75
+$volume hexen/deco/medpot    0.85
+$volume hexen/deco/medpots    0.85
 
 hexen/deco/shortpot					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/ShortPot.ogg"
 hexen/deco/shortpots					"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/ShortPots.ogg"
-$volume hexen/deco/shortpot    0.75
-$volume hexen/deco/shortpots    0.75
+$volume hexen/deco/shortpot    0.85
+$volume hexen/deco/shortpots    0.85
 
 hexen/deco/spilledgob				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/SpillGoblet.ogg"
 hexen/deco/spilledgobs				"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/SpillGoblets.ogg"
-$volume hexen/deco/spilledgob    0.75
-$volume hexen/deco/spilledgobs    0.75
+$volume hexen/deco/spilledgob    0.85
+$volume hexen/deco/spilledgobs    0.85
 
 hexen/deco/tallpot						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/TallPot.ogg"
 hexen/deco/tallpots						"sounds/ActorsInViewport/Hexen/Decorations/Kitchen/TallPots.ogg"
-$volume hexen/deco/tallpot    0.75
-$volume hexen/deco/tallpots    0.75
+$volume hexen/deco/tallpot    0.85
+$volume hexen/deco/tallpots    0.85
 
 //Hexen - Lights
 
 hexen/deco/bluecandle				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BlueCandle.ogg"
 hexen/deco/bluecandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BlueCandles.ogg"
-$volume hexen/deco/bluecandle    0.75
-$volume hexen/deco/bluecandles    0.75
+$volume hexen/deco/bluecandle    0.85
+$volume hexen/deco/bluecandles    0.85
 
 hexen/deco/brasstorch				"sounds/ActorsInViewport/Hexen/Decorations/Lights/BrassTorch.ogg"
 hexen/deco/brasstorches			"sounds/ActorsInViewport/Hexen/Decorations/Lights/BrassTorches.ogg"
-$volume hexen/deco/brasstorch    0.75
-$volume hexen/deco/brasstorches    0.75
+$volume hexen/deco/brasstorch    0.85
+$volume hexen/deco/brasstorches    0.85
 
 hexen/deco/candles					"sounds/ActorsInViewport/Hexen/Decorations/Lights/Candles.ogg"
-$volume hexen/deco/candles    0.75
+$volume hexen/deco/candles    0.85
 
 hexen/deco/chandelier				"sounds/ActorsInViewport/Hexen/Decorations/Lights/Chandelier.ogg"
 hexen/deco/chandeliers				"sounds/ActorsInViewport/Hexen/Decorations/Lights/Chandeliers.ogg"
-$volume hexen/deco/chandelier    0.75
-$volume hexen/deco/chandeliers    0.75
+$volume hexen/deco/chandelier    0.85
+$volume hexen/deco/chandeliers    0.85
 
 hexen/deco/bull							"sounds/ActorsInViewport/Hexen/Decorations/Lights/FireBullStatue.ogg"
 hexen/deco/bulls							"sounds/ActorsInViewport/Hexen/Decorations/Lights/FireBullStatues.ogg"
-$volume hexen/deco/bull    0.75
-$volume hexen/deco/bulls    0.75
+$volume hexen/deco/bull    0.85
+$volume hexen/deco/bulls    0.85
 
 hexen/deco/largeflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlame.ogg"
 hexen/deco/largeflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/LargeFlames.ogg"
-$volume hexen/deco/largeflame    0.75
-$volume hexen/deco/largeflames    0.75
+$volume hexen/deco/largeflame    0.85
+$volume hexen/deco/largeflames    0.85
 
 hexen/deco/skulltorch					"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorch.ogg"
 hexen/deco/skulltorches				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SkullTorches.ogg"
-$volume hexen/deco/skulltorch    0.75
-$volume hexen/deco/skulltorches    0.75
+$volume hexen/deco/skulltorch    0.85
+$volume hexen/deco/skulltorches    0.85
 
 hexen/deco/smallflame				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlame.ogg"
 hexen/deco/smallflames				"sounds/ActorsInViewport/Hexen/Decorations/Lights/SmallFlames.ogg"
-$volume hexen/deco/smallflame    0.75
-$volume hexen/deco/smallflames    0.75
+$volume hexen/deco/smallflame    0.85
+$volume hexen/deco/smallflames    0.85
 
 hexen/deco/tallcandle					"sounds/ActorsInViewport/Hexen/Decorations/Lights/TallUnlitCandle.ogg"
 hexen/deco/tallcandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/TallUnlitCandles.ogg"
-$volume hexen/deco/tallcandle    0.75
-$volume hexen/deco/tallcandles    0.75
+$volume hexen/deco/tallcandle    0.85
+$volume hexen/deco/tallcandles    0.85
 
 hexen/deco/twinedtorch				"sounds/ActorsInViewport/Hexen/Decorations/Lights/TwinedTorch.ogg"
 hexen/deco/twinedtorches			"sounds/ActorsInViewport/Hexen/Decorations/Lights/TwinedTorches.ogg"
-$volume hexen/deco/twinedtorch    0.75
-$volume hexen/deco/twinedtorches    0.75
+$volume hexen/deco/twinedtorch    0.85
+$volume hexen/deco/twinedtorches    0.85
 
 hexen/deco/unlitcandle				"sounds/ActorsInViewport/Hexen/Decorations/Lights/UnlitCandle.ogg"
 hexen/deco/unlitcandles				"sounds/ActorsInViewport/Hexen/Decorations/Lights/UnlitCandles.ogg"
-$volume hexen/deco/unlitcandle    0.75
-$volume hexen/deco/unlitcandles    0.75
+$volume hexen/deco/unlitcandle    0.85
+$volume hexen/deco/unlitcandles    0.85
 
 hexen/deco/walltorch					"sounds/ActorsInViewport/Hexen/Decorations/Lights/WallTorch.ogg"
 hexen/deco/walltorches				"sounds/ActorsInViewport/Hexen/Decorations/Lights/WallTorches.ogg"
-$volume hexen/deco/walltorch    0.75
-$volume hexen/deco/walltorches    0.75
+$volume hexen/deco/walltorch    0.85
+$volume hexen/deco/walltorches    0.85
 
 //Hexen - Nature - Trees, Plants, etc.
 
 hexen/deco/burntstump				"sounds/ActorsInViewport/Hexen/Decorations/Nature/BurntTreeStump.ogg"
 hexen/deco/burntstumps				"sounds/ActorsInViewport/Hexen/Decorations/Nature/BurntTreeStumps.ogg"
-$volume hexen/deco/burntstump    0.75
-$volume hexen/deco/burntstumps    0.75
+$volume hexen/deco/burntstump    0.85
+$volume hexen/deco/burntstumps    0.85
 
 hexen/deco/deadtree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/DeadTree.ogg"
 hexen/deco/deadtrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/DeadTrees.ogg"
-$volume hexen/deco/deadtree    0.75
-$volume hexen/deco/deadtrees    0.75
+$volume hexen/deco/deadtree    0.85
+$volume hexen/deco/deadtrees    0.85
 
 hexen/deco/gnarledtree				"sounds/ActorsInViewport/Hexen/Decorations/Nature/GnarledTree.ogg"
 hexen/deco/gnarledtrees			"sounds/ActorsInViewport/Hexen/Decorations/Nature/GnarledTrees.ogg"
-$volume hexen/deco/gnarledtree    0.75
-$volume hexen/deco/gnarledtrees    0.75
+$volume hexen/deco/gnarledtree    0.85
+$volume hexen/deco/gnarledtrees    0.85
 
 hexen/deco/graytree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayTree.ogg"
 hexen/deco/graytrees					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayTrees.ogg"
-$volume hexen/deco/graytree    0.75
-$volume hexen/deco/graytrees    0.75
+$volume hexen/deco/graytree    0.85
+$volume hexen/deco/graytrees    0.85
 
 hexen/deco/largeshrub				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeShrub.ogg"
 hexen/deco/largeshrubs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeShrubs.ogg"
-$volume hexen/deco/largeshrub    0.75
-$volume hexen/deco/largeshrubs    0.75
+$volume hexen/deco/largeshrub    0.85
+$volume hexen/deco/largeshrubs    0.85
 
 hexen/deco/largetree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeTree.ogg"
 hexen/deco/largetrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeTrees.ogg"
-$volume hexen/deco/largetree    0.75
-$volume hexen/deco/largetrees    0.75
+$volume hexen/deco/largetree    0.85
+$volume hexen/deco/largetrees    0.85
 
 hexen/deco/leaf							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Leaf.ogg"
 hexen/deco/leaves						"sounds/ActorsInViewport/Hexen/Decorations/Nature/Leaves.ogg"
-$volume hexen/deco/leaf    0.75
-$volume hexen/deco/leaves    0.75
+$volume hexen/deco/leaf    0.85
+$volume hexen/deco/leaves    0.85
 
 hexen/deco/smallshrub				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallShrub.ogg"
 hexen/deco/smallshrubs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallShrubs.ogg"
-$volume hexen/deco/smallshrub    0.75
-$volume hexen/deco/smallshrubs    0.75
+$volume hexen/deco/smallshrub    0.85
+$volume hexen/deco/smallshrubs    0.85
 
 hexen/deco/swampstump			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampTreeStump.ogg"
 hexen/deco/swampstumps			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampTreeStumps.ogg"
-$volume hexen/deco/swampstump    0.75
-$volume hexen/deco/swampstumps    0.75
+$volume hexen/deco/swampstump    0.85
+$volume hexen/deco/swampstumps    0.85
 
 hexen/deco/swampvine				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampVine.ogg"
 hexen/deco/swampvines				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SwampVines.ogg"
-$volume hexen/deco/swampvine    0.75
-$volume hexen/deco/swampvines    0.75
+$volume hexen/deco/swampvine    0.85
+$volume hexen/deco/swampvines    0.85
 
 hexen/deco/swamptree				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TallSwampTree.ogg"
 hexen/deco/swamptrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TallSwampTrees.ogg"
-$volume hexen/deco/swamptree    0.75
-$volume hexen/deco/swamptrees    0.75
+$volume hexen/deco/swamptree    0.85
+$volume hexen/deco/swamptrees    0.85
 
 //Generic
 hexen/deco/tree							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Tree.ogg"
 hexen/deco/trees							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Trees.ogg"
-$volume hexen/deco/tree    0.75
-$volume hexen/deco/trees    0.75
+$volume hexen/deco/tree    0.85
+$volume hexen/deco/trees    0.85
 
 hexen/deco/log							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Log.ogg"
 hexen/deco/logs							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Logs.ogg"
-$volume hexen/deco/log    0.75
-$volume hexen/deco/logs    0.75
+$volume hexen/deco/log    0.85
+$volume hexen/deco/logs    0.85
 
 hexen/deco/stump						"sounds/ActorsInViewport/Hexen/Decorations/Nature/TreeStump.ogg"
 hexen/deco/stumps						"sounds/ActorsInViewport/Hexen/Decorations/Nature/TreeStumps.ogg"
-$volume hexen/deco/stump    0.75
-$volume hexen/deco/stumps    0.75
+$volume hexen/deco/stump    0.85
+$volume hexen/deco/stumps    0.85
 
 hexen/deco/xmastree					"sounds/ActorsInViewport/Hexen/Decorations/Nature/XmasTree.ogg"
 hexen/deco/xmastrees				"sounds/ActorsInViewport/Hexen/Decorations/Nature/XmasTrees.ogg"
-$volume hexen/deco/xmastree    0.75
-$volume hexen/deco/xmastrees    0.75
+$volume hexen/deco/xmastree    0.85
+$volume hexen/deco/xmastrees    0.85
 
 //Hexen - Nature - Dirt, Rocks, etc.
 
@@ -821,107 +821,107 @@ $volume hexen/deco/xmastrees    0.75
 
 hexen/deco/grayrock					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayRock.ogg"
 hexen/deco/grayrocks					"sounds/ActorsInViewport/Hexen/Decorations/Nature/GrayRocks.ogg"
-$volume hexen/deco/grayrock    0.75
-$volume hexen/deco/grayrocks    0.75
+$volume hexen/deco/grayrock    0.85
+$volume hexen/deco/grayrocks    0.85
 
 hexen/deco/largebrownrock		"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeBrownRock.ogg"
 hexen/deco/largebrownrocks		"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeBrownRocks.ogg"
-$volume hexen/deco/largebrownrock    0.75
-$volume hexen/deco/largebrownrocks    0.75
+$volume hexen/deco/largebrownrock    0.85
+$volume hexen/deco/largebrownrocks    0.85
 
 hexen/deco/medbrownrock			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumBrownRock.ogg"
 hexen/deco/medbrownrocks		"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumBrownRocks.ogg"
-$volume hexen/deco/medbrownrock    0.75
-$volume hexen/deco/medbrownrocks    0.75
+$volume hexen/deco/medbrownrock    0.85
+$volume hexen/deco/medbrownrocks    0.85
 
 hexen/deco/medrubble				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumRubble.ogg"
-$volume hexen/deco/medrubble    0.75
+$volume hexen/deco/medrubble    0.85
 
 //Generic
 hexen/deco/rock							"sounds/ActorsInViewport/Hexen/Decorations/Nature/Rockdm.ogg"
 hexen/deco/rocks						"sounds/ActorsInViewport/Hexen/Decorations/Nature/Rocksdm.ogg"
-$volume hexen/deco/rock    0.75
-$volume hexen/deco/rocks    0.75
+$volume hexen/deco/rock    0.85
+$volume hexen/deco/rocks    0.85
 
 hexen/deco/smallrubble				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallRubble.ogg"
-$volume hexen/deco/smallrubble   0.75
+$volume hexen/deco/smallrubble   0.85
 
 //Hexen - Cave Decoration - Rock & Ice
 
 hexen/deco/largeicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIceSpike.ogg"
 hexen/deco/largeicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIceSpikes.ogg"
-$volume hexen/deco/largeicespike    0.75
-$volume hexen/deco/largeicespikes    0.75
+$volume hexen/deco/largeicespike    0.85
+$volume hexen/deco/largeicespikes    0.85
 
 hexen/deco/largeicicle				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIcicle.ogg"
 hexen/deco/largeicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeIcicles.ogg"
-$volume hexen/deco/largeicicle    0.75
-$volume hexen/deco/largeicicles    0.75
+$volume hexen/deco/largeicicle    0.85
+$volume hexen/deco/largeicicles    0.85
 
 hexen/deco/largestac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalactite.ogg"
 hexen/deco/largestacs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalactites.ogg"
-$volume hexen/deco/largestac    0.75
-$volume hexen/deco/largestacs    0.75
+$volume hexen/deco/largestac    0.85
+$volume hexen/deco/largestacs    0.85
 
 hexen/deco/largestag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalagmite.ogg"
 hexen/deco/largestags				"sounds/ActorsInViewport/Hexen/Decorations/Nature/LargeStalagmites.ogg"
-$volume hexen/deco/largestag    0.75
-$volume hexen/deco/largestags    0.75
+$volume hexen/deco/largestag    0.85
+$volume hexen/deco/largestags    0.85
 
 hexen/deco/medicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIceSpike.ogg"
 hexen/deco/medicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIceSpikes.ogg"
-$volume hexen/deco/medicespike    0.75
-$volume hexen/deco/medicespikes    0.75
+$volume hexen/deco/medicespike    0.85
+$volume hexen/deco/medicespikes    0.85
 
 hexen/deco/medicicle					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIcicle.ogg"
 hexen/deco/medicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumIcicles.ogg"
-$volume hexen/deco/medicicle    0.75
-$volume hexen/deco/medicicles    0.75
+$volume hexen/deco/medicicle    0.85
+$volume hexen/deco/medicicles    0.85
 
 hexen/deco/medstac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalactite.ogg"
 hexen/deco/medstacs					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalactites.ogg"
-$volume hexen/deco/medstac    0.75
-$volume hexen/deco/medstacs    0.75
+$volume hexen/deco/medstac    0.85
+$volume hexen/deco/medstacs    0.85
 
 hexen/deco/medstag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalagmite.ogg"
 hexen/deco/medstags					"sounds/ActorsInViewport/Hexen/Decorations/Nature/MediumStalagmites.ogg"
-$volume hexen/deco/medstag    0.75
-$volume hexen/deco/medstags    0.75
+$volume hexen/deco/medstag    0.85
+$volume hexen/deco/medstags    0.85
 
 hexen/deco/smallicespike			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIceSpike.ogg"
 hexen/deco/smallicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIceSpikes.ogg"
-$volume hexen/deco/smallicespike    0.75
-$volume hexen/deco/smallicespikes    0.75
+$volume hexen/deco/smallicespike    0.85
+$volume hexen/deco/smallicespikes    0.85
 
 hexen/deco/smallicicle				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIcicle.ogg"
 hexen/deco/smallicicles				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallIcicles.ogg"
-$volume hexen/deco/smallicicle    0.75
-$volume hexen/deco/smallicicles    0.75
+$volume hexen/deco/smallicicle    0.85
+$volume hexen/deco/smallicicles    0.85
 
 hexen/deco/smallstac					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalactite.ogg"
 hexen/deco/smallstacs				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalactites.ogg"
-$volume hexen/deco/smallstac    0.75
-$volume hexen/deco/smallstacs    0.75
+$volume hexen/deco/smallstac    0.85
+$volume hexen/deco/smallstacs    0.85
 
 hexen/deco/smallstag					"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalagmite.ogg"
 hexen/deco/smallstags				"sounds/ActorsInViewport/Hexen/Decorations/Nature/SmallStalagmites.ogg"
-$volume hexen/deco/smallstag    0.75
-$volume hexen/deco/smallstags    0.75
+$volume hexen/deco/smallstag    0.85
+$volume hexen/deco/smallstags    0.85
 
 hexen/deco/stagpillar					"sounds/ActorsInViewport/Hexen/Decorations/Nature/StalagmitePillar.ogg"
 hexen/deco/stagpillars				"sounds/ActorsInViewport/Hexen/Decorations/Nature/StalagmitePillars.ogg"
-$volume hexen/deco/stagpillar    0.75
-$volume hexen/deco/stagpillars    0.75
+$volume hexen/deco/stagpillar    0.85
+$volume hexen/deco/stagpillars    0.85
 
 hexen/deco/tinyicespike				"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIceSpike.ogg"
 hexen/deco/tinyicespikes			"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIceSpikes.ogg"
-$volume hexen/deco/tinyicespike    0.75
-$volume hexen/deco/tinyicespikes    0.75
+$volume hexen/deco/tinyicespike    0.85
+$volume hexen/deco/tinyicespikes    0.85
 
 hexen/deco/tinyicicle					"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIcicle.ogg"
 hexen/deco/tinyicicles					"sounds/ActorsInViewport/Hexen/Decorations/Nature/TinyIcicles.ogg"
-$volume hexen/deco/tinyicicle    0.75
-$volume hexen/deco/tinyicicles    0.75
+$volume hexen/deco/tinyicicle    0.85
+$volume hexen/deco/tinyicicles    0.85
 
 //Hexen - Misc Nature 
 
@@ -938,89 +938,89 @@ $volume hexen/deco/tinyicicles    0.75
 //Generic
 hexen/deco/mushroom				"sounds/ActorsInViewport/Hexen/Decorations/Nature/Mushroom.ogg"
 hexen/deco/mushrooms				"sounds/ActorsInViewport/Hexen/Decorations/Nature/Mushrooms.ogg"
-$volume hexen/deco/mushroom    0.75
-$volume hexen/deco/mushrooms    0.75
+$volume hexen/deco/mushroom    0.85
+$volume hexen/deco/mushrooms    0.85
 
 hexen/deco/poisonshroom			"sounds/ActorsInViewport/Hexen/Decorations/Nature/PoisonMushroom.ogg"
 hexen/deco/poisonshrooms		"sounds/ActorsInViewport/Hexen/Decorations/Nature/PoisonMushrooms.ogg"
-$volume hexen/deco/poisonshroom    0.75
-$volume hexen/deco/poisonshrooms    0.75
+$volume hexen/deco/poisonshroom    0.85
+$volume hexen/deco/poisonshrooms    0.85
 
 //Hexen - Statues
 
 hexen/deco/demonskull				"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatue.ogg"
 hexen/deco/demonskulls			"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatues.ogg"
-$volume hexen/deco/demonskull    0.75
-$volume hexen/deco/demonskulls    0.75
+$volume hexen/deco/demonskull    0.85
+$volume hexen/deco/demonskulls    0.85
 
 hexen/deco/demonnoskull			"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatue2.ogg"
 hexen/deco/demonnoskulls		"sounds/ActorsInViewport/Hexen/Decorations/Statues/DemonStatues2.ogg"
-$volume hexen/deco/demonnoskull    0.75
-$volume hexen/deco/demonnoskulls    0.75
+$volume hexen/deco/demonnoskull    0.85
+$volume hexen/deco/demonnoskulls    0.85
 
 hexen/deco/shortfiregarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFireGargoyle.ogg"
 hexen/deco/shortfiregargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFireGargoyles.ogg"
-$volume hexen/deco/shortfiregarg    0.75
-$volume hexen/deco/shortfiregargs    0.75
+$volume hexen/deco/shortfiregarg    0.85
+$volume hexen/deco/shortfiregargs    0.85
 
 hexen/deco/shortfsgarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFSGargoyle.ogg"
 hexen/deco/shortfsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortFSGargoyles.ogg"
-$volume hexen/deco/shortfsgarg    0.75
-$volume hexen/deco/shortfsgargs    0.75
+$volume hexen/deco/shortfsgarg    0.85
+$volume hexen/deco/shortfsgargs    0.85
 
 hexen/deco/shortgarg					"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortGargoyle.ogg"
 hexen/deco/shortgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortGargoyles.ogg"
-$volume hexen/deco/shortgarg    0.75
-$volume hexen/deco/shortgargs    0.75
+$volume hexen/deco/shortgarg    0.85
+$volume hexen/deco/shortgargs    0.85
 
 hexen/deco/shorticegarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortIceGargoyle.ogg"
 hexen/deco/shorticegargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortIceGargoyles.ogg"
-$volume hexen/deco/shorticegarg    0.75
-$volume hexen/deco/shorticegargs    0.75
+$volume hexen/deco/shorticegarg    0.85
+$volume hexen/deco/shorticegargs    0.85
 
 hexen/deco/shortmetalgarg		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortMetalGargoyle.ogg"
 hexen/deco/shortmetalgargs		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortMetalGargoyles.ogg"
-$volume hexen/deco/shortmetalgarg    0.75
-$volume hexen/deco/shortmetalgargs    0.75
+$volume hexen/deco/shortmetalgarg    0.85
+$volume hexen/deco/shortmetalgargs    0.85
 
 hexen/deco/shortwoodgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortWoodGargoyle.ogg"
 hexen/deco/shortwoodgargs		"sounds/ActorsInViewport/Hexen/Decorations/Statues/ShortWoodGargoyles.ogg"
-$volume hexen/deco/shortwoodgarg    0.75
-$volume hexen/deco/shortwoodgargs    0.75
+$volume hexen/deco/shortwoodgarg    0.85
+$volume hexen/deco/shortwoodgargs    0.85
 
 hexen/deco/tallfiregarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFireGargoyle.ogg"
 hexen/deco/tallfiregargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFireGargoyles.ogg"
-$volume hexen/deco/tallfiregarg    0.75
-$volume hexen/deco/tallfiregargs    0.75
+$volume hexen/deco/tallfiregarg    0.85
+$volume hexen/deco/tallfiregargs    0.85
 
 hexen/deco/tallfsgarg					"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFSGargoyle.ogg"
 hexen/deco/tallfsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallFSGargoyles.ogg"
-$volume hexen/deco/tallfsgarg    0.75
-$volume hexen/deco/tallfsgargs    0.75
+$volume hexen/deco/tallfsgarg    0.85
+$volume hexen/deco/tallfsgargs    0.85
 
 hexen/deco/tallgarg						"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallGargoyle.ogg"
 hexen/deco/tallgargs					"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallGargoyles.ogg"
-$volume hexen/deco/tallgarg    0.75
-$volume hexen/deco/tallgargs    0.75
+$volume hexen/deco/tallgarg    0.85
+$volume hexen/deco/tallgargs    0.85
 
 hexen/deco/tallicegarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallIceGargoyle.ogg"
 hexen/deco/tallicegargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallIceGargoyles.ogg"
-$volume hexen/deco/tallicegarg    0.75
-$volume hexen/deco/tallicegargs    0.75
+$volume hexen/deco/tallicegarg    0.85
+$volume hexen/deco/tallicegargs    0.85
 
 hexen/deco/tallmetalgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallMetalGargoyle.ogg"
 hexen/deco/tallmetalgargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallMetalGargoyles.ogg"
-$volume hexen/deco/tallmetalgarg    0.75
-$volume hexen/deco/tallmetalgargs    0.75
+$volume hexen/deco/tallmetalgarg    0.85
+$volume hexen/deco/tallmetalgargs    0.85
 
 hexen/deco/tallwoodgarg			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodGargoyle.ogg"
 hexen/deco/tallwoodgargs			"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodGargoyles.ogg"
-$volume hexen/deco/tallwoodgarg    0.75
-$volume hexen/deco/tallwoodgargs    0.75
+$volume hexen/deco/tallwoodgarg    0.85
+$volume hexen/deco/tallwoodgargs    0.85
 
 hexen/deco/tallwsgarg				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodStoneGargoyle.ogg"
 hexen/deco/tallwsgargs				"sounds/ActorsInViewport/Hexen/Decorations/Statues/TallWoodStoneGargoyles.ogg"
-$volume hexen/deco/tallwsgarg    0.75
-$volume hexen/deco/tallwsgargs    0.75
+$volume hexen/deco/tallwsgarg    0.85
+$volume hexen/deco/tallwsgargs    0.85
 
 //Oy Vey... That was a lot! LOL! :P

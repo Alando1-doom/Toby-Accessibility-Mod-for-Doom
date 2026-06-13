@@ -1,41 +1,41 @@
 toby/actorsinviewport/general/nonotableactorsaround     "sounds/ActorsInViewport/General/NoNotableActorsAround.ogg"
-$volume toby/actorsinviewport/general/nonotableactorsaround    0.75
+$volume toby/actorsinviewport/general/nonotableactorsaround    0.85
 
 toby/actorsinviewport/general/remainsof                 "sounds/ActorsInViewport/General/RemainsOf.ogg"
-$volume toby/actorsinviewport/general/remainsof    0.75
+$volume toby/actorsinviewport/general/remainsof    0.85
 
 toby/actorsinviewport/general/remainsofa                "sounds/ActorsInViewport/General/RemainsOfA.ogg"
-$volume toby/actorsinviewport/general/remainsofa    0.75
+$volume toby/actorsinviewport/general/remainsofa    0.85
 
 toby/actorsinviewport/general/remainsofan               "sounds/ActorsInViewport/General/RemainsOfAn.ogg"
-$volume toby/actorsinviewport/general/remainsofan    0.75
+$volume toby/actorsinviewport/general/remainsofan    0.85
 
 toby/actorsinviewport/general/onyourleft                "sounds/ActorsInViewport/General/OnYourLeft.ogg"
-$volume toby/actorsinviewport/general/onyourleft    0.75
+$volume toby/actorsinviewport/general/onyourleft    0.85
 
 toby/actorsinviewport/general/onyourright               "sounds/ActorsInViewport/General/OnYourRight.ogg"
-$volume toby/actorsinviewport/general/onyourright    0.75
+$volume toby/actorsinviewport/general/onyourright    0.85
 
 toby/actorsinviewport/general/infrontofyou              "sounds/ActorsInViewport/General/InFrontOfYou.ogg"
-$volume toby/actorsinviewport/general/infrontofyou    0.75
+$volume toby/actorsinviewport/general/infrontofyou    0.85
 
 toby/actorsinviewport/general/generaloverview           "sounds/ActorsInViewport/General/GeneralOverview.ogg"
-$volume toby/actorsinviewport/general/generaloverview    0.75
+$volume toby/actorsinviewport/general/generaloverview    0.85
 
 toby/actorsinviewport/general/close                     "sounds/ActorsInViewport/General/Close.ogg"
-$volume toby/actorsinviewport/general/close    0.75
+$volume toby/actorsinviewport/general/close    0.85
 
 toby/actorsinviewport/general/mediumdistance            "sounds/ActorsInViewport/General/MediumDistance.ogg"
-$volume toby/actorsinviewport/general/mediumdistance    0.75
+$volume toby/actorsinviewport/general/mediumdistance    0.85
 
 toby/actorsinviewport/general/faraway                   "sounds/ActorsInViewport/General/FarAway.ogg"
-$volume toby/actorsinviewport/general/faraway    0.75
+$volume toby/actorsinviewport/general/faraway    0.85
 
 toby/actorsinviewport/general/lowerthanyou              "sounds/ActorsInViewport/General/LowerThanYou.ogg"
-$volume toby/actorsinviewport/general/lowerthanyou    0.75
+$volume toby/actorsinviewport/general/lowerthanyou    0.85
 
 toby/actorsinviewport/general/aboutsamelevelasyou       "sounds/ActorsInViewport/General/AboutSameLevelAsYou.ogg"
-$volume toby/actorsinviewport/general/aboutsamelevelasyou    0.75
+$volume toby/actorsinviewport/general/aboutsamelevelasyou    0.85
 
 toby/actorsinviewport/general/higherthanyou             "sounds/ActorsInViewport/General/HigherThanYou.ogg"
-$volume toby/actorsinviewport/general/higherthanyou    0.75
+$volume toby/actorsinviewport/general/higherthanyou    0.85

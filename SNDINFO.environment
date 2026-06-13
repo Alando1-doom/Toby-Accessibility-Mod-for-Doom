@@ -1,104 +1,104 @@
 toby/actorsinviewport/env/door				"sounds/ActorsInViewport/Environment/Door.ogg"
 toby/actorsinviewport/env/doors				"sounds/ActorsInViewport/Environment/Doors.ogg"
-$volume toby/actorsinviewport/env/door    0.75
-$volume toby/actorsinviewport/env/doors    0.75
+$volume toby/actorsinviewport/env/door    0.85
+$volume toby/actorsinviewport/env/doors    0.85
 
 toby/actorsinviewport/env/switch				"sounds/ActorsInViewport/Environment/Switchdm.ogg"
 toby/actorsinviewport/env/switches			"sounds/ActorsInViewport/Environment/Switches.ogg"
-$volume toby/actorsinviewport/env/switch    0.75
-$volume toby/actorsinviewport/env/switches    0.75
+$volume toby/actorsinviewport/env/switch    0.85
+$volume toby/actorsinviewport/env/switches    0.85
 
 toby/actorsinviewport/env/gunswitch		"sounds/ActorsInViewport/Environment/ShootableSwitch.ogg"
 toby/actorsinviewport/env/gunswitches	"sounds/ActorsInViewport/Environment/ShootableSwitches.ogg"
-$volume toby/actorsinviewport/env/gunswitch    0.75
-$volume toby/actorsinviewport/env/gunswitches    0.75
+$volume toby/actorsinviewport/env/gunswitch    0.85
+$volume toby/actorsinviewport/env/gunswitches    0.85
 
 toby/actorsinviewport/env/exit					"sounds/ActorsInViewport/Environment/Exit.ogg"
 toby/actorsinviewport/env/exits				"sounds/ActorsInViewport/Environment/Exits.ogg"
-$volume toby/actorsinviewport/env/exit    0.75
-$volume toby/actorsinviewport/env/exits    0.75
+$volume toby/actorsinviewport/env/exit    0.85
+$volume toby/actorsinviewport/env/exits    0.85
 
 toby/actorsinviewport/env/teleport			"sounds/ActorsInViewport/Environment/Teleport.ogg"
 toby/actorsinviewport/env/teleports			"sounds/ActorsInViewport/Environment/Teleports.ogg"
-$volume toby/actorsinviewport/env/teleport    0.75
-$volume toby/actorsinviewport/env/teleports    0.75
+$volume toby/actorsinviewport/env/teleport    0.85
+$volume toby/actorsinviewport/env/teleports    0.85
 
 toby/actorsinviewport/env/redlock			"sounds/ActorsInViewport/Environment/RedAccessPoint.ogg"
 toby/actorsinviewport/env/redlocks			"sounds/ActorsInViewport/Environment/RedAccessPoints.ogg"
-$volume toby/actorsinviewport/env/redlock    0.75
-$volume toby/actorsinviewport/env/redlocks    0.75
+$volume toby/actorsinviewport/env/redlock    0.85
+$volume toby/actorsinviewport/env/redlocks    0.85
 
 toby/actorsinviewport/env/greenlock			"sounds/ActorsInViewport/Environment/GreenAccessPoint.ogg"
 toby/actorsinviewport/env/greenlocks			"sounds/ActorsInViewport/Environment/GreenAccessPoints.ogg"
-$volume toby/actorsinviewport/env/greenlock    0.75
-$volume toby/actorsinviewport/env/greenlocks    0.75
+$volume toby/actorsinviewport/env/greenlock    0.85
+$volume toby/actorsinviewport/env/greenlocks    0.85
 
 toby/actorsinviewport/env/bluelock			"sounds/ActorsInViewport/Environment/BlueAccessPoint.ogg"
 toby/actorsinviewport/env/bluelocks		"sounds/ActorsInViewport/Environment/BlueAccessPoints.ogg"
-$volume toby/actorsinviewport/env/bluelock    0.75
-$volume toby/actorsinviewport/env/bluelocks    0.75
+$volume toby/actorsinviewport/env/bluelock    0.85
+$volume toby/actorsinviewport/env/bluelocks    0.85
 
 toby/actorsinviewport/env/yellowlock		"sounds/ActorsInViewport/Environment/YellowAccessPoint.ogg"
 toby/actorsinviewport/env/yellowlocks	"sounds/ActorsInViewport/Environment/YellowAccessPoints.ogg"
-$volume toby/actorsinviewport/env/yellowlock    0.75
-$volume toby/actorsinviewport/env/yellowlocks    0.75
+$volume toby/actorsinviewport/env/yellowlock    0.85
+$volume toby/actorsinviewport/env/yellowlocks    0.85
 
 toby/actorsinviewport/env/multilock		"sounds/ActorsInViewport/Environment/MultiAccessPoint.ogg"
 toby/actorsinviewport/env/multilocks		"sounds/ActorsInViewport/Environment/MultiAccessPoints.ogg"
-$volume toby/actorsinviewport/env/multilock    0.75
-$volume toby/actorsinviewport/env/multilocks    0.75
+$volume toby/actorsinviewport/env/multilock    0.85
+$volume toby/actorsinviewport/env/multilocks    0.85
 
 toby/actorsinviewport/env/axedoor				"sounds/ActorsInViewport/Environment/AxeDoor.ogg"
 toby/actorsinviewport/env/axedoors			"sounds/ActorsInViewport/Environment/AxeDoors.ogg"
-$volume toby/actorsinviewport/env/axedoor    0.75
-$volume toby/actorsinviewport/env/axedoors    0.75
+$volume toby/actorsinviewport/env/axedoor    0.85
+$volume toby/actorsinviewport/env/axedoors    0.85
 
 toby/actorsinviewport/env/castledoor			"sounds/ActorsInViewport/Environment/CastleDoor.ogg"
 toby/actorsinviewport/env/castledoors		"sounds/ActorsInViewport/Environment/CastleDoors.ogg"
-$volume toby/actorsinviewport/env/castledoor    0.75
-$volume toby/actorsinviewport/env/castledoors    0.75
+$volume toby/actorsinviewport/env/castledoor    0.85
+$volume toby/actorsinviewport/env/castledoors    0.85
 
 toby/actorsinviewport/env/cavedoor			"sounds/ActorsInViewport/Environment/CaveDoor.ogg"
 toby/actorsinviewport/env/cavedoors			"sounds/ActorsInViewport/Environment/CaveDoors.ogg"
-$volume toby/actorsinviewport/env/cavedoor    0.75
-$volume toby/actorsinviewport/env/cavedoors    0.75
+$volume toby/actorsinviewport/env/cavedoor    0.85
+$volume toby/actorsinviewport/env/cavedoors    0.85
 
 toby/actorsinviewport/env/dungeondoor		"sounds/ActorsInViewport/Environment/DungeonDoor.ogg"
 toby/actorsinviewport/env/dungeondoors	"sounds/ActorsInViewport/Environment/DungeonDoors.ogg"
-$volume toby/actorsinviewport/env/dungeondoor    0.75
-$volume toby/actorsinviewport/env/dungeondoors    0.75
+$volume toby/actorsinviewport/env/dungeondoor    0.85
+$volume toby/actorsinviewport/env/dungeondoors    0.85
 
 toby/actorsinviewport/env/emeralddoor		"sounds/ActorsInViewport/Environment/EmeraldDoor.ogg"
 toby/actorsinviewport/env/emeralddoors	"sounds/ActorsInViewport/Environment/EmeraldDoors.ogg"
-$volume toby/actorsinviewport/env/emeralddoor    0.75
-$volume toby/actorsinviewport/env/emeralddoors    0.75
+$volume toby/actorsinviewport/env/emeralddoor    0.85
+$volume toby/actorsinviewport/env/emeralddoors    0.85
 
 toby/actorsinviewport/env/firedoor				"sounds/ActorsInViewport/Environment/FireDoor.ogg"
 toby/actorsinviewport/env/firedoors			"sounds/ActorsInViewport/Environment/FireDoors.ogg"
-$volume toby/actorsinviewport/env/firedoor    0.75
-$volume toby/actorsinviewport/env/firedoors    0.75
+$volume toby/actorsinviewport/env/firedoor    0.85
+$volume toby/actorsinviewport/env/firedoors    0.85
 
 toby/actorsinviewport/env/horndoor			"sounds/ActorsInViewport/Environment/HornDoor.ogg"
 toby/actorsinviewport/env/horndoors			"sounds/ActorsInViewport/Environment/HornDoors.ogg"
-$volume toby/actorsinviewport/env/horndoor    0.75
-$volume toby/actorsinviewport/env/horndoors    0.75
+$volume toby/actorsinviewport/env/horndoor    0.85
+$volume toby/actorsinviewport/env/horndoors    0.85
 
 toby/actorsinviewport/env/rusteddoor			"sounds/ActorsInViewport/Environment/RustedDoor.ogg"
 toby/actorsinviewport/env/rusteddoors		"sounds/ActorsInViewport/Environment/RustedDoors.ogg"
-$volume toby/actorsinviewport/env/rusteddoor    0.75
-$volume toby/actorsinviewport/env/rusteddoors    0.75
+$volume toby/actorsinviewport/env/rusteddoor    0.85
+$volume toby/actorsinviewport/env/rusteddoors    0.85
 
 toby/actorsinviewport/env/silverdoor			"sounds/ActorsInViewport/Environment/SilverDoor.ogg"
 toby/actorsinviewport/env/silverdoors			"sounds/ActorsInViewport/Environment/SilverDoors.ogg"
-$volume toby/actorsinviewport/env/silverdoor    0.75
-$volume toby/actorsinviewport/env/silverdoor    0.75
+$volume toby/actorsinviewport/env/silverdoor    0.85
+$volume toby/actorsinviewport/env/silverdoor    0.85
 
 toby/actorsinviewport/env/steeldoor			"sounds/ActorsInViewport/Environment/SteelDoor.ogg"
 toby/actorsinviewport/env/steeldoors			"sounds/ActorsInViewport/Environment/SteelDoors.ogg"
-$volume toby/actorsinviewport/env/steeldoor    0.75
-$volume toby/actorsinviewport/env/steeldoors    0.75
+$volume toby/actorsinviewport/env/steeldoor    0.85
+$volume toby/actorsinviewport/env/steeldoors    0.85
 
 toby/actorsinviewport/env/swampdoor		"sounds/ActorsInViewport/Environment/SwampDoor.ogg"
 toby/actorsinviewport/env/swampdoors		"sounds/ActorsInViewport/Environment/SwampDoors.ogg"
-$volume toby/actorsinviewport/env/swampdoor    0.75
-$volume toby/actorsinviewport/env/swampdoors    0.75
+$volume toby/actorsinviewport/env/swampdoor    0.85
+$volume toby/actorsinviewport/env/swampdoors    0.85
