@@ -1,131 +1,131 @@
 //Doors
 
 pathfinder/reddoor          "sounds/PathFinder/RedDoor.ogg"
-$volume pathfinder/reddoor    0.75
+$volume pathfinder/reddoor    0.85
 
 pathfinder/redskull         "sounds/PathFinder/RedSkullDoor.ogg"
-$volume pathfinder/redskull    0.75
+$volume pathfinder/redskull    0.85
 
 pathfinder/bluedoor         "sounds/PathFinder/BlueDoor.ogg"
-$volume pathfinder/bluedoor    0.75
+$volume pathfinder/bluedoor    0.85
 
 pathfinder/blueskull        "sounds/PathFinder/BlueSkullDoor.ogg"
-$volume pathfinder/blueskull    0.75
+$volume pathfinder/blueskull    0.85
 
 pathfinder/yellowdoor       "sounds/PathFinder/YellowDoor.ogg"
-$volume pathfinder/yellowdoor    0.75
+$volume pathfinder/yellowdoor    0.85
 
 pathfinder/yellowskull      "sounds/PathFinder/YellowSkullDoor.ogg"
-$volume pathfinder/yellowskull    0.75
+$volume pathfinder/yellowskull    0.85
 
 pathfinder/greendoor        "sounds/PathFinder/GreenDoor.ogg"
-$volume pathfinder/greendoor    0.75
+$volume pathfinder/greendoor    0.85
 
 pathfinder/3keydoor         "sounds/PathFinder/3KeyDoor.ogg"
-$volume pathfinder/3keydoor    0.75
+$volume pathfinder/3keydoor    0.85
 
 pathfinder/6keydoor         "sounds/PathFinder/6KeyDoor.ogg"
-$volume pathfinder/6keydoor    0.75
+$volume pathfinder/6keydoor    0.85
 
 pathfinder/anykeydoor       "sounds/PathFinder/AnyKeyDoor.ogg"
-$volume pathfinder/anykeydoor    0.75
+$volume pathfinder/anykeydoor    0.85
 
 
 pathfinder/axedoor					"sounds/PathFinder/AxeDoor.ogg"
-$volume pathfinder/axedoor    0.75
+$volume pathfinder/axedoor    0.85
 
 pathfinder/castledoor				"sounds/PathFinder/CastleDoor.ogg"
-$volume pathfinder/castledoor    0.75
+$volume pathfinder/castledoor    0.85
 
 pathfinder/cavedoor				"sounds/PathFinder/CaveDoor.ogg"
-$volume pathfinder/cavedoor    0.75
+$volume pathfinder/cavedoor    0.85
 
 pathfinder/dungeondoor			"sounds/PathFinder/DungeonDoor.ogg"
-$volume pathfinder/dungeondoor    0.75
+$volume pathfinder/dungeondoor    0.85
 
 pathfinder/emeralddoor			"sounds/PathFinder/EmeraldDoor.ogg"
-$volume pathfinder/emeralddoor    0.75
+$volume pathfinder/emeralddoor    0.85
 
 pathfinder/firedoor					"sounds/PathFinder/FireDoor.ogg"
-$volume pathfinder/firedoor    0.75
+$volume pathfinder/firedoor    0.85
 
 pathfinder/horndoor					"sounds/PathFinder/HornDoor.ogg"
-$volume pathfinder/horndoor    0.75
+$volume pathfinder/horndoor    0.85
 
 pathfinder/rusteddoor				"sounds/PathFinder/RustedDoor.ogg"
-$volume pathfinder/rusteddoor    0.75
+$volume pathfinder/rusteddoor    0.85
 
 pathfinder/silverdoor				"sounds/PathFinder/SilverDoor.ogg"
-$volume pathfinder/silverdoor    0.75
+$volume pathfinder/silverdoor    0.85
 
 pathfinder/steeldoor				"sounds/PathFinder/SteelDoor.ogg"
-$volume pathfinder/steeldoor    0.75
+$volume pathfinder/steeldoor    0.85
 
 pathfinder/swampdoor				"sounds/PathFinder/SwampDoor.ogg"
-$volume pathfinder/swampdoor    0.75
+$volume pathfinder/swampdoor    0.85
 
 pathfinder/alldoor					"sounds/PathFinder/AllKeyDoor.ogg"
-$volume pathfinder/alldoor    0.75
+$volume pathfinder/alldoor    0.85
 
 
 //Exits
 
 pathfinder/exit             "sounds/PathFinder/Exit.ogg"
-$volume pathfinder/exit    0.75
+$volume pathfinder/exit    0.85
 
 pathfinder/secretexit       "sounds/PathFinder/SecretExit.ogg"
-$volume pathfinder/secretexit    0.75
+$volume pathfinder/secretexit    0.85
 
 
 //Path Finder Menu and Actions
 
 pathfinder/markermenu       "sounds/PathFinder/MarkerMenu.ogg"
-$volume pathfinder/markermenu    0.75
+$volume pathfinder/markermenu    0.85
 
 pathfinder/pathfinding      "sounds/PathFinder/Pathfinding.ogg"
-$volume pathfinder/pathfinding    0.75
+$volume pathfinder/pathfinding    0.85
 
 pathfinder/exploration		"sounds/PathFinder/Exploration.ogg"
-$volume pathfinder/exploration    0.75
+$volume pathfinder/exploration    0.85
 
 pathfinder/addmarker        "sounds/PathFinder/AddMarker.ogg"
-$volume pathfinder/addmarker    0.75
+$volume pathfinder/addmarker    0.85
 
 pathfinder/levelstart       "sounds/PathFinder/LevelStart.ogg"
-$volume pathfinder/levelstart    0.75
+$volume pathfinder/levelstart    0.85
 
 pathfinder/marker1          "sounds/PathFinder/Marker1.ogg"
-$volume pathfinder/marker1    0.75
+$volume pathfinder/marker1    0.85
 
 pathfinder/marker2          "sounds/PathFinder/Marker2.ogg"
-$volume pathfinder/marker2    0.75
+$volume pathfinder/marker2    0.85
 
 pathfinder/marker3          "sounds/PathFinder/Marker3.ogg"
-$volume pathfinder/marker3    0.75
+$volume pathfinder/marker3    0.85
 
 pathfinder/marker4          "sounds/PathFinder/Marker4.ogg"
-$volume pathfinder/marker4    0.75
+$volume pathfinder/marker4    0.85
 
 pathfinder/marker5          "sounds/PathFinder/Marker5.ogg"
-$volume pathfinder/marker5    0.75
+$volume pathfinder/marker5    0.85
 
 pathfinder/marker6          "sounds/PathFinder/Marker6.ogg"
-$volume pathfinder/marker6    0.75
+$volume pathfinder/marker6    0.85
 
 pathfinder/marker7          "sounds/PathFinder/Marker7.ogg"
-$volume pathfinder/marker7    0.75
+$volume pathfinder/marker7    0.85
 
 pathfinder/marker8          "sounds/PathFinder/Marker8.ogg"
-$volume pathfinder/marker8    0.75
+$volume pathfinder/marker8    0.85
 
 pathfinder/marker9          "sounds/PathFinder/Marker9.ogg"
-$volume pathfinder/marker9    0.75
+$volume pathfinder/marker9    0.85
 
 pathfinder/marker10         "sounds/PathFinder/Marker10.ogg"
-$volume pathfinder/marker10    0.75
+$volume pathfinder/marker10    0.85
 
 pathfinder/markers          "sounds/PathFinder/Markers.ogg"
-$volume pathfinder/markers    0.75
+$volume pathfinder/markers    0.85
 
 pathfinder/nodereached      "sounds/PathFinder/NodeReached.wav"
 pathfinder/destreached      "sounds/PathFinder/DestReached.ogg"
@@ -134,10 +134,10 @@ pathfinder/pathfound        "sounds/PathFinder/PathFound.ogg"
 pathfinder/placemarkers     "sounds/PathFinder/PlaceMarkers.ogg"
 
 pathfinder/removenearest    "sounds/PathFinder/RemNearestMark.ogg"
-$volume pathfinder/removenearest    0.75
+$volume pathfinder/removenearest    0.85
 
 pathfinder/removemarker     "sounds/PathFinder/RemoveMarker.ogg"
-$volume pathfinder/removemarker    0.75
+$volume pathfinder/removemarker    0.85
 
 pathfinder/stoppath         "sounds/PathFinder/StopPath.ogg"
 pathfinder/beep1            "sounds/PathFinder/BEEP1.wav"
@@ -150,16 +150,16 @@ pathfinder/nodebeacon       "sounds/PathFinder/PathBeacon.wav"
 pathfinder/nodebeaconfast   "sounds/PathFinder/PathBeaconFast.wav"
 
 pathfinder/unexplored       "sounds/PathFinder/Unexplored.ogg"
-$volume pathfinder/unexplored    0.75
+$volume pathfinder/unexplored    0.85
 
 pathfinder/noninteracted    "sounds/PathFinder/NonInteracted.ogg"
-$volume pathfinder/noninteracted    0.75
+$volume pathfinder/noninteracted    0.85
 
 pathfinder/keys					"sounds/PathFinder/Keys.ogg"
-$volume pathfinder/keys    0.75
+$volume pathfinder/keys    0.85
 
 pathfinder/pickups				"sounds/PathFinder/Pickups.ogg"
-$volume pathfinder/pickups    0.75
+$volume pathfinder/pickups    0.85
 
 pathfinder/repeatswitches	"sounds/PathFinder/RepeatSwitches.ogg"
-$volume pathfinder/repeatswitches    0.75
+$volume pathfinder/repeatswitches    0.85
