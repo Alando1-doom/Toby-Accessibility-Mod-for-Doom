@@ -60,6 +60,8 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Toby Doom 2", "SoundToPlay":"menusnd/tobye2"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Tutorial", "SoundToPlay":"map/toby/tutorial"}
 {"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Sandbox", "SoundToPlay":"map/toby/sandbox"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"The Vulcan Abyss", "SoundToPlay":"menusnd/lorep1"}
+{"EventType":"OptionChanged", "CurrentMenuName":"Episodemenu", "CurrentMenuItemListTextString":"Counterfeit Eden", "SoundToPlay":"menusnd/lorep2"}
 
 
 //HERETIC EPISODES

@@ -369,21 +369,37 @@
 
 //Legacy of Rust
 //MAP01 - Scar Gate
+{"Checksum":"bf34c34c5dfc8bb47228cc304f9a6748", "SoundToPlay":"map/lor/scargate"}
 //MAP02 - Sanguine Wastes
-//MAP03 - Ash Mill
+{"Checksum":"b6447217725a2a709d6d021cde15fe10", "SoundToPlay":"map/lor/sanguine"}
+//MAP03 - Spirit Drains
+{"Checksum":"c745f8d0d8824a1910f9dc8b7ab16aa2", "SoundToPlay":"map/lor/drains"}
 //MAP04 - Descending Inferno
+{"Checksum":"e2d2886fd22dc4354939e6e51690c34b", "SoundToPlay":"map/lor/inferno"}
 //MAP05 - Creeping Hate
+{"Checksum":"4f9e705f55e45c1047fabf8bdf2b2399", "SoundToPlay":"map/lor/creepinghate"}
 //MAP06 - The Coiled City
+{"Checksum":"9ff1d73fe9be08b060ddf608bbb80043", "SoundToPlay":"map/lor/coiledcity"}
 //MAP07 - Forfeited Salvation
+{"Checksum":"7f00d2faa5f0b10a6028be2fc5530ec9", "SoundToPlay":"map/lor/forfeited"}
 //MAP08 - Second Coming
+{"Checksum":"f5aed83945c8bde642e55e72fe0d92aa", "SoundToPlay":"map/lor/secondcoming"}
 //MAP09 - Falsehood
+{"Checksum":"1699e255b8c0db86ebb00e5b3c44b4aa", "SoundToPlay":"map/lor/falsehood"}
 //MAP10 - Dis Union
+{"Checksum":"1283c3288a2f51b7455d817c5b7fcfad", "SoundToPlay":"map/lor/disunion"}
 //MAP11 - Echoes of Pain
+{"Checksum":"8a2c0869eaa69fb7b441cd2b648978d0", "SoundToPlay":"map/lor/echoes"}
 //MAP12 - The Rack
+{"Checksum":"fcf009c63bba5f8cee71ed5ec0b02cda", "SoundToPlay":"map/lor/therack"}
 //MAP13 - Soul Silo
+{"Checksum":"7cabd8b043b69996d9777f7070c8bcce", "SoundToPlay":"map/lor/soulsilo"}
 //MAP14 - Brink
-//MAP15 - Panopticon
-
+{"Checksum":"a3f7a58fc08c369f1360741a99f1497c", "SoundToPlay":"map/lor/brink"}
+//MAP15 - Ash Mill
+{"Checksum":"95b94864754ac50446a456a88da3e052", "SoundToPlay":"map/lor/ashmill"}
+//MAP16 - Panopticon
+{"Checksum":"f206766043c4d9ba2c36f76106f96279", "SoundToPlay":"map/lor/panopticon"}
 
 
 //Toby Doom Mega Deluxe Map Pack - MD5: c1bdcb0a94319e3a96aff78d55f90154

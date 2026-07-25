@@ -215,7 +215,7 @@ map/norest/marchofthedemons     "sounds/Maps/doom2_norest/MarchOfTheDemons.ogg"
 
 map/lor/scargate					"sounds/Maps/doom_legacyofrust/1_ScarGate.ogg"
 map/lor/sanguine					"sounds/Maps/doom_legacyofrust/2_SanguineWastes.ogg"
-map/lor/ashmill					"sounds/Maps/doom_legacyofrust/3_AshMill.ogg"
+map/lor/drains						"sounds/Maps/doom_legacyofrust/3_SpiritDrains.ogg"
 map/lor/inferno					"sounds/Maps/doom_legacyofrust/4_DescendingInferno.ogg"
 map/lor/creepinghate			"sounds/Maps/doom_legacyofrust/5_CreepingHate.ogg"
 map/lor/coiledcity				"sounds/Maps/doom_legacyofrust/6_TheCoiledCity.ogg"
@@ -227,7 +227,8 @@ map/lor/echoes					"sounds/Maps/doom_legacyofrust/11_EchoesOfPain.ogg"
 map/lor/therack					"sounds/Maps/doom_legacyofrust/12_TheRack.ogg"
 map/lor/soulsilo					"sounds/Maps/doom_legacyofrust/13_SoulSilo.ogg"
 map/lor/brink						"sounds/Maps/doom_legacyofrust/14_Brink.ogg"
-map/lor/panopticon				"sounds/Maps/doom_legacyofrust/15_Panopticon.ogg"
+map/lor/ashmill					"sounds/Maps/doom_legacyofrust/15_AshMill.ogg"
+map/lor/panopticon				"sounds/Maps/doom_legacyofrust/16_Panopticon.ogg"
 
 
 

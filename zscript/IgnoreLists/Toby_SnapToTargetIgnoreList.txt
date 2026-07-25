@@ -15,3 +15,5 @@ Pottery1
 Pottery2
 Pottery3
 ShootableSwitchChecker
+OfficeLamp
+Deh_Actor_200
