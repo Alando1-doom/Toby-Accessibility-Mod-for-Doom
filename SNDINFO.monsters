@@ -1,362 +1,362 @@
 toby/actorsinviewport/monsters/lowtiermon       "sounds/ActorsInViewport/Monsters/LowTierMon.ogg"
 toby/actorsinviewport/monsters/lowtiermons      "sounds/ActorsInViewport/Monsters/LowTierMons.ogg"
-$volume toby/actorsinviewport/monsters/lowtiermon     0.5
-$volume toby/actorsinviewport/monsters/lowtiermons     0.5
+$volume toby/actorsinviewport/monsters/lowtiermon     0.75
+$volume toby/actorsinviewport/monsters/lowtiermons     0.75
 
 toby/actorsinviewport/monsters/midtiermon       "sounds/ActorsInViewport/Monsters/MidTierMon.ogg"
 toby/actorsinviewport/monsters/midtiermons      "sounds/ActorsInViewport/Monsters/MidTierMons.ogg"
-$volume toby/actorsinviewport/monsters/midtiermon     0.5
-$volume toby/actorsinviewport/monsters/midtiermons     0.5
+$volume toby/actorsinviewport/monsters/midtiermon     0.75
+$volume toby/actorsinviewport/monsters/midtiermons     0.75
 
 toby/actorsinviewport/monsters/hightiermon      "sounds/ActorsInViewport/Monsters/HighTierMon.ogg"
 toby/actorsinviewport/monsters/hightiermons     "sounds/ActorsInViewport/Monsters/HighTierMons.ogg"
-$volume toby/actorsinviewport/monsters/hightiermon     0.5
-$volume toby/actorsinviewport/monsters/hightiermons     0.5
+$volume toby/actorsinviewport/monsters/hightiermon     0.75
+$volume toby/actorsinviewport/monsters/hightiermons     0.75
 
 toby/actorsinviewport/monsters/formerhuman      "sounds/ActorsInViewport/Monsters/FormerHuman.ogg"
 toby/actorsinviewport/monsters/formerhumans     "sounds/ActorsInViewport/Monsters/FormerHumans.ogg"
-$volume toby/actorsinviewport/monsters/formerhuman     0.5
-$volume toby/actorsinviewport/monsters/formerhumans     0.5
+$volume toby/actorsinviewport/monsters/formerhuman     0.75
+$volume toby/actorsinviewport/monsters/formerhumans     0.75
 
 toby/actorsinviewport/monsters/imp              "sounds/ActorsInViewport/Monsters/Imp.ogg"
 toby/actorsinviewport/monsters/imps             "sounds/ActorsInViewport/Monsters/Imps.ogg"
-$volume toby/actorsinviewport/monsters/imp     0.5
-$volume toby/actorsinviewport/monsters/imps     0.5
+$volume toby/actorsinviewport/monsters/imp     0.75
+$volume toby/actorsinviewport/monsters/imps     0.75
 
 toby/actorsinviewport/monsters/formersergeant   "sounds/ActorsInViewport/Monsters/FormerSergeant.ogg"
 toby/actorsinviewport/monsters/formersergeants  "sounds/ActorsInViewport/Monsters/FormerSergeants.ogg"
-$volume toby/actorsinviewport/monsters/formersergeant     0.5
-$volume toby/actorsinviewport/monsters/formersergeants     0.5
+$volume toby/actorsinviewport/monsters/formersergeant     0.75
+$volume toby/actorsinviewport/monsters/formersergeants     0.75
 
 toby/actorsinviewport/monsters/formercommando   "sounds/ActorsInViewport/Monsters/FormerCommando.ogg"
 toby/actorsinviewport/monsters/formercommandos  "sounds/ActorsInViewport/Monsters/FormerCommandos.ogg"
-$volume toby/actorsinviewport/monsters/formercommando     0.5
-$volume toby/actorsinviewport/monsters/formercommandos     0.5
+$volume toby/actorsinviewport/monsters/formercommando     0.75
+$volume toby/actorsinviewport/monsters/formercommandos     0.75
 
 toby/actorsinviewport/monsters/pinkydemon       "sounds/ActorsInViewport/Monsters/PinkyDemon.ogg"
 toby/actorsinviewport/monsters/pinkydemons      "sounds/ActorsInViewport/Monsters/PinkyDemons.ogg"
-$volume toby/actorsinviewport/monsters/pinkydemon     0.5
-$volume toby/actorsinviewport/monsters/pinkydemons     0.5
+$volume toby/actorsinviewport/monsters/pinkydemon     0.75
+$volume toby/actorsinviewport/monsters/pinkydemons     0.75
 
 toby/actorsinviewport/monsters/spectre          "sounds/ActorsInViewport/Monsters/Spectre.ogg"
 toby/actorsinviewport/monsters/spectres         "sounds/ActorsInViewport/Monsters/Spectres.ogg"
-$volume toby/actorsinviewport/monsters/spectre     0.5
-$volume toby/actorsinviewport/monsters/spectres     0.5
+$volume toby/actorsinviewport/monsters/spectre     0.75
+$volume toby/actorsinviewport/monsters/spectres     0.75
 
 toby/actorsinviewport/monsters/cacodemon        "sounds/ActorsInViewport/Monsters/Cacodemon.ogg"
 toby/actorsinviewport/monsters/cacodemons       "sounds/ActorsInViewport/Monsters/Cacodemons.ogg"
-$volume toby/actorsinviewport/monsters/cacodemon     0.5
-$volume toby/actorsinviewport/monsters/cacodemons     0.5
+$volume toby/actorsinviewport/monsters/cacodemon     0.75
+$volume toby/actorsinviewport/monsters/cacodemons     0.75
 
 toby/actorsinviewport/monsters/hellknight       "sounds/ActorsInViewport/Monsters/HellKnight.ogg"
 toby/actorsinviewport/monsters/hellknights      "sounds/ActorsInViewport/Monsters/HellKnights.ogg"
-$volume toby/actorsinviewport/monsters/hellknight     0.5
-$volume toby/actorsinviewport/monsters/hellknights     0.5
+$volume toby/actorsinviewport/monsters/hellknight     0.75
+$volume toby/actorsinviewport/monsters/hellknights     0.75
 
 toby/actorsinviewport/monsters/baronofhell      "sounds/ActorsInViewport/Monsters/BaronOfHell.ogg"
 toby/actorsinviewport/monsters/baronsofhell     "sounds/ActorsInViewport/Monsters/BaronsOfHell.ogg"
-$volume toby/actorsinviewport/monsters/baronofhell     0.5
-$volume toby/actorsinviewport/monsters/baronofhells     0.5
+$volume toby/actorsinviewport/monsters/baronofhell     0.75
+$volume toby/actorsinviewport/monsters/baronofhells     0.75
 
 toby/actorsinviewport/monsters/mancubus         "sounds/ActorsInViewport/Monsters/Mancubus.ogg"
 toby/actorsinviewport/monsters/mancubi          "sounds/ActorsInViewport/Monsters/Mancubi.ogg"
-$volume toby/actorsinviewport/monsters/mancubus     0.5
-$volume toby/actorsinviewport/monsters/mancubi     0.5
+$volume toby/actorsinviewport/monsters/mancubus     0.75
+$volume toby/actorsinviewport/monsters/mancubi     0.75
 
 toby/actorsinviewport/monsters/revenant         "sounds/ActorsInViewport/Monsters/Revenant.ogg"
 toby/actorsinviewport/monsters/revenants        "sounds/ActorsInViewport/Monsters/Revenants.ogg"
-$volume toby/actorsinviewport/monsters/revenant     0.5
-$volume toby/actorsinviewport/monsters/revenants     0.5
+$volume toby/actorsinviewport/monsters/revenant     0.75
+$volume toby/actorsinviewport/monsters/revenants     0.75
 
 toby/actorsinviewport/monsters/lostsoul         "sounds/ActorsInViewport/Monsters/LostSoul.ogg"
 toby/actorsinviewport/monsters/lostsouls        "sounds/ActorsInViewport/Monsters/LostSouls.ogg"
-$volume toby/actorsinviewport/monsters/lostsoul     0.5
-$volume toby/actorsinviewport/monsters/lostsouls     0.5
+$volume toby/actorsinviewport/monsters/lostsoul     0.75
+$volume toby/actorsinviewport/monsters/lostsouls     0.75
 
 toby/actorsinviewport/monsters/painelemental    "sounds/ActorsInViewport/Monsters/PainElemental.ogg"
 toby/actorsinviewport/monsters/painelementals   "sounds/ActorsInViewport/Monsters/PainElementals.ogg"
-$volume toby/actorsinviewport/monsters/painelemental     0.5
-$volume toby/actorsinviewport/monsters/painelementals     0.5
+$volume toby/actorsinviewport/monsters/painelemental     0.75
+$volume toby/actorsinviewport/monsters/painelementals     0.75
 
 toby/actorsinviewport/monsters/arachnotron      "sounds/ActorsInViewport/Monsters/Arachnotron.ogg"
 toby/actorsinviewport/monsters/arachnotrons     "sounds/ActorsInViewport/Monsters/Arachnotrons.ogg"
-$volume toby/actorsinviewport/monsters/arachnotron     0.5
-$volume toby/actorsinviewport/monsters/arachnotrons     0.5
+$volume toby/actorsinviewport/monsters/arachnotron     0.75
+$volume toby/actorsinviewport/monsters/arachnotrons     0.75
 
 toby/actorsinviewport/monsters/archvile         "sounds/ActorsInViewport/Monsters/Archvile.ogg"
 toby/actorsinviewport/monsters/archviles        "sounds/ActorsInViewport/Monsters/Archviles.ogg"
-$volume toby/actorsinviewport/monsters/archvile     0.5
-$volume toby/actorsinviewport/monsters/archviles     0.5
+$volume toby/actorsinviewport/monsters/archvile     0.75
+$volume toby/actorsinviewport/monsters/archviles     0.75
 
 toby/actorsinviewport/monsters/cyberdemon       "sounds/ActorsInViewport/Monsters/Cyberdemon.ogg"
 toby/actorsinviewport/monsters/cyberdemons      "sounds/ActorsInViewport/Monsters/Cyberdemons.ogg"
-$volume toby/actorsinviewport/monsters/cyberdemon     0.5
-$volume toby/actorsinviewport/monsters/cyberdemons     0.5
+$volume toby/actorsinviewport/monsters/cyberdemon     0.75
+$volume toby/actorsinviewport/monsters/cyberdemons     0.75
 
 toby/actorsinviewport/monsters/spidermastermind     "sounds/ActorsInViewport/Monsters/SpiderMastermind.ogg"
 toby/actorsinviewport/monsters/spidermasterminds    "sounds/ActorsInViewport/Monsters/SpiderMasterminds.ogg"
-$volume toby/actorsinviewport/monsters/spidermastermind     0.5
-$volume toby/actorsinviewport/monsters/spidermasterminds     0.5
+$volume toby/actorsinviewport/monsters/spidermastermind     0.75
+$volume toby/actorsinviewport/monsters/spidermasterminds     0.75
 
 toby/actorsinviewport/monsters/romeroshead          "sounds/ActorsInViewport/Monsters/RomerosHead.ogg"
 toby/actorsinviewport/monsters/romerosheads         "sounds/ActorsInViewport/Monsters/RomerosHeads.ogg"
-$volume toby/actorsinviewport/monsters/romeroshead     0.5
-$volume toby/actorsinviewport/monsters/romerosheads     0.5
+$volume toby/actorsinviewport/monsters/romeroshead     0.75
+$volume toby/actorsinviewport/monsters/romerosheads     0.75
 
 toby/actorsinviewport/monsters/wolfensteinsoldier   "sounds/ActorsInViewport/Monsters/WolfensteinSoldier.ogg"
 toby/actorsinviewport/monsters/wolfensteinsoldiers  "sounds/ActorsInViewport/Monsters/WolfensteinSoldiers.ogg"
-$volume toby/actorsinviewport/monsters/wolfensteinsoldier     0.5
-$volume toby/actorsinviewport/monsters/wolfensteinsoldiers     0.5
+$volume toby/actorsinviewport/monsters/wolfensteinsoldier     0.75
+$volume toby/actorsinviewport/monsters/wolfensteinsoldiers     0.75
 
 toby/actorsinviewport/monsters/hangingcommanderkeen     "sounds/ActorsInViewport/Monsters/HangingCommanderKeen.ogg"
 toby/actorsinviewport/monsters/hangingcommanderkeens    "sounds/ActorsInViewport/Monsters/HangingCommanderKeens.ogg"
-$volume toby/actorsinviewport/monsters/hangingcommanderkeen     0.5
-$volume toby/actorsinviewport/monsters/hangingcommanderkeens     0.5
+$volume toby/actorsinviewport/monsters/hangingcommanderkeen     0.75
+$volume toby/actorsinviewport/monsters/hangingcommanderkeens     0.75
 
 toby/actorsinviewport/monsters/marine     "sounds/ActorsInViewport/Monsters/Marine.ogg"
 toby/actorsinviewport/monsters/marines    "sounds/ActorsInViewport/Monsters/Marines.ogg"
-$volume toby/actorsinviewport/monsters/marine     0.5
-$volume toby/actorsinviewport/monsters/marines     0.5
+$volume toby/actorsinviewport/monsters/marine     0.75
+$volume toby/actorsinviewport/monsters/marines     0.75
 
 toby/actorsinviewport/monsters/cybruiser     "sounds/ActorsInViewport/Monsters/Cybruiser.ogg"
 toby/actorsinviewport/monsters/cybruisers    "sounds/ActorsInViewport/Monsters/Cybruisers.ogg"
-$volume toby/actorsinviewport/monsters/cybruiser     0.5
-$volume toby/actorsinviewport/monsters/cybruisers     0.5
+$volume toby/actorsinviewport/monsters/cybruiser     0.75
+$volume toby/actorsinviewport/monsters/cybruisers     0.75
 
 toby/actorsinviewport/monsters/icon     "sounds/ActorsInViewport/Monsters/IconOfSin.ogg"
 toby/actorsinviewport/monsters/icons    "sounds/ActorsInViewport/Monsters/IconsOfSin.ogg"
-$volume toby/actorsinviewport/monsters/icon     0.5
-$volume toby/actorsinviewport/monsters/icons     0.5
+$volume toby/actorsinviewport/monsters/icon     0.75
+$volume toby/actorsinviewport/monsters/icons     0.75
 
 toby/actorsinviewport/monsters/warlord     "sounds/ActorsInViewport/Monsters/Warlord.ogg"
 toby/actorsinviewport/monsters/warlords    "sounds/ActorsInViewport/Monsters/Warlords.ogg"
-$volume toby/actorsinviewport/monsters/warlord     0.5
-$volume toby/actorsinviewport/monsters/warlords     0.5
+$volume toby/actorsinviewport/monsters/warlord     0.75
+$volume toby/actorsinviewport/monsters/warlords     0.75
 
 
 //Legacy of Rust Monsters
 
 toby/actorsinviewport/lor/monsters/banshee			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Banshee.ogg"
 toby/actorsinviewport/lor/monsters/banshees			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Banshees.ogg"
-$volume toby/actorsinviewport/lor/monsters/banshee     0.75
-$volume toby/actorsinviewport/lor/monsters/banshees     0.75
+$volume toby/actorsinviewport/lor/monsters/banshee     0.85
+$volume toby/actorsinviewport/lor/monsters/banshees     0.85
 
 toby/actorsinviewport/lor/monsters/ghoul				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Ghoul.ogg"
 toby/actorsinviewport/lor/monsters/ghouls				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Ghouls.ogg"
-$volume toby/actorsinviewport/lor/monsters/ghoul     0.75
-$volume toby/actorsinviewport/lor/monsters/ghouls     0.75
+$volume toby/actorsinviewport/lor/monsters/ghoul     0.85
+$volume toby/actorsinviewport/lor/monsters/ghouls     0.85
 
 toby/actorsinviewport/lor/monsters/mindweaver		"sounds/ActorsInViewport/LegacyOfRust/Monsters/MindWeaver.ogg"
 toby/actorsinviewport/lor/monsters/mindweavers	"sounds/ActorsInViewport/LegacyOfRust/Monsters/MindWeavers.ogg"
-$volume toby/actorsinviewport/lor/monsters/mindweaver     0.75
-$volume toby/actorsinviewport/lor/monsters/mindweavers     0.75
+$volume toby/actorsinviewport/lor/monsters/mindweaver     0.85
+$volume toby/actorsinviewport/lor/monsters/mindweavers     0.85
 
 toby/actorsinviewport/lor/monsters/shocktrooper	"sounds/ActorsInViewport/LegacyOfRust/Monsters/ShockTrooper.ogg"
 toby/actorsinviewport/lor/monsters/shocktroopers	"sounds/ActorsInViewport/LegacyOfRust/Monsters/ShockTroopers.ogg"
-$volume toby/actorsinviewport/lor/monsters/shocktrooper     0.75
-$volume toby/actorsinviewport/lor/monsters/shocktroopers     0.75
+$volume toby/actorsinviewport/lor/monsters/shocktrooper     0.85
+$volume toby/actorsinviewport/lor/monsters/shocktroopers     0.85
 
 toby/actorsinviewport/lor/monsters/tyrant				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Tyrant.ogg"
 toby/actorsinviewport/lor/monsters/tyrants				"sounds/ActorsInViewport/LegacyOfRust/Monsters/Tyrants.ogg"
-$volume toby/actorsinviewport/lor/monsters/tyrant     0.75
-$volume toby/actorsinviewport/lor/monsters/tyrants     0.75
+$volume toby/actorsinviewport/lor/monsters/tyrant     0.85
+$volume toby/actorsinviewport/lor/monsters/tyrants     0.85
 
 toby/actorsinviewport/lor/monsters/vassago			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Vassago.ogg"
 toby/actorsinviewport/lor/monsters/vassagos			"sounds/ActorsInViewport/LegacyOfRust/Monsters/Vassagos.ogg"
-$volume toby/actorsinviewport/lor/monsters/vassago     0.75
-$volume toby/actorsinviewport/lor/monsters/vassagos     0.75
+$volume toby/actorsinviewport/lor/monsters/vassago     0.85
+$volume toby/actorsinviewport/lor/monsters/vassagos     0.85
 
 
 //Heretic Monsters
 
 heretic/monster/chicken				"sounds/ActorsInViewport/Heretic/Monsters/Chicken.ogg"
 heretic/monster/chickens			"sounds/ActorsInViewport/Heretic/Monsters/Chickens.ogg"
-$volume heretic/monster/chicken     0.75
-$volume heretic/monster/chickens     0.75
+$volume heretic/monster/chicken     0.85
+$volume heretic/monster/chickens     0.85
 
 heretic/monster/disciple				"sounds/ActorsInViewport/Heretic/Monsters/Disciple.ogg"
 heretic/monster/disciples				"sounds/ActorsInViewport/Heretic/Monsters/Disciples.ogg"
-$volume heretic/monster/disciple     0.75
-$volume heretic/monster/disciples     0.75
+$volume heretic/monster/disciple     0.85
+$volume heretic/monster/disciples     0.85
 
 heretic/monster/dsparil				"sounds/ActorsInViewport/Heretic/Monsters/Dsparil.ogg"
 heretic/monster/dsparils				"sounds/ActorsInViewport/Heretic/Monsters/Dsparils.ogg"
-$volume heretic/monster/dsparil     0.75
-$volume heretic/monster/dsparils     0.75
+$volume heretic/monster/dsparil     0.85
+$volume heretic/monster/dsparils     0.85
 
 heretic/monster/dsparilmount		"sounds/ActorsInViewport/Heretic/Monsters/DsparilMounted.ogg"
 heretic/monster/dsparilsmount	"sounds/ActorsInViewport/Heretic/Monsters/DsparilsMounted.ogg"
-$volume heretic/monster/dsparilmount     0.75
-$volume heretic/monster/dsparilsmount     0.75
+$volume heretic/monster/dsparilmount     0.85
+$volume heretic/monster/dsparilsmount     0.85
 
 heretic/monster/gargoyle				"sounds/ActorsInViewport/Heretic/Monsters/Gargoyle.ogg"
 heretic/monster/gargoyles			"sounds/ActorsInViewport/Heretic/Monsters/Gargoyles.ogg"
-$volume heretic/monster/gargoyle     0.75
-$volume heretic/monster/gargoyles     0.75
+$volume heretic/monster/gargoyle     0.85
+$volume heretic/monster/gargoyles     0.85
 
 heretic/monster/gargleader			"sounds/ActorsInViewport/Heretic/Monsters/GargoyleLeader.ogg"
 heretic/monster/gargleaders		"sounds/ActorsInViewport/Heretic/Monsters/GargoyleLeaders.ogg"
-$volume heretic/monster/gargleader     0.75
-$volume heretic/monster/gargleaders     0.75
+$volume heretic/monster/gargleader     0.85
+$volume heretic/monster/gargleaders     0.85
 
 heretic/monster/golem					"sounds/ActorsInViewport/Heretic/Monsters/Golem.ogg"
 heretic/monster/golems				"sounds/ActorsInViewport/Heretic/Monsters/Golems.ogg"
-$volume heretic/monster/golem     0.75
-$volume heretic/monster/golems     0.75
+$volume heretic/monster/golem     0.85
+$volume heretic/monster/golems     0.85
 
 heretic/monster/ghostgolem		"sounds/ActorsInViewport/Heretic/Monsters/GhostGolem.ogg"
 heretic/monster/ghostgolems		"sounds/ActorsInViewport/Heretic/Monsters/GhostGolems.ogg"
-$volume heretic/monster/ghostgolem     0.75
-$volume heretic/monster/ghostgolems     0.75
+$volume heretic/monster/ghostgolem     0.85
+$volume heretic/monster/ghostgolems     0.85
 
 heretic/monster/nitrogolem			"sounds/ActorsInViewport/Heretic/Monsters/NitroGolem.ogg"
 heretic/monster/nitrogolems		"sounds/ActorsInViewport/Heretic/Monsters/NitroGolems.ogg"
-$volume heretic/monster/nitrogolem     0.75
-$volume heretic/monster/nitrogolems     0.75
+$volume heretic/monster/nitrogolem     0.85
+$volume heretic/monster/nitrogolems     0.85
 
 heretic/monster/ghostnitro			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolem.ogg"
 heretic/monster/ghostnitros			"sounds/ActorsInViewport/Heretic/Monsters/GhostNitroGolems.ogg"
-$volume heretic/monster/ghostnitro     0.75
-$volume heretic/monster/ghostnitros     0.75
+$volume heretic/monster/ghostnitro     0.85
+$volume heretic/monster/ghostnitros     0.85
 
 heretic/monster/knight					"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarrior.ogg"
 heretic/monster/knights				"sounds/ActorsInViewport/Heretic/Monsters/UndeadWarriors.ogg"
-$volume heretic/monster/knight     0.75
-$volume heretic/monster/knights     0.75
+$volume heretic/monster/knight     0.85
+$volume heretic/monster/knights     0.85
 
 heretic/monster/ghostknight		"sounds/ActorsInViewport/Heretic/Monsters/GhostWarrior.ogg"
 heretic/monster/ghostknights		"sounds/ActorsInViewport/Heretic/Monsters/GhostWarriors.ogg"
-$volume heretic/monster/ghostknight     0.75
-$volume heretic/monster/ghostknights     0.75
+$volume heretic/monster/ghostknight     0.85
+$volume heretic/monster/ghostknights     0.85
 
 heretic/monster/ironlich				"sounds/ActorsInViewport/Heretic/Monsters/Ironlich.ogg"
 heretic/monster/ironliches			"sounds/ActorsInViewport/Heretic/Monsters/Ironliches.ogg"
-$volume heretic/monster/ironlich     0.75
-$volume heretic/monster/ironliches     0.75
+$volume heretic/monster/ironlich     0.85
+$volume heretic/monster/ironliches     0.85
 
 heretic/monster/minotaur			"sounds/ActorsInViewport/Heretic/Monsters/Minotaur.ogg"
 heretic/monster/minotaurs			"sounds/ActorsInViewport/Heretic/Monsters/Minotaurs.ogg"
-$volume heretic/monster/minotaur     0.75
-$volume heretic/monster/minotaurs     0.75
+$volume heretic/monster/minotaur     0.85
+$volume heretic/monster/minotaurs     0.85
 
 heretic/monster/ophidian				"sounds/ActorsInViewport/Heretic/Monsters/Ophidian.ogg"
 heretic/monster/ophidians			"sounds/ActorsInViewport/Heretic/Monsters/Ophidians.ogg"
-$volume heretic/monster/ophidian     0.75
-$volume heretic/monster/ophidians     0.75
+$volume heretic/monster/ophidian     0.85
+$volume heretic/monster/ophidians     0.85
 
 heretic/monster/clink					"sounds/ActorsInViewport/Heretic/Monsters/SabreClaw.ogg"
 heretic/monster/clinks					"sounds/ActorsInViewport/Heretic/Monsters/SabreClaws.ogg"
-$volume heretic/monster/clink     0.75
-$volume heretic/monster/clinks     0.75
+$volume heretic/monster/clink     0.85
+$volume heretic/monster/clinks     0.85
 
 heretic/monster/weredragon		"sounds/ActorsInViewport/Heretic/Monsters/Weredragon.ogg"
 heretic/monster/weredragons		"sounds/ActorsInViewport/Heretic/Monsters/Weredragons.ogg"
-$volume heretic/monster/weredragon     0.75
-$volume heretic/monster/weredragons     0.75
+$volume heretic/monster/weredragon     0.85
+$volume heretic/monster/weredragons     0.85
 
 
 //Hexen Monsters
 
 hexen/monster/afrit						"sounds/ActorsInViewport/Hexen/Monsters/Afrit.ogg"
 hexen/monster/afrits					"sounds/ActorsInViewport/Hexen/Monsters/Afrits.ogg"
-$volume hexen/monster/afrit     0.75
-$volume hexen/monster/afrits     0.75
+$volume hexen/monster/afrit     0.85
+$volume hexen/monster/afrits     0.85
 
 hexen/monster/bishop					"sounds/ActorsInViewport/Hexen/Monsters/Bishop.ogg"
 hexen/monster/bishops				"sounds/ActorsInViewport/Hexen/Monsters/Bishops.ogg"
-$volume hexen/monster/bishop     0.75
-$volume hexen/monster/bishops     0.75
+$volume hexen/monster/bishop     0.85
+$volume hexen/monster/bishops     0.85
 
 hexen/monster/brownserpent		"sounds/ActorsInViewport/Hexen/Monsters/BrownChaosSerp.ogg"
 hexen/monster/brownserpents	"sounds/ActorsInViewport/Hexen/Monsters/BrownChaosSerps.ogg"
-$volume hexen/monster/brownserpent     0.75
-$volume hexen/monster/brownserpents     0.75
+$volume hexen/monster/brownserpent     0.85
+$volume hexen/monster/brownserpents     0.85
 
 hexen/monster/centaur				"sounds/ActorsInViewport/Hexen/Monsters/Centaur.ogg"
 hexen/monster/centaurs				"sounds/ActorsInViewport/Hexen/Monsters/Centaurs.ogg"
-$volume hexen/monster/centaur     0.75
-$volume hexen/monster/centaurs     0.75
+$volume hexen/monster/centaur     0.85
+$volume hexen/monster/centaurs     0.85
 
 hexen/monster/ettin						"sounds/ActorsInViewport/Hexen/Monsters/Ettin.ogg"
 hexen/monster/ettins					"sounds/ActorsInViewport/Hexen/Monsters/Ettins.ogg"
-$volume hexen/monster/ettin     0.75
-$volume hexen/monster/ettins     0.75
+$volume hexen/monster/ettin     0.85
+$volume hexen/monster/ettins     0.85
 
 hexen/monster/greenserpent		"sounds/ActorsInViewport/Hexen/Monsters/GreenChaosSerp.ogg"
 hexen/monster/greenserpents	"sounds/ActorsInViewport/Hexen/Monsters/GreenChaosSerps.ogg"
-$volume hexen/monster/greenserpent     0.75
-$volume hexen/monster/greenserpents     0.75
+$volume hexen/monster/greenserpent     0.85
+$volume hexen/monster/greenserpents     0.85
 
 hexen/monster/reaver					"sounds/ActorsInViewport/Hexen/Monsters/Reaver.ogg"
 hexen/monster/reavers				"sounds/ActorsInViewport/Hexen/Monsters/Reavers.ogg"
-$volume hexen/monster/reaver     0.75
-$volume hexen/monster/reavers     0.75
+$volume hexen/monster/reaver     0.85
+$volume hexen/monster/reavers     0.85
 
 hexen/monster/slaughtaur			"sounds/ActorsInViewport/Hexen/Monsters/Slaughtaur.ogg"
 hexen/monster/slaughtaurs			"sounds/ActorsInViewport/Hexen/Monsters/Slaughtaurs.ogg"
-$volume hexen/monster/slaughtaur     0.75
-$volume hexen/monster/slaughtaurs     0.75
+$volume hexen/monster/slaughtaur     0.85
+$volume hexen/monster/slaughtaurs     0.85
 
 hexen/monster/stalker					"sounds/ActorsInViewport/Hexen/Monsters/Stalker.ogg"
 hexen/monster/stalkers				"sounds/ActorsInViewport/Hexen/Monsters/Stalkers.ogg"
-$volume hexen/monster/stalker     0.75
-$volume hexen/monster/stalkers     0.75
+$volume hexen/monster/stalker     0.85
+$volume hexen/monster/stalkers     0.85
 
 hexen/monster/stalker2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeader.ogg"
 hexen/monster/stalkers2				"sounds/ActorsInViewport/Hexen/Monsters/StalkerLeaders.ogg"
-$volume hexen/monster/stalker2     0.75
-$volume hexen/monster/stalkers2     0.75
+$volume hexen/monster/stalker2     0.85
+$volume hexen/monster/stalkers2     0.85
 
 hexen/monster/wendigo				"sounds/ActorsInViewport/Hexen/Monsters/Wendigo.ogg"
 hexen/monster/wendigos			"sounds/ActorsInViewport/Hexen/Monsters/Wendigos.ogg"
-$volume hexen/monster/wendigo     0.75
-$volume hexen/monster/wendigos     0.75
+$volume hexen/monster/wendigo     0.85
+$volume hexen/monster/wendigos     0.85
 
 //Hexen Bosses
 
 hexen/monster/zedek					"sounds/ActorsInViewport/Hexen/Monsters/FighterBoss.ogg"
 hexen/monster/zedeks				"sounds/ActorsInViewport/Hexen/Monsters/FighterBosses.ogg"
-$volume hexen/monster/zedek     0.75
-$volume hexen/monster/zedeks     0.75
+$volume hexen/monster/zedek     0.85
+$volume hexen/monster/zedeks     0.85
 
 hexen/monster/traductus				"sounds/ActorsInViewport/Hexen/Monsters/ClericBoss.ogg"
 hexen/monster/traductus2			"sounds/ActorsInViewport/Hexen/Monsters/ClericBosses.ogg"
-$volume hexen/monster/traductus     0.75
-$volume hexen/monster/traductus2     0.75
+$volume hexen/monster/traductus     0.85
+$volume hexen/monster/traductus2     0.85
 
 hexen/monster/menelkir				"sounds/ActorsInViewport/Hexen/Monsters/MageBoss.ogg"
 hexen/monster/menelkirs			"sounds/ActorsInViewport/Hexen/Monsters/MageBosses.ogg"
-$volume hexen/monster/menelkir     0.75
-$volume hexen/monster/menelkirs     0.75
+$volume hexen/monster/menelkir     0.85
+$volume hexen/monster/menelkirs     0.85
 
 hexen/monster/dragon				"sounds/ActorsInViewport/Hexen/Monsters/Dragon.ogg"
 hexen/monster/dragons				"sounds/ActorsInViewport/Hexen/Monsters/Dragons.ogg"
-$volume hexen/monster/dragon    0.75
-$volume hexen/monster/dragons    0.75
+$volume hexen/monster/dragon    0.85
+$volume hexen/monster/dragons    0.85
 
 hexen/monster/heresiarch			"sounds/ActorsInViewport/Hexen/Monsters/Heresiarch.ogg"
 hexen/monster/heresiarches		"sounds/ActorsInViewport/Hexen/Monsters/Heresiarches.ogg"
-$volume hexen/monster/heresiarch    0.75
-$volume hexen/monster/heresiarches    0.75
+$volume hexen/monster/heresiarch    0.85
+$volume hexen/monster/heresiarches    0.85
 
 hexen/monster/korax					"sounds/ActorsInViewport/Hexen/Monsters/Korax.ogg"
 hexen/monster/koraxes				"sounds/ActorsInViewport/Hexen/Monsters/Koraxes.ogg"
-$volume hexen/monster/korax    0.75
-$volume hexen/monster/koraxes    0.75
+$volume hexen/monster/korax    0.85
+$volume hexen/monster/koraxes    0.85
 
 //Hexen Animals
 
 hexen/animal/pig							"sounds/ActorsInViewport/Hexen/Monsters/Pig.ogg"
 hexen/animal/pigs						"sounds/ActorsInViewport/Hexen/Monsters/Pigs.ogg"
-$volume hexen/animal/pig    0.75
-$volume hexen/animal/pigs    0.75
+$volume hexen/animal/pig    0.85
+$volume hexen/animal/pigs    0.85
 
 hexen/animal/bat							"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Bat.ogg"
 hexen/animal/bats						"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Bats.ogg"
-$volume hexen/animal/bat    0.75
-$volume hexen/animal/bats    0.75
+$volume hexen/animal/bat    0.85
+$volume hexen/animal/bats    0.85
 
 hexen/animal/fly							"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Fly.ogg"
 hexen/animal/flies						"sounds/ActorsInViewport/Hexen/Monsters/Decorative/Flies.ogg"
-$volume hexen/animal/fly    0.75
-$volume hexen/animal/flies    0.75
+$volume hexen/animal/fly    0.85
+$volume hexen/animal/flies    0.85

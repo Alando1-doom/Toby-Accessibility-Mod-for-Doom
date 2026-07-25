@@ -1189,31 +1189,31 @@ menu/tobyopt/detailed							"sounds/Menus/TobyOptions/Detailed.ogg"
 $volume menu/tobyopt/detailed	      0.5
 
 menu/tobyopt/elevationtone				"sounds/Menus/TobyOptions/ToggleElevTone.ogg"
-$volume menu/tobyopt/elevationtone	      0.5
+$volume menu/tobyopt/elevationtone	      0.75
 
 menu/tobyopt/elevationdefault				"sounds/Menus/TobyOptions/ElevToneDefault.ogg"
-$volume menu/tobyopt/elevationdefault	      0.5
+$volume menu/tobyopt/elevationdefault	      0.75
 
 menu/tobyopt/togglechess						"sounds/Menus/TobyOptions/ToggleChessboard.ogg"
-$volume menu/tobyopt/togglechess	      0.5
+$volume menu/tobyopt/togglechess	      0.75
 menu/tobyopt/checkchess						"sounds/Menus/TobyOptions/CheckChessboard.ogg"
-$volume menu/tobyopt/checkchess	      0.5
+$volume menu/tobyopt/checkchess	      0.75
 menu/tobyopt/chessmain						"sounds/Menus/TobyOptions/ChessboardOptions.ogg"
-$volume menu/tobyopt/chessmain	      0.5
+$volume menu/tobyopt/chessmain	      0.75
 menu/tobyopt/chessdefault						"sounds/Menus/TobyOptions/ChessboardDefault.ogg"
-$volume menu/tobyopt/chessdefault	      0.5
+$volume menu/tobyopt/chessdefault	      0.75
 
 menu/tobyopt/weapmenu						"sounds/Menus/TobyOptions/WeaponsMenu.ogg"
-$volume menu/tobyopt/weapmenu	      0.5
+$volume menu/tobyopt/weapmenu	      0.75
 menu/tobyopt/openweapmenu				"sounds/Menus/TobyOptions/OpenWeaponsMenu.ogg"
-$volume menu/tobyopt/openweapmenu	      0.5
+$volume menu/tobyopt/openweapmenu	      0.75
 
 menu/tobyopt/itemsmenu						"sounds/Menus/TobyOptions/ItemsMenu.ogg"
-$volume menu/tobyopt/itemsmenu	      0.5
+$volume menu/tobyopt/itemsmenu	      0.75
 menu/tobyopt/openitemsmenu				"sounds/Menus/TobyOptions/OpenItemsMenu.ogg"
-$volume menu/tobyopt/openitemsmenu	      0.5
+$volume menu/tobyopt/openitemsmenu	      0.75
 
 menu/tobyopt/hurtfloor						"sounds/Menus/TobyOptions/ToggleHurtfloor.ogg"
-$volume menu/tobyopt/hurtfloor	      0.5
+$volume menu/tobyopt/hurtfloor	      0.75
 menu/tobyopt/hurtfloorenabled			"sounds/Menus/TobyOptions/HurtfloorEnabled.ogg"
-$volume menu/tobyopt/hurtfloorenabled	      0.5
+$volume menu/tobyopt/hurtfloorenabled	      0.75
