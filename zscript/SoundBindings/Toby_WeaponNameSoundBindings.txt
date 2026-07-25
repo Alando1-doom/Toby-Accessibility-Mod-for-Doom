@@ -20,6 +20,10 @@
 {"ActorClass":"PlasmaRifle", "SoundToPlay":"stats/doom/weapons/plasmagun"}
 {"ActorClass":"BFG9000", "SoundToPlay":"stats/doom/weapons/bfg"}
 
+//Legacy of Rust
+{"ActorClass":"Incinerator", "SoundToPlay":"toby/actorsinviewport/lor/pickups/incinerator"}
+{"ActorClass":"Heatwave", "SoundToPlay":"toby/actorsinviewport/lor/pickups/calamityblade"}
+
 
 //Heretic - Toby
 

@@ -75,6 +75,8 @@ menusnd/episode5        "sounds/Menus/EpisodeMenu/dsep5.ogg"
 menusnd/ep6sigil2        "sounds/Menus/EpisodeMenu/dsep6.ogg"
 menusnd/episode6        "sounds/Menus/EpisodeMenu/dsep6_dm.ogg"
 menusnd/episode7        "sounds/Menus/EpisodeMenu/dsep7_dm.ogg"
+menusnd/lorep1        		"sounds/Menus/EpisodeMenu/LegacyOfRust/E1_TheVulcanAbyss.ogg"
+menusnd/lorep2        		"sounds/Menus/EpisodeMenu/LegacyOfRust/E2_CounterfeitEden.ogg"
 
 //Episode Menu - Heretic
 heretic/menu/episode1		"sounds/Menus/EpisodeMenu/Heretic/HereticE1.ogg"

@@ -30,6 +30,11 @@ RocketLauncher_Giver
 Shotgun_Giver
 SSG_Giver
 
+Calamity_Giver
+Incinerator_Giver
+FuelTank_Toby
+FuelCan_Toby
+
 BlueArmor_Pickup
 GreenArmor_Pickup
 Medikit_Pickup

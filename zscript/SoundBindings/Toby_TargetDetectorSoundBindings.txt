@@ -34,6 +34,8 @@
 { "ClassName":"Pottery1", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
 { "ClassName":"Pottery2", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
 { "ClassName":"Pottery3", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"OfficeLamp", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
+{ "ClassName":"Deh_Actor_200", "SoundToPlay":"weapons/decolock", "Cooldown":"12" }
 
 //Shootable Switch
 

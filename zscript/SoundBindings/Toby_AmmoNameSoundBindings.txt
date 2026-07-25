@@ -4,6 +4,8 @@
 {"ActorClass":"RocketAmmo", "SoundToPlay":"stats/doom/ammo/rocket", "SoundToPlayPlural":"stats/doom/ammo/rockets"}
 {"ActorClass":"Cell", "SoundToPlay":"stats/doom/ammo/cell", "SoundToPlayPlural":"stats/doom/ammo/cells"}
 
+{"ActorClass":"FuelAmmoSmall", "SoundToPlay":"stats/doom/ammo/fuel", "SoundToPlayPlural":"stats/doom/ammo/fuel"}
+
 
 //Heretic
 
