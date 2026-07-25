@@ -272,6 +272,7 @@ $volume toby/actorsinviewport/decorations/tallredpillars    0.5
 //Gore
 toby/actorsinviewport/lor/decorations/corpsepile			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePile.ogg"
 toby/actorsinviewport/lor/decorations/corpsepiles			"sounds/ActorsInViewport/LegacyOfRust/Decorations/LargeCorpsePiles.ogg"
+
 $volume toby/actorsinviewport/lor/decorations/corpsepile    0.75
 $volume toby/actorsinviewport/lor/decorations/corpsepiles    0.75
 
@@ -320,6 +321,7 @@ toby/actorsinviewport/lor/decorations/brokenskulls			"sounds/ActorsInViewport/Le
 $volume toby/actorsinviewport/lor/decorations/brokenskull    0.75
 $volume toby/actorsinviewport/lor/decorations/brokenskulls    0.75
 
+//$volume toby/actorsinviewport/lor/decorations/corpsepile    0.85
 //$volume toby/actorsinviewport/lor/decorations/corpsepiles    0.85
 
 toby/actorsinviewport/lor/decorations/flamecorpse			"sounds/ActorsInViewport/LegacyOfRust/Decorations/FlameCorpse.ogg"
@@ -431,6 +433,7 @@ $volume toby/actorsinviewport/lor/decorations/smallstalactites    0.75
 
 //$volume toby/actorsinviewport/lor/decorations/graystalagmite    0.85
 //$volume toby/actorsinviewport/lor/decorations/graystalagmites    0.85
+
 toby/actorsinviewport/lor/decorations/smallbush			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBush.ogg"
 toby/actorsinviewport/lor/decorations/smallbushes			"sounds/ActorsInViewport/LegacyOfRust/Decorations/SmallBushes.ogg"
 //$volume toby/actorsinviewport/lor/decorations/smallbush    0.85
@@ -512,6 +515,7 @@ $volume toby/actorsinviewport/lor/decorations/shortabras    0.75
 //$volume toby/actorsinviewport/lor/decorations/chairs    0.85
 
 toby/actorsinviewport/lor/decorations/desklamp				"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamp.ogg"
+toby/actorsinviewport/lor/decorations/desklamps			"sounds/ActorsInViewport/LegacyOfRust/Decorations/OfficeLamps.ogg"
 //$volume toby/actorsinviewport/lor/decorations/desklamp    0.85
 //$volume toby/actorsinviewport/lor/decorations/desklamps    0.85
 
