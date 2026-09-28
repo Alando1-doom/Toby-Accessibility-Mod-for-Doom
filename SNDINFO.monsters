@@ -255,6 +255,21 @@ $volume heretic/monster/weredragon     0.85
 $volume heretic/monster/weredragons     0.85
 
 
+
+//Heretic: Faith Renewed Monsters
+
+heretic/monster/mummy					"sounds/ActorsInViewport/Heretic_FaithRenewed/Mummy.ogg"
+heretic/monster/mummies				"sounds/ActorsInViewport/Heretic_FaithRenewed/Mummies.ogg"
+$volume heretic/monster/mummy     0.85
+$volume heretic/monster/mummies     0.85
+
+heretic/monster/troll					"sounds/ActorsInViewport/Heretic_FaithRenewed/Troll.ogg"
+heretic/monster/trolls				"sounds/ActorsInViewport/Heretic_FaithRenewed/Trolls.ogg"
+$volume heretic/monster/troll     0.85
+$volume heretic/monster/trolls     0.85
+
+
+
 //Hexen Monsters
 
 hexen/monster/afrit						"sounds/ActorsInViewport/Hexen/Monsters/Afrit.ogg"

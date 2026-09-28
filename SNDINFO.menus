@@ -339,6 +339,7 @@ menu/compat/buggystrife             "sounds/Menus/CompatibilityOptions/MapAction
 $volume menu/compat/buggystrife     0.5
 menu/compat/ignorefloorz             "sounds/Menus/CompatibilityOptions/MapActionBehavior/IgnoreFloorZTele.ogg"
 menu/compat/disablembf21             "sounds/Menus/CompatibilityOptions/MapActionBehavior/DisableMBF21.ogg"
+menu/compat/boomfloor             "sounds/Menus/CompatibilityOptions/MapActionBehavior/BoomFloorSpec.ogg"
 
 
 //Physics Behavior Menu
@@ -365,6 +366,7 @@ menu/compat/verticalthrust          "sounds/Menus/CompatibilityOptions/PhysicsBe
 $volume menu/compat/verticalthrust  0.5
 menu/compat/doomexp                 "sounds/Menus/CompatibilityOptions/PhysicsBehavior/mdoomexp.ogg"
 $volume menu/compat/doomexp         0.5
+menu/compat/mikoportals                 "sounds/Menus/CompatibilityOptions/PhysicsBehavior/Mikoportals.ogg"
 
 
 //Rendering Behavior Menu
@@ -1077,6 +1079,23 @@ menu/extratics/all                  "sounds/Menus/NetworkOptions/oallackn.ogg"
 $volume menu/extratics/all          0.5
 menu/network/latency                "sounds/Menus/NetworkOptions/mlatebal.ogg"
 $volume menu/network/latency        0.5
+menu/network/chattype                "sounds/Menus/NetworkOptions/ChatType.ogg"
+menu/network/chatglobal                "sounds/Menus/NetworkOptions/Global.ogg"
+menu/network/chatdisabled                "sounds/Menus/NetworkOptions/Disabled.ogg"
+menu/network/chatteam                "sounds/Menus/NetworkOptions/TeamOnly.ogg"
+menu/network/boldtext                "sounds/Menus/NetworkOptions/DisableBoldText.ogg"
+menu/network/chatsound                "sounds/Menus/NetworkOptions/DisableChatSound.ogg"
+menu/network/stabconn                "sounds/Menus/NetworkOptions/StabilizeConn.ogg"
+menu/network/limitconv                "sounds/Menus/NetworkOptions/LimitConvHost.ogg"
+menu/network/cooldown                "sounds/Menus/NetworkOptions/CoolDownActions.ogg"
+menu/network/nopause                "sounds/Menus/NetworkOptions/DisablePause.ogg"
+menu/network/interskip                "sounds/Menus/NetworkOptions/InterSkipType.ogg"
+menu/network/intervote                "sounds/Menus/NetworkOptions/Vote.ogg"
+menu/network/interany                "sounds/Menus/NetworkOptions/Anyone.ogg"
+menu/network/interhost                "sounds/Menus/NetworkOptions/HostOnly.ogg"
+menu/network/voteskip                "sounds/Menus/NetworkOptions/VoteSkipPercent.ogg"
+menu/network/votecount                "sounds/Menus/NetworkOptions/VoteCountdown.ogg"
+menu/network/chatslow                "sounds/Menus/NetworkOptions/ChatSlowMode.ogg"
 
 
 //Player Setup Menu
