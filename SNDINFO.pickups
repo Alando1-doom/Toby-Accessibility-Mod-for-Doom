@@ -266,6 +266,13 @@ heretic/actorsinviewport/weapon/maces				"sounds/ActorsInViewport/Heretic/Pickup
 $volume heretic/actorsinviewport/weapon/mace     0.85
 $volume heretic/actorsinviewport/weapon/maces     0.85
 
+//Heretic: Faith Renewed
+
+heretic/actorsinviewport/weapon/tempestwand			"sounds/ActorsInViewport/Heretic_FaithRenewed/TempestWand.ogg"
+heretic/actorsinviewport/weapon/tempestwands		"sounds/ActorsInViewport/Heretic_FaithRenewed/TempestWands.ogg"
+$volume heretic/actorsinviewport/weapon/tempestwand	0.85
+$volume heretic/actorsinviewport/weapon/tempestwands	0.85
+
 //Heretic - Ammo
 
 heretic/actorsinviewport/ammo/wandcrystal			"sounds/ActorsInViewport/Heretic/Pickups/WandCrystal.ogg"
@@ -720,3 +727,80 @@ hexen/actorsinviewport/puzzle/yorickskull				"sounds/ActorsInViewport/Hexen/Pick
 hexen/actorsinviewport/puzzle/yorickskulls			"sounds/ActorsInViewport/Hexen/Pickups/Puzzle/YorickSkulls.ogg"
 $volume hexen/actorsinviewport/puzzle/yorickskull     0.85
 $volume hexen/actorsinviewport/puzzle/yorickskulls     0.85
+
+//Hexen Bonus Puzzle Items - Enhanced Edition + VOG
+
+hexen/actorsinviewport/puzzle/dragoncrest			"sounds/ActorsInViewport/Hexen/EnhancedEd/DragonCrest.ogg"
+hexen/actorsinviewport/puzzle/dragoncrests			"sounds/ActorsInViewport/Hexen/EnhancedEd/DragonCrests.ogg"
+$volume hexen/actorsinviewport/puzzle/dragoncrest     0.85
+$volume hexen/actorsinviewport/puzzle/dragoncrests     0.85
+
+hexen/actorsinviewport/puzzle/griffincrest			"sounds/ActorsInViewport/Hexen/EnhancedEd/GriffinCrest.ogg"
+hexen/actorsinviewport/puzzle/griffincrests			"sounds/ActorsInViewport/Hexen/EnhancedEd/GriffinCrests.ogg"
+$volume hexen/actorsinviewport/puzzle/griffincrest     0.85
+$volume hexen/actorsinviewport/puzzle/griffincrests     0.85
+
+hexen/actorsinviewport/puzzle/wolfcrest			"sounds/ActorsInViewport/Hexen/EnhancedEd/WolfCrest.ogg"
+hexen/actorsinviewport/puzzle/wolfcrests			"sounds/ActorsInViewport/Hexen/EnhancedEd/WolfCrests.ogg"
+$volume hexen/actorsinviewport/puzzle/wolfcrest     0.85
+$volume hexen/actorsinviewport/puzzle/wolfcrests     0.85
+
+hexen/actorsinviewport/puzzle/luridatlas			"sounds/ActorsInViewport/Hexen/EnhancedEd/LuridAtlas.ogg"
+hexen/actorsinviewport/puzzle/luridatlases			"sounds/ActorsInViewport/Hexen/EnhancedEd/LuridAtlases.ogg"
+$volume hexen/actorsinviewport/puzzle/luridatlas     0.85
+$volume hexen/actorsinviewport/puzzle/luridatlases     0.85
+
+hexen/actorsinviewport/puzzle/malumvulgata			"sounds/ActorsInViewport/Hexen/EnhancedEd/MalumVulgata.ogg"
+hexen/actorsinviewport/puzzle/malumvulgatas			"sounds/ActorsInViewport/Hexen/EnhancedEd/MalumVulgatas.ogg"
+$volume hexen/actorsinviewport/puzzle/malumvulgata     0.85
+$volume hexen/actorsinviewport/puzzle/malumvulgatas     0.85
+
+hexen/actorsinviewport/puzzle/coiledchalice			"sounds/ActorsInViewport/Hexen_VOG/CoiledChalice.ogg"
+hexen/actorsinviewport/puzzle/coiledchalices			"sounds/ActorsInViewport/Hexen_VOG/Chalices.ogg"
+$volume hexen/actorsinviewport/puzzle/coiledchalice     0.85
+$volume hexen/actorsinviewport/puzzle/coiledchalices     0.85
+
+hexen/actorsinviewport/puzzle/gildedchalice			"sounds/ActorsInViewport/Hexen_VOG/GildedChalice.ogg"
+hexen/actorsinviewport/puzzle/gildedchalices			"sounds/ActorsInViewport/Hexen_VOG/Chalices.ogg"
+$volume hexen/actorsinviewport/puzzle/gildedchalice     0.85
+$volume hexen/actorsinviewport/puzzle/gildedchalices     0.85
+
+hexen/actorsinviewport/puzzle/earthenchalice			"sounds/ActorsInViewport/Hexen_VOG/EarthenChalice.ogg"
+hexen/actorsinviewport/puzzle/earthenchalices			"sounds/ActorsInViewport/Hexen_VOG/Chalices.ogg"
+$volume hexen/actorsinviewport/puzzle/earthenchalice     0.85
+$volume hexen/actorsinviewport/puzzle/earthenchalices     0.85
+
+hexen/actorsinviewport/puzzle/moltenchalice			"sounds/ActorsInViewport/Hexen_VOG/MoltenChalice.ogg"
+hexen/actorsinviewport/puzzle/moltenchalices			"sounds/ActorsInViewport/Hexen_VOG/Chalices.ogg"
+$volume hexen/actorsinviewport/puzzle/moltenchalice     0.85
+$volume hexen/actorsinviewport/puzzle/moltenchalices     0.85
+
+hexen/actorsinviewport/puzzle/rimedchalice			"sounds/ActorsInViewport/Hexen_VOG/RimedChalice.ogg"
+hexen/actorsinviewport/puzzle/rimedchalices			"sounds/ActorsInViewport/Hexen_VOG/Chalices.ogg"
+$volume hexen/actorsinviewport/puzzle/rimedchalice     0.85
+$volume hexen/actorsinviewport/puzzle/rimedchalices     0.85
+
+hexen/actorsinviewport/puzzle/skullidol			"sounds/ActorsInViewport/Hexen_VOG/SkullIdol.ogg"
+hexen/actorsinviewport/puzzle/skullidols			"sounds/ActorsInViewport/Hexen_VOG/Idols.ogg"
+$volume hexen/actorsinviewport/puzzle/skullidol     0.85
+$volume hexen/actorsinviewport/puzzle/skullidols     0.85
+
+hexen/actorsinviewport/puzzle/demonidol			"sounds/ActorsInViewport/Hexen_VOG/DemonIdol.ogg"
+hexen/actorsinviewport/puzzle/demonidols			"sounds/ActorsInViewport/Hexen_VOG/Idols.ogg"
+$volume hexen/actorsinviewport/puzzle/demonidol     0.85
+$volume hexen/actorsinviewport/puzzle/demonidols     0.85
+
+hexen/actorsinviewport/puzzle/dragonidol			"sounds/ActorsInViewport/Hexen_VOG/DragonIdol.ogg"
+hexen/actorsinviewport/puzzle/dragonidols			"sounds/ActorsInViewport/Hexen_VOG/Idols.ogg"
+$volume hexen/actorsinviewport/puzzle/dragonidol     0.85
+$volume hexen/actorsinviewport/puzzle/dragonidols     0.85
+
+hexen/actorsinviewport/puzzle/deathmask			"sounds/ActorsInViewport/Hexen_VOG/DeathMask.ogg"
+hexen/actorsinviewport/puzzle/deathmasks			"sounds/ActorsInViewport/Hexen_VOG/Masks.ogg"
+$volume hexen/actorsinviewport/puzzle/deathmask     0.85
+$volume hexen/actorsinviewport/puzzle/deathmasks     0.85
+
+hexen/actorsinviewport/puzzle/fetidmask			"sounds/ActorsInViewport/Hexen_VOG/FetidMask.ogg"
+hexen/actorsinviewport/puzzle/fetidmasks			"sounds/ActorsInViewport/Hexen_VOG/Masks.ogg"
+$volume hexen/actorsinviewport/puzzle/fetidmask     0.85
+$volume hexen/actorsinviewport/puzzle/fetidmasks     0.85
