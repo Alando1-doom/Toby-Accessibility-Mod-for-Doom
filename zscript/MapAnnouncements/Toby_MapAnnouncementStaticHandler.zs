@@ -3,9 +3,9 @@ class Toby_MapAnnouncementStaticHandler : StaticEventHandler
     ui Toby_MapAnnouncementManager manager;
     ui Toby_SoundBindingsLoaderStaticHandler bindings;
     ui bool isNotFirstRun;
+    ui bool worldLoadedEvent;
 
     bool isSaveGame;
-    bool worldLoadedEvent;
     string checksum;
 
     override void OnRegister()
@@ -25,6 +25,7 @@ class Toby_MapAnnouncementStaticHandler : StaticEventHandler
         if (worldLoadedEvent)
         {
             manager.SetTargetTickCount(checksum, isSaveGame);
+            worldLoadedEvent = false;
         }
     }
 
@@ -36,14 +37,14 @@ class Toby_MapAnnouncementStaticHandler : StaticEventHandler
         }
         isSaveGame = e.IsSaveGame;
         checksum = level.GetChecksum();
-        worldLoadedEvent = true;
+        EventHandler.SendInterfaceEvent(consoleplayer, "Toby_MapAnnouncementWorldLoadedInterface");
     }
 
-    override void WorldTick()
+    override void InterfaceProcess(ConsoleEvent e)
     {
-        if (worldLoadedEvent)
+        if (e.Name == "Toby_MapAnnouncementWorldLoadedInterface")
         {
-            worldLoadedEvent = false;
+            worldLoadedEvent = true;
         }
     }
 
