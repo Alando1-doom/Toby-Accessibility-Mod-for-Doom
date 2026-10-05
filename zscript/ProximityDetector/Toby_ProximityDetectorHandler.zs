@@ -1,3 +1,6 @@
+// Apparently UZD supports up to 64 players now. Wow. We support only 8 for now -PR
+// TODO: maybe not spawn 64 of everything if only one player is on the map
+
 class Toby_ProximityDetectorHandler: EventHandler
 {
     Array<Toby_HurtfloorDetector> hurtfloorDetectors;
@@ -23,14 +26,13 @@ class Toby_ProximityDetectorHandler: EventHandler
         Toby_ProximityDetector beaconBack = Toby_ProximityDetector(Actor.Spawn("Toby_ProximityDetector", playerActor.pos));
         beaconBack.SetReferenceActor(playerActor, 180, traceDistance, attenuation, enabled);
 
-        if (hurtfloorDetectors.Size() < maxPlayers) { return; }
+        if (hurtfloorDetectors.Size() < MAXPLAYERS) { return; }
         hurtfloorDetectors[e.PlayerNumber].Init(e.PlayerNumber, hurtfloorDetectorEnabled);
     }
 
     override void WorldLoaded(WorldEvent e)
     {
-        int maxPlayers = 8;
-        for (int i = 0; i < maxPlayers; i++)
+        for (int i = 0; i < MAXPLAYERS; i++)
         {
             hurtfloorDetectors.push(new("Toby_HurtfloorDetector"));
             PlayerInfo player = players[i];
@@ -46,8 +48,8 @@ class Toby_ProximityDetectorHandler: EventHandler
 
     override void WorldTick()
     {
-        if (hurtfloorDetectors.Size() < maxPlayers) { return; }
-        for (int i = 0; i < maxPlayers; i++)
+        if (hurtfloorDetectors.Size() < MAXPLAYERS) { return; }
+        for (int i = 0; i < MAXPLAYERS; i++)
         {
             hurtfloorDetectors[i].Update();
         }

@@ -1,6 +1,5 @@
 // Sorry, this is so incredibly messy, I've just been so tired lately - PR
 // TODO:
-//     Loop over directions instead of copying and pasting code 4 times
 //     Update method is doing too much, needs to be broken into sub-methods
 
 class Toby_HurtfloorDetector
@@ -66,11 +65,7 @@ class Toby_HurtfloorDetector
         for (int i = 0; i < s.lines.Size(); i++)
         {
             Line l = s.lines[i];
-            bool isTwoSided = (l.flags & Line.ML_TWOSIDED) == Line.ML_TWOSIDED;
-            bool isBlocking = (l.flags & Line.ML_BLOCKING) == Line.ML_BLOCKING;
-
-            if (!isTwoSided) { continue; }
-            if (isBlocking) { continue; }
+            if (Toby_LineSegmentIntersectionUtil.IsBlocking(l)) { continue; }
 
             Sector otherSector = Toby_SectorMathUtil.GetOtherSector(s, l);
             sectorsToCheck.Add(otherSector.Index());
@@ -88,194 +83,138 @@ class Toby_HurtfloorDetector
             }
         }
 
-        Vector2 frontRight = referenceActor.AngleToVector(referenceActor.angle + 45);
-        Vector2 backRight = referenceActor.AngleToVector(referenceActor.angle + 135);
-        Vector2 frontLeft = referenceActor.AngleToVector(referenceActor.angle - 45);
-        Vector2 backLeft = referenceActor.AngleToVector(referenceActor.angle - 135);
+        double rayOffsetFrontRight = 45;
+        double rayOffsetBackRight = 135;
+        double rayOffsetFrontLeft = -45;
+        double rayOffsetBackLeft = -135;
+
+        uint frontRightIndex = 0;
+        uint backRightIndex = 1;
+        uint frontLeftIndex = 2;
+        uint backLeftIndex = 3;
+
+        double rayOffsets[4];
+        rayOffsets[frontRightIndex] = rayOffsetFrontRight;
+        rayOffsets[backRightIndex] = rayOffsetBackRight;
+        rayOffsets[frontLeftIndex] = rayOffsetFrontLeft;
+        rayOffsets[backLeftIndex] = rayOffsetBackLeft;
+
+        Vector2 rays[4];
+        for (int i = 0; i < rays.Size(); i++)
+        {
+            rays[i] = referenceActor.AngleToVector(
+                referenceActor.angle + rayOffsets[i]
+            );
+        }
 
         Array<Toby_VectorPair> lineSegments;
         for (int i = 0; i < linesToCheck.Size(); i++)
         {
-            int lineIndex = linesToCheck.values[i];
+            Line l = level.lines[linesToCheck.values[i]];
+            if (Toby_LineSegmentIntersectionUtil.IsBlocking(l)) { continue; }
 
-            Line l = level.lines[lineIndex];
-
-            bool isTwoSided = (l.flags & Line.ML_TWOSIDED) == Line.ML_TWOSIDED;
-            bool isBlocking = (l.flags & Line.ML_BLOCKING) == Line.ML_BLOCKING;
-
-            if (!isTwoSided) { continue; }
-            if (isBlocking) { continue; }
-
-            Sector frontSector = l.frontSector;
-            Sector backSector = l.backSector;
-            if (!IsHurtFloorSector(frontSector) && !IsHurtFloorSector(backSector)) { continue; }
-
-            bool isIntersecting1;
-            Vector2 intersection1;
-
-            bool isIntersecting2;
-            Vector2 intersection2;
-
-            bool isIntersecting3;
-            Vector2 intersection3;
-
-            bool isIntersecting4;
-            Vector2 intersection4;
-
-            [isIntersecting1, intersection1] = Toby_LineSegmentIntersectionUtil.RayIntersectsSegment(referenceActor.pos.xy, frontRight, l.v1.p, l.v2.p);
-            [isIntersecting2, intersection2] = Toby_LineSegmentIntersectionUtil.RayIntersectsSegment(referenceActor.pos.xy, backRight, l.v1.p, l.v2.p);
-            [isIntersecting3, intersection3] = Toby_LineSegmentIntersectionUtil.RayIntersectsSegment(referenceActor.pos.xy, frontLeft, l.v1.p, l.v2.p);
-            [isIntersecting4, intersection4] = Toby_LineSegmentIntersectionUtil.RayIntersectsSegment(referenceActor.pos.xy, backLeft, l.v1.p, l.v2.p);
-
-            if (!(isIntersecting1 || isIntersecting2 || isIntersecting3 || isIntersecting4))
+            if (!IsHurtFloorSector(l.frontSector) &&
+                !IsHurtFloorSector(l.backSector))
             {
-                lineSegments.push(Toby_VectorPair.Create(l.v1.p, l.v2.p));
+                continue;
             }
-            else
+
+            bool wasSplit = false;
+
+            for (int rayIndex = 0; rayIndex < rays.Size(); rayIndex++)
             {
-                if (isIntersecting1)
-                {
-                    lineSegments.push(Toby_VectorPair.Create(l.v1.p, intersection1));
-                    lineSegments.push(Toby_VectorPair.Create(intersection1, l.v2.p));
-                    continue;
-                }
-                if (isIntersecting2)
-                {
-                    lineSegments.push(Toby_VectorPair.Create(l.v1.p, intersection2));
-                    lineSegments.push(Toby_VectorPair.Create(intersection2, l.v2.p));
-                    continue;
-                }
-                if (isIntersecting3)
-                {
-                    lineSegments.push(Toby_VectorPair.Create(l.v1.p, intersection3));
-                    lineSegments.push(Toby_VectorPair.Create(intersection3, l.v2.p));
-                    continue;
-                }
-                if (isIntersecting4)
-                {
-                    lineSegments.push(Toby_VectorPair.Create(l.v1.p, intersection4));
-                    lineSegments.push(Toby_VectorPair.Create(intersection4, l.v2.p));
-                    continue;
-                }
+                bool intersects;
+                Vector2 intersection;
+
+                [intersects, intersection] =
+                    Toby_LineSegmentIntersectionUtil.RayIntersectsSegment(
+                        referenceActor.pos.xy,
+                        rays[rayIndex],
+                        l.v1.p,
+                        l.v2.p
+                    );
+
+                if (!intersects) { continue; }
+
+                lineSegments.Push(Toby_VectorPair.Create(l.v1.p, intersection));
+                lineSegments.Push(Toby_VectorPair.Create(intersection, l.v2.p));
+
+                wasSplit = true;
+                break;
+            }
+
+            if (!wasSplit)
+            {
+                lineSegments.Push(Toby_VectorPair.Create(l.v1.p, l.v2.p));
             }
         }
 
-        double frontMinDistance = Double.Max;
-        Vector2 frontPoint = (0, 0);
-        double backMinDistance = Double.Max;
-        Vector2 backPoint = (0, 0);
-        double leftMinDistance = Double.Max;
-        Vector2 leftPoint = (0, 0);
-        double rightMinDistance = Double.Max;
-        Vector2 rightPoint = (0, 0);
+        // This makes it so that 0 is front, 1 is back, 2 is left and 3 is right.
+        uint directionsSize = 4;
+        // By the way. Do you know why this directionsSize is not a const?
+        // Because I still can't figure out how consts work in ZScript
+        // If I knew I would've probably used it in those static array sizes as well! -PR
+        int firstRay[4]  = { frontRightIndex, backRightIndex, frontLeftIndex, frontRightIndex };
+        int secondRay[4] = { frontLeftIndex, backLeftIndex, backLeftIndex, backRightIndex };
+
+        double minDistances[4];
+        Vector2 nearestPoints[4];
+
+        for (int direction = 0; direction < directionsSize; direction++)
+        {
+            minDistances[direction] = Double.Max;
+            nearestPoints[direction] = (0, 0);
+        }
 
         double cos45 = Cos(45);
 
         for (int i = 0; i < lineSegments.Size(); i++)
         {
-            Vector2 closestPoint = Toby_LineSegmentIntersectionUtil.ClosestPointOnSegment(referenceActor.pos.xy, lineSegments[i].v1, lineSegments[i].v2);
-            Vector2 actorPosToClosestPoint = closestPoint - referenceActor.pos.xy;
-            Vector2 actorPosToClosestPointUnit = actorPosToClosestPoint.Unit();
-            double actorPosToClosestPointLength = actorPosToClosestPoint.Length();
+            Vector2 closestPoint = Toby_LineSegmentIntersectionUtil.ClosestPointOnSegment(
+                referenceActor.pos.xy,
+                lineSegments[i].v1,
+                lineSegments[i].v2
+            );
 
-            double frontRightDot = frontRight dot actorPosToClosestPointUnit;
-            double frontLeftDot  = frontLeft dot actorPosToClosestPointUnit;
-            if (frontRightDot > cos45 || frontLeftDot > cos45)
-            {
-                if (actorPosToClosestPointLength < frontMinDistance)
-                {
-                    frontMinDistance = actorPosToClosestPointLength;
-                    frontPoint = closestPoint;
-                }
-            }
+            Vector2 offset = closestPoint - referenceActor.pos.xy;
+            Vector2 unitOffset = offset.Unit();
+            double distance = offset.Length();
 
-            double backRightDot = backRight dot actorPosToClosestPointUnit;
-            double backLeftDot  = backLeft dot actorPosToClosestPointUnit;
-            if (backRightDot > cos45 || backLeftDot > cos45)
+            for (int direction = 0; direction < directionsSize; direction++)
             {
-                if (actorPosToClosestPointLength < backMinDistance)
-                {
-                    backMinDistance = actorPosToClosestPointLength;
-                    backPoint = closestPoint;
-                }
-            }
+                double firstDot = rays[firstRay[direction]] dot unitOffset;
+                double secondDot = rays[secondRay[direction]] dot unitOffset;
 
-            double leftFrontDot = frontLeft dot actorPosToClosestPointUnit;
-            double leftBackDot  = backLeft dot actorPosToClosestPointUnit;
-            if (leftFrontDot > cos45 || leftBackDot > cos45)
-            {
-                if (actorPosToClosestPointLength < leftMinDistance)
+                if ((firstDot > cos45 || secondDot > cos45) &&
+                    distance < minDistances[direction])
                 {
-                    leftMinDistance = actorPosToClosestPointLength;
-                    leftPoint = closestPoint;
-                }
-            }
-
-            double rightFrontDot = frontRight dot actorPosToClosestPointUnit;
-            double rightBackDot  = backRight dot actorPosToClosestPointUnit;
-            if (rightFrontDot > cos45 || rightBackDot > cos45)
-            {
-                if (actorPosToClosestPointLength < rightMinDistance)
-                {
-                    rightMinDistance = actorPosToClosestPointLength;
-                    rightPoint = closestPoint;
+                    minDistances[direction] = distance;
+                    nearestPoints[direction] = closestPoint;
                 }
             }
         }
-        if (frontPoint.Length() > 0)
-        {
-            soundEmitters[0].SetOrigin((frontPoint, referenceActor.pos.z), false);
-            if (!soundEmitters[0].InStateSequence(soundEmitters[0].CurState, soundEmitters[0].ResolveState("Hurtfloor")))
-            {
-                soundEmitters[0].SetStateLabel("Hurtfloor");
-            }
-        }
-        else
-        {
-            soundEmitters[0].SetOrigin((0, 0, 0), false);
-            soundEmitters[0].SetStateLabel("Spawn");
-        }
 
-        if (backPoint.Length() > 0)
+        for (int direction = 0; direction < directionsSize; direction++)
         {
-            soundEmitters[1].SetOrigin((backPoint, referenceActor.pos.z), false);
-            if (!soundEmitters[1].InStateSequence(soundEmitters[1].CurState, soundEmitters[1].ResolveState("Hurtfloor")))
-            {
-                soundEmitters[1].SetStateLabel("Hurtfloor");
-            }
-        }
-        else
-        {
-            soundEmitters[1].SetOrigin((0, 0, 0), false);
-            soundEmitters[1].SetStateLabel("Spawn");
-        }
+            Actor emitter = soundEmitters[direction];
+            Vector2 point = nearestPoints[direction];
 
-        if (leftPoint.Length() > 0)
-        {
-            soundEmitters[2].SetOrigin((leftPoint, referenceActor.pos.z), false);
-            if (!soundEmitters[2].InStateSequence(soundEmitters[2].CurState, soundEmitters[2].ResolveState("Hurtfloor")))
+            if (point.Length() > 0)
             {
-                soundEmitters[2].SetStateLabel("Hurtfloor");
-            }
-        }
-        else
-        {
-            soundEmitters[2].SetOrigin((0, 0, 0), false);
-            soundEmitters[2].SetStateLabel("Spawn");
-        }
+                emitter.SetOrigin((point, referenceActor.pos.z), false);
 
-        if (rightPoint.Length() > 0)
-        {
-            soundEmitters[3].SetOrigin((rightPoint, referenceActor.pos.z), false);
-            if (!soundEmitters[3].InStateSequence(soundEmitters[3].CurState, soundEmitters[3].ResolveState("Hurtfloor")))
-            {
-                soundEmitters[3].SetStateLabel("Hurtfloor");
+                if (!emitter.InStateSequence(
+                    emitter.CurState,
+                    emitter.ResolveState("Hurtfloor")))
+                {
+                    emitter.SetStateLabel("Hurtfloor");
+                }
             }
-        }
-        else
-        {
-            soundEmitters[3].SetOrigin((0, 0, 0), false);
-            soundEmitters[3].SetStateLabel("Spawn");
+            else
+            {
+                emitter.SetOrigin((0, 0, 0), false);
+                emitter.SetStateLabel("Spawn");
+            }
         }
     }
 
