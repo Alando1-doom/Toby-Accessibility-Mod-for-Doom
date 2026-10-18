@@ -214,6 +214,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Customize Controls", "SoundToPlay":"menu/option/controls"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"$TOBY_MOD_OPTIONS", "SoundToPlay":"menu/tobyopt/main"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Mouse Options", "SoundToPlay":"menu/option/mouse"}
+{"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"$OPTMNU_JOYSTICK", "SoundToPlay":"menu/option/controller"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Player Setup", "SoundToPlay":"menu/option/player"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Gameplay Options", "SoundToPlay":"menu/option/gameplay"}
 {"EventType":"OptionChanged", "CurrentMenuName":"SimpleOptionsMenu", "CurrentMenuItemOptionName":"Compatibility Options", "SoundToPlay":"menu/option/compat"}
@@ -650,6 +651,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_RAILINGHACK", "SoundToPlay":"menu/compat/buggystrife"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_FDTELEPORT", "SoundToPlay":"menu/compat/ignorefloorz"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_NOMBF21", "SoundToPlay":"menu/compat/disablembf21"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatMapMenu", "CurrentMenuItemOptionName":"$CMPTMNU_TRANSFERSECRET", "SoundToPlay":"menu/compat/boomfloor"}
 //comapt-physics
 {"EventType":"MenuChanged",   "CurrentMenuName":"CompatPhysicsMenu", "SoundToPlay":"menu/compat/title/physics"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_PHYSICSBEHAVIOR", "SoundToPlay":"menu/compat/title/physics"}
@@ -663,6 +665,7 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_MISSILECLIP", "SoundToPlay":"menu/compat/missileclip"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_EXPLODE1", "SoundToPlay":"menu/compat/verticalthrust"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_EXPLODE2", "SoundToPlay":"menu/compat/doomexp"}
+{"EventType":"OptionChanged", "CurrentMenuName":"CompatPhysicsMenu", "CurrentMenuItemOptionName":"$CMPTMNU_EMULATEMIKOPORTALS", "SoundToPlay":"menu/compat/mikoportals"}
 //compat-render
 {"EventType":"MenuChanged",   "CurrentMenuName":"CompatRenderMenu", "SoundToPlay":"menu/compat/title/render"}
 {"EventType":"OptionChanged", "CurrentMenuName":"CompatibilityOptions", "CurrentMenuItemOptionName":"$CMPTMNU_RENDERINGBEHAVIOR", "SoundToPlay":"menu/compat/title/render"}
@@ -690,9 +693,26 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_PREDICTIONLERPSCALE", "SoundToPlay":"menu/network/lerpscale"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_LERPTHRESHOLD", "SoundToPlay":"menu/network/lerpthreshold"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_EXTRATICS", "SoundToPlay":"menu/network/extratics"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_CHATTYPE", "SoundToPlay":"menu/network/chattype"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_NOBOLDCHAT", "SoundToPlay":"menu/network/boldtext"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_NOCHATSND", "SoundToPlay":"menu/network/chatsound"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_BALANCETICS", "SoundToPlay":"menu/network/stabconn"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_LIMITCONVO", "SoundToPlay":"menu/network/limitconv"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_REPEATCOOLDOWN", "SoundToPlay":"menu/network/cooldown"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_DISABLEPAUSE", "SoundToPlay":"menu/network/nopause"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_READYTYPE", "SoundToPlay":"menu/network/interskip"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_READYPERCENT", "SoundToPlay":"menu/network/voteskip"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_READYCOUNTDOWN", "SoundToPlay":"menu/network/votecount"}
+{"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_CHATSLOMO", "SoundToPlay":"menu/network/chatslow"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NONE", "SoundToPlay":"menu/extratics/none"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"1", "SoundToPlay":"menu/extratics/one"}
 {"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ALLUNACKNOWLEDGED", "SoundToPlay":"menu/extratics/all"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DISABLECHAT", "SoundToPlay":"menu/network/chatdisabled"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_GLOBALCHAT", "SoundToPlay":"menu/network/chatglobal"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_TEAMONLYCHAT", "SoundToPlay":"menu/network/chatteam"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_VOTE", "SoundToPlay":"menu/network/intervote"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_ANYONE", "SoundToPlay":"menu/network/interany"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_HOSTONLY", "SoundToPlay":"menu/network/interhost"}
 {"EventType":"OptionChanged", "CurrentMenuName":"NetworkOptions", "CurrentMenuItemOptionName":"$NETMNU_TICBALANCE", "SoundToPlay":"menu/network/latency"}
 
 
@@ -1184,13 +1204,36 @@
 {"EventType":"OptionChanged", "CurrentMenuName":"BotSpawnerMenu", "CurrentMenuItemOptionName":"Remove All Bots", "SoundToPlay":"botmenu/removebots"}
 
 
-
-//MENUS TO HOLD OFF (for now)
-
-//Joystick Menu - VOID - Will consider in later installments
+//Joystick Menu
 {"EventType":"MenuChanged",   "CurrentMenuName":"JoystickOptions", "SoundToPlay":"menu/option/controller"}
 {"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$OPTMNU_JOYSTICK", "SoundToPlay":"menu/option/controller"}
-{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"Controller Options", "SoundToPlay":"menu/option/controller"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_OPTIONS", "SoundToPlay":"menu/option/controller"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_ENABLE", "SoundToPlay":"menu/controller/enable"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_NOMENU", "SoundToPlay":"menu/controller/blockmenu"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_DINPUT", "SoundToPlay":"menu/controller/directinput"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_XINPUT", "SoundToPlay":"menu/controller/xinput"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_PS2", "SoundToPlay":"menu/controller/ps2"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_HAPTICS", "SoundToPlay":"menu/controller/hapticfeedback"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_TURNSPEED", "SoundToPlay":"menu/controller/turnspeed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_LOOKSPEED", "SoundToPlay":"menu/controller/lookspeed"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_ANALOGRUN", "SoundToPlay":"menu/controller/analogrun"}
+{"EventType":"OptionChanged", "CurrentMenuName":"JoystickOptions", "CurrentMenuItemOptionName":"$JOYMNU_ANALOGSTRAFERUN", "SoundToPlay":"menu/controller/analogstrafe"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_CUSTOM", "SoundToPlay":"menu/controller/axis/custom"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_DEFAULT", "SoundToPlay":"menu/controller/axis/default"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_LINEAR", "SoundToPlay":"menu/controller/axis/linear"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_QUADRATIC", "SoundToPlay":"menu/controller/axis/quadratic"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_CUBIC", "SoundToPlay":"menu/controller/axis/cubic"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NONE", "SoundToPlay":"menu/controller/axis/none"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_TURNING", "SoundToPlay":"menu/controller/axis/turning"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_LOOKINGUPDOWN", "SoundToPlay":"menu/controller/axis/lookupdown"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MOVINGFORWARD", "SoundToPlay":"menu/controller/axis/movefwdback"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_STRAFING", "SoundToPlay":"menu/controller/axis/strafing"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_MOVINGUPDOWN", "SoundToPlay":"menu/controller/axis/moveupdown"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_NOTINVERTED", "SoundToPlay":"menu/controller/notinverted"}
+{"EventType":"OptionValueChanged", "CurrentMenuItemOptionValue":"$OPTVAL_INVERTED", "SoundToPlay":"menu/controller/inverted"}
+
+
+//MENUS TO HOLD OFF (for now)
 
 //Auto-Map Menu - VOID
 {"EventType":"MenuChanged",   "CurrentMenuName":"AutomapOptions", "SoundToPlay":"menu/option/automap"}

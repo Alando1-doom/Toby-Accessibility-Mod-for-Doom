@@ -411,6 +411,31 @@ menu/controller/xinput              "sounds/Menus/ControllerOptions/mxinput.ogg"
 $volume menu/controller/xinput      0.5
 menu/controller/ps2                 "sounds/Menus/ControllerOptions/mps2adpt.ogg"
 $volume menu/controller/ps2         0.5
+menu/controller/analogrun				"sounds/Menus/ControllerOptions/AnalogRun.ogg"
+menu/controller/analogstrafe			"sounds/Menus/ControllerOptions/AnalogStrafe.ogg"
+menu/controller/axisconfig				"sounds/Menus/ControllerOptions/AxisConfig.ogg"
+//menu/controller/noconfigaxes			"sounds/Menus/ControllerOptions/NoAxisConfig.ogg"
+menu/controller/axis/custom			"sounds/Menus/ControllerOptions/Axis_Custom.ogg"
+menu/controller/axis/default			"sounds/Menus/ControllerOptions/Axis_Default.ogg"
+menu/controller/axis/linear				"sounds/Menus/ControllerOptions/Axis_Linear.ogg"
+menu/controller/axis/quadratic		"sounds/Menus/ControllerOptions/Axis_Quadratic.ogg"
+menu/controller/axis/cubic				"sounds/Menus/ControllerOptions/Axis_Cubic.ogg"
+menu/controller/axis/none				"sounds/Menus/ControllerOptions/Axis_None.ogg"
+menu/controller/axis/turning			"sounds/Menus/ControllerOptions/Axis_Turning.ogg"
+menu/controller/axis/lookupdown	"sounds/Menus/ControllerOptions/Axis_LookUpDown.ogg"
+menu/controller/axis/movefwdback	"sounds/Menus/ControllerOptions/Axis_FwdBack.ogg"
+menu/controller/axis/strafing			"sounds/Menus/ControllerOptions/Axis_Strafing.ogg"
+menu/controller/axis/moveupdown	"sounds/Menus/ControllerOptions/Axis_MoveUpDown.ogg"
+menu/controller/configcontrol			"sounds/Menus/ControllerOptions/ConfigControllers.ogg"
+//menu/controller/controlnotice			"sounds/Menus/ControllerOptions/ControllerNotice.ogg"
+//menu/controller/noctrldetected		"sounds/Menus/ControllerOptions/NoControllerDetected.ogg"
+menu/controller/hapticfeedback		"sounds/Menus/ControllerOptions/HapticFeedback.ogg"
+menu/controller/invert						"sounds/Menus/ControllerOptions/InvertControls.ogg"
+menu/controller/notinverted			"sounds/Menus/ControllerOptions/NotInverted.ogg"
+menu/controller/inverted					"sounds/Menus/ControllerOptions/Inverted.ogg"
+menu/controller/lookspeed				"sounds/Menus/ControllerOptions/LookSpeed.ogg"
+menu/controller/turnspeed				"sounds/Menus/ControllerOptions/TurnSpeed.ogg"
+
 
 
 //Controls Menu
