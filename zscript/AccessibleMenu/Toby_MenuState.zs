@@ -201,6 +201,7 @@ class Toby_MenuState
         mItemOptionValue = "null";
         mItemOptionValueLocalized = "null";
 
+        selectedMenuItemNumber = -1;
         menuItemsCount = -1;
 
         menuItemKeybindDescription = "null";
@@ -316,10 +317,11 @@ class Toby_MenuState
             ListMenuDescriptor mListDesc = mList.mDesc;
             menuItemsCount = mListDesc.mItems.Size();
             menuName = mListDesc.mMenuName;
-            if (mListDesc.mSelectedItem != -1)
+            int selected = mListDesc.mSelectedItem;
+            if (selected >= 0 && selected < menuItemsCount)
             {
                 selectedMenuItemNumber = mListDesc.mSelectedItem;
-                mItemList = mListDesc.mItems[mListDesc.mSelectedItem];
+                mItemList = mListDesc.mItems[selected];
                 mItemListSelectable = ListMenuItemSelectable(mItemList);
                 mItemListText = ListMenuItemTextItem(mItemList);
                 mItemListPatch = ListMenuItemPatchItem(mItemList);
@@ -330,10 +332,11 @@ class Toby_MenuState
             OptionMenuDescriptor mOptionDesc = mOption.mDesc;
             menuItemsCount = mOptionDesc.mItems.Size();
             menuName = mOptionDesc.mMenuName;
-            if (mOptionDesc.mSelectedItem != -1)
+            int selected = mOptionDesc.mSelectedItem;
+            if (selected >= 0 && selected < menuItemsCount)
             {
                 selectedMenuItemNumber = mOptionDesc.mSelectedItem;
-                mItemOption = mOptionDesc.mItems[mOptionDesc.mSelectedItem];
+                mItemOption = mOptionDesc.mItems[selected];
                 mItemOptionBase = OptionMenuItemOptionBase(mItemOption);
                 mItemOptionControl = OptionMenuItemControlBase(mItemOption);
                 mItemOptionOption = OptionMenuItemOption(mItemOption);
