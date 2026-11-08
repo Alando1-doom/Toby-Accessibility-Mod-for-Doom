@@ -99,18 +99,27 @@ class Toby_InSectorNodeBuilder
             vector2 ba = linePairArray[i].vertex1.p - linePairArray[i].sharedVertex.p;
             vector2 bc = linePairArray[i].vertex2.p - linePairArray[i].sharedVertex.p;
 
+            // Just in case if SOMEHOW someone cerates zero length line.
+            if (ba.Length() == 0 || bc.Length() == 0) { continue; }
+
             vector2 unitBA = ba.Unit();
             vector2 unitBC = bc.Unit();
 
-            vector2 bisector1 = (unitBA + unitBC).Unit();
-            vector2 bisector2 = -1 * bisector1;
+            double directionDot = unitBA dot unitBC;
+            double oppositeTolerance = 0.000000000001;
 
-            //Edge case where angle between BA and BC is 180 degrees
-            if (unitBA dot unitBC == -1)
+            vector2 bisector1 = unitBA + unitBC;
+
+            // Edge case where angle between BA and BC is 180 degrees
+            // Turns out since our vector components are doubles
+            // This is not guaranteed: unitBA dot unitBC == -1
+            // We might get -0.9999999999999998
+            if (Abs(directionDot + 1) <= oppositeTolerance)
             {
                 bisector1 = (-unitBA.y, unitBA.x);
-                bisector2 = -bisector1;
             }
+            bisector1 = bisector1.Unit();
+            vector2 bisector2 = -bisector1;
 
             vector2 bisectorPoint1 = linePairArray[i].sharedVertex.p + bisector1;
             vector2 bisectorPoint2 = linePairArray[i].sharedVertex.p + bisector2;
